@@ -19,20 +19,20 @@ Two rules apply to every term:
 
 ### Overview
 
-| ID | Preferred name | Broader term | Fields used |
-| :--- | :--- | :--- | :--- |
-| T01 | Boxed Warning | None | `boxed_warning` |
-| T02 | Oral Route | None | `openfda.route` |
-| T03 | Pediatric Indication | None | `indications_and_usage`, `pediatric_use` |
-| T04 | High-Frequency Adverse Effect | None | `adverse_reactions`, `adverse_reactions_table` |
-| T05 | Medication Guide | None | `spl_medguide` |
-| T06 | Renal Dose Adjustment | T11 | `dosage_and_administration`, `use_in_specific_populations`, `precautions` |
-| T07 | Controlled Substance | None | `controlled_substance` |
-| T08 | Single Active Ingredient | None | `openfda.substance_name` |
-| T09 | Brand Name Product | None | `openfda.brand_name`, `openfda.generic_name`, `openfda.application_number` |
-| T10 | Schedule II Controlled Substance | T07 | `controlled_substance` |
-| T11 | Organ Impairment Dose Adjustment | None | Assigned through T06 and T12 |
-| T12 | Hepatic Dose Adjustment | T11 | `dosage_and_administration`, `use_in_specific_populations`, `precautions` |
+| ID | Preferred name | Property | Hierarchy | Fields used |
+| :--- | :--- | :--- | :--- | :--- |
+| T01 | Boxed Warning | Safety signal | Top level | `boxed_warning` |
+| T02 | Oral Route | Route | Top level | `openfda.route` |
+| T03 | Pediatric Indication | Patient group | Top level | `indications_and_usage`, `pediatric_use` |
+| T04 | High-Frequency Adverse Effect | Safety signal | Top level | `adverse_reactions`, `adverse_reactions_table` |
+| T05 | Medication Guide | Patient information | Top level | `spl_medguide` |
+| T06 | Renal Dose Adjustment | Dosing | Narrower term under T11 | `dosage_and_administration`, `use_in_specific_populations`, `precautions` |
+| T07 | Controlled Substance | DEA control | Top level; broader term over T10 | `controlled_substance` |
+| T08 | Single Active Ingredient | Product form | Top level | `openfda.substance_name` |
+| T09 | Brand Name Product | Product form | Top level | `openfda.brand_name`, `openfda.generic_name`, `openfda.application_number` |
+| T10 | Schedule II Controlled Substance | DEA control | Narrower term under T07 | `controlled_substance` |
+| T11 | Organ Impairment Dose Adjustment | Dosing | Top level; broader term over T06 and T12 | Assigned through T06 and T12 |
+| T12 | Hepatic Dose Adjustment | Dosing | Narrower term under T11 | `dosage_and_administration`, `use_in_specific_populations`, `precautions` |
 
 ### Term definitions
 
