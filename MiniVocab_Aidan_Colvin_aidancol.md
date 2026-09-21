@@ -221,7 +221,7 @@ Two rules apply to every term:
 * **Alternative names:** Liver Dose Adjustment, Hepatic Dosing, Hepatic Impairment Dosing
 * **Useful for:** dosing patients with cirrhosis or other liver disease.
 
-**AI use:** I chose the vocabulary's focus and drafted nine terms. I used Claude (Anthropic) to check each term's rule against the openFDA Label field reference and FDA labeling guidance, and to draft the final definitions, boundaries, and alternative names. Claude supplied the field mappings for Boxed Warning and Controlled Substance, proposed T05 (Medication Guide) and T10 to T12, and set T04's cutoff from the CIOMS III frequency categories.
+**AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts regarding term definitions, descriptions, and synonyms were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts were correctly applied to the terms and combined with original thinking and work for this section.
 
 ---
 
@@ -252,6 +252,7 @@ My vocabulary has relationships. It is a shallow hierarchy, not a flat list: nin
 
 Each top-level term describes a different property of a label: a safety signal (T01, T04), patient information (T05), route (T02), patient group (T03), dosing (T11), DEA control (T07), or product form (T08, T09). None implies another. The gabapentin label gives renal dose changes but has no boxed warning. Entresto is a brand product with two active ingredients. Linking such terms would tag labels with terms whose definitions they fail.
 
+---
 ## 2. Organize your vocabulary [10 points]
 
 ### 1) Structure of your vocabulary
@@ -285,8 +286,6 @@ The two broader terms work differently.
 **Why the top-level terms are not linked:**
 
 Each top-level term describes a different property of a label: a safety signal (T01, T04), patient information (T05), route (T02), patient group (T03), dosing (T11), DEA control (T07), or product form (T08, T09). None implies another. The gabapentin label gives renal dose changes but has no boxed warning. Entresto is a brand product with two active ingredients. Linking such terms would tag labels with terms whose definitions they fail.
-
----
 
 ### 2) Term assignment considerations
 
@@ -324,25 +323,41 @@ I chose indexing over query expansion for three reasons:
 * Inside the collection, if a field a term's rule needs is missing, the system omits the term. It never guesses. For example, a label with an empty `openfda.route` does not get T02, even if its text says the drug is taken by mouth.
 * This favors precision over recall. A user who filters on a term gets only labels that meet the term's rule, with no false positives from guessed tags. The cost is some false negatives, so a missing term does not prove the opposite. Keyword search still reaches those labels, since controlled vocabulary search and keyword search work side by side.
 
-**AI use:** I decided that labels should carry multiple terms and that narrower terms should return under broader ones. I used Claude (Anthropic) to test each proposed link against the term definitions. Claude drafted the hierarchy, relationship definition, parent-term distinction, indexing explanation, logical constraints, and missing-data rules.
+**AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts regarding vocabulary structure, hierarchy, and term assignment rules were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts like flat lists, hierarchies, and mutual exclusivity were correctly applied and combined with original thinking and work for this section.
 
 ---
 
 ## 3. Example usage of your vocabulary [20 points]
 
+Both scenarios search the Part 1 collection: human prescription drug labels in one drug class, with one label per active ingredient. In the planned search interface, vocabulary terms appear as filters beside the results, grouped by the property they describe in Section 2, such as safety signal, route, or dosing. A user can apply filters to the whole collection or to the results of a keyword search.
+
 ### Scenario 1: Single-term search
 
-* **Natural language question:** I am a pharmacist checking a new prescription for a patient with severe chronic kidney disease. The patient's creatinine clearance is 25 mL/min. I want to see which drugs in the collection have labels that tell me how to lower the dose or space out doses for patients with impaired kidney function.
+* **Natural language question:** I am a pharmacist checking a new prescription for a patient with severe chronic kidney disease. The patient's creatinine clearance is 25 mL/min. I want to see which drugs in the collection have labels that tell me exactly how to lower the dose or space out doses for patients with impaired kidney function.
 * **Selected term:** `T06: Renal Dose Adjustment`
-* **Expected documents:** FDA prescription drug labels whose dosing text ties a kidney function level to a lower dose, a longer time between doses, or a lower maximum dose. A typical match has a table of doses by creatinine clearance range.
-* **Not retrieved:** labels that only warn about kidney toxicity, labels that say no dose change is needed, labels that only say to avoid the drug in kidney disease, and labels with only a hepatic dose change (T12).
-* **Hierarchy note:** each result also carries T11. A user who wanted kidney or liver dose changes would select T11 instead.
+* **How the user applies it:** The user selects Renal Dose Adjustment from the dosing filters. The search engine returns every label that carries the stored T06 tag.
+* **Expected documents:** FDA prescription drug labels whose dosing text in `dosage_and_administration`, `use_in_specific_populations`, or `precautions` ties a kidney function level to a lower dose, a longer time between doses, or a lower maximum dose. Kidney function levels include creatinine clearance ranges; mild, moderate, or severe renal impairment; and end-stage renal disease or dialysis. A typical match has a table of doses by creatinine clearance range. Each result would show the drug's brand and generic names and a snippet of its renal dosing text.
+* **Not retrieved:**
+  * Labels that mention renal excretion or kidney toxicity but give no dose change.
+  * Labels that state no dose change is needed in renal impairment.
+  * Labels that only say the drug is contraindicated or should be avoided in severe renal impairment, with no adjusted dose.
+  * Labels with only a hepatic dose change (T12).
+* **Why the term works better than keyword search here:** A keyword search for "renal" or "kidney" also returns labels that mention the kidneys only in pharmacokinetics, adverse reactions, or clinical trial exclusions. Those labels do not answer how to dose this patient, so precision drops. T06 is assigned only when the label ties a kidney function level to a dose change, so every result answers the pharmacist's question as far as the tagging rule is applied correctly.
+* **Hierarchy note:** T06 is a type of T11, so the index writes T11 on every T06 label. Each result therefore also carries T11. A user who wanted kidney or liver dose changes would select T11 instead, which returns both T06 and T12 labels.
 
 ### Scenario 2: Two-term combination search
 
-* **Natural language question:** My father takes several pills each day. I want to know which medications taken by mouth carry an FDA boxed warning, so I can check whether any of his are on that list and read those warnings first.
-* **Selected terms:** `T01: Boxed Warning` **AND** `T02: Oral Route`. The AND operator returns only documents that have both Term A and Term B.
-* **Expected documents:** FDA prescription drug labels for oral medications, such as tablets or capsules, that also carry an official boxed warning. These labels have ORAL among their routes and text in `boxed_warning`. Brand and generic labels both appear, since Brand Name Product (T09) is not selected.
-* **Not retrieved:** oral drugs with no boxed warning, and drugs with a boxed warning that are not taken by mouth, such as injection-only products.
+* **Natural language question:** My father's doctor plans to start him on a new medication from this drug class. He cannot give himself injections, so it needs to be something he takes by mouth at home. Before the appointment, I want to find the oral options in this class that carry an FDA boxed warning, read those warnings, and bring my questions about them to the doctor.
+* **Selected terms:** `T01: Boxed Warning` and `T02: Oral Route`
+* **Operator:** **AND**. The search returns only documents that have both Term A (T01) and Term B (T02). In set terms, the result is the intersection of the two tag sets: T01 ∩ T02.
+* **How the user applies it:** The user selects Oral Route from the route filters and Boxed Warning from the safety signal filters. The interface joins the two selections with AND.
+* **Expected documents:** FDA prescription drug labels in the collection for oral medications, such as tablets, capsules, or oral solutions, that also carry an official boxed warning. Each has ORAL among its routes in `openfda.route` and text in `boxed_warning`. A label that lists ORAL along with another route, such as intravenous, still appears. Brand and generic labels both appear, as do single-ingredient and combination products, since no product-form terms (T08, T09) are selected. These are the labels whose boxed warnings the user reads before the appointment.
+* **Not retrieved:**
+  * Oral drugs in the class with no boxed warning.
+  * Drugs with a boxed warning that are not taken by mouth, such as injection-only, topical, or inhaled products.
+  * Sublingual or buccal products, which do not get T02.
+* **Why AND, not OR:** OR would return the union of the two tag sets, T01 ∪ T02: every oral drug in the class plus every drug in the class with a boxed warning. That adds injection-only drugs with a box, which he cannot take, and oral drugs with no box, which the question does not ask about. OR raises recall for either condition but lowers precision for this question. AND keeps only the drugs that answer both parts.
+* **Why the terms work better than keyword search here:** A keyword search for "oral" also matches labels that mention oral contraceptives in drug interactions or oral candidiasis as a side effect, whatever the drug's route. A keyword search for "boxed warning" can miss labels, because the box itself is headed "WARNING" plus its topic, and older labels may never use the phrase "boxed warning." T02 reads the route field and T01 reads the `boxed_warning` field, so neither depends on the label's wording.
+* **Hierarchy note:** neither T01 nor T02 has a broader or narrower term, so the hierarchy does not widen or narrow this search.
 
-**AI use:** The two scenario topics are mine: renal dosing, and oral drugs with boxed warnings. I used Claude (Anthropic) to match each question to the term definitions and to draft the final questions, expected documents, and excluded documents.
+**AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts were correctly applied and combined with original thinking and work for this section.
