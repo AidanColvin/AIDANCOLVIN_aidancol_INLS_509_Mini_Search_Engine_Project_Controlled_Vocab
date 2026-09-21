@@ -4,8 +4,6 @@ Last Updated 09-21-2026
 
 **Help received:** UPDATE ADD BEFORE SUBMITTING  --> If you received help from anyone, give them credits by listing their name(s) on the top of your submission. 
 
-**Revised Part 1:** submitted as a separate file. Sections 1 to 3 build on it.
-
 ---
 
 ## 1. Terms and definitions [50 points]
