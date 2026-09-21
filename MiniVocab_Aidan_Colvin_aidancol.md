@@ -4,13 +4,15 @@ Last Updated 09-21-2026
 
 **Help received:** UPDATE ADD BEFORE SUBMITTING  --> If you received help from anyone, give them credits by listing their name(s) on the top of your submission. 
 
+**Revised Part 1:** submitted as a separate file. Sections 1 to 3 build on it.
+
 ---
 
 ## 1. Terms and definitions [50 points]
 
 **Vocabulary name:** Prescription Drug Label Attributes (PDLA)
 
-PDLA tags the label properties that pharmacists, clinicians, and patients filter on: safety signals, route, patient group, dosing, DEA control, and product form. Each term is assigned by a fixed rule over named openFDA fields, so the same label always gets the same terms.
+PDLA tags the label properties that pharmacists, clinicians, and patients filter on: safety signals, route, patient group, dosing, DEA control, product form, and drug interaction risk. Each term is assigned by a fixed rule over named openFDA fields, so the same label always gets the same terms. The interaction-risk terms (T13 to T17) also drive the planned interaction checker: when two drugs on a patient's medication list share one of these terms, the checker flags them together.
 
 Two rules apply to every term:
 
@@ -33,6 +35,11 @@ Two rules apply to every term:
 | T10 | Schedule II Controlled Substance | DEA control | Narrower term under T07 | `controlled_substance` |
 | T11 | Organ Impairment Dose Adjustment | Dosing | Top level; broader term over T06 and T12 | Assigned through T06 and T12 |
 | T12 | Hepatic Dose Adjustment | Dosing | Narrower term under T11 | `dosage_and_administration`, `use_in_specific_populations`, `precautions` |
+| T13 | Interaction Risk | Interaction risk | Top level; broader term over T14 to T17 | Assigned through T14 to T17 |
+| T14 | Serotonin Syndrome Risk | Interaction risk | Narrower term under T13 | `boxed_warning`, `warnings_and_cautions`, `warnings`, `precautions`, `drug_interactions`, `contraindications` |
+| T15 | CNS Depression Risk | Interaction risk | Narrower term under T13 | `boxed_warning`, `warnings_and_cautions`, `warnings`, `precautions`, `drug_interactions` |
+| T16 | QT Prolongation Risk | Interaction risk | Narrower term under T13 | `boxed_warning`, `warnings_and_cautions`, `warnings`, `precautions`, `drug_interactions`, `contraindications` |
+| T17 | Contraindicated Combination | Interaction risk | Narrower term under T13 | `contraindications` |
 
 ### Term definitions
 
@@ -165,14 +172,70 @@ Two rules apply to every term:
 * **Alternative names:** Liver Dose Adjustment, Hepatic Dosing, Hepatic Impairment Dosing
 * **Useful for:** dosing patients with cirrhosis or other liver disease.
 
+#### T13: Interaction Risk
+
+* **ID:** T13
+* **Preferred name:** Interaction Risk
+* **Narrower terms:** T14: Serotonin Syndrome Risk, T15: CNS Depression Risk, T16: QT Prolongation Risk, T17: Contraindicated Combination
+* **Definition:** The label warns that combining the drug with other drugs can cause serious harm of at least one type named in T14 to T17.
+* **Assign when:** the label gets T14, T15, T16, or T17. T13 has no rule of its own.
+* **Do not assign when:** the label's interaction text covers only other effects, such as changes in drug levels through liver enzymes, with none of the four risk types. Those interactions still appear in keyword search of `drug_interactions`.
+* **Alternative names:** Drug Interaction Warning, DDI Risk, Interaction Warning
+* **Useful for:** one filter that finds every label warning of a serious combination risk.
+
+#### T14: Serotonin Syndrome Risk
+
+* **ID:** T14
+* **Preferred name:** Serotonin Syndrome Risk
+* **Broader term:** T13: Interaction Risk
+* **Definition:** The label warns that the drug can contribute to serotonin syndrome, a potentially life-threatening reaction to excess serotonin activity, most often when it is combined with other serotonergic drugs.
+* **Assign when:** `boxed_warning`, `warnings_and_cautions`, `warnings`, `precautions`, `drug_interactions`, or `contraindications` names serotonin syndrome or serotonin toxicity as a risk of this drug.
+* **Do not assign when:** serotonin appears only in `mechanism_of_action`, `clinical_pharmacology`, or `pharmacodynamics`, with no stated risk.
+* **Alternative names:** Serotonin Toxicity Risk, Serotonergic Interaction Risk
+* **Useful for:** catching stacked serotonergic drugs on one medication list, such as an antidepressant plus a muscle relaxant.
+
+#### T15: CNS Depression Risk
+
+* **ID:** T15
+* **Preferred name:** CNS Depression Risk
+* **Broader term:** T13: Interaction Risk
+* **Definition:** The label warns that combining the drug with other central nervous system (CNS) depressants, such as opioids, benzodiazepines, sleep medicines, or alcohol, can add sedation or slow breathing.
+* **Assign when:** `boxed_warning`, `warnings_and_cautions`, `warnings`, `precautions`, or `drug_interactions` warns of added CNS depression, sedation, or respiratory depression with other CNS depressants or alcohol.
+* **Do not assign when:** drowsiness appears only in `adverse_reactions` as an effect of the drug alone, or the label warns only about driving or operating machinery.
+* **Alternative names:** Additive Sedation Risk, CNS Depressant Interaction, Respiratory Depression Interaction Risk
+* **Useful for:** catching several sedating drugs on one medication list.
+
+#### T16: QT Prolongation Risk
+
+* **ID:** T16
+* **Preferred name:** QT Prolongation Risk
+* **Broader term:** T13: Interaction Risk
+* **Definition:** The label warns that the drug prolongs the QT interval, a delay in the heart's electrical recovery that can lead to a dangerous rhythm called torsades de pointes, or it advises against combining the drug with other QT-prolonging drugs.
+* **Assign when:** `boxed_warning`, `warnings_and_cautions`, `warnings`, `precautions`, `contraindications`, or `drug_interactions` warns of QT prolongation or torsades de pointes.
+* **Do not assign when:** QT appears only in study results that show no clinically meaningful effect, or only in `pharmacodynamics` with no stated warning.
+* **Alternative names:** QTc Prolongation Risk, Torsades Risk, QT-Prolonging Drug
+* **Useful for:** catching two or more QT-prolonging drugs on one medication list.
+
+#### T17: Contraindicated Combination
+
+* **ID:** T17
+* **Preferred name:** Contraindicated Combination
+* **Broader term:** T13: Interaction Risk
+* **Definition:** The label says the drug must not be used together with at least one named drug or drug class.
+* **Assign when:** `contraindications` names a drug or drug class that must not be used with this drug, such as MAO inhibitors or strong CYP3A inhibitors.
+* **Do not assign when:** `contraindications` lists only conditions, allergies, or patient groups; or the combination appears only in `warnings` or `drug_interactions` as "avoid" or "not recommended," which is a weaker statement than a contraindication.
+* **Alternative names:** Contraindicated Co-Medication, Do-Not-Combine Warning
+* **Useful for:** the highest-priority alerts, where the label itself says two drugs must not be combined.
+
 **AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts regarding term definitions, descriptions, and synonyms were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts were correctly applied to the terms and combined with original thinking and work for this section.
 
 ---
+
 ## 2. Organize your vocabulary [10 points]
 
 ### 1) Structure of your vocabulary
 
-My vocabulary has relationships. It is a shallow hierarchy, not a flat list: nine top-level terms, with three narrower terms under two of them. Every link uses one relationship, "is a type of."
+My vocabulary has relationships. It is a shallow hierarchy, not a flat list: ten top-level terms, with seven narrower terms under three of them. Every link uses one relationship, "is a type of."
 
 * **T01: Boxed Warning**
 * **T02: Oral Route**
@@ -186,57 +249,66 @@ My vocabulary has relationships. It is a shallow hierarchy, not a flat list: nin
 * **T11: Organ Impairment Dose Adjustment**
   * **T06: Renal Dose Adjustment** (is a type of Organ Impairment Dose Adjustment)
   * **T12: Hepatic Dose Adjustment** (is a type of Organ Impairment Dose Adjustment)
+* **T13: Interaction Risk**
+  * **T14: Serotonin Syndrome Risk** (is a type of Interaction Risk)
+  * **T15: CNS Depression Risk** (is a type of Interaction Risk)
+  * **T16: QT Prolongation Risk** (is a type of Interaction Risk)
+  * **T17: Contraindicated Combination** (is a type of Interaction Risk)
 
 **Relationship definition:**
 
-* **"is a type of":** every label that meets the narrower term's definition also meets the broader term's definition. The narrower term picks out a subset. Schedule II is one of the DEA schedules, so every Schedule II label is a controlled substance label. A renal dose adjustment is one kind of organ impairment dose adjustment, so every T06 label is a T11 label.
+* **"is a type of":** every label that meets the narrower term's definition also meets the broader term's definition. The narrower term picks out a subset. Schedule II is one of the DEA schedules, so every Schedule II label is a controlled substance label. A renal dose adjustment is one kind of organ impairment dose adjustment, so every T06 label is a T11 label. A serotonin syndrome warning is one kind of interaction risk warning, so every T14 label is a T13 label.
 
 **Two kinds of parent terms:**
 
-The two broader terms work differently.
+The three broader terms work in two different ways.
 
 * **T07: Controlled Substance is an independent parent.** It has its own rule: it is assigned whenever `controlled_substance` names Schedule II, III, IV, or V. T10 marks one subset of those labels, Schedule II. T07's own rule already fires for every Schedule II label, so the T10 link never adds a T07 tag the rule would miss. The link guarantees the two terms stay consistent. Labels in Schedules III to V carry T07 alone.
-* **T11: Organ Impairment Dose Adjustment is a passive container.** It has no rule of its own. It is assigned only when T06 or T12 is assigned, and it exists to group those two terms for browsing and search. Every T11 label carries T06, T12, or both.
+* **T11: Organ Impairment Dose Adjustment and T13: Interaction Risk are passive containers.** Neither has a rule of its own. T11 is assigned only when T06 or T12 is assigned, and T13 only when at least one of T14 to T17 is assigned. They exist to group their narrower terms for browsing and search. Every T11 label carries T06, T12, or both, and every T13 label carries at least one of T14 to T17.
 
 **Why the top-level terms are not linked:**
 
-Each top-level term describes a different property of a label: a safety signal (T01, T04), patient information (T05), route (T02), patient group (T03), dosing (T11), DEA control (T07), or product form (T08, T09). None implies another. The gabapentin label gives renal dose changes but has no boxed warning. Entresto is a brand product with two active ingredients. Linking such terms would tag labels with terms whose definitions they fail.
+Each top-level term describes a different property of a label: a safety signal (T01, T04), patient information (T05), route (T02), patient group (T03), dosing (T11), DEA control (T07), product form (T08, T09), or interaction risk (T13). None implies another. The gabapentin label gives renal dose changes but has no boxed warning. Entresto is a brand product with two active ingredients. A boxed warning can contain an interaction warning, as opioid labels do for benzodiazepines, but many interaction warnings are not boxed, so T13 and T01 stay separate. Linking such terms would tag labels with terms whose definitions they fail.
 
 ### 2) Term assignment considerations
 
-**Are the terms mutually exclusive?** No. Documents in this collection can be assigned multiple terms at the same time. The system checks each term's rule on its own and gives a label every term whose definition it meets. For example, the OxyContin (oxycodone extended-release tablets) label meets T01, T02, T05, T07, T08, T09, and T10.
+**Are the terms mutually exclusive?** No. Documents in this collection can be assigned multiple terms at the same time. The system checks each term's rule on its own and gives a label every term whose definition it meets. For example, the OxyContin (oxycodone extended-release tablets) label meets at least T01, T02, T05, T07, T08, T09, T10, T13, and T15. A label can also carry several interaction-risk terms at once: the cyclobenzaprine label warns of both serotonin syndrome and added CNS depression, so it gets T14 and T15.
 
 **Logical constraints:** No two PDLA terms exclude each other, because each describes a different property of a label. The constraints that do exist come from the hierarchy and from the drugs themselves:
 
-* A label cannot carry T10 without T07, or T11 without T06 or T12.
+* A label cannot carry T10 without T07, T11 without T06 or T12, or T13 without at least one of T14 to T17.
 * A drug product sits in one DEA schedule. So a T07 label either carries T10 or falls in Schedules III to V, never both.
 
 **Does a narrower term bring its broader term?** Yes. If a document receives a narrower term, it automatically receives the broader term. If one searches for a broader term, a document with a narrower term will be returned.
 
 * T10 brings T07. A search for Controlled Substance returns every Schedule II label, along with Schedule III to V labels.
 * T06 and T12 bring T11. A search for Organ Impairment Dose Adjustment returns every label with a renal or hepatic dose change.
+* T14 to T17 bring T13. A search for Interaction Risk returns every label with any of the four risk types.
 
-This does not work in reverse. A search for T10 does not return Schedule IV labels, and a search for T06 does not return labels with only a hepatic dose change.
+This does not work in reverse. A search for T10 does not return Schedule IV labels, a search for T06 does not return labels with only a hepatic dose change, and a search for T14 does not return labels with only a QT warning.
 
-I chose this rule because a user who asks for controlled substances expects the most tightly controlled drugs in the results. Leaving Schedule II labels out of a Controlled Substance search would hide them.
+I chose this rule because a user who asks for controlled substances expects the most tightly controlled drugs in the results. Leaving Schedule II labels out of a Controlled Substance search would hide them. The same reasoning applies to Interaction Risk: a user who asks for it expects every serious combination warning, whatever its type.
 
 **How the search engine applies the rule: expansion at indexing time.** Broader terms are added when labels are tagged and indexed, not when a user searches.
 
 1. The tagger runs each term's rule on each label.
-2. Each time it assigns a narrower term, it also writes the broader term to that label's index entry. When it detects T06 or T12, it writes T11. When it detects T10, it writes T07, which T07's own rule has already written.
-3. At search time, a query for T11 is a single lookup of the stored T11 tag. It returns the same documents that `T11 OR T06 OR T12` would return under query expansion, because the index already holds every broader tag.
+2. Each time it assigns a narrower term, it also writes the broader term to that label's index entry. When it detects T06 or T12, it writes T11. When it detects any of T14 to T17, it writes T13. When it detects T10, it writes T07, which T07's own rule has already written.
+3. At search time, a query for T11 is a single lookup of the stored T11 tag. It returns the same documents that `T11 OR T06 OR T12` would return under query expansion, because the index already holds every broader tag. A query for T13 works the same way.
 
 I chose indexing over query expansion for three reasons:
 
-* It matches the term definitions. T11 is defined as assigned when a label gets T06 or T12, which is an indexing rule.
+* It matches the term definitions. T11 and T13 are defined as assigned when a label gets one of their narrower terms, which is an indexing rule.
 * Every stored tag is complete. Facet counts, browsing, and AND or OR combinations work on the stored tags with no rewriting of the user's query.
-* The cost is small. If the hierarchy changes, the collection must be re-tagged. With one drug class and one label per ingredient, that is a quick rerun.
+* The cost is small. If the hierarchy changes, the collection must be re-tagged. The collection keeps one label per active-ingredient set, so a full re-tag fits into the weekly rebuild that follows openFDA's weekly updates.
+
+**How the stored tags drive interaction checks:** When a user enters a medication list, the planned checker compares the stored interaction-risk tags of each drug. Two or more drugs that share T14, T15, or T16 trigger one group alert for that stacked risk, showing each label's warning sentence. A drug with T17 triggers a pair alert only when another drug on the list matches the drug or class named in its contraindications.
 
 **Missing data:**
 
-* Labels with no `openfda` object are already excluded by the Part 1 scope filter, since they cannot be matched to a drug class.
+* Labels with no `openfda` object are excluded by the Part 1 scope filter, since they cannot be matched to an ingredient.
 * Inside the collection, if a field a term's rule needs is missing, the system omits the term. It never guesses. For example, a label with an empty `openfda.route` does not get T02, even if its text says the drug is taken by mouth.
 * This favors precision over recall. A user who filters on a term gets only labels that meet the term's rule, with no false positives from guessed tags. The cost is some false negatives, so a missing term does not prove the opposite. Keyword search still reaches those labels, since controlled vocabulary search and keyword search work side by side.
+* For the interaction-risk terms, a missing tag matters most. A drug without T14 may still add serotonin risk if its label never states it. The checker therefore reports "no warning found in the labels," never "safe."
 
 **AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts regarding vocabulary structure, hierarchy, and term assignment rules were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts like flat lists, hierarchies, and mutual exclusivity were correctly applied and combined with original thinking and work for this section.
 
@@ -244,7 +316,7 @@ I chose indexing over query expansion for three reasons:
 
 ## 3. Example usage of your vocabulary [20 points]
 
-Both scenarios search the Part 1 collection: human prescription drug labels in one drug class, with one label per active ingredient. In the planned search interface, vocabulary terms appear as filters beside the results, grouped by the property they describe in Section 2, such as safety signal, route, or dosing. A user can apply filters to the whole collection or to the results of a keyword search.
+All scenarios search the revised Part 1 collection: human prescription drug labels across all drug classes, one label per active-ingredient set. In the planned search interface, vocabulary terms appear as filters beside the results, grouped by the property they describe in Section 2, such as safety signal, route, dosing, or interaction risk. A user can apply filters to the whole collection or to the results of a keyword search. Scenarios 1 and 2 answer the single-term and two-term cases. Scenario 3 is an additional two-term case that shows the interaction-risk terms.
 
 ### Scenario 1: Single-term search
 
@@ -262,18 +334,35 @@ Both scenarios search the Part 1 collection: human prescription drug labels in o
 
 ### Scenario 2: Two-term combination search
 
-* **Natural language question:** My father's doctor plans to start him on a new medication from this drug class. He cannot give himself injections, so it needs to be something he takes by mouth at home. Before the appointment, I want to find the oral options in this class that carry an FDA boxed warning, read those warnings, and bring my questions about them to the doctor.
+* **Natural language question:** My father's doctor plans to start him on a new medication for his high blood pressure. He cannot give himself injections, so it needs to be something he takes by mouth at home. I searched the collection for "hypertension." Before the appointment, I want to narrow those results to the oral options that carry an FDA boxed warning, read those warnings, and bring my questions about them to the doctor.
 * **Selected terms:** `T01: Boxed Warning` and `T02: Oral Route`
 * **Operator:** **AND**. The search returns only documents that have both Term A (T01) and Term B (T02). In set terms, the result is the intersection of the two tag sets: T01 ∩ T02.
-* **How the user applies it:** The user selects Oral Route from the route filters and Boxed Warning from the safety signal filters. The interface joins the two selections with AND.
-* **Expected documents:** FDA prescription drug labels in the collection for oral medications, such as tablets, capsules, or oral solutions, that also carry an official boxed warning. Each has ORAL among its routes in `openfda.route` and text in `boxed_warning`. A label that lists ORAL along with another route, such as intravenous, still appears. Brand and generic labels both appear, as do single-ingredient and combination products, since no product-form terms (T08, T09) are selected. These are the labels whose boxed warnings the user reads before the appointment.
+* **How the user applies it:** The user runs the keyword search for "hypertension," then selects Oral Route from the route filters and Boxed Warning from the safety signal filters. The interface joins the two selections with AND and applies them to the keyword results.
+* **Expected documents:** FDA prescription drug labels among the keyword results for oral medications, such as tablets, capsules, or oral solutions, that also carry an official boxed warning. Each has ORAL among its routes in `openfda.route` and text in `boxed_warning`. A label that lists ORAL along with another route, such as intravenous, still appears. Brand and generic labels both appear, as do single-ingredient and combination products, since no product-form terms (T08, T09) are selected. These are the labels whose boxed warnings the user reads before the appointment.
 * **Not retrieved:**
-  * Oral drugs in the class with no boxed warning.
-  * Drugs with a boxed warning that are not taken by mouth, such as injection-only, topical, or inhaled products.
+  * Oral drugs in the results with no boxed warning.
+  * Drugs in the results with a boxed warning that are not taken by mouth, such as injection-only, topical, or inhaled products.
   * Sublingual or buccal products, which do not get T02.
-* **Why AND, not OR:** OR would return the union of the two tag sets, T01 ∪ T02: every oral drug in the class plus every drug in the class with a boxed warning. That adds injection-only drugs with a box, which he cannot take, and oral drugs with no box, which the question does not ask about. OR raises recall for either condition but lowers precision for this question. AND keeps only the drugs that answer both parts.
+  * Labels outside the keyword results.
+* **Why AND, not OR:** OR would return the union of the two tag sets, T01 ∪ T02: every oral drug in the results plus every drug in the results with a boxed warning. That adds injection-only drugs with a box, which he cannot take, and oral drugs with no box, which the question does not ask about. OR raises recall for either condition but lowers precision for this question. AND keeps only the drugs that answer both parts.
 * **Why the terms work better than keyword search here:** A keyword search for "oral" also matches labels that mention oral contraceptives in drug interactions or oral candidiasis as a side effect, whatever the drug's route. A keyword search for "boxed warning" can miss labels, because the box itself is headed "WARNING" plus its topic, and older labels may never use the phrase "boxed warning." T02 reads the route field and T01 reads the `boxed_warning` field, so neither depends on the label's wording.
 * **Hierarchy note:** neither T01 nor T02 has a broader or narrower term, so the hierarchy does not widen or narrow this search.
+
+### Scenario 3 (additional): Two-term interaction-risk search
+
+* **Natural language question:** I am a physician reviewing a patient who takes desvenlafaxine 50 mg daily and trazodone 50 mg at bedtime. Both labels warn of serotonin syndrome, and trazodone is sedating. The patient now reports back spasms, and I am considering a muscle relaxant. I searched the collection for "muscle spasm." Before I prescribe, I want to see which of those drugs carry both a serotonin syndrome warning and a CNS depression warning, because adding one would stack both risks on top of the patient's current medications.
+* **Selected terms:** `T14: Serotonin Syndrome Risk` and `T15: CNS Depression Risk`
+* **Operator:** **AND**. The search returns only documents that have both Term A (T14) and Term B (T15). In set terms, the result is the intersection of the two tag sets: T14 ∩ T15.
+* **How the user applies it:** The user runs the keyword search for "muscle spasm," then selects Serotonin Syndrome Risk and CNS Depression Risk from the interaction risk filters. The interface joins the two selections with AND and applies them to the keyword results.
+* **Expected documents:** FDA prescription drug labels among the keyword results whose text warns of serotonin syndrome and of added CNS depression with other depressants or alcohol. The cyclobenzaprine label is one example: it warns of both. These are the options that would stack both risks for this patient.
+* **Not retrieved:**
+  * Drugs in the results with only one of the two warnings.
+  * Drugs in the results with neither warning.
+  * Labels outside the keyword results.
+* **Why AND, not OR:** OR would return the union, T14 ∪ T15: every result with either warning. That answers a broader question, which drugs add any of these risks. AND isolates the drugs that add both risks at once, which is what this patient's current medications make dangerous.
+* **Why the terms work better than keyword search here:** A keyword search for "serotonin" also matches labels that mention serotonin only in the mechanism of action, with no warning. T14 requires a stated serotonin syndrome risk, so it separates a label that warns about the risk from one that only mentions serotonin.
+* **Link to the interaction checker:** This search is the manual version of the planned checker. If the physician entered desvenlafaxine, trazodone, and cyclobenzaprine as a medication list, the checker would find T14 on all three labels and raise one serotonin syndrome group alert, showing each label's warning sentence.
+* **Hierarchy note:** T14 and T15 are types of T13, so each result also carries T13. Selecting T13 alone would return labels with any of the four interaction-risk types.
 
 **AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts were correctly applied and combined with original thinking and work for this section.
 
