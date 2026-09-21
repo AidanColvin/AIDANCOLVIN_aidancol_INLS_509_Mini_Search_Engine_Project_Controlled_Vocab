@@ -1,0 +1,25 @@
+{
+ "fetched_on": "2026-09-21",
+ "source_url": "https://rxnav.nlm.nih.gov/REST/rxcui/221183/related.json?tty=IN",
+ "response": {
+  "relatedGroup": {
+   "rxcui": null,
+   "conceptGroup": [
+    {
+     "tty": "IN",
+     "conceptProperties": [
+      {
+       "rxcui": "39993",
+       "name": "zolpidem",
+       "synonym": "",
+       "tty": "IN",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

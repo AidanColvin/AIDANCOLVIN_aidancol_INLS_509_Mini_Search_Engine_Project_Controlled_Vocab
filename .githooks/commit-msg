@@ -1,0 +1,11 @@
+#!/bin/sh
+# Strips tool-added trailer lines from a commit message before it is recorded.
+msg_file="$1"
+tmp_file="$msg_file.filtered"
+grep -v -i -E \
+  -e '^Co-Authored-By:' \
+  -e 'noreply@' \
+  -e '^Generated with' \
+  -e '^[A-Za-z]+-Session: https://' \
+  "$msg_file" > "$tmp_file" || true
+mv "$tmp_file" "$msg_file"

@@ -1,0 +1,50 @@
+{
+ "fetched_on": "2026-09-21",
+ "source_url": "https://rxnav.nlm.nih.gov/REST/approximateTerm.json?term=Flexril&maxEntries=5",
+ "response": {
+  "approximateGroup": {
+   "inputTerm": null,
+   "candidate": [
+    {
+     "rxcui": "224954",
+     "rxaui": "1190151",
+     "score": "3.3425748348236084",
+     "rank": "1",
+     "source": "MMSL"
+    },
+    {
+     "rxcui": "224954",
+     "rxaui": "1190152",
+     "score": "3.3425748348236084",
+     "rank": "1",
+     "name": "Flexeril",
+     "source": "RXNORM"
+    },
+    {
+     "rxcui": "1169753",
+     "rxaui": "3836452",
+     "score": "3.2353736246824267",
+     "rank": "3",
+     "name": "Flexeril Pill",
+     "source": "RXNORM"
+    },
+    {
+     "rxcui": "1169752",
+     "rxaui": "3836451",
+     "score": "3.143659267822385",
+     "rank": "4",
+     "name": "Flexeril Oral Product",
+     "source": "RXNORM"
+    },
+    {
+     "rxcui": "92730",
+     "rxaui": "2054063",
+     "score": "2.7578468709979593",
+     "rank": "5",
+     "name": "cyclobenzaprine Oral Tablet [Flexeril]",
+     "source": "RXNORM"
+    }
+   ]
+  }
+ }
+}

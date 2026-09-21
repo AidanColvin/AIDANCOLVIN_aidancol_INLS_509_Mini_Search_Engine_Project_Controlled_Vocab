@@ -1,0 +1,35 @@
+{
+ "fetched_on": "2026-09-21",
+ "source_url": "https://rxnav.nlm.nih.gov/REST/rxcui/224954/historystatus.json",
+ "response": {
+  "rxcuiStatusHistory": {
+   "metaData": {
+    "status": "Obsolete",
+    "source": "RXNORM",
+    "releaseStartDate": "042005",
+    "releaseEndDate": "",
+    "isCurrent": "NO",
+    "activeStartDate": "042005",
+    "activeEndDate": "102020",
+    "remappedDate": ""
+   },
+   "attributes": {
+    "rxcui": "224954",
+    "name": "Flexeril",
+    "tty": "BN",
+    "isMultipleIngredient": "NO",
+    "isBranded": "YES"
+   },
+   "definitionalFeatures": {},
+   "pack": {},
+   "derivedConcepts": {
+    "ingredientConcept": [
+     {
+      "ingredientRxcui": "21949",
+      "ingredientName": "cyclobenzaprine"
+     }
+    ]
+   }
+  }
+ }
+}

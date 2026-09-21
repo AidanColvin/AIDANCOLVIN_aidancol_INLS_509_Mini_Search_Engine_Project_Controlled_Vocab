@@ -1,0 +1,25 @@
+{
+ "fetched_on": "2026-09-21",
+ "source_url": "https://rxnav.nlm.nih.gov/REST/rxcui/235988/related.json?tty=IN",
+ "response": {
+  "relatedGroup": {
+   "rxcui": null,
+   "conceptGroup": [
+    {
+     "tty": "IN",
+     "conceptProperties": [
+      {
+       "rxcui": "39786",
+       "name": "venlafaxine",
+       "synonym": "",
+       "tty": "IN",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "fetched_on": "2026-09-21",
+ "source_url": "https://rxnav.nlm.nih.gov/REST/rxcui/81952/related.json?tty=IN",
+ "response": {
+  "relatedGroup": {
+   "rxcui": null,
+   "conceptGroup": [
+    {
+     "tty": "IN",
+     "conceptProperties": [
+      {
+       "rxcui": "725",
+       "name": "amphetamine",
+       "synonym": "",
+       "tty": "IN",
+       "language": "ENG",
+       "suppress": "N",
+       "umlscui": ""
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
