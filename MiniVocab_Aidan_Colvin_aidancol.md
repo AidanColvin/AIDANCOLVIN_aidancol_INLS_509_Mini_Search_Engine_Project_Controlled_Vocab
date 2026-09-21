@@ -2,58 +2,7 @@
 # Mini Search Engine Project, Part II: Mini Controlled Vocabulary
 Last Updated 09-21-2026
 
-
 **Help received:** UPDATE ADD BEFORE SUBMITTING  --> If you received help from anyone, give them credits by listing their name(s) on the top of your submission. 
-
-
----
-
-## Part 1: Document Collection Foraging
-
-### Prescription Medication
-
-**Source:** [FDA Drug Labels](https://open.fda.gov/apis/drug/label/)
-
-#### What the Collection Is About
-
-These are FDA drug labels: the prescribing information that comes with a medication. Each record is one version of one label, submitted to FDA in Structured Product Labeling (SPL) format. One label can cover several products and package sizes (NDCs).
-
-The main text sits in these fields:
-
-* `indications_and_usage`: What the drug treats
-* `adverse_reactions`: Side effects
-* `warnings_and_cautions` (newer, PLR-format labels) or `warnings` (older labels): Precautions and risk information
-* `boxed_warning`: The most serious risks, when the label has a boxed warning
-
-Each record also carries structured attributes in its `openfda` object:
-
-* `brand_name`
-* `generic_name`
-* `substance_name`
-* `route`
-* `pharm_class_epc`
-* `application_number`
-
-openFDA adds the `openfda` object only when applicable, so some labels lack it. Dosage form is described in text, in `dosage_forms_and_strengths`.
-
-#### Who Will Search It
-
-* Pharmacists and their supporting staff
-* Healthcare providers (including doctors, nurses, and clinical staff)
-* Patients and family members
-
-#### Document Count & Scope Filtering
-
-**Does it contain more than 50 documents?**
-Yes. The Label endpoint holds 262,883 labels as of its September 18, 2026 update, prescription and over-the-counter combined. Human prescription labels are a large subset, about 54,000 by my Part 1 estimate.
-
-To narrow down the dataset, the collection will be filtered by:
-
-1. Keeping human prescription labels only (`openfda.product_type` is HUMAN PRESCRIPTION DRUG).
-2. Restricting the records to a single drug class, matched on `openfda.pharm_class_epc`. Labels without the `openfda` object are left out, since they cannot be matched to a class.
-3. Retaining only one label per active ingredient. A combination product counts as its own ingredient set, so combinations stay in the collection.
-
-**AI use:** My original Part 1 used AI only for spelling, grammar, and phrasing. For this update, I used Claude (Anthropic) to check my field names against the openFDA Label field reference and openFDA's source mapping of label sections to fields, and to draft the updated field descriptions.
 
 ---
 
@@ -219,35 +168,6 @@ Two rules apply to every term:
 **AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts regarding term definitions, descriptions, and synonyms were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts were correctly applied to the terms and combined with original thinking and work for this section.
 
 ---
-
-## 2. Organize your vocabulary [10 points]
-
-### 1) Structure of your vocabulary
-
-My vocabulary has relationships. It is a shallow hierarchy, not a flat list: nine top-level terms, with three narrower terms under two of them. Every link uses one relationship, "is a type of."
-
-* **T01: Boxed Warning**
-* **T02: Oral Route**
-* **T03: Pediatric Indication**
-* **T04: High-Frequency Adverse Effect**
-* **T05: Medication Guide**
-* **T07: Controlled Substance**
-  * **T10: Schedule II Controlled Substance** (is a type of Controlled Substance)
-* **T08: Single Active Ingredient**
-* **T09: Brand Name Product**
-* **T11: Organ Impairment Dose Adjustment**
-  * **T06: Renal Dose Adjustment** (is a type of Organ Impairment Dose Adjustment)
-  * **T12: Hepatic Dose Adjustment** (is a type of Organ Impairment Dose Adjustment)
-
-**Relationship definition:**
-
-* **"is a type of":** every label that meets the narrower term's definition also meets the broader term's definition. The narrower term picks out a subset. Schedule II is one of the DEA schedules, so every Schedule II label is a controlled substance label. A renal dose adjustment is one kind of organ impairment dose adjustment, so every T06 label is a T11 label.
-
-**Why the top-level terms are not linked:**
-
-Each top-level term describes a different property of a label: a safety signal (T01, T04), patient information (T05), route (T02), patient group (T03), dosing (T11), DEA control (T07), or product form (T08, T09). None implies another. The gabapentin label gives renal dose changes but has no boxed warning. Entresto is a brand product with two active ingredients. Linking such terms would tag labels with terms whose definitions they fail.
-
----
 ## 2. Organize your vocabulary [10 points]
 
 ### 1) Structure of your vocabulary
@@ -356,3 +276,22 @@ Both scenarios search the Part 1 collection: human prescription drug labels in o
 * **Hierarchy note:** neither T01 nor T02 has a broader or narrower term, so the hierarchy does not widen or narrow this search.
 
 **AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts were correctly applied and combined with original thinking and work for this section.
+
+---
+
+UPDATE THIS SECTION BEFORE SUBMITTING 
+
+### 4. Peer exchange [20 points]
+Invite a peer classmate as a hypothetical user of your search engine.
+
+Describe your planned document collection to them: What documents will be in the collection? Why do you think they are interesting? Also, describe your controlled vocabulary to them: What does each term mean? In what scenarios can they be useful?
+
+Ask the user to come up with a scenario in which they would use your controlled vocabulary when searching or refining results. Ask them to explain their question in complete sentences, and take note of the term(s) they selected.
+
+Answer the following questions:
+* <u>What is the name and PID of your user?</u>
+* <u>Who invited you as a user to use their search engines (if any)? What are their names and PIDs?</u>
+* <u>What was your user's question in natural language?</u>
+* <u>What terms did they select to represent that question?</u>
+
+---
