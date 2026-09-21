@@ -252,9 +252,50 @@ My vocabulary has relationships. It is a shallow hierarchy, not a flat list: nin
 
 Each top-level term describes a different property of a label: a safety signal (T01, T04), patient information (T05), route (T02), patient group (T03), dosing (T11), DEA control (T07), or product form (T08, T09). None implies another. The gabapentin label gives renal dose changes but has no boxed warning. Entresto is a brand product with two active ingredients. Linking such terms would tag labels with terms whose definitions they fail.
 
+## 2. Organize your vocabulary [10 points]
+
+### 1) Structure of your vocabulary
+
+My vocabulary has relationships. It is a shallow hierarchy, not a flat list: nine top-level terms, with three narrower terms under two of them. Every link uses one relationship, "is a type of."
+
+* **T01: Boxed Warning**
+* **T02: Oral Route**
+* **T03: Pediatric Indication**
+* **T04: High-Frequency Adverse Effect**
+* **T05: Medication Guide**
+* **T07: Controlled Substance**
+  * **T10: Schedule II Controlled Substance** (is a type of Controlled Substance)
+* **T08: Single Active Ingredient**
+* **T09: Brand Name Product**
+* **T11: Organ Impairment Dose Adjustment**
+  * **T06: Renal Dose Adjustment** (is a type of Organ Impairment Dose Adjustment)
+  * **T12: Hepatic Dose Adjustment** (is a type of Organ Impairment Dose Adjustment)
+
+**Relationship definition:**
+
+* **"is a type of":** every label that meets the narrower term's definition also meets the broader term's definition. The narrower term picks out a subset. Schedule II is one of the DEA schedules, so every Schedule II label is a controlled substance label. A renal dose adjustment is one kind of organ impairment dose adjustment, so every T06 label is a T11 label.
+
+**Two kinds of parent terms:**
+
+The two broader terms work differently.
+
+* **T07: Controlled Substance is an independent parent.** It has its own rule: it is assigned whenever `controlled_substance` names Schedule II, III, IV, or V. T10 marks one subset of those labels, Schedule II. T07's own rule already fires for every Schedule II label, so the T10 link never adds a T07 tag the rule would miss. The link guarantees the two terms stay consistent. Labels in Schedules III to V carry T07 alone.
+* **T11: Organ Impairment Dose Adjustment is a passive container.** It has no rule of its own. It is assigned only when T06 or T12 is assigned, and it exists to group those two terms for browsing and search. Every T11 label carries T06, T12, or both.
+
+**Why the top-level terms are not linked:**
+
+Each top-level term describes a different property of a label: a safety signal (T01, T04), patient information (T05), route (T02), patient group (T03), dosing (T11), DEA control (T07), or product form (T08, T09). None implies another. The gabapentin label gives renal dose changes but has no boxed warning. Entresto is a brand product with two active ingredients. Linking such terms would tag labels with terms whose definitions they fail.
+
+---
+
 ### 2) Term assignment considerations
 
-**Are the terms mutually exclusive?** No. Documents in this collection can be assigned multiple terms at the same time. A label gets every term whose definition it meets. For example, the OxyContin (oxycodone extended-release tablets) label meets T01, T02, T05, T07, T08, T09, and T10.
+**Are the terms mutually exclusive?** No. Documents in this collection can be assigned multiple terms at the same time. The system checks each term's rule on its own and gives a label every term whose definition it meets. For example, the OxyContin (oxycodone extended-release tablets) label meets T01, T02, T05, T07, T08, T09, and T10.
+
+**Logical constraints:** No two PDLA terms exclude each other, because each describes a different property of a label. The constraints that do exist come from the hierarchy and from the drugs themselves:
+
+* A label cannot carry T10 without T07, or T11 without T06 or T12.
+* A drug product sits in one DEA schedule. So a T07 label either carries T10 or falls in Schedules III to V, never both.
 
 **Does a narrower term bring its broader term?** Yes. If a document receives a narrower term, it automatically receives the broader term. If one searches for a broader term, a document with a narrower term will be returned.
 
@@ -265,7 +306,25 @@ This does not work in reverse. A search for T10 does not return Schedule IV labe
 
 I chose this rule because a user who asks for controlled substances expects the most tightly controlled drugs in the results. Leaving Schedule II labels out of a Controlled Substance search would hide them.
 
-**AI use:** I decided that labels should carry multiple terms and that narrower terms should return under broader ones. I used Claude (Anthropic) to test each proposed link against the term definitions, and it drafted the final hierarchy, relationship definition, and assignment rules.
+**How the search engine applies the rule: expansion at indexing time.** Broader terms are added when labels are tagged and indexed, not when a user searches.
+
+1. The tagger runs each term's rule on each label.
+2. Each time it assigns a narrower term, it also writes the broader term to that label's index entry. When it detects T06 or T12, it writes T11. When it detects T10, it writes T07, which T07's own rule has already written.
+3. At search time, a query for T11 is a single lookup of the stored T11 tag. It returns the same documents that `T11 OR T06 OR T12` would return under query expansion, because the index already holds every broader tag.
+
+I chose indexing over query expansion for three reasons:
+
+* It matches the term definitions. T11 is defined as assigned when a label gets T06 or T12, which is an indexing rule.
+* Every stored tag is complete. Facet counts, browsing, and AND or OR combinations work on the stored tags with no rewriting of the user's query.
+* The cost is small. If the hierarchy changes, the collection must be re-tagged. With one drug class and one label per ingredient, that is a quick rerun.
+
+**Missing data:**
+
+* Labels with no `openfda` object are already excluded by the Part 1 scope filter, since they cannot be matched to a drug class.
+* Inside the collection, if a field a term's rule needs is missing, the system omits the term. It never guesses. For example, a label with an empty `openfda.route` does not get T02, even if its text says the drug is taken by mouth.
+* This favors precision over recall. A user who filters on a term gets only labels that meet the term's rule, with no false positives from guessed tags. The cost is some false negatives, so a missing term does not prove the opposite. Keyword search still reaches those labels, since controlled vocabulary search and keyword search work side by side.
+
+**AI use:** I decided that labels should carry multiple terms and that narrower terms should return under broader ones. I used Claude (Anthropic) to test each proposed link against the term definitions. Claude drafted the hierarchy, relationship definition, parent-term distinction, indexing explanation, logical constraints, and missing-data rules.
 
 ---
 
