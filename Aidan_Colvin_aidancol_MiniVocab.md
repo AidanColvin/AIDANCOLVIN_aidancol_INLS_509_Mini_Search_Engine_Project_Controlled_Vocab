@@ -48,3 +48,15 @@ My vocabulary has relationships. It is organized in a hierarchy. It is not a fla
 Documents in this collection can be assigned multiple terms at the same time. The terms are not mutually exclusive. A single drug label can be tagged with T01, T02, T05, T08, and T09 simultaneously.
 
 The vocabulary uses a hierarchy. If a document receives a narrower term, it automatically receives the broader term. Yes, if one searches for a broader term, a document with a narrower term will be returned. For example, searching for T05 (Pharmacologic Class) will return all documents tagged with T07 (Controlled Substance).
+
+### 3. Example usage of your vocabulary [20 points]
+
+#### Scenario 1: Single Term Search
+* **Natural Language Question:** What prescription drug labels contain explicit dosage modifications and monitoring guidelines for patients with impaired kidney function?
+* **Selected Term:** `T06: Renal Dose Adjustment`
+* **Expected Documents:** FDA prescription drug label documents for medications that require specialized monitoring and altered dosing schedules for individuals with renal impairment.
+
+#### Scenario 2: Two-Term Combination Search
+* **Natural Language Question:** Which brand-name prescription medications taken orally carry severe FDA boxed warnings regarding life-threatening safety risks?
+* **Selected Terms:** `T01: Boxed Warning` **AND** `T02: Oral Route` (using the **AND** operator to return documents that simultaneously contain both Term A and Term B).
+* **Expected Documents:** FDA prescription drug label documents for oral medications (such as tablets or capsules) that also prominently feature official black box safety warnings for severe adverse events.
