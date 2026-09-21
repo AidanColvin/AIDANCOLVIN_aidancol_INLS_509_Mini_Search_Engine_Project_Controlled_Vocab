@@ -12,7 +12,9 @@ from pathlib import Path
 
 from rx_label_search.collect.fetch import MANIFEST_URL
 from rx_label_search.collect.run import build_collection, download_partitions
+from rx_label_search.collect.verify import collection_problems
 from rx_label_search.storage.read_json import read_json
+from rx_label_search.storage.read_jsonl import iter_jsonl
 
 DEFAULT_RAW_DIR = Path("data/raw")
 DEFAULT_BUILD_DIR = Path("data/build")
@@ -51,6 +53,8 @@ def build_parser() -> argparse.ArgumentParser:
     collect.add_argument("--raw-dir", type=Path, default=DEFAULT_RAW_DIR)
     collect.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
     collect.add_argument("--workers", type=int, default=default_workers())
+    verify = commands.add_parser("verify-collection", help="check the built collection against the scope rules")
+    verify.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
     return parser
 
 
@@ -76,6 +80,18 @@ def run_collect(args: argparse.Namespace) -> str:
     return json.dumps(stats, indent=2)
 
 
+def run_verify_collection(args: argparse.Namespace) -> str:
+    """
+    Takes parsed verify-collection arguments.
+    Streams the built collection through the invariant checks.
+    Gives a summary line, or raises SystemExit(1) with the problems listed when any check fails.
+    """
+    count, problems = collection_problems(iter_jsonl(args.build_dir / "collection.jsonl"))
+    if problems:
+        raise SystemExit("\n".join([f"{len(problems)} problems in {count} records", *problems[:50]]))
+    return f"collection valid: {count} records, one per ingredient set, all human prescription with openfda"
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     """
     Takes an optional argument vector, defaulting to sys.argv.
@@ -83,7 +99,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     Gives the process exit code, 0 on success.
     """
     args = build_parser().parse_args(argv)
-    handlers = {"download": run_download, "collect": run_collect}
+    handlers = {"download": run_download, "collect": run_collect, "verify-collection": run_verify_collection}
     print(handlers[args.command](args))
     return 0
 
