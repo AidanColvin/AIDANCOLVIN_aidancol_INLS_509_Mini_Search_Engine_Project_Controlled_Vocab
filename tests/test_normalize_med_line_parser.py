@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
+import pytest
+
 from rx_label_search.normalize.med_line_parser import (
     clean_name_text,
     daily_total,
@@ -10,17 +14,20 @@ from rx_label_search.normalize.med_line_parser import (
     parse_med_list,
     parse_strength,
     split_entries,
+    strip_administration_quantity,
     strip_trailing_directions,
 )
+from rx_label_search.normalize.name_matcher import STATUS_UNRESOLVED, match_name
+from rx_label_search.storage.read_json import read_json
+
+FULL_BUILD_DICTIONARY_PATH = Path(__file__).resolve().parents[1] / "data" / "build" / "name_dictionary.json"
 
 # Every entry from results/report.md whose name text was broken by Bug 1
-# ("1 time daily", singular, not recognized as a frequency phrase) or Bug 2
+# ("1 time daily", singular, not recognized as a frequency phrase), Bug 2
 # (a trailing "as needed" / "at bedtime" qualifier left attached to the
-# name after a correctly recognized frequency). Expected values are the
-# clean name text after both fixes. The Albuterol and Fluticasone entries
-# still carry their leftover administration count ("2 puffs", "2 sprays")
-# because inhaler/spray dose forms are not one of the three trailing
-# directions Section 7.1 names to strip; see reports/OPEN_QUESTIONS.md.
+# name after a correctly recognized frequency), or a per-dose
+# administration count ("2 puffs", "2 sprays") left attached to the name.
+# Expected values are the clean name text after all three fixes.
 REPORT_MD_FAILING_EXAMPLES: dict[str, str] = {
     "Zolpidem 10 mg 1 time daily": "Zolpidem",
     "Lisinopril 10 mg 1 time daily": "Lisinopril",
@@ -40,7 +47,7 @@ REPORT_MD_FAILING_EXAMPLES: dict[str, str] = {
     "Valsartan 80 mg 1 time daily": "Valsartan",
     "Pravastatin 20 mg 1 time daily": "Pravastatin",
     "Duloxetine 30 mg 1 time daily": "Duloxetine",
-    "Albuterol 90 mcg 2 puffs as needed": "Albuterol 2 puffs",
+    "Albuterol 90 mcg 2 puffs as needed": "Albuterol",
     "Furosemide 20 mg 1 time daily": "Furosemide",
     "Spironolactone 25 mg 1 time daily": "Spironolactone",
     "Warfarin 5 mg 1 time daily": "Warfarin",
@@ -49,7 +56,7 @@ REPORT_MD_FAILING_EXAMPLES: dict[str, str] = {
     "Trazodone 50 mg 1 time daily at bedtime": "Trazodone",
     "Ibuprofen 600 mg 3 times daily as needed": "Ibuprofen",
     "Cyclobenzaprine 10 mg 3 times daily as needed": "Cyclobenzaprine",
-    "Fluticasone 50 mcg 2 sprays daily": "Fluticasone 2 sprays",
+    "Fluticasone 50 mcg 2 sprays daily": "Fluticasone",
     "Empagliflozin 10 mg 1 time daily": "Empagliflozin",
     "Telmisartan 40 mg 1 time daily": "Telmisartan",
     "Ezetimibe 10 mg 1 time daily": "Ezetimibe",
@@ -218,15 +225,52 @@ def test_strip_trailing_directions_removes_as_needed_prn_and_bedtime() -> None:
     assert strip_trailing_directions("Lisinopril") == "Lisinopril"
 
 
+def test_strip_administration_quantity_removes_puffs_and_sprays() -> None:
+    """
+    Takes no arguments.
+    Strips a per-dose administration count such as "2 puffs" or "2 sprays" from entry text.
+    Gives nothing, or fails if the count survives or unrelated text is touched.
+    """
+    assert strip_administration_quantity("Albuterol   2 puffs").strip() == "Albuterol"
+    assert strip_administration_quantity("Fluticasone   2 sprays").strip() == "Fluticasone"
+    assert strip_administration_quantity("Insulin   3 drops").strip() == "Insulin"
+    assert strip_administration_quantity("Lisinopril") == "Lisinopril"
+
+
 def test_report_md_failing_examples_now_parse_to_a_clean_name() -> None:
     """
     Takes no arguments.
-    Parses every entry results/report.md logged as unresolved because of Bug 1 or Bug 2.
+    Parses every entry results/report.md logged as unresolved because of Bug 1, Bug 2, or a leftover administration count.
     Gives nothing, or fails if any entry's name text still carries leftover dose or direction text.
     """
     for raw_text, expected_name in REPORT_MD_FAILING_EXAMPLES.items():
         entry = parse_entry(raw_text)
         assert entry.name_text == expected_name, raw_text
+
+
+def test_report_md_failing_examples_resolve_to_a_label_with_use_rxnorm_off() -> None:
+    """
+    Takes no arguments.
+    Matches every results/report.md failing example's parsed name against the full openFDA collection's name dictionary, the same one /api/check reads offline.
+    Gives nothing, or fails if any example is still unresolved, or skips with a named reason when the full build has not been run locally.
+    """
+    if not FULL_BUILD_DICTIONARY_PATH.is_file():
+        pytest.skip(
+            "full build data/build/name_dictionary.json not present locally; "
+            "run `python -m rx_label_search download && python -m rx_label_search collect && "
+            "python -m rx_label_search base-ingredients && python -m rx_label_search tag && "
+            "python -m rx_label_search build-index && python -m rx_label_search build-checker-data` first, "
+            "or run in CI where rebuild.yml builds it before pytest (see reports/redesign_phase1_parser.md)"
+        )
+    dictionary = read_json(FULL_BUILD_DICTIONARY_PATH)
+    unresolved = []
+    for raw_text, expected_name in REPORT_MD_FAILING_EXAMPLES.items():
+        entry = parse_entry(raw_text)
+        assert entry.name_text == expected_name, raw_text
+        match = match_name(entry.name_text, dictionary)
+        if match.status == STATUS_UNRESOLVED:
+            unresolved.append((raw_text, match.reason))
+    assert unresolved == []
 
 
 def test_dose_text_no_longer_leaks_into_the_matched_name() -> None:

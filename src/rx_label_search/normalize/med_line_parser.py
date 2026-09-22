@@ -25,6 +25,7 @@ FREQUENCY_PATTERNS: tuple[tuple[str, str], ...] = (
 _COMPILED = tuple((re.compile(pattern, re.IGNORECASE), kind) for pattern, kind in FREQUENCY_PATTERNS)
 _TRAILING_JUNK = re.compile(r"^[\s\-–:.]+|[\s\-–:.]+$")
 TRAILING_DIRECTIONS = re.compile(r"\b(?:as\s+needed|as\s+necessary|prn|at\s+bedtime)\b", re.IGNORECASE)
+ADMINISTRATION_QUANTITY = re.compile(r"\b\d+(?:\.\d+)?\s*(?:puffs?|sprays?|inhalations?|actuations?|drops?)\b", re.IGNORECASE)
 
 
 def split_entries(text: str) -> tuple[str, ...]:
@@ -107,6 +108,15 @@ def strip_trailing_directions(text: str) -> str:
     return TRAILING_DIRECTIONS.sub(" ", text)
 
 
+def strip_administration_quantity(text: str) -> str:
+    """
+    Takes the entry text left after strength, frequency, and directions were removed.
+    Removes a per-dose administration count such as "2 puffs", "2 sprays", or "3 drops".
+    Gives the text with that count removed, unchanged when none is present.
+    """
+    return ADMINISTRATION_QUANTITY.sub(" ", text)
+
+
 def clean_name_text(text: str) -> str:
     """
     Takes the entry text left after strength, frequency, and directions were removed.
@@ -137,7 +147,8 @@ def parse_entry(raw_text: str) -> MedEntry:
     value, unit, after_strength = parse_strength(raw_text)
     times, notes, after_frequency = parse_frequency(after_strength)
     after_directions = strip_trailing_directions(after_frequency)
-    name = clean_name_text(after_directions)
+    after_quantity = strip_administration_quantity(after_directions)
+    name = clean_name_text(after_quantity)
     if not name:
         notes = (*notes, "no drug name found in entry")
     if value is None:

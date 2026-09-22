@@ -1,0 +1,88 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "EdgeStates.dc.html": {
+      "h": 600,
+      "title": "No warning found, and error",
+      "w": 800,
+      "x": 4070,
+      "y": 1760
+    },
+    "Main.dc.html": {
+      "h": 1760,
+      "is_interactive": true,
+      "title": "Interactions: results",
+      "w": 1280,
+      "x": 1360,
+      "y": 0
+    },
+    "Mobile.dc.html": {
+      "h": 2200,
+      "title": "Interactions: results on a phone, dark mode",
+      "w": 390,
+      "x": 2720,
+      "y": 0
+    },
+    "Search.dc.html": {
+      "h": 1640,
+      "is_interactive": true,
+      "title": "Label search",
+      "w": 1280,
+      "x": 3190,
+      "y": 0
+    },
+    "Start.dc.html": {
+      "h": 700,
+      "is_interactive": true,
+      "title": "Interactions: first visit",
+      "w": 1280,
+      "x": -10,
+      "y": 23
+    },
+    "Tiers.dc.html": {
+      "h": 1320,
+      "title": "Alert treatments by tier",
+      "w": 800,
+      "x": 3190,
+      "y": 1760
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-09-22T07:50:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "file": "Start.dc.html",
+    "view": "focused"
+  },
+  "notes": {
+    "canvasTitle": {
+      "kind": "title1",
+      "maxW": 4470,
+      "text": "Drug Interaction Screen redesign",
+      "w": 240,
+      "x": 0,
+      "y": -320
+    },
+    "dataNote": {
+      "fill": "gray",
+      "size": 24,
+      "text": "Drug data on these boards is real output from the repo's own checker and search code, run offline on the openFDA fixture labels in tests/fixtures (build date 2026-09-21). The live site searches the full collection, so it will return more results. Bracketed text marks placeholders for alert types the fixtures cannot produce.",
+      "w": 520,
+      "x": -620,
+      "y": 0
+    }
+  },
+  "order": [
+    "Start.dc.html",
+    "Main.dc.html",
+    "Mobile.dc.html",
+    "Search.dc.html",
+    "Tiers.dc.html",
+    "EdgeStates.dc.html"
+  ],
+  "pages": [],
+  "title": "Drug Interaction Screen redesign"
+}
