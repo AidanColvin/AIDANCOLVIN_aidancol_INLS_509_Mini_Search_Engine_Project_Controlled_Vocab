@@ -134,8 +134,18 @@ async function runCheck() {
   const medications = document.getElementById('med-box').value;
   const results = document.getElementById('check-results');
   results.textContent = 'Checking…';
-  const res = await fetch('/api/check', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ medications, use_rxnorm: true }) });
-  const data = await res.json();
+  let res, data;
+  try {
+    res = await fetch('/api/check', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ medications, use_rxnorm: true }) });
+    data = await res.json();
+  } catch (err) {
+    results.textContent = 'Error: could not read the response from the server.';
+    return;
+  }
+  if (!res.ok) {
+    results.textContent = 'Error: ' + (data && data.error ? data.error : 'the server returned an error.');
+    return;
+  }
   document.getElementById('notice-line').textContent = data.notice || '';
   let html = '';
   if (data.medication_table && data.medication_table.length) {
@@ -154,13 +164,13 @@ async function runCheck() {
       </tr>`).join('');
     html += `<table><thead><tr><th>As entered</th><th>Matched name</th><th>Generic</th><th>Base ingredients</th><th>Brand</th><th>FDA class</th><th>Route</th><th>DEA schedule</th><th>Daily total</th><th>PDLA tags</th></tr></thead><tbody>${rows}</tbody></table>`;
   }
-  if (data.alerts && data.alerts.length) {
+  if (Array.isArray(data.alerts) && data.alerts.length > 0) {
     html += '<h3>Alerts</h3>' + data.alerts.map(alert => `
       <div class="alert ${tierClass(alert.tier)}">
         <strong>${alert.title}</strong> &mdash; ${alert.tier_name}
         ${alert.members.map(m => `<div class="member">${m.drug_name} (${m.section || 'duplication'}): "${m.sentence}" &mdash; <a href="${m.dailymed_url}" target="_blank" rel="noopener">DailyMed</a></div>`).join('')}
       </div>`).join('');
-  } else {
+  } else if (Array.isArray(data.alerts) && data.alerts.length === 0) {
     html += `<p>${data.no_warning_text || 'No warning found in the labels checked.'}</p>`;
   }
   if (data.unresolved_entries && data.unresolved_entries.length) {
