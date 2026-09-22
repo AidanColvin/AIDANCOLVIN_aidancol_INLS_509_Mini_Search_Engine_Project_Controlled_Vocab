@@ -6,7 +6,7 @@
 
 import { ApiHttpError, ApiShapeError, fetchCheck, fetchSearch, fetchTermsOnly, maxMedicationTextChars } from "./api.js";
 import { formatBuildDate } from "./format.js";
-import { isWithinLengthLimit, joinMedicationLines, splitPastedText } from "./meds.js";
+import { isWithinLengthLimit, joinMedicationLines, splitEnteredText } from "./meds.js";
 import { renderHeader } from "./render_header.js";
 import {
   mountInteractionsView,
@@ -245,7 +245,7 @@ function main(): void {
 
   const interactionsCallbacks: InteractionsCallbacks = {
     onAddMedication: (text) => {
-      const newLines = splitPastedText(text);
+      const newLines = splitEnteredText(text);
       if (newLines.length === 0) {
         return;
       }
