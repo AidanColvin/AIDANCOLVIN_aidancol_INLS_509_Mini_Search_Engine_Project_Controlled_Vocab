@@ -1,0 +1,1703 @@
+[
+  {
+    "patient_number": 1,
+    "medications": "Alprazolam 1 mg 3 times daily, Zolpidem 10 mg 1 time daily, Lisinopril 10 mg 1 time daily, Atorvastatin 20 mg 1 time daily, Sertraline 50 mg 1 time daily, Omeprazole 20 mg 1 time daily",
+    "passed": true,
+    "status_code": 200,
+    "response_json": {
+      "build_date": "2026-09-22",
+      "medication_table": [
+        {
+          "as_entered": "Alprazolam 1 mg 3 times daily",
+          "matched_name": [
+            "Alprazolam",
+            "ALPRAZOLAM"
+          ],
+          "generic": [
+            "ALPRAZOLAM"
+          ],
+          "base_ingredients": [
+            "alprazolam"
+          ],
+          "brand": [
+            "Alprazolam"
+          ],
+          "fda_class": "Benzodiazepine [EPC]",
+          "route": [
+            "ORAL"
+          ],
+          "dea_schedule": "IV",
+          "daily_total": 3.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": [
+            {
+              "term_id": "T01",
+              "name": "Boxed Warning"
+            },
+            {
+              "term_id": "T02",
+              "name": "Oral Route"
+            },
+            {
+              "term_id": "T04",
+              "name": "High-Frequency Adverse Effect"
+            },
+            {
+              "term_id": "T05",
+              "name": "Medication Guide"
+            },
+            {
+              "term_id": "T07",
+              "name": "Controlled Substance"
+            },
+            {
+              "term_id": "T08",
+              "name": "Single Active Ingredient"
+            },
+            {
+              "term_id": "T11",
+              "name": "Organ Impairment Dose Adjustment"
+            },
+            {
+              "term_id": "T12",
+              "name": "Hepatic Dose Adjustment"
+            },
+            {
+              "term_id": "T13",
+              "name": "Interaction Risk"
+            },
+            {
+              "term_id": "T15",
+              "name": "CNS Depression Risk"
+            }
+          ]
+        },
+        {
+          "as_entered": "Zolpidem 10 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 10.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Lisinopril 10 mg 1 time daily",
+          "matched_name": [
+            "Lisinopril 1 time",
+            "lisinopril 1 MG/ML",
+            "lisinopril",
+            "LISINOPRIL"
+          ],
+          "generic": [
+            "LISINOPRIL"
+          ],
+          "base_ingredients": [
+            "lisinopril"
+          ],
+          "brand": [
+            "Lisinopril"
+          ],
+          "fda_class": "Not listed on label.",
+          "route": [
+            "ORAL"
+          ],
+          "dea_schedule": null,
+          "daily_total": 10.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": [
+            {
+              "term_id": "T01",
+              "name": "Boxed Warning"
+            },
+            {
+              "term_id": "T02",
+              "name": "Oral Route"
+            },
+            {
+              "term_id": "T03",
+              "name": "Pediatric Indication"
+            },
+            {
+              "term_id": "T04",
+              "name": "High-Frequency Adverse Effect"
+            },
+            {
+              "term_id": "T06",
+              "name": "Renal Dose Adjustment"
+            },
+            {
+              "term_id": "T08",
+              "name": "Single Active Ingredient"
+            },
+            {
+              "term_id": "T11",
+              "name": "Organ Impairment Dose Adjustment"
+            },
+            {
+              "term_id": "T13",
+              "name": "Interaction Risk"
+            },
+            {
+              "term_id": "T17",
+              "name": "Contraindicated Combination"
+            }
+          ]
+        },
+        {
+          "as_entered": "Atorvastatin 20 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 20.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Sertraline 50 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 50.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Omeprazole 20 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 20.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        }
+      ],
+      "alerts": [],
+      "unresolved_entries": [
+        {
+          "raw_text": "Zolpidem 10 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "ZOLPIDEM"
+          ]
+        },
+        {
+          "raw_text": "Atorvastatin 20 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Sertraline 50 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "sertraline"
+          ]
+        },
+        {
+          "raw_text": "Omeprazole 20 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "Omeprazole",
+            "(-)-omeprazole"
+          ]
+        }
+      ],
+      "no_warning_text": "No warning found in the labels checked.",
+      "notice": "Results reflect FDA label text as of 2026-09-22. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database."
+    },
+    "error": null
+  },
+  {
+    "patient_number": 2,
+    "medications": "Metformin 500 mg 2 times daily, Amlodipine 5 mg 1 time daily, Simvastatin 20 mg 1 time daily, Losartan 50 mg 1 time daily, Gabapentin 300 mg 3 times daily, Levothyroxine 50 mcg 1 time daily",
+    "passed": true,
+    "status_code": 200,
+    "response_json": {
+      "build_date": "2026-09-22",
+      "medication_table": [
+        {
+          "as_entered": "Metformin 500 mg 2 times daily",
+          "matched_name": [
+            "Metformin",
+            "METFORMIN HYDROCHLORIDE"
+          ],
+          "generic": [
+            "METFORMIN ER 500 MG"
+          ],
+          "base_ingredients": [
+            "metformin"
+          ],
+          "brand": [
+            "Metformin"
+          ],
+          "fda_class": "Not listed on label.",
+          "route": [
+            "ORAL"
+          ],
+          "dea_schedule": null,
+          "daily_total": 1000.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": [
+            {
+              "term_id": "T01",
+              "name": "Boxed Warning"
+            },
+            {
+              "term_id": "T02",
+              "name": "Oral Route"
+            },
+            {
+              "term_id": "T04",
+              "name": "High-Frequency Adverse Effect"
+            },
+            {
+              "term_id": "T06",
+              "name": "Renal Dose Adjustment"
+            },
+            {
+              "term_id": "T08",
+              "name": "Single Active Ingredient"
+            },
+            {
+              "term_id": "T11",
+              "name": "Organ Impairment Dose Adjustment"
+            }
+          ]
+        },
+        {
+          "as_entered": "Amlodipine 5 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 5.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Simvastatin 20 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 20.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Losartan 50 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 50.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Gabapentin 300 mg 3 times daily",
+          "matched_name": [
+            "Gabapentin",
+            "GABAPENTIN"
+          ],
+          "generic": [
+            "GABAPENTIN"
+          ],
+          "base_ingredients": [
+            "gabapentin"
+          ],
+          "brand": [
+            "gabapentin"
+          ],
+          "fda_class": "Not listed on label.",
+          "route": [
+            "ORAL"
+          ],
+          "dea_schedule": null,
+          "daily_total": 900.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": [
+            {
+              "term_id": "T02",
+              "name": "Oral Route"
+            },
+            {
+              "term_id": "T04",
+              "name": "High-Frequency Adverse Effect"
+            },
+            {
+              "term_id": "T05",
+              "name": "Medication Guide"
+            },
+            {
+              "term_id": "T06",
+              "name": "Renal Dose Adjustment"
+            },
+            {
+              "term_id": "T08",
+              "name": "Single Active Ingredient"
+            },
+            {
+              "term_id": "T11",
+              "name": "Organ Impairment Dose Adjustment"
+            },
+            {
+              "term_id": "T13",
+              "name": "Interaction Risk"
+            },
+            {
+              "term_id": "T15",
+              "name": "CNS Depression Risk"
+            }
+          ]
+        },
+        {
+          "as_entered": "Levothyroxine 50 mcg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 50.0,
+          "daily_total_unit": "mcg",
+          "pdla_tags": []
+        }
+      ],
+      "alerts": [],
+      "unresolved_entries": [
+        {
+          "raw_text": "Amlodipine 5 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": []
+        },
+        {
+          "raw_text": "Simvastatin 20 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Losartan 50 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "losartan"
+          ]
+        },
+        {
+          "raw_text": "Levothyroxine 50 mcg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": []
+        }
+      ],
+      "no_warning_text": "No warning found in the labels checked.",
+      "notice": "Results reflect FDA label text as of 2026-09-22. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database."
+    },
+    "error": null
+  },
+  {
+    "patient_number": 3,
+    "medications": "Hydrochlorothiazide 25 mg 1 time daily, Metoprolol Succinate 50 mg 1 time daily, Escitalopram 10 mg 1 time daily, Pantoprazole 40 mg 1 time daily, Montelukast 10 mg 1 time daily, Rosuvastatin 10 mg 1 time daily",
+    "passed": true,
+    "status_code": 200,
+    "response_json": {
+      "build_date": "2026-09-22",
+      "medication_table": [
+        {
+          "as_entered": "Hydrochlorothiazide 25 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 25.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Metoprolol Succinate 50 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 50.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Escitalopram 10 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 10.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Pantoprazole 40 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 40.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Montelukast 10 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 10.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Rosuvastatin 10 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 10.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        }
+      ],
+      "alerts": [],
+      "unresolved_entries": [
+        {
+          "raw_text": "Hydrochlorothiazide 25 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": []
+        },
+        {
+          "raw_text": "Metoprolol Succinate 50 mg 1 time daily",
+          "status": "needs_confirmation",
+          "reason": "two or more names are equally close",
+          "candidates": [
+            "Metoprolol Succinate ER \u2192 METOPROLOL SUCCINATE",
+            "Metoprolol succinate \u2192 METOPROLOL SUCCINATE | METOPROLOL TARTRATE"
+          ]
+        },
+        {
+          "raw_text": "Escitalopram 10 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Pantoprazole 40 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Montelukast 10 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Rosuvastatin 10 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        }
+      ],
+      "no_warning_text": "No warning found in the labels checked.",
+      "notice": "Results reflect FDA label text as of 2026-09-22. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database."
+    },
+    "error": null
+  },
+  {
+    "patient_number": 4,
+    "medications": "Glipizide 5 mg 2 times daily, Valsartan 80 mg 1 time daily, Pravastatin 20 mg 1 time daily, Duloxetine 30 mg 1 time daily, Famotidine 20 mg 2 times daily, Albuterol 90 mcg 2 puffs as needed",
+    "passed": true,
+    "status_code": 200,
+    "response_json": {
+      "build_date": "2026-09-22",
+      "medication_table": [
+        {
+          "as_entered": "Glipizide 5 mg 2 times daily",
+          "matched_name": [
+            "Glipizide",
+            "GLIPIZIDE"
+          ],
+          "generic": [
+            "GLIPIZIDE"
+          ],
+          "base_ingredients": [
+            "glipizide"
+          ],
+          "brand": [
+            "Glipizide"
+          ],
+          "fda_class": "Sulfonylurea [EPC]",
+          "route": [
+            "ORAL"
+          ],
+          "dea_schedule": null,
+          "daily_total": 10.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": [
+            {
+              "term_id": "T02",
+              "name": "Oral Route"
+            },
+            {
+              "term_id": "T04",
+              "name": "High-Frequency Adverse Effect"
+            },
+            {
+              "term_id": "T08",
+              "name": "Single Active Ingredient"
+            }
+          ]
+        },
+        {
+          "as_entered": "Valsartan 80 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 80.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Pravastatin 20 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 20.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Duloxetine 30 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 30.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Famotidine 20 mg 2 times daily",
+          "matched_name": [
+            "Famotidine",
+            "FAMOTIDINE"
+          ],
+          "generic": [
+            "FAMOTIDINE"
+          ],
+          "base_ingredients": [
+            "famotidine"
+          ],
+          "brand": [
+            "Famotidine"
+          ],
+          "fda_class": "Histamine-2 Receptor Antagonist [EPC]",
+          "route": [
+            "ORAL"
+          ],
+          "dea_schedule": null,
+          "daily_total": 40.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": [
+            {
+              "term_id": "T02",
+              "name": "Oral Route"
+            },
+            {
+              "term_id": "T03",
+              "name": "Pediatric Indication"
+            },
+            {
+              "term_id": "T06",
+              "name": "Renal Dose Adjustment"
+            },
+            {
+              "term_id": "T08",
+              "name": "Single Active Ingredient"
+            },
+            {
+              "term_id": "T11",
+              "name": "Organ Impairment Dose Adjustment"
+            },
+            {
+              "term_id": "T13",
+              "name": "Interaction Risk"
+            },
+            {
+              "term_id": "T17",
+              "name": "Contraindicated Combination"
+            }
+          ]
+        },
+        {
+          "as_entered": "Albuterol 90 mcg 2 puffs as needed",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": null,
+          "daily_total_unit": "mcg",
+          "pdla_tags": []
+        }
+      ],
+      "alerts": [],
+      "unresolved_entries": [
+        {
+          "raw_text": "Valsartan 80 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "Valsartan"
+          ]
+        },
+        {
+          "raw_text": "Pravastatin 20 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Duloxetine 30 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "duloxetine"
+          ]
+        },
+        {
+          "raw_text": "Albuterol 90 mcg 2 puffs as needed",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "albuterol 2 MG"
+          ]
+        }
+      ],
+      "no_warning_text": "No warning found in the labels checked.",
+      "notice": "Results reflect FDA label text as of 2026-09-22. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database."
+    },
+    "error": null
+  },
+  {
+    "patient_number": 5,
+    "medications": "Carvedilol 6.25 mg 2 times daily, Furosemide 20 mg 1 time daily, Spironolactone 25 mg 1 time daily, Warfarin 5 mg 1 time daily, Digoxin 125 mcg 1 time daily, Potassium Chloride 20 mEq 1 time daily",
+    "passed": true,
+    "status_code": 200,
+    "response_json": {
+      "build_date": "2026-09-22",
+      "medication_table": [
+        {
+          "as_entered": "Carvedilol 6.25 mg 2 times daily",
+          "matched_name": [
+            "Carvedilol",
+            "CARVEDILOL"
+          ],
+          "generic": [
+            "CARVEDILOL"
+          ],
+          "base_ingredients": [
+            "carvedilol"
+          ],
+          "brand": [
+            "Carvedilol"
+          ],
+          "fda_class": "alpha-Adrenergic Blocker [EPC], beta-Adrenergic Blocker [EPC]",
+          "route": [
+            "ORAL"
+          ],
+          "dea_schedule": null,
+          "daily_total": 12.5,
+          "daily_total_unit": "mg",
+          "pdla_tags": [
+            {
+              "term_id": "T02",
+              "name": "Oral Route"
+            },
+            {
+              "term_id": "T04",
+              "name": "High-Frequency Adverse Effect"
+            },
+            {
+              "term_id": "T08",
+              "name": "Single Active Ingredient"
+            }
+          ]
+        },
+        {
+          "as_entered": "Furosemide 20 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 20.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Spironolactone 25 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 25.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Warfarin 5 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 5.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Digoxin 125 mcg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 125.0,
+          "daily_total_unit": "mcg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Potassium Chloride 20 mEq 1 time daily",
+          "matched_name": [
+            "Potassium Chloride 20 mEq 1 time",
+            "potassium chloride 20 MEQ",
+            "potassium chloride",
+            "POTASSIUM CHLORIDE"
+          ],
+          "generic": [
+            "POTASSIUM CHLORIDE EXTENDED-RELEASE"
+          ],
+          "base_ingredients": [
+            "potassium chloride"
+          ],
+          "brand": [
+            "Potassium Chloride Extended-release"
+          ],
+          "fda_class": "Not listed on label.",
+          "route": [
+            "ORAL"
+          ],
+          "dea_schedule": null,
+          "daily_total": null,
+          "daily_total_unit": null,
+          "pdla_tags": [
+            {
+              "term_id": "T02",
+              "name": "Oral Route"
+            },
+            {
+              "term_id": "T08",
+              "name": "Single Active Ingredient"
+            },
+            {
+              "term_id": "T13",
+              "name": "Interaction Risk"
+            },
+            {
+              "term_id": "T17",
+              "name": "Contraindicated Combination"
+            }
+          ]
+        }
+      ],
+      "alerts": [],
+      "unresolved_entries": [
+        {
+          "raw_text": "Furosemide 20 mg 1 time daily",
+          "status": "needs_confirmation",
+          "reason": "RxNorm returned more than one equally ranked concept",
+          "candidates": [
+            "furosemide 1.8 MG",
+            "furosemide 1 MG/ML"
+          ]
+        },
+        {
+          "raw_text": "Spironolactone 25 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Warfarin 5 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "(-)-Warfarin",
+            "warfarin"
+          ]
+        },
+        {
+          "raw_text": "Digoxin 125 mcg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "Digoxin"
+          ]
+        }
+      ],
+      "no_warning_text": "No warning found in the labels checked.",
+      "notice": "Results reflect FDA label text as of 2026-09-22. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database."
+    },
+    "error": null
+  },
+  {
+    "patient_number": 6,
+    "medications": "Bupropion XL 150 mg 1 time daily, Trazodone 50 mg 1 time daily at bedtime, Amoxicillin 500 mg 3 times daily, Ibuprofen 600 mg 3 times daily as needed, Cyclobenzaprine 10 mg 3 times daily as needed, Fluticasone 50 mcg 2 sprays daily",
+    "passed": true,
+    "status_code": 200,
+    "response_json": {
+      "build_date": "2026-09-22",
+      "medication_table": [
+        {
+          "as_entered": "Bupropion XL 150 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 150.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Trazodone 50 mg 1 time daily at bedtime",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 50.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Amoxicillin 500 mg 3 times daily",
+          "matched_name": [
+            "Amoxicillin",
+            "AMOXICILLIN"
+          ],
+          "generic": [
+            "AMOXICILLIN"
+          ],
+          "base_ingredients": [
+            "amoxicillin"
+          ],
+          "brand": [
+            "AMOXICILLIN"
+          ],
+          "fda_class": "Not listed on label.",
+          "route": [
+            "ORAL"
+          ],
+          "dea_schedule": null,
+          "daily_total": 1500.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": [
+            {
+              "term_id": "T02",
+              "name": "Oral Route"
+            },
+            {
+              "term_id": "T06",
+              "name": "Renal Dose Adjustment"
+            },
+            {
+              "term_id": "T08",
+              "name": "Single Active Ingredient"
+            },
+            {
+              "term_id": "T11",
+              "name": "Organ Impairment Dose Adjustment"
+            }
+          ]
+        },
+        {
+          "as_entered": "Ibuprofen 600 mg 3 times daily as needed",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 1800.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Cyclobenzaprine 10 mg 3 times daily as needed",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 30.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Fluticasone 50 mcg 2 sprays daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 50.0,
+          "daily_total_unit": "mcg",
+          "pdla_tags": []
+        }
+      ],
+      "alerts": [],
+      "unresolved_entries": [
+        {
+          "raw_text": "Bupropion XL 150 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": []
+        },
+        {
+          "raw_text": "Trazodone 50 mg 1 time daily at bedtime",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": []
+        },
+        {
+          "raw_text": "Ibuprofen 600 mg 3 times daily as needed",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": []
+        },
+        {
+          "raw_text": "Cyclobenzaprine 10 mg 3 times daily as needed",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Fluticasone 50 mcg 2 sprays daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "fluticasone Metered Dose Nasal Spray"
+          ]
+        }
+      ],
+      "no_warning_text": "No warning found in the labels checked.",
+      "notice": "Results reflect FDA label text as of 2026-09-22. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database."
+    },
+    "error": null
+  },
+  {
+    "patient_number": 7,
+    "medications": "Empagliflozin 10 mg 1 time daily, Telmisartan 40 mg 1 time daily, Ezetimibe 10 mg 1 time daily, Venlafaxine ER 75 mg 1 time daily, Esomeprazole 40 mg 1 time daily, Meloxicam 15 mg 1 time daily",
+    "passed": true,
+    "status_code": 200,
+    "response_json": {
+      "build_date": "2026-09-22",
+      "medication_table": [
+        {
+          "as_entered": "Empagliflozin 10 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 10.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Telmisartan 40 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 40.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Ezetimibe 10 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 10.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Venlafaxine ER 75 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 75.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Esomeprazole 40 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 40.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Meloxicam 15 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 15.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        }
+      ],
+      "alerts": [],
+      "unresolved_entries": [
+        {
+          "raw_text": "Empagliflozin 10 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Telmisartan 40 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Ezetimibe 10 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "Ezetimibe"
+          ]
+        },
+        {
+          "raw_text": "Venlafaxine ER 75 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": []
+        },
+        {
+          "raw_text": "Esomeprazole 40 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Meloxicam 15 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "Meloxicam"
+          ]
+        }
+      ],
+      "no_warning_text": "No warning found in the labels checked.",
+      "notice": "Results reflect FDA label text as of 2026-09-22. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database."
+    },
+    "error": null
+  },
+  {
+    "patient_number": 8,
+    "medications": "Diltiazem ER 180 mg 1 time daily, Apixaban 5 mg 2 times daily, Allopurinol 100 mg 1 time daily, Tamsulosin 0.4 mg 1 time daily, Finasteride 5 mg 1 time daily, Acetaminophen 500 mg 4 times daily as needed",
+    "passed": true,
+    "status_code": 200,
+    "response_json": {
+      "build_date": "2026-09-22",
+      "medication_table": [
+        {
+          "as_entered": "Diltiazem ER 180 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 180.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Apixaban 5 mg 2 times daily",
+          "matched_name": [
+            "Apixaban",
+            "APIXABAN"
+          ],
+          "generic": [
+            "APIXABAN"
+          ],
+          "base_ingredients": [
+            "apixaban"
+          ],
+          "brand": [
+            "ELIQUIS"
+          ],
+          "fda_class": "Factor Xa Inhibitor [EPC]",
+          "route": [
+            "ORAL"
+          ],
+          "dea_schedule": null,
+          "daily_total": 10.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": [
+            {
+              "term_id": "T01",
+              "name": "Boxed Warning"
+            },
+            {
+              "term_id": "T02",
+              "name": "Oral Route"
+            },
+            {
+              "term_id": "T03",
+              "name": "Pediatric Indication"
+            },
+            {
+              "term_id": "T04",
+              "name": "High-Frequency Adverse Effect"
+            },
+            {
+              "term_id": "T05",
+              "name": "Medication Guide"
+            },
+            {
+              "term_id": "T06",
+              "name": "Renal Dose Adjustment"
+            },
+            {
+              "term_id": "T08",
+              "name": "Single Active Ingredient"
+            },
+            {
+              "term_id": "T09",
+              "name": "Brand Name Product"
+            },
+            {
+              "term_id": "T11",
+              "name": "Organ Impairment Dose Adjustment"
+            },
+            {
+              "term_id": "T12",
+              "name": "Hepatic Dose Adjustment"
+            }
+          ]
+        },
+        {
+          "as_entered": "Allopurinol 100 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 100.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Tamsulosin 0.4 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 0.4,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Finasteride 5 mg 1 time daily",
+          "matched_name": [
+            "Finasteride 1 time",
+            "finasteride 1 MG",
+            "finasteride",
+            "FINASTERIDE"
+          ],
+          "generic": [
+            "FINASTERIDE"
+          ],
+          "base_ingredients": [
+            "finasteride"
+          ],
+          "brand": [
+            "Finasteride"
+          ],
+          "fda_class": "5-alpha Reductase Inhibitor [EPC]",
+          "route": [
+            "ORAL"
+          ],
+          "dea_schedule": null,
+          "daily_total": 5.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": [
+            {
+              "term_id": "T02",
+              "name": "Oral Route"
+            },
+            {
+              "term_id": "T03",
+              "name": "Pediatric Indication"
+            },
+            {
+              "term_id": "T08",
+              "name": "Single Active Ingredient"
+            }
+          ]
+        },
+        {
+          "as_entered": "Acetaminophen 500 mg 4 times daily as needed",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 2000.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        }
+      ],
+      "alerts": [],
+      "unresolved_entries": [
+        {
+          "raw_text": "Diltiazem ER 180 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": []
+        },
+        {
+          "raw_text": "Allopurinol 100 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Tamsulosin 0.4 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "(-)-tamsulosin"
+          ]
+        },
+        {
+          "raw_text": "Acetaminophen 500 mg 4 times daily as needed",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "Acetaminophen"
+          ]
+        }
+      ],
+      "no_warning_text": "No warning found in the labels checked.",
+      "notice": "Results reflect FDA label text as of 2026-09-22. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database."
+    },
+    "error": null
+  },
+  {
+    "patient_number": 9,
+    "medications": "Sitagliptin 100 mg 1 time daily, Nifedipine ER 30 mg 1 time daily, Lovastatin 20 mg 1 time daily, Fluoxetine 20 mg 1 time daily, Famotidine 40 mg 1 time daily, Cetirizine 10 mg 1 time daily",
+    "passed": true,
+    "status_code": 200,
+    "response_json": {
+      "build_date": "2026-09-22",
+      "medication_table": [
+        {
+          "as_entered": "Sitagliptin 100 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 100.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Nifedipine ER 30 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 30.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Lovastatin 20 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 20.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Fluoxetine 20 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 20.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Famotidine 40 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 40.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Cetirizine 10 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 10.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        }
+      ],
+      "alerts": [],
+      "unresolved_entries": [
+        {
+          "raw_text": "Sitagliptin 100 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Nifedipine ER 30 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": []
+        },
+        {
+          "raw_text": "Lovastatin 20 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "Lovastatin"
+          ]
+        },
+        {
+          "raw_text": "Fluoxetine 20 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "fluoxetine"
+          ]
+        },
+        {
+          "raw_text": "Famotidine 40 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "Famotidine"
+          ]
+        },
+        {
+          "raw_text": "Cetirizine 10 mg 1 time daily",
+          "status": "needs_confirmation",
+          "reason": "more than one collection ingredient set matches",
+          "candidates": [
+            "CETIRIZINE HYDROCHLORIDE",
+            "CETIRIZINE"
+          ]
+        }
+      ],
+      "no_warning_text": "No warning found in the labels checked.",
+      "notice": "Results reflect FDA label text as of 2026-09-22. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database."
+    },
+    "error": null
+  },
+  {
+    "patient_number": 10,
+    "medications": "Ramipril 5 mg 1 time daily, Chlorthalidone 25 mg 1 time daily, Pitavastatin 2 mg 1 time daily, Paroxetine 20 mg 1 time daily, Dicyclomine 20 mg 4 times daily as needed, Loratadine 10 mg 1 time daily",
+    "passed": true,
+    "status_code": 200,
+    "response_json": {
+      "build_date": "2026-09-22",
+      "medication_table": [
+        {
+          "as_entered": "Ramipril 5 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 5.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Chlorthalidone 25 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 25.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Pitavastatin 2 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 2.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Paroxetine 20 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 20.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Dicyclomine 20 mg 4 times daily as needed",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 80.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        },
+        {
+          "as_entered": "Loratadine 10 mg 1 time daily",
+          "matched_name": null,
+          "generic": [],
+          "base_ingredients": [],
+          "brand": [],
+          "fda_class": "Not listed on label.",
+          "route": [],
+          "dea_schedule": null,
+          "daily_total": 10.0,
+          "daily_total_unit": "mg",
+          "pdla_tags": []
+        }
+      ],
+      "alerts": [],
+      "unresolved_entries": [
+        {
+          "raw_text": "Ramipril 5 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "Ramipril"
+          ]
+        },
+        {
+          "raw_text": "Chlorthalidone 25 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Pitavastatin 2 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm lists no ingredient for the matched concept",
+          "candidates": []
+        },
+        {
+          "raw_text": "Paroxetine 20 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "paroxetine"
+          ]
+        },
+        {
+          "raw_text": "Dicyclomine 20 mg 4 times daily as needed",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": [
+            "dicyclomine"
+          ]
+        },
+        {
+          "raw_text": "Loratadine 10 mg 1 time daily",
+          "status": "unresolved",
+          "reason": "RxNorm found no close name",
+          "candidates": []
+        }
+      ],
+      "no_warning_text": "No warning found in the labels checked.",
+      "notice": "Results reflect FDA label text as of 2026-09-22. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database."
+    },
+    "error": null
+  }
+]
