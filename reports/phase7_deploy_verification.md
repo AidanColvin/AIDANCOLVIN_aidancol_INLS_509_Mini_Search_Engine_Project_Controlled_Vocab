@@ -4,9 +4,11 @@ The one remaining gap from `reports/phase7_serve.md` — a live deployment — i
 
 ## Live URL
 
-https://rx-label-search-hwgoaykin-aidancolvins-projects.vercel.app
+**Stable link (use this one): https://rx-label-search-aidancolvins-projects.vercel.app**
 
-This is the URL Vercel assigned this specific production deployment. Every future deploy through the workflow will print a new URL of the same shape in its log; there is no custom domain attached yet.
+This is Vercel's fixed production alias for the project. It always serves whatever the latest successful deploy from `.github/workflows/rebuild.yml` produced, so it stays the same across every future weekly rebuild; no custom domain is attached, and none is required.
+
+Each individual deployment also gets its own permanent URL, printed in that run's "Deploy to Vercel" log step (for example `https://rx-label-search-980uyqzxf-aidancolvins-projects.vercel.app` for the run that produced this report). Those per-deployment URLs keep working indefinitely but are not the ones to share, since a newer deploy will supersede them as the production target without changing their own content.
 
 ## What was set up
 
@@ -48,9 +50,9 @@ All four fixes are either committed to the repo (1 and 3, both need no further a
 
 ## Final workflow status
 
-Run `35679459340` (triggered by the fix-3 push) completed with every step green, including `Deploy to Vercel`, in 29m56s. `gh run list --workflow=rebuild.yml` shows this as the latest run and it is a success.
+Two runs completed green end to end, including `Deploy to Vercel`: `35679459340` (the fix-3 push, 29m56s) and `35681404845` (triggered automatically by committing this report, 9m59s, confirming the fix holds on a second independent run). `gh run list --workflow=rebuild.yml` shows the latter as the current latest run, a success. The stable alias above was re-verified against this second run's output (homepage 200, `/api/search?terms_only=1` returns today's build date).
 
 ## What I should check by hand
 
-* No custom domain is attached; the site is reachable only at the `*.vercel.app` URL above. Attaching `rx-label-search.<yourdomain>` or a Vercel-provided alias is optional and up to you.
+* No custom domain is attached; the site is reachable at the stable `*.vercel.app` alias above. Attaching `rx-label-search.<yourdomain>` is optional and up to you.
 * The `ssoProtection` and `framework` project settings were set once, by hand, through the API in this session, since neither is something version-controlled in the repo. If the Vercel project is ever deleted and recreated, both need to be set again before the site is genuinely public.
