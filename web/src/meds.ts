@@ -8,6 +8,7 @@ import type { CheckResponse, MedicationRow, UnresolvedEntry } from "./records.js
 
 const ENTRY_SEPARATORS = /[,;\n]+/;
 const MAX_MEDICATION_TEXT_CHARS = 4000;
+const CONTAINS_DIGIT = /\d/;
 
 /**
  * Takes freshly pasted or typed medication text.
@@ -19,6 +20,28 @@ export function splitPastedText(text: string): readonly string[] {
     .split(ENTRY_SEPARATORS)
     .map((part) => part.trim())
     .filter((part) => part.length > 0);
+}
+
+/**
+ * Takes one entry already split on commas, semicolons, and new lines.
+ * Checks whether it has no digit anywhere and two or more whitespace-separated words, the signature of several bare drug names typed with only spaces between them rather than one dose line (a real dose line like "Lyrica 100 mg tid" always carries a digit).
+ * Gives one entry per word when it matches that signature, the entry unchanged otherwise.
+ */
+function splitBareNamesWithoutDose(entry: string): readonly string[] {
+  const words = entry.split(/\s+/).filter((word) => word.length > 0);
+  if (words.length < 2 || CONTAINS_DIGIT.test(entry)) {
+    return [entry];
+  }
+  return words;
+}
+
+/**
+ * Takes freshly typed or pasted medication text, the same input splitPastedText takes.
+ * Splits it at commas, semicolons, and new lines first, then, for any resulting entry that still reads as several bare drug names run together with only spaces (no digit, two or more words), splits that entry on whitespace too -- so "Zoloft Flexeril Xanax" typed with no separator does not silently collapse into one unresolvable entry that drops four of five medications.
+ * Gives the tuple of non-empty entries, in the order they appeared, empty for blank input.
+ */
+export function splitEnteredText(text: string): readonly string[] {
+  return splitPastedText(text).flatMap(splitBareNamesWithoutDose);
 }
 
 /**

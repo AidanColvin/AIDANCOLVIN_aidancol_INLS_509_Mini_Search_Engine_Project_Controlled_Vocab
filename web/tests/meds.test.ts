@@ -15,6 +15,7 @@ import {
   isWithinLengthLimit,
   joinMedicationLines,
   rowHeadlineName,
+  splitEnteredText,
   splitPastedText,
   statusForLine,
 } from "../src/meds.js";
@@ -51,6 +52,43 @@ test("splitPastedText splits on commas, semicolons, and newlines and drops blank
   assert.deepEqual(splitPastedText("a, b; c\nd,,"), ["a", "b", "c", "d"]);
   assert.deepEqual(splitPastedText(""), []);
   assert.deepEqual(splitPastedText("   "), []);
+});
+
+/**
+ * Takes no arguments.
+ * Checks the exact production bug report: five real drug names typed with only spaces between them, no comma, semicolon, or newline anywhere.
+ * Gives nothing; asserts every drug survives as its own entry instead of collapsing into one unresolvable line.
+ */
+test("splitEnteredText splits bare drug names typed with only spaces, no digits anywhere", () => {
+  assert.deepEqual(splitEnteredText("Zoloft Flexeril Xanax Ambien Adderall"), [
+    "Zoloft",
+    "Flexeril",
+    "Xanax",
+    "Ambien",
+    "Adderall",
+  ]);
+});
+
+/**
+ * Takes no arguments.
+ * Checks that a normal single-entry dose line, which always carries a digit for the strength or a frequency count, is left as one entry rather than being chopped into words.
+ * Gives nothing; asserts the dose line survives whole.
+ */
+test("splitEnteredText leaves a single dose line with a digit intact", () => {
+  assert.deepEqual(splitEnteredText("Lyrica 100 mg tid"), ["Lyrica 100 mg tid"]);
+  assert.deepEqual(splitEnteredText("Lisinopril 10 mg once daily"), ["Lisinopril 10 mg once daily"]);
+});
+
+/**
+ * Takes no arguments.
+ * Checks a single bare word, real comma-separated entries, and blank input.
+ * Gives nothing; asserts each case behaves the same as splitPastedText.
+ */
+test("splitEnteredText matches splitPastedText for single words, real separators, and blank input", () => {
+  assert.deepEqual(splitEnteredText("Metformin"), ["Metformin"]);
+  assert.deepEqual(splitEnteredText("Zoloft, Flexeril, Xanax"), ["Zoloft", "Flexeril", "Xanax"]);
+  assert.deepEqual(splitEnteredText(""), []);
+  assert.deepEqual(splitEnteredText("   "), []);
 });
 
 /**
