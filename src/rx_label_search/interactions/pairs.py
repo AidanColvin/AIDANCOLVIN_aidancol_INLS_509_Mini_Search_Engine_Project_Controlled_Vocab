@@ -2,12 +2,16 @@
 
 from __future__ import annotations
 
+import re
 from collections.abc import Mapping, Sequence
 from typing import Any
 
 from rx_label_search.interactions.evidence import dailymed_url, evidence_for_term
 from rx_label_search.interactions.tiers import tier_for_field, tier_name as lookup_tier_name
 from rx_label_search.records import Alert, AlertEvidence, TermEvidence
+from rx_label_search.vocabulary.interaction import is_self_reference_only
+
+_BULLET_SPLIT = re.compile(r"•")
 
 
 def drug_own_names(drug: Mapping[str, Any]) -> frozenset[str]:
@@ -21,16 +25,42 @@ def drug_own_names(drug: Mapping[str, Any]) -> frozenset[str]:
     return frozenset(name.lower() for name in names if name)
 
 
+def combination_clauses(sentence: str) -> tuple[str, ...]:
+    """
+    Takes a T17 evidence sentence, which may bundle several bullet-separated clauses into one string.
+    Splits it on bullet markers and drops any clause that only states a hypersensitivity or self-reference, keeping only clauses about taking drugs together.
+    Gives the tuple of remaining clauses, the whole sentence alone when it has no bullets and is not itself self-reference-only.
+    """
+    parts = tuple(part.strip() for part in _BULLET_SPLIT.split(sentence) if part.strip())
+    if len(parts) <= 1:
+        return () if is_self_reference_only(sentence) else (sentence,)
+    return tuple(part for part in parts if not is_self_reference_only(part))
+
+
+def name_appears(text: str, name: str) -> bool:
+    """
+    Takes lowercase text and a lowercase name.
+    Checks whether the name appears as whole words, not as a substring inside a longer name such as "venlafaxine" inside "desvenlafaxine".
+    Gives True when it does, False otherwise.
+    """
+    return re.search(rf"\b{re.escape(name)}\b", text) is not None
+
+
 def sentence_mentions_drug(sentence: str, other: Mapping[str, Any]) -> bool:
     """
     Takes a T17 evidence sentence and another listed drug's checker record.
-    Checks whether the sentence names that drug or one of its pharmacologic classes.
-    Gives True when it does, False otherwise.
+    Checks the sentence's combination clauses, not any hypersensitivity clause, for that drug's name or pharmacologic class as whole words.
+    Gives True when a combination clause names the drug or its class, False otherwise.
     """
-    lowered = sentence.lower()
-    if any(name in lowered for name in drug_own_names(other)):
-        return True
-    return any(pharm_class.lower() in lowered for pharm_class in other["record"].get("pharm_class_epc", ()))
+    own_names = drug_own_names(other)
+    pharm_classes = tuple(name.lower() for name in other["record"].get("pharm_class_epc", ()) if name)
+    for clause in combination_clauses(sentence):
+        lowered = clause.lower()
+        if any(name_appears(lowered, name) for name in own_names):
+            return True
+        if any(name_appears(lowered, pharm_class) for pharm_class in pharm_classes):
+            return True
+    return False
 
 
 def t17_evidence(drug: Mapping[str, Any]) -> TermEvidence | None:

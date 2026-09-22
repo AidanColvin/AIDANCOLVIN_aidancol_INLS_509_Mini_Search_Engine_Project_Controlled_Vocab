@@ -196,6 +196,17 @@ def test_venlafaxine_and_desvenlafaxine_give_a_metabolite_flag(acceptance_contex
     assert len(flags) == 1
 
 
+def test_venlafaxine_and_desvenlafaxine_give_no_false_pair_alert(acceptance_context: dict[str, Any]) -> None:
+    """
+    Takes the acceptance context.
+    Checks venlafaxine with desvenlafaxine for a T17 pair alert, which a plain substring match and an unscoped hypersensitivity clause used to cause in both directions.
+    Gives nothing, or fails if a pair alert fires.
+    """
+    report = run_acceptance_check(acceptance_context, "venlafaxine 75 mg daily, desvenlafaxine 50 mg daily")
+    pair_alerts = [alert for alert in report["alerts"] if alert["kind"] == "pair"]
+    assert pair_alerts == []
+
+
 def test_adderall_and_dextroamphetamine_give_an_ingredient_flag(acceptance_context: dict[str, Any]) -> None:
     """
     Takes the acceptance context.

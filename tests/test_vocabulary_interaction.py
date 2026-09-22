@@ -9,6 +9,8 @@ from rx_label_search.text.fields import label_from_record
 from rx_label_search.vocabulary.interaction import (
     extract_class_mentions,
     is_class_reference_sentence,
+    preferred_sentence,
+    strip_evidence_heading,
     tag_t14_serotonin_syndrome_risk,
     tag_t15_cns_depression_risk,
     tag_t16_qt_prolongation_risk,
@@ -190,6 +192,64 @@ def test_own_drug_names_reads_all_three_fields_and_lowercases() -> None:
     label = Label("i", "s", "1", "20250101", {}, {"brand_name": ("OxyContin",), "generic_name": ("OXYCODONE HYDROCHLORIDE",), "substance_name": ("OXYCODONE HYDROCHLORIDE",)})
     assert own_drug_names(label) == frozenset({"oxycontin", "oxycodone hydrochloride"})
     assert own_drug_names(Label("i", "s", "1", "20250101", {}, {})) == frozenset()
+
+
+def test_oxycontin_t15_evidence_is_the_concomitant_use_sentence_not_the_general_one(fixture_labels: dict[str, dict[str, Any]]) -> None:
+    """
+    Takes the fixture labels.
+    Checks the OxyContin T15 evidence chosen from the boxed warning, which has both a general respiratory-depression sentence and a concomitant-use one.
+    Gives nothing, or fails if the general sentence is kept instead of the one naming benzodiazepines or other CNS depressants.
+    """
+    evidence = tag_t15_cns_depression_risk(label_from_record(fixture_labels["oxycontin"]))
+    assert evidence is not None
+    assert evidence.field_name == "boxed_warning"
+    lowered = evidence.sentence.lower()
+    assert "concomitant" in lowered
+    assert "benzodiazepines" in lowered or "other cns depressants" in lowered or "other central nervous system" in lowered
+
+
+def test_preferred_sentence_picks_the_combined_use_candidate() -> None:
+    """
+    Takes no arguments.
+    Checks a general sentence followed by a combined-use sentence, and a list with no combined-use sentence.
+    Gives nothing, or fails if either result is wrong.
+    """
+    assert preferred_sentence(("Respiratory depression may occur.", "Concomitant use with other CNS depressants may occur.")) == "Concomitant use with other CNS depressants may occur."
+    assert preferred_sentence(("Respiratory depression may occur.", "It may cause dizziness.")) == "Respiratory depression may occur."
+
+
+def test_strip_evidence_heading_removes_named_forms() -> None:
+    """
+    Takes no arguments.
+    Strips each leading form results/report.md and Section 7.7 name: a numbered section heading and a reference mark with a bullet.
+    Gives nothing, or fails if any form survives or the rest of the sentence is altered.
+    """
+    assert strip_evidence_heading("5 WARNINGS AND PRECAUTIONS Serotonin Syndrome: Increased risk when taken alone.") == "Serotonin Syndrome: Increased risk when taken alone."
+    assert strip_evidence_heading("7 DRUG INTERACTIONS CNS Depressants: may enhance effects of alcohol.") == "CNS Depressants: may enhance effects of alcohol."
+    assert strip_evidence_heading("WARNINGS Use caution in elderly patients.") == "Use caution in elderly patients."
+    assert strip_evidence_heading("( 5.4 ) • Respiratory depression: may occur with concomitant CNS depressants.") == "Respiratory depression: may occur with concomitant CNS depressants."
+    assert strip_evidence_heading("No heading here.") == "No heading here."
+
+
+def test_trazodone_venlafaxine_and_lyrica_evidence_has_no_heading_noise(fixture_labels: dict[str, dict[str, Any]]) -> None:
+    """
+    Takes the fixture labels.
+    Checks the real T14/T15 evidence chosen for trazodone, venlafaxine, and pregabalin (Lyrica), each of which carried heading or reference-mark noise before the fix.
+    Gives nothing, or fails if any evidence sentence still starts with a section heading or a bare reference mark.
+    """
+    trazodone_t14 = tag_t14_serotonin_syndrome_risk(label_from_record(fixture_labels["trazodone"]))
+    assert trazodone_t14 is not None
+    assert not trazodone_t14.sentence.startswith("5 WARNINGS AND PRECAUTIONS")
+    trazodone_t15 = tag_t15_cns_depression_risk(label_from_record(fixture_labels["trazodone"]))
+    assert trazodone_t15 is not None
+    assert not trazodone_t15.sentence.startswith("7 DRUG INTERACTIONS")
+    venlafaxine_t14 = tag_t14_serotonin_syndrome_risk(label_from_record(fixture_labels["venlafaxine"]))
+    assert venlafaxine_t14 is not None
+    assert not venlafaxine_t14.sentence.startswith("5 WARNINGS AND PRECAUTIONS")
+    lyrica_t15 = tag_t15_cns_depression_risk(label_from_record(fixture_labels["pregabalin_lyrica"]))
+    assert lyrica_t15 is not None
+    assert not lyrica_t15.sentence.startswith("(")
+    assert not lyrica_t15.sentence.startswith("•")
 
 
 def test_t17_catches_active_voice_should_not_take() -> None:

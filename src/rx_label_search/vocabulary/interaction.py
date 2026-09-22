@@ -42,21 +42,55 @@ _T17_COMBINATION_SIGNAL = re.compile(
     r"\bwithin\s+\d+\s+days\b|\bmaois?\b",
     re.IGNORECASE,
 )
+_COMBINED_USE_SIGNAL = re.compile(
+    r"\bconcomitant\w*|\bco-?administ\w*|\bcombin\w*|\bconcurrent\w*|"
+    r"\bother\s+(?:cns\s+depressants?|central\s+nervous\s+system\s+depressants?)\b|"
+    r"\balong\s+with\b|\bin\s+conjunction\s+with\b",
+    re.IGNORECASE,
+)
+_LEADING_REFERENCE_MARK = re.compile(r"^\s*(?:\(\s*\d+(?:\.\d+)*\s*\)\s*)+(?:•\s*)?")
+_LEADING_SECTION_HEADING = re.compile(
+    r"^\s*\d*\s*(?:WARNINGS AND PRECAUTIONS|WARNINGS AND CAUTIONS|DRUG INTERACTIONS|"
+    r"CONTRAINDICATIONS|PRECAUTIONS|WARNINGS|BOXED WARNING)\s+"
+)
+
+
+def strip_evidence_heading(sentence: str) -> str:
+    """
+    Takes one evidence sentence chosen for a PDLA term.
+    Removes a leading section heading (such as "5 WARNINGS AND PRECAUTIONS") or reference mark (such as "( 5.4 ) •") from its start.
+    Gives the sentence with that leading noise removed, unchanged when it carries none.
+    """
+    without_reference = _LEADING_REFERENCE_MARK.sub("", sentence)
+    without_heading = _LEADING_SECTION_HEADING.sub("", without_reference)
+    return without_heading.strip()
+
+
+def preferred_sentence(candidates: tuple[str, ...]) -> str:
+    """
+    Takes the pattern-matching, non-negated sentences found in one field, in field order.
+    Prefers the first one that also names combined or concomitant drug use over the first candidate.
+    Gives that sentence, or the first candidate when none names combined use.
+    """
+    for sentence in candidates:
+        if _COMBINED_USE_SIGNAL.search(sentence):
+            return sentence
+    return candidates[0]
 
 
 def matching_sentence(fields: Iterable[str], label: Label, pattern: re.Pattern[str]) -> tuple[str, str] | None:
     """
     Takes the fields to search in order, a Label, and a compiled pattern.
-    Finds the first non-negated sentence in those fields that the pattern matches.
+    Finds the first field with a non-negated matching sentence, preferring one naming combined drug use within it, with heading noise stripped.
     Gives (field name, sentence), or None when no field has a qualifying sentence.
     """
     for field_name in fields:
         text = label_text(label, field_name)
         if not text:
             continue
-        for sentence in split_sentences(text):
-            if pattern.search(sentence) and not is_negated(sentence):
-                return field_name, sentence
+        candidates = tuple(sentence for sentence in split_sentences(text) if pattern.search(sentence) and not is_negated(sentence))
+        if candidates:
+            return field_name, strip_evidence_heading(preferred_sentence(candidates))
     return None
 
 
@@ -139,7 +173,7 @@ def contraindicated_combination_sentence(text: str, class_gazetteer: frozenset[s
         if is_self_reference_only(sentence):
             continue
         if is_class_reference_sentence(sentence, class_gazetteer):
-            return sentence
+            return strip_evidence_heading(sentence)
     return None
 
 
