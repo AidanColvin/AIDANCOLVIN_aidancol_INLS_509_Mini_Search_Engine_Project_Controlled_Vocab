@@ -14,7 +14,7 @@ ABBREVIATION_COUNTS = {"qd": 1.0, "bid": 2.0, "tid": 3.0, "qid": 4.0, "qhs": 1.0
 DAILY_WORD = r"(?:a\s*|per\s*|/\s*)?(?:daily|day|d\b)"
 FREQUENCY_PATTERNS: tuple[tuple[str, str], ...] = (
     (r"\bx\s*(\d+)\s*(?:times\s*)?" + DAILY_WORD, "times"),
-    (r"\b(\d+)\s*(?:times|x)\s*" + DAILY_WORD, "times"),
+    (r"\b(\d+)\s*(?:times|time|x)\s*" + DAILY_WORD, "times"),
     (r"\b(once|twice|three times|four times)\s*" + DAILY_WORD, "words"),
     (r"\b(qd|bid|tid|qid|qhs)\b", "abbrev"),
     (r"\b(?:every|q)\s*(\d+)\s*(?:hours|hrs|hr|h)\b", "hours"),
@@ -24,6 +24,7 @@ FREQUENCY_PATTERNS: tuple[tuple[str, str], ...] = (
 )
 _COMPILED = tuple((re.compile(pattern, re.IGNORECASE), kind) for pattern, kind in FREQUENCY_PATTERNS)
 _TRAILING_JUNK = re.compile(r"^[\s\-–:.]+|[\s\-–:.]+$")
+TRAILING_DIRECTIONS = re.compile(r"\b(?:as\s+needed|as\s+necessary|prn|at\s+bedtime)\b", re.IGNORECASE)
 
 
 def split_entries(text: str) -> tuple[str, ...]:
@@ -97,9 +98,18 @@ def parse_frequency(text: str) -> tuple[float | None, tuple[str, ...], str]:
     return None, ("no frequency found; daily total not computed",), text
 
 
-def clean_name_text(text: str) -> str:
+def strip_trailing_directions(text: str) -> str:
     """
     Takes the entry text left after strength and frequency were removed.
+    Removes standalone dosing directions such as "as needed", "PRN", and "at bedtime".
+    Gives the text with those directions removed, unchanged when none are present.
+    """
+    return TRAILING_DIRECTIONS.sub(" ", text)
+
+
+def clean_name_text(text: str) -> str:
+    """
+    Takes the entry text left after strength, frequency, and directions were removed.
     Collapses whitespace and strips leading or trailing punctuation.
     Gives the cleaned drug name text, empty when nothing remains.
     """
@@ -126,7 +136,8 @@ def parse_entry(raw_text: str) -> MedEntry:
     """
     value, unit, after_strength = parse_strength(raw_text)
     times, notes, after_frequency = parse_frequency(after_strength)
-    name = clean_name_text(after_frequency)
+    after_directions = strip_trailing_directions(after_frequency)
+    name = clean_name_text(after_directions)
     if not name:
         notes = (*notes, "no drug name found in entry")
     if value is None:

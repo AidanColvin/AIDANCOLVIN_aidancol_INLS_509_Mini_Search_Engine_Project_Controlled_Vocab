@@ -11,13 +11,19 @@ from rx_label_search.serve.api_search import load_build_date
 MAX_MEDICATION_TEXT_CHARS = 4000
 
 
+class MedicationTextTooLong(Exception):
+    """Raised when the request's medication text exceeds MAX_MEDICATION_TEXT_CHARS."""
+
+
 def parse_check_body(body: dict[str, Any]) -> tuple[str, bool]:
     """
     Takes the decoded JSON request body.
-    Reads the medication text and whether to skip the RxNorm fallback, with safe defaults.
-    Gives (medication text, use_rxnorm), the text truncated to the maximum length.
+    Reads the medication text and whether to skip the RxNorm fallback.
+    Gives (medication text, use_rxnorm), or raises MedicationTextTooLong when the text exceeds the maximum length.
     """
-    text = str(body.get("medications", ""))[:MAX_MEDICATION_TEXT_CHARS]
+    text = str(body.get("medications", ""))
+    if len(text) > MAX_MEDICATION_TEXT_CHARS:
+        raise MedicationTextTooLong(f"medication text exceeds {MAX_MEDICATION_TEXT_CHARS} characters")
     use_rxnorm = bool(body.get("use_rxnorm", True))
     return text, use_rxnorm
 

@@ -4,21 +4,32 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from rx_label_search.serve.api_check import build_check_response, parse_check_body
+import pytest
+
+from rx_label_search.serve.api_check import MAX_MEDICATION_TEXT_CHARS, MedicationTextTooLong, build_check_response, parse_check_body
 from rx_label_search.storage.write_json import write_json
 from rx_label_search.storage.write_jsonl import write_jsonl
 
 
-def test_parse_check_body_defaults_and_truncation() -> None:
+def test_parse_check_body_defaults() -> None:
     """
     Takes no arguments.
-    Parses an empty body, a body with use_rxnorm false, and an over-long medication text.
-    Gives nothing, or fails if any default or the truncation is wrong.
+    Parses an empty body and a body with use_rxnorm false.
+    Gives nothing, or fails if either default is wrong.
     """
     assert parse_check_body({}) == ("", True)
     assert parse_check_body({"medications": "aspirin", "use_rxnorm": False}) == ("aspirin", False)
-    text, _ = parse_check_body({"medications": "a" * 5000})
-    assert len(text) == 4000
+
+
+def test_parse_check_body_raises_instead_of_silently_truncating() -> None:
+    """
+    Takes no arguments.
+    Parses a medication text one character over the maximum length.
+    Gives nothing, or fails if the text is truncated instead of raising MedicationTextTooLong.
+    """
+    with pytest.raises(MedicationTextTooLong):
+        parse_check_body({"medications": "a" * (MAX_MEDICATION_TEXT_CHARS + 1)})
+    parse_check_body({"medications": "a" * MAX_MEDICATION_TEXT_CHARS})
 
 
 def test_build_check_response_is_stateless_and_uses_the_build_date(tmp_path: Path) -> None:

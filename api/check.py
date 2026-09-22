@@ -14,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from rx_label_search.serve.api_check import build_check_response  # noqa: E402
+from rx_label_search.serve.api_check import MedicationTextTooLong, build_check_response  # noqa: E402
 
 BUILD_DIR = Path(__file__).resolve().parent.parent / "data" / "build"
 MAX_REQUEST_BODY_BYTES = 1 << 20
@@ -52,6 +52,9 @@ class handler(BaseHTTPRequestHandler):
         except FileNotFoundError as error:
             response = json.dumps({"error": f"checker data not built yet: {error}"}).encode("utf-8")
             status = 503
+        except MedicationTextTooLong as error:
+            response = json.dumps({"error": str(error)}).encode("utf-8")
+            status = 413
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Cache-Control", "no-store")

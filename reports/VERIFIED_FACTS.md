@@ -91,3 +91,13 @@ Every fact below was checked against the named official page or a live request o
 
 * `data/reference/fda_enzyme_table.json`: transcribed from https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers, 8 tables, 53 rows. An independent re-parse of the same page found zero discrepancies across every cell of all 8 tables.
 * `data/reference/onc_high_priority_pairs.json`: transcribed from Phansalkar et al. 2012 (PMC3422823), Table 2, "List of candidate drug–drug interactions (DDIs) discussed and the final pairs accepted by the expert panel as critical DDIs," 15 rows. An independent re-check of the source found two incomplete footnotes in the first transcription; both were corrected in the committed file (the `*` footnote's second sentence, and the missing `†` footnote about the FDA/Flockhart enzyme table source).
+
+## Redesign run, 2026-09-22
+
+* `main` at `555d3ec` before this run; work branch `build/frontend-redesign` created from it.
+* `python -m pytest -q` on `main` before any change: 273 passed (BUILD_PROMPT.md Section 2 says "405+"; that count is stale — the prompt's own rule says code wins).
+* `npm view typescript version` (npm registry, checked 2026-09-22): `7.0.2`, the current stable release. Pinned as the only `web/` dev dependency.
+* Local toolchain: Python 3.14.3, Node v25.8.2, npm 11.11.1. `.github/workflows/rebuild.yml` pins Python 3.12 for CI; no Node version is pinned yet (added in Phase 4).
+* `api/check.py` and `api/search.py` match BUILD_PROMPT.md Section 2.1 exactly: `check.py` wraps `FileNotFoundError` as HTTP 503 `{"error": "checker data not built yet: ..."}`; `search.py` supports `terms_only=1`.
+* `vercel.json`/`.vercelignore` exclude `data/raw`, `data/build/collection.jsonl`, `.venv`, `tests`, `notes`, `rubrics`, `document_collection_part_1`, `.github`, `reports` from the deploy bundle. `public/` is served as static files with no rewrite needed (see the Vercel facts already in this file from the 2026-09-21 run).
+* Fixed the two parser bugs in `results/report.md` (`src/rx_label_search/normalize/med_line_parser.py`): singular "1 time daily" is now a recognized frequency phrase, and "as needed" / "as necessary" / "PRN" / "at bedtime" are stripped from the name text before matching. Verified against the real, locally built 7,707-key name dictionary (gitignored, not the CI-built one) that 47 of the 49 previously unresolved report.md entries now parse to a clean name text; the other two (an Albuterol inhaler "2 puffs" entry and a Fluticasone "2 sprays" entry) still carry a leftover administration-count fragment, which is a separate parsing gap not named in BUILD_PROMPT.md Section 7.1 — see OPEN_QUESTIONS.md.
