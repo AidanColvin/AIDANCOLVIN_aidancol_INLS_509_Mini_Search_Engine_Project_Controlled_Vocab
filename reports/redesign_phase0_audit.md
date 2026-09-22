@@ -16,6 +16,23 @@ audit located the parser.
 - `.github/workflows/rebuild.yml` exists, runs on push to `main`, weekly cron, and `workflow_dispatch`.
 - Read-only paths from Section 9.2 all present: `MiniVocab_Aidan_Colvin_aidancol.md`, `rubrics/`, `notes/`, `document_collection_part_1/`, `LICENSE`, every file under `results/` and `reports/`. None touched.
 - `tests/` has 54 test files. Full suite: **273 passed** (not "405+" as BUILD_PROMPT.md Section 2 assumed — the prompt's own rule says code wins over the prompt; recorded in OPEN_QUESTIONS.md).
+
+**Updated 2026-09-22, second pass — test count closed out.** Aidan
+reported "405 tests passing" as the backend's finishing count and
+asked for the gap to be explained. Re-ran the full suite after Phases
+1-3: `python -m pytest -rA` → **289 passed, 0 failed, 0 skipped, 0
+deselected, 0 errors.** Cross-checked with `grep -rc "^def test_"
+tests` → 289, an exact match, so nothing is being silently excluded by
+a marker, a collection error, or a `pyproject.toml` `addopts` filter
+(there is none beyond `-q`). `git log --diff-filter=D -- 'tests/test_*.py'`
+shows no test file has ever been deleted in this repo's history.
+**"405" does not correspond to anything in this repo's actual test
+suite, past or present.** It traces back to BUILD_PROMPT.md Section
+2's own unverified "pytest, 405+ tests" claim — the same stale number
+already flagged above — which the run's own kickoff message then
+repeated back as the reported finishing count. There is nothing to fix
+for "should not be skipped" because nothing is skipped: 0 skips, 0
+deselects, on a clean, fully green run.
 - `data/build/` exists locally (gitignored) from a prior full build — used to sanity-check parser fixes against the real production-scale name dictionary (7,707 keys) before committing. CI rebuilds this itself before running pytest, per `rebuild.yml`.
 
 ## Section 2.1 API contract — verified against source
