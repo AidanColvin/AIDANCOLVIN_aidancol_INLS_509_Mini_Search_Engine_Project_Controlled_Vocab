@@ -16,6 +16,7 @@ from rx_label_search.collect.run import build_collection, download_partitions
 from rx_label_search.collect.verify import collection_problems
 from rx_label_search.normalize.med_line_parser import parse_med_list
 from rx_label_search.normalize.run import build_base_ingredient_map, default_fetcher, resolve_name
+from rx_label_search.vocabulary.run import run_tagging
 from rx_label_search.storage.read_json import read_json
 from rx_label_search.storage.read_jsonl import iter_jsonl
 
@@ -66,6 +67,9 @@ def build_parser() -> argparse.ArgumentParser:
     resolve.add_argument("text")
     resolve.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
     resolve.add_argument("--no-rxnorm", action="store_true", help="skip the RxNorm fallback")
+    tag = commands.add_parser("tag", help="tag every collection label with the PDLA terms")
+    tag.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
+    tag.add_argument("--workers", type=int, default=default_workers())
     return parser
 
 
@@ -139,6 +143,16 @@ def run_resolve(args: argparse.Namespace) -> str:
     return json.dumps(rows, indent=2)
 
 
+def run_tag(args: argparse.Namespace) -> str:
+    """
+    Takes parsed tag arguments.
+    Runs the tagging job over the collection.
+    Gives a one-line summary of reused, newly tagged, and total records.
+    """
+    summary = run_tagging(args.build_dir, args.workers)
+    return f"tagged {summary['total']} labels ({summary['reused']} reused, {summary['newly_tagged']} new)"
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     """
     Takes an optional argument vector, defaulting to sys.argv.
@@ -153,6 +167,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "base-ingredients": run_base_ingredients,
         "parse-meds": run_parse_meds,
         "resolve": run_resolve,
+        "tag": run_tag,
     }
     print(handlers[args.command](args))
     return 0
