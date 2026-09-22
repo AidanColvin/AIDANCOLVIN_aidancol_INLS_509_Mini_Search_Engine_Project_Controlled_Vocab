@@ -24,6 +24,9 @@ FIXTURE_NAMES = (
     "gabapentin",
     "entresto",
     "dextroamphetamine",
+    "losartan",
+    "adderall_current_collection_winner",
+    "adderall_xr",
 )
 
 

@@ -6,7 +6,7 @@ import ast
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SCANNED_DIRS = ("src", "tests")
+SCANNED_DIRS = ("src", "tests", "api")
 SHADOWED_BUILTINS = frozenset({"dir", "id", "list", "type", "input", "file"})
 BROAD_EXCEPTIONS = frozenset({"Exception", "BaseException"})
 IMPLICIT_FIRST_PARAMS = frozenset({"self", "cls"})

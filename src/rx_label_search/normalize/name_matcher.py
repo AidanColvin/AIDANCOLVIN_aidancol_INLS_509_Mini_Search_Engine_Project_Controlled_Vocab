@@ -113,6 +113,16 @@ def match_name(query_text: str, dictionary: Mapping[str, Mapping[str, Any]]) -> 
     return finish_match(query_text, dictionary, best_key, best_score, candidate_sets(dictionary, best_key))
 
 
+def sole_full_name_match(key: str, sets: tuple[tuple[str, ...], ...]) -> tuple[str, ...] | None:
+    """
+    Takes a normalized dictionary key and the ingredient sets stored under it.
+    Finds a single-ingredient set whose one member normalizes to exactly the key, when it is the only such set.
+    Gives that ingredient set, or None when there is no such set or there is more than one.
+    """
+    full_matches = [ingredients for ingredients in sets if len(ingredients) == 1 and normalize_name(ingredients[0]) == key]
+    return full_matches[0] if len(full_matches) == 1 else None
+
+
 def finish_match(
     query_text: str,
     dictionary: Mapping[str, Mapping[str, Any]],
@@ -122,12 +132,17 @@ def finish_match(
 ) -> NameMatch:
     """
     Takes the typed name, the dictionary, the chosen key, its score, and the key's ingredient sets.
-    Builds the final match, asking for confirmation when the key maps to more than one ingredient set.
+    Builds the final match, preferring a set the typed name fully and exactly names over one where it names only a component.
     Gives a NameMatch with status matched or needs_confirmation.
     """
     display = str(dictionary[key]["display"])
+    resolved_sets = sets
     if len(sets) != 1:
-        candidates = tuple(f"{display} → {', '.join(ingredients)}" for ingredients in sets)
-        return NameMatch(query_text, STATUS_NEEDS_CONFIRMATION, display, (), (query_text, display), candidates, score, "the name is used by more than one ingredient set")
+        full_match = sole_full_name_match(key, sets)
+        if full_match is not None:
+            resolved_sets = (full_match,)
+        else:
+            candidates = tuple(f"{display} → {', '.join(ingredients)}" for ingredients in sets)
+            return NameMatch(query_text, STATUS_NEEDS_CONFIRMATION, display, (), (query_text, display), candidates, score, "the name is used by more than one ingredient set")
     chain = (query_text, display) if normalize_name(query_text) != key else (query_text,)
-    return NameMatch(query_text, STATUS_MATCHED, display, sets[0], (*chain, ", ".join(sets[0])), (), score, "")
+    return NameMatch(query_text, STATUS_MATCHED, display, resolved_sets[0], (*chain, ", ".join(resolved_sets[0])), (), score, "")

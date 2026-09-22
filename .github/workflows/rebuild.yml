@@ -1,0 +1,66 @@
+name: Weekly rebuild and deploy
+
+on:
+  schedule:
+    # Every Monday at 09:00 UTC, a day after openFDA's own weekly update.
+    - cron: "0 9 * * 1"
+  push:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the package and test dependencies
+        run: pip install -e ".[test]"
+
+      - name: Download the openFDA label bulk files
+        run: python -m rx_label_search download
+
+      - name: Build the filtered collection
+        run: python -m rx_label_search collect
+
+      - name: Map collection substances to base ingredients through RxNorm
+        run: python -m rx_label_search base-ingredients
+
+      - name: Tag every label with the PDLA terms
+        run: python -m rx_label_search tag
+
+      - name: Build the search index
+        run: python -m rx_label_search build-index
+
+      - name: Build the interaction checker's lookup data
+        run: python -m rx_label_search build-checker-data
+
+      - name: Run the test suite
+        id: tests
+        run: python -m pytest -q
+
+      - name: Install the Vercel CLI
+        if: success()
+        run: npm install --global vercel@latest
+
+      - name: Deploy to Vercel
+        if: success()
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "VERCEL_TOKEN is not set. Skipping deploy; the rebuild and tests above still ran and passed."
+            exit 0
+          fi
+          vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          vercel build --prod --token="$VERCEL_TOKEN"
+          vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"

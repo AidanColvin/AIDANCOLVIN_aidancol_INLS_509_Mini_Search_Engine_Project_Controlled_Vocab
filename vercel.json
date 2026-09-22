@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/*.py": {
+      "excludeFiles": "{data/raw/**,data/build/collection.jsonl,.venv/**,tests/**,notes/**,rubrics/**,part1_document_collection/**,.github/**}"
+    }
+  }
+}

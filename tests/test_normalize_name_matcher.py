@@ -92,3 +92,27 @@ def test_similarity_helpers() -> None:
     assert leading_words("a b c", 2) == "a b"
     assert similarity("trazdone", "trazodone hydrochloride") > 0.9
     assert similarity("x", "x") == 1.0
+
+
+def test_exact_single_ingredient_name_beats_combo_component_ambiguity(dictionary: dict[str, Any]) -> None:
+    """
+    Takes the fixture dictionary.
+    Matches "dextroamphetamine sulfate", which is both the Adderall fixture's whole combo component name and this Adderall-only fixture's own generic and substance name.
+    Gives nothing, or fails if the match does not resolve to the single-ingredient set unambiguously.
+    """
+    match = match_name("dextroamphetamine sulfate", dictionary)
+    assert match.status == STATUS_MATCHED
+    assert match.ingredient_set == ("DEXTROAMPHETAMINE SULFATE",)
+
+
+def test_sole_full_name_match_helper() -> None:
+    """
+    Takes no arguments.
+    Checks a key with one full single-ingredient match among two sets, and a key with two full matches.
+    Gives nothing, or fails if either result is wrong.
+    """
+    from rx_label_search.normalize.name_matcher import sole_full_name_match
+
+    sets = (("X",), ("X", "Y"))
+    assert sole_full_name_match("x", sets) == ("X",)
+    assert sole_full_name_match("x", (("X",), ("X",))) is None

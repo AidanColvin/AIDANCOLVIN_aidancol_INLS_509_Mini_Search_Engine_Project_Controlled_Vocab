@@ -14,6 +14,95 @@ Hey, thanks so much for being my peer exchange user! I know everyone's busy, so 
 
 If you want me to do yours too, just send it my way and I'll get it done. Thanks again, it means a lot!
 
+## Tool
+
+This repo also holds `rx_label_search`, a Python package that turns the Part 1 collection and the Part II PDLA vocabulary above into a working search engine, tagger, and drug-drug interaction checker over FDA prescription drug labels. It is not limited to one drug class. See `DATA_SOURCES.md` for every data source it uses and `reports/FINAL_REPORT.md` for the full build record.
+
+**What it does:**
+
+* **Search.** Keyword search over every label's main text and openfda names, ranked with BM25, refined with PDLA term filters (AND or OR).
+* **Tag.** Assigns all 17 PDLA terms to every label, with the field and sentence behind each tag, and categorizes each drug by active ingredient, FDA pharmacologic class, route, and DEA schedule.
+* **Check.** Takes a free-text medication list of any length, resolves brand names, generic names, and typos, and flags drug-drug interaction risks the FDA labels state, with the label sentence and a DailyMed link behind every flag.
+* **Rate.** Gives every flag a heuristic tier based on which label section its evidence came from: Contraindicated, Boxed warning, Warning, or Interaction note.
+
+**Notice shown on every result:** "Results reflect FDA label text as of {build date}. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database." The only negative wording it ever uses is "No warning found in the labels checked."
+
+### Setup
+
+```bash
+python3.11 -m venv .venv
+.venv/bin/pip install -e ".[test]"
+```
+
+### Running the build pipeline
+
+Each command reads the previous command's output from `data/build/` (gitignored) and writes its own. Run them in order for a full weekly-style rebuild; the GitHub Actions workflow at `.github/workflows/rebuild.yml` runs the same sequence on a schedule and on push to `main`.
+
+```bash
+PYTHONPATH=src python -m rx_label_search download              # fetch the openFDA bulk label files
+PYTHONPATH=src python -m rx_label_search collect                # apply the Part 1 scope filters, dedupe, build the name dictionary
+PYTHONPATH=src python -m rx_label_search verify-collection       # check the built collection's invariants
+PYTHONPATH=src python -m rx_label_search base-ingredients        # map every substance to its RxNorm base ingredient
+PYTHONPATH=src python -m rx_label_search tag                     # run all 17 PDLA rules, cached and parallel
+PYTHONPATH=src python -m rx_label_search build-index              # build the search index (lean ranking file + snippet shards)
+PYTHONPATH=src python -m rx_label_search build-checker-data       # build the interaction checker's lookup tables
+```
+
+### Using the tool from the command line
+
+```bash
+PYTHONPATH=src python -m rx_label_search query "muscle spasm" --term T14 --term T15 --operator AND --limit 10
+PYTHONPATH=src python -m rx_label_search check "10 mg Zyprexa X 1 daily, 20 mg adderall X 3 daily, Lyrica 100 mg X 3 daily"
+PYTHONPATH=src python -m rx_label_search parse-meds "10 mg ambien X daily"
+PYTHONPATH=src python -m rx_label_search resolve "trazdone" --no-rxnorm
+```
+
+### Evaluating the tagger and the search index
+
+```bash
+PYTHONPATH=src python -m rx_label_search gold-template --sample-size 20          # write a placeholder gold file
+# then, for each label and term you hand-label:
+PYTHONPATH=src python -m rx_label_search gold-label --gold-file data/gold/my_gold.json --set-id <SET_ID> --term T06 --value true --rationale "..."
+PYTHONPATH=src python -m rx_label_search evaluate-tags --gold-file data/gold/my_gold.json
+PYTHONPATH=src python -m rx_label_search evaluate-search --queries queries.tsv --judgments judgments.tsv --k 10
+```
+
+`data/gold/gold_sample_PLACEHOLDER.json` is a demonstration file with obviously fake values; it proves the harness runs and is never used as real ground truth. See `reports/phase4_evaluate.md` for how to record real hand labels.
+
+### Running the tests
+
+```bash
+.venv/bin/python -m pytest -q
+```
+
+`tests/test_style.py` and `tests/test_no_attribution.py` enforce the coding and attribution rules on every file in `src/`, `tests/`, and `api/`.
+
+### Serving it as a website
+
+`api/search.py` and `api/check.py` are stateless Vercel Python functions (no framework, file-based routing) that call the same package the CLI does. `public/index.html` is the thin static front end: a search box with PDLA filters, a medication-list box, and the Section 3.5 output. Deploys happen only through `.github/workflows/rebuild.yml`, never by hand; see `reports/phase7_serve.md` for the Vercel project setup and the function-size decision.
+
+### Design choices worth knowing
+
+* **No stemming in this version.** The tokenizer lowercases, strips punctuation, and keeps numbers, with no stemming, so "spasm" and "spasms" are different tokens. This keeps ranking simple and predictable for v1; a future version could add stemming or a synonym list.
+* **Precision over recall.** Every PDLA rule omits a term rather than guessing when the field it needs is missing or ambiguous. The interaction checker never says "safe" and marks an ambiguous name "needs confirmation" instead of picking silently.
+* **Every tag and alert carries evidence.** A term with no evidence is not assigned; an alert with no evidence is not raised.
+
+### Files (added by this build)
+
+| Path | What it is |
+| :--- | :--- |
+| `src/rx_label_search/` | the package: `collect/`, `text/`, `normalize/`, `vocabulary/`, `search/`, `interactions/`, `evaluate/`, `serve/`, `storage/`, plus `records.py` and `cli.py` |
+| `api/search.py`, `api/check.py` | Vercel serverless entry points |
+| `public/index.html` | the static front end |
+| `data/reference/` | committed, cited reference files (FDA enzyme table, ONC pair list, active-metabolite pairs) |
+| `data/gold/gold_sample_PLACEHOLDER.json` | the demonstration gold file |
+| `tests/fixtures/` | committed real openFDA label and RxNorm fixtures, with fetch dates, documented in `tests/fixtures/FIXTURES.md` |
+| `reports/` | the phase-by-phase build record; start at `reports/FINAL_REPORT.md` |
+| `DATA_SOURCES.md` | every data source, its license, and how it is used |
+| `.github/workflows/rebuild.yml` | the weekly rebuild-and-deploy workflow |
+| `vercel.json`, `.vercelignore` | Vercel project and function-bundling configuration |
+| `pyproject.toml` | package metadata; `pytest` is the only dependency |
+
 ## Rubric
 
 ### 4. Peer exchange [20 points]
