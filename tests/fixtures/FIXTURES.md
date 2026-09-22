@@ -19,6 +19,10 @@ Every file under `labels/` wraps one real openFDA drug label record, fetched fro
 
 | losartan | a397502e-abe7-49cf-97c7-d53a616947eb | 20260903 | 4 | Losartan potassium | LOSARTAN POTASSIUM | 2026-09-21 |
 
+| adderall_current_collection_winner | ac102599-3a5b-4154-899e-6ff262be7ff7 | 20260804 | 10 | DEXTROAMPHETAMINE SACCHARATE, AMPHETAMINE ASPARTATE, DEXTROAMPHETAMINE SULFATE AND AMPHETAMINE SULFATE | DEXTROAMPHETAMINE SACCHARATE; AMPHETAMINE ASPARTATE MONOHYDRATE; DEXTROAMPHETAMINE SULFATE; AMPHETAMINE SULFATE | 2026-09-21 |
+
 Files under `rxnorm/` wrap one real RxNav REST response each, with the same `fetched_on` and `source_url` fields, so the name matcher and ingredient rollup tests run offline.
 
 Fixture selection: brand labels (Zyprexa, Adderall, Ambien, Lyrica, OxyContin, Entresto) were chosen where the acceptance test types a brand name; the others are the newest human prescription label for that substance on the fetch date. Flexeril has no label in openFDA (the API returned no results on 2026-09-21), so the Flexril test relies on the RxNorm fixtures. Losartan is not one of the Section 9.6 interaction-checker drugs; it was added for Appendix C Scenario 2 (keyword "hypertension" plus T01 AND T02), since none of the checker fixtures both treat hypertension and carry a boxed warning.
+
+`adderall_current_collection_winner` is the label that actually survives the Part 1 newest-per-ingredient-set filter for the four amphetamine salts as of 2026-09-21: an ANDA generic combination product, not either branded Adderall label. It carries no `controlled_substance` field, unlike the brand labels. The Section 3.6 acceptance test uses it, not the plain `adderall` fixture, for the checker's DEA-schedule and other label-content expectations, and reports the difference from the build prompt's assumption in `reports/BLOCKERS.md`.

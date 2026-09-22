@@ -190,3 +190,17 @@ def test_own_drug_names_reads_all_three_fields_and_lowercases() -> None:
     label = Label("i", "s", "1", "20250101", {}, {"brand_name": ("OxyContin",), "generic_name": ("OXYCODONE HYDROCHLORIDE",), "substance_name": ("OXYCODONE HYDROCHLORIDE",)})
     assert own_drug_names(label) == frozenset({"oxycontin", "oxycodone hydrochloride"})
     assert own_drug_names(Label("i", "s", "1", "20250101", {}, {})) == frozenset()
+
+
+def test_t17_catches_active_voice_should_not_take() -> None:
+    """
+    Takes no arguments.
+    Checks the ramelteon-style active-voice contraindication wording.
+    Gives nothing, or fails if evidence is missing.
+    """
+    label = Label(
+        "i", "s", "1", "20250101",
+        {"contraindications": ("Patients should not take this drug in conjunction with fluvoxamine.",)},
+        {},
+    )
+    assert tag_t17_contraindicated_combination(label, frozenset({"fluvoxamine"})) is not None

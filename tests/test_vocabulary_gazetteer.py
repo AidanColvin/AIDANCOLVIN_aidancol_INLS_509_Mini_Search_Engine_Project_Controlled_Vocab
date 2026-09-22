@@ -83,3 +83,49 @@ def test_build_class_gazetteer_merges_both_sources() -> None:
     gazetteer = build_class_gazetteer([{"openfda": {"pharm_class_epc": ["Test Class [EPC]"]}}], ENZYME_TABLE)
     assert "test class" in gazetteer
     assert len(gazetteer) > 1
+
+
+def test_drug_names_from_summaries_filters_short_names() -> None:
+    """
+    Takes no arguments.
+    Reads drug names from a record with a long name and a short one.
+    Gives nothing, or fails if the short name is kept or the long one is missing.
+    """
+    from rx_label_search.vocabulary.gazetteer import drug_names_from_summaries
+
+    records = [{"openfda": {"generic_name": ["Febuxostat"], "substance_name": ["ABC"]}}]
+    names = drug_names_from_summaries(records)
+    assert "febuxostat" in names
+    assert "abc" not in names
+
+
+def test_build_class_gazetteer_includes_drug_names() -> None:
+    """
+    Takes the real committed enzyme table.
+    Builds the merged gazetteer with one record naming a long generic name.
+    Gives nothing, or fails if that name is missing from the result.
+    """
+    gazetteer = build_class_gazetteer([{"openfda": {"generic_name": ["Azathioprine"]}}], ENZYME_TABLE)
+    assert "azathioprine" in gazetteer
+
+
+def test_build_class_gazetteer_consumes_a_generator_only_once() -> None:
+    """
+    Takes the real committed enzyme table.
+    Builds the gazetteer from a one-shot generator carrying both a class and a long drug name.
+    Gives nothing, or fails if either name is missing, which would mean the generator was exhausted early.
+    """
+    from collections.abc import Iterator
+    from typing import Any
+
+    def one_shot() -> Iterator[dict[str, Any]]:
+        """
+        Takes no arguments.
+        Yields one record with a class and a drug name.
+        Gives an iterator of one record.
+        """
+        yield {"openfda": {"pharm_class_epc": ["Test Class [EPC]"], "generic_name": ["Azathioprine"]}}
+
+    gazetteer = build_class_gazetteer(one_shot(), ENZYME_TABLE)
+    assert "test class" in gazetteer
+    assert "azathioprine" in gazetteer

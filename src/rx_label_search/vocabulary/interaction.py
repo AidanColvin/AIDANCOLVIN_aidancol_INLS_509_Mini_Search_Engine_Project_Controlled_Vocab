@@ -27,7 +27,8 @@ _T15_PATTERN = re.compile(
 _T16_PATTERN = re.compile(r"qtc? prolongation|prolongs? the qt interval|torsades de pointes", re.IGNORECASE)
 _T17_CONTRAINDICATION_CUE = re.compile(
     r"\bis contraindicated\b|\bare contraindicated\b|\bmust not be (?:used|combined|given|taken)\b|"
-    r"\bshould not be (?:used|administered|combined|taken)\b",
+    r"\bshould not be (?:used|administered|combined|taken)\b|"
+    r"\b(?:must|should) not (?:take|use|combine|administer)\b",
     re.IGNORECASE,
 )
 _T17_CLASS_SIGNAL = re.compile(r"\binhibitors?\b|\binducers?\b|\bantagonists?\b|\bagonists?\b|\bmaois?\b", re.IGNORECASE)

@@ -7,7 +7,9 @@ from collections.abc import Iterable, Mapping
 from typing import Any
 
 _CLASS_FIELDS = ("pharm_class_epc", "pharm_class_moa")
+_NAME_FIELDS = ("generic_name", "substance_name")
 _MIN_GAZETTEER_NAME_LENGTH = 3
+_MIN_DRUG_NAME_LENGTH = 5
 _FOOTNOTE_PARENS = re.compile(r"\(([^()]*)\)")
 _CLASS_SUFFIX = re.compile(r"\s*\[[A-Za-z/]+\]\s*$")
 
@@ -21,6 +23,21 @@ def strip_class_suffix(name: str) -> str:
     return _CLASS_SUFFIX.sub("", name)
 
 
+def classes_from_openfda_block(block: Mapping[str, Any]) -> frozenset[str]:
+    """
+    Takes one label's openfda block.
+    Collects its lowercase pharmacologic class names from pharm_class_epc and pharm_class_moa.
+    Gives the frozenset of names, empty when the block carries neither field.
+    """
+    names: set[str] = set()
+    for field_name in _CLASS_FIELDS:
+        for value in block.get(field_name) or ():
+            stripped = strip_class_suffix(str(value)).strip().lower()
+            if stripped:
+                names.add(stripped)
+    return frozenset(names)
+
+
 def classes_from_summaries(records: Iterable[Mapping[str, Any]]) -> frozenset[str]:
     """
     Takes raw label records or their openfda blocks.
@@ -29,12 +46,7 @@ def classes_from_summaries(records: Iterable[Mapping[str, Any]]) -> frozenset[st
     """
     names: set[str] = set()
     for record in records:
-        block = record.get("openfda", record)
-        for field_name in _CLASS_FIELDS:
-            for value in block.get(field_name) or ():
-                stripped = strip_class_suffix(str(value)).strip().lower()
-                if stripped:
-                    names.add(stripped)
+        names |= classes_from_openfda_block(record.get("openfda", record))
     return frozenset(names)
 
 
@@ -92,10 +104,42 @@ def names_from_enzyme_table(enzyme_table: Mapping[str, Any]) -> frozenset[str]:
     return frozenset(names)
 
 
+def drug_names_from_openfda_block(block: Mapping[str, Any]) -> frozenset[str]:
+    """
+    Takes one label's openfda block.
+    Collects its lowercase generic and substance names that are at least five characters long.
+    Gives the frozenset of names, empty when the block carries neither field.
+    """
+    names: set[str] = set()
+    for field_name in _NAME_FIELDS:
+        for value in block.get(field_name) or ():
+            cleaned = str(value).strip().lower()
+            if len(cleaned) >= _MIN_DRUG_NAME_LENGTH:
+                names.add(cleaned)
+    return frozenset(names)
+
+
+def drug_names_from_summaries(records: Iterable[Mapping[str, Any]]) -> frozenset[str]:
+    """
+    Takes raw label records or their openfda blocks.
+    Collects every lowercase generic and substance name at least five characters long.
+    Gives the frozenset of names, empty when no record carries either field.
+    """
+    names: set[str] = set()
+    for record in records:
+        names |= drug_names_from_openfda_block(record.get("openfda", record))
+    return frozenset(names)
+
+
 def build_class_gazetteer(records: Iterable[Mapping[str, Any]], enzyme_table: Mapping[str, Any]) -> frozenset[str]:
     """
-    Takes the collection's raw label records and the decoded FDA enzyme table.
-    Combines the collection's own pharmacologic classes with the enzyme table's names.
+    Takes the collection's raw label records, each visited exactly once, and the decoded FDA enzyme table.
+    Combines the collection's own pharmacologic classes and drug names with the enzyme table's names.
     Gives the merged frozenset of lowercase class and drug names.
     """
-    return classes_from_summaries(records) | names_from_enzyme_table(enzyme_table)
+    names: set[str] = set()
+    for record in records:
+        block = record.get("openfda", record)
+        names |= classes_from_openfda_block(block)
+        names |= drug_names_from_openfda_block(block)
+    return frozenset(names) | names_from_enzyme_table(enzyme_table)

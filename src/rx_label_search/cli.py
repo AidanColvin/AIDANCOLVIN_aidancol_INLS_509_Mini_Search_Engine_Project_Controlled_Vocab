@@ -18,6 +18,7 @@ from rx_label_search.normalize.med_line_parser import parse_med_list
 from rx_label_search.normalize.run import build_base_ingredient_map, default_fetcher, resolve_name
 from rx_label_search.vocabulary.run import run_tagging
 from rx_label_search.evaluate.run import add_gold_label, run_ir_evaluation, run_tag_evaluation, write_placeholder_gold
+from rx_label_search.interactions.run import build_checker_data, run_check
 from rx_label_search.search.facets import OPERATOR_AND
 from rx_label_search.search.run import load_indexed_documents, search, write_index_stats
 from rx_label_search.storage.read_json import read_json
@@ -100,6 +101,13 @@ def build_parser() -> argparse.ArgumentParser:
     ir_eval.add_argument("--queries", type=Path, required=True)
     ir_eval.add_argument("--judgments", type=Path, required=True)
     ir_eval.add_argument("--k", type=int, default=10)
+    build_checker = commands.add_parser("build-checker-data", help="build the checker's lookup tables from the tagged collection")
+    build_checker.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
+    check = commands.add_parser("check", help="check a free-text medication list for interaction risks")
+    check.add_argument("text")
+    check.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
+    check.add_argument("--build-date", default=today_string())
+    check.add_argument("--no-rxnorm", action="store_true", help="skip the RxNorm fallback")
     return parser
 
 
@@ -243,6 +251,25 @@ def run_evaluate_search(args: argparse.Namespace) -> str:
     return json.dumps(run_ir_evaluation(args.build_dir, args.queries, args.judgments, args.k), indent=2)
 
 
+def run_build_checker_data(args: argparse.Namespace) -> str:
+    """
+    Takes parsed build-checker-data arguments.
+    Runs the checker data build job.
+    Gives a one-line summary of the record count.
+    """
+    summary = build_checker_data(args.build_dir)
+    return f"built checker records for {summary['records']} labels in {args.build_dir}"
+
+
+def run_check_command(args: argparse.Namespace) -> str:
+    """
+    Takes parsed check arguments.
+    Runs the interaction checker on the given medication text.
+    Gives the report as a JSON string.
+    """
+    return json.dumps(run_check(args.build_dir, args.text, args.build_date, not args.no_rxnorm), indent=2)
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     """
     Takes an optional argument vector, defaulting to sys.argv.
@@ -264,6 +291,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         "build-index": run_build_index,
         "query": run_query_command,
         "evaluate-search": run_evaluate_search,
+        "build-checker-data": run_build_checker_data,
+        "check": run_check_command,
     }
     print(handlers[args.command](args))
     return 0

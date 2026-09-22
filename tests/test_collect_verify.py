@@ -10,11 +10,13 @@ from rx_label_search.collect.verify import collection_problems
 def test_fixtures_form_a_valid_collection(fixture_labels: dict[str, dict[str, Any]]) -> None:
     """
     Takes the fixture labels.
-    Checks the fixtures as if they were a built collection.
+    Checks the fixtures as if they were a built collection, excluding the deliberate amphetamine-salts duplicate.
     Gives nothing, or fails if any problem is reported.
     """
-    count, problems = collection_problems(fixture_labels.values())
-    assert count == len(fixture_labels)
+    excluded = {"adderall", "adderall_xr"}  # deliberate amphetamine-salts duplicates of adderall_current_collection_winner
+    without_deliberate_duplicate = {name: record for name, record in fixture_labels.items() if name not in excluded}
+    count, problems = collection_problems(without_deliberate_duplicate.values())
+    assert count == len(without_deliberate_duplicate)
     assert problems == []
 
 
