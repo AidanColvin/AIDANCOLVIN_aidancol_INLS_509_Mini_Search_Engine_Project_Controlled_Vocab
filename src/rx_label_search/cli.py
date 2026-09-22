@@ -20,7 +20,7 @@ from rx_label_search.vocabulary.run import run_tagging
 from rx_label_search.evaluate.run import add_gold_label, run_ir_evaluation, run_tag_evaluation, write_placeholder_gold
 from rx_label_search.interactions.run import build_checker_data, run_check
 from rx_label_search.search.facets import OPERATOR_AND
-from rx_label_search.search.run import load_indexed_documents, search, write_index_stats
+from rx_label_search.search.run import build_search_index_file, load_indexed_documents, load_ranking_documents, search_with_snippets, write_index_stats
 from rx_label_search.storage.read_json import read_json
 from rx_label_search.storage.read_jsonl import iter_jsonl
 
@@ -223,23 +223,24 @@ def run_evaluate_tags(args: argparse.Namespace) -> str:
 def run_build_index(args: argparse.Namespace) -> str:
     """
     Takes parsed build-index arguments.
-    Loads the indexed documents and writes the index stats file.
+    Loads the indexed documents, writes the index stats file, and writes the compact search index file the serve function reads.
     Gives a one-line summary of the document count and average length.
     """
     documents = load_indexed_documents(args.build_dir)
     stats = write_index_stats(args.build_dir, documents)
+    build_search_index_file(args.build_dir)
     return f"indexed {stats['documents']} documents, average length {stats['average_length']:.1f} tokens"
 
 
 def run_query_command(args: argparse.Namespace) -> str:
     """
     Takes parsed query arguments.
-    Loads the indexed documents and runs one search.
+    Loads the lean ranking documents and runs one search, attaching a real snippet to each returned hit.
     Gives the top hits as a JSON string.
     """
-    documents = load_indexed_documents(args.build_dir)
-    hits = search(args.text, tuple(args.terms), args.operator, documents)
-    return json.dumps([dataclasses.asdict(hit) for hit in hits[: args.limit]], indent=2)
+    documents = load_ranking_documents(args.build_dir)
+    hits = search_with_snippets(args.build_dir, args.text, tuple(args.terms), args.operator, documents, args.limit)
+    return json.dumps([dataclasses.asdict(hit) for hit in hits], indent=2)
 
 
 def run_evaluate_search(args: argparse.Namespace) -> str:
