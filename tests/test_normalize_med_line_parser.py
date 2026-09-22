@@ -10,7 +10,69 @@ from rx_label_search.normalize.med_line_parser import (
     parse_med_list,
     parse_strength,
     split_entries,
+    strip_trailing_directions,
 )
+
+# Every entry from results/report.md whose name text was broken by Bug 1
+# ("1 time daily", singular, not recognized as a frequency phrase) or Bug 2
+# (a trailing "as needed" / "at bedtime" qualifier left attached to the
+# name after a correctly recognized frequency). Expected values are the
+# clean name text after both fixes. The Albuterol and Fluticasone entries
+# still carry their leftover administration count ("2 puffs", "2 sprays")
+# because inhaler/spray dose forms are not one of the three trailing
+# directions Section 7.1 names to strip; see reports/OPEN_QUESTIONS.md.
+REPORT_MD_FAILING_EXAMPLES: dict[str, str] = {
+    "Zolpidem 10 mg 1 time daily": "Zolpidem",
+    "Lisinopril 10 mg 1 time daily": "Lisinopril",
+    "Atorvastatin 20 mg 1 time daily": "Atorvastatin",
+    "Sertraline 50 mg 1 time daily": "Sertraline",
+    "Omeprazole 20 mg 1 time daily": "Omeprazole",
+    "Amlodipine 5 mg 1 time daily": "Amlodipine",
+    "Simvastatin 20 mg 1 time daily": "Simvastatin",
+    "Losartan 50 mg 1 time daily": "Losartan",
+    "Levothyroxine 50 mcg 1 time daily": "Levothyroxine",
+    "Hydrochlorothiazide 25 mg 1 time daily": "Hydrochlorothiazide",
+    "Metoprolol Succinate 50 mg 1 time daily": "Metoprolol Succinate",
+    "Escitalopram 10 mg 1 time daily": "Escitalopram",
+    "Pantoprazole 40 mg 1 time daily": "Pantoprazole",
+    "Montelukast 10 mg 1 time daily": "Montelukast",
+    "Rosuvastatin 10 mg 1 time daily": "Rosuvastatin",
+    "Valsartan 80 mg 1 time daily": "Valsartan",
+    "Pravastatin 20 mg 1 time daily": "Pravastatin",
+    "Duloxetine 30 mg 1 time daily": "Duloxetine",
+    "Albuterol 90 mcg 2 puffs as needed": "Albuterol 2 puffs",
+    "Furosemide 20 mg 1 time daily": "Furosemide",
+    "Spironolactone 25 mg 1 time daily": "Spironolactone",
+    "Warfarin 5 mg 1 time daily": "Warfarin",
+    "Digoxin 125 mcg 1 time daily": "Digoxin",
+    "Bupropion XL 150 mg 1 time daily": "Bupropion XL",
+    "Trazodone 50 mg 1 time daily at bedtime": "Trazodone",
+    "Ibuprofen 600 mg 3 times daily as needed": "Ibuprofen",
+    "Cyclobenzaprine 10 mg 3 times daily as needed": "Cyclobenzaprine",
+    "Fluticasone 50 mcg 2 sprays daily": "Fluticasone 2 sprays",
+    "Empagliflozin 10 mg 1 time daily": "Empagliflozin",
+    "Telmisartan 40 mg 1 time daily": "Telmisartan",
+    "Ezetimibe 10 mg 1 time daily": "Ezetimibe",
+    "Venlafaxine ER 75 mg 1 time daily": "Venlafaxine ER",
+    "Esomeprazole 40 mg 1 time daily": "Esomeprazole",
+    "Meloxicam 15 mg 1 time daily": "Meloxicam",
+    "Diltiazem ER 180 mg 1 time daily": "Diltiazem ER",
+    "Allopurinol 100 mg 1 time daily": "Allopurinol",
+    "Tamsulosin 0.4 mg 1 time daily": "Tamsulosin",
+    "Acetaminophen 500 mg 4 times daily as needed": "Acetaminophen",
+    "Sitagliptin 100 mg 1 time daily": "Sitagliptin",
+    "Nifedipine ER 30 mg 1 time daily": "Nifedipine ER",
+    "Lovastatin 20 mg 1 time daily": "Lovastatin",
+    "Fluoxetine 20 mg 1 time daily": "Fluoxetine",
+    "Famotidine 40 mg 1 time daily": "Famotidine",
+    "Cetirizine 10 mg 1 time daily": "Cetirizine",
+    "Ramipril 5 mg 1 time daily": "Ramipril",
+    "Chlorthalidone 25 mg 1 time daily": "Chlorthalidone",
+    "Pitavastatin 2 mg 1 time daily": "Pitavastatin",
+    "Paroxetine 20 mg 1 time daily": "Paroxetine",
+    "Dicyclomine 20 mg 4 times daily as needed": "Dicyclomine",
+    "Loratadine 10 mg 1 time daily": "Loratadine",
+}
 
 TEST_INPUT = (
     "10 mg Zyprexa X 1 daily , 20 mg adderall X 3 daily , 10 mg ambien X daily , trazdone 50 mg X 1 daily , "
@@ -130,6 +192,51 @@ def test_unparseable_entry_is_kept_with_notes() -> None:
     dose_only = parse_entry("10 mg")
     assert dose_only.name_text == ""
     assert any("no drug name" in note for note in dose_only.notes)
+
+
+def test_singular_one_time_daily_is_recognized() -> None:
+    """
+    Takes no arguments.
+    Parses "1 time daily" (singular "time"), the numeral form results/report.md's Bug 1 describes.
+    Gives nothing, or fails if the frequency is not read as once daily.
+    """
+    times, _, remaining = parse_frequency("1 time daily")
+    assert times == 1.0
+    assert "1 time" not in remaining
+
+
+def test_strip_trailing_directions_removes_as_needed_prn_and_bedtime() -> None:
+    """
+    Takes no arguments.
+    Strips "as needed", "as necessary", "PRN", and "at bedtime" from entry text.
+    Gives nothing, or fails if a direction survives or unrelated text is touched.
+    """
+    assert strip_trailing_directions("Trazodone   at bedtime").strip() == "Trazodone"
+    assert strip_trailing_directions("Ibuprofen   as needed").strip() == "Ibuprofen"
+    assert strip_trailing_directions("Ibuprofen   as necessary").strip() == "Ibuprofen"
+    assert strip_trailing_directions("Ibuprofen   PRN").strip() == "Ibuprofen"
+    assert strip_trailing_directions("Lisinopril") == "Lisinopril"
+
+
+def test_report_md_failing_examples_now_parse_to_a_clean_name() -> None:
+    """
+    Takes no arguments.
+    Parses every entry results/report.md logged as unresolved because of Bug 1 or Bug 2.
+    Gives nothing, or fails if any entry's name text still carries leftover dose or direction text.
+    """
+    for raw_text, expected_name in REPORT_MD_FAILING_EXAMPLES.items():
+        entry = parse_entry(raw_text)
+        assert entry.name_text == expected_name, raw_text
+
+
+def test_dose_text_no_longer_leaks_into_the_matched_name() -> None:
+    """
+    Takes no arguments.
+    Parses "Lisinopril 1 time daily", which results/report.md shows leaking "1 time" into the RxNorm query.
+    Gives nothing, or fails if the parsed name still contains the dose fragment "1 time".
+    """
+    entry = parse_entry("Lisinopril 10 mg 1 time daily")
+    assert entry.name_text == "Lisinopril"
 
 
 def test_clean_name_and_daily_total_edge_cases() -> None:
