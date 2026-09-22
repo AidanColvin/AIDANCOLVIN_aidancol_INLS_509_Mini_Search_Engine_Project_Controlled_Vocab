@@ -59,3 +59,35 @@ Every fact below was checked against the named official page or a live request o
 | Guidance page shows "January 2026", Final; the PDF cover says "Document issued on January 29, 2026. This document supersedes 'Clinical Decision Support Software' issued on January 6, 2026." | Verified. FDA's own word is "supersedes", not "re-issued". | https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software , https://www.fda.gov/media/109618/download |
 | Criterion (4): "Intended for the purpose of enabling an HCP to independently review the basis for the recommendations that such software presents so that it is not the intent that the HCP rely primarily on any of such recommendations to make a clinical diagnosis or treatment decision regarding an individual patient" | Verified from the PDF. | https://www.fda.gov/media/109618/download |
 | "FDA's existing digital health policies continue to apply to software functions that meet the definition of a device, including those that are intended for use by patients or caregivers." | Verified from the landing page. | https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software |
+
+## openFDA drug label field layout (checked 2026-09-21, from the official field YAML)
+
+| Fact | Status | Source |
+| :--- | :--- | :--- |
+| The label endpoint's YAML schema has 178 top-level properties; `openfda` has 21 sub-properties; no field or sub-field is named `dosage_form` anywhere in the label schema | Verified. Live search for `_exists_:dosage_form` and `_exists_:openfda.dosage_form` both return `NOT_FOUND`. | https://open.fda.gov/fields/druglabel.yaml |
+| `openfda.pharm_class_cs` is "chemical structure classification of the drug product's pharmacologic class" | Verified. Live values end in the suffix `[CS]` (for example "Anti-Inflammatory Agents, Non-Steroidal [CS]"), not `[Chemical/Ingredient]` as the YAML's example text shows; the doc/live mismatch is noted for later spot checks. | https://open.fda.gov/fields/druglabel.yaml |
+| `openfda.brand_name` is described only as "Brand or trade name of the drug product." | Unverifiable: no official page states that it is copied from the NDC Directory proprietary name, or the word "proprietary". | https://open.fda.gov/fields/druglabel.yaml |
+| `effective_time` is `YYYYMMDD`; `version` is a string; `is_original_packager` is the one `openfda` field typed as a plain string rather than an array | Verified live. | https://open.fda.gov/fields/druglabel.yaml |
+| Fields ending in `_table` hold SPL/HTML-like table markup as strings, including non-HTML tags such as `<paragraph>` and `<content styleCode="bold">` | Verified from a live record. The YAML itself gives no markup description for these fields. | live API record, naproxen |
+| `_missing_:openfda` (175,889 of 262,883 records on 2026-09-18) returns a record with `"openfda": {}`, an empty object, not a missing key | Verified live. Confirms filter 2's "has openfda" test must check for a non-empty object. | live API |
+
+## Vercel Python functions (checked 2026-09-21)
+
+| Fact | Status | Source |
+| :--- | :--- | :--- |
+| Supported Python versions: 3.12 (default), 3.13, 3.14; pinned with `pyproject.toml` `requires-python`, a `.python-version` file, or `Pipfile.lock`; no `runtime` key in `vercel.json` for Python | Verified. | https://vercel.com/docs/functions/runtimes/python/python-version |
+| Without a detected framework preset (no FastAPI/Flask/Django dependency declared), each `.py` file under `/api` becomes its own function; each file must define a top-level `app`, `application`, or a `handler` class inheriting `http.server.BaseHTTPRequestHandler` | Verified. This project has no dependencies, so `api/search.py` and `api/check.py` will each become a function without any framework interfering. | https://vercel.com/docs/functions/runtimes/python/api-directory |
+| Hobby plan: 12 functions per deployment for the file-based `/api` approach | Verified. | https://vercel.com/docs/functions/runtimes#functions-created-per-deployment |
+| Python function bundle limit is 500 MB uncompressed (250 MB for other runtimes) | Verified. | https://vercel.com/docs/functions/limitations |
+| Memory: 2 GB / 1 vCPU default and max on Hobby; 2 GB default, 4 GB / 2 vCPU max on Pro; cannot be set in `vercel.json` | Verified. | https://vercel.com/docs/functions/limitations |
+| Duration with Fluid compute (default for projects created after 2025-04-23): Hobby 300s default and max; Pro 300s default, 800s max, 1800s extended (beta, set per-function) | Verified. | https://vercel.com/docs/functions/limitations |
+| Request and response body limit: 4.5 MB, both directions, same on every plan | Verified. | https://vercel.com/docs/functions/limitations |
+| `vercel.json` `functions.excludeFiles` (glob) controls what ships in a Python bundle; everything reachable at build time ships by default; `includeFiles` is not read by the Python builder | Verified for `excludeFiles`. `includeFiles` unverifiable in docs; the builder source has no `includeFiles` handling for Python. | https://vercel.com/docs/functions/runtimes/python |
+| GitHub Actions deploy: `vercel pull --yes --environment=production --token=...`, `vercel build --prod --token=...`, `vercel deploy --prebuilt --prod --token=...`, with `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID` as job env vars from secrets | Verified. | https://vercel.com/kb/guide/how-can-i-use-github-actions-with-vercel |
+| `vercel.json` `rewrites` route `/` and other non-file paths to `index.html`; the filesystem (a static `index.html`, files under `api/`) takes precedence over rewrites, so no rewrite is needed to serve them directly | Verified. | https://vercel.com/docs/project-configuration/vercel-json |
+| A Python function can read files bundled with it; `open()` with a relative path resolves against the project root, not the function's own directory; the runtime filesystem is read-only except `/tmp` (500 MB) | Verified. | https://vercel.com/docs/functions/runtimes/python |
+
+## FDA enzyme table and ONC high-priority DDI list (transcribed and independently checked 2026-09-21)
+
+* `data/reference/fda_enzyme_table.json`: transcribed from https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers, 8 tables, 53 rows. An independent re-parse of the same page found zero discrepancies across every cell of all 8 tables.
+* `data/reference/onc_high_priority_pairs.json`: transcribed from Phansalkar et al. 2012 (PMC3422823), Table 2, "List of candidate drug–drug interactions (DDIs) discussed and the final pairs accepted by the expert panel as critical DDIs," 15 rows. An independent re-check of the source found two incomplete footnotes in the first transcription; both were corrected in the committed file (the `*` footnote's second sentence, and the missing `†` footnote about the FDA/Flockhart enzyme table source).

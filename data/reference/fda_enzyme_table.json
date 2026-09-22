@@ -1,0 +1,458 @@
+{
+ "source_url": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+ "access_date": "2026-09-21",
+ "fetch_method": "curl (HTTP 200, 55115 bytes, browser-like User-Agent) into scratchpad/fda_enzyme_table.html; parsed with Python stdlib html.parser",
+ "content_current_as_of": "06/05/2023",
+ "content_current_as_of_datetime_attr": "2023-06-05T00:00:00Z",
+ "definitions": {
+  "strong_inhibitor": "Strong and moderate inhibitors are drugs that increase the AUC of sensitive index substrates of a given metabolic pathway ≥5-fold and ≥2- to <5-fold, respectively.",
+  "moderate_inhibitor": "Strong and moderate inhibitors are drugs that increase the AUC of sensitive index substrates of a given metabolic pathway ≥5-fold and ≥2- to <5-fold, respectively.",
+  "weak_inhibitor": "unverifiable: the page does not define this term. The words 'weak inhibitor'/'weak inducer' appear only inside footnotes (Table 2-2 footnotes a and d; Table 2-3 footnote b) without any AUC fold-change or percent definition.",
+  "strong_inducer": "Strong and moderate index inducers are drugs that decrease the AUC of sensitive substrates of a given metabolic pathway by ≥80 percent and ≥50 to <80 percent, respectively.",
+  "moderate_inducer": "Strong and moderate index inducers are drugs that decrease the AUC of sensitive substrates of a given metabolic pathway by ≥80 percent and ≥50 to <80 percent, respectively.",
+  "weak_inducer": "unverifiable: the page does not define this term. The words 'weak inhibitor'/'weak inducer' appear only inside footnotes (Table 2-2 footnotes a and d; Table 2-3 footnote b) without any AUC fold-change or percent definition.",
+  "sensitive_substrate": "Sensitive index substrates are index drugs that demonstrate an increase in AUC of ≥5-fold with strong index inhibitors of a given metabolic pathway in clinical DDI studies.",
+  "moderate_sensitive_substrate": "Moderately sensitive substrates are drugs that demonstrate an increase in AUC of ≥2- to <5-fold with strong index inhibitors of a given metabolic pathway in clinical DDI studies."
+ },
+ "definitions_source_locations": {
+  "strong_inhibitor": "Note paragraph directly below Table 2-2",
+  "moderate_inhibitor": "Note paragraph directly below Table 2-2",
+  "strong_inducer": "Note paragraph directly below Table 2-3",
+  "moderate_inducer": "Note paragraph directly below Table 2-3",
+  "sensitive_substrate": "Note paragraph directly below Table 2-1",
+  "moderate_sensitive_substrate": "Note paragraph directly below Table 2-1"
+ },
+ "not_exhaustive_statement": "This table provides examples of clinical sensitive or moderately sensitive index substrates and is not intended to be an exhaustive list.",
+ "not_exhaustive_statements_all": [
+  {
+   "table_id": "Table 2-1",
+   "quote": "This table provides examples of clinical sensitive or moderately sensitive index substrates and is not intended to be an exhaustive list."
+  },
+  {
+   "table_id": "Table 2-2",
+   "quote": "This table provides examples of clinical index inhibitors and is not intended to be an exhaustive list."
+  },
+  {
+   "table_id": "Table 2-3",
+   "quote": "This table provides examples of clinical index inducers and is not intended to be an exhaustive list."
+  },
+  {
+   "table_id": "Table 3-1",
+   "quote": "Note: This table provides examples of in vitro substrates for various transporters and is not intended to be an exhaustive list."
+  },
+  {
+   "table_id": "Table 3-2",
+   "quote": "Note: This table provides examples of in vitro inhibitors for various transporters and is not intended to be an exhaustive list."
+  }
+ ],
+ "tables": [
+  {
+   "table_id": "Table 1-1",
+   "title": "Table 1-1: Examples of in vitro marker reactions for CYP-mediated metabolism",
+   "columns": [
+    "Enzyme",
+    "Marker reaction"
+   ],
+   "row_count": 7,
+   "rows": [
+    {
+     "Enzyme": "CYP1A2",
+     "Marker reaction": "7-ethoxyresorufin-O-deethylation, phenacetin O-deethylation"
+    },
+    {
+     "Enzyme": "CYP2B6",
+     "Marker reaction": "bupropion hydroxylation, efavirenz hydroxylation"
+    },
+    {
+     "Enzyme": "CYP2C8",
+     "Marker reaction": "amodiaquine N-deethylation, paclitaxel 6α-hydroxylation"
+    },
+    {
+     "Enzyme": "CYP2C9",
+     "Marker reaction": "diclofenac 4'-hydroxylation, S-warfarin 7-hydroxylation"
+    },
+    {
+     "Enzyme": "CYP2C19",
+     "Marker reaction": "S-mephenytoin 4'-hydroxylation"
+    },
+    {
+     "Enzyme": "CYP2D6",
+     "Marker reaction": "bufuralol 1'-hydroxylation, dextromethorphan O-demethylation"
+    },
+    {
+     "Enzyme": "CYP3A4/5^(a)",
+     "Marker reaction": "midazolam 1'-hydroxylation, testosterone 6β-hydroxylation"
+    }
+   ],
+   "notes_and_footnotes_as_printed": [
+    "^a Recommend the use of two structurally unrelated CYP3A4/5 substrates to evaluate in vitro CYP3A4/5 inhibition.",
+    "Abbreviations: CYP: cytochrome P450"
+   ]
+  },
+  {
+   "table_id": "Table 1-2",
+   "title": "Table 1-2: Examples of in vitro selective inhibitors for CYP-mediated metabolism",
+   "columns": [
+    "Enzyme",
+    "Inhibitor"
+   ],
+   "row_count": 7,
+   "rows": [
+    {
+     "Enzyme": "CYP1A2",
+     "Inhibitor": "α-naphthoflavone, furafylline^(a)"
+    },
+    {
+     "Enzyme": "CYP2B6",
+     "Inhibitor": "clopidogrel^(a), sertraline, thiotepa^(a), ticlopidine^(a)"
+    },
+    {
+     "Enzyme": "CYP2C8",
+     "Inhibitor": "gemfibrozil glucuronide^(a), montelukast, phenelzine^(a)"
+    },
+    {
+     "Enzyme": "CYP2C9",
+     "Inhibitor": "sulfaphenazole, tienilic acid^(a)"
+    },
+    {
+     "Enzyme": "CYP2C19",
+     "Inhibitor": "N-3-benzyl-nirvanol, loratadine, nootkatone, ticlopidine^(a)"
+    },
+    {
+     "Enzyme": "CYP2D6",
+     "Inhibitor": "paroxetine^(a), quinidine"
+    },
+    {
+     "Enzyme": "CYP3A4/5",
+     "Inhibitor": "azamulin^(a), itraconazole, ketoconazole, troleandomycin^(a), verapamil^(a)"
+    }
+   ],
+   "notes_and_footnotes_as_printed": [
+    "Note: Many of these chemical inhibitors are not specific for an individual CYP enzyme. The selectivity and potency of inhibitors should be verified using the same experimental conditions with probe substrates for each CYP enzyme.",
+    "^a Time-dependent inhibitors.",
+    "Abbreviations: CYP: cytochrome P450"
+   ]
+  },
+  {
+   "table_id": "Table 1-3",
+   "title": "Table 1-3. Examples of in vitro inducers for CYP-mediated metabolism",
+   "columns": [
+    "Enzyme",
+    "Inducer"
+   ],
+   "row_count": 6,
+   "rows": [
+    {
+     "Enzyme": "CYP1A2",
+     "Inducer": "omeprazole"
+    },
+    {
+     "Enzyme": "CYP2B6",
+     "Inducer": "phenobarbital"
+    },
+    {
+     "Enzyme": "CYP2C8",
+     "Inducer": "rifampicin"
+    },
+    {
+     "Enzyme": "CYP2C9",
+     "Inducer": "rifampicin"
+    },
+    {
+     "Enzyme": "CYP2C19",
+     "Inducer": "rifampicin"
+    },
+    {
+     "Enzyme": "CYP3A4/5",
+     "Inducer": "rifampicin"
+    }
+   ],
+   "notes_and_footnotes_as_printed": [
+    "Abbreviations: CYP: cytochrome P450."
+   ]
+  },
+  {
+   "table_id": "Table 2-1",
+   "title": "Table 2-1: Examples of clinical index substrates for CYP-mediated metabolism (for use in index clinical DDI studies)",
+   "columns": [
+    "Enzyme",
+    "Sensitive index substrates unless otherwise noted"
+   ],
+   "row_count": 7,
+   "rows": [
+    {
+     "Enzyme": "CYP1A2",
+     "Sensitive index substrates unless otherwise noted": "caffeine, tizanidine"
+    },
+    {
+     "Enzyme": "CYP2B6^(a)",
+     "Sensitive index substrates unless otherwise noted": "-"
+    },
+    {
+     "Enzyme": "CYP2C8",
+     "Sensitive index substrates unless otherwise noted": "repaglinide^(b)"
+    },
+    {
+     "Enzyme": "CYP2C9",
+     "Sensitive index substrates unless otherwise noted": "tolbutamide^(c), S-warfarin^(c)"
+    },
+    {
+     "Enzyme": "CYP2C19",
+     "Sensitive index substrates unless otherwise noted": "lansoprazole^(c,d), omeprazole"
+    },
+    {
+     "Enzyme": "CYP2D6",
+     "Sensitive index substrates unless otherwise noted": "desipramine, dextromethorphan, nebivolol"
+    },
+    {
+     "Enzyme": "CYP3A",
+     "Sensitive index substrates unless otherwise noted": "midazolam, triazolam"
+    }
+   ],
+   "notes_and_footnotes_as_printed": [
+    "Note: Index substrates predictably exhibit exposure increases due to inhibition of a given metabolic pathway and are commonly used in prospective clinical DDI studies. See section IV.A.2 of the FDA guidance for industry entitled Clinical Drug Interaction Studies —Cytochrome P450 Enzyme- and Transporter-Mediated Drug Interactions (January 2020) for details. Sensitive index substrates are index drugs that demonstrate an increase in AUC of ≥5-fold with strong index inhibitors of a given metabolic pathway in clinical DDI studies. Moderately sensitive substrates are drugs that demonstrate an increase in AUC of ≥2- to <5-fold with strong index inhibitors of a given metabolic pathway in clinical DDI studies.",
+    "This table provides examples of clinical sensitive or moderately sensitive index substrates and is not intended to be an exhaustive list. Index substrates listed in this table were selected considering their sensitivity, specificity, safety profiles, and adequate number of reported clinical DDI studies with different in vivo inhibitors (≥ 3 for CYP3A or ≥ 2 for CYP1A2, 2C8, 2C9, 2C19, and 2D6). DDI data were collected based on a search of the University of Washington Metabolism and Transport Drug Interaction Database [Hachad et al. (2010), Hum Genomics, 5(1):61], and the list of references is available here.",
+    "^a We currently do not have sensitive index substrates for CYP2B6.",
+    "^b Also OATP1B1 substrate.",
+    "^c Moderately sensitive substrates.",
+    "^d S-lansoprazole is a sensitive substrate in CYP2C19 EM subjects.",
+    "Abbreviations: AUC: area under the concentration-time curve; CYP: cytochrome P450; DDI: drug-drug interaction; EM: extensive metabolizer; OATP1B1: organic anion transporting polypeptide 1B1."
+   ]
+  },
+  {
+   "table_id": "Table 2-2",
+   "title": "Table 2-2: Examples of clinical index inhibitors for CYP enzymes for use in index clinical DDI studies)",
+   "columns": [
+    "Enzyme",
+    "Strong index inhibitors",
+    "Moderate index inhibitors"
+   ],
+   "row_count": 7,
+   "rows": [
+    {
+     "Enzyme": "CYP1A2",
+     "Strong index inhibitors": "fluvoxamine^(a)",
+     "Moderate index inhibitors": "-"
+    },
+    {
+     "Enzyme": "CYP2B6^(b)",
+     "Strong index inhibitors": "-",
+     "Moderate index inhibitors": "-"
+    },
+    {
+     "Enzyme": "CYP2C8",
+     "Strong index inhibitors": "gemfibrozil^(c)",
+     "Moderate index inhibitors": "clopidogrel^(d)"
+    },
+    {
+     "Enzyme": "CYP2C9",
+     "Strong index inhibitors": "-",
+     "Moderate index inhibitors": "fluconazole^(e)"
+    },
+    {
+     "Enzyme": "CYP2C19",
+     "Strong index inhibitors": "fluvoxamine^(a)",
+     "Moderate index inhibitors": "-"
+    },
+    {
+     "Enzyme": "CYP2D6",
+     "Strong index inhibitors": "fluoxetine^(f), paroxetine",
+     "Moderate index inhibitors": "Mirabegron"
+    },
+    {
+     "Enzyme": "CYP3A",
+     "Strong index inhibitors": "clarithromycin^(g), itraconazole^(g)",
+     "Moderate index inhibitors": "erythromycin^(g), fluconazole^(e), verapamil^(g)"
+    }
+   ],
+   "notes_and_footnotes_as_printed": [
+    "Note: Index inhibitors predictably inhibit metabolism via a given pathway and are commonly used in prospective clinical DDI studies. See section IV.A.2 of the FDA guidance for industry entitled Clinical Drug Interaction Studies —Cytochrome P450 Enzyme- and Transporter-Mediated Drug Interactions (January 2020) for details. Strong and moderate inhibitors are drugs that increase the AUC of sensitive index substrates of a given metabolic pathway ≥5-fold and ≥2- to <5-fold, respectively.",
+    "This table provides examples of clinical index inhibitors and is not intended to be an exhaustive list. Index inhibitors listed in this table were selected based on potency and selectivity of inhibition, safety profiles, and an adequate number of reported clinical DDI studies with different in vivo substrates [≥ 3 for CYP3A, ≥ 2 for CYP1A2, 2C9, 2C19, and 2D6, or ≥ 1 for CYP2C8 (strong inhibitors)]. DDI data were collected based on a search of the University of Washington Metabolism and Transport Drug Interaction Database [Hachad et al. (2010), Hum Genomics, 5(1):61)], and the list of references is available here.",
+    "^a Strong inhibitor of CYP1A2 and CYP2C19, moderate inhibitor of CYP3A, and weak inhibitor of CYP2D6.",
+    "^b We currently do not have index inhibitors for CYP2B6.",
+    "^c Strong inhibitor of CYP2C8 and inhibitor of OATP1B1 and OAT3.",
+    "^d Moderate inhibitor of CYP2C8 at the 75 mg dose of clopidogrel and a weak inhibitor of CYP2B6.",
+    "^e Strong inhibitor of CYP2C19 and moderate inhibitor of CYP2C9 and CYP3A.",
+    "^f Strong inhibitor of CYP2C19 and CYP2D6.",
+    "^g Inhibitor of P-gp (defined as those increasing the AUC of digoxin to ≥1.25-fold).",
+    "Abbreviations: AUC: area under the concentration-time curve; CYP: cytochrome P450; DDI: drug-drug interaction; OATP1B1: organic anion transporting polypeptide 1B1; OAT3: organic anion transporter 3; P-gp: P-glycoprotein."
+   ]
+  },
+  {
+   "table_id": "Table 2-3",
+   "title": "Table 2-3: Examples of clinical index inducers for CYP-mediated metabolism (for use in index clinical DDI studies)",
+   "columns": [
+    "",
+    "Strong inducers",
+    "Moderate inducers"
+   ],
+   "row_count": 6,
+   "rows": [
+    {
+     "": "CYP1A2",
+     "Strong inducers": "-",
+     "Moderate inducers": "-"
+    },
+    {
+     "": "CYP2B6",
+     "Strong inducers": "-",
+     "Moderate inducers": "rifampin^(a)"
+    },
+    {
+     "": "CYP2C8",
+     "Strong inducers": "-",
+     "Moderate inducers": "rifampin^(a)"
+    },
+    {
+     "": "CYP2C9",
+     "Strong inducers": "-",
+     "Moderate inducers": "rifampin^(a)"
+    },
+    {
+     "": "CYP2C19",
+     "Strong inducers": "rifampin^(a)",
+     "Moderate inducers": "-"
+    },
+    {
+     "": "CYP3A",
+     "Strong inducers": "carbamazepine^(b), phenytoin^(c), rifampin^(a)",
+     "Moderate inducers": "-"
+    }
+   ],
+   "notes_and_footnotes_as_printed": [
+    "Note: Index inducers predictably induce metabolism via a given pathway and are commonly used in prospective clinical DDI studies. See section IV.A.2 of the FDA guidance for industry entitled Clinical Drug Interaction Studies — Cytochrome P450 Enzyme- and Transporter-Mediated Drug Interactions (January 2020) for more details. Strong and moderate index inducers are drugs that decrease the AUC of sensitive substrates of a given metabolic pathway by ≥80 percent and ≥50 to <80 percent, respectively.",
+    "This table provides examples of clinical index inducers and is not intended to be an exhaustive list. Index inducers listed in this table were selected based on potency of induction, safety profiles, and number of reported clinical DDI studies with different in vivo substrates (≥ two substrates). DDI data were collected based on a search of the University of Washington Metabolism and Transport Drug Interaction Database [Hachad et al. (2010), Hum Genomics, 5(1):61], and the list of references is available here.",
+    "^a Strong inducer of CYP2C19 and CYP3A, and moderate inducer of CYP1A2, CYP2B6, CYP2C8, CYP2C9.",
+    "^b Strong inducer of CYP2B6 and CYP3A and a weak inducer of CYP2C9.",
+    "^c Strong inducer of CYP3A and a moderate inducer of CYP1A2 and CYP2C19.",
+    "Abbreviations: AUC: area under the concentration-time curve; CYP: cytochrome P450; DDI: drug-drug interaction."
+   ]
+  },
+  {
+   "table_id": "Table 3-1",
+   "title": "Table 3-1: Examples of in vitro substrates for transporters",
+   "columns": [
+    "Transporter",
+    "Gene",
+    "Substrate"
+   ],
+   "row_count": 7,
+   "rows": [
+    {
+     "Transporter": "P-gp",
+     "Gene": "ABCB1",
+     "Substrate": "digoxin, fexofenadine^(a,b,c,d), loperamide, N-methylquinidine (NMQ)^(h), quinidine, talinolol, vinblastine^(c)"
+    },
+    {
+     "Transporter": "BCRP",
+     "Gene": "ABCG2",
+     "Substrate": "2-amino-1-methyl-6-phenylimidazo[4,5-b]pyridine (PhIP), estradiol-17-beta-glucuronide^(a,c,e,h), estrone-3-sulfate^(a,b,d,f), methotrexate^(a,b,c,j), rosuvastatin^(a,b,f), prazosin(e), sulfasalazine"
+    },
+    {
+     "Transporter": "OATP1B1,\nOATP1B3",
+     "Gene": "SLCO1B1,\nSLCO1B3",
+     "Substrate": "cholecystokinin octapeptide(CCK-8)^(g), estradiol-17β-glucuronide^(a,c,e,i), pitavastatin^(e,f,i), pravastatin^(b,c,f,i), rosuvastatin^(b,f,i), telmisartan^(g)"
+    },
+    {
+     "Transporter": "OAT1",
+     "Gene": "SLC22A6",
+     "Substrate": "adefovir, p-aminohippurate (PAH), cidofovir, tenofovir"
+    },
+    {
+     "Transporter": "OAT3",
+     "Gene": "SLC22A8",
+     "Substrate": "benzylpenicillin, estrone-3-sulfate ^(a,d,f,i), methotrexate^(a,c,i,j), pravastatin^(a,c,f,i)"
+    },
+    {
+     "Transporter": "MATE1,\nMATE-2K",
+     "Gene": "SLC47A1, SLC47A2",
+     "Substrate": "creatinine^(j), metformin^(j), 1-methyl-4-phenylpyridinium (MPP+)^(j), tetraethylammonium (TEA)^(j)"
+    },
+    {
+     "Transporter": "OCT2",
+     "Gene": "SLC22A2",
+     "Substrate": "creatinine^(j), metformin^(j), tetraethylammonium (TEA)^(j)"
+    }
+   ],
+   "notes_and_footnotes_as_printed": [
+    "Note: This table provides examples of in vitro substrates for various transporters and is not intended to be an exhaustive list.",
+    "Note: The IC50 values of several OATP1B inhibitors measured using estrone-3-sulfate as a substrate were larger than those measured using estradiol-17-beta-glucuronide or pitavastatin as substrates. Thus, using estrone-3-sulfate as a substrate may underpredict the potential of a drug as an inhibitor of OATP1B.",
+    "Note: The IC50 values of several OCT2 inhibitors measured using 1-methyl-4-phenylpyridinium (MPP+) as a substrate were larger than those measured using metformin or creatinine as substrate. Thus, using MPP+ as a substrate may underpredict the potential of a drug as an inhibitor of OCT2.",
+    "^a Also a substrate of OATPs.",
+    "^b Also a substrate of OAT3.",
+    "^c Also a substrate of MRP2.",
+    "^d Also a substrate of MATEs.",
+    "^e Also a substrate of P-gp.",
+    "^f Also a substrate of NTCP.",
+    "^g Selective substrate of OATP1B3 (vs. OATP1B1).",
+    "^h Used in vesicle experiments.",
+    "^i Also a substrate of BCRP.",
+    "^j Substrate of OCTs and MATEs.",
+    "Abbreviations: BCRP: breast cancer resistance protein; MATE: multidrug and toxin extrusion protein; MRP2: multidrug resistance-associated protein 2; NTCP: Na+-taurocholate co-transporting polypeptide; OAT: organic anion transporter; OATP: organic anion transporting polypeptide; OCT: organic cation transporter; P-gp: P-glycoprotein, also called as multidrug resistance protein 1 (MDR1)."
+   ]
+  },
+  {
+   "table_id": "Table 3-2",
+   "title": "Table 3-2: Examples of in vitro inhibitors for transporters",
+   "columns": [
+    "Transporter",
+    "Gene",
+    "Inhibitor"
+   ],
+   "row_count": 6,
+   "rows": [
+    {
+     "Transporter": "P-gp",
+     "Gene": "ABCB1",
+     "Inhibitor": "cyclosporine^(a,b,c,d), elacridar (GF120918)^(a), ketoconazole^(a,c,e,f,g), quinidine^(c,f,g), valspodar (PSC833), verapamil^(c,f,g), zosuquidar (LY335979)"
+    },
+    {
+     "Transporter": "BCRP",
+     "Gene": "ABCG2",
+     "Inhibitor": "elacridar (GF120918)^(h), fumitremorgin C (FTC), ko143, novobiocin^(c,e)"
+    },
+    {
+     "Transporter": "OATP1B1,\nOATP1B3",
+     "Gene": "SLCO1B1,\nSLCO1B3",
+     "Inhibitor": "bromosulfophthalein (BSP) ^(b,d), cyclosporine^(a,b,d,,h,i), estrone-3-sulfate^(a,b,e), rifampicin^(a,d,e,h), rifamycin SV"
+    },
+    {
+     "Transporter": "OAT1,\nOAT3",
+     "Gene": "SLC22A6, SLC22A8",
+     "Inhibitor": "benzylpenicillin^(j), probenecid^(c,d)"
+    },
+    {
+     "Transporter": "MATE1,\nMATE-2K",
+     "Gene": "SLC47A1, SLC47A2",
+     "Inhibitor": "cimetidine^(e,f), pyrimethamine^(f)"
+    },
+    {
+     "Transporter": "OCT2",
+     "Gene": "SLC22A2",
+     "Inhibitor": "cimetidine^(e,g), clonidine^(g)"
+    }
+   ],
+   "notes_and_footnotes_as_printed": [
+    "Note: This table provides examples of in vitro inhibitors for various transporters and is not intended to be an exhaustive list.",
+    "^a Also an inhibitor of BCRP.",
+    "^b Also an inhibitor of NTCP.",
+    "^c Also an inhibitor of OATPs.",
+    "^d Also an inhibitor of MRP2.",
+    "^e Also an inhibitor of OAT3.",
+    "^f Also an inhibitor of OCT2.",
+    "^g Also an inhibitor of MATEs.",
+    "^h Also an inhibitor of P-gp.",
+    "^i Preincubation with inhibitors prior to inhibition studies causes a decrease of the Ki value.",
+    "^j Selectively inhibit OAT3 at lower concentrations. Note at the concentration inhibiting OAT3, benzylpenicillin also inhibits OATP1B3.",
+    "Abbreviations: BCRP: breast cancer resistance protein; MATE: multidrug and toxin extrusion protein; MRP2: multidrug resistance-associated protein 2; NTCP: Na+-taurocholate co-transporting polypeptide; OAT: organic anion transporter; OATP: organic anion transporting polypeptide; OCT: organic cation transporter; P-gp: P-glycoprotein, also called as multidrug resistance protein 1 (MDR1)."
+   ]
+  }
+ ],
+ "transcription_notes": [
+  "Footnote markers: the page prints them as <sup>...</sup>; they are transcribed with a caret prefix, e.g. 'furafylline^(a)' means furafylline with superscript (a).",
+  "Multi-line cells (e.g. 'OATP1B1,' / 'OATP1B3') are printed on the page with <br> or as two <p> elements; transcribed with a single '\\n' between lines.",
+  "Cell text otherwise kept as printed, including anomalies: 'prazosin(e)' (marker not superscripted on page), 'cyclosporine^(a,b,d,,h,i)' (double comma on page), 'estrone-3-sulfate ^(a,d,f,i)' and 'bromosulfophthalein (BSP) ^(b,d)' (space before superscript on page), capitalized 'Mirabegron', Table 2-2 title's unbalanced closing parenthesis, Table 1-3 title using a period instead of a colon, and Table 2-3's empty first column header.",
+  "A 9th <table> element exists on the page after Table 3-2's abbreviations: a layout table containing one empty <th> cell and no data; it is excluded from 'tables'.",
+  "Tables for 'Examples of clinical substrates, inhibitors and inducers' listed in the page's table of contents are NOT on this page; those links point to /drugs/drug-interactions-labeling/healthcare-professionals-fdas-examples-drugs-interact-cyp-enzymes-and-transporter-systems."
+ ]
+}

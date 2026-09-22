@@ -1,0 +1,187 @@
+{
+ "citation": {
+  "authors": "Shobha Phansalkar, Amrita A Desai, Douglas Bell, Eileen Yoshida, John Doole, Melissa Czochanski, Blackford Middleton, David W Bates",
+  "title": "High-priority drug–drug interactions for use in electronic health records",
+  "journal": "Journal of the American Medical Informatics Association : JAMIA",
+  "year": 2012,
+  "volume": "19",
+  "issue": "5",
+  "pages": "735-43",
+  "pmcid": "PMC3422823",
+  "pmid": "22539083",
+  "doi": "10.1136/amiajnl-2011-000612"
+ },
+ "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3422823/",
+ "access_date": "2026-09-21",
+ "table_label": "Table 2.",
+ "table_title": "List of candidate drug–drug interactions (DDIs) discussed and the final pairs accepted by the expert panel as critical DDIs",
+ "table_column_headers": [
+  "#",
+  "Candidate drug–drug interaction pair (object–precipitant drug/class)",
+  "Status",
+  "Considerations suggested by the expert panel",
+  "Final DDI pair and suggested membership*",
+  "(sub-headers under final DDI pair:) Object class / Precipitant class"
+ ],
+ "table_footnotes": {
+  "*": "Membership is suggested but not intended to represent every member in the drug class. Specific exceptions, as suggested by the panel, are described where necessary in the column labeled \"Considerations suggested by the expert panel\".",
+  "†": "CYP-450 inhibitors and inducers obtained from the list provided by the FDA16 and Flockhart's table from the University of Indiana School of Medicine.17",
+  "‡": "http://www.torsades.org (accessed 29 Jul 2011)."
+ },
+ "abstract_count_statement": "Of 31 DDIs considered to be high risk, the panel approved a final list of 15 interactions.",
+ "not_complete_statement": "Panelists agreed that this list represented drugs that are contraindicated for concurrent use, though it does not necessarily represent a complete list of all such interacting drug pairs. For other drug interactions, severity may depend on additional factors, such as patient conditions or timing of co-administration.",
+ "not_complete_statement_body_text": "However, this is a starter set of contraindicated DDIs and the list may not be complete. There are other drug pairs that clinicians and informaticians should consider alerting on, but they do not fall into the relatively narrow category of drugs that are contraindicated for concurrent use.",
+ "results_count_statement": "Thus, the final list consists of 15 DDIs which represent drugs that should never be co-prescribed and is presented in Table 2.",
+ "pairs": [
+  {
+   "row": 1,
+   "paper_ddi_number": "3",
+   "candidate_pair_as_printed": "Amphetamine and derivatives–MAO inhibitors",
+   "status": "Accepted",
+   "object": "Amphetamine derivatives:\nDexmethylphenidate\nDextroamphetamine\nMethylphenidate\nLisdexamefetamine\nMethamphetamine\nPhendimetrazine\nPseudoephedrine\nAmphetamine\nBenzphetamine\nDiethylpropion\nPhentermine\nAtomoxetine",
+   "precipitant": "MAO inhibitors:\nTranylcypromine\nPhenelzine\nIsocarboxazid\nProcarbazine\nSelegiline",
+   "considerations": "Consider downgrading membership of selegiline due to its selective MAO-B inhibition; only at higher doses does it lose specificity and inhibit MAO-A",
+   "row_text": "3 || Amphetamine and derivatives–MAO inhibitors || Accepted || Consider downgrading membership of selegiline due to its selective MAO-B inhibition; only at higher doses does it lose specificity and inhibit MAO-A || Amphetamine derivatives:; Dexmethylphenidate; Dextroamphetamine; Methylphenidate; Lisdexamefetamine; Methamphetamine; Phendimetrazine; Pseudoephedrine; Amphetamine; Benzphetamine; Diethylpropion; Phentermine; Atomoxetine || MAO inhibitors:; Tranylcypromine; Phenelzine; Isocarboxazid; Procarbazine; Selegiline"
+  },
+  {
+   "row": 2,
+   "paper_ddi_number": "4",
+   "candidate_pair_as_printed": "Atazanavir–gastric pH alkalizing agents (proton pump inhibitors (PPIs) + H2 blockers)",
+   "status": "Accepted",
+   "object": "Atazanavir",
+   "precipitant": "Proton pump inhibitors (PPIs):\nOmeprazole\nLansoprazole\nPantoprazole\nRabeprazole\nEsmoprazole",
+   "considerations": "Only include PPIs and remove H2 blockers from precipitant class based on literature evidence\nAdd dexlansoprazole to precipitant class",
+   "row_text": "4 || Atazanavir–gastric pH alkalizing agents (proton pump inhibitors (PPIs) + H2 blockers) || Accepted || Only include PPIs and remove H2 blockers from precipitant class based on literature evidence; Add dexlansoprazole to precipitant class || Atazanavir || Proton pump inhibitors (PPIs):; Omeprazole; Lansoprazole; Pantoprazole; Rabeprazole; Esmoprazole"
+  },
+  {
+   "row": 3,
+   "paper_ddi_number": "6",
+   "candidate_pair_as_printed": "Febuxostat–azathioprine/mercaptopurine",
+   "status": "Accepted",
+   "object": "Febuxostat",
+   "precipitant": "Azathioprine and mercaptopurine",
+   "considerations": "No suggestions made",
+   "row_text": "6 || Febuxostat–azathioprine/mercaptopurine || Accepted || No suggestions made || Febuxostat || Azathioprine and mercaptopurine"
+  },
+  {
+   "row": 4,
+   "paper_ddi_number": "8",
+   "candidate_pair_as_printed": "Fluoxetine–MAO inhibitors",
+   "status": "Accepted",
+   "object": "Selective serotonin reuptake inhibitors (SSRIs):\nFluoxetine\nParoxetine\nCitalopram\nEscitalopram\nSertraline\nFluvoxamine\nDuloxetine\nNefazodone\nDesvenlafaxine\nMilnacipran\nVenlafaxine",
+   "precipitant": "Monoamine oxidase (MAO) inhibitors:\nTranylcypromine\nPhenelzine\nIsocarboxazid\nProcarbazine\nSelegiline",
+   "considerations": "Expand object class to include other SSRIs instead of only fluoxetine\nExpand object class to include serotonergic agents",
+   "row_text": "8 || Fluoxetine–MAO inhibitors || Accepted || Expand object class to include other SSRIs instead of only fluoxetine; Expand object class to include serotonergic agents || Selective serotonin reuptake inhibitors (SSRIs):; Fluoxetine; Paroxetine; Citalopram; Escitalopram; Sertraline; Fluvoxamine; Duloxetine; Nefazodone; Desvenlafaxine; Milnacipran; Venlafaxine || Monoamine oxidase (MAO) inhibitors:; Tranylcypromine; Phenelzine; Isocarboxazid; Procarbazine; Selegiline"
+  },
+  {
+   "row": 5,
+   "paper_ddi_number": "11",
+   "candidate_pair_as_printed": "Irinotecan–ketoconazole",
+   "status": "Accepted",
+   "object": "Irinotecan",
+   "precipitant": "CYP3A4 inhibitors†\nProtease inhibitors:\nRitonavir\nNelfinavir\nAtazanavir\nIndinavir\nSaquinavir\nAmprenavir\nDarunavir\nLopinavir\nTipranavir\nFosamprenavir\nSaquinavir\nMacrolides:\nClarithromycin\nErythromycin\nTelithromycin\nAmiodarone\nVerapamil\nDiltiazem\nAzoles:\nKetoconazole\nItraconazole\nFluconazole\nVoriconazole\nNefazodone\nAprepitant\nCimetidine",
+   "considerations": "Modify precipitant class to include strong CYP3A4 inhibitors†",
+   "row_text": "11 || Irinotecan–ketoconazole || Accepted || Modify precipitant class to include strong CYP3A4 inhibitors† || Irinotecan || CYP3A4 inhibitors†; Protease inhibitors:; Ritonavir; Nelfinavir; Atazanavir; Indinavir; Saquinavir; Amprenavir; Darunavir; Lopinavir; Tipranavir; Fosamprenavir; Saquinavir; Macrolides:; Clarithromycin; Erythromycin; Telithromycin; Amiodarone; Verapamil; Diltiazem; Azoles:; Ketoconazole; Itraconazole; Fluconazole; Voriconazole; Nefazodone; Aprepitant; Cimetidine"
+  },
+  {
+   "row": 6,
+   "paper_ddi_number": "16",
+   "candidate_pair_as_printed": "Narcotic analgesics–MAO inhibitors",
+   "status": "Accepted",
+   "object": "Narcotic analgesics:\nMeperidine\nMethadone\nTapentadol\nFentanyl\nTramadol\nDextromethorphan",
+   "precipitant": "MAO inhibitors:\nTranylcypromine\nPhenelzine\nIsocarboxazid\nSelegiline\nProcarbazine",
+   "considerations": "Insufficient evidence to add fentanyl derivatives (sufentanyl, alfentanyl) to the object class.",
+   "row_text": "16 || Narcotic analgesics–MAO inhibitors || Accepted || Insufficient evidence to add fentanyl derivatives (sufentanyl, alfentanyl) to the object class. || Narcotic analgesics:; Meperidine; Methadone; Tapentadol; Fentanyl; Tramadol; Dextromethorphan || MAO inhibitors:; Tranylcypromine; Phenelzine; Isocarboxazid; Selegiline; Procarbazine"
+  },
+  {
+   "row": 7,
+   "paper_ddi_number": "20",
+   "candidate_pair_as_printed": "Tricyclic antidepressants (TCAs)–selegiline",
+   "status": "Accepted",
+   "object": "Tricyclic antidepressants (TCAs)",
+   "precipitant": "MAO inhibitors:\nTranylcypromine\nPhenelzine\nIsocarboxazid\nSelegiline\nProcarbazine",
+   "considerations": "No evidence of interaction when selegiline is administered transdermally; consider route specificity\nExpand precipitant class to MAO-inhibitors",
+   "row_text": "20 || Tricyclic antidepressants (TCAs)–selegiline || Accepted || No evidence of interaction when selegiline is administered transdermally; consider route specificity; Expand precipitant class to MAO-inhibitors || Tricyclic antidepressants (TCAs) || MAO inhibitors:; Tranylcypromine; Phenelzine; Isocarboxazid; Selegiline; Procarbazine"
+  },
+  {
+   "row": 8,
+   "paper_ddi_number": "21",
+   "candidate_pair_as_printed": "QT prolonging agents–QT prolonging agents",
+   "status": "Accepted",
+   "object": "QT prolonging agents‡",
+   "precipitant": "QT prolonging agents‡",
+   "considerations": "Include all high risk category drugs from http://www.torsades.org\n‡\nRemove drugs that are off-market or not available in the United States—astemizole, levomethadyl, mesoridazine, probucol, sparfloxacin, and terfenadine as they are off market. Cisapride may be available on an investigational, limited-access basis\nAdd nilotinib which has a black box warning regarding QT-prolongation and sudden death",
+   "row_text": "21 || QT prolonging agents–QT prolonging agents || Accepted || Include all high risk category drugs from http://www.torsades.org; ‡; Remove drugs that are off-market or not available in the United States—astemizole, levomethadyl, mesoridazine, probucol, sparfloxacin, and terfenadine as they are off market. Cisapride may be available on an investigational, limited-access basis; Add nilotinib which has a black box warning regarding QT-prolongation and sudden death || QT prolonging agents‡ || QT prolonging agents‡"
+  },
+  {
+   "row": 9,
+   "paper_ddi_number": "22",
+   "candidate_pair_as_printed": "Ramelteon–fluvoxamine",
+   "status": "Accepted",
+   "object": "Ramelteon",
+   "precipitant": "Specific CYP1A2 inhibitors:†\nFluvoxamine\nAmiodarone\nTiclopidine\nCiprofloxacin",
+   "considerations": "Limit precipitant class to strong CYP 1A2 inhibitors: fluvoxamine, amiodarone, ticlopidine, and ciprofloxacin\nNo literature available for other CYP1A2 inhibitors",
+   "row_text": "22 || Ramelteon–fluvoxamine || Accepted || Limit precipitant class to strong CYP 1A2 inhibitors: fluvoxamine, amiodarone, ticlopidine, and ciprofloxacin; No literature available for other CYP1A2 inhibitors || Ramelteon || Specific CYP1A2 inhibitors:†; Fluvoxamine; Amiodarone; Ticlopidine; Ciprofloxacin"
+  },
+  {
+   "row": 10,
+   "paper_ddi_number": "23",
+   "candidate_pair_as_printed": "Rifampin–ritonavir",
+   "status": "Accepted",
+   "object": "Strong CYP3A4 inducers:†\nBosentan\nRifapentine\nCarbamazepine\nRifabutin\nRifampin\nSt John's wort",
+   "precipitant": "Protease inhibitors:\nRitonavir\nAmprenavir\nAtazanavir\nDarunavir\nFosamprenavir\nIndinavir\nLopinavir\nNelfinavir\nSaquinavir\nTipranavir",
+   "considerations": "Expand the object class to include only strong CYP3A4 Inducers†\nFrom the above list remove CYP3A4 inducers like glucocorticoids, troglitazone, modafinil, all barbiturates, and pioglitazone since no literature supporting their interaction\nInclude rifapentine and bosentan\nExpand precipitant class to include all protease inhibitors\nRemove weak inducers like oxcarbazepine\nEfavirenz and nevirapine interact with only some protease inhibitors and are indicated for concurrent use in most combinations\nOne KB vendor suggested further limiting the object class to include only rifampin and St John's wort in the object class as other inducers can be safely given by just adjusting dosages",
+   "row_text": "23 || Rifampin–ritonavir || Accepted || Expand the object class to include only strong CYP3A4 Inducers†; From the above list remove CYP3A4 inducers like glucocorticoids, troglitazone, modafinil, all barbiturates, and pioglitazone since no literature supporting their interaction; Include rifapentine and bosentan; Expand precipitant class to include all protease inhibitors; Remove weak inducers like oxcarbazepine; Efavirenz and nevirapine interact with only some protease inhibitors and are indicated for concurrent use in most combinations; One KB vendor suggested further limiting the object class to include only rifampin and St John's wort in the object class as other inducers can be safely given by just adjusting dosages || Strong CYP3A4 inducers:†; Bosentan; Rifapentine; Carbamazepine; Rifabutin; Rifampin; St John's wort || Protease inhibitors:; Ritonavir; Amprenavir; Atazanavir; Darunavir; Fosamprenavir; Indinavir; Lopinavir; Nelfinavir; Saquinavir; Tipranavir"
+  },
+  {
+   "row": 11,
+   "paper_ddi_number": "25",
+   "candidate_pair_as_printed": "HMG Co-A reductase inhibitorsProtease inhibitors",
+   "status": "Accepted",
+   "object": "HMG Co-A reductase inhibitors\nSimvastatin\nLovastatin",
+   "precipitant": "CYP3A4 inhibitors†\nProtease inhibitors:\nIndinavir\nSaquinavir\nTipranavir\nRitonavir\nNelfinavir\nAtazanavir\nAmprenavir\nDarunavir\nLopinavir\nMacrolides:\nClarithromycin\nErythromycin\nTelithromycin\nAmiodarone\nVerapamil\nDiltiazem\nAzoles:\nKetoconazole\nItraconazole\nFluconazole\nVoreconazole\nNefazodone",
+   "considerations": "Expand precipitant class to include CYP3A4 inhibitors\nRemove cerivastatin due to off-market status from object class\nRemove atorvastatin from object class since magnitude of interaction is less than for other statins",
+   "row_text": "25 || HMG Co-A reductase inhibitorsProtease inhibitors || Accepted || Expand precipitant class to include CYP3A4 inhibitors; Remove cerivastatin due to off-market status from object class; Remove atorvastatin from object class since magnitude of interaction is less than for other statins || HMG Co-A reductase inhibitors; Simvastatin; Lovastatin || CYP3A4 inhibitors†; Protease inhibitors:; Indinavir; Saquinavir; Tipranavir; Ritonavir; Nelfinavir; Atazanavir; Amprenavir; Darunavir; Lopinavir; Macrolides:; Clarithromycin; Erythromycin; Telithromycin; Amiodarone; Verapamil; Diltiazem; Azoles:; Ketoconazole; Itraconazole; Fluconazole; Voreconazole; Nefazodone"
+  },
+  {
+   "row": 12,
+   "paper_ddi_number": "27",
+   "candidate_pair_as_printed": "Telithromycin–ergot alkaloids and derivatives",
+   "status": "Accepted",
+   "object": "CYP3A4 inhibitors†Protease inhibitors:\nIndinavir\nSaquinavir\nTipranavir\nRitonavir\nNelfinavir\nAtazanavir\nAmprenavir\nDarunavir\nLopinavir\nMacrolides:\nClarithromycin\nErythromycin\nTelithromycin\nAzoles:\nKetoconazole\nItraconazole\nVoreconazole",
+   "precipitant": "Ergot alkaloids and derivatives:\nErgotamine\nMethylergonovine\nDihydroergotamine\nErgonovine",
+   "considerations": "Modify object class to CYP3A4 inhibitors\nRemove from object class: amiodarone, verapamil, diltiazem, fluconazole, nefazodone, aprepitant, and cimetidine due to lack of evidence\nRemove ergoloid mesylates from precipitant class due to lack of vasoconstrictive properties",
+   "row_text": "27 || Telithromycin–ergot alkaloids and derivatives || Accepted || Modify object class to CYP3A4 inhibitors; Remove from object class: amiodarone, verapamil, diltiazem, fluconazole, nefazodone, aprepitant, and cimetidine due to lack of evidence; Remove ergoloid mesylates from precipitant class due to lack of vasoconstrictive properties || CYP3A4 inhibitors†Protease inhibitors:; Indinavir; Saquinavir; Tipranavir; Ritonavir; Nelfinavir; Atazanavir; Amprenavir; Darunavir; Lopinavir; Macrolides:; Clarithromycin; Erythromycin; Telithromycin; Azoles:; Ketoconazole; Itraconazole; Voreconazole || Ergot alkaloids and derivatives:; Ergotamine; Methylergonovine; Dihydroergotamine; Ergonovine"
+  },
+  {
+   "row": 13,
+   "paper_ddi_number": "28",
+   "candidate_pair_as_printed": "Tizanidine–ciprofloxacin",
+   "status": "Accepted",
+   "object": "Tizanidine",
+   "precipitant": "CYP 1A2 inhibitors:†\nCiprofloxacin\nFluvoxamine\nMexiletine\nPropafenone\nZileuton\nAmiodarone\nTiclopidine",
+   "considerations": "Modify precipitant class to include CYP 1A2 inhibitors",
+   "row_text": "28 || Tizanidine–ciprofloxacin || Accepted || Modify precipitant class to include CYP 1A2 inhibitors || Tizanidine || CYP 1A2 inhibitors:†; Ciprofloxacin; Fluvoxamine; Mexiletine; Propafenone; Zileuton; Amiodarone; Ticlopidine"
+  },
+  {
+   "row": 14,
+   "paper_ddi_number": "30",
+   "candidate_pair_as_printed": "Tranylcypromine–procarbazine",
+   "status": "Accepted",
+   "object": "Tranylcypromine",
+   "precipitant": "Procarbazine",
+   "considerations": "",
+   "row_text": "30 || Tranylcypromine–procarbazine || Accepted ||  || Tranylcypromine || Procarbazine"
+  },
+  {
+   "row": 15,
+   "paper_ddi_number": "31",
+   "candidate_pair_as_printed": "Triptans–MAO inhibitors",
+   "status": "Accepted",
+   "object": "Triptans:\nSumatriptan\nZolmitriptan\nRizatriptan",
+   "precipitant": "Monoamine oxidase (MAO) inhibitors:\nTranylcypromine\nPhenelzine\nIsocarboxazid\nMoclobamide\nMethylene blue",
+   "considerations": "Keep only three triptans (sumatriptan, zolmitriptan, and rizatriptan) for object class\nFor precipitant class include moclobemide and methylene blue",
+   "row_text": "31 || Triptans–MAO inhibitors || Accepted || Keep only three triptans (sumatriptan, zolmitriptan, and rizatriptan) for object class; For precipitant class include moclobemide and methylene blue || Triptans:; Sumatriptan; Zolmitriptan; Rizatriptan || Monoamine oxidase (MAO) inhibitors:; Tranylcypromine; Phenelzine; Isocarboxazid; Moclobamide; Methylene blue"
+  }
+ ]
+}
