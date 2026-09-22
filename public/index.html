@@ -3,7 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rx Label Search</title>
+<title>Drug Interaction Screen</title>
+<meta name="description" content="Search, tag, and check FDA prescription drug labels for drug-drug interaction risks. Drug Interaction Screen is free and open access.">
+<meta name="theme-color" content="#151515">
+<link rel="icon" href="/brand/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/brand/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/brand/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/brand/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/brand/icon-512.png">
+<meta property="og:title" content="Drug Interaction Screen">
+<meta property="og:description" content="Search, tag, and check FDA prescription drug labels for drug-drug interaction risks.">
+<meta property="og:image" content="https://rx-label-search-aidancolvins-projects.vercel.app/brand/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Drug Interaction Screen">
+<meta name="twitter:description" content="Search, tag, and check FDA prescription drug labels for drug-drug interaction risks.">
+<meta name="twitter:image" content="https://rx-label-search-aidancolvins-projects.vercel.app/brand/og-image.png">
 <style>
   body { font-family: -apple-system, system-ui, sans-serif; max-width: 900px; margin: 0 auto; padding: 16px; color: #1a1a1a; }
   h1 { font-size: 1.4rem; margin-bottom: 4px; }
@@ -31,10 +47,16 @@
   .unresolved { color: #a30; font-size: 0.85rem; }
   #search-results, #check-results { margin-top: 14px; }
   a { color: #135; }
+  .brand-lockup { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .brand-lockup img { width: 36px; height: 36px; border-radius: 9px; flex-shrink: 0; }
+  .brand-lockup h1 { margin: 0; }
 </style>
 </head>
 <body>
-<h1>Rx Label Search</h1>
+<div class="brand-lockup">
+  <img src="/brand/logo.svg" alt="Drug Interaction Screen logo" width="36" height="36">
+  <h1>Drug Interaction Screen</h1>
+</div>
 <div class="subtitle" id="build-date-line">FDA prescription drug label search, tagging, and interaction checker. Loading build date&hellip;</div>
 
 <section>

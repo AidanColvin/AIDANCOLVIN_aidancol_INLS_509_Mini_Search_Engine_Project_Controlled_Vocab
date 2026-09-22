@@ -16,7 +16,7 @@ If you want me to do yours too, just send it my way and I'll get it done. Thanks
 
 ## Tool
 
-This repo also holds `rx_label_search`, a Python package that turns the Part 1 collection and the Part II PDLA vocabulary above into a working search engine, tagger, and drug-drug interaction checker over FDA prescription drug labels. It is not limited to one drug class. See `DATA_SOURCES.md` for every data source it uses and `reports/FINAL_REPORT.md` for the full build record.
+This repo also holds **Drug Interaction Screen**, live at https://rx-label-search-aidancolvins-projects.vercel.app and built here as the Python package `rx_label_search`, which turns the Part 1 collection and the Part II PDLA vocabulary above into a working search engine, tagger, and drug-drug interaction checker over FDA prescription drug labels. It is not limited to one drug class. See `DATA_SOURCES.md` for every data source it uses and `reports/FINAL_REPORT.md` for the full build record.
 
 **What it does:**
 
