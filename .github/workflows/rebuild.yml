@@ -50,6 +50,13 @@ jobs:
         if: success()
         run: npm install --global vercel@latest
 
+      - name: Install uv
+        # Vercel's Python builder shells out to uv when `vercel build` runs
+        # locally (as opposed to on Vercel's own managed build machines),
+        # so a local prebuilt deploy needs it on PATH.
+        if: success()
+        run: pip install uv
+
       - name: Deploy to Vercel
         if: success()
         env:
