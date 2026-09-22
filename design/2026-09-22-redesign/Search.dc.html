@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Search labels</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,system-ui,"Helvetica Neue","Segoe UI",sans-serif;background:#F5F5F7;color:#1D1D1F;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+a{color:#1F6FA8;text-decoration:none}a:hover{color:#175A8A;text-decoration:underline}
+button,input{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 1280px; height: 1640px; background: #F5F5F7; color: #1D1D1F; display: flex; flex-direction: column; align-items: center; font-family: -apple-system, BlinkMacSystemFont, system-ui, 'Helvetica Neue', 'Segoe UI', sans-serif;">
+
+<header style="position: relative; width: 1280px; height: 52px; flex-shrink: 0; display: flex; justify-content: center; background: rgba(255, 255, 255, 0.72); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid #D2D2D7; box-sizing: border-box;">
+<a href="Start.dc.html" aria-label="Home" style="position: absolute; left: 12px; top: 4px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 10px;"><svg width="28" height="28" viewBox="0 0 76 76" aria-hidden="true"><rect width="76" height="76" rx="20" fill="#151515"></rect><g transform="translate(12,12) scale(0.8125)"><rect x="10" y="14" width="30" height="42" rx="5" fill="#C8791E" stroke="#FFFFFF" stroke-width="2"></rect><rect x="8" y="11" width="34" height="11" rx="4" fill="#F1EDE4" stroke="#FFFFFF" stroke-width="1.5"></rect><g transform="translate(2,-3) rotate(-28 34 40)"><path d="M26.5 35H37V48H26.5A6.5 6.5 0 0 1 26.5 35Z" fill="#4B9CD3"></path><path d="M37 35H47.5A6.5 6.5 0 0 1 47.5 48H37Z" fill="#FFFFFF"></path><rect x="20" y="35" width="34" height="13" rx="6.5" fill="none" stroke="#FFFFFF" stroke-width="1.5"></rect></g></g></svg></a>
+<div style="width: 1040px; display: flex; align-items: center;">
+<div style="flex: 1 1 0; display: flex; align-items: center; gap: 10px;">
+<span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em;">Drug Interaction Screen</span>
+</div>
+<nav aria-label="Views" style="display: flex; gap: 2px; padding: 2px; background: #E8E8ED; border-radius: 9px;">
+<a href="Start.dc.html" style="display: flex; align-items: center; height: 32px; padding: 0 18px; border-radius: 7px; font-size: 14px; font-weight: 500; color: #1D1D1F; text-decoration: none;">Interactions</a>
+<a href="Search.dc.html" aria-current="page" style="display: flex; align-items: center; height: 32px; padding: 0 18px; border-radius: 7px; background: #FFFFFF; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); font-size: 14px; font-weight: 600; color: #1D1D1F; text-decoration: none;">Label search</a>
+</nav>
+<div style="flex: 1 1 0;"></div>
+</div>
+</header>
+
+<main style="width: 1040px; padding-top: 56px; display: flex; flex-direction: column;">
+
+<h1 style="margin: 0; font-size: 34px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em;">Search labels</h1>
+
+<div role="search" style="margin-top: 24px; position: relative; display: flex; align-items: center;">
+<label for="q" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;">Search label text</label>
+<span style="position: absolute; left: 18px; display: flex; color: #6E6E73;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"></circle><path d="M12.6 12.6L17 17"></path></svg></span>
+<input id="q" type="search" autofocus value="muscle spasm" placeholder="Search label text" style="width: 100%; height: 56px; box-sizing: border-box; padding: 0 56px 0 48px; font-size: 19px; border: 1.5px solid #1F6FA8; border-radius: 14px; background: #FFFFFF; color: #1D1D1F; box-shadow: 0 0 0 4px rgba(31, 111, 168, 0.16); outline: none;">
+<button type="button" aria-label="Clear search" style="position: absolute; right: 6px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: none; background: transparent; color: #6E6E73; cursor: pointer;"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="10" cy="10" r="7.5"></circle><path d="M7.4 7.4l5.2 5.2M12.6 7.4l-5.2 5.2"></path></svg></button>
+</div>
+
+<div style="margin-top: 32px; display: flex; align-items: flex-start; gap: 40px;">
+
+<aside aria-label="Filters" style="width: 280px; flex-shrink: 0; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; align-items: center; justify-content: space-between;">
+<h2 style="margin: 0; font-size: 20px; line-height: 1.3; font-weight: 600;">Filters</h2>
+<button type="button" style="height: 32px; padding: 0; border: none; background: transparent; color: #1F6FA8; font-size: 15px; cursor: pointer;">Clear</button>
+</div>
+<div role="group" aria-label="Match mode" style="display: flex; gap: 2px; padding: 2px; background: #E8E8ED; border-radius: 9px;">
+<button type="button" aria-pressed="true" style="flex: 1 1 0; height: 32px; border: none; border-radius: 7px; background: #FFFFFF; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); font-size: 14px; font-weight: 600; color: #1D1D1F; cursor: pointer;">Match all</button>
+<button type="button" aria-pressed="false" style="flex: 1 1 0; height: 32px; border: none; border-radius: 7px; background: transparent; font-size: 14px; font-weight: 500; color: #1D1D1F; cursor: pointer;">Match any</button>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<h3 style="margin: 0 0 0 16px; font-size: 13px; font-weight: 600; color: #6E6E73;">Safety signal</h3>
+<div style="background: #FFFFFF; border-radius: 12px; overflow: hidden;">
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 16px; border: none; border-bottom: 1px solid #E5E5EA; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Boxed Warning<span style="font-size: 13px; color: #6E6E73;">T01</span></button>
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 16px; border: none; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">High-Frequency Adverse Effect<span style="font-size: 13px; color: #6E6E73;">T04</span></button>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<h3 style="margin: 0 0 0 16px; font-size: 13px; font-weight: 600; color: #6E6E73;">Route</h3>
+<div style="background: #FFFFFF; border-radius: 12px; overflow: hidden;">
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 16px; border: none; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Oral Route<span style="font-size: 13px; color: #6E6E73;">T02</span></button>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<h3 style="margin: 0 0 0 16px; font-size: 13px; font-weight: 600; color: #6E6E73;">Patient group</h3>
+<div style="background: #FFFFFF; border-radius: 12px; overflow: hidden;">
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 16px; border: none; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Pediatric Indication<span style="font-size: 13px; color: #6E6E73;">T03</span></button>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<h3 style="margin: 0 0 0 16px; font-size: 13px; font-weight: 600; color: #6E6E73;">Patient information</h3>
+<div style="background: #FFFFFF; border-radius: 12px; overflow: hidden;">
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 16px; border: none; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Medication Guide<span style="font-size: 13px; color: #6E6E73;">T05</span></button>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<h3 style="margin: 0 0 0 16px; font-size: 13px; font-weight: 600; color: #6E6E73;">Dosing</h3>
+<div style="background: #FFFFFF; border-radius: 12px; overflow: hidden;">
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 16px; border: none; border-bottom: 1px solid #E5E5EA; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Organ Impairment Dose Adjustment<span style="font-size: 13px; color: #6E6E73;">T11</span></button>
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 36px; border: none; border-bottom: 1px solid #E5E5EA; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Renal Dose Adjustment<span style="font-size: 13px; color: #6E6E73;">T06</span></button>
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 36px; border: none; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Hepatic Dose Adjustment<span style="font-size: 13px; color: #6E6E73;">T12</span></button>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<h3 style="margin: 0 0 0 16px; font-size: 13px; font-weight: 600; color: #6E6E73;">DEA control</h3>
+<div style="background: #FFFFFF; border-radius: 12px; overflow: hidden;">
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 16px; border: none; border-bottom: 1px solid #E5E5EA; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Controlled Substance<span style="font-size: 13px; color: #6E6E73;">T07</span></button>
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 36px; border: none; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Schedule II Controlled Substance<span style="font-size: 13px; color: #6E6E73;">T10</span></button>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<h3 style="margin: 0 0 0 16px; font-size: 13px; font-weight: 600; color: #6E6E73;">Product form</h3>
+<div style="background: #FFFFFF; border-radius: 12px; overflow: hidden;">
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 16px; border: none; border-bottom: 1px solid #E5E5EA; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Single Active Ingredient<span style="font-size: 13px; color: #6E6E73;">T08</span></button>
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 16px; border: none; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Brand Name Product<span style="font-size: 13px; color: #6E6E73;">T09</span></button>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<h3 style="margin: 0 0 0 16px; font-size: 13px; font-weight: 600; color: #6E6E73;">Interaction risk</h3>
+<div style="background: #FFFFFF; border-radius: 12px; overflow: hidden;">
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 16px; border: none; border-bottom: 1px solid #E5E5EA; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Interaction Risk<span style="font-size: 13px; color: #6E6E73;">T13</span></button>
+<button type="button" aria-pressed="true" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 36px; border: none; border-bottom: 1px solid #E5E5EA; background: #EAF2F9; text-align: left; font-size: 15px; font-weight: 600; color: #1F6FA8; cursor: pointer;">Serotonin Syndrome Risk<span style="font-size: 13px; font-weight: 500; color: #1F6FA8;">T14</span><span style="margin-left: auto; display: flex;"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.8 3.8L15.5 6"></path></svg></span></button>
+<button type="button" aria-pressed="true" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 36px; border: none; border-bottom: 1px solid #E5E5EA; background: #EAF2F9; text-align: left; font-size: 15px; font-weight: 600; color: #1F6FA8; cursor: pointer;">CNS Depression Risk<span style="font-size: 13px; font-weight: 500; color: #1F6FA8;">T15</span><span style="margin-left: auto; display: flex;"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5l3.8 3.8L15.5 6"></path></svg></span></button>
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 36px; border: none; border-bottom: 1px solid #E5E5EA; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">QT Prolongation Risk<span style="font-size: 13px; color: #6E6E73;">T16</span></button>
+<button type="button" aria-pressed="false" style="width: 100%; min-height: 44px; display: flex; align-items: center; gap: 6px; padding: 0 14px 0 36px; border: none; background: transparent; text-align: left; font-size: 15px; color: #1D1D1F; cursor: pointer;">Contraindicated Combination<span style="font-size: 13px; color: #6E6E73;">T17</span></button>
+</div>
+</div>
+</aside>
+
+<section aria-labelledby="result-count" aria-live="polite" style="flex-grow: 1; min-width: 0; display: flex; flex-direction: column; gap: 12px;">
+
+<h2 id="result-count" style="margin: 0; font-size: 22px; line-height: 1.3; font-weight: 600;">3 results</h2>
+
+<div style="background: #FFFFFF; border-radius: 12px; overflow: hidden;">
+
+<article style="padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; border-bottom: 1px solid #E5E5EA;">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px;">
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 600;">cyclobenzaprine hydrochloride</h3>
+<a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d536e88-62be-45bd-bd09-0efc53fe12b9" target="_blank" rel="noopener noreferrer" aria-label="Open the cyclobenzaprine label on DailyMed (new tab)" style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 4px; font-size: 13px;">DailyMed<svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 2.5h5v5M9.5 2.5L3 9"></path></svg></a>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55;">…ets, USP are indicated as an adjunct to rest and physical therapy for relief of <strong style="font-weight: 700;">muscle</strong> <strong style="font-weight: 700;">spasm</strong> associated with acute, painful musculoskeletal conditions. Improvem…</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px;">
+<span style="font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: #EAF2F9; color: #1F6FA8;">Serotonin Syndrome Risk</span>
+<span style="font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: #EAF2F9; color: #1F6FA8;">CNS Depression Risk</span>
+<button type="button" aria-expanded="false" style="height: 28px; padding: 0 6px; border: none; background: transparent; color: #6E6E73; font-size: 13px; cursor: pointer;">+6 more</button>
+</div>
+</article>
+
+<article style="padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; border-bottom: 1px solid #E5E5EA;">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px;">
+<div style="display: flex; align-items: baseline; gap: 10px; min-width: 0;">
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 600;">OxyContin</h3>
+<span style="font-size: 15px; color: #6E6E73;">oxycodone hydrochloride</span>
+</div>
+<a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bfdfe235-d717-4855-a3c8-a13d26dadede" target="_blank" rel="noopener noreferrer" aria-label="Open the OxyContin label on DailyMed (new tab)" style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 4px; font-size: 13px;">DailyMed<svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 2.5h5v5M9.5 2.5L3 9"></path></svg></a>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55;">…ohol (e.g., non-benzodiazepine sedatives/hypnotics, anxiolytics, tranquilizers, <strong style="font-weight: 700;">muscle</strong> relaxants, general anesthetics, antipsychotics, gabapentinoids [gabapenti…</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px;">
+<span style="font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: #EAF2F9; color: #1F6FA8;">Serotonin Syndrome Risk</span>
+<span style="font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: #EAF2F9; color: #1F6FA8;">CNS Depression Risk</span>
+<button type="button" aria-expanded="false" style="height: 28px; padding: 0 6px; border: none; background: transparent; color: #6E6E73; font-size: 13px; cursor: pointer;">+12 more</button>
+</div>
+</article>
+
+<article style="padding: 18px 20px; display: flex; flex-direction: column; gap: 8px;">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px;">
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 600;">trazodone hydrochloride</h3>
+<a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9" target="_blank" rel="noopener noreferrer" aria-label="Open the trazodone label on DailyMed (new tab)" style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 4px; font-size: 13px;">DailyMed<svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 2.5h5v5M9.5 2.5L3 9"></path></svg></a>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55;">…reased appetite, increased libido, increased urinary frequency, missed periods, <strong style="font-weight: 700;">muscle</strong> twitches, numbness, paresthesia, retrograde ejaculation, shortness of bre…</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px;">
+<span style="font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: #EAF2F9; color: #1F6FA8;">Serotonin Syndrome Risk</span>
+<span style="font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: #EAF2F9; color: #1F6FA8;">CNS Depression Risk</span>
+<button type="button" aria-expanded="false" style="height: 28px; padding: 0 6px; border: none; background: transparent; color: #6E6E73; font-size: 13px; cursor: pointer;">+7 more</button>
+</div>
+</article>
+
+</div>
+</section>
+</div>
+
+<footer style="margin-top: 56px; padding: 20px 0 40px; border-top: 1px solid #D2D2D7; display: flex; justify-content: space-between; font-size: 13px; color: #6E6E73;">
+<span>FDA label data as of Sep 21, 2026</span>
+<a href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab" target="_blank" rel="noopener noreferrer">Open source on GitHub</a>
+</footer>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1640}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

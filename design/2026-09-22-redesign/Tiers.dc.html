@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Alert treatments by tier</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,system-ui,"Helvetica Neue","Segoe UI",sans-serif;background:#F5F5F7;color:#1D1D1F;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+a{color:#1F6FA8;text-decoration:none}a:hover{color:#175A8A;text-decoration:underline}
+button,input{font-family:inherit}
+</style>
+</helmet>
+<div style="width: 800px; height: 1320px; box-sizing: border-box; padding: 40px; background: #F5F5F7; color: #1D1D1F; display: flex; flex-direction: column; gap: 16px; font-family: -apple-system, BlinkMacSystemFont, system-ui, 'Helvetica Neue', 'Segoe UI', sans-serif;">
+
+<article style="background: #FFFFFF; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #B42318;"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10" cy="10" r="7.5"></circle><path d="M4.7 15.3L15.3 4.7"></path></svg>Contraindicated (heuristic)</div>
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 600;">[Drug B] matches a contraindication named in [Drug A]'s label</h3>
+<p style="margin: 0; font-size: 15px; color: #6E6E73;">[Drug A], [Drug B]</p>
+<blockquote style="margin: 4px 0 0; padding: 12px 14px; background: #F5F5F7; border-radius: 10px; font-size: 15px; line-height: 1.5;">[The sentence from Drug A's Contraindications section that names Drug B or its class]</blockquote>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 13px; color: #6E6E73;">
+<span>[Drug A], Contraindications section</span>
+<a href="#" style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px;">DailyMed<svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 2.5h5v5M9.5 2.5L3 9"></path></svg></a>
+</div>
+</article>
+
+<article style="background: #FFFFFF; border: 2px solid #1D1D1F; border-radius: 4px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #1D1D1F;"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="12" height="12"></rect></svg>Boxed warning (heuristic)</div>
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 600;">[Risk name] shared by [n] drugs</h3>
+<p style="margin: 0; font-size: 15px; color: #6E6E73;">[Drug names]</p>
+<blockquote style="margin: 4px 0 0; padding: 12px 14px; background: #F5F5F7; border-radius: 10px; font-size: 15px; line-height: 1.5;">[Sentence from the Boxed Warning section]</blockquote>
+<div style="font-size: 13px; color: #6E6E73;">[Drug], Boxed Warning section</div>
+</article>
+
+<article style="background: #FFFFFF; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #9A5A0F;"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M10 2.8l8 14H2l8-14z"></path><path d="M10 8.2v4"></path><circle cx="10" cy="14.6" r="0.6" fill="currentColor"></circle></svg>Warning (heuristic)</div>
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 600;">[Risk name] shared by [n] drugs</h3>
+<p style="margin: 0; font-size: 15px; color: #6E6E73;">[Drug names]</p>
+<blockquote style="margin: 4px 0 0; padding: 12px 14px; background: #F5F5F7; border-radius: 10px; font-size: 15px; line-height: 1.5;">[Sentence from the Warnings and Precautions section]</blockquote>
+<div style="font-size: 13px; color: #6E6E73;">[Drug], Warnings and Precautions section</div>
+</article>
+
+<article style="background: #FFFFFF; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #3A3A3C;"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7.5" cy="10" r="5"></circle><circle cx="12.5" cy="10" r="5"></circle></svg>Interaction note (heuristic)</div>
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 600;">[Risk name] shared by [n] drugs</h3>
+<p style="margin: 0; font-size: 15px; color: #6E6E73;">[Drug names]</p>
+<blockquote style="margin: 4px 0 0; padding: 12px 14px; background: #F5F5F7; border-radius: 10px; font-size: 15px; line-height: 1.5;">[Sentence from the Drug Interactions section]</blockquote>
+<div style="font-size: 13px; color: #6E6E73;">[Drug], Drug Interactions section</div>
+</article>
+
+<article style="background: #FFFFFF; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;">
+<div style="display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #3A3A3C;"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="10" height="10" rx="2"></rect><rect x="7.5" y="7.5" width="10" height="10" rx="2"></rect></svg>Duplicate therapy</div>
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 600;">Venlafaxine Hydrochloride and DESVENLAFAXINE are an active-metabolite pair</h3>
+<p style="margin: 0; font-size: 15px; color: #6E6E73;">Venlafaxine Hydrochloride, DESVENLAFAXINE</p>
+<blockquote style="margin: 4px 0 0; padding: 12px 14px; background: #F5F5F7; border-radius: 10px; font-size: 15px; line-height: 1.5;">Desvenlafaxine (O-desmethylvenlafaxine) is the major active metabolite of the antidepressant venlafaxine, a medication used to treat major depressive disorder.</blockquote>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 13px; color: #6E6E73;">
+<span>DESVENLAFAXINE, Description section</span>
+<a href="https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff837eb1-24c3-4c63-9b4b-c6b5935a9b47" target="_blank" rel="noopener noreferrer" aria-label="Open the desvenlafaxine label on DailyMed (new tab)" style="display: inline-flex; align-items: center; gap: 4px; font-size: 13px;">DailyMed<svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 2.5h5v5M9.5 2.5L3 9"></path></svg></a>
+</div>
+</article>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":800,"height":1320}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
