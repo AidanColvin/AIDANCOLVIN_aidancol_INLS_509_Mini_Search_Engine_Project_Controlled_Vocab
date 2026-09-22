@@ -1,0 +1,11 @@
+{
+ "fetched_on": "2026-09-21",
+ "source_url": "https://rxnav.nlm.nih.gov/REST/rxcui.json?name=DEXTROAMPHETAMINE+SACCHARATE&search=2",
+ "response": {
+  "idGroup": {
+   "rxnormId": [
+    "221088"
+   ]
+  }
+ }
+}

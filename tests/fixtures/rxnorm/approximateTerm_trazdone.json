@@ -1,0 +1,57 @@
+{
+ "fetched_on": "2026-09-21",
+ "source_url": "https://rxnav.nlm.nih.gov/REST/approximateTerm.json?term=trazdone&maxEntries=5",
+ "response": {
+  "approximateGroup": {
+   "inputTerm": null,
+   "candidate": [
+    {
+     "rxcui": "10737",
+     "rxaui": "10325647",
+     "score": "8.741609573364258",
+     "rank": "1",
+     "source": "GS"
+    },
+    {
+     "rxcui": "10737",
+     "rxaui": "12252814",
+     "score": "8.741609573364258",
+     "rank": "1",
+     "name": "trazodone",
+     "source": "RXNORM"
+    },
+    {
+     "rxcui": "10737",
+     "rxaui": "2074948",
+     "score": "8.741609573364258",
+     "rank": "1",
+     "name": "TRAZODONE",
+     "source": "VANDF"
+    },
+    {
+     "rxcui": "10737",
+     "rxaui": "3619902",
+     "score": "8.741609573364258",
+     "rank": "1",
+     "source": "NDDF"
+    },
+    {
+     "rxcui": "10737",
+     "rxaui": "5482709",
+     "score": "8.741609573364258",
+     "rank": "1",
+     "name": "trazodone",
+     "source": "ATC"
+    },
+    {
+     "rxcui": "10737",
+     "rxaui": "8357425",
+     "score": "8.741609573364258",
+     "rank": "1",
+     "name": "Trazodone",
+     "source": "DRUGBANK"
+    }
+   ]
+  }
+ }
+}
