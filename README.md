@@ -77,9 +77,26 @@ PYTHONPATH=src python -m rx_label_search evaluate-search --queries queries.tsv -
 
 `tests/test_style.py` and `tests/test_no_attribution.py` enforce the coding and attribution rules on every file in `src/`, `tests/`, and `api/`.
 
+### Building and testing the front end
+
+```bash
+cd web
+npm ci
+npx tsc          # type-checks web/src/ and web/tests/ against tsconfig.json
+npm test         # type-checks, then runs the compiled tests with node:test
+npm run build    # compiles web/src/ to public/js/, the deployed bundle
+```
+
+`web/tests/style.test.ts` enforces the Section 8.2 coding rules (a three-line
+Takes/Does/Gives comment on every top-level function, explicit parameter and
+return types, no `any`, a typed `catch`, no shadowed parameter names) by
+tokenizing every file in `web/src/` and `web/tests/` with TypeScript's own
+compiler API — see `reports/redesign_phase4_toolchain.md` for why that
+needed the compiler's scanner rather than the classic parser API.
+
 ### Serving it as a website
 
-`api/search.py` and `api/check.py` are stateless Vercel Python functions (no framework, file-based routing) that call the same package the CLI does. `public/index.html` is the thin static front end: a search box with PDLA filters, a medication-list box, and the Section 3.5 output. Deploys happen only through `.github/workflows/rebuild.yml`, never by hand; see `reports/phase7_serve.md` for the Vercel project setup and the function-size decision.
+`api/search.py` and `api/check.py` are stateless Vercel Python functions (no framework, file-based routing) that call the same package the CLI does. `public/index.html`, `public/styles.css`, and the compiled `public/js/` (built from `web/src/`, gitignored) are the front end: an auto-focused medication field with inline spelling correction and candidate choice, alert cards sorted by heuristic tier, and a label-search view with grouped vocabulary filters. Deploys happen only through `.github/workflows/rebuild.yml`, never by hand; see `reports/phase7_serve.md` for the original Vercel project setup and `reports/redesign_phase4_toolchain.md` for the CI step that builds the front end before each deploy.
 
 ### Design choices worth knowing
 
@@ -93,7 +110,9 @@ PYTHONPATH=src python -m rx_label_search evaluate-search --queries queries.tsv -
 | :--- | :--- |
 | `src/rx_label_search/` | the package: `collect/`, `text/`, `normalize/`, `vocabulary/`, `search/`, `interactions/`, `evaluate/`, `serve/`, `storage/`, plus `records.py` and `cli.py` |
 | `api/search.py`, `api/check.py` | Vercel serverless entry points |
-| `public/index.html` | the static front end |
+| `public/index.html`, `public/styles.css`, `public/js/` (gitignored, built) | the redesigned front end |
+| `web/` | the front end's TypeScript source, tests, and toolchain (`npm run build` produces `public/js/`) |
+| `design/2026-09-22-redesign/` | the approved design boards and reference images the front-end redesign was built from |
 | `data/reference/` | committed, cited reference files (FDA enzyme table, ONC pair list, active-metabolite pairs) |
 | `data/gold/gold_sample_PLACEHOLDER.json` | the demonstration gold file |
 | `tests/fixtures/` | committed real openFDA label and RxNorm fixtures, with fetch dates, documented in `tests/fixtures/FIXTURES.md` |
