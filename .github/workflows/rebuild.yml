@@ -46,6 +46,20 @@ jobs:
         id: tests
         run: python -m pytest -q
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install the web front end's dependencies
+        run: cd web && npm ci
+
+      - name: Type-check the web front end and run its tests
+        run: cd web && npm test
+
+      - name: Build the web front end into public/js
+        run: cd web && npm run build
+
       - name: Install the Vercel CLI
         if: success()
         run: npm install --global vercel@latest

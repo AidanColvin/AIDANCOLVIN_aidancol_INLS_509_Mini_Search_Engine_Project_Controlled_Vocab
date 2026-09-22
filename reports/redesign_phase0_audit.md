@@ -27,12 +27,20 @@ a marker, a collection error, or a `pyproject.toml` `addopts` filter
 (there is none beyond `-q`). `git log --diff-filter=D -- 'tests/test_*.py'`
 shows no test file has ever been deleted in this repo's history.
 **"405" does not correspond to anything in this repo's actual test
-suite, past or present.** It traces back to BUILD_PROMPT.md Section
-2's own unverified "pytest, 405+ tests" claim — the same stale number
-already flagged above — which the run's own kickoff message then
-repeated back as the reported finishing count. There is nothing to fix
-for "should not be skipped" because nothing is skipped: 0 skips, 0
-deselects, on a clean, fully green run.
+suite, past or present.** Found the precise source: the pre-existing,
+read-only `reports/phase7_serve.md` (from the prior session that built
+the backend, commit `779d376`) itself states "Tests: 405 passed, 0
+failed, 0 skipped." Checked that claim against the actual commit it
+was written at by extracting `tests/` from `779d376` with `git archive`
+and counting: the real number then was **269**, not 405. So "405" was
+already wrong when that report was written — this is not a regression
+from anything done in this run, and not merely BUILD_PROMPT.md's own
+stale "405+" estimate (though that also independently repeats a wrong
+number). It is a factual error in a prior session's own final report,
+which this run cannot edit (it predates this run and is on the
+read-only list) but can and does flag here. There is nothing to fix
+for "should not be skipped" because nothing is skipped on the current
+branch: 0 skips, 0 deselects, on a clean, fully green run.
 - `data/build/` exists locally (gitignored) from a prior full build — used to sanity-check parser fixes against the real production-scale name dictionary (7,707 keys) before committing. CI rebuilds this itself before running pytest, per `rebuild.yml`.
 
 ## Section 2.1 API contract — verified against source
