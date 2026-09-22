@@ -17,6 +17,7 @@ from rx_label_search.collect.verify import collection_problems
 from rx_label_search.normalize.med_line_parser import parse_med_list
 from rx_label_search.normalize.run import build_base_ingredient_map, default_fetcher, resolve_name
 from rx_label_search.vocabulary.run import run_tagging
+from rx_label_search.evaluate.run import add_gold_label, run_tag_evaluation, write_placeholder_gold
 from rx_label_search.storage.read_json import read_json
 from rx_label_search.storage.read_jsonl import iter_jsonl
 
@@ -70,6 +71,20 @@ def build_parser() -> argparse.ArgumentParser:
     tag = commands.add_parser("tag", help="tag every collection label with the PDLA terms")
     tag.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
     tag.add_argument("--workers", type=int, default=default_workers())
+    gold_template = commands.add_parser("gold-template", help="write the placeholder gold-set template")
+    gold_template.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
+    gold_template.add_argument("--sample-size", type=int, default=20)
+    gold_template.add_argument("--output", type=Path, default=Path("data/gold/gold_sample_PLACEHOLDER.json"))
+    gold_label = commands.add_parser("gold-label", help="record one hand label in the gold file")
+    gold_label.add_argument("--gold-file", type=Path, required=True)
+    gold_label.add_argument("--set-id", required=True)
+    gold_label.add_argument("--term", required=True, choices=sorted(f"T{n:02d}" for n in range(1, 18)))
+    gold_label.add_argument("--value", required=True, choices=("true", "false"))
+    gold_label.add_argument("--rationale", required=True)
+    evaluate = commands.add_parser("evaluate-tags", help="score the tagger against the gold file")
+    evaluate.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
+    evaluate.add_argument("--gold-file", type=Path, default=Path("data/gold/gold_sample_PLACEHOLDER.json"))
+    evaluate.add_argument("--report", type=Path, default=Path("reports/tag_evaluation.md"))
     return parser
 
 
@@ -153,6 +168,35 @@ def run_tag(args: argparse.Namespace) -> str:
     return f"tagged {summary['total']} labels ({summary['reused']} reused, {summary['newly_tagged']} new)"
 
 
+def run_gold_template(args: argparse.Namespace) -> str:
+    """
+    Takes parsed gold-template arguments.
+    Writes the placeholder gold-set template.
+    Gives a one-line summary of the path written.
+    """
+    path = write_placeholder_gold(args.build_dir, args.sample_size, args.output)
+    return f"wrote placeholder gold template to {path}"
+
+
+def run_gold_label(args: argparse.Namespace) -> str:
+    """
+    Takes parsed gold-label arguments.
+    Records one hand label in the gold file.
+    Gives a one-line summary of the cell written.
+    """
+    add_gold_label(args.gold_file, args.set_id, args.term, args.value == "true", args.rationale)
+    return f"recorded {args.term}={args.value} for {args.set_id} in {args.gold_file}"
+
+
+def run_evaluate_tags(args: argparse.Namespace) -> str:
+    """
+    Takes parsed evaluate-tags arguments.
+    Runs the tag evaluation report job.
+    Gives the report text.
+    """
+    return run_tag_evaluation(args.build_dir, args.gold_file, args.report)
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     """
     Takes an optional argument vector, defaulting to sys.argv.
@@ -168,6 +212,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         "parse-meds": run_parse_meds,
         "resolve": run_resolve,
         "tag": run_tag,
+        "gold-template": run_gold_template,
+        "gold-label": run_gold_label,
+        "evaluate-tags": run_evaluate_tags,
     }
     print(handlers[args.command](args))
     return 0

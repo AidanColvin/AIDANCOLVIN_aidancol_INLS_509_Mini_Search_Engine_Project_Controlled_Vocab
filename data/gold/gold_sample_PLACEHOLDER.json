@@ -1,0 +1,565 @@
+{
+  "schema_version": 1,
+  "labels": {
+    "7f16f2d4-8df6-4bd7-ac10-56994fa257b0": {
+      "T01": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T02": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T03": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T04": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T05": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T06": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T07": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T08": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T09": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T10": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T11": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T12": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T13": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T14": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T15": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T16": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T17": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      }
+    },
+    "b8e08798-d8bb-4616-996b-a2c07a5d730a": {
+      "T01": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T02": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T03": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T04": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T05": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T06": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T07": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T08": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T09": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T10": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T11": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T12": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T13": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T14": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T15": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T16": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T17": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      }
+    },
+    "27dd5e6b-72cd-458d-a015-cf4dab5800da": {
+      "T01": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T02": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T03": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T04": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T05": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T06": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T07": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T08": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T09": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T10": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T11": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T12": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T13": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T14": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T15": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T16": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T17": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      }
+    },
+    "eb972ea8-7502-422e-84bb-66cb8e93ca06": {
+      "T01": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T02": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T03": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T04": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T05": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T06": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T07": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T08": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T09": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T10": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T11": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T12": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T13": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T14": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T15": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T16": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T17": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      }
+    },
+    "540edd43-165d-4257-b989-3bccc8f54afb": {
+      "T01": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T02": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T03": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T04": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T05": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T06": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T07": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T08": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T09": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T10": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T11": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T12": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T13": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T14": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T15": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T16": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T17": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      }
+    },
+    "55d6aee1-01ca-4791-8404-386664b4ab07": {
+      "T01": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T02": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T03": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T04": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T05": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T06": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T07": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T08": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T09": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T10": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T11": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T12": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T13": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T14": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T15": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T16": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T17": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      }
+    },
+    "557351f1-47b7-216d-e063-6394a90afb51": {
+      "T01": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T02": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T03": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T04": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T05": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T06": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T07": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T08": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T09": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T10": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T11": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T12": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T13": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T14": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T15": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T16": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T17": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      }
+    },
+    "bdb3f89a-01e7-411d-b071-48e87def0873": {
+      "T01": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T02": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T03": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T04": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T05": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T06": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T07": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T08": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T09": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T10": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T11": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T12": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T13": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T14": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T15": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T16": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      },
+      "T17": {
+        "gold": false,
+        "rationale": "PLACEHOLDER: replace with your own rationale before this label counts as real."
+      }
+    }
+  }
+}
