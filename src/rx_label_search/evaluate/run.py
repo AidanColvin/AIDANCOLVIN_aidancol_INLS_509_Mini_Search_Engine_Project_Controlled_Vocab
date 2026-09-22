@@ -6,8 +6,10 @@ from pathlib import Path
 
 from rx_label_search.evaluate.gold import PLACEHOLDER_RATIONALE, build_gold_template, gold_cells, set_gold_label, validate_gold_document
 from rx_label_search.evaluate.report import format_tag_evaluation_report
+from rx_label_search.evaluate.ir_metrics import mean_average_precision, normalized_discounted_cumulative_gain, precision_at_k, recall_at_k
 from rx_label_search.evaluate.tag_metrics import all_term_metrics
 from rx_label_search.records import TermEvidence
+from rx_label_search.search.run import load_indexed_documents, search
 from rx_label_search.storage.read_json import read_json
 from rx_label_search.storage.read_jsonl import iter_jsonl
 from rx_label_search.storage.write_json import write_json
@@ -71,3 +73,67 @@ def run_tag_evaluation(build_dir: Path, gold_path: Path, report_path: Path) -> s
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(report, encoding="utf-8")
     return report
+
+
+def read_queries_file(path: Path) -> dict[str, str]:
+    """
+    Takes a path to a queries file, one "query_id\\tquery_text" line per query.
+    Reads every non-blank line into a mapping.
+    Gives the mapping from query id to query text, empty for an empty file.
+    """
+    queries: dict[str, str] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        query_id, _, query_text = line.partition("\t")
+        queries[query_id] = query_text
+    return queries
+
+
+def read_judgments_file(path: Path) -> dict[str, dict[str, float]]:
+    """
+    Takes a path to a relevance-judgments file, one "query_id\\tset_id\\trelevance" line per judgment.
+    Reads every non-blank line into a mapping of query id to a mapping of set id to relevance grade.
+    Gives the nested mapping, empty for an empty file.
+    """
+    judgments: dict[str, dict[str, float]] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        query_id, set_id, relevance = line.split("\t")
+        judgments.setdefault(query_id, {})[set_id] = float(relevance)
+    return judgments
+
+
+def run_ir_evaluation(build_dir: Path, queries_path: Path, judgments_path: Path, k: int) -> dict[str, float]:
+    """
+    Takes the build directory, the queries file path, the judgments file path, and the cutoff k.
+    Runs every query against the index and averages precision@k, recall@k, and nDCG@k, plus MAP over all ranks.
+    Gives a dictionary of the four averaged scores, all 0.0 when the queries file is empty.
+    """
+    documents = load_indexed_documents(build_dir)
+    queries = read_queries_file(queries_path)
+    judgments = read_judgments_file(judgments_path)
+    if not queries:
+        return {"precision_at_k": 0.0, "recall_at_k": 0.0, "map": 0.0, "ndcg_at_k": 0.0}
+    all_ranked: list[list[str]] = []
+    all_relevant: list[frozenset[str]] = []
+    precisions: list[float] = []
+    recalls: list[float] = []
+    ndcgs: list[float] = []
+    for query_id, query_text in queries.items():
+        hits = search(query_text, (), "AND", documents)
+        ranked = [hit.set_id for hit in hits]
+        relevance = judgments.get(query_id, {})
+        relevant = frozenset(set_id for set_id, grade in relevance.items() if grade > 0)
+        all_ranked.append(ranked)
+        all_relevant.append(relevant)
+        precisions.append(precision_at_k(ranked, relevant, k))
+        recalls.append(recall_at_k(ranked, relevant, k))
+        ndcgs.append(normalized_discounted_cumulative_gain(ranked, relevance, k))
+    return {
+        "precision_at_k": sum(precisions) / len(precisions),
+        "recall_at_k": sum(recalls) / len(recalls),
+        "map": mean_average_precision(all_ranked, all_relevant),
+        "ndcg_at_k": sum(ndcgs) / len(ndcgs),
+    }

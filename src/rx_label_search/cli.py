@@ -17,7 +17,9 @@ from rx_label_search.collect.verify import collection_problems
 from rx_label_search.normalize.med_line_parser import parse_med_list
 from rx_label_search.normalize.run import build_base_ingredient_map, default_fetcher, resolve_name
 from rx_label_search.vocabulary.run import run_tagging
-from rx_label_search.evaluate.run import add_gold_label, run_tag_evaluation, write_placeholder_gold
+from rx_label_search.evaluate.run import add_gold_label, run_ir_evaluation, run_tag_evaluation, write_placeholder_gold
+from rx_label_search.search.facets import OPERATOR_AND
+from rx_label_search.search.run import load_indexed_documents, search, write_index_stats
 from rx_label_search.storage.read_json import read_json
 from rx_label_search.storage.read_jsonl import iter_jsonl
 
@@ -85,6 +87,19 @@ def build_parser() -> argparse.ArgumentParser:
     evaluate.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
     evaluate.add_argument("--gold-file", type=Path, default=Path("data/gold/gold_sample_PLACEHOLDER.json"))
     evaluate.add_argument("--report", type=Path, default=Path("reports/tag_evaluation.md"))
+    build_index = commands.add_parser("build-index", help="build the search index stats from the tagged collection")
+    build_index.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
+    query = commands.add_parser("query", help="run one keyword and facet search")
+    query.add_argument("text", nargs="?", default="")
+    query.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
+    query.add_argument("--term", action="append", dest="terms", default=[], help="a PDLA term id to filter on; repeat for more")
+    query.add_argument("--operator", choices=("AND", "OR"), default=OPERATOR_AND)
+    query.add_argument("--limit", type=int, default=10)
+    ir_eval = commands.add_parser("evaluate-search", help="score search against a queries and relevance-judgments file")
+    ir_eval.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
+    ir_eval.add_argument("--queries", type=Path, required=True)
+    ir_eval.add_argument("--judgments", type=Path, required=True)
+    ir_eval.add_argument("--k", type=int, default=10)
     return parser
 
 
@@ -197,6 +212,37 @@ def run_evaluate_tags(args: argparse.Namespace) -> str:
     return run_tag_evaluation(args.build_dir, args.gold_file, args.report)
 
 
+def run_build_index(args: argparse.Namespace) -> str:
+    """
+    Takes parsed build-index arguments.
+    Loads the indexed documents and writes the index stats file.
+    Gives a one-line summary of the document count and average length.
+    """
+    documents = load_indexed_documents(args.build_dir)
+    stats = write_index_stats(args.build_dir, documents)
+    return f"indexed {stats['documents']} documents, average length {stats['average_length']:.1f} tokens"
+
+
+def run_query_command(args: argparse.Namespace) -> str:
+    """
+    Takes parsed query arguments.
+    Loads the indexed documents and runs one search.
+    Gives the top hits as a JSON string.
+    """
+    documents = load_indexed_documents(args.build_dir)
+    hits = search(args.text, tuple(args.terms), args.operator, documents)
+    return json.dumps([dataclasses.asdict(hit) for hit in hits[: args.limit]], indent=2)
+
+
+def run_evaluate_search(args: argparse.Namespace) -> str:
+    """
+    Takes parsed evaluate-search arguments.
+    Runs the IR evaluation job.
+    Gives the scores as a JSON string.
+    """
+    return json.dumps(run_ir_evaluation(args.build_dir, args.queries, args.judgments, args.k), indent=2)
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     """
     Takes an optional argument vector, defaulting to sys.argv.
@@ -215,6 +261,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         "gold-template": run_gold_template,
         "gold-label": run_gold_label,
         "evaluate-tags": run_evaluate_tags,
+        "build-index": run_build_index,
+        "query": run_query_command,
+        "evaluate-search": run_evaluate_search,
     }
     print(handlers[args.command](args))
     return 0

@@ -17,6 +17,8 @@ Every file under `labels/` wraps one real openFDA drug label record, fetched fro
 | venlafaxine | c41d847b-88ba-49a5-9d73-269ac4caa4ed | 20260903 | 4 | Venlafaxine Hydrochloride | VENLAFAXINE HYDROCHLORIDE | 2026-09-21 |
 | zolpidem_ambien | c36cadf4-65a4-4466-b409-c82020b42452 | 20250415 | 26 | Ambien | ZOLPIDEM TARTRATE | 2026-09-21 |
 
+| losartan | a397502e-abe7-49cf-97c7-d53a616947eb | 20260903 | 4 | Losartan potassium | LOSARTAN POTASSIUM | 2026-09-21 |
+
 Files under `rxnorm/` wrap one real RxNav REST response each, with the same `fetched_on` and `source_url` fields, so the name matcher and ingredient rollup tests run offline.
 
-Fixture selection: brand labels (Zyprexa, Adderall, Ambien, Lyrica, OxyContin, Entresto) were chosen where the acceptance test types a brand name; the others are the newest human prescription label for that substance on the fetch date. Flexeril has no label in openFDA (the API returned no results on 2026-09-21), so the Flexril test relies on the RxNorm fixtures.
+Fixture selection: brand labels (Zyprexa, Adderall, Ambien, Lyrica, OxyContin, Entresto) were chosen where the acceptance test types a brand name; the others are the newest human prescription label for that substance on the fetch date. Flexeril has no label in openFDA (the API returned no results on 2026-09-21), so the Flexril test relies on the RxNorm fixtures. Losartan is not one of the Section 9.6 interaction-checker drugs; it was added for Appendix C Scenario 2 (keyword "hypertension" plus T01 AND T02), since none of the checker fixtures both treat hypertension and carry a boxed warning.

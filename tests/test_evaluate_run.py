@@ -85,3 +85,60 @@ def test_run_tag_evaluation_rejects_invalid_gold_file(tmp_path: Path) -> None:
     write_json(bad_path, {"schema_version": 99, "labels": {}})
     with pytest.raises(ValueError):
         run_tag_evaluation(build_dir, bad_path, tmp_path / "report.md")
+
+
+def test_read_queries_and_judgments_files(tmp_path: Path) -> None:
+    """
+    Takes a temporary directory fixture.
+    Reads a small queries file and a small judgments file.
+    Gives nothing, or fails if either mapping is wrong.
+    """
+    from rx_label_search.evaluate.run import read_judgments_file, read_queries_file
+
+    queries_path = tmp_path / "queries.tsv"
+    queries_path.write_text("q1\thypertension\n\nq2\tmuscle spasm\n", encoding="utf-8")
+    judgments_path = tmp_path / "judgments.tsv"
+    judgments_path.write_text("q1\tset-a\t1\nq1\tset-b\t0\n", encoding="utf-8")
+    assert read_queries_file(queries_path) == {"q1": "hypertension", "q2": "muscle spasm"}
+    assert read_judgments_file(judgments_path) == {"q1": {"set-a": 1.0, "set-b": 0.0}}
+
+
+def test_run_ir_evaluation_end_to_end(tmp_path: Path) -> None:
+    """
+    Takes a temporary directory fixture.
+    Builds a two-label collection with no tags, then runs the IR harness with a query that matches one label.
+    Gives nothing, or fails if precision@k is not 1.0 for the matching label.
+    """
+    from rx_label_search.storage.write_jsonl import write_jsonl
+
+    build_dir = tmp_path
+    write_jsonl(build_dir / "collection.jsonl", [{"set_id": "set-a", "indications_and_usage": ["treats hypertension"]}, {"set_id": "set-b", "indications_and_usage": ["treats headache"]}])
+    write_jsonl(build_dir / "tags.jsonl", [{"set_id": "set-a", "evidence": []}, {"set_id": "set-b", "evidence": []}])
+    queries_path = build_dir / "queries.tsv"
+    queries_path.write_text("q1\thypertension\n", encoding="utf-8")
+    judgments_path = build_dir / "judgments.tsv"
+    judgments_path.write_text("q1\tset-a\t1\n", encoding="utf-8")
+    from rx_label_search.evaluate.run import run_ir_evaluation
+
+    scores = run_ir_evaluation(build_dir, queries_path, judgments_path, 1)
+    assert scores["precision_at_k"] == 1.0
+    assert scores["map"] == 1.0
+
+
+def test_run_ir_evaluation_empty_queries_file(tmp_path: Path) -> None:
+    """
+    Takes a temporary directory fixture.
+    Runs the IR harness with an empty queries file.
+    Gives nothing, or fails if any score is not 0.0.
+    """
+    from rx_label_search.storage.write_jsonl import write_jsonl
+    from rx_label_search.evaluate.run import run_ir_evaluation
+
+    write_jsonl(tmp_path / "collection.jsonl", [])
+    write_jsonl(tmp_path / "tags.jsonl", [])
+    queries_path = tmp_path / "queries.tsv"
+    queries_path.write_text("", encoding="utf-8")
+    judgments_path = tmp_path / "judgments.tsv"
+    judgments_path.write_text("", encoding="utf-8")
+    scores = run_ir_evaluation(tmp_path, queries_path, judgments_path, 5)
+    assert all(value == 0.0 for value in scores.values())
