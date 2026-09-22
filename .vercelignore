@@ -7,6 +7,3 @@ rubrics
 document_collection_part_1
 .github
 reports
-web/node_modules
-web/out
-design
