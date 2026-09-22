@@ -68,6 +68,26 @@ def test_build_pair_alert_fires_and_skips() -> None:
     assert build_pair_alert(source, unrelated) is None
 
 
+def test_build_pair_alert_never_attributes_the_source_sentence_to_the_other_drug() -> None:
+    """
+    Takes no arguments.
+    Builds a pair alert and checks the second member's evidence.
+    Gives nothing, or fails if the other drug's member carries a section, a sentence, or the source's DailyMed link.
+    """
+    source = drug("A", {"evidence": [{"term_id": "T17", "field_name": "contraindications", "sentence": "must not be taken with fluvoxamine", "rule_version": "v"}]})
+    other = drug("B", {"base_ingredients": ["fluvoxamine"]})
+    alert = build_pair_alert(source, other)
+    assert alert is not None
+    source_member, other_member = alert.members
+    assert source_member.section == "contraindications"
+    assert source_member.sentence == "must not be taken with fluvoxamine"
+    assert other_member.drug_name == "B"
+    assert other_member.section == ""
+    assert other_member.sentence == ""
+    assert other_member.set_id == "s-B"
+    assert "s-B" in other_member.dailymed_url
+
+
 def test_build_pair_alerts_checks_every_direction() -> None:
     """
     Takes no arguments.

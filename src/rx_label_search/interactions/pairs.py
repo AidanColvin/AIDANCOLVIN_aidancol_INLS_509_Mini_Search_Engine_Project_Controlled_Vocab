@@ -5,9 +5,9 @@ from __future__ import annotations
 from collections.abc import Mapping, Sequence
 from typing import Any
 
-from rx_label_search.interactions.evidence import evidence_for_term, term_display_name
+from rx_label_search.interactions.evidence import dailymed_url, evidence_for_term
 from rx_label_search.interactions.tiers import tier_for_field, tier_name as lookup_tier_name
-from rx_label_search.records import Alert, TermEvidence
+from rx_label_search.records import Alert, AlertEvidence, TermEvidence
 
 
 def drug_own_names(drug: Mapping[str, Any]) -> frozenset[str]:
@@ -56,8 +56,14 @@ def build_pair_alert(source: Mapping[str, Any], other: Mapping[str, Any]) -> Ale
         return None
     source_record, other_record = source["record"], other["record"]
     member_source = evidence_for_term(source["display_name"], source_record["set_id"], source_record["effective_time"], evidence)
-    other_note = TermEvidence("T17", evidence.field_name, evidence.sentence, evidence.rule_version)
-    member_other = evidence_for_term(other["display_name"], other_record["set_id"], other_record["effective_time"], other_note)
+    member_other = AlertEvidence(
+        drug_name=other["display_name"],
+        set_id=other_record["set_id"],
+        effective_time=other_record["effective_time"],
+        section="",
+        sentence="",
+        dailymed_url=dailymed_url(other_record["set_id"]),
+    )
     tier = tier_for_field(evidence.field_name)
     return Alert(
         kind="pair",
