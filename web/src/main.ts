@@ -1,6 +1,6 @@
 /**
  * Takes no arguments.
- * Builds the app's state, mounts the header and both views, and wires every event to a state change and a re-render.
+ * Builds the app's state, mounts the header and both sections on one page, and wires every event to a state change and a re-render.
  * Gives nothing; this module runs once when the page loads.
  */
 
@@ -12,10 +12,9 @@ import {
   mountInteractionsView,
   updateInteractionsView,
   type InteractionsCallbacks,
-  type InteractionsViewRefs,
 } from "./render_interactions.js";
-import { mountSearchView, updateSearchView, type SearchCallbacks, type SearchViewRefs } from "./render_search.js";
-import { createInitialState, withState, type AppState, type CheckErrorState, type ViewName } from "./records.js";
+import { mountSearchView, updateSearchView, type SearchCallbacks } from "./render_search.js";
+import { createInitialState, withState, type AppState, type CheckErrorState } from "./records.js";
 
 const CHECK_DEBOUNCE_MS = 300;
 const SEARCH_LIMIT = 20;
@@ -57,22 +56,6 @@ function describeRequestError(err: unknown): CheckErrorState {
     return { message: "Could not reach the server.", detail: err.message };
   }
   return { message: "Something went wrong.", detail: "An unknown error occurred." };
-}
-
-/**
- * Takes the app's DOM roots for the header, the Interactions view, and the Label search view.
- * Shows the view matching the current state and hides the other, and re-renders the header's active link.
- * Gives nothing.
- */
-function renderShell(
-  headerContainer: HTMLElement,
-  interactionsRefs: InteractionsViewRefs,
-  searchRefs: SearchViewRefs,
-  onNavigate: (view: ViewName) => void,
-): void {
-  headerContainer.replaceChildren(renderHeader(state.view, { onNavigate }));
-  interactionsRefs.root.hidden = state.view !== "interactions";
-  searchRefs.root.hidden = state.view !== "search";
 }
 
 /**
@@ -216,7 +199,45 @@ function buildFooter(): FooterRefs {
 
 /**
  * Takes no arguments.
- * Builds the app, mounts every view, and wires every DOM event to a state update and a re-render.
+ * Checks whether keyboard focus is sitting nowhere useful: on the page body, or on nothing at all.
+ * Gives true when focus can safely be moved to the medication field without taking it from something the user chose.
+ */
+function focusIsIdle(): boolean {
+  const active = document.activeElement;
+  return active === null || active === document.body || active === document.documentElement;
+}
+
+/**
+ * Takes the medication input element.
+ * Puts the cursor in it on load, whenever the tab or window comes back into view with focus idle, and whenever a printable key is typed while focus is idle.
+ * Gives nothing; the listeners live for the life of the page.
+ */
+function keepMedicationFieldReady(input: HTMLInputElement): void {
+  const focusIfIdle = (): void => {
+    if (focusIsIdle()) {
+      input.focus({ preventScroll: true });
+    }
+  };
+  input.focus({ preventScroll: true });
+  requestAnimationFrame(focusIfIdle);
+  window.addEventListener("pageshow", focusIfIdle);
+  window.addEventListener("focus", focusIfIdle);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      focusIfIdle();
+    }
+  });
+  document.addEventListener("keydown", (domEvent) => {
+    const printable = domEvent.key.length === 1 && !domEvent.metaKey && !domEvent.ctrlKey && !domEvent.altKey;
+    if (printable && focusIsIdle()) {
+      input.focus({ preventScroll: true });
+    }
+  });
+}
+
+/**
+ * Takes no arguments.
+ * Builds the app, mounts both sections on one page, and wires every DOM event to a state update and a re-render.
  * Gives nothing.
  */
 function main(): void {
@@ -224,25 +245,16 @@ function main(): void {
   if (appRoot === null) {
     throw new Error("missing #app root element");
   }
-  const headerContainer = document.createElement("div");
   const footer = buildFooter();
-  appRoot.append(headerContainer);
+  const page = document.createElement("main");
+  page.className = "page";
 
   const render = (): void => {
-    renderShell(headerContainer, interactionsRefs, searchRefs, onNavigate);
     updateInteractionsView(interactionsRefs, state, interactionsCallbacks);
     updateSearchView(searchRefs, state, searchCallbacks);
     footer.root.hidden = state.buildDate === null;
     footer.dateLabel.textContent = state.buildDate === null ? "" : `FDA label data as of ${formatBuildDate(state.buildDate)}`;
   };
-
-  const onNavigate = (view: ViewName): void => {
-    if (state.view === view) {
-      return;
-    }
-    location.hash = view === "search" ? "#search" : "#interactions";
-  };
-
   const interactionsCallbacks: InteractionsCallbacks = {
     onAddMedication: (text) => {
       const newLines = splitEnteredText(text);
@@ -287,9 +299,8 @@ function main(): void {
       if (index === -1) {
         return;
       }
-      const chosenName = candidate.split("→")[0]?.trim() ?? candidate;
       const newLines = [...state.medicationLines];
-      newLines[index] = chosenName;
+      newLines[index] = candidate;
       state = withState(state, { medicationLines: newLines });
       scheduleCheck(render);
       render();
@@ -359,16 +370,14 @@ function main(): void {
 
   const interactionsRefs = mountInteractionsView(interactionsCallbacks);
   const searchRefs = mountSearchView(searchCallbacks);
-  appRoot.append(interactionsRefs.root, searchRefs.root, footer.root);
+  page.append(interactionsRefs.root, searchRefs.root);
+  appRoot.append(renderHeader(), page, footer.root);
 
-  window.addEventListener("hashchange", () => {
-    state = withState(state, { view: hashToView(location.hash) });
-    render();
-  });
-
-  state = withState(state, { view: hashToView(location.hash) });
   render();
-  interactionsRefs.medicationInput.focus();
+  keepMedicationFieldReady(interactionsRefs.medicationInput);
+  if (location.hash === "#search") {
+    searchRefs.root.scrollIntoView();
+  }
 
   void fetchTermsOnly().then((response) => {
     state = withState(state, {
@@ -377,15 +386,6 @@ function main(): void {
     });
     render();
   });
-}
-
-/**
- * Takes the current location hash.
- * Maps "#search" to the search view and everything else to the interactions view.
- * Gives the ViewName.
- */
-function hashToView(hash: string): ViewName {
-  return hash === "#search" ? "search" : "interactions";
 }
 
 main();

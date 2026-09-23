@@ -16,7 +16,6 @@ import { createInitialState, withState } from "../src/records.js";
  */
 test("createInitialState starts with an empty medication list and no results", () => {
   const state = createInitialState();
-  assert.equal(state.view, "interactions");
   assert.deepEqual(state.medicationLines, []);
   assert.equal(state.checkResponse, null);
   assert.equal(state.checkLoading, false);
@@ -34,10 +33,10 @@ test("createInitialState starts with an empty medication list and no results", (
  */
 test("withState replaces only the given fields and never mutates the input", () => {
   const original = createInitialState();
-  const next = withState(original, { searchQuery: "muscle spasm", view: "search" });
+  const next = withState(original, { searchQuery: "muscle spasm", searchOperator: "OR" });
   assert.equal(next.searchQuery, "muscle spasm");
-  assert.equal(next.view, "search");
+  assert.equal(next.searchOperator, "OR");
   assert.deepEqual(next.medicationLines, []);
   assert.equal(original.searchQuery, "");
-  assert.equal(original.view, "interactions");
+  assert.equal(original.searchOperator, "AND");
 });

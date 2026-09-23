@@ -13,7 +13,7 @@ import {
   sortAlerts,
 } from "./alerts.js";
 import { formatDailyTotal, pluralizeCount, sectionDisplayName } from "./format.js";
-import { candidateLabel, countResolvedRows, isSpellingCorrected, rowHeadlineName, statusForLine } from "./meds.js";
+import { candidateChoices, countResolvedRows, isSpellingCorrected, rowHeadlineName, statusForLine } from "./meds.js";
 import { alertIcon, chevronDownIcon, chevronIcon, externalLinkIcon, plusIcon, removeIcon } from "./render_icons.js";
 import type { AlertMember, AlertRecord, AppState, MedicationRow, UnresolvedEntry } from "./records.js";
 
@@ -42,16 +42,22 @@ export interface InteractionsViewRefs {
 
 /**
  * Takes the Interactions view's callbacks.
- * Builds the view's static shell once: title, medication field, hint, list header, empty list and results containers.
+ * Builds the view's static shell once: greeting, lede, medication field, hint, list header, empty list and results containers.
  * Gives the InteractionsViewRefs, so the caller can update the dynamic parts and keep the medication field's identity stable across renders.
  */
 export function mountInteractionsView(callbacks: InteractionsCallbacks): InteractionsViewRefs {
-  const root = document.createElement("main");
+  const root = document.createElement("section");
   root.className = "interactions-view";
+  root.setAttribute("aria-labelledby", "hello-title");
 
   const title = document.createElement("h1");
-  title.className = "page-title";
-  title.textContent = "Check drug to drug interactions";
+  title.className = "hello";
+  title.id = "hello-title";
+  title.textContent = "Hello.";
+
+  const lede = document.createElement("p");
+  lede.className = "hello-lede";
+  lede.textContent = "Tell me what medications you take, and I'll check whether any of them interact.";
 
   const fieldWrap = document.createElement("div");
   fieldWrap.className = "med-field";
@@ -63,8 +69,11 @@ export function mountInteractionsView(callbacks: InteractionsCallbacks): Interac
   medicationInput.type = "text";
   medicationInput.id = "add-med";
   medicationInput.autocomplete = "off";
+  medicationInput.autofocus = true;
+  medicationInput.spellcheck = false;
+  medicationInput.enterKeyHint = "done";
   medicationInput.className = "med-field__input";
-  medicationInput.placeholder = "Add a medication";
+  medicationInput.placeholder = "Type a medication, like warfarin";
   const addButton = document.createElement("button");
   addButton.type = "button";
   addButton.className = "med-field__add";
@@ -74,7 +83,7 @@ export function mountInteractionsView(callbacks: InteractionsCallbacks): Interac
 
   const hint = document.createElement("p");
   hint.className = "med-hint";
-  hint.textContent = "Press Return to add. Paste a list to add many at once.";
+  hint.textContent = "Press Return after each one, or paste your whole list at once.";
 
   const listHeader = document.createElement("div");
   listHeader.className = "list-header";
@@ -99,7 +108,7 @@ export function mountInteractionsView(callbacks: InteractionsCallbacks): Interac
   liveRegion.setAttribute("aria-live", "polite");
   liveRegion.setAttribute("role", "status");
 
-  root.append(title, fieldWrap, hint, listHeader, listSection, resultsSection, liveRegion);
+  root.append(title, lede, fieldWrap, hint, listHeader, listSection, resultsSection, liveRegion);
 
   addButton.addEventListener("click", () => {
     submitInputValue(medicationInput, callbacks);
@@ -146,7 +155,7 @@ function submitInputValue(input: HTMLInputElement, callbacks: InteractionsCallba
  */
 export function updateInteractionsView(refs: InteractionsViewRefs, state: AppState, callbacks: InteractionsCallbacks): void {
   const hasEntries = state.medicationLines.length > 0;
-  refs.medicationInput.placeholder = hasEntries ? "Add another medication" : "Add a medication";
+  refs.medicationInput.placeholder = hasEntries ? "Add another medication" : "Type a medication, like warfarin";
   refs.hint.hidden = hasEntries;
   refs.listCountLabel.textContent = pluralizeCount(state.medicationLines.length, "medication");
   refs.clearAllButton.hidden = !hasEntries;
@@ -326,13 +335,13 @@ function buildUnresolvedRow(line: string, entry: UnresolvedEntry, callbacks: Int
 
   const pills = document.createElement("div");
   pills.className = "candidate-pills";
-  for (const candidate of entry.candidates) {
+  for (const choice of candidateChoices(entry.candidates)) {
     const pill = document.createElement("button");
     pill.type = "button";
     pill.className = "candidate-pill";
-    pill.textContent = candidateLabel(candidate);
+    pill.textContent = choice.label;
     pill.addEventListener("click", () => {
-      callbacks.onChooseCandidate(line, candidate);
+      callbacks.onChooseCandidate(line, choice.entryText);
     });
     pills.append(pill);
   }
