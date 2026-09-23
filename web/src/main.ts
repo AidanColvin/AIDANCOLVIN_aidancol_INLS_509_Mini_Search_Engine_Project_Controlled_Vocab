@@ -6,7 +6,7 @@
 
 import { ApiHttpError, ApiShapeError, fetchCheck, fetchSearch, fetchTermsOnly, maxMedicationTextChars } from "./api.js";
 import { formatBuildDate } from "./format.js";
-import { isWithinLengthLimit, joinMedicationLines, splitEnteredText } from "./meds.js";
+import { isWithinLengthLimit, joinMedicationLines, replaceNameKeepingDose, splitEnteredText } from "./meds.js";
 import { renderHeader } from "./render_header.js";
 import {
   mountInteractionsView,
@@ -36,26 +36,23 @@ function isAbortError(err: unknown): boolean {
 
 /**
  * Takes an unknown error thrown while running a check or a search.
- * Picks a one-line message and a detail line, distinguishing an unbuilt checker, a rejected request, an unreadable response, and a network failure.
+ * Picks a one-line message saying what happened and a second line saying what to do, distinguishing an unbuilt checker, a rejected request, an unreadable response, and a network failure.
  * Gives the CheckErrorState to show in the error card.
  */
 function describeRequestError(err: unknown): CheckErrorState {
   if (err instanceof ApiHttpError) {
     if (err.status === 503) {
-      return { message: "Checker data isn't ready yet.", detail: err.apiMessage };
+      return { message: "The checker isn't ready yet.", detail: "The label data is still loading on the server. Wait a moment, then try again." };
     }
-    return { message: "The server rejected the request.", detail: err.apiMessage };
+    return { message: "The server could not take that request.", detail: `${err.apiMessage} Fix the entries, then try again.` };
   }
-  if (err instanceof ApiShapeError) {
-    return { message: "Could not read the server's response.", detail: err.message };
-  }
-  if (err instanceof SyntaxError) {
-    return { message: "Could not read the server's response.", detail: err.message };
+  if (err instanceof ApiShapeError || err instanceof SyntaxError) {
+    return { message: "Could not read the server's reply.", detail: "Reload the page, then try again." };
   }
   if (err instanceof TypeError) {
-    return { message: "Could not reach the server.", detail: err.message };
+    return { message: "Could not reach the server.", detail: "Check your connection, then try again." };
   }
-  return { message: "Something went wrong.", detail: "An unknown error occurred." };
+  return { message: "Something went wrong.", detail: "Try again. If it keeps happening, reload the page." };
 }
 
 /**
@@ -74,7 +71,7 @@ function cancelPendingCheck(): void {
 
 /**
  * Takes the render callback to call after every state change this function causes.
- * Debounces a run of /api/check for the current medication list, applying the length limit and updating state as it settles.
+ * Debounces a run of /api/check for the current medication list, marking the check as loading right away, applying the length limit, and updating state as it settles.
  * Gives nothing; state.checkResponse, state.checkLoading, and state.checkError are updated as the request proceeds.
  */
 function scheduleCheck(render: () => void): void {
@@ -88,11 +85,12 @@ function scheduleCheck(render: () => void): void {
   if (!isWithinLengthLimit(joined)) {
     state = withState(state, {
       checkLoading: false,
-      checkError: { message: "The list is too long. Remove some medications and try again.", detail: `Limit is ${maxMedicationTextChars()} characters.` },
+      checkError: { message: "The list is too long to check.", detail: `The limit is ${maxMedicationTextChars()} characters. Remove some medications, then try again.` },
     });
     render();
     return;
   }
+  state = withState(state, { checkLoading: true, checkError: null });
   checkDebounceHandle = setTimeout(() => {
     void runCheck(joined, render);
   }, CHECK_DEBOUNCE_MS);
@@ -192,7 +190,7 @@ function buildFooter(): FooterRefs {
   link.href = "https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab";
   link.target = "_blank";
   link.rel = "noopener noreferrer";
-  link.textContent = "Open source on GitHub";
+  link.textContent = "Source on GitHub";
   root.append(dateLabel, link);
   return { root, dateLabel };
 }
@@ -300,7 +298,7 @@ function main(): void {
         return;
       }
       const newLines = [...state.medicationLines];
-      newLines[index] = candidate;
+      newLines[index] = replaceNameKeepingDose(line, candidate);
       state = withState(state, { medicationLines: newLines });
       scheduleCheck(render);
       render();
@@ -335,6 +333,7 @@ function main(): void {
     },
     onRetryCheck: () => {
       scheduleCheck(render);
+      render();
     },
   };
 

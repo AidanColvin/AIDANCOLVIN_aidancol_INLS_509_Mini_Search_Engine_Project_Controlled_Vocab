@@ -15,6 +15,7 @@ import {
   isSpellingCorrected,
   isWithinLengthLimit,
   joinMedicationLines,
+  replaceNameKeepingDose,
   rowHeadlineName,
   splitEnteredText,
   splitPastedText,
@@ -125,6 +126,8 @@ test("isSpellingCorrected fires only when the typed name is not one of the row's
   assert.equal(isSpellingCorrected(exact), false);
   const unresolved = row({ matched_name: null });
   assert.equal(isSpellingCorrected(unresolved), false);
+  const saltAbbreviation = row({ matched_name: ["tramadol hcl", "TRAMADOL HYDROCHLORIDE"], generic: ["TRAMADOL HYDROCHLORIDE"] });
+  assert.equal(isSpellingCorrected(saltAbbreviation), false);
 });
 
 /**
@@ -243,4 +246,16 @@ test("statusForLine picks the row when it resolved and falls back to pending oth
   assert.deepEqual(statusForLine("Lyrica 100 mg tid", response), { row: resolvedRow });
   assert.deepEqual(statusForLine("not in the response", response), { pending: true });
   assert.deepEqual(statusForLine("anything", null), { pending: true });
+});
+
+/**
+ * Takes no arguments.
+ * Checks that choosing a candidate keeps the dose tail of the typed line and uses the candidate alone when there is no dose.
+ * Gives nothing; fails through assert when either case is wrong.
+ */
+test("replaceNameKeepingDose keeps the dose tail and drops only the typed name", () => {
+  assert.equal(replaceNameKeepingDose("tramadol 50 mg every 6 hours", "tramadol hcl"), "tramadol hcl 50 mg every 6 hours");
+  assert.equal(replaceNameKeepingDose("Tramadol HCl   50mg bid", "tramadol hydrochloride"), "tramadol hydrochloride 50mg bid");
+  assert.equal(replaceNameKeepingDose("Bayer", "bayer aspirin pill"), "bayer aspirin pill");
+  assert.equal(replaceNameKeepingDose("tramadol ", "tramadol hcl"), "tramadol hcl");
 });

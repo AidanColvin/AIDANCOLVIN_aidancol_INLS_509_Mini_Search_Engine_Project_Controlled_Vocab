@@ -12,7 +12,7 @@ import {
   splitTagsByActiveFilters,
   termsById,
 } from "./search.js";
-import { checkmarkIcon, externalLinkIcon, searchIcon } from "./render_icons.js";
+import { checkmarkIcon, externalLinkIcon, removeIcon, searchIcon } from "./render_icons.js";
 import type { AppState, SearchHit, TermInfo } from "./records.js";
 
 const SEARCH_RESULT_LIMIT = 20;
@@ -59,7 +59,7 @@ export function mountSearchView(callbacks: SearchCallbacks): SearchViewRefs {
 
   const fieldWrap = document.createElement("div");
   fieldWrap.setAttribute("role", "search");
-  fieldWrap.className = "search-field";
+  fieldWrap.className = "search-field narrow";
   const label = document.createElement("label");
   label.className = "visually-hidden";
   label.htmlFor = "search-q";
@@ -75,9 +75,9 @@ export function mountSearchView(callbacks: SearchCallbacks): SearchViewRefs {
   queryInput.enterKeyHint = "search";
   const clearButton = document.createElement("button");
   clearButton.type = "button";
-  clearButton.className = "search-field__clear";
+  clearButton.className = "btn btn--icon search-field__clear";
   clearButton.setAttribute("aria-label", "Clear search");
-  clearButton.textContent = "×";
+  clearButton.append(removeIcon(20));
   clearButton.hidden = true;
   fieldWrap.append(label, iconSpan, queryInput, clearButton);
 
@@ -90,7 +90,7 @@ export function mountSearchView(callbacks: SearchCallbacks): SearchViewRefs {
   for (const suggestion of SUGGESTED_QUERIES) {
     const chip = document.createElement("button");
     chip.type = "button";
-    chip.className = "suggestion";
+    chip.className = "btn btn--small";
     chip.textContent = suggestion;
     chip.addEventListener("click", () => {
       queryInput.value = suggestion;
@@ -166,8 +166,8 @@ function buildFilterChips(
   if (state.searchFilters.length > 0) {
     const clear = document.createElement("button");
     clear.type = "button";
-    clear.className = "filters-row__clear";
-    clear.textContent = "Clear";
+    clear.className = "btn btn--small";
+    clear.textContent = "Clear filters";
     clear.addEventListener("click", () => {
       callbacks.onClearFilters();
     });
@@ -188,13 +188,13 @@ function buildOperatorToggle(operator: "AND" | "OR", callbacks: SearchCallbacks)
   group.setAttribute("aria-label", "Match mode");
   const matchAll = document.createElement("button");
   matchAll.type = "button";
-  matchAll.className = operator === "AND" ? "operator-toggle__option operator-toggle__option--active" : "operator-toggle__option";
+  matchAll.className = operator === "AND" ? "btn btn--small btn--selected" : "btn btn--small";
   matchAll.setAttribute("aria-pressed", String(operator === "AND"));
   matchAll.textContent = "Match all";
   matchAll.addEventListener("click", () => callbacks.onSetOperator("AND"));
   const matchAny = document.createElement("button");
   matchAny.type = "button";
-  matchAny.className = operator === "OR" ? "operator-toggle__option operator-toggle__option--active" : "operator-toggle__option";
+  matchAny.className = operator === "OR" ? "btn btn--small btn--selected" : "btn btn--small";
   matchAny.setAttribute("aria-pressed", String(operator === "OR"));
   matchAny.textContent = "Match any";
   matchAny.addEventListener("click", () => callbacks.onSetOperator("OR"));
@@ -210,14 +210,11 @@ function buildOperatorToggle(operator: "AND" | "OR", callbacks: SearchCallbacks)
 function buildFilterChip(term: TermInfo, propertyGroup: string, selected: boolean, callbacks: SearchCallbacks): HTMLButtonElement {
   const chip = document.createElement("button");
   chip.type = "button";
-  chip.className = selected ? "filter-chip filter-chip--selected" : "filter-chip";
+  chip.className = selected ? "btn btn--small btn--selected" : "btn btn--small";
   chip.setAttribute("aria-pressed", String(selected));
   chip.title = `${propertyGroup} · ${term.term_id}`;
   if (selected) {
-    const check = document.createElement("span");
-    check.className = "filter-chip__check";
-    check.append(checkmarkIcon(14));
-    chip.append(check);
+    chip.append(checkmarkIcon(14));
   }
   chip.append(document.createTextNode(term.name));
   chip.addEventListener("click", () => {
@@ -248,7 +245,7 @@ function buildResultsBody(state: AppState, callbacks: SearchCallbacks): readonly
   heading.className = "search-results__heading";
   heading.textContent = `${state.searchResponse.hits.length} results`;
 
-  const list = document.createElement("div");
+  const list = document.createElement("ul");
   list.className = "search-results__list";
   const byId = termsById(state.availableTerms);
   for (const hit of state.searchResponse.hits) {
@@ -268,10 +265,10 @@ function buildResultsBody(state: AppState, callbacks: SearchCallbacks): readonly
 /**
  * Takes one search hit, the current query, the active filter ids, and the term id-to-info lookup.
  * Builds the hit's title, snippet, tag pills, and DailyMed link.
- * Gives the hit's article HTMLElement.
+ * Gives the hit's list item element.
  */
 function buildHitRow(hit: SearchHit, query: string, activeFilters: readonly string[], byId: ReturnType<typeof termsById>): HTMLElement {
-  const article = document.createElement("article");
+  const article = document.createElement("li");
   article.className = "hit-row";
 
   const headRow = document.createElement("div");
@@ -316,21 +313,21 @@ function buildHitRow(hit: SearchHit, query: string, activeFilters: readonly stri
   const { matching, rest } = splitTagsByActiveFilters(resolved, activeFilters);
   for (const tag of matching) {
     const pill = document.createElement("span");
-    pill.className = "pill pill--accent";
+    pill.className = "pill";
     pill.textContent = tag.name;
     tagsRow.append(pill);
   }
   if (rest.length > 0) {
     const more = document.createElement("button");
     more.type = "button";
-    more.className = "hit-row__more-tags";
+    more.className = "btn btn--small";
     more.setAttribute("aria-expanded", "false");
-    more.textContent = `+${rest.length} more`;
+    more.textContent = `${rest.length} more ${rest.length === 1 ? "term" : "terms"}`;
     more.addEventListener("click", () => {
       more.remove();
       for (const tag of rest) {
         const pill = document.createElement("span");
-        pill.className = "pill pill--accent";
+        pill.className = "pill";
         pill.textContent = tag.name;
         tagsRow.append(pill);
       }
@@ -382,7 +379,7 @@ function buildSearchErrorCard(message: string, detail: string, callbacks: Search
   textCol.append(messageEl, detailEl);
   const retry = document.createElement("button");
   retry.type = "button";
-  retry.className = "error-card__retry";
+  retry.className = "btn btn--primary error-card__retry";
   retry.textContent = "Try again";
   retry.addEventListener("click", () => {
     callbacks.onRetry();

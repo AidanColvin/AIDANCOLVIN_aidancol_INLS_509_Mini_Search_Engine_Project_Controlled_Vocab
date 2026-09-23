@@ -62,14 +62,25 @@ export function isWithinLengthLimit(joinedText: string): boolean {
   return joinedText.length <= MAX_MEDICATION_TEXT_CHARS;
 }
 
+const SALT_ABBREVIATION = /\bhcl\b/g;
+
+/**
+ * Takes one drug name in any case.
+ * Lowercases it and spells out the "hcl" salt abbreviation as "hydrochloride", so an abbreviation never reads as a misspelling.
+ * Gives the normalized name.
+ */
+function normalizeDrugName(drugName: string): string {
+  return drugName.toLowerCase().replace(SALT_ABBREVIATION, "hydrochloride");
+}
+
 /**
  * Takes one medication table row.
- * Collects every own name the row carries: brand, generic, and base ingredient names, lowercased.
- * Gives the set of lowercase own names, empty when the row carries none.
+ * Collects every own name the row carries: brand, generic, and base ingredient names, normalized.
+ * Gives the set of normalized own names, empty when the row carries none.
  */
 function rowOwnNamesLowercase(row: MedicationRow): ReadonlySet<string> {
   const names = [...row.brand, ...row.generic, ...row.base_ingredients];
-  return new Set(names.map((ownName) => ownName.toLowerCase()));
+  return new Set(names.map(normalizeDrugName));
 }
 
 /**
@@ -85,7 +96,7 @@ export function isSpellingCorrected(row: MedicationRow): boolean {
   if (typedName === undefined) {
     return false;
   }
-  return !rowOwnNamesLowercase(row).has(typedName.toLowerCase());
+  return !rowOwnNamesLowercase(row).has(normalizeDrugName(typedName));
 }
 
 /**
@@ -153,6 +164,20 @@ export function candidateChoices(candidates: readonly string[]): readonly Candid
     }
     return { label: ingredients.join(" + "), entryText: ingredients.join(" / ") };
   });
+}
+
+/**
+ * Takes one medication line as the user typed it and the candidate text they chose for it.
+ * Swaps the name part of the line (everything before its first digit) for the candidate, keeping the dose and schedule that follow so choosing a match never silently drops "50 mg every 6 hours".
+ * Gives the new line, or the candidate alone when the line carries no digit.
+ */
+export function replaceNameKeepingDose(line: string, candidateText: string): string {
+  const firstDigit = line.search(CONTAINS_DIGIT);
+  if (firstDigit === -1) {
+    return candidateText;
+  }
+  const doseTail = line.slice(firstDigit).trim();
+  return doseTail.length === 0 ? candidateText : `${candidateText} ${doseTail}`;
 }
 
 /**
