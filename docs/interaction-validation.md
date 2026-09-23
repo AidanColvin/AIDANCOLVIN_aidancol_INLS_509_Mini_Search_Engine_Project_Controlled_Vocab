@@ -1,9 +1,9 @@
 # Interaction checker validation
 
-- Run label: production, after deploy
+- Run label: production, with A-E grades
 - Base URL: https://rx-label-search-aidancolvins-projects.vercel.app
 - Build date reported: 2026-09-23
-- Timestamp: 2026-09-23T03:55:37+00:00
+- Timestamp: 2026-09-23T09:41:00+00:00
 - Key: /Users/aidancolvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab/data/reference/drug_interaction_screen_fixture.json (Drug Interaction Screen - blind test fixture)
 
 ## Rules
@@ -21,15 +21,17 @@
 | any category at severity contraindicated | also contraindicated combination (T17) |
 | every other fixture category | unsupported by this checker's rule set; scored as a miss with cause "category outside the checker's rules" |
 
-### Severity map (alert tier to fixture severity)
+### Severity map (alert grade to fixture severity)
 
-| Tier | Severity |
+| Grade | Severity |
 | --- | --- |
-| 1 | contraindicated |
-| 2 | major |
-| 3 | major |
-| 4 | moderate |
-| null (duplication flags) | minor |
+| E | contraindicated |
+| D | major |
+| C | moderate |
+| B | moderate |
+| A | minor |
+
+Grades follow the correspondence Pinkoh et al. (2023) give between Lexicomp and a four-level scale: X contraindicated, D major, C moderate, B minor. This tool's E, D, C and B, and A line up with Lexicomp X, D, C, and B. A response without grades falls back to the tier map: 1 contraindicated, 2 and 3 major, 4 moderate, none minor.
 
 ### Scoring rules
 
@@ -45,14 +47,29 @@
 
 - Lists run: 41
 - Expected items: 196
-- Hits: 31
-- Partials: 15
+- Hits: 29
+- Partials: 17
 - Misses: 150 (unsupported category 127; drug unresolved 0; drugs resolved but no alert 23)
 - False positives: 1
 - Totals: matched 24, mismatched 8, no checker total 0, not comparable 4
 - Lists with variant differences: 0
 - Lists with unresolved entries: 18
 - Request errors: 0
+
+### Severity agreement (covered items)
+
+- Items where an alert covered the expected drugs in a supported category: 46
+- Exact severity agreement: 30 of 46
+- Within one level: 45 of 46
+- Tool more severe than the key: 4; less severe: 12
+- Cohen's kappa: 0.39
+
+| Key severity \ Tool severity | contraindicated | major | moderate | minor |
+| --- | --- | --- | --- | --- |
+| contraindicated | 2 | 1 | 0 | 0 |
+| major | 0 | 15 | 11 | 0 |
+| moderate | 0 | 3 | 13 | 0 |
+| minor | 0 | 1 | 0 | 0 |
 
 ## L01: Same drug entered twice; sedative stacking; stimulant above labeled maximum
 
@@ -68,7 +85,7 @@ Zyprexa 2.5 mg once daily
 
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
-| olanzapine, olanzapine | duplicate entry | moderate | PARTIAL (got shared_ingredient at minor) | Zyprexa and Zyprexa share olanzapine | base ingredients: olanzapine | Zyprexa / |
+| olanzapine, olanzapine | duplicate entry | moderate | HIT | Zyprexa and Zyprexa share olanzapine | base ingredients: olanzapine | Zyprexa / |
 | alprazolam, zolpidem, olanzapine | CNS depression | major | MISS (drugs resolved but no alert) |  |  |  |
 | amphetamine/dextroamphetamine | dose ceiling | moderate | MISS (category outside the checker's rules) |  |  |  |
 | amphetamine/dextroamphetamine, alprazolam, olanzapine | opposing pharmacology | minor | MISS (category outside the checker's rules) |  |  |  |
@@ -93,7 +110,7 @@ Lipitor 40 mg once daily
 
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
-| sertraline, tramadol, sumatriptan, cyclobenzaprine, ondansetron | serotonin syndrome | major | HIT | Serotonin Syndrome Risk shared by 5 drugs | Serotonin Syndrome: Increased risk when co-administered with other serotonergic agents, but also when taken alone. | Zoloft / warnings_and_cautions |
+| sertraline, tramadol, sumatriptan, cyclobenzaprine, ondansetron | serotonin syndrome | major | PARTIAL (got T14 at moderate) | Serotonin Syndrome Risk shared by 5 drugs | Serotonin Syndrome: Increased risk when co-administered with other serotonergic agents, but also when taken alone. | Zoloft / warnings_and_cautions |
 | tramadol, sertraline | seizure threshold | moderate | MISS (category outside the checker's rules) |  |  |  |
 | ondansetron, tramadol | efficacy loss | minor | MISS (category outside the checker's rules) |  |  |  |
 
@@ -116,7 +133,7 @@ Protonix 40 mg once daily
 
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
-| citalopram, haloperidol, azithromycin, fluconazole | QT prolongation | major | HIT | QT Prolongation Risk shared by 4 drugs | QT-Prolongation and Torsade de Pointes : Dose-dependent QTc prolongation, Torsade de pointes, ventricular tachycardia, and sudden death have occurred. | Celexa / warnings_and_cautions |
+| citalopram, haloperidol, azithromycin, fluconazole | QT prolongation | major | PARTIAL (got T16 at moderate) | QT Prolongation Risk shared by 4 drugs | QT-Prolongation and Torsade de Pointes : Dose-dependent QTc prolongation, Torsade de pointes, ventricular tachycardia, and sudden death have occurred. | Celexa / warnings_and_cautions |
 | citalopram, fluconazole | CYP inhibition | major | MISS (category outside the checker's rules) |  |  |  |
 | haloperidol, fluconazole | CYP inhibition | moderate | MISS (category outside the checker's rules) |  |  |  |
 | furosemide, citalopram, haloperidol, azithromycin, fluconazole | electrolyte | moderate | MISS (category outside the checker's rules) |  |  |  |
@@ -171,7 +188,7 @@ Plavix 75 mg once daily
 | warfarin, amiodarone | bleeding | major | MISS (category outside the checker's rules) |  |  |  |
 | warfarin, aspirin, clopidogrel | bleeding | major | MISS (category outside the checker's rules) |  |  |  |
 | escitalopram, warfarin, aspirin, clopidogrel | bleeding | moderate | MISS (category outside the checker's rules) |  |  |  |
-| escitalopram, amiodarone | QT prolongation | major | HIT | QT Prolongation Risk shared by 2 drugs | 5.4 Worsened Arrhythmia Amiodarone hydrochloride can exacerbate the presenting arrhythmia in about 2 to 5% of patients or cause new ventricular fibrillation, incessant ventricular… | Cordarone / warnings_and_cautions |
+| escitalopram, amiodarone | QT prolongation | major | PARTIAL (got T16 at moderate) | QT Prolongation Risk shared by 2 drugs | 5.4 Worsened Arrhythmia Amiodarone hydrochloride can exacerbate the presenting arrhythmia in about 2 to 5% of patients or cause new ventricular fibrillation, incessant ventricular… | Cordarone / warnings_and_cautions |
 
 Unresolved entries: Wednesday (unresolved: RxNorm found no close name); Friday (unresolved: RxNorm found no close name); Thursday (unresolved: RxNorm found no close name); Saturday (unresolved: RxNorm found no close name); Sunday (unresolved: RxNorm found no close name); Bayer 81 mg once daily (unresolved: RxNorm found no close name)
 False positives: none
@@ -195,7 +212,7 @@ Vistaril 25 mg three times daily
 
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
-| oxycodone ER, oxycodone IR | duplicate entry | major | PARTIAL (got shared_ingredient at minor) | OxyContin and Roxicodone share oxycodone | base ingredients: oxycodone | OxyContin / |
+| oxycodone ER, oxycodone IR | duplicate entry | major | PARTIAL (got shared_ingredient at moderate) | OxyContin and Roxicodone share oxycodone | base ingredients: oxycodone | OxyContin / |
 | oxycodone, clonazepam | respiratory depression | major | HIT | CNS Depression Risk shared by 6 drugs | Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, includi… | OxyContin / boxed_warning |
 | oxycodone, gabapentin | respiratory depression | major | HIT | CNS Depression Risk shared by 6 drugs | Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, includi… | OxyContin / boxed_warning |
 | oxycodone, carisoprodol, clonazepam | CNS depression | major | HIT | CNS Depression Risk shared by 6 drugs | Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, includi… | OxyContin / boxed_warning |
@@ -272,13 +289,13 @@ Nexium 40 mg once daily
 
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
-| fluoxetine, paroxetine | duplicate therapy | major | PARTIAL (got T14 at major) | Serotonin Syndrome Risk shared by 2 drugs | When using fluoxetine and olanzapine in combination, also refer to the Warnings and Precautions section of the package insert for Symbyax. • Suicidal Thoughts and Behaviors in Chi… | Prozac / warnings_and_cautions |
+| fluoxetine, paroxetine | duplicate therapy | major | PARTIAL (got T14 at moderate) | Serotonin Syndrome Risk shared by 2 drugs | When using fluoxetine and olanzapine in combination, also refer to the Warnings and Precautions section of the package insert for Symbyax. • Suicidal Thoughts and Behaviors in Chi… | Prozac / warnings_and_cautions |
 | fluoxetine, paroxetine, tamoxifen | efficacy loss | major | MISS (category outside the checker's rules) |  |  |  |
 | fluoxetine, paroxetine, metoprolol | CYP inhibition | moderate | MISS (category outside the checker's rules) |  |  |  |
 | fluoxetine, paroxetine, naproxen | bleeding | moderate | MISS (category outside the checker's rules) |  |  |  |
 
 Unresolved entries: none
-False positives: QT Prolongation Risk shared by 3 drugs [major, rule: esomeprazole]
+False positives: QT Prolongation Risk shared by 3 drugs [moderate, rule: esomeprazole]
 Variants: identical alert sets across newline, comma, semicolon, and reversed order
 
 ## L10: Contraindicated statin-macrolide pair; hyperkalemia triad; mEq unit; weekly dosing
@@ -341,9 +358,9 @@ Xanax XR 1 mg once daily
 
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
-| olanzapine/fluoxetine, fluoxetine | duplicate therapy | major | PARTIAL (got shared_ingredient at minor) | Symbyax and Prozac share fluoxetine | base ingredients: fluoxetine, olanzapine | Symbyax / |
+| olanzapine/fluoxetine, fluoxetine | duplicate therapy | major | PARTIAL (got shared_ingredient at moderate) | Symbyax and Prozac share fluoxetine | base ingredients: fluoxetine, olanzapine | Symbyax / |
 | hydrocodone/acetaminophen, acetaminophen | dose ceiling | major | MISS (category outside the checker's rules) |  |  |  |
-| alprazolam, alprazolam ER | duplicate entry | moderate | PARTIAL (got shared_ingredient at minor) | Xanax and Xanax XR share alprazolam | base ingredients: alprazolam | Xanax / |
+| alprazolam, alprazolam ER | duplicate entry | moderate | HIT | Xanax and Xanax XR share alprazolam | base ingredients: alprazolam | Xanax / |
 | hydrocodone, alprazolam, olanzapine | respiratory depression | major | MISS (drugs resolved but no alert) |  |  |  |
 | fluoxetine, hydrocodone | CYP inhibition | moderate | MISS (category outside the checker's rules) |  |  |  |
 
@@ -372,7 +389,7 @@ Robaxin 750 mg four times daily
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
 | linezolid, venlafaxine | serotonin syndrome | contraindicated | HIT | Zyvox matches a contraindication named in Effexor XR's label | Venlafaxine hydrochloride extended-release capsules are contraindicated in patients: • with known hypersensitivity to venlafaxine hydrochloride, desvenlafaxine succinate or to any… | Effexor XR / contraindications |
-| linezolid, buspirone, fentanyl, metoclopramide | serotonin syndrome | major | HIT | Serotonin Syndrome Risk shared by 5 drugs | 5.3 Serotonin Syndrome Spontaneous reports of serotonin syndrome including fatal cases associated with the co-administration of Linezolid and serotonergic agents, including antide… | Zyvox / warnings_and_cautions |
+| linezolid, buspirone, fentanyl, metoclopramide | serotonin syndrome | major | PARTIAL (got T14 at moderate) | Serotonin Syndrome Risk shared by 5 drugs | 5.3 Serotonin Syndrome Spontaneous reports of serotonin syndrome including fatal cases associated with the co-administration of Linezolid and serotonergic agents, including antide… | Zyvox / warnings_and_cautions |
 | fentanyl, methocarbamol | respiratory depression | major | HIT | CNS Depression Risk shared by 2 drugs | Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, includi… | Duragesic / boxed_warning |
 | metoclopramide, venlafaxine, buspirone | serotonin syndrome | moderate | HIT | Serotonin Syndrome Risk shared by 5 drugs | 5.3 Serotonin Syndrome Spontaneous reports of serotonin syndrome including fatal cases associated with the co-administration of Linezolid and serotonergic agents, including antide… | Zyvox / warnings_and_cautions |
 
@@ -503,7 +520,7 @@ Paxil 40 mg once daily
 | amitriptyline, oxybutynin, hydroxyzine, benztropine, paroxetine | anticholinergic burden | major | MISS (category outside the checker's rules) |  |  |  |
 | donepezil, amitriptyline, oxybutynin, hydroxyzine, benztropine | therapeutic antagonism | major | MISS (category outside the checker's rules) |  |  |  |
 | paroxetine, amitriptyline | CYP inhibition | major | MISS (category outside the checker's rules) |  |  |  |
-| amitriptyline, hydroxyzine | QT prolongation | moderate | PARTIAL (got T15 at major) | CNS Depression Risk shared by 2 drugs | Amitriptyline hydrochloride may enhance the response to alcohol and the effects of barbiturates and other CNS depressants. | Elavil / warnings |
+| amitriptyline, hydroxyzine | QT prolongation | moderate | PARTIAL (got T15 at moderate) | CNS Depression Risk shared by 2 drugs | Amitriptyline hydrochloride may enhance the response to alcohol and the effects of barbiturates and other CNS depressants. | Elavil / warnings |
 
 Unresolved entries: none
 False positives: none
@@ -599,7 +616,7 @@ Zofran 8 mg twice daily
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
 | tacrolimus, fluconazole | CYP inhibition | major | MISS (category outside the checker's rules) |  |  |  |
-| tacrolimus, fluconazole, ondansetron | QT prolongation | major | HIT | QT Prolongation Risk shared by 4 drugs | When co-administering tacrolimus with other substrates and/or inhibitors of CYP3A4 that also have the potential to prolong the QT interval, a reduction in tacrolimus dose, frequen… | Prograf / warnings_and_cautions |
+| tacrolimus, fluconazole, ondansetron | QT prolongation | major | PARTIAL (got T16 at moderate) | QT Prolongation Risk shared by 4 drugs | When co-administering tacrolimus with other substrates and/or inhibitors of CYP3A4 that also have the potential to prolong the QT interval, a reduction in tacrolimus dose, frequen… | Prograf / warnings_and_cautions |
 | mycophenolate mofetil, omeprazole | absorption/timing | moderate | MISS (category outside the checker's rules) |  |  |  |
 | simvastatin, fluconazole | myopathy/rhabdomyolysis | moderate | MISS (category outside the checker's rules) |  |  |  |
 | tacrolimus, omeprazole | CYP inhibition | minor | MISS (category outside the checker's rules) |  |  |  |
@@ -650,8 +667,8 @@ Aleve 220 mg twice daily
 
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
-| hydrocodone/acetaminophen, oxycodone/acetaminophen | duplicate therapy | major | PARTIAL (got shared_ingredient at minor) | Norco and Percocet share acetaminophen | base ingredients: acetaminophen, hydrocodone | Norco / |
-| acetaminophen, acetaminophen | duplicate entry | moderate | PARTIAL (got shared_ingredient at minor) | Norco and Percocet share acetaminophen | base ingredients: acetaminophen, hydrocodone | Norco / |
+| hydrocodone/acetaminophen, oxycodone/acetaminophen | duplicate therapy | major | PARTIAL (got shared_ingredient at moderate) | Norco and Percocet share acetaminophen | base ingredients: acetaminophen, hydrocodone | Norco / |
+| acetaminophen, acetaminophen | duplicate entry | moderate | HIT | Norco and Percocet share acetaminophen | base ingredients: acetaminophen, hydrocodone | Norco / |
 | zolpidem, eszopiclone | duplicate therapy | major | PARTIAL (got T15 at major) | CNS Depression Risk shared by 4 drugs | Risks from Concomitant Use with Benzodiazepines or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, includi… | Norco / boxed_warning |
 | meloxicam, naproxen sodium | duplicate therapy | major | MISS (drugs resolved but no alert) |  |  |  |
 | hydrocodone, oxycodone, zolpidem, eszopiclone | CNS depression | major | HIT | CNS Depression Risk shared by 4 drugs | Risks from Concomitant Use with Benzodiazepines or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, includi… | Norco / boxed_warning |
@@ -937,7 +954,7 @@ Fioricet 50/325/40 mg 2 tablets every 4 hours as needed, max 6 tablets/day
 
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
-| sumatriptan, rizatriptan | duplicate therapy | major | PARTIAL (got T14 at major) | Serotonin Syndrome Risk shared by 3 drugs | Serotonin syndrome: Discontinue sumatriptan if occurs. | IMITREX / warnings_and_cautions |
+| sumatriptan, rizatriptan | duplicate therapy | major | PARTIAL (got T14 at moderate) | Serotonin Syndrome Risk shared by 3 drugs | Serotonin syndrome: Discontinue sumatriptan if occurs. | IMITREX / warnings_and_cautions |
 | rizatriptan, propranolol | CYP inhibition | moderate | MISS (category outside the checker's rules) |  |  |  |
 | sumatriptan, rizatriptan, amitriptyline | serotonin syndrome | moderate | HIT | Serotonin Syndrome Risk shared by 3 drugs | Serotonin syndrome: Discontinue sumatriptan if occurs. | IMITREX / warnings_and_cautions |
 | butalbital, amitriptyline, topiramate | CNS depression | moderate | HIT | CNS Depression Risk shared by 4 drugs | Neonates whose mothers are receiving propranolol at parturition have exhibited bradycardia, hypoglycemia and/or respiratory depression. | INDERAL LA / precautions |
@@ -1094,7 +1111,7 @@ Advil 200 mg 2 tablets twice daily
 
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
-| sertraline, sertraline | duplicate entry | major | PARTIAL (got shared_ingredient at minor) | Zoloft and Sertraline share sertraline | base ingredients: sertraline | Zoloft / |
+| sertraline, sertraline | duplicate entry | major | PARTIAL (got shared_ingredient at moderate) | Zoloft and Sertraline share sertraline | base ingredients: sertraline | Zoloft / |
 | levothyroxine, levothyroxine | unit normalization | major | MISS (category outside the checker's rules) |  |  |  |
 | ibuprofen, ibuprofen | dose ceiling | major | MISS (category outside the checker's rules) |  |  |  |
 | sertraline, ibuprofen | bleeding | moderate | MISS (category outside the checker's rules) |  |  |  |
