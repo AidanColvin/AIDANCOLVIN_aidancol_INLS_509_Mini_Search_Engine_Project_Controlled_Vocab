@@ -96,7 +96,7 @@
       <li class="flow__step"><span class="flow__n">3</span><strong>Map ingredients</strong><span>Roll every substance up to its base ingredient through RxNorm.</span></li>
       <li class="flow__step"><span class="flow__n">4</span><strong>Tag</strong><span>Run the 17 vocabulary rules on every label. Keep the sentence behind each tag.</span></li>
       <li class="flow__step"><span class="flow__n">5</span><strong>Index</strong><span>Build the BM25 index, the name dictionary, and the checker's per-label tables.</span></li>
-      <li class="flow__step"><span class="flow__n">6</span><strong>Test and deploy</strong><span>330 Python tests and 107 front-end tests must pass. Then the built files go to Vercel.</span></li>
+      <li class="flow__step"><span class="flow__n">6</span><strong>Test and deploy</strong><span>353 Python tests and 109 front-end tests must pass. Then the built files go to Vercel.</span></li>
     </ol>
   </section>
 
@@ -202,8 +202,9 @@ k₁ = 1.2    b = 0.75    N = 2,481    avgdl = 3,872</pre>
 
   <section class="doc__section">
     <h2>Name resolution</h2>
-    <p>A typed entry is parsed into a name, a strength, and a frequency. The name is then matched in stages. The first stage that succeeds wins.</p>
+    <p>A typed entry is parsed into a brand, a generic, a strength per component, a frequency or named-day schedule, and any as-needed maximum; a stated total after "=" is kept as written and never read as a dose. The name is then matched in stages. The first stage that succeeds wins.</p>
     <ol class="flow flow--vertical" aria-label="Name resolution stages">
+      <li class="flow__step"><span class="flow__n">0</span><strong>Written generic</strong><span>The generic in parentheses is rolled up to base ingredients (divalproex sodium → valproate) and matched to the label with exactly those ingredients, preferring the typed brand's label. An OTC ingredient with no single-ingredient label (aspirin, calcium carbonate) is kept by ingredient so the class rules still apply.</span></li>
       <li class="flow__step"><span class="flow__n">1</span><strong>Exact match</strong><span>Against the local dictionary of every brand, generic, and ingredient name in the collection.</span></li>
       <li class="flow__step"><span class="flow__n">2</span><strong>Close match</strong><span>Sequence similarity against the dictionary, whole name and leading words. Accepted at 0.85 or better. "trazdone" matches "trazodone".</span></li>
       <li class="flow__step"><span class="flow__n">3</span><strong>RxNorm approximate match</strong><span>RxNav's approximateTerm, then the concept's ingredients, then the collection label for that ingredient set. An exact RxNorm name beats a weaker local guess.</span></li>
@@ -213,33 +214,39 @@ k₁ = 1.2    b = 0.75    N = 2,481    avgdl = 3,872</pre>
 
   <section class="doc__section">
     <h2>The checker</h2>
-    <p>One request runs three rules over the resolved labels. Each rule reads only the tags and sentences produced at build time.</p>
+    <p>One request parses, resolves, adds up each ingredient, then runs four kinds of check. The label-driven alerts are folded into the class rule that covers them, as evidence.</p>
     <div class="rules">
       <div class="rule">
         <strong>Group</strong>
-        <span>Two or more listed drugs carry the same interaction-risk tag: T14, T15, or T16. One alert per shared tag, with every member's own sentence.</span>
+        <span>Two or more medicines share an effect class: CNS depression, serotonin, QT, bleeding, potassium, kidney injury, blood pressure, heart rate, glucose, anticholinergic load, seizure threshold, sodium. Medicines are counted, not ingredients: Adderall's two amphetamines are one. The title states the count and the risk.</span>
       </div>
       <div class="rule">
         <strong>Pair</strong>
-        <span>Drug A's T17 sentence names drug B, or B's pharmacologic class, as whole words. Hypersensitivity and self-reference clauses are ignored.</span>
+        <span>A victim class meets a perpetrator class: CYP3A4, 2D6, 1A2, 2C9, 2C19, P-glycoprotein, inducers, antagonists. Hits for one victim merge into one alert ("warfarin with 2 drugs that raise the INR"). A label dose cap raises the grade when the dose is above it.</span>
       </div>
       <div class="rule">
         <strong>Duplication</strong>
-        <span>Two entries share a base ingredient, or one is the other's active metabolite in a small reference list. Their daily totals are summed.</span>
+        <span>Two entries share an ingredient, or one is the other's cited active metabolite; or two different drugs of one therapeutic class (two SSRIs, two NSAIDs). Different names for one drug grade D; a regimen split over named days is not a duplicate.</span>
+      </div>
+      <div class="rule">
+        <strong>Ceiling</strong>
+        <span>An ingredient's total across all entries, combination products included, against its labeled daily maximum.</span>
       </div>
     </div>
 
     <ol class="flow" aria-label="A check request">
-      <li class="flow__step"><span class="flow__n">1</span><strong>Parse</strong><span>Split entries; read name, strength, frequency.</span></li>
-      <li class="flow__step"><span class="flow__n">2</span><strong>Resolve</strong><span>Dictionary, then RxNorm.</span></li>
-      <li class="flow__step"><span class="flow__n">3</span><strong>Rules</strong><span>Group, pair, duplication.</span></li>
-      <li class="flow__step"><span class="flow__n">4</span><strong>Reply</strong><span>Alerts with sentence, section, tier, DailyMed link.</span></li>
+      <li class="flow__step"><span class="flow__n">1</span><strong>Parse</strong><span>Brand, generic, strengths, schedule, maximum.</span></li>
+      <li class="flow__step"><span class="flow__n">2</span><strong>Resolve</strong><span>Written generic, dictionary, RxNorm.</span></li>
+      <li class="flow__step"><span class="flow__n">3</span><strong>Totals</strong><span>Per ingredient, units normalized, MME.</span></li>
+      <li class="flow__step"><span class="flow__n">4</span><strong>Rules</strong><span>90 class rules; label T14–T17; duplicates; ceilings.</span></li>
+      <li class="flow__step"><span class="flow__n">5</span><strong>Reply</strong><span>Grade, count, label sentence, why, what to do, sources.</span></li>
     </ol>
+    <p class="doc__fine">The rule table is <code>data/reference/interaction_knowledge.json</code>. Class membership draws on the FDA table of CYP substrates, inhibitors, and inducers and on the ONC high-priority interaction list (Phansalkar 2012). At build time, each rule is matched against the Contraindications, Boxed Warning, Warnings and Precautions, and Drug Interactions sections of every label on its side, and the first sentence naming the partner drug or class is stored for quoting.</p>
   </section>
 
   <section class="doc__section">
     <h2>Severity grading</h2>
-    <p>Every alert is graded A to E. The grade is read from the label, not assigned by hand. Each member sentence is graded on its own; the alert takes the most severe.</p>
+    <p>Every alert is graded A to E. A class rule carries its own grade, set from the clinical rulebook and the labels' own words (contraindication E, boxed warning or "avoid" D, a dose change or level to monitor C). It is raised when a label dose cap is exceeded. A label contraindication with no covering rule is graded from its section, by the list below. A label-only shared-risk tag with no covering rule is kept as a grade A note.</p>
     <ol class="decide" aria-label="How one label sentence is graded">
       <li class="decide__q"><span>Is it a pair alert, from the Contraindications section?</span><b class="decide__to decide__to--e">E</b></li>
       <li class="decide__q"><span>From Contraindications or the Boxed Warning, or does it say "avoid" or "not recommended" about using the drugs together?</span><b class="decide__to decide__to--d">D</b></li>
@@ -247,14 +254,14 @@ k₁ = 1.2    b = 0.75    N = 2,481    avgdl = 3,872</pre>
       <li class="decide__q"><span>From Drug Interactions, and says to monitor or adjust the dose?</span><b class="decide__to decide__to--b">B</b></li>
       <li class="decide__q decide__q--last"><span>From Drug Interactions, no action stated.</span><b class="decide__to decide__to--a">A</b></li>
     </ol>
-    <p class="doc__fine">Read top to bottom; the first "yes" sets the grade. A duplicate (two entries of one ingredient) is graded C.</p>
+    <p class="doc__fine">For label-driven alerts only. Read top to bottom; the first "yes" sets the grade. A duplicate is D when one drug appears under different names, in a combination product, or as a metabolite, or when the combined dose reaches its maximum; C when one product is simply entered twice.</p>
     <figure class="gradescale" aria-label="The five severity grades, worst first">
-      <div class="gradescale__row gradescale__row--e"><span class="gradescale__letter">E</span><div><strong>Avoid combination</strong><span>The label says these drugs must not be used together.</span></div><span class="gradescale__cue">Contraindications section names the other drug or its class</span><span class="gradescale__lexi">Lexicomp X</span></div>
+      <div class="gradescale__row gradescale__row--e"><span class="gradescale__letter">E</span><div><strong>Avoid combination</strong><span>Do not use these drugs together.</span></div><span class="gradescale__cue">Contraindications section names the other drug or its class</span><span class="gradescale__lexi">Lexicomp X</span></div>
       <div class="gradescale__row gradescale__row--d"><span class="gradescale__letter">D</span><div><strong>Consider changing therapy</strong><span>Serious risk. A prescriber should weigh changing a drug.</span></div><span class="gradescale__cue">Boxed Warning, or "avoid" / "not recommended" about using them together</span><span class="gradescale__lexi">Lexicomp D</span></div>
       <div class="gradescale__row gradescale__row--c"><span class="gradescale__letter">C</span><div><strong>Monitor closely</strong><span>A clinically significant risk. Watch for it.</span></div><span class="gradescale__cue">Warnings and Precautions section</span><span class="gradescale__lexi">Lexicomp C</span></div>
       <div class="gradescale__row gradescale__row--b"><span class="gradescale__letter">B</span><div><strong>Monitor</strong><span>The label describes it and gives an instruction.</span></div><span class="gradescale__cue">Drug Interactions section says "monitor" or to adjust the dose</span><span class="gradescale__lexi">Lexicomp C</span></div>
       <div class="gradescale__row gradescale__row--a"><span class="gradescale__letter">A</span><div><strong>Minor</strong><span>Recorded. Worth knowing.</span></div><span class="gradescale__cue">Drug Interactions section, no action stated</span><span class="gradescale__lexi">Lexicomp B</span></div>
-      <figcaption>Worst first. The grade comes from the FDA label itself: which section states the risk, and what it tells a prescriber to do.</figcaption>
+      <figcaption>Worst first. The cue column is the label-section rule used when no class rule applies.</figcaption>
     </figure>
     <div class="why3">
       <div class="why3__cell"><strong>Why the label section</strong><span>FDA's labeling rule defines each section by seriousness. Contraindications: the risk clearly outweighs any benefit. Boxed Warning: serious or life-threatening risk. (21 CFR 201.57)</span></div>
@@ -302,10 +309,10 @@ k₁ = 1.2    b = 0.75    N = 2,481    avgdl = 3,872</pre>
   <section class="doc__section">
     <h2>How it is kept honest</h2>
     <ul class="doc__list">
-      <li>A tag with no evidence sentence is never assigned. An alert with no evidence is never raised. Nothing is paraphrased.</li>
-      <li>Precision over recall: a rule omits a term rather than guess, and the checker never says "safe", only "No warning found in the labels checked."</li>
+      <li>A tag with no evidence sentence is never assigned. Label sentences are quoted exactly, with section and DailyMed link. Each class rule's mechanism and action is written once and cites its rulebook row and sources.</li>
+      <li>The checker never says "safe", only "No warning found in the labels checked", and says "Nothing was checked" when no entry matched a drug. Two control lists must raise nothing at grade B or above.</li>
       <li>Every function, in Python and TypeScript, has a three-line comment saying what it takes, does, and gives. A test fails the build if one is missing.</li>
-      <li>The validation report is regenerated against the live site and committed with every release, misses included.</li>
+      <li>A black-box test pack drives the live site in a real browser, 41 patient lists plus 6 generalization lists, and every run is committed under <code>test_runs/</code>, misses included.</li>
     </ul>
   </section>
 </main>

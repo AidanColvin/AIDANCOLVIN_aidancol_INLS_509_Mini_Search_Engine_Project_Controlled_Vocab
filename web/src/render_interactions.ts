@@ -272,11 +272,14 @@ function cardGenericLine(row: MedicationRow): string {
 
 /**
  * Takes one resolved row.
- * Picks the name to lead the card with: the brand the user typed when the match chain starts with one, else the label's own brand, else the generic.
+ * Picks the name to lead the card with: the brand written before a parenthesized generic, else the brand the user typed when the match chain starts with one, else the label's own brand, else the generic.
  * Gives the headline text, and whether it is a brand rather than the generic.
  */
 function cardBrandLine(row: MedicationRow): { readonly text: string; readonly isBrand: boolean } {
   const generic = cardGenericLine(row);
+  if (row.brand_typed !== null && row.brand_typed.trim().length > 0) {
+    return { text: row.brand_typed.trim(), isBrand: true };
+  }
   const typed = row.matched_name?.[0]?.trim() ?? "";
   if (typed.length > 0 && typed.toLowerCase() !== generic && !row.base_ingredients.includes(typed.toLowerCase()) && typed.toLowerCase() !== rowHeadlineName(row)) {
     return { text: typed, isBrand: true };

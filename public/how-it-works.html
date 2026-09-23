@@ -35,14 +35,14 @@
 
   <section class="doc__section">
     <h2>1. Type</h2>
-    <p>The box is already focused when the page opens. Type one medication and press Return, or paste a whole list. Commas, semicolons, and new lines all work as separators. If you include a dose and frequency, the tool reads them and shows a daily total.</p>
+    <p>The box is already focused when the page opens. Type one medication and press Return, or paste a whole list. Commas, semicolons, and new lines all work as separators. A prescription line works as written: <code>Zyprexa (olanzapine) 10 mg once daily = 10 mg/day</code>. The tool reads the brand, the generic, every strength in a combination, named days (Mon/Wed/Fri), weekly doses, and as-needed maximums.</p>
   </section>
 
   <section class="doc__section">
     <h2>2. Resolve</h2>
-    <p>Each entry goes through two matchers in order. The first is a dictionary built from the labels themselves. The second is the National Library of Medicine's RxNorm service, which handles typos and unusual spellings.</p>
+    <p>Each entry is matched in order. First comes the generic you wrote. Then a dictionary built from the labels themselves. Last, the National Library of Medicine's RxNorm service, which handles typos and unusual spellings.</p>
     <ol class="flow flow--three" aria-label="How a name is resolved">
-      <li class="flow__step"><span class="flow__n">1</span><strong>Local dictionary</strong><span>Every brand, generic, and ingredient name in the collection. An exact match wins. A close match (85% similar or better) also wins.</span></li>
+      <li class="flow__step"><span class="flow__n">1</span><strong>Written generic, then local dictionary</strong><span>A generic in parentheses picks the label with exactly those ingredients. Otherwise every brand, generic, and ingredient name in the collection is tried: an exact match wins, and so does a close match (85% similar or better).</span></li>
       <li class="flow__step"><span class="flow__n">2</span><strong>RxNorm</strong><span>Asked only when the dictionary finds nothing close. Returns the nearest drug concept and its ingredients.</span></li>
       <li class="flow__step"><span class="flow__n">3</span><strong>One label</strong><span>The newest label for that ingredient set. Salts and their parent drug count as the same ingredient.</span></li>
     </ol>
@@ -56,43 +56,58 @@
 
   <section class="doc__section">
     <h2>3. Check</h2>
-    <p>An alert is raised in three situations. All three come from label text. Nothing else is consulted.</p>
+    <p>First every ingredient is added up across the list. Then four kinds of check run.</p>
     <div class="rules">
       <div class="rule">
-        <strong>Shared risk</strong>
-        <span>Two or more of your medications carry the same interaction warning in their labels.</span>
-        <em>Serotonin syndrome · CNS depression · QT prolongation</em>
+        <strong>Class rules</strong>
+        <span>90 rules built from a clinical rulebook of the interactions that actually send patients to hospital. Each rule names drug classes, not single drugs, so it also catches drugs never tested.</span>
+        <em>3 CNS depressants · statin + strong CYP3A4 inhibitor · warfarin + drugs that raise the INR</em>
       </div>
       <div class="rule">
-        <strong>Named combination</strong>
-        <span>One medication's label lists another of your medications, or its drug class, as contraindicated.</span>
+        <strong>Named in a label</strong>
+        <span>One medication's label lists another of your medications, or its class, as contraindicated.</span>
         <em>"…is contraindicated with strong CYP3A4 inhibitors"</em>
       </div>
       <div class="rule">
         <strong>Same drug twice</strong>
-        <span>Two entries share an active ingredient, or one is the other's active metabolite.</span>
-        <em>Zoloft and sertraline · venlafaxine and desvenlafaxine</em>
+        <span>Two entries share an active ingredient, including inside a combination product or under a different name, or one is the other's active metabolite.</span>
+        <em>Zoloft and sertraline · Norco and Tylenol · Risperdal and Invega</em>
+      </div>
+      <div class="rule">
+        <strong>Over the maximum</strong>
+        <span>An ingredient's total across every entry is above its labeled daily maximum.</span>
+        <em>acetaminophen 4,300 mg a day from Norco + Tylenol</em>
       </div>
     </div>
+    <figure class="anatomy" aria-label="Totals by ingredient">
+      <div class="anatomy__card">
+        <p class="anatomy__drugs">Totals by ingredient</p>
+        <p class="anatomy__tier">acetaminophen: 4,300 mg (4.3 g)/day · from 2 entries</p>
+        <p class="anatomy__tier">levothyroxine: 200 mcg (0.2 mg)/day · from 2 entries <span class="anatomy__note">← 0.1 mg and 100 mcg, one unit</span></p>
+        <p class="anatomy__tier">warfarin: 25 mg/week <span class="anatomy__note">← 5 mg Mon/Wed/Fri + 2.5 mg other days</span></p>
+        <p class="anatomy__tier">oxycodone: 120 mg/day max · 180 MME <span class="anatomy__note">← CDC 2022 conversion factors</span></p>
+      </div>
+      <figcaption>Totals shown beside the medication list.</figcaption>
+    </figure>
   </section>
 
   <section class="doc__section">
     <h2>4. Grade</h2>
     <p>Every interaction gets a severity, from A (minor) to E (avoid).</p>
     <figure class="gradescale" aria-label="The five severity grades, worst first">
-      <div class="gradescale__row gradescale__row--e"><span class="gradescale__letter">E</span><div><strong>Avoid combination</strong><span>The label says these drugs must not be used together.</span></div><span class="gradescale__cue">Contraindications section names the other drug or its class</span><span class="gradescale__lexi">Lexicomp X</span></div>
-      <div class="gradescale__row gradescale__row--d"><span class="gradescale__letter">D</span><div><strong>Consider changing therapy</strong><span>Serious risk. A prescriber should weigh changing a drug.</span></div><span class="gradescale__cue">Boxed Warning, or "avoid" / "not recommended" about using them together</span><span class="gradescale__lexi">Lexicomp D</span></div>
-      <div class="gradescale__row gradescale__row--c"><span class="gradescale__letter">C</span><div><strong>Monitor closely</strong><span>A clinically significant risk. Watch for it.</span></div><span class="gradescale__cue">Warnings and Precautions section</span><span class="gradescale__lexi">Lexicomp C</span></div>
-      <div class="gradescale__row gradescale__row--b"><span class="gradescale__letter">B</span><div><strong>Monitor</strong><span>The label describes it and gives an instruction.</span></div><span class="gradescale__cue">Drug Interactions section says "monitor" or to adjust the dose</span><span class="gradescale__lexi">Lexicomp C</span></div>
-      <div class="gradescale__row gradescale__row--a"><span class="gradescale__letter">A</span><div><strong>Minor</strong><span>Recorded. Worth knowing.</span></div><span class="gradescale__cue">Drug Interactions section, no action stated</span><span class="gradescale__lexi">Lexicomp B</span></div>
-      <figcaption>Worst first. The grade comes from the FDA label itself: which section states the risk, and what it tells a prescriber to do.</figcaption>
+      <div class="gradescale__row gradescale__row--e"><span class="gradescale__letter">E</span><div><strong>Avoid combination</strong><span>Do not use these drugs together.</span></div><span class="gradescale__cue">A labeled contraindication, such as a nitrate with sildenafil</span><span class="gradescale__lexi">Lexicomp X</span></div>
+      <div class="gradescale__row gradescale__row--d"><span class="gradescale__letter">D</span><div><strong>Consider changing therapy</strong><span>Dangerous. Use only with a reason and close monitoring.</span></div><span class="gradescale__cue">A boxed warning, an "avoid", or a dose above a label cap</span><span class="gradescale__lexi">Lexicomp D</span></div>
+      <div class="gradescale__row gradescale__row--c"><span class="gradescale__letter">C</span><div><strong>Monitor closely</strong><span>Adjust the dose or timing, or monitor a named measure.</span></div><span class="gradescale__cue">A dose change or a level to check, such as INR or potassium</span><span class="gradescale__lexi">Lexicomp C</span></div>
+      <div class="gradescale__row gradescale__row--b"><span class="gradescale__letter">B</span><div><strong>Monitor</strong><span>Real but manageable.</span></div><span class="gradescale__cue">A modest effect to watch</span><span class="gradescale__lexi">Lexicomp C</span></div>
+      <div class="gradescale__row gradescale__row--a"><span class="gradescale__letter">A</span><div><strong>Minor</strong><span>Usually no action.</span></div><span class="gradescale__cue">Recorded, worth knowing</span><span class="gradescale__lexi">Lexicomp B</span></div>
+      <figcaption>Worst first. Each rule carries its grade, the rulebook row behind it, and its sources; the FDA label sentence that states the risk is quoted on the card.</figcaption>
     </figure>
-    <p>Each grade lines up with a level in Lexicomp, the reference hospitals license. When an interaction has several label sentences, the most severe one sets the grade. The card always says why.</p>
+    <p>Each grade lines up with a level in Lexicomp, the reference hospitals license. A rule's grade can rise with the dose: simvastatin above its label cap next to diltiazem is D; at the cap it is C. When no rule covers a label's own contraindication, the label section sets the grade. The card always says why.</p>
   </section>
 
   <section class="doc__section">
     <h2>5. Show</h2>
-    <p>An alert names the drugs, the tier, the sentence from the label, which drug's label it came from and which section, and a link to that label on DailyMed. Nothing is paraphrased.</p>
+    <p>An alert gives the grade, the drugs, a count and the risk ("3 CNS depressants: …"), the label sentence with its section and a DailyMed link, why it happens, what to do, and its sources. Label sentences are quoted exactly; the "why" and "what to do" are written once per rule and cite their sources.</p>
     <figure class="anatomy" aria-label="What an alert looks like">
       <div class="anatomy__card">
         <p class="anatomy__grade"><span class="grade grade--solid">E</span> <strong>Avoid combination</strong> <span class="anatomy__note">← the grade</span></p>
@@ -100,7 +115,8 @@
         <p class="anatomy__tier">Why E: the Contraindications section of the Azilect label names this combination. <span class="anatomy__note">← why</span></p>
         <blockquote class="anatomy__quote">Rasagiline is contraindicated for use with meperidine, tramadol, methadone, propoxyphene and MAO inhibitors … because of risk of serotonin syndrome.</blockquote>
         <p class="anatomy__source">From the Azilect label, Contraindications section. Open on DailyMed ↗ <span class="anatomy__note">← the source</span></p>
-        <p class="anatomy__tier">What this means: a contraindication is a situation in which a drug should not be used. Source: MedlinePlus. <span class="anatomy__note">← plain words</span></p>
+        <p class="anatomy__tier">Why it happens: the rasagiline label contraindicates meperidine because serious, sometimes fatal serotonin syndrome has occurred. <span class="anatomy__note">← plain words</span></p>
+        <p class="anatomy__tier">What to do: do not use together; wait at least 14 days after stopping rasagiline. <span class="anatomy__note">← the action</span></p>
       </div>
       <figcaption>A real result. Above the cards, a strip shows how many interactions fall in each grade.</figcaption>
     </figure>
@@ -108,8 +124,8 @@
 
   <section class="doc__section">
     <h2>What it doesn't do</h2>
-    <p>It reports what the FDA labels state and nothing more. "No warning found in the labels checked" means the labels didn't say it, not that a combination is safe. It is not a licensed drug interaction database and does not replace clinical judgment.</p>
-    <p>How well it does on a blind test of 41 patient medication lists is measured and published, misses included: <a href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab/blob/main/docs/interaction-validation.md" target="_blank" rel="noopener noreferrer">validation report</a>.</p>
+    <p>It checks the classes and labels it knows. "No warning found in the labels checked" means neither the rules nor the labels flag the combination, not that it is safe. When no entry matches a drug, it says "Nothing was checked" instead. It is not a licensed drug interaction database and does not replace clinical judgment.</p>
+    <p>How well it does on a blind test of 41 patient medication lists, run in a real browser against this site, is measured and published, misses included: <a href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab/tree/main/test_runs" target="_blank" rel="noopener noreferrer">test runs</a>.</p>
   </section>
 </main>
 

@@ -716,6 +716,11 @@ button:disabled {
   font-size: var(--size-caption);
   line-height: 1.5;
 }
+.alert,
+.med-card,
+.totals {
+  overflow-wrap: anywhere;
+}
 .alert__includes {
   margin: var(--space-1) 0 0;
   padding-left: 1.2em;
@@ -1795,7 +1800,7 @@ button:disabled {
     padding: var(--space-4) var(--space-2) 0;
   }
   .report {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--space-4);
   }
   .flow--five,
