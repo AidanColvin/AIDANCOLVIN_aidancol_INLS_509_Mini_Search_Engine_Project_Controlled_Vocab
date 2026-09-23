@@ -1,22 +1,32 @@
 /**
  * Takes no arguments.
- * Builds the Interactions view: the medication field and list, and the results section, from state and callbacks only.
+ * Builds the one-page report: the medication field, the alert cards graded worst first, and the medication cards beside them, from state and callbacks only.
  * Gives nothing; the exported mount and update functions are called for the DOM nodes and side effects they produce.
  */
 
 import {
   additionalEvidenceMembers,
-  alertDisplayTierName,
   alertDrugNames,
+  alertExplanation,
+  alertGrade,
   alertIconKey,
   primaryEvidenceMember,
   sortAlerts,
 } from "./alerts.js";
 import { formatDailyTotal, pluralizeCount, sectionDisplayName } from "./format.js";
-import { candidateChoices, countResolvedRows, isSpellingCorrected, resolvedNames, rowHeadlineName, statusForLine, usefulChoices } from "./meds.js";
+import {
+  candidateChoices,
+  countResolvedRows,
+  formatFrequency,
+  releaseForm,
+  resolvedNames,
+  rowHeadlineName,
+  statusForLine,
+  usefulChoices,
+} from "./meds.js";
 import { alertIcon, chevronDownIcon, chevronIcon, externalLinkIcon, plusIcon, removeIcon } from "./render_icons.js";
 import { buildLookupBlock } from "./render_lookup.js";
-import type { AlertMember, AlertRecord, AppState, LabelLookup, MedicationRow, PdlaTag, UnresolvedEntry } from "./records.js";
+import type { AlertMember, AlertRecord, AppState, LabelLookup, LabelNote, MedicationRow, PdlaTag, UnresolvedEntry } from "./records.js";
 
 export interface InteractionsCallbacks {
   readonly onAddMedication: (text: string) => void;
@@ -34,6 +44,7 @@ export interface InteractionsViewRefs {
   readonly medicationInput: HTMLInputElement;
   readonly addButton: HTMLButtonElement;
   readonly checkStatus: HTMLElement;
+  readonly report: HTMLElement;
   readonly listHeader: HTMLElement;
   readonly listCountLabel: HTMLElement;
   readonly clearAllButton: HTMLButtonElement;
@@ -45,10 +56,11 @@ export interface InteractionsViewRefs {
 const PLACEHOLDER_FIRST = "warfarin 5 mg daily";
 const PLACEHOLDER_NEXT = "Add another medication";
 const CHECKING_TEXT = "Checking…";
+const DAILYMED_URL_PREFIX = "https://dailymed.nlm.nih.gov/";
 
 /**
  * Takes the Interactions view's callbacks.
- * Builds the view's static shell once: the title, lede, the medication form with its status line, list header, empty list and results containers.
+ * Builds the view's static shell once: the title, lede, the medication form with its status line, and the two-column report with the alerts column and the medications column.
  * Gives the InteractionsViewRefs, so the caller can update the dynamic parts and keep the medication field's identity stable across renders.
  */
 export function mountInteractionsView(callbacks: InteractionsCallbacks): InteractionsViewRefs {
@@ -101,10 +113,23 @@ export function mountInteractionsView(callbacks: InteractionsCallbacks): Interac
 
   form.append(fieldWrap, checkStatus, hint);
 
+  const report = document.createElement("div");
+  report.className = "report";
+  report.hidden = true;
+
+  const resultsSection = document.createElement("section");
+  resultsSection.className = "report__alerts";
+  resultsSection.setAttribute("aria-label", "Interactions");
+  resultsSection.setAttribute("aria-live", "polite");
+
+  const medsColumn = document.createElement("section");
+  medsColumn.className = "report__meds";
+  medsColumn.setAttribute("aria-label", "Medications");
+
   const listHeader = document.createElement("div");
-  listHeader.className = "list-header narrow";
-  const listCountLabel = document.createElement("span");
-  listCountLabel.className = "caption";
+  listHeader.className = "list-header";
+  const listCountLabel = document.createElement("h2");
+  listCountLabel.className = "report__heading";
   const clearAllButton = document.createElement("button");
   clearAllButton.type = "button";
   clearAllButton.className = "btn btn--small";
@@ -112,20 +137,18 @@ export function mountInteractionsView(callbacks: InteractionsCallbacks): Interac
   listHeader.append(listCountLabel, clearAllButton);
 
   const listSection = document.createElement("ul");
-  listSection.className = "med-list narrow";
+  listSection.className = "med-list";
   listSection.setAttribute("aria-label", "Medications to check");
+  medsColumn.append(listHeader, listSection);
 
-  const resultsSection = document.createElement("section");
-  resultsSection.className = "results";
-  resultsSection.setAttribute("aria-label", "Results");
-  resultsSection.setAttribute("aria-live", "polite");
+  report.append(resultsSection, medsColumn);
 
   const liveRegion = document.createElement("div");
   liveRegion.className = "visually-hidden";
   liveRegion.setAttribute("aria-live", "polite");
   liveRegion.setAttribute("role", "status");
 
-  root.append(title, lede, form, listHeader, listSection, resultsSection, liveRegion);
+  root.append(title, lede, form, report, liveRegion);
 
   form.addEventListener("submit", (domEvent) => {
     domEvent.preventDefault();
@@ -149,7 +172,7 @@ export function mountInteractionsView(callbacks: InteractionsCallbacks): Interac
     callbacks.onClearAll();
   });
 
-  return { root, medicationInput, addButton, checkStatus, listHeader, listCountLabel, clearAllButton, listSection, resultsSection, liveRegion };
+  return { root, medicationInput, addButton, checkStatus, report, listHeader, listCountLabel, clearAllButton, listSection, resultsSection, liveRegion };
 }
 
 /**
@@ -168,7 +191,7 @@ function submitInputValue(input: HTMLInputElement, callbacks: InteractionsCallba
 
 /**
  * Takes the view's refs, the current AppState, and the Interactions callbacks.
- * Updates the field's placeholder, the status line, the add button's disabled state, and rebuilds the list and results sections from the current state.
+ * Updates the field's placeholder, the status line, the add button's disabled state, and rebuilds the alert and medication columns from the current state.
  * Gives nothing; the medication input element itself is never replaced.
  */
 export function updateInteractionsView(refs: InteractionsViewRefs, state: AppState, callbacks: InteractionsCallbacks): void {
@@ -176,17 +199,11 @@ export function updateInteractionsView(refs: InteractionsViewRefs, state: AppSta
   refs.medicationInput.placeholder = hasEntries ? PLACEHOLDER_NEXT : PLACEHOLDER_FIRST;
   refs.addButton.disabled = state.checkLoading;
   refs.checkStatus.textContent = state.checkLoading ? CHECKING_TEXT : "";
+  refs.report.hidden = !hasEntries;
   refs.listCountLabel.textContent = pluralizeCount(state.medicationLines.length, "medication");
-  refs.clearAllButton.hidden = !hasEntries;
 
-  refs.listSection.replaceChildren(...buildMedicationRows(state, callbacks));
-  refs.listSection.hidden = !hasEntries;
-  refs.listHeader.hidden = !hasEntries;
-
-  refs.resultsSection.replaceChildren();
-  if (hasEntries) {
-    refs.resultsSection.append(...buildResultsSection(state, callbacks));
-  }
+  refs.listSection.replaceChildren(...buildMedicationCards(state, callbacks));
+  refs.resultsSection.replaceChildren(...buildAlertsColumn(state, callbacks));
 
   const alertCount = state.checkResponse === null ? null : state.checkResponse.alerts.length;
   refs.liveRegion.textContent = alertCount === null ? "" : pluralizeCount(alertCount, "alert");
@@ -194,155 +211,273 @@ export function updateInteractionsView(refs: InteractionsViewRefs, state: AppSta
 
 /**
  * Takes the current AppState and the Interactions callbacks.
- * Builds one list item per medication line, in list order.
- * Gives the array of row elements, empty when the list is empty.
+ * Builds one card per medication line, in list order.
+ * Gives the array of card elements, empty when the list is empty.
  */
-function buildMedicationRows(state: AppState, callbacks: InteractionsCallbacks): readonly HTMLElement[] {
+function buildMedicationCards(state: AppState, callbacks: InteractionsCallbacks): readonly HTMLElement[] {
   return state.medicationLines.map((line) => {
     const status = statusForLine(line, state.checkResponse);
     if ("row" in status) {
-      return buildResolvedRow(line, status.row, state.expandedRows.includes(line), callbacks);
+      return buildResolvedCard(line, status.row, state.expandedRows.includes(line), callbacks);
     }
     if ("unresolved" in status) {
       const lookup = state.lookups.find((candidate) => candidate.line === line);
-      return buildUnresolvedRow(line, status.unresolved, lookup, resolvedNames(state.checkResponse), callbacks);
+      return buildUnresolvedCard(line, status.unresolved, lookup, resolvedNames(state.checkResponse), callbacks);
     }
-    return buildPendingRow(line, state.checkError === null, callbacks);
+    return buildPendingCard(line, state.checkError === null, callbacks);
   });
 }
 
 /**
  * Takes one medication line, whether a check is still expected for it, and the Interactions callbacks.
- * Builds the row shown while its check result has not arrived, dimmed only while a result is still on its way rather than after a failed check.
+ * Builds the card shown while its check result has not arrived, dimmed only while a result is still on its way rather than after a failed check.
  * Gives the list item element.
  */
-function buildPendingRow(line: string, awaitingResult: boolean, callbacks: InteractionsCallbacks): HTMLElement {
-  const row = document.createElement("li");
-  row.className = awaitingResult ? "med-row med-row--static med-row--pending" : "med-row med-row--static";
-  const textCol = document.createElement("span");
-  textCol.className = "med-row__text";
+function buildPendingCard(line: string, awaitingResult: boolean, callbacks: InteractionsCallbacks): HTMLElement {
+  const card = document.createElement("li");
+  card.className = awaitingResult ? "med-card med-card--pending" : "med-card";
+  const top = document.createElement("div");
+  top.className = "med-card__top";
+  const names = document.createElement("div");
+  names.className = "med-card__names";
   const headline = document.createElement("span");
-  headline.className = "med-row__headline";
+  headline.className = "med-card__brand";
   headline.textContent = line;
-  textCol.append(headline);
-  row.append(textCol, buildRemoveButton(line, line, callbacks));
-  return row;
-}
-
-/**
- * Takes one medication line, its resolved row, whether its detail is expanded, and the Interactions callbacks.
- * Builds the resolved row: a button showing the headline name, entered text, dose, DEA badge, and chevron, a remove button, and the detail panel when expanded.
- * Gives the list item element.
- */
-function buildResolvedRow(line: string, row: MedicationRow, expanded: boolean, callbacks: InteractionsCallbacks): HTMLElement {
-  const wrap = document.createElement("li");
-  wrap.className = "med-row";
-
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "med-row__button";
-  button.setAttribute("aria-expanded", String(expanded));
-
-  const textCol = document.createElement("span");
-  textCol.className = "med-row__text";
-  const headline = document.createElement("span");
-  headline.className = "med-row__headline";
-  headline.textContent = rowHeadlineName(row);
-  const secondaryLine = document.createElement("span");
-  secondaryLine.className = "med-row__secondary";
-  secondaryLine.append(document.createTextNode(row.as_entered));
-  if (isSpellingCorrected(row)) {
-    const tag = document.createElement("span");
-    tag.className = "pill";
-    tag.textContent = "Spelling corrected";
-    secondaryLine.append(tag);
-  }
-  textCol.append(headline, secondaryLine);
-  const tags = labelTags(row.pdla_tags);
-  if (tags.length > 0) {
-    const tagsRow = document.createElement("span");
-    tagsRow.className = "med-row__tags";
-    for (const tag of tags) {
-      const pill = document.createElement("span");
-      pill.className = "pill";
-      pill.textContent = tag.name;
-      tagsRow.append(pill);
-    }
-    textCol.append(tagsRow);
-  }
-
-  const dose = document.createElement("span");
-  dose.className = "med-row__dose";
-  dose.textContent = formatDailyTotal(row.daily_total, row.daily_total_unit);
-
-  button.append(textCol, dose);
-  if (row.dea_schedule !== null) {
-    const badge = document.createElement("span");
-    badge.className = "dea-badge";
-    badge.textContent = `C-${row.dea_schedule}`;
-    badge.setAttribute("aria-label", `DEA schedule ${row.dea_schedule}`);
-    button.append(badge);
-  }
-  const chevron = document.createElement("span");
-  chevron.className = "med-row__chevron";
-  chevron.append(chevronIcon(16));
-  button.append(chevron);
-  button.addEventListener("click", () => {
-    callbacks.onToggleRowExpanded(line);
-  });
-
-  const rowTop = document.createElement("div");
-  rowTop.className = "med-row__top";
-  rowTop.append(button, buildRemoveButton(line, row.as_entered, callbacks));
-
-  wrap.append(rowTop);
-  if (expanded) {
-    wrap.append(buildRowDetail(row));
-  }
-  return wrap;
+  names.append(headline);
+  top.append(names, buildRemoveButton(line, line, callbacks));
+  card.append(top);
+  return card;
 }
 
 /**
  * Takes one resolved row.
- * Builds its expanded detail panel: FDA class, route, base ingredients, the matched chain, and label terms by name.
- * Gives the detail HTMLElement.
+ * Writes the generic line for its card: the base ingredients when the label lists them, otherwise the generic headline.
+ * Gives the lowercase generic text.
  */
-function buildRowDetail(row: MedicationRow): HTMLElement {
-  const detail = document.createElement("div");
-  detail.className = "med-row__detail";
-  const entries: ReadonlyArray<readonly [string, string]> = [
-    ["FDA class", row.fda_class],
-    ["Route", row.route.join(", ") || "—"],
-    ["Base ingredients", row.base_ingredients.join(", ") || "—"],
-    ["Matched", row.matched_name === null ? "—" : row.matched_name.join(" → ")],
-    ["Label terms", row.pdla_tags.map((tag) => tag.name).join(", ") || "—"],
-  ];
-  for (const [label, value] of entries) {
-    const line = document.createElement("div");
-    line.className = "med-row__detail-line";
-    const term = document.createElement("span");
-    term.className = "med-row__detail-label";
-    term.textContent = label;
-    const definition = document.createElement("span");
-    definition.textContent = value;
-    line.append(term, definition);
-    detail.append(line);
+function cardGenericLine(row: MedicationRow): string {
+  if (row.base_ingredients.length > 0) {
+    return row.base_ingredients.join(", ").toLowerCase();
   }
-  return detail;
+  return rowHeadlineName(row);
 }
 
-// Label terms worth showing on a medication row. Route, product form, the
-// patient-guide flag, and the DEA terms (the C-II badge already covers those)
-// are noise next to a drug name; the safety, dosing, and interaction terms are not.
-const ROW_TAG_TERM_IDS: ReadonlySet<string> = new Set(["T01", "T03", "T04", "T06", "T11", "T12", "T14", "T15", "T16", "T17"]);
+/**
+ * Takes one resolved row.
+ * Picks the name to lead the card with: the brand the user typed when the match chain starts with one, else the label's own brand, else the generic.
+ * Gives the headline text, and whether it is a brand rather than the generic.
+ */
+function cardBrandLine(row: MedicationRow): { readonly text: string; readonly isBrand: boolean } {
+  const generic = cardGenericLine(row);
+  const typed = row.matched_name?.[0]?.trim() ?? "";
+  if (typed.length > 0 && typed.toLowerCase() !== generic && !row.base_ingredients.includes(typed.toLowerCase()) && typed.toLowerCase() !== rowHeadlineName(row)) {
+    return { text: typed, isBrand: true };
+  }
+  const brand = row.brand[0]?.trim() ?? "";
+  if (brand.length > 0 && brand.toLowerCase() !== generic && brand.toLowerCase() !== rowHeadlineName(row)) {
+    return { text: brand, isBrand: true };
+  }
+  return { text: generic, isBrand: false };
+}
+
+/**
+ * Takes one resolved row.
+ * Writes the dose line: strength, frequency, and daily total, whichever the parser read.
+ * Gives the parts joined with " · ", or "" when nothing was read.
+ */
+function doseLine(row: MedicationRow): string {
+  const parts: string[] = [];
+  if (row.strength !== null) {
+    parts.push(row.daily_total_unit === null ? `${row.strength}` : `${row.strength} ${row.daily_total_unit}`);
+  }
+  const frequency = formatFrequency(row.times_per_day);
+  if (frequency.length > 0) {
+    parts.push(frequency);
+  }
+  const total = formatDailyTotal(row.daily_total, row.daily_total_unit);
+  if (total.length > 0) {
+    parts.push(`${total} total`);
+  }
+  return parts.join(" · ");
+}
+
+/**
+ * Takes a DEA schedule string such as "II" or null.
+ * Writes the schedule for a card: the word, the numeral, and the C-II style abbreviation.
+ * Gives "Schedule II (C-II)", or null when the drug is not scheduled.
+ */
+function scheduleLabel(schedule: string | null): string | null {
+  if (schedule === null || schedule.trim().length === 0) {
+    return null;
+  }
+  return `Schedule ${schedule} (C-${schedule})`;
+}
+
+/**
+ * Takes one medication line, its resolved row, whether its detail is expanded, and the Interactions callbacks.
+ * Builds the medication card: brand and generic names, the dose line, the drug class, schedule, release form, and label terms, with the label's own sentences shown when expanded.
+ * Gives the list item element.
+ */
+function buildResolvedCard(line: string, row: MedicationRow, expanded: boolean, callbacks: InteractionsCallbacks): HTMLElement {
+  const card = document.createElement("li");
+  card.className = "med-card";
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "med-card__button";
+  button.setAttribute("aria-expanded", String(expanded));
+
+  const names = document.createElement("span");
+  names.className = "med-card__names";
+  const brandLine = cardBrandLine(row);
+  const brand = document.createElement("span");
+  brand.className = "med-card__brand";
+  brand.textContent = brandLine.text;
+  names.append(brand);
+  if (brandLine.isBrand) {
+    const generic = document.createElement("span");
+    generic.className = "med-card__generic";
+    generic.textContent = cardGenericLine(row);
+    names.append(generic);
+  }
+  const dose = document.createElement("span");
+  dose.className = "med-card__dose";
+  dose.textContent = doseLine(row);
+  names.append(dose);
+
+  const chevron = document.createElement("span");
+  chevron.className = "med-card__chevron";
+  chevron.append(chevronIcon(16));
+  button.append(names, chevron);
+  button.addEventListener("click", () => {
+    callbacks.onToggleRowExpanded(line);
+  });
+
+  const top = document.createElement("div");
+  top.className = "med-card__top";
+  top.append(button, buildRemoveButton(line, row.as_entered, callbacks));
+  card.append(top);
+
+  card.append(buildFactsRow(line, row));
+  if (expanded) {
+    card.append(buildCardDetail(row));
+  }
+  return card;
+}
+
+// Label terms worth showing on a medication card. Route, product form, the
+// patient-guide flag, and the DEA terms (the schedule line already covers
+// those) are noise next to a drug name; the safety, dosing, and interaction
+// terms are not.
+const CARD_TAG_TERM_IDS: ReadonlySet<string> = new Set(["T01", "T03", "T04", "T06", "T11", "T12", "T14", "T15", "T16", "T17"]);
 
 /**
  * Takes a resolved row's PDLA tags.
  * Keeps the safety, dosing, and interaction-risk terms and drops route, form, guide, and DEA terms.
- * Gives the tags to show on the row, in the API's order.
+ * Gives the tags to show on the card, in the API's order.
  */
-function labelTags(tags: readonly PdlaTag[]): readonly PdlaTag[] {
-  return tags.filter((tag) => ROW_TAG_TERM_IDS.has(tag.term_id));
+function cardTags(tags: readonly PdlaTag[]): readonly PdlaTag[] {
+  return tags.filter((tag) => CARD_TAG_TERM_IDS.has(tag.term_id));
+}
+
+/**
+ * Takes one medication line and its resolved row.
+ * Builds the facts row under the names: release form, FDA pharmacologic class, DEA schedule, and the label terms.
+ * Gives the row element, which may be empty when the label states none of these.
+ */
+function buildFactsRow(line: string, row: MedicationRow): HTMLElement {
+  const facts = document.createElement("div");
+  facts.className = "med-card__facts";
+  const form = releaseForm(line);
+  if (form !== null) {
+    facts.append(fact(form));
+  }
+  if (row.fda_class !== "Not listed on label." && row.fda_class.trim().length > 0) {
+    facts.append(fact(row.fda_class));
+  }
+  const schedule = scheduleLabel(row.dea_schedule);
+  if (schedule !== null) {
+    facts.append(fact(schedule, "pill--strong"));
+  }
+  for (const tag of cardTags(row.pdla_tags)) {
+    facts.append(fact(tag.name));
+  }
+  return facts;
+}
+
+/**
+ * Takes the text of one fact and an optional extra class.
+ * Builds the small pill that shows it.
+ * Gives the pill element.
+ */
+function fact(text: string, extraClass: string = ""): HTMLElement {
+  const pill = document.createElement("span");
+  pill.className = extraClass.length > 0 ? `pill ${extraClass}` : "pill";
+  pill.textContent = text;
+  return pill;
+}
+
+/**
+ * Takes one resolved row.
+ * Builds its expanded detail: the label's own sentences (boxed warning, most frequent adverse reaction, dose adjustments, interaction warnings) each with its section, then route and the matched name chain.
+ * Gives the detail element.
+ */
+function buildCardDetail(row: MedicationRow): HTMLElement {
+  const detail = document.createElement("div");
+  detail.className = "med-card__detail";
+  if (row.label_notes.length === 0) {
+    const none = document.createElement("p");
+    none.className = "med-card__detail-empty";
+    none.textContent = "The label carries no boxed warning, dose adjustment, or interaction warning that this tool tracks.";
+    detail.append(none);
+  }
+  for (const note of row.label_notes) {
+    detail.append(buildLabelNote(note));
+  }
+  const meta = document.createElement("p");
+  meta.className = "med-card__meta";
+  const chain = row.matched_name === null ? "" : row.matched_name.join(" → ");
+  const route = row.route.length > 0 ? `Route: ${row.route.join(", ").toLowerCase()}.` : "";
+  meta.textContent = [route, chain.length > 0 ? `Matched as ${chain}.` : ""].filter((part) => part.length > 0).join(" ");
+  if (meta.textContent.length > 0) {
+    detail.append(meta);
+  }
+  return detail;
+}
+
+/**
+ * Takes one label note.
+ * Builds it as a small heading, the label sentence, and the section it came from.
+ * Gives the note element.
+ */
+function buildLabelNote(note: LabelNote): HTMLElement {
+  const wrap = document.createElement("div");
+  wrap.className = "label-note";
+  const heading = document.createElement("p");
+  heading.className = "label-note__name";
+  heading.textContent = noteHeading(note);
+  const sentence = document.createElement("blockquote");
+  sentence.className = "label-note__sentence";
+  sentence.textContent = note.sentence;
+  const source = document.createElement("p");
+  source.className = "label-note__source";
+  source.textContent = `From the ${sectionDisplayName(note.field_name)} section of the label.`;
+  wrap.append(heading, sentence, source);
+  return wrap;
+}
+
+/**
+ * Takes one label note.
+ * Names it for a reader: "Boxed warning", "Most frequent side effect", or the term's own name.
+ * Gives the heading text.
+ */
+function noteHeading(note: LabelNote): string {
+  if (note.term_id === "T01") {
+    return "Boxed warning";
+  }
+  if (note.term_id === "T04") {
+    return "Most frequent side effect on the label";
+  }
+  return note.name;
 }
 
 /**
@@ -359,34 +494,34 @@ function unresolvedExplanation(entry: UnresolvedEntry, hasChoices: boolean): str
 
 /**
  * Takes one medication line, its unresolved entry, its label lookup when one has started, the names on the list, and the Interactions callbacks.
- * Builds the row that says the entry was not checked and why, with candidate buttons when any would help, the label lookup block once it has started, plus Edit and remove buttons.
+ * Builds the card that says the entry was not checked and why, with candidate buttons when any would help, the label lookup block once it has started, plus Edit and remove buttons.
  * Gives the list item element.
  */
-function buildUnresolvedRow(
+function buildUnresolvedCard(
   line: string,
   entry: UnresolvedEntry,
   lookup: LabelLookup | undefined,
   namesOnList: readonly string[],
   callbacks: InteractionsCallbacks,
 ): HTMLElement {
-  const wrap = document.createElement("li");
-  wrap.className = "med-row";
+  const card = document.createElement("li");
+  card.className = "med-card med-card--unresolved";
 
   const top = document.createElement("div");
-  top.className = "med-row--static";
-  const textCol = document.createElement("span");
-  textCol.className = "med-row__text";
+  top.className = "med-card__top";
+  const names = document.createElement("div");
+  names.className = "med-card__names";
   const headline = document.createElement("span");
-  headline.className = "med-row__headline";
+  headline.className = "med-card__brand";
   headline.textContent = line;
   const choices = usefulChoices(line, candidateChoices(entry.candidates));
   const explanation = document.createElement("span");
-  explanation.className = "med-row__secondary";
+  explanation.className = "med-card__generic";
   explanation.textContent = unresolvedExplanation(entry, choices.length > 0);
-  textCol.append(headline, explanation);
+  names.append(headline, explanation);
 
   const actions = document.createElement("span");
-  actions.className = "med-row__actions";
+  actions.className = "med-card__actions";
   const edit = document.createElement("button");
   edit.type = "button";
   edit.className = "btn btn--small";
@@ -396,8 +531,8 @@ function buildUnresolvedRow(
     callbacks.onEditUnresolved(line);
   });
   actions.append(edit, buildRemoveButton(line, line, callbacks));
-  top.append(textCol, actions);
-  wrap.append(top);
+  top.append(names, actions);
+  card.append(top);
 
   if (choices.length > 0) {
     const pills = document.createElement("div");
@@ -412,17 +547,17 @@ function buildUnresolvedRow(
       });
       pills.append(pill);
     }
-    wrap.append(pills);
+    card.append(pills);
   }
   if (lookup !== undefined) {
-    wrap.append(buildLookupBlock(lookup, namesOnList));
+    card.append(buildLookupBlock(lookup, namesOnList));
   }
-  return wrap;
+  return card;
 }
 
 /**
  * Takes the medication line to remove, its visible label for the button's name, and the Interactions callbacks.
- * Builds the remove ("x") button for one row.
+ * Builds the remove ("x") button for one card.
  * Gives the button HTMLElement.
  */
 function buildRemoveButton(line: string, visibleLabel: string, callbacks: InteractionsCallbacks): HTMLButtonElement {
@@ -439,38 +574,41 @@ function buildRemoveButton(line: string, visibleLabel: string, callbacks: Intera
 
 /**
  * Takes the current AppState and the Interactions callbacks.
- * Builds the results: the error card, or the heading, checked count, the entries that were not checked, the notice, and the alert cards.
- * Gives the array of elements to append to the results section, empty while a first check is still loading.
+ * Builds the alerts column: the error card, or the heading, checked count, the entries that were not checked, the alert cards worst first, and the notice.
+ * Gives the array of elements for the column, with only the heading while a first check is still loading.
  */
-function buildResultsSection(state: AppState, callbacks: InteractionsCallbacks): readonly HTMLElement[] {
+function buildAlertsColumn(state: AppState, callbacks: InteractionsCallbacks): readonly HTMLElement[] {
   if (state.checkError !== null) {
     return [buildErrorCard(state.checkError.message, state.checkError.detail, callbacks)];
   }
   if (state.checkResponse === null) {
-    return [];
+    const waiting = document.createElement("h2");
+    waiting.className = "report__heading";
+    waiting.textContent = "Interactions";
+    return [waiting];
   }
   const wrap = document.createElement("div");
   wrap.className = state.checkLoading ? "results__body results__body--loading" : "results__body";
 
   const heading = document.createElement("h2");
-  heading.className = "results__heading";
-  heading.textContent = state.checkResponse.alerts.length === 0 ? state.checkResponse.no_warning_text : pluralizeCount(state.checkResponse.alerts.length, "alert");
+  heading.className = "report__heading";
+  heading.textContent = state.checkResponse.alerts.length === 0 ? "Interactions" : pluralizeCount(state.checkResponse.alerts.length, "interaction");
 
   const checkedCount = document.createElement("p");
   checkedCount.className = "results__checked-count";
   checkedCount.textContent = `${countResolvedRows(state.checkResponse.medication_table)} of ${pluralizeCount(state.medicationLines.length, "medication")} checked`;
-
   wrap.append(heading, checkedCount);
+
   if (state.checkResponse.unresolved_entries.length > 0) {
     wrap.append(buildUncheckedList(state.checkResponse.unresolved_entries));
   }
 
-  const notice = document.createElement("p");
-  notice.className = "results__notice";
-  notice.textContent = state.checkResponse.notice;
-  wrap.append(notice);
-
-  if (state.checkResponse.alerts.length > 0) {
+  if (state.checkResponse.alerts.length === 0) {
+    const none = document.createElement("p");
+    none.className = "results__none";
+    none.textContent = state.checkResponse.no_warning_text;
+    wrap.append(none);
+  } else {
     const list = document.createElement("ol");
     list.className = "alerts";
     for (const alert of sortAlerts(state.checkResponse.alerts)) {
@@ -479,22 +617,27 @@ function buildResultsSection(state: AppState, callbacks: InteractionsCallbacks):
     }
     wrap.append(list);
   }
+
+  const notice = document.createElement("p");
+  notice.className = "results__notice";
+  notice.textContent = state.checkResponse.notice;
+  wrap.append(notice);
   return [wrap];
 }
 
 /**
  * Takes one unresolved entry.
- * Writes the one-line reason it was left out of the check and what fixes it, for the results' "Not checked" list.
+ * Writes the one-line reason it was left out of the check and what fixes it, for the "Not checked" list.
  * Gives the sentence, naming the entry first.
  */
 function uncheckedReason(entry: UnresolvedEntry): string {
   if (entry.status === "needs_confirmation") {
-    return `${entry.raw_text}: more than one label matches. Choose one in the list above.`;
+    return `${entry.raw_text}: more than one label matches. Choose one in the list.`;
   }
   if (usefulChoices(entry.raw_text, candidateChoices(entry.candidates)).length === 0) {
-    return `${entry.raw_text}: not a medication name, so it was looked up in the labels instead. See the list above.`;
+    return `${entry.raw_text}: not a medication name, so it was looked up in the labels instead.`;
   }
-  return `${entry.raw_text}: not found. Edit it in the list above, or remove it.`;
+  return `${entry.raw_text}: not found. Edit it in the list, or remove it.`;
 }
 
 /**
@@ -520,35 +663,53 @@ function buildUncheckedList(entries: readonly UnresolvedEntry[]): HTMLElement {
 
 /**
  * Takes one alert, its index in the API's own order, whether its extra evidence is expanded, and the Interactions callbacks.
- * Builds the alert card: drug names, tier line, the primary label sentence as a quotation with its source, and the "Show N more" expansion.
+ * Builds the alert card: the grade, the drugs, the rule, the label sentence with its source, what the risk means with a public source, and the "Show N more" expansion.
  * Gives the list item element.
  */
 function buildAlertCard(alert: AlertRecord, alertIndex: number, expanded: boolean, callbacks: InteractionsCallbacks): HTMLElement {
+  const grade = alertGrade(alert);
   const card = document.createElement("li");
-  card.className = `alert alert--${alertIconKey(alert)}`;
+  card.className = `alert alert--${alertIconKey(alert)} alert--grade-${grade.letter.toLowerCase()}`;
+
+  const head = document.createElement("div");
+  head.className = "alert__head";
+  const badge = document.createElement("span");
+  badge.className = "grade";
+  badge.setAttribute("aria-label", `Grade ${grade.letter}`);
+  badge.textContent = grade.letter;
+  const gradeText = document.createElement("span");
+  gradeText.className = "alert__grade-text";
+  const gradeName = document.createElement("strong");
+  gradeName.textContent = grade.name;
+  gradeText.append(gradeName, document.createTextNode(` — ${grade.meaning}`));
+  head.append(badge, gradeText);
 
   const drugs = document.createElement("h3");
   drugs.className = "alert__drugs";
   drugs.textContent = alertDrugNames(alert.members);
 
-  const tierLine = document.createElement("p");
-  tierLine.className = "alert__tier";
-  tierLine.append(alertIcon(alertIconKey(alert), 14));
-  const tierName = document.createElement("span");
-  tierName.className = "alert__tier-name";
-  tierName.textContent = alertDisplayTierName(alert);
-  const alertTitle = document.createElement("span");
-  alertTitle.textContent = alert.title;
-  tierLine.append(tierName, alertTitle);
+  const ruleLine = document.createElement("p");
+  ruleLine.className = "alert__tier";
+  ruleLine.append(alertIcon(alertIconKey(alert), 14));
+  const ruleText = document.createElement("span");
+  ruleText.textContent = alert.title;
+  ruleLine.append(ruleText);
 
-  card.append(drugs, tierLine);
+  card.append(head, drugs, ruleLine);
 
   const primary = primaryEvidenceMember(alert.members);
+  if (primary !== undefined) {
+    card.append(...buildEvidenceBlock(primary));
+  }
+
+  const explanation = alertExplanation(alert);
+  if (explanation !== null) {
+    card.append(buildExplanation(explanation.title, explanation.text, explanation.sourceName, explanation.sourceUrl));
+  }
+
   if (primary === undefined) {
     return card;
   }
-  card.append(...buildEvidenceBlock(primary));
-
   const more = additionalEvidenceMembers(alert.members, primary);
   if (more.length > 0) {
     const toggle = document.createElement("button");
@@ -576,6 +737,35 @@ function buildAlertCard(alert: AlertRecord, alertIndex: number, expanded: boolea
 }
 
 /**
+ * Takes an explanation's title, text, and optional source name and URL.
+ * Builds the "What this means" block with its source link when there is one.
+ * Gives the block element.
+ */
+function buildExplanation(title: string, text: string, sourceName: string | null, sourceUrl: string | null): HTMLElement {
+  const block = document.createElement("div");
+  block.className = "alert__why";
+  const heading = document.createElement("p");
+  heading.className = "alert__why-title";
+  heading.textContent = `What this means: ${title}`;
+  const body = document.createElement("p");
+  body.className = "alert__why-text";
+  body.textContent = text;
+  block.append(heading, body);
+  if (sourceName !== null && sourceUrl !== null) {
+    const source = document.createElement("p");
+    source.className = "alert__why-source";
+    const link = document.createElement("a");
+    link.href = sourceUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.append(document.createTextNode(sourceName), externalLinkIcon(11));
+    source.append(document.createTextNode("Source: "), link);
+    block.append(source);
+  }
+  return block;
+}
+
+/**
  * Takes one alert member with evidence.
  * Builds its label sentence as a blockquote and, under it, the source drug and section with the DailyMed link.
  * Gives the pair of elements, quote first.
@@ -599,8 +789,6 @@ function buildEvidenceBlock(member: AlertMember): readonly [HTMLElement, HTMLEle
   source.append(sourceText, link);
   return [quote, source];
 }
-
-const DAILYMED_URL_PREFIX = "https://dailymed.nlm.nih.gov/";
 
 /**
  * Takes a DailyMed URL from the API.

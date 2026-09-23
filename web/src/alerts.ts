@@ -19,26 +19,105 @@ const SECTION_STRENGTH_ORDER: readonly string[] = [
 ];
 
 const DUPLICATE_THERAPY_LABEL = "Duplicate therapy";
-const DUPLICATION_SORT_RANK = 5;
+
+export type GradeLetter = "A" | "B" | "C" | "D";
+
+export interface AlertGrade {
+  readonly letter: GradeLetter;
+  readonly name: string;
+  readonly meaning: string;
+  readonly rank: number;
+}
+
+// One grade per label section, worst first. The section an alert's sentence
+// came from is the label's own signal of how serious it is, so the grade is a
+// heuristic and every card says so.
+const GRADE_D: AlertGrade = { letter: "D", name: "Do not combine", meaning: "The label lists this combination as contraindicated.", rank: 0 };
+const GRADE_C: AlertGrade = { letter: "C", name: "Major", meaning: "A boxed warning, the label's strongest caution.", rank: 1 };
+const GRADE_B: AlertGrade = { letter: "B", name: "Serious", meaning: "A warning in the label. Watch for it.", rank: 2 };
+const GRADE_A: AlertGrade = { letter: "A", name: "Minor", meaning: "An interaction note in the label.", rank: 3 };
+const GRADE_DUPLICATE: AlertGrade = { letter: "B", name: "Same drug twice", meaning: "Two entries add up to one drug's daily total.", rank: 2 };
 
 /**
  * Takes one alert.
- * Ranks it for card ordering: its tier when it has one, otherwise last (duplication has no tier).
- * Gives the sort rank, 1-4 for a tiered alert or 5 for a duplication flag.
+ * Grades it from D (contraindicated) to A (interaction note) by the label section its evidence came from, with a duplication flag graded B.
+ * Gives the AlertGrade.
  */
-function sortRank(alert: AlertRecord): number {
-  return alert.tier ?? DUPLICATION_SORT_RANK;
+export function alertGrade(alert: AlertRecord): AlertGrade {
+  if (alert.kind === "duplication") {
+    return GRADE_DUPLICATE;
+  }
+  const tier = alert.tier ?? 4;
+  return tier === 1 ? GRADE_D : tier === 2 ? GRADE_C : tier === 3 ? GRADE_B : GRADE_A;
+}
+
+export interface AlertExplanation {
+  readonly title: string;
+  readonly text: string;
+  readonly sourceName: string | null;
+  readonly sourceUrl: string | null;
+}
+
+// Plain-language explanations of each risk, each with a public source a
+// reader can open. The label sentence on the card is the evidence; this
+// says what the words mean.
+const EXPLANATIONS: Readonly<Record<string, AlertExplanation>> = {
+  T14: {
+    title: "Serotonin syndrome",
+    text: "Too much serotonin activity in the nervous system, most often when two or more serotonergic drugs are taken together. Signs include agitation, fast heartbeat, high temperature, sweating, and twitching muscles. It can be life-threatening.",
+    sourceName: "MedlinePlus, National Library of Medicine",
+    sourceUrl: "https://medlineplus.gov/ency/article/007272.htm",
+  },
+  T15: {
+    title: "CNS depression",
+    text: "Each of these drugs slows the central nervous system. Together the effect adds up: heavy sedation, slowed breathing, and a higher risk of overdose, especially when an opioid and a benzodiazepine are combined.",
+    sourceName: "National Institute on Drug Abuse, NIH",
+    sourceUrl: "https://nida.nih.gov/research-topics/opioids/benzodiazepines-opioids",
+  },
+  T16: {
+    title: "QT prolongation",
+    text: "Each of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.",
+    sourceName: "National Heart, Lung, and Blood Institute, NIH",
+    sourceUrl: "https://www.nhlbi.nih.gov/health/long-qt-syndrome",
+  },
+  T17: {
+    title: "Contraindicated",
+    text: "A contraindication is a specific situation in which a drug should not be used because it may be harmful. One of these labels names the other drug, or its class, as exactly that.",
+    sourceName: "MedlinePlus, National Library of Medicine",
+    sourceUrl: "https://medlineplus.gov/ency/article/002314.htm",
+  },
+  shared_ingredient: {
+    title: "Same active ingredient",
+    text: "Two entries contain the same active ingredient, so their daily amounts add together. Check that the combined total is what was intended.",
+    sourceName: null,
+    sourceUrl: null,
+  },
+  active_metabolite: {
+    title: "Active metabolite",
+    text: "The body turns one of these drugs into the other, so the two act as one drug at a higher dose than either alone.",
+    sourceName: null,
+    sourceUrl: null,
+  },
+};
+
+/**
+ * Takes one alert.
+ * Looks up the plain-language explanation for its risk.
+ * Gives the AlertExplanation, or null when the risk has none.
+ */
+export function alertExplanation(alert: AlertRecord): AlertExplanation | null {
+  return EXPLANATIONS[alert.risk] ?? null;
 }
 
 /**
  * Takes the alerts from a check response, in API order.
- * Orders them by tier from 1 to 4 with duplication flags last, keeping API order within a tier.
+ * Orders them worst grade first (D, C, B, A), keeping API order within a grade.
  * Gives a new array; the input array is never mutated.
  */
 export function sortAlerts(alerts: readonly AlertRecord[]): readonly AlertRecord[] {
   return alerts
     .map((alert, index) => ({ alert, index }))
-    .sort((a, b) => sortRank(a.alert) - sortRank(b.alert) || a.index - b.index)
+    .sort((a, b) => alertGrade(a.alert).rank - alertGrade(b.alert).rank || a.index - b.index)
     .map((entry) => entry.alert);
 }
 

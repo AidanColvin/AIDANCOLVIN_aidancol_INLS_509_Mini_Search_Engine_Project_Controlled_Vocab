@@ -9,6 +9,13 @@ export interface PdlaTag {
   readonly name: string;
 }
 
+export interface LabelNote {
+  readonly term_id: string;
+  readonly name: string;
+  readonly field_name: string;
+  readonly sentence: string;
+}
+
 export interface MedicationRow {
   readonly as_entered: string;
   readonly matched_name: readonly string[] | null;
@@ -18,9 +25,12 @@ export interface MedicationRow {
   readonly fda_class: string;
   readonly route: readonly string[];
   readonly dea_schedule: string | null;
+  readonly strength: number | null;
+  readonly times_per_day: number | null;
   readonly daily_total: number | null;
   readonly daily_total_unit: string | null;
   readonly pdla_tags: readonly PdlaTag[];
+  readonly label_notes: readonly LabelNote[];
 }
 
 export interface AlertMember {

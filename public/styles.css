@@ -351,72 +351,19 @@ button:disabled {
   right: 6px;
 }
 
-/* Medication list */
-
 .list-header {
-  margin-top: var(--space-3);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-2);
 }
 
-.med-list {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  border-top: 1px solid var(--hairline);
-}
 
-.med-row {
-  border-bottom: 1px solid var(--hairline);
-}
 
-.med-row__top {
-  display: flex;
-  align-items: center;
-}
 
-.med-row__button {
-  flex: 1 1 0;
-  min-width: 0;
-  min-height: var(--hit);
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: 12px 0;
-  border: none;
-  background: transparent;
-  text-align: left;
-  color: var(--text);
-  border-radius: var(--radius);
-}
 
-.med-row__text {
-  flex-grow: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-}
 
-.med-row__headline {
-  font-weight: 600;
-}
 
-.med-row__secondary {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-1);
-  font-size: var(--size-caption);
-  color: var(--text-2);
-}
-
-.med-row__dose {
-  font-size: var(--size-caption);
-  white-space: nowrap;
-  color: var(--text-2);
-}
 
 .dea-badge {
   font-size: var(--size-caption);
@@ -426,52 +373,12 @@ button:disabled {
   border-radius: 4px;
 }
 
-.med-row__chevron {
-  display: flex;
-  color: var(--text-2);
-  transition: transform var(--motion) ease;
-}
-.med-row__button[aria-expanded="true"] .med-row__chevron {
-  transform: rotate(90deg);
-}
 
-.med-row__detail {
-  padding: 0 0 var(--space-2);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: var(--size-caption);
-}
 
-.med-row__detail-line {
-  display: flex;
-  gap: var(--space-1);
-}
 
-.med-row__detail-label {
-  color: var(--text-2);
-  min-width: 128px;
-  flex-shrink: 0;
-}
 
-.med-row--static {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  min-height: 68px;
-  padding: 12px 0;
-}
 
-.med-row--pending {
-  opacity: 0.5;
-}
 
-.med-row__actions {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  flex-shrink: 0;
-}
 
 .candidate-pills {
   display: flex;
@@ -490,15 +397,240 @@ button:disabled {
   color: var(--text-2);
 }
 
-/* Results */
+/* Report: alerts on the left, medication cards on the right. */
 
-.results {
+.report {
   margin-top: var(--space-6);
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
 }
 
+.report__heading {
+  margin: 0;
+  font-size: var(--size-display);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.results__none {
+  margin: var(--space-2) 0 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.med-list {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.med-card {
+  padding: var(--space-2);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.med-card--pending {
+  opacity: 0.5;
+}
+
+.med-card__top {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-1);
+}
+
+.med-card__button {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: var(--hit);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-1);
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: left;
+  color: var(--text);
+  border-radius: var(--radius);
+}
+
+.med-card__names {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.med-card__brand {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.med-card__generic {
+  color: var(--text-2);
+}
+
+.med-card__dose {
+  font-size: var(--size-caption);
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.med-card__chevron {
+  display: flex;
+  margin-top: 6px;
+  color: var(--text-2);
+  transition: transform var(--motion) ease;
+}
+.med-card__button[aria-expanded="true"] .med-card__chevron {
+  transform: rotate(90deg);
+}
+
+.med-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.med-card__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+}
+.med-card__facts:empty {
+  display: none;
+}
+
+.pill--strong {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.med-card__detail {
+  padding-top: var(--space-1);
+  border-top: 1px solid var(--hairline);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  animation: fade-in var(--motion) ease-out;
+}
+
+.med-card__detail-empty,
+.med-card__meta {
+  margin: 0;
+  font-size: var(--size-caption);
+  color: var(--text-2);
+}
+
+.label-note {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.label-note__name {
+  margin: 0;
+  font-size: var(--size-caption);
+  font-weight: 700;
+}
+.label-note__sentence {
+  margin: 0;
+  padding-left: var(--space-2);
+  border-left: 2px solid var(--text);
+  font-size: var(--size-caption);
+  line-height: 1.5;
+}
+.label-note__source {
+  margin: 0;
+  font-size: var(--size-caption);
+  color: var(--text-2);
+}
+
+/* Grades */
+
+.alert__head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.grade {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--text);
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+}
+.alert--grade-d .grade,
+.alert--grade-c .grade {
+  background: var(--text);
+  color: var(--bg);
+}
+.alert--grade-a .grade {
+  border-color: var(--text-2);
+  color: var(--text-2);
+}
+
+.alert__grade-text {
+  font-size: var(--size-caption);
+  color: var(--text-2);
+}
+.alert__grade-text strong {
+  color: var(--text);
+}
+
+.alert__why {
+  margin-top: var(--space-1);
+  padding: var(--space-2);
+  border-radius: var(--radius);
+  background: var(--soft);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.alert__why-title {
+  margin: 0;
+  font-size: var(--size-caption);
+  font-weight: 700;
+}
+.alert__why-text {
+  margin: 0;
+  font-size: var(--size-caption);
+  line-height: 1.5;
+}
+.alert__why-source {
+  margin: 0;
+  font-size: var(--size-caption);
+  color: var(--text-2);
+}
+.alert__why-source a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Results */
+
 .results__body {
-  max-width: 640px;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
@@ -549,17 +681,24 @@ button:disabled {
   margin: var(--space-2) 0 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
 }
 
 /* Alert cards: drug names, tier, the label sentence, then its source. */
 
 .alert {
-  padding: var(--space-3) 0;
-  border-top: 1px solid var(--hairline);
+  padding: var(--space-2);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
-  max-width: 72ch;
+}
+.alert--grade-d {
+  border-color: var(--text);
+  border-width: 2px;
 }
 
 .alert__drugs {
@@ -653,12 +792,6 @@ button:disabled {
 
 /* Label lookup: shown under a word that is not a medication name. */
 
-.med-row__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 6px;
-  margin-top: 4px;
-}
 
 .med-hint {
   margin: var(--space-1) 0 0;
@@ -1252,9 +1385,6 @@ button:disabled {
 
 /* Motion: only to explain a state change. */
 
-.med-row__detail {
-  animation: fade-in var(--motion) ease-out;
-}
 
 @keyframes fade-in {
   from {
@@ -1288,6 +1418,10 @@ button:disabled {
   }
   .doc {
     padding: var(--space-4) var(--space-2) 0;
+  }
+  .report {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
   }
   .flow,
   .flow--three,
@@ -1393,13 +1527,6 @@ button:disabled {
   }
   .med-status {
     padding: 0 20px;
-  }
-  .med-row__detail-line {
-    flex-direction: column;
-    gap: 0;
-  }
-  .med-row__detail-label {
-    min-width: 0;
   }
   .med-hint {
     padding: 0 20px;

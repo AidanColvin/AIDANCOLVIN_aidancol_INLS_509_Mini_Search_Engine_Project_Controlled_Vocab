@@ -39,9 +39,12 @@ function row(overrides: Partial<MedicationRow>): MedicationRow {
     fda_class: "Not listed on label.",
     route: [],
     dea_schedule: null,
+    strength: null,
+    times_per_day: null,
     daily_total: null,
     daily_total_unit: null,
     pdla_tags: [],
+    label_notes: [],
     ...overrides,
   };
 }

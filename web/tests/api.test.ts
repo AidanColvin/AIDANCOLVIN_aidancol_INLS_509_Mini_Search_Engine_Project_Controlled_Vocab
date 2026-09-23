@@ -24,6 +24,8 @@ const APPENDIX_B_CHECK_RESPONSE: unknown = {
       fda_class: "Not listed on label.",
       route: ["ORAL"],
       dea_schedule: "II",
+      strength: null,
+      times_per_day: null,
       daily_total: 40.0,
       daily_total_unit: "mg",
       pdla_tags: [
@@ -31,6 +33,7 @@ const APPENDIX_B_CHECK_RESPONSE: unknown = {
         { term_id: "T02", name: "Oral Route" },
         { term_id: "T03", name: "Pediatric Indication" },
       ],
+      label_notes: [],
     },
     {
       as_entered: "dextroamphetamine 10 mg bid",
@@ -41,9 +44,12 @@ const APPENDIX_B_CHECK_RESPONSE: unknown = {
       fda_class: "Not listed on label.",
       route: [],
       dea_schedule: null,
+      strength: null,
+      times_per_day: null,
       daily_total: 20.0,
       daily_total_unit: "mg",
       pdla_tags: [],
+      label_notes: [],
     },
   ],
   alerts: [

@@ -55,10 +55,10 @@ function alert(overrides: Partial<AlertRecord>): AlertRecord {
 
 /**
  * Takes no arguments.
- * Checks tier 1-4 ordering, duplication last, and stable order within a tier.
+ * Checks grade ordering (D, C, B, A) with a duplication flag graded B alongside tier 3, and stable order within a grade.
  * Gives nothing; asserts the sorted order.
  */
-test("sortAlerts orders by tier with duplication last and keeps API order within a tier", () => {
+test("sortAlerts orders by grade, duplication graded B, and keeps API order within a grade", () => {
   const a = alert({ tier: 3, title: "warning-a" });
   const b = alert({ tier: 1, title: "contraindicated" });
   const c = alert({ tier: null, kind: "duplication", title: "dup" });
@@ -66,7 +66,7 @@ test("sortAlerts orders by tier with duplication last and keeps API order within
   const sorted = sortAlerts([a, b, c, d]);
   assert.deepEqual(
     sorted.map((x) => x.title),
-    ["contraindicated", "warning-a", "warning-b", "dup"],
+    ["contraindicated", "warning-a", "dup", "warning-b"],
   );
 });
 

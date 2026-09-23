@@ -8,6 +8,7 @@ import type {
   AlertMember,
   AlertRecord,
   CheckResponse,
+  LabelNote,
   MedicationRow,
   PdlaTag,
   SearchHit,
@@ -129,7 +130,22 @@ function toPdlaTag(value: unknown): PdlaTag {
 
 /**
  * Takes an unknown value.
- * Validates it as one medication table row.
+ * Validates it as one label note: a term id and name, the label field it came from, and its sentence.
+ * Gives the LabelNote, or throws ApiShapeError.
+ */
+function toLabelNote(value: unknown): LabelNote {
+  const record = asRecord(value, "label_notes[]");
+  return {
+    term_id: asString(record["term_id"], "label_notes[].term_id"),
+    name: asString(record["name"], "label_notes[].name"),
+    field_name: asString(record["field_name"], "label_notes[].field_name"),
+    sentence: asString(record["sentence"], "label_notes[].sentence"),
+  };
+}
+
+/**
+ * Takes an unknown value.
+ * Validates it as one medication table row, treating the strength, frequency, and label-note fields as absent when an older server omits them.
  * Gives the MedicationRow, or throws ApiShapeError.
  */
 function toMedicationRow(value: unknown): MedicationRow {
@@ -144,9 +160,12 @@ function toMedicationRow(value: unknown): MedicationRow {
     fda_class: asString(record["fda_class"], "medication_table[].fda_class"),
     route: asArray(record["route"], "medication_table[].route", (item) => asString(item, "route[]")),
     dea_schedule: asNullableString(record["dea_schedule"], "medication_table[].dea_schedule"),
+    strength: record["strength"] === undefined ? null : asNullableNumber(record["strength"], "medication_table[].strength"),
+    times_per_day: record["times_per_day"] === undefined ? null : asNullableNumber(record["times_per_day"], "medication_table[].times_per_day"),
     daily_total: asNullableNumber(record["daily_total"], "medication_table[].daily_total"),
     daily_total_unit: asNullableString(record["daily_total_unit"], "medication_table[].daily_total_unit"),
     pdla_tags: asArray(record["pdla_tags"], "medication_table[].pdla_tags", toPdlaTag),
+    label_notes: record["label_notes"] === undefined ? [] : asArray(record["label_notes"], "medication_table[].label_notes", toLabelNote),
   };
 }
 

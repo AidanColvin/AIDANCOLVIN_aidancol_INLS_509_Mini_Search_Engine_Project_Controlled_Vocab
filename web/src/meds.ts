@@ -167,6 +167,51 @@ export function candidateChoices(candidates: readonly string[]): readonly Candid
   return choices.filter((choice, index) => choices.findIndex((other) => other.entryText === choice.entryText) === index);
 }
 
+const RELEASE_FORMS: ReadonlyArray<readonly [RegExp, string]> = [
+  [/\b(?:er|xr|xl|sr|cr|la|cd|extended[- ]release|sustained[- ]release)\b/i, "extended release"],
+  [/\b(?:dr|delayed[- ]release)\b/i, "delayed release"],
+  [/\b(?:odt|orally disintegrating)\b/i, "orally disintegrating"],
+  [/\b(?:ir|immediate[- ]release)\b/i, "immediate release"],
+];
+
+/**
+ * Takes one medication line as the user typed it.
+ * Reads a release-form marker such as ER, XR, DR, ODT, or IR from it.
+ * Gives the release form spelled out, or null when the line carries none.
+ */
+export function releaseForm(line: string): string | null {
+  for (const [pattern, label] of RELEASE_FORMS) {
+    if (pattern.test(line)) {
+      return label;
+    }
+  }
+  return null;
+}
+
+/**
+ * Takes the number of doses per day the parser read, or null.
+ * Words it for a medication card.
+ * Gives "once a day", "twice a day", "3 times a day", "every other day" for one half, or "" when unknown.
+ */
+export function formatFrequency(timesPerDay: number | null): string {
+  if (timesPerDay === null) {
+    return "";
+  }
+  if (timesPerDay === 1) {
+    return "once a day";
+  }
+  if (timesPerDay === 2) {
+    return "twice a day";
+  }
+  if (timesPerDay === 0.5) {
+    return "every other day";
+  }
+  if (Number.isInteger(timesPerDay)) {
+    return `${timesPerDay} times a day`;
+  }
+  return `${timesPerDay} times a day`;
+}
+
 /**
  * Takes the current check response, or null before the first one.
  * Collects the lowercase brand, generic, and base-ingredient names of every medication that resolved, without duplicates.

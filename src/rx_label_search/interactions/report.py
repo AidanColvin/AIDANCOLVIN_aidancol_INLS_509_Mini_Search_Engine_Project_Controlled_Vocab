@@ -51,9 +51,12 @@ def medication_table_row(entry: MedEntry, drug: Mapping[str, Any] | None) -> dic
             "fda_class": "Not listed on label.",
             "route": [],
             "dea_schedule": None,
+            "strength": entry.strength_value,
+            "times_per_day": entry.times_per_day,
             "daily_total": entry.daily_total,
             "daily_total_unit": entry.strength_unit,
             "pdla_tags": [],
+            "label_notes": [],
         }
     record = drug["record"]
     tags = tuple(sorted(term_ids(tuple(_evidence_tuples(record["evidence"])))))
@@ -66,10 +69,39 @@ def medication_table_row(entry: MedEntry, drug: Mapping[str, Any] | None) -> dic
         "fda_class": not_listed_or(record.get("pharm_class_epc", ())),
         "route": list(record.get("route", ())),
         "dea_schedule": record.get("schedule"),
+        "strength": entry.strength_value,
+        "times_per_day": entry.times_per_day,
         "daily_total": entry.daily_total,
         "daily_total_unit": entry.strength_unit,
         "pdla_tags": [{"term_id": term_id, "name": TERMS_BY_ID[term_id].name if term_id in TERMS_BY_ID else term_id} for term_id in tags],
+        "label_notes": label_notes(record["evidence"]),
     }
+
+
+# The label sentences worth showing on a medication card: the boxed warning,
+# the most frequent adverse reaction, dose adjustments, and the interaction
+# warnings. Route, form, guide, and DEA evidence add nothing a reader needs.
+LABEL_NOTE_TERM_IDS: frozenset[str] = frozenset({"T01", "T04", "T06", "T12", "T14", "T15", "T16", "T17"})
+
+
+def label_notes(evidence_rows: Sequence[Mapping[str, Any]]) -> list[dict[str, str]]:
+    """
+    Takes a checker record's evidence rows.
+    Keeps the rows for the terms a reader wants to see on the medication card, each with its term name, the label field it came from, and its sentence.
+    Gives the list of note dictionaries in evidence order, empty when none of those terms has evidence.
+    """
+    notes: list[dict[str, str]] = []
+    for row in evidence_rows:
+        term_id = row["term_id"]
+        if term_id not in LABEL_NOTE_TERM_IDS or not row.get("sentence"):
+            continue
+        notes.append({
+            "term_id": term_id,
+            "name": TERMS_BY_ID[term_id].name if term_id in TERMS_BY_ID else term_id,
+            "field_name": row["field_name"],
+            "sentence": row["sentence"],
+        })
+    return notes
 
 
 def _evidence_tuples(rows: Sequence[Mapping[str, Any]]) -> list[Any]:
