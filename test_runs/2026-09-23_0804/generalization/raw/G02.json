@@ -1,0 +1,142 @@
+{
+ "id": "G02",
+ "input": "Zanaflex (tizanidine) 4 mg three times daily = 12 mg/day, Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.843,
+ "secondsToResults": 0.408,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Zanaflex, Cipro",
+   "category": "Zanaflex with Cipro: tizanidine levels rise 10- to 33-fold: severe low blood pressure and sedation",
+   "basis": "Why E: The Drug Interactions section of the Zanaflex label addresses this combination: tizanidine levels rise 10- to 33-fold: severe low blood pressure and sedation. Clinical rulebook row 4.",
+   "quote": "Known hypersensitivity to ciprofloxacin injection or other quinolones ( 4.1 , 5.7 ) Concomitant administration with tizanidine ( 4.2 ) 4.1 Hypersensitivity Ciprofloxacin is contraindicated in persons with a history of hypersensitivity to ciprofloxacin, any member of the quinolone class of antibacterials, or any of the product components [see Warnings and Precautions ( 5.7 )] .",
+   "source": "From the Cipro label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Tizanidine is cleared by CYP1A2. Ciprofloxacin raises its exposure about 10-fold and fluvoxamine about 33-fold. The tizanidine label contraindicates both.",
+   "action": "Do not use together.",
+   "includes": null,
+   "sources": "FDA labels: Zanaflex\n · Cipro\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "Zanaflex",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7ce17c02-7f1f-4d52-8b6f-52e385e12239"
+    },
+    {
+     "text": "Cipro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "1"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Zanaflex",
+   "generic": "tizanidine",
+   "dose": "4 mg · 3 times a day · 12 mg/day total",
+   "facts": "High-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Zanaflex\ntizanidine\n4 mg · 3 times a day · 12 mg/day total\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Cipro",
+   "generic": "ciprofloxacin",
+   "dose": "500 mg · twice a day · 1000 mg/day total",
+   "facts": "Fluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Cipro\nciprofloxacin\n500 mg · twice a day · 1000 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Singulair",
+   "generic": "montelukast",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Leukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication",
+   "text": "Singulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication"
+  }
+ ],
+ "totals": [
+  "ciprofloxacin\n1,000 mg (1 g)/day",
+  "montelukast\n10 mg/day",
+  "tizanidine\n12 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "Zanaflex",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7ce17c02-7f1f-4d52-8b6f-52e385e12239",
+   "in_alert": true
+  },
+  {
+   "text": "Cipro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  }
+ ],
+ "statusText": "3 of 3 medications checked",
+ "caption": "Most severe: E, Avoid combination. Do not use these drugs together.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n1 interaction\n\n3 of 3 medications checked\n\nE\nAvoid combination\n1\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: E, Avoid combination. Do not use these drugs together.\nE\nAvoid combination — Do not use these drugs together.\nZanaflex, Cipro\n\nZanaflex with Cipro: tizanidine levels rise 10- to 33-fold: severe low blood pressure and sedation\n\nWhy E: The Drug Interactions section of the Zanaflex label addresses this combination: tizanidine levels rise 10- to 33-fold: severe low blood pressure and sedation. Clinical rulebook row 4.\n\nKnown hypersensitivity to ciprofloxacin injection or other quinolones ( 4.1 , 5.7 ) Concomitant administration with tizanidine ( 4.2 ) 4.1 Hypersensitivity Ciprofloxacin is contraindicated in persons with a history of hypersensitivity to ciprofloxacin, any member of the quinolone class of antibacterials, or any of the product components [see Warnings and Precautions ( 5.7 )] .\n\nFrom the Cipro label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nTizanidine is cleared by CYP1A2. Ciprofloxacin raises its exposure about 10-fold and fluvoxamine about 33-fold. The tizanidine label contraindicates both.\n\nWhat to do\n\nDo not use together.\n\nFDA labels: Zanaflex\n · Cipro\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n3 medications\nClear all\nTotals by ingredient\nciprofloxacin\n1,000 mg (1 g)/day\nmontelukast\n10 mg/day\ntizanidine\n12 mg/day\nZanaflex\ntizanidine\n4 mg · 3 times a day · 12 mg/day total\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nCipro\nciprofloxacin\n500 mg · twice a day · 1000 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination\nSingulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication\n1 alert",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:08:55.406Z"
+}

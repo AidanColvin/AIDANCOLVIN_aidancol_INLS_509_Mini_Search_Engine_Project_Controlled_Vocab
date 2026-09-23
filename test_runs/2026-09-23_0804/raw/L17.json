@@ -1,0 +1,300 @@
+{
+ "id": "L17",
+ "input": "Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day, Aldactone (spironolactone) 50 mg once daily = 50 mg/day, Cozaar (losartan) 100 mg once daily = 100 mg/day, Klor-Con (potassium chloride ER) 40 mEq once daily = 40 mEq/day, Celebrex (celecoxib) 200 mg twice daily = 400 mg/day, Jardiance (empagliflozin) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.967,
+ "secondsToResults": 0.406,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Bactrim DS, Aldactone, Cozaar, Klor-Con, Celebrex",
+   "category": "5 drugs: risk of high potassium (hyperkalemia)",
+   "basis": "Why D: The Contraindications section of the Aldactone label addresses this combination: risk of high potassium (hyperkalemia). Clinical rulebook row 15.",
+   "quote": "4 CONTRAINDICATIONS Spironolactone tablets are contraindicated in the patients with: Hyperkalemia Addison's disease Concomitant use of eplerenone Spironolactone tablets are contraindicated in patients with ( 4 ): Hyperkalemia Addison's disease Concomitant use of eplerenone",
+   "source": "From the Aldactone label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "ACE inhibitors and ARBs lower aldosterone, spironolactone and eplerenone block it, trimethoprim blocks the kidney's potassium channel (like amiloride), and supplements add potassium. Together potassium can rise to levels that stop the heart.",
+   "action": "Check potassium and kidney function within 3 days and again at 1 week; stop the potassium supplement or change the antibiotic when possible.",
+   "includes": null,
+   "sources": "FDA labels: Bactrim DS\n · Aldactone\n · Cozaar\n · Klor-Con\n · Celebrex\n · Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES\n · Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c"
+    },
+    {
+     "text": "Bactrim DS",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d60c218c-6529-4944-af0b-a9dc720f32e9"
+    },
+    {
+     "text": "Aldactone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c"
+    },
+    {
+     "text": "Cozaar",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a397502e-abe7-49cf-97c7-d53a616947eb"
+    },
+    {
+     "text": "Klor-Con",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ace1eb11-b925-405a-b772-58c60b3ca7d4"
+    },
+    {
+     "text": "Celebrex",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a1eadd5-c0a7-473e-bde0-6b9450d11c95"
+    },
+    {
+     "text": "Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/15295047/"
+    },
+    {
+     "text": "Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/25646289/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Aldactone, Cozaar, Celebrex, Jardiance",
+   "category": "4 drugs: risk of acute kidney injury",
+   "basis": "Why D: The Warnings and Precautions section of the Celebrex label addresses this combination: risk of acute kidney injury. Clinical rulebook row 14.",
+   "quote": "Patients at greatest risk of this reaction are those with impaired renal function, dehydration, hypovolemia , heart failure, liver dysfunction, those taking diuretics, ACE inhibitors or the ARBs, and the elderly.",
+   "source": "From the Celebrex label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "NSAIDs remove the prostaglandins that keep blood flowing into the kidney, ACE inhibitors and ARBs lower the pressure that keeps it filtering, and diuretics reduce blood volume (the \"triple whammy\"). Aminoglycosides, vancomycin, and other listed drugs injure the kidney directly.",
+   "action": "Avoid the NSAID if possible, keep the patient hydrated, and check creatinine within a week, sooner in the hospital.",
+   "includes": null,
+   "sources": "FDA labels: Aldactone\n · Cozaar\n · Celebrex\n · Jardiance\n · Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a1eadd5-c0a7-473e-bde0-6b9450d11c95"
+    },
+    {
+     "text": "Aldactone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c"
+    },
+    {
+     "text": "Cozaar",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a397502e-abe7-49cf-97c7-d53a616947eb"
+    },
+    {
+     "text": "Celebrex",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a1eadd5-c0a7-473e-bde0-6b9450d11c95"
+    },
+    {
+     "text": "Jardiance",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59ed43d9-b4e0-72a2-e063-6394a90a327d"
+    },
+    {
+     "text": "Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/23299844/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Celebrex",
+   "category": "celecoxib 400 mg/day is at the labeled maximum of 400 mg/day (maximum)",
+   "basis": "Why A: Daily total 400 mg against a labeled maximum of 400 mg.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of celecoxib; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Celebrex",
+   "links": [
+    {
+     "text": "Celebrex",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a1eadd5-c0a7-473e-bde0-6b9450d11c95"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Bactrim DS",
+   "generic": "sulfamethoxazole, trimethoprim",
+   "dose": "sulfamethoxazole 800 mg / trimethoprim 160 mg · twice a day",
+   "facts": "Sulfonamide Antimicrobial [EPC], Dihydrofolate Reductase Inhibitor Antibacterial [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Bactrim DS\nsulfamethoxazole, trimethoprim\nsulfamethoxazole 800 mg / trimethoprim 160 mg · twice a day\nSulfonamide Antimicrobial [EPC], Dihydrofolate Reductase Inhibitor Antibacterial [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Aldactone",
+   "generic": "spironolactone",
+   "dose": "50 mg · once a day · 50 mg/day total",
+   "facts": "Aldosterone Antagonist [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Aldactone\nspironolactone\n50 mg · once a day · 50 mg/day total\nAldosterone Antagonist [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Cozaar",
+   "generic": "losartan",
+   "dose": "100 mg · once a day · 100 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment",
+   "text": "Cozaar\nlosartan\n100 mg · once a day · 100 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment"
+  },
+  {
+   "brand": "Klor-Con",
+   "generic": "potassium chloride",
+   "dose": "40 mEq · once a day · 40 mEq/day total",
+   "facts": "extended release\nContraindicated Combination",
+   "text": "Klor-Con\npotassium chloride\n40 mEq · once a day · 40 mEq/day total\nextended release\nContraindicated Combination"
+  },
+  {
+   "brand": "Celebrex",
+   "generic": "celecoxib",
+   "dose": "200 mg · twice a day · 400 mg/day total",
+   "facts": "Nonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination",
+   "text": "Celebrex\ncelecoxib\n200 mg · twice a day · 400 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Jardiance",
+   "generic": "empagliflozin",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Sodium-Glucose Cotransporter 2 Inhibitor [EPC]\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment",
+   "text": "Jardiance\nempagliflozin\n10 mg · once a day · 10 mg/day total\nSodium-Glucose Cotransporter 2 Inhibitor [EPC]\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment"
+  }
+ ],
+ "totals": [
+  "celecoxib\n400 mg/day",
+  "empagliflozin\n10 mg/day",
+  "losartan\n100 mg/day",
+  "potassium chloride\n40 mEq/day",
+  "spironolactone\n50 mg/day",
+  "sulfamethoxazole\n1,600 mg (1.6 g)/day",
+  "trimethoprim\n320 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c",
+   "in_alert": true
+  },
+  {
+   "text": "Bactrim DS",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d60c218c-6529-4944-af0b-a9dc720f32e9",
+   "in_alert": true
+  },
+  {
+   "text": "Aldactone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c",
+   "in_alert": true
+  },
+  {
+   "text": "Cozaar",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a397502e-abe7-49cf-97c7-d53a616947eb",
+   "in_alert": true
+  },
+  {
+   "text": "Klor-Con",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ace1eb11-b925-405a-b772-58c60b3ca7d4",
+   "in_alert": true
+  },
+  {
+   "text": "Celebrex",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a1eadd5-c0a7-473e-bde0-6b9450d11c95",
+   "in_alert": true
+  },
+  {
+   "text": "Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/15295047/",
+   "in_alert": true
+  },
+  {
+   "text": "Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/25646289/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a1eadd5-c0a7-473e-bde0-6b9450d11c95",
+   "in_alert": true
+  },
+  {
+   "text": "Aldactone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c",
+   "in_alert": true
+  },
+  {
+   "text": "Cozaar",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a397502e-abe7-49cf-97c7-d53a616947eb",
+   "in_alert": true
+  },
+  {
+   "text": "Celebrex",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a1eadd5-c0a7-473e-bde0-6b9450d11c95",
+   "in_alert": true
+  },
+  {
+   "text": "Jardiance",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59ed43d9-b4e0-72a2-e063-6394a90a327d",
+   "in_alert": true
+  },
+  {
+   "text": "Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/23299844/",
+   "in_alert": true
+  },
+  {
+   "text": "Celebrex",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a1eadd5-c0a7-473e-bde0-6b9450d11c95",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n3 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n2\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nBactrim DS, Aldactone, Cozaar, Klor-Con, Celebrex\n\n5 drugs: risk of high potassium (hyperkalemia)\n\nWhy D: The Contraindications section of the Aldactone label addresses this combination: risk of high potassium (hyperkalemia). Clinical rulebook row 15.\n\n4 CONTRAINDICATIONS Spironolactone tablets are contraindicated in the patients with: Hyperkalemia Addison's disease Concomitant use of eplerenone Spironolactone tablets are contraindicated in patients with ( 4 ): Hyperkalemia Addison's disease Concomitant use of eplerenone\n\nFrom the Aldactone label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nACE inhibitors and ARBs lower aldosterone, spironolactone and eplerenone block it, trimethoprim blocks the kidney's potassium channel (like amiloride), and supplements add potassium. Together potassium can rise to levels that stop the heart.\n\nWhat to do\n\nCheck potassium and kidney function within 3 days and again at 1 week; stop the potassium supplement or change the antibiotic when possible.\n\nFDA labels: Bactrim DS\n · Aldactone\n · Cozaar\n · Klor-Con\n · Celebrex\n · Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES\n · Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nAldactone, Cozaar, Celebrex, Jardiance\n\n4 drugs: risk of acute kidney injury\n\nWhy D: The Warnings and Precautions section of the Celebrex label addresses this combination: risk of acute kidney injury. Clinical rulebook row 14.\n\nPatients at greatest risk of this reaction are those with impaired renal function, dehydration, hypovolemia , heart failure, liver dysfunction, those taking diuretics, ACE inhibitors or the ARBs, and the elderly.\n\nFrom the Celebrex label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nNSAIDs remove the prostaglandins that keep blood flowing into the kidney, ACE inhibitors and ARBs lower the pressure that keeps it filtering, and diuretics reduce blood volume (the \"triple whammy\"). Aminoglycosides, vancomycin, and other listed drugs injure the kidney directly.\n\nWhat to do\n\nAvoid the NSAID if possible, keep the patient hydrated, and check creatinine within a week, sooner in the hospital.\n\nFDA labels: Aldactone\n · Cozaar\n · Celebrex\n · Jardiance\n · Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury\n\nA\nMinor — Minor: usually no action needed.\nCelebrex\n\ncelecoxib 400 mg/day is at the labeled maximum of 400 mg/day (maximum)\n\nWhy A: Daily total 400 mg against a labeled maximum of 400 mg.\n\nWhy it happens\n\nThe total counts every entry of celecoxib; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Celebrex\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\ncelecoxib\n400 mg/day\nempagliflozin\n10 mg/day\nlosartan\n100 mg/day\npotassium chloride\n40 mEq/day\nspironolactone\n50 mg/day\nsulfamethoxazole\n1,600 mg (1.6 g)/day\ntrimethoprim\n320 mg/day\nBactrim DS\nsulfamethoxazole, trimethoprim\nsulfamethoxazole 800 mg / trimethoprim 160 mg · twice a day\nSulfonamide Antimicrobial [EPC], Dihydrofolate Reductase Inhibitor Antibacterial [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nAldactone\nspironolactone\n50 mg · once a day · 50 mg/day total\nAldosterone Antagonist [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nCozaar\nlosartan\n100 mg · once a day · 100 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nKlor-Con\npotassium chloride\n40 mEq · once a day · 40 mEq/day total\nextended release\nContraindicated Combination\nCelebrex\ncelecoxib\n200 mg · twice a day · 400 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination\nJardiance\nempagliflozin\n10 mg · once a day · 10 mg/day total\nSodium-Glucose Cotransporter 2 Inhibitor [EPC]\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\n3 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:06:21.312Z"
+}

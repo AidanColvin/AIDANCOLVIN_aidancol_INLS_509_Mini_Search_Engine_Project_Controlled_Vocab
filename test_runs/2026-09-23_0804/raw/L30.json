@@ -1,0 +1,404 @@
+{
+ "id": "L30",
+ "input": "Synthroid (levothyroxine) 100 mcg once daily = 100 mcg/day, Tums Ultra (calcium carbonate OTC) 1000 mg twice daily = 2000 mg/day, Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day, Feosol (ferrous sulfate OTC) 325 mg twice daily = 650 mg/day, Prilosec (omeprazole) 20 mg once daily = 20 mg/day, Plavix (clopidogrel) 75 mg once daily = 75 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.854,
+ "secondsToResults": 1.618,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Prilosec, Plavix",
+   "category": "Plavix with Prilosec: clopidogrel may not work as well",
+   "basis": "Why D: The Warnings and Precautions section of the Plavix label addresses this combination: clopidogrel may not work as well. Clinical rulebook row 31.",
+   "quote": "5 WARNINGS AND PRECAUTIONS • CYP2C19 inhibitors: Avoid concomitant use of omeprazole or esomeprazole.",
+   "source": "From the Plavix label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Clopidogrel is a prodrug activated by CYP2C19. Omeprazole and esomeprazole inhibit CYP2C19 and cut the active metabolite (efficacy loss); the clopidogrel label says to avoid them. The clinical harm is contested: the COGENT trial found no increase in cardiac events.",
+   "action": "Use pantoprazole or famotidine if stomach protection is needed.",
+   "includes": null,
+   "sources": "FDA labels: Prilosec\n · Plavix\n · Bhatt et al., NEJM 2010 (COGENT): clopidogrel with or without omeprazole",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b573aefa-e337-478f-97e4-eb8472a7e497"
+    },
+    {
+     "text": "Prilosec",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6761f84-53ac-4745-a8c8-1e5427d7e179"
+    },
+    {
+     "text": "Plavix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b573aefa-e337-478f-97e4-eb8472a7e497"
+    },
+    {
+     "text": "Bhatt et al., NEJM 2010 (COGENT): clopidogrel with or without omeprazole",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/20925534/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Tums Ultra, Cipro, Feosol",
+   "category": "Cipro with 2 mineral products that bind it: the antibiotic is not absorbed and may fail",
+   "basis": "Why D: The Drug Interactions section of the Cipro label addresses this combination: the antibiotic is not absorbed and may fail.",
+   "quote": "Monitor serum creatinine ( 7 ) Multivalent cation-containing products including antacids, metal cations or didanosine Decreased ciprofloxacin absorption.",
+   "source": "From the Cipro label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Calcium, iron, magnesium, aluminum, and zinc bind (chelate) the antibiotic in the gut; ciprofloxacin absorption falls by about 40 to 50%.",
+   "action": "Separate the doses: give the antibiotic at least 2 hours before or 6 hours after the mineral product, or pause the supplement during the course.",
+   "includes": null,
+   "sources": "FDA labels: Tums Ultra\n · Cipro\n · Feosol",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8"
+    },
+    {
+     "text": "Tums Ultra",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=calcium%20carbonate"
+    },
+    {
+     "text": "Cipro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8"
+    },
+    {
+     "text": "Feosol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=ferrous%20sulfate"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Synthroid, Tums Ultra, Feosol",
+   "category": "Synthroid with 2 drugs that bind levothyroxine: less levothyroxine is absorbed",
+   "basis": "Why C: The Warnings and Precautions section of the Synthroid label addresses this combination: less levothyroxine is absorbed.",
+   "quote": "The increased bone resorption may be associated with increased serum levels and urinary excretion of calcium and phosphorous, elevations in bone alkaline phosphatase, and suppressed serum parathyroid hormone levels.",
+   "source": "From the Synthroid label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Calcium, iron, and binders hold levothyroxine in the gut and reduce its absorption.",
+   "action": "Separate the doses by at least 4 hours and recheck TSH in 6 to 8 weeks.",
+   "includes": null,
+   "sources": "FDA labels: Synthroid\n · Tums Ultra\n · Feosol",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901"
+    },
+    {
+     "text": "Synthroid",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901"
+    },
+    {
+     "text": "Tums Ultra",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=calcium%20carbonate"
+    },
+    {
+     "text": "Feosol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=ferrous%20sulfate"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Synthroid, Prilosec",
+   "category": "Synthroid with Prilosec: absorption may fall slightly",
+   "basis": "Why A: The Drug Interactions section of the Synthroid label addresses this combination: absorption may fall slightly.",
+   "quote": "Proton Pump Inhibitors Sucralfate Antacids (e.g., aluminum & magnesium hydroxides, simethicone) Gastric acidity is an essential requirement for adequate absorption of levothyroxine.",
+   "source": "From the Synthroid label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Stomach acid helps levothyroxine and non-heme iron dissolve; acid suppression modestly reduces absorption.",
+   "action": "Usually minor; recheck TSH or iron studies if control changes.",
+   "includes": null,
+   "sources": "FDA labels: Synthroid\n · Prilosec",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901"
+    },
+    {
+     "text": "Synthroid",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901"
+    },
+    {
+     "text": "Prilosec",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6761f84-53ac-4745-a8c8-1e5427d7e179"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Feosol, Prilosec",
+   "category": "Feosol with Prilosec: absorption may fall slightly",
+   "basis": "Why A: Class rule: absorption may fall slightly.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Stomach acid helps levothyroxine and non-heme iron dissolve; acid suppression modestly reduces absorption.",
+   "action": "Usually minor; recheck TSH or iron studies if control changes.",
+   "includes": null,
+   "sources": "FDA labels: Feosol\n · Prilosec",
+   "links": [
+    {
+     "text": "Feosol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=ferrous%20sulfate"
+    },
+    {
+     "text": "Prilosec",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6761f84-53ac-4745-a8c8-1e5427d7e179"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Cipro, Prilosec",
+   "category": "QT Prolongation Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "QT Prolongation: Prolongation of the QT interval and isolated cases of torsade de pointes have been reported.",
+   "source": "From the Cipro label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: QT prolongation",
+   "why_text": "Each of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Cipro\n · Prilosec",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "National Heart, Lung, and Blood Institute, NIH",
+     "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome"
+    },
+    {
+     "text": "Cipro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "Prilosec",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6761f84-53ac-4745-a8c8-1e5427d7e179"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "1"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "3"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Synthroid",
+   "generic": "levothyroxine",
+   "dose": "100 mcg · once a day · 100 mcg/day total",
+   "facts": "Boxed Warning\nContraindicated Combination",
+   "text": "Synthroid\nlevothyroxine\n100 mcg · once a day · 100 mcg/day total\nBoxed Warning\nContraindicated Combination"
+  },
+  {
+   "brand": "Tums Ultra",
+   "generic": "calcium carbonate",
+   "dose": "1000 mg · twice a day · 2000 mg/day total",
+   "facts": "",
+   "text": "Tums Ultra\ncalcium carbonate\n1000 mg · twice a day · 2000 mg/day total"
+  },
+  {
+   "brand": "Cipro",
+   "generic": "ciprofloxacin",
+   "dose": "500 mg · twice a day · 1000 mg/day total",
+   "facts": "Fluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Cipro\nciprofloxacin\n500 mg · twice a day · 1000 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Feosol",
+   "generic": "ferrous sulfate",
+   "dose": "325 mg · twice a day · 650 mg/day total",
+   "facts": "",
+   "text": "Feosol\nferrous sulfate\n325 mg · twice a day · 650 mg/day total"
+  },
+  {
+   "brand": "Prilosec",
+   "generic": "omeprazole",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "Pediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Prilosec\nomeprazole\n20 mg · once a day · 20 mg/day total\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Plavix",
+   "generic": "clopidogrel",
+   "dose": "75 mg · once a day · 75 mg/day total",
+   "facts": "P2Y12 Platelet Inhibitor [EPC]\nBoxed Warning",
+   "text": "Plavix\nclopidogrel\n75 mg · once a day · 75 mg/day total\nP2Y12 Platelet Inhibitor [EPC]\nBoxed Warning"
+  }
+ ],
+ "totals": [
+  "calcium carbonate\n2,000 mg (2 g)/day",
+  "ciprofloxacin\n1,000 mg (1 g)/day",
+  "clopidogrel\n75 mg/day",
+  "ferrous sulfate\n650 mg/day",
+  "levothyroxine\n100 mcg (0.1 mg)/day",
+  "omeprazole\n20 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b573aefa-e337-478f-97e4-eb8472a7e497",
+   "in_alert": true
+  },
+  {
+   "text": "Prilosec",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6761f84-53ac-4745-a8c8-1e5427d7e179",
+   "in_alert": true
+  },
+  {
+   "text": "Plavix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b573aefa-e337-478f-97e4-eb8472a7e497",
+   "in_alert": true
+  },
+  {
+   "text": "Bhatt et al., NEJM 2010 (COGENT): clopidogrel with or without omeprazole",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/20925534/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8",
+   "in_alert": true
+  },
+  {
+   "text": "Tums Ultra",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=calcium%20carbonate",
+   "in_alert": true
+  },
+  {
+   "text": "Cipro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8",
+   "in_alert": true
+  },
+  {
+   "text": "Feosol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=ferrous%20sulfate",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901",
+   "in_alert": true
+  },
+  {
+   "text": "Synthroid",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901",
+   "in_alert": true
+  },
+  {
+   "text": "Tums Ultra",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=calcium%20carbonate",
+   "in_alert": true
+  },
+  {
+   "text": "Feosol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=ferrous%20sulfate",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901",
+   "in_alert": true
+  },
+  {
+   "text": "Synthroid",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901",
+   "in_alert": true
+  },
+  {
+   "text": "Prilosec",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6761f84-53ac-4745-a8c8-1e5427d7e179",
+   "in_alert": true
+  },
+  {
+   "text": "Feosol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=ferrous%20sulfate",
+   "in_alert": true
+  },
+  {
+   "text": "Prilosec",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6761f84-53ac-4745-a8c8-1e5427d7e179",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "National Heart, Lung, and Blood Institute, NIH",
+   "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome",
+   "in_alert": true
+  },
+  {
+   "text": "Cipro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "Prilosec",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6761f84-53ac-4745-a8c8-1e5427d7e179",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n6 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n2\nC\nMonitor closely\n1\nB\nMonitor\n–\nA\nMinor\n3\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nPrilosec, Plavix\n\nPlavix with Prilosec: clopidogrel may not work as well\n\nWhy D: The Warnings and Precautions section of the Plavix label addresses this combination: clopidogrel may not work as well. Clinical rulebook row 31.\n\n5 WARNINGS AND PRECAUTIONS • CYP2C19 inhibitors: Avoid concomitant use of omeprazole or esomeprazole.\n\nFrom the Plavix label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nClopidogrel is a prodrug activated by CYP2C19. Omeprazole and esomeprazole inhibit CYP2C19 and cut the active metabolite (efficacy loss); the clopidogrel label says to avoid them. The clinical harm is contested: the COGENT trial found no increase in cardiac events.\n\nWhat to do\n\nUse pantoprazole or famotidine if stomach protection is needed.\n\nFDA labels: Prilosec\n · Plavix\n · Bhatt et al., NEJM 2010 (COGENT): clopidogrel with or without omeprazole\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nTums Ultra, Cipro, Feosol\n\nCipro with 2 mineral products that bind it: the antibiotic is not absorbed and may fail\n\nWhy D: The Drug Interactions section of the Cipro label addresses this combination: the antibiotic is not absorbed and may fail.\n\nMonitor serum creatinine ( 7 ) Multivalent cation-containing products including antacids, metal cations or didanosine Decreased ciprofloxacin absorption.\n\nFrom the Cipro label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nCalcium, iron, magnesium, aluminum, and zinc bind (chelate) the antibiotic in the gut; ciprofloxacin absorption falls by about 40 to 50%.\n\nWhat to do\n\nSeparate the doses: give the antibiotic at least 2 hours before or 6 hours after the mineral product, or pause the supplement during the course.\n\nFDA labels: Tums Ultra\n · Cipro\n · Feosol\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nSynthroid, Tums Ultra, Feosol\n\nSynthroid with 2 drugs that bind levothyroxine: less levothyroxine is absorbed\n\nWhy C: The Warnings and Precautions section of the Synthroid label addresses this combination: less levothyroxine is absorbed.\n\nThe increased bone resorption may be associated with increased serum levels and urinary excretion of calcium and phosphorous, elevations in bone alkaline phosphatase, and suppressed serum parathyroid hormone levels.\n\nFrom the Synthroid label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nCalcium, iron, and binders hold levothyroxine in the gut and reduce its absorption.\n\nWhat to do\n\nSeparate the doses by at least 4 hours and recheck TSH in 6 to 8 weeks.\n\nFDA labels: Synthroid\n · Tums Ultra\n · Feosol\n\nA\nMinor — Minor: usually no action needed.\nSynthroid, Prilosec\n\nSynthroid with Prilosec: absorption may fall slightly\n\nWhy A: The Drug Interactions section of the Synthroid label addresses this combination: absorption may fall slightly.\n\nProton Pump Inhibitors Sucralfate Antacids (e.g., aluminum & magnesium hydroxides, simethicone) Gastric acidity is an essential requirement for adequate absorption of levothyroxine.\n\nFrom the Synthroid label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nStomach acid helps levothyroxine and non-heme iron dissolve; acid suppression modestly reduces absorption.\n\nWhat to do\n\nUsually minor; recheck TSH or iron studies if control changes.\n\nFDA labels: Synthroid\n · Prilosec\n\nA\nMinor — Minor: usually no action needed.\nFeosol, Prilosec\n\nFeosol with Prilosec: absorption may fall slightly\n\nWhy A: Class rule: absorption may fall slightly.\n\nWhy it happens\n\nStomach acid helps levothyroxine and non-heme iron dissolve; acid suppression modestly reduces absorption.\n\nWhat to do\n\nUsually minor; recheck TSH or iron studies if control changes.\n\nFDA labels: Feosol\n · Prilosec\n\nA\nMinor — Minor: usually no action needed.\nCipro, Prilosec\n\nQT Prolongation Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\nQT Prolongation: Prolongation of the QT interval and isolated cases of torsade de pointes have been reported.\n\nFrom the Cipro label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhat this means: QT prolongation\n\nEach of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.\n\nSource: National Heart, Lung, and Blood Institute, NIH\n\nFDA labels: Cipro\n · Prilosec\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\ncalcium carbonate\n2,000 mg (2 g)/day\nciprofloxacin\n1,000 mg (1 g)/day\nclopidogrel\n75 mg/day\nferrous sulfate\n650 mg/day\nlevothyroxine\n100 mcg (0.1 mg)/day\nomeprazole\n20 mg/day\nSynthroid\nlevothyroxine\n100 mcg · once a day · 100 mcg/day total\nBoxed Warning\nContraindicated Combination\nTums Ultra\ncalcium carbonate\n1000 mg · twice a day · 2000 mg/day total\nCipro\nciprofloxacin\n500 mg · twice a day · 1000 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination\nFeosol\nferrous sulfate\n325 mg · twice a day · 650 mg/day total\nPrilosec\nomeprazole\n20 mg · once a day · 20 mg/day total\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination\nPlavix\nclopidogrel\n75 mg · once a day · 75 mg/day total\nP2Y12 Platelet Inhibitor [EPC]\nBoxed Warning\n6 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:07:29.044Z"
+}

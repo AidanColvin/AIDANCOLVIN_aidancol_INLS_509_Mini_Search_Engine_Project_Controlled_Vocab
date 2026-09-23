@@ -1,0 +1,438 @@
+{
+ "id": "L12",
+ "input": "Symbyax (olanzapine/fluoxetine) 6/25 mg once daily = 6/25 mg/day, Prozac (fluoxetine) 20 mg once daily = 20 mg/day, Norco (hydrocodone/acetaminophen) 10/325 mg four times daily = 40/1300 mg/day, Tylenol (acetaminophen OTC) 500 mg 2 tablets three times daily = 3000 mg/day, Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day, Xanax XR (alprazolam ER) 1 mg once daily = 1 mg/day",
+ "viewport": "390x844",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.878,
+ "secondsToResults": 0.406,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Symbyax, Norco, Xanax, Xanax XR",
+   "category": "3 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: The Boxed Warning section of the Norco label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "Risks from Concomitant Use with Benzodiazepines or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Norco label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": "Norco with 2 benzodiazepines: boxed warning: profound sedation, respiratory depression, coma, death. Opioids and benzodiazepines both suppress the brainstem's drive to breathe. Both drug classes carry an FDA boxed warning against this combination.",
+   "sources": "FDA labels: Symbyax\n · Norco\n · Xanax\n · Xanax XR\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7"
+    },
+    {
+     "text": "Symbyax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251"
+    },
+    {
+     "text": "Norco",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7"
+    },
+    {
+     "text": "Xanax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    },
+    {
+     "text": "Xanax XR",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Norco, Tylenol",
+   "category": "acetaminophen 4,300 mg (4.3 g)/day is above the labeled maximum of 4,000 mg (4 g)/day (maximum)",
+   "basis": "Why D: Daily total 4,300 mg (4.3 g) against a labeled maximum of 4,000 mg (4 g) (FDA labeling: no more than 4,000 mg a day from all sources).",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of acetaminophen, including combination products. Above the maximum the risk is liver injury.",
+   "action": "Lower the total to the labeled maximum or less.",
+   "includes": null,
+   "sources": "FDA labels: Norco\n · Tylenol",
+   "links": [
+    {
+     "text": "Norco",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7"
+    },
+    {
+     "text": "Tylenol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=464e404a-1957-44a2-a53a-f2a9d3c15bde"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Symbyax, Prozac",
+   "category": "Duplicate: Symbyax (fluoxetine, olanzapine) and Prozac (fluoxetine) are the same drug under different names: combined fluoxetine 45 mg/day",
+   "basis": "Why D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Both entries deliver the same active drug, so the patient gets the combined dose.",
+   "action": "Confirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.",
+   "includes": null,
+   "sources": "FDA labels: Symbyax\n · Prozac",
+   "links": [
+    {
+     "text": "Symbyax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251"
+    },
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Norco, Tylenol",
+   "category": "Duplicate: Norco (acetaminophen, hydrocodone) and Tylenol (acetaminophen) are the same drug under different names: combined acetaminophen 4,300 mg (4.3 g)/day; acetaminophen is at or above its labeled maximum of 4,000 mg (4 g)/day",
+   "basis": "Why D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Both entries deliver the same active drug, so the patient gets the combined dose.",
+   "action": "Confirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.",
+   "includes": null,
+   "sources": "FDA labels: Norco\n · Tylenol",
+   "links": [
+    {
+     "text": "Norco",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7"
+    },
+    {
+     "text": "Tylenol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=464e404a-1957-44a2-a53a-f2a9d3c15bde"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Xanax, Xanax XR",
+   "category": "Duplicate: Xanax (alprazolam) is entered on two lines: combined alprazolam 2.5 mg/day",
+   "basis": "Why C: The same product appears on two lines; the doses add up.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Both entries deliver the same active drug, so the patient gets the combined dose.",
+   "action": "Confirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.",
+   "includes": null,
+   "sources": "FDA labels: Xanax\n · Xanax XR",
+   "links": [
+    {
+     "text": "Xanax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    },
+    {
+     "text": "Xanax XR",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-c"
+  },
+  {
+   "grade": "B",
+   "grade_text": "Monitor — Real but manageable: monitor.",
+   "drugs": "Symbyax, Prozac, Norco",
+   "category": "Norco with 2 drugs that block CYP2D6: may change the opioid's effect",
+   "basis": "Why B: The Precautions section of the Norco label addresses this combination: may change the opioid's effect. Clinical rulebook row 35.",
+   "quote": "These effects could be more pronounced with concomitant use of hydrocodone bitartrate and acetaminophen oral solution and both CYP3A4 and CYP2D6 inhibitors, particularly when an inhibitor is added after a stable dose of hydrocodone bitartrate and acetaminophen oral solution is achieved [see WARNINGS ].",
+   "source": "From the Norco label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "CYP2D6 makes a minor active metabolite (hydromorphone from hydrocodone). Blocking it can reduce analgesia somewhat.",
+   "action": "Monitor pain control.",
+   "includes": null,
+   "sources": "FDA labels: Symbyax\n · Prozac\n · Norco",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7"
+    },
+    {
+     "text": "Symbyax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251"
+    },
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Norco",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-b"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Symbyax, Prozac, Norco",
+   "category": "Serotonin Syndrome Risk shared by 3 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "Monitor weight regularly ( 5.5 ) Serotonin Syndrome : Serotonin syndrome has been reported with SSRIs and SNRIs, including olanzapine and fluoxetine capsules, both when taken alone, but especially when co-administered with other serotonergic agents.",
+   "source": "From the Symbyax label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: Serotonin syndrome",
+   "why_text": "Too much serotonin activity in the nervous system, most often when two or more serotonergic drugs are taken together. Signs include agitation, fast heartbeat, high temperature, sweating, and twitching muscles. It can be life-threatening.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Symbyax\n · Prozac\n · Norco",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251"
+    },
+    {
+     "text": "MedlinePlus, National Library of Medicine",
+     "href": "https://medlineplus.gov/ency/article/007272.htm"
+    },
+    {
+     "text": "Symbyax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251"
+    },
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Norco",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "4"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "1"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "1"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Symbyax",
+   "generic": "fluoxetine, olanzapine",
+   "dose": "olanzapine 6 mg / fluoxetine 25 mg · once a day",
+   "facts": "Atypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Symbyax\nfluoxetine, olanzapine\nolanzapine 6 mg / fluoxetine 25 mg · once a day\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Prozac",
+   "generic": "fluoxetine",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "Serotonin Reuptake Inhibitor [EPC]\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Prozac\nfluoxetine\n20 mg · once a day · 20 mg/day total\nSerotonin Reuptake Inhibitor [EPC]\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Norco",
+   "generic": "acetaminophen, hydrocodone",
+   "dose": "hydrocodone 10 mg / acetaminophen 325 mg · 4 times a day",
+   "facts": "Schedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk",
+   "text": "Norco\nacetaminophen, hydrocodone\nhydrocodone 10 mg / acetaminophen 325 mg · 4 times a day\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk"
+  },
+  {
+   "brand": "Tylenol",
+   "generic": "acetaminophen",
+   "dose": "500 mg · 2 per dose · 3 times a day · 3000 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect",
+   "text": "Tylenol\nacetaminophen\n500 mg · 2 per dose · 3 times a day · 3000 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Xanax",
+   "generic": "alprazolam",
+   "dose": "0.5 mg · 3 times a day · 1.5 mg/day total",
+   "facts": "Benzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Xanax\nalprazolam\n0.5 mg · 3 times a day · 1.5 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Xanax XR",
+   "generic": "alprazolam",
+   "dose": "1 mg · once a day · 1 mg/day total",
+   "facts": "extended release\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Xanax XR\nalprazolam\n1 mg · once a day · 1 mg/day total\nextended release\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  }
+ ],
+ "totals": [
+  "acetaminophen\n4,300 mg (4.3 g)/day · from 2 entries",
+  "alprazolam\n2.5 mg/day · from 2 entries",
+  "fluoxetine\n45 mg/day · from 2 entries",
+  "hydrocodone\n40 mg/day · 40 MME",
+  "olanzapine\n6 mg/day"
+ ],
+ "totalMme": "Total opioid dose: 40 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": true
+  },
+  {
+   "text": "Symbyax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": true
+  },
+  {
+   "text": "Norco",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": true
+  },
+  {
+   "text": "Xanax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Xanax XR",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Norco",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": true
+  },
+  {
+   "text": "Tylenol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=464e404a-1957-44a2-a53a-f2a9d3c15bde",
+   "in_alert": true
+  },
+  {
+   "text": "Symbyax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Norco",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": true
+  },
+  {
+   "text": "Tylenol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=464e404a-1957-44a2-a53a-f2a9d3c15bde",
+   "in_alert": true
+  },
+  {
+   "text": "Xanax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Xanax XR",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": true
+  },
+  {
+   "text": "Symbyax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Norco",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": true
+  },
+  {
+   "text": "MedlinePlus, National Library of Medicine",
+   "href": "https://medlineplus.gov/ency/article/007272.htm",
+   "in_alert": true
+  },
+  {
+   "text": "Symbyax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Norco",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n7 interactions\n\n6 of 6 medications checked\n\nE\n–\nD\n4\nC\n1\nB\n1\nA\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nSymbyax, Norco, Xanax, Xanax XR\n\n3 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: The Boxed Warning section of the Norco label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nRisks from Concomitant Use with Benzodiazepines or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Norco label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nNorco with 2 benzodiazepines: boxed warning: profound sedation, respiratory depression, coma, death. Opioids and benzodiazepines both suppress the brainstem's drive to breathe. Both drug classes carry an FDA boxed warning against this combination.\n\nFDA labels: Symbyax\n · Norco\n · Xanax\n · Xanax XR\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 2 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nNorco, Tylenol\n\nacetaminophen 4,300 mg (4.3 g)/day is above the labeled maximum of 4,000 mg (4 g)/day (maximum)\n\nWhy D: Daily total 4,300 mg (4.3 g) against a labeled maximum of 4,000 mg (4 g) (FDA labeling: no more than 4,000 mg a day from all sources).\n\nWhy it happens\n\nThe total counts every entry of acetaminophen, including combination products. Above the maximum the risk is liver injury.\n\nWhat to do\n\nLower the total to the labeled maximum or less.\n\nFDA labels: Norco\n · Tylenol\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nSymbyax, Prozac\n\nDuplicate: Symbyax (fluoxetine, olanzapine) and Prozac (fluoxetine) are the same drug under different names: combined fluoxetine 45 mg/day\n\nWhy D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.\n\nWhy it happens\n\nBoth entries deliver the same active drug, so the patient gets the combined dose.\n\nWhat to do\n\nConfirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.\n\nFDA labels: Symbyax\n · Prozac\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nNorco, Tylenol\n\nDuplicate: Norco (acetaminophen, hydrocodone) and Tylenol (acetaminophen) are the same drug under different names: combined acetaminophen 4,300 mg (4.3 g)/day; acetaminophen is at or above its labeled maximum of 4,000 mg (4 g)/day\n\nWhy D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.\n\nWhy it happens\n\nBoth entries deliver the same active drug, so the patient gets the combined dose.\n\nWhat to do\n\nConfirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.\n\nFDA labels: Norco\n · Tylenol\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nXanax, Xanax XR\n\nDuplicate: Xanax (alprazolam) is entered on two lines: combined alprazolam 2.5 mg/day\n\nWhy C: The same product appears on two lines; the doses add up.\n\nWhy it happens\n\nBoth entries deliver the same active drug, so the patient gets the combined dose.\n\nWhat to do\n\nConfirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.\n\nFDA labels: Xanax\n · Xanax XR\n\nB\nMonitor — Real but manageable: monitor.\nSymbyax, Prozac, Norco\n\nNorco with 2 drugs that block CYP2D6: may change the opioid's effect\n\nWhy B: The Precautions section of the Norco label addresses this combination: may change the opioid's effect. Clinical rulebook row 35.\n\nThese effects could be more pronounced with concomitant use of hydrocodone bitartrate and acetaminophen oral solution and both CYP3A4 and CYP2D6 inhibitors, particularly when an inhibitor is added after a stable dose of hydrocodone bitartrate and acetaminophen oral solution is achieved [see WARNINGS ].\n\nFrom the Norco label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nCYP2D6 makes a minor active metabolite (hydromorphone from hydrocodone). Blocking it can reduce analgesia somewhat.\n\nWhat to do\n\nMonitor pain control.\n\nFDA labels: Symbyax\n · Prozac\n · Norco\n\nA\nMinor — Minor: usually no action needed.\nSymbyax, Prozac, Norco\n\nSerotonin Syndrome Risk shared by 3 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\nMonitor weight regularly ( 5.5 ) Serotonin Syndrome : Serotonin syndrome has been reported with SSRIs and SNRIs, including olanzapine and fluoxetine capsules, both when taken alone, but especially when co-administered with other serotonergic agents.\n\nFrom the Symbyax label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhat this means: Serotonin syndrome\n\nToo much serotonin activity in the nervous system, most often when two or more serotonergic drugs are taken together. Signs include agitation, fast heartbeat, high temperature, sweating, and twitching muscles. It can be life-threatening.\n\nSource: MedlinePlus, National Library of Medicine\n\nFDA labels: Symbyax\n · Prozac\n · Norco\n\nShow 2 more label sentences\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nacetaminophen\n4,300 mg (4.3 g)/day · from 2 entries\nalprazolam\n2.5 mg/day · from 2 entries\nfluoxetine\n45 mg/day · from 2 entries\nhydrocodone\n40 mg/day · 40 MME\nolanzapine\n6 mg/day\n\nTotal opioid dose: 40 MME/day (CDC 2022 conversion factors).\n\nSymbyax\nfluoxetine, olanzapine\nolanzapine 6 mg / fluoxetine 25 mg · once a day\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nProzac\nfluoxetine\n20 mg · once a day · 20 mg/day total\nSerotonin Reuptake Inhibitor [EPC]\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nNorco\nacetaminophen, hydrocodone\nhydrocodone 10 mg / acetaminophen 325 mg · 4 times a day\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk\nTylenol\nacetaminophen\n500 mg · 2 per dose · 3 times a day · 3000 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nXanax\nalprazolam\n0.5 mg · 3 times a day · 1.5 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nXanax XR\nalprazolam\n1 mg · once a day · 1 mg/day total\nextended release\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\n7 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:08:35.469Z"
+}

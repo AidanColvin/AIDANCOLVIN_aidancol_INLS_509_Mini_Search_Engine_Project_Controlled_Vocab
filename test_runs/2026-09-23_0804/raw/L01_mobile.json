@@ -1,0 +1,332 @@
+{
+ "id": "L01",
+ "input": "Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day, Xanax (alprazolam) 1 mg three times daily = 3 mg/day, Adderall (amphetamine/dextroamphetamine) 20 mg three times daily = 60 mg/day, Zyprexa (olanzapine) 10 mg once daily = 10 mg/day, Zyprexa (olanzapine) 2.5 mg once daily = 2.5 mg/day",
+ "viewport": "390x844",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 1.319,
+ "secondsToResults": 0.405,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Ambien, Xanax, Zyprexa",
+   "category": "3 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "WARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Xanax label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Ambien\n · Xanax\n · Zyprexa\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    },
+    {
+     "text": "Ambien",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721"
+    },
+    {
+     "text": "Xanax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    },
+    {
+     "text": "Zyprexa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Ambien, Xanax",
+   "category": "2 sedative-hypnotics: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing",
+   "basis": "Why D: Class rule: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These are all sedative-hypnotics: taking more than one is therapeutic duplication.",
+   "action": "Keep one sleep medicine at the lowest dose.",
+   "includes": null,
+   "sources": "FDA labels: Ambien\n · Xanax",
+   "links": [
+    {
+     "text": "Ambien",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721"
+    },
+    {
+     "text": "Xanax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Adderall",
+   "category": "amphetamine/dextroamphetamine 60 mg/day is above the labeled maximum of 40 mg/day (maximum)",
+   "basis": "Why C: Daily total 60 mg against a labeled maximum of 40 mg (mixed amphetamine salts for ADHD (up to 60 mg for narcolepsy)).",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of amphetamine/dextroamphetamine, including combination products. Above the maximum the risk is raised heart rate and blood pressure, insomnia, misuse.",
+   "action": "Lower the total to the labeled maximum or less.",
+   "includes": null,
+   "sources": "FDA labels: Adderall",
+   "links": [
+    {
+     "text": "Adderall",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9af67219-9b37-45d0-ac52-647cbfacd296"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Zyprexa",
+   "category": "Duplicate: Zyprexa (olanzapine) is entered on two lines: combined olanzapine 12.5 mg/day",
+   "basis": "Why C: The same product appears on two lines; the doses add up.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Both entries deliver the same active drug, so the patient gets the combined dose.",
+   "action": "Confirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.",
+   "includes": null,
+   "sources": "FDA labels: Zyprexa",
+   "links": [
+    {
+     "text": "Zyprexa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Xanax, Adderall, Zyprexa",
+   "category": "Adderall with 3 sedating drugs: opposing effects partly cancel",
+   "basis": "Why A: The Precautions section of the Adderall label addresses this combination: opposing effects partly cancel.",
+   "quote": "Chlorpromazine Chlorpromazine blocks dopamine and norepinephrine receptors, thus inhibiting the central stimulant effects of amphetamines, and can be used to treat amphetamine poisoning.",
+   "source": "From the Adderall label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "A stimulant works against sedating drugs and dopamine blockers; each may blunt the other.",
+   "action": "Review whether both are needed.",
+   "includes": null,
+   "sources": "FDA labels: Xanax\n · Adderall\n · Zyprexa",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9af67219-9b37-45d0-ac52-647cbfacd296"
+    },
+    {
+     "text": "Xanax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    },
+    {
+     "text": "Adderall",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9af67219-9b37-45d0-ac52-647cbfacd296"
+    },
+    {
+     "text": "Zyprexa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Ambien",
+   "category": "zolpidem 10 mg/day is at the labeled maximum of 10 mg/day (maximum)",
+   "basis": "Why A: Daily total 10 mg against a labeled maximum of 10 mg (5 mg for women and older adults).",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of zolpidem; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Ambien",
+   "links": [
+    {
+     "text": "Ambien",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "2"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "2"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Ambien",
+   "generic": "zolpidem",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Schedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Ambien\nzolpidem\n10 mg · once a day · 10 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Xanax",
+   "generic": "alprazolam",
+   "dose": "1 mg · 3 times a day · 3 mg/day total",
+   "facts": "Benzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Xanax\nalprazolam\n1 mg · 3 times a day · 3 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Adderall",
+   "generic": "amphetamine, dextroamphetamine",
+   "dose": "20 mg · 3 times a day · 60 mg/day total",
+   "facts": "Boxed Warning\nSerotonin Syndrome Risk",
+   "text": "Adderall\namphetamine, dextroamphetamine\n20 mg · 3 times a day · 60 mg/day total\nBoxed Warning\nSerotonin Syndrome Risk"
+  },
+  {
+   "brand": "Zyprexa",
+   "generic": "olanzapine",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Atypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment",
+   "text": "Zyprexa\nolanzapine\n10 mg · once a day · 10 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment"
+  },
+  {
+   "brand": "Zyprexa",
+   "generic": "olanzapine",
+   "dose": "2.5 mg · once a day · 2.5 mg/day total",
+   "facts": "Atypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment",
+   "text": "Zyprexa\nolanzapine\n2.5 mg · once a day · 2.5 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment"
+  }
+ ],
+ "totals": [
+  "alprazolam\n3 mg/day",
+  "amphetamine/dextroamphetamine\n60 mg/day",
+  "olanzapine\n12.5 mg/day · from 2 entries",
+  "zolpidem\n10 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Ambien",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+   "in_alert": true
+  },
+  {
+   "text": "Xanax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Zyprexa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Ambien",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+   "in_alert": true
+  },
+  {
+   "text": "Xanax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Adderall",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9af67219-9b37-45d0-ac52-647cbfacd296",
+   "in_alert": true
+  },
+  {
+   "text": "Zyprexa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9af67219-9b37-45d0-ac52-647cbfacd296",
+   "in_alert": true
+  },
+  {
+   "text": "Xanax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Adderall",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9af67219-9b37-45d0-ac52-647cbfacd296",
+   "in_alert": true
+  },
+  {
+   "text": "Zyprexa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": true
+  },
+  {
+   "text": "Ambien",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+   "in_alert": true
+  }
+ ],
+ "statusText": "5 of 5 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n6 interactions\n\n5 of 5 medications checked\n\nE\n–\nD\n2\nC\n2\nB\n–\nA\n2\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nAmbien, Xanax, Zyprexa\n\n3 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nWARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Xanax label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Ambien\n · Xanax\n · Zyprexa\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 1 more label sentence\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nAmbien, Xanax\n\n2 sedative-hypnotics: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing\n\nWhy D: Class rule: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing.\n\nWhy it happens\n\nThese are all sedative-hypnotics: taking more than one is therapeutic duplication.\n\nWhat to do\n\nKeep one sleep medicine at the lowest dose.\n\nFDA labels: Ambien\n · Xanax\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nAdderall\n\namphetamine/dextroamphetamine 60 mg/day is above the labeled maximum of 40 mg/day (maximum)\n\nWhy C: Daily total 60 mg against a labeled maximum of 40 mg (mixed amphetamine salts for ADHD (up to 60 mg for narcolepsy)).\n\nWhy it happens\n\nThe total counts every entry of amphetamine/dextroamphetamine, including combination products. Above the maximum the risk is raised heart rate and blood pressure, insomnia, misuse.\n\nWhat to do\n\nLower the total to the labeled maximum or less.\n\nFDA labels: Adderall\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nZyprexa\n\nDuplicate: Zyprexa (olanzapine) is entered on two lines: combined olanzapine 12.5 mg/day\n\nWhy C: The same product appears on two lines; the doses add up.\n\nWhy it happens\n\nBoth entries deliver the same active drug, so the patient gets the combined dose.\n\nWhat to do\n\nConfirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.\n\nFDA labels: Zyprexa\n\nA\nMinor — Minor: usually no action needed.\nXanax, Adderall, Zyprexa\n\nAdderall with 3 sedating drugs: opposing effects partly cancel\n\nWhy A: The Precautions section of the Adderall label addresses this combination: opposing effects partly cancel.\n\nChlorpromazine Chlorpromazine blocks dopamine and norepinephrine receptors, thus inhibiting the central stimulant effects of amphetamines, and can be used to treat amphetamine poisoning.\n\nFrom the Adderall label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nA stimulant works against sedating drugs and dopamine blockers; each may blunt the other.\n\nWhat to do\n\nReview whether both are needed.\n\nFDA labels: Xanax\n · Adderall\n · Zyprexa\n\nA\nMinor — Minor: usually no action needed.\nAmbien\n\nzolpidem 10 mg/day is at the labeled maximum of 10 mg/day (maximum)\n\nWhy A: Daily total 10 mg against a labeled maximum of 10 mg (5 mg for women and older adults).\n\nWhy it happens\n\nThe total counts every entry of zolpidem; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Ambien\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n5 medications\nClear all\nTotals by ingredient\nalprazolam\n3 mg/day\namphetamine/dextroamphetamine\n60 mg/day\nolanzapine\n12.5 mg/day · from 2 entries\nzolpidem\n10 mg/day\nAmbien\nzolpidem\n10 mg · once a day · 10 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nXanax\nalprazolam\n1 mg · 3 times a day · 3 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nAdderall\namphetamine, dextroamphetamine\n20 mg · 3 times a day · 60 mg/day total\nBoxed Warning\nSerotonin Syndrome Risk\nZyprexa\nolanzapine\n10 mg · once a day · 10 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nZyprexa\nolanzapine\n2.5 mg · once a day · 2.5 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\n6 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:08:30.549Z"
+}

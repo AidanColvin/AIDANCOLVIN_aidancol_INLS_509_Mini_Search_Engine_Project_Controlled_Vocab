@@ -1,0 +1,422 @@
+{
+ "id": "L08",
+ "input": "Clozaril (clozapine) 200 mg twice daily = 400 mg/day, Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day, Luvox (fluvoxamine) 100 mg twice daily = 200 mg/day, Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day, Ativan (lorazepam) 1 mg twice daily = 2 mg/day, Depakote (divalproex sodium) 500 mg twice daily = 1000 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.902,
+ "secondsToResults": 0.408,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Clozaril, Tegretol, Ativan, Depakote",
+   "category": "4 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "WARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Ativan label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": "Clozaril with Ativan: collapse, respiratory arrest, and cardiac arrest have been reported. The clozapine label warns of collapse, respiratory arrest, and cardiac arrest with benzodiazepines and other psychotropic drugs, especially early in treatment.",
+   "sources": "FDA labels: Clozaril\n · Tegretol\n · Ativan\n · Depakote\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0810422-b732-4c04-97d8-c1521c401ef4"
+    },
+    {
+     "text": "Clozaril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355"
+    },
+    {
+     "text": "Tegretol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816"
+    },
+    {
+     "text": "Ativan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0810422-b732-4c04-97d8-c1521c401ef4"
+    },
+    {
+     "text": "Depakote",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Clozaril, Tegretol",
+   "category": "Clozaril with Tegretol: agranulocytosis risk adds up, and clozapine levels fall",
+   "basis": "Why D: The Drug Interactions section of the Clozaril label addresses this combination: agranulocytosis risk adds up, and clozapine levels fall.",
+   "quote": "Discontinuation of CYP1A2 or CYP3A4 Inducers : Consider reducing VERSACLOZ dose when CYP1A2 (e.g., tobacco smoke) or CYP3A4 inducers (e.g., carbamazepine) are discontinued ( 2.8 , 7.1 ).",
+   "source": "From the Clozaril label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Both drugs can cause agranulocytosis, and carbamazepine induces CYP3A4 and roughly halves clozapine levels.",
+   "action": "Avoid; choose another mood stabilizer.",
+   "includes": null,
+   "sources": "FDA labels: Clozaril\n · Tegretol",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355"
+    },
+    {
+     "text": "Clozaril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355"
+    },
+    {
+     "text": "Tegretol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Clozaril, Luvox, Cipro",
+   "category": "Clozaril with 2 strong CYP1A2 inhibitors: clozapine levels rise 2- to 5-fold: seizures, sedation, low blood pressure",
+   "basis": "Why D: The Drug Interactions section of the Clozaril label addresses this combination: clozapine levels rise 2- to 5-fold: seizures, sedation, low blood pressure. Clinical rulebook row 5.",
+   "quote": "7 DRUG INTERACTIONS Concomitant use of Strong CYP1A2 Inhibitors : Reduce VERSACLOZ dose to one third when coadministered with strong CYP1A2 inhibitors (e.g., fluvoxamine, ciprofloxacin, enoxacin) ( 2.8 , 7.1 ).",
+   "source": "From the Clozaril label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Clozapine is cleared mainly by CYP1A2. Fluvoxamine raises clozapine levels 3- to 5-fold and ciprofloxacin about 2-fold. The label advises a one-third dose with strong CYP1A2 inhibitors.",
+   "action": "Reduce clozapine to one-third of the dose, check a clozapine level, and watch for sedation, seizures, and ileus.",
+   "includes": null,
+   "sources": "FDA labels: Clozaril\n · Luvox\n · Cipro\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355"
+    },
+    {
+     "text": "Clozaril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355"
+    },
+    {
+     "text": "Luvox",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1f172569-9110-44df-acc5-0367e37ed784"
+    },
+    {
+     "text": "Cipro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Clozaril, Cipro",
+   "category": "2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes",
+   "basis": "Why C: The Warnings and Precautions section of the Clozaril label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.",
+   "quote": "Conditions that increase these risks include the following: history of QT prolongation, long QT syndrome, family history of long QT syndrome or sudden cardiac death, significant cardiac arrhythmia, recent myocardial infarction, uncompensated heart failure, treatment with other medications that cause QT prolongation, treatment with medications that inhibit the metabolism of VERSACLOZ, and electrolyte abnormalities.",
+   "source": "From the Clozaril label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": "Get a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.",
+   "includes": null,
+   "sources": "FDA labels: Clozaril\n · Cipro\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355"
+    },
+    {
+     "text": "Clozaril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355"
+    },
+    {
+     "text": "Cipro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Tegretol, Luvox",
+   "category": "2 drugs that lower sodium: risk of low sodium (hyponatremia)",
+   "basis": "Why C: Class rule: risk of low sodium (hyponatremia). Clinical rulebook row 17.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Thiazides make the kidney lose sodium; SSRIs, SNRIs, carbamazepine, and oxcarbazepine cause the body to hold water (an SIADH-like effect). Together sodium can fall enough to cause confusion, falls, or seizures, most often in older women.",
+   "action": "Check sodium at baseline and within 2 weeks; choose a non-thiazide diuretic if sodium falls.",
+   "includes": null,
+   "sources": "FDA labels: Tegretol\n · Luvox",
+   "links": [
+    {
+     "text": "Tegretol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816"
+    },
+    {
+     "text": "Luvox",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1f172569-9110-44df-acc5-0367e37ed784"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Tegretol, Depakote",
+   "category": "Depakote with Tegretol: valproate levels fall; carbamazepine epoxide rises",
+   "basis": "Why C: The Warnings and Precautions section of the Depakote label addresses this combination: valproate levels fall; carbamazepine epoxide rises. Clinical rulebook row 33.",
+   "quote": "The largest of these studies 1 is a prospective cohort study conducted in the United States and United Kingdom that found that children with prenatal exposure to valproate (n=62) had lower IQ scores at age 6 (97 [95% CI 94 to 101]) than children with prenatal exposure to the other antiepileptic drug monotherapy treatments evaluated: lamotrigine (108 [95% CI 105 to 110]), carbamazepine (105 [95% CI 102 to 108]), and phenytoin (108 [95% CI 104 to 112]).",
+   "source": "From the Depakote label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These drugs induce valproate metabolism and lower its levels, and valproate raises carbamazepine's toxic 10,11-epoxide metabolite.",
+   "action": "Check drug levels when either is started or changed, and watch for dizziness, double vision, and unsteadiness.",
+   "includes": null,
+   "sources": "FDA labels: Tegretol\n · Depakote",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Tegretol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816"
+    },
+    {
+     "text": "Depakote",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "3"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "3"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Clozaril",
+   "generic": "clozapine",
+   "dose": "200 mg · twice a day · 400 mg/day total",
+   "facts": "Atypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk",
+   "text": "Clozaril\nclozapine\n200 mg · twice a day · 400 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Tegretol",
+   "generic": "carbamazepine",
+   "dose": "400 mg · twice a day · 800 mg/day total",
+   "facts": "Mood Stabilizer [EPC]\nBoxed Warning\nCNS Depression Risk\nContraindicated Combination",
+   "text": "Tegretol\ncarbamazepine\n400 mg · twice a day · 800 mg/day total\nMood Stabilizer [EPC]\nBoxed Warning\nCNS Depression Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Luvox",
+   "generic": "fluvoxamine",
+   "dose": "100 mg · twice a day · 200 mg/day total",
+   "facts": "",
+   "text": "Luvox\nfluvoxamine\n100 mg · twice a day · 200 mg/day total"
+  },
+  {
+   "brand": "Cipro",
+   "generic": "ciprofloxacin",
+   "dose": "500 mg · twice a day · 1000 mg/day total",
+   "facts": "Fluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Cipro\nciprofloxacin\n500 mg · twice a day · 1000 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Ativan",
+   "generic": "lorazepam",
+   "dose": "1 mg · twice a day · 2 mg/day total",
+   "facts": "Benzodiazepine [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Ativan\nlorazepam\n1 mg · twice a day · 2 mg/day total\nBenzodiazepine [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Depakote",
+   "generic": "valproate",
+   "dose": "500 mg · twice a day · 1000 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk",
+   "text": "Depakote\nvalproate\n500 mg · twice a day · 1000 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk"
+  }
+ ],
+ "totals": [
+  "carbamazepine\n800 mg/day",
+  "ciprofloxacin\n1,000 mg (1 g)/day",
+  "clozapine\n400 mg/day",
+  "fluvoxamine\n200 mg/day",
+  "lorazepam\n2 mg/day",
+  "valproate\n1,000 mg (1 g)/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0810422-b732-4c04-97d8-c1521c401ef4",
+   "in_alert": true
+  },
+  {
+   "text": "Clozaril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355",
+   "in_alert": true
+  },
+  {
+   "text": "Tegretol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": true
+  },
+  {
+   "text": "Ativan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0810422-b732-4c04-97d8-c1521c401ef4",
+   "in_alert": true
+  },
+  {
+   "text": "Depakote",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355",
+   "in_alert": true
+  },
+  {
+   "text": "Clozaril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355",
+   "in_alert": true
+  },
+  {
+   "text": "Tegretol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355",
+   "in_alert": true
+  },
+  {
+   "text": "Clozaril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355",
+   "in_alert": true
+  },
+  {
+   "text": "Luvox",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1f172569-9110-44df-acc5-0367e37ed784",
+   "in_alert": true
+  },
+  {
+   "text": "Cipro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355",
+   "in_alert": true
+  },
+  {
+   "text": "Clozaril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355",
+   "in_alert": true
+  },
+  {
+   "text": "Cipro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Tegretol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": true
+  },
+  {
+   "text": "Luvox",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1f172569-9110-44df-acc5-0367e37ed784",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Tegretol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": true
+  },
+  {
+   "text": "Depakote",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n6 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n3\nC\nMonitor closely\n3\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nClozaril, Tegretol, Ativan, Depakote\n\n4 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nWARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Ativan label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nClozaril with Ativan: collapse, respiratory arrest, and cardiac arrest have been reported. The clozapine label warns of collapse, respiratory arrest, and cardiac arrest with benzodiazepines and other psychotropic drugs, especially early in treatment.\n\nFDA labels: Clozaril\n · Tegretol\n · Ativan\n · Depakote\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 2 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nClozaril, Tegretol\n\nClozaril with Tegretol: agranulocytosis risk adds up, and clozapine levels fall\n\nWhy D: The Drug Interactions section of the Clozaril label addresses this combination: agranulocytosis risk adds up, and clozapine levels fall.\n\nDiscontinuation of CYP1A2 or CYP3A4 Inducers : Consider reducing VERSACLOZ dose when CYP1A2 (e.g., tobacco smoke) or CYP3A4 inducers (e.g., carbamazepine) are discontinued ( 2.8 , 7.1 ).\n\nFrom the Clozaril label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nBoth drugs can cause agranulocytosis, and carbamazepine induces CYP3A4 and roughly halves clozapine levels.\n\nWhat to do\n\nAvoid; choose another mood stabilizer.\n\nFDA labels: Clozaril\n · Tegretol\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nClozaril, Luvox, Cipro\n\nClozaril with 2 strong CYP1A2 inhibitors: clozapine levels rise 2- to 5-fold: seizures, sedation, low blood pressure\n\nWhy D: The Drug Interactions section of the Clozaril label addresses this combination: clozapine levels rise 2- to 5-fold: seizures, sedation, low blood pressure. Clinical rulebook row 5.\n\n7 DRUG INTERACTIONS Concomitant use of Strong CYP1A2 Inhibitors : Reduce VERSACLOZ dose to one third when coadministered with strong CYP1A2 inhibitors (e.g., fluvoxamine, ciprofloxacin, enoxacin) ( 2.8 , 7.1 ).\n\nFrom the Clozaril label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nClozapine is cleared mainly by CYP1A2. Fluvoxamine raises clozapine levels 3- to 5-fold and ciprofloxacin about 2-fold. The label advises a one-third dose with strong CYP1A2 inhibitors.\n\nWhat to do\n\nReduce clozapine to one-third of the dose, check a clozapine level, and watch for sedation, seizures, and ileus.\n\nFDA labels: Clozaril\n · Luvox\n · Cipro\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nClozaril, Cipro\n\n2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes\n\nWhy C: The Warnings and Precautions section of the Clozaril label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.\n\nConditions that increase these risks include the following: history of QT prolongation, long QT syndrome, family history of long QT syndrome or sudden cardiac death, significant cardiac arrhythmia, recent myocardial infarction, uncompensated heart failure, treatment with other medications that cause QT prolongation, treatment with medications that inhibit the metabolism of VERSACLOZ, and electrolyte abnormalities.\n\nFrom the Clozaril label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.\n\nWhat to do\n\nGet a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.\n\nFDA labels: Clozaril\n · Cipro\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n\nShow 1 more label sentence\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nTegretol, Luvox\n\n2 drugs that lower sodium: risk of low sodium (hyponatremia)\n\nWhy C: Class rule: risk of low sodium (hyponatremia). Clinical rulebook row 17.\n\nWhy it happens\n\nThiazides make the kidney lose sodium; SSRIs, SNRIs, carbamazepine, and oxcarbazepine cause the body to hold water (an SIADH-like effect). Together sodium can fall enough to cause confusion, falls, or seizures, most often in older women.\n\nWhat to do\n\nCheck sodium at baseline and within 2 weeks; choose a non-thiazide diuretic if sodium falls.\n\nFDA labels: Tegretol\n · Luvox\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nTegretol, Depakote\n\nDepakote with Tegretol: valproate levels fall; carbamazepine epoxide rises\n\nWhy C: The Warnings and Precautions section of the Depakote label addresses this combination: valproate levels fall; carbamazepine epoxide rises. Clinical rulebook row 33.\n\nThe largest of these studies 1 is a prospective cohort study conducted in the United States and United Kingdom that found that children with prenatal exposure to valproate (n=62) had lower IQ scores at age 6 (97 [95% CI 94 to 101]) than children with prenatal exposure to the other antiepileptic drug monotherapy treatments evaluated: lamotrigine (108 [95% CI 105 to 110]), carbamazepine (105 [95% CI 102 to 108]), and phenytoin (108 [95% CI 104 to 112]).\n\nFrom the Depakote label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese drugs induce valproate metabolism and lower its levels, and valproate raises carbamazepine's toxic 10,11-epoxide metabolite.\n\nWhat to do\n\nCheck drug levels when either is started or changed, and watch for dizziness, double vision, and unsteadiness.\n\nFDA labels: Tegretol\n · Depakote\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\ncarbamazepine\n800 mg/day\nciprofloxacin\n1,000 mg (1 g)/day\nclozapine\n400 mg/day\nfluvoxamine\n200 mg/day\nlorazepam\n2 mg/day\nvalproate\n1,000 mg (1 g)/day\nClozaril\nclozapine\n200 mg · twice a day · 400 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk\nTegretol\ncarbamazepine\n400 mg · twice a day · 800 mg/day total\nMood Stabilizer [EPC]\nBoxed Warning\nCNS Depression Risk\nContraindicated Combination\nLuvox\nfluvoxamine\n100 mg · twice a day · 200 mg/day total\nCipro\nciprofloxacin\n500 mg · twice a day · 1000 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination\nAtivan\nlorazepam\n1 mg · twice a day · 2 mg/day total\nBenzodiazepine [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nDepakote\nvalproate\n500 mg · twice a day · 1000 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\n6 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:05:36.505Z"
+}

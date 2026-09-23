@@ -1,0 +1,142 @@
+{
+ "id": "G05",
+ "input": "Microzide (hydrochlorothiazide) 25 mg once daily = 25 mg/day, Zoloft (sertraline) 100 mg once daily = 100 mg/day, Tegretol (carbamazepine) 200 mg twice daily = 400 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.888,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Microzide, Zoloft, Tegretol",
+   "category": "3 drugs that lower sodium: risk of low sodium (hyponatremia)",
+   "basis": "Why D: The Drug Interactions section of the Microzide label addresses this combination: risk of low sodium (hyponatremia). Clinical rulebook row 17.",
+   "quote": "7.7 Carbamazepine Concomitant use of carbamazepine and hydrochlorothiazide has been associated with the risk of symptomatic hyponatremia.",
+   "source": "From the Microzide label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Thiazides make the kidney lose sodium; SSRIs, SNRIs, carbamazepine, and oxcarbazepine cause the body to hold water (an SIADH-like effect). Together sodium can fall enough to cause confusion, falls, or seizures, most often in older women.",
+   "action": "Check sodium at baseline and within 2 weeks; choose a non-thiazide diuretic if sodium falls.",
+   "includes": null,
+   "sources": "FDA labels: Microzide\n · Zoloft\n · Tegretol",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=88aaa2a1-13be-4f56-ace6-66e899028007"
+    },
+    {
+     "text": "Microzide",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=88aaa2a1-13be-4f56-ace6-66e899028007"
+    },
+    {
+     "text": "Zoloft",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "Tegretol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "1"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Microzide",
+   "generic": "hydrochlorothiazide",
+   "dose": "25 mg · once a day · 25 mg/day total",
+   "facts": "Thiazide Diuretic [EPC]",
+   "text": "Microzide\nhydrochlorothiazide\n25 mg · once a day · 25 mg/day total\nThiazide Diuretic [EPC]"
+  },
+  {
+   "brand": "Zoloft",
+   "generic": "sertraline",
+   "dose": "100 mg · once a day · 100 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Zoloft\nsertraline\n100 mg · once a day · 100 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Tegretol",
+   "generic": "carbamazepine",
+   "dose": "200 mg · twice a day · 400 mg/day total",
+   "facts": "Mood Stabilizer [EPC]\nBoxed Warning\nCNS Depression Risk\nContraindicated Combination",
+   "text": "Tegretol\ncarbamazepine\n200 mg · twice a day · 400 mg/day total\nMood Stabilizer [EPC]\nBoxed Warning\nCNS Depression Risk\nContraindicated Combination"
+  }
+ ],
+ "totals": [
+  "carbamazepine\n400 mg/day",
+  "hydrochlorothiazide\n25 mg/day",
+  "sertraline\n100 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=88aaa2a1-13be-4f56-ace6-66e899028007",
+   "in_alert": true
+  },
+  {
+   "text": "Microzide",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=88aaa2a1-13be-4f56-ace6-66e899028007",
+   "in_alert": true
+  },
+  {
+   "text": "Zoloft",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "Tegretol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": true
+  }
+ ],
+ "statusText": "3 of 3 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n1 interaction\n\n3 of 3 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n1\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nMicrozide, Zoloft, Tegretol\n\n3 drugs that lower sodium: risk of low sodium (hyponatremia)\n\nWhy D: The Drug Interactions section of the Microzide label addresses this combination: risk of low sodium (hyponatremia). Clinical rulebook row 17.\n\n7.7 Carbamazepine Concomitant use of carbamazepine and hydrochlorothiazide has been associated with the risk of symptomatic hyponatremia.\n\nFrom the Microzide label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nThiazides make the kidney lose sodium; SSRIs, SNRIs, carbamazepine, and oxcarbazepine cause the body to hold water (an SIADH-like effect). Together sodium can fall enough to cause confusion, falls, or seizures, most often in older women.\n\nWhat to do\n\nCheck sodium at baseline and within 2 weeks; choose a non-thiazide diuretic if sodium falls.\n\nFDA labels: Microzide\n · Zoloft\n · Tegretol\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n3 medications\nClear all\nTotals by ingredient\ncarbamazepine\n400 mg/day\nhydrochlorothiazide\n25 mg/day\nsertraline\n100 mg/day\nMicrozide\nhydrochlorothiazide\n25 mg · once a day · 25 mg/day total\nThiazide Diuretic [EPC]\nZoloft\nsertraline\n100 mg · once a day · 100 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nTegretol\ncarbamazepine\n200 mg · twice a day · 400 mg/day total\nMood Stabilizer [EPC]\nBoxed Warning\nCNS Depression Risk\nContraindicated Combination\n1 alert",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:09:10.079Z"
+}

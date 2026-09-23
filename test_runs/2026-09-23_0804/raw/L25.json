@@ -1,0 +1,467 @@
+{
+ "id": "L25",
+ "input": "Dolophine (methadone) 40 mg twice daily = 80 mg/day, Seroquel (quetiapine) 300 mg once daily at bedtime = 300 mg/day, Zofran (ondansetron) 8 mg twice daily = 16 mg/day, Levaquin (levofloxacin) 500 mg once daily = 500 mg/day, Effexor XR (venlafaxine ER) 150 mg once daily = 150 mg/day, Diflucan (fluconazole) 200 mg once daily = 200 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.82,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Dolophine, Seroquel",
+   "category": "2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: The Boxed Warning section of the Dolophine label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Dolophine label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Dolophine\n · Seroquel\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Dolophine",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Dolophine, Zofran, Effexor XR",
+   "category": "3 serotonergic drugs: risk of serotonin syndrome",
+   "basis": "Why D: The Contraindications section of the Effexor XR label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.",
+   "quote": "4 CONTRAINDICATIONS Venlafaxine Extended-Release Tablets are contraindicated in patients: with known hypersensitivity to venlafaxine besylate, venlafaxine hydrochloride, desvenlafaxine succinate or to any excipients in Venlafaxine Extended-Release Tablets [see Adverse Reactions ( 6.2 )] . taking, or within 14 days of stopping, MAOIs (including the MAOIs linezolid and intravenous methylene blue) because of increased risk of serotonin syndrome [see Dosage and Administration ( 2.9 ), Warnings and Precautions ( 5.2 ), Drug Interactions ( 7.1 )] .",
+   "source": "From the Effexor XR label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.",
+   "action": "Avoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.",
+   "includes": null,
+   "sources": "FDA labels: Dolophine\n · Zofran\n · Effexor XR\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100"
+    },
+    {
+     "text": "Dolophine",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Zofran",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=269c920c-643a-4eea-9bf9-b1f008915db9"
+    },
+    {
+     "text": "Effexor XR",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Dolophine, Seroquel, Zofran, Levaquin, Diflucan",
+   "category": "5 QT-prolonging drugs: risk of QT prolongation and torsades de pointes",
+   "basis": "Why D: The Boxed Warning section of the Dolophine label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.",
+   "quote": "Coadministration of other drugs known to prolong the QT interval and which are metabolized via the enzyme CYP3A4 such as erythromycin, pimozide, and quinidine are contraindicated in patients receiving fluconazole.",
+   "source": "From the Diflucan label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": "Get a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.",
+   "includes": null,
+   "sources": "FDA labels: Dolophine\n · Seroquel\n · Zofran\n · Levaquin\n · Diflucan\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    },
+    {
+     "text": "Dolophine",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    },
+    {
+     "text": "Zofran",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=269c920c-643a-4eea-9bf9-b1f008915db9"
+    },
+    {
+     "text": "Levaquin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a65b2bc-9edc-f193-e063-6394a90a0104"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Dolophine, Diflucan",
+   "category": "Dolophine with Diflucan: opioid levels rise: risk of fatal respiratory depression",
+   "basis": "Why D: The Warnings and Precautions section of the Dolophine label addresses this combination: opioid levels rise: risk of fatal respiratory depression. Clinical rulebook row 3.",
+   "quote": "5.19 Laboratory Test Interactions False positive urine drug screens for methadone have been reported for several drugs including diphenhydramine, doxylamine, clomipramine, chlorpromazine, thioridazine, quetiapine, and verapamil.",
+   "source": "From the Dolophine label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These opioids are cleared by CYP3A4. A CYP3A4 inhibitor raises opioid levels (fentanyl and oxycodone roughly 2 to 3 times), and the effect can build over days. The opioid labels carry a boxed warning on CYP3A4 inhibitors.",
+   "action": "Avoid if possible; otherwise lower the opioid dose, monitor closely for sedation and slow breathing, and re-adjust when the inhibitor stops.",
+   "includes": null,
+   "sources": "FDA labels: Dolophine\n · Diflucan\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Dolophine",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Seroquel, Diflucan",
+   "category": "Seroquel with Diflucan: quetiapine levels rise",
+   "basis": "Why C: The Drug Interactions section of the Seroquel label addresses this combination: quetiapine levels rise.",
+   "quote": "7 DRUG INTERACTIONS • Concomitant use of strong: CYP3A4 inhibitors Reduce quetiapine dose to one-sixth when coadministered with strong CYP3A4 inhibitors (e.g., ketoconazole, ritonavir) ( 2.5 , 7.1 , 12.3 ) • Concomitant use of strong CYP3A4 inducers: Increase quetiapine dose up to 5 fold when used in combination with a chronic treatment (more than 7 to 14 days) of potent CYP3A4 inducers (e.g., phenytoin, rifampin, St.",
+   "source": "From the Seroquel label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Quetiapine is cleared by CYP3A4; moderate inhibitors raise its level, adding sedation, low blood pressure, and QT effect.",
+   "action": "Watch for sedation and dizziness; lower the quetiapine dose if they appear.",
+   "includes": null,
+   "sources": "FDA labels: Seroquel\n · Diflucan\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Dolophine, Diflucan",
+   "category": "CNS Depression Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Dolophine label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "What this means: CNS depression",
+   "why_text": "Each of these drugs slows the central nervous system. Together the effect adds up: heavy sedation, slowed breathing, and a higher risk of overdose, especially when an opioid and a benzodiazepine are combined.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Dolophine\n · Diflucan",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "National Institute on Drug Abuse, NIH",
+     "href": "https://nida.nih.gov/research-topics/opioids/benzodiazepines-opioids"
+    },
+    {
+     "text": "Dolophine",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    }
+   ],
+   "classes": "alert alert--tier-2 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "4"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "1"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Dolophine",
+   "generic": "methadone",
+   "dose": "40 mg · twice a day · 80 mg/day total",
+   "facts": "Schedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk",
+   "text": "Dolophine\nmethadone\n40 mg · twice a day · 80 mg/day total\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Seroquel",
+   "generic": "quetiapine",
+   "dose": "300 mg · once a day · 300 mg/day total",
+   "facts": "Atypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk",
+   "text": "Seroquel\nquetiapine\n300 mg · once a day · 300 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Zofran",
+   "generic": "ondansetron",
+   "dose": "8 mg · twice a day · 16 mg/day total",
+   "facts": "Serotonin-3 Receptor Antagonist [EPC]\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Zofran\nondansetron\n8 mg · twice a day · 16 mg/day total\nSerotonin-3 Receptor Antagonist [EPC]\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Levaquin",
+   "generic": "levofloxacin",
+   "dose": "500 mg · once a day · 500 mg/day total",
+   "facts": "Fluoroquinolone Antibacterial [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk",
+   "text": "Levaquin\nlevofloxacin\n500 mg · once a day · 500 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Effexor XR",
+   "generic": "venlafaxine",
+   "dose": "150 mg · once a day · 150 mg/day total",
+   "facts": "extended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nContraindicated Combination",
+   "text": "Effexor XR\nvenlafaxine\n150 mg · once a day · 150 mg/day total\nextended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Diflucan",
+   "generic": "fluconazole",
+   "dose": "200 mg · once a day · 200 mg/day total",
+   "facts": "Azole Antifungal [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Diflucan\nfluconazole\n200 mg · once a day · 200 mg/day total\nAzole Antifungal [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination"
+  }
+ ],
+ "totals": [
+  "fluconazole\n200 mg/day",
+  "levofloxacin\n500 mg/day",
+  "methadone\n80 mg/day · 376 MME",
+  "ondansetron\n16 mg/day",
+  "quetiapine\n300 mg/day",
+  "venlafaxine\n150 mg/day"
+ ],
+ "totalMme": "Total opioid dose: 376 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Dolophine",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100",
+   "in_alert": true
+  },
+  {
+   "text": "Dolophine",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Zofran",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=269c920c-643a-4eea-9bf9-b1f008915db9",
+   "in_alert": true
+  },
+  {
+   "text": "Effexor XR",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  },
+  {
+   "text": "Dolophine",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Zofran",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=269c920c-643a-4eea-9bf9-b1f008915db9",
+   "in_alert": true
+  },
+  {
+   "text": "Levaquin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a65b2bc-9edc-f193-e063-6394a90a0104",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Dolophine",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "National Institute on Drug Abuse, NIH",
+   "href": "https://nida.nih.gov/research-topics/opioids/benzodiazepines-opioids",
+   "in_alert": true
+  },
+  {
+   "text": "Dolophine",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n6 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n4\nC\nMonitor closely\n1\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDolophine, Seroquel\n\n2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: The Boxed Warning section of the Dolophine label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nRisks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Dolophine label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Dolophine\n · Seroquel\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDolophine, Zofran, Effexor XR\n\n3 serotonergic drugs: risk of serotonin syndrome\n\nWhy D: The Contraindications section of the Effexor XR label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.\n\n4 CONTRAINDICATIONS Venlafaxine Extended-Release Tablets are contraindicated in patients: with known hypersensitivity to venlafaxine besylate, venlafaxine hydrochloride, desvenlafaxine succinate or to any excipients in Venlafaxine Extended-Release Tablets [see Adverse Reactions ( 6.2 )] . taking, or within 14 days of stopping, MAOIs (including the MAOIs linezolid and intravenous methylene blue) because of increased risk of serotonin syndrome [see Dosage and Administration ( 2.9 ), Warnings and Precautions ( 5.2 ), Drug Interactions ( 7.1 )] .\n\nFrom the Effexor XR label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.\n\nWhat to do\n\nAvoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.\n\nFDA labels: Dolophine\n · Zofran\n · Effexor XR\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n\nShow 2 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDolophine, Seroquel, Zofran, Levaquin, Diflucan\n\n5 QT-prolonging drugs: risk of QT prolongation and torsades de pointes\n\nWhy D: The Boxed Warning section of the Dolophine label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.\n\nCoadministration of other drugs known to prolong the QT interval and which are metabolized via the enzyme CYP3A4 such as erythromycin, pimozide, and quinidine are contraindicated in patients receiving fluconazole.\n\nFrom the Diflucan label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.\n\nWhat to do\n\nGet a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.\n\nFDA labels: Dolophine\n · Seroquel\n · Zofran\n · Levaquin\n · Diflucan\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n\nShow 4 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDolophine, Diflucan\n\nDolophine with Diflucan: opioid levels rise: risk of fatal respiratory depression\n\nWhy D: The Warnings and Precautions section of the Dolophine label addresses this combination: opioid levels rise: risk of fatal respiratory depression. Clinical rulebook row 3.\n\n5.19 Laboratory Test Interactions False positive urine drug screens for methadone have been reported for several drugs including diphenhydramine, doxylamine, clomipramine, chlorpromazine, thioridazine, quetiapine, and verapamil.\n\nFrom the Dolophine label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese opioids are cleared by CYP3A4. A CYP3A4 inhibitor raises opioid levels (fentanyl and oxycodone roughly 2 to 3 times), and the effect can build over days. The opioid labels carry a boxed warning on CYP3A4 inhibitors.\n\nWhat to do\n\nAvoid if possible; otherwise lower the opioid dose, monitor closely for sedation and slow breathing, and re-adjust when the inhibitor stops.\n\nFDA labels: Dolophine\n · Diflucan\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nSeroquel, Diflucan\n\nSeroquel with Diflucan: quetiapine levels rise\n\nWhy C: The Drug Interactions section of the Seroquel label addresses this combination: quetiapine levels rise.\n\n7 DRUG INTERACTIONS • Concomitant use of strong: CYP3A4 inhibitors Reduce quetiapine dose to one-sixth when coadministered with strong CYP3A4 inhibitors (e.g., ketoconazole, ritonavir) ( 2.5 , 7.1 , 12.3 ) • Concomitant use of strong CYP3A4 inducers: Increase quetiapine dose up to 5 fold when used in combination with a chronic treatment (more than 7 to 14 days) of potent CYP3A4 inducers (e.g., phenytoin, rifampin, St.\n\nFrom the Seroquel label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nQuetiapine is cleared by CYP3A4; moderate inhibitors raise its level, adding sedation, low blood pressure, and QT effect.\n\nWhat to do\n\nWatch for sedation and dizziness; lower the quetiapine dose if they appear.\n\nFDA labels: Seroquel\n · Diflucan\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nA\nMinor — Minor: usually no action needed.\nDolophine, Diflucan\n\nCNS Depression Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\nRisks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Dolophine label, Boxed Warning section.\nOpen on DailyMed\n\nWhat this means: CNS depression\n\nEach of these drugs slows the central nervous system. Together the effect adds up: heavy sedation, slowed breathing, and a higher risk of overdose, especially when an opioid and a benzodiazepine are combined.\n\nSource: National Institute on Drug Abuse, NIH\n\nFDA labels: Dolophine\n · Diflucan\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nfluconazole\n200 mg/day\nlevofloxacin\n500 mg/day\nmethadone\n80 mg/day · 376 MME\nondansetron\n16 mg/day\nquetiapine\n300 mg/day\nvenlafaxine\n150 mg/day\n\nTotal opioid dose: 376 MME/day (CDC 2022 conversion factors).\n\nDolophine\nmethadone\n40 mg · twice a day · 80 mg/day total\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk\nSeroquel\nquetiapine\n300 mg · once a day · 300 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nZofran\nondansetron\n8 mg · twice a day · 16 mg/day total\nSerotonin-3 Receptor Antagonist [EPC]\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nLevaquin\nlevofloxacin\n500 mg · once a day · 500 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nEffexor XR\nvenlafaxine\n150 mg · once a day · 150 mg/day total\nextended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nContraindicated Combination\nDiflucan\nfluconazole\n200 mg · once a day · 200 mg/day total\nAzole Antifungal [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination\n6 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:07:01.965Z"
+}

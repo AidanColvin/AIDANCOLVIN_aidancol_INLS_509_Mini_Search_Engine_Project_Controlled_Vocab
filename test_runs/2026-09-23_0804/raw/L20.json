@@ -1,0 +1,458 @@
+{
+ "id": "L20",
+ "input": "Rifadin (rifampin) 600 mg once daily = 600 mg/day, Xarelto (rivaroxaban) 20 mg once daily with the evening meal = 20 mg/day, Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day, Prograf (tacrolimus) 2 mg twice daily = 4 mg/day, Latuda (lurasidone) 80 mg once daily with food = 80 mg/day, Dolophine (methadone) 60 mg once daily = 60 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.831,
+ "secondsToResults": 1.217,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Rifadin, Latuda",
+   "category": "Latuda with Rifadin: lurasidone levels fall about 80%: it stops working",
+   "basis": "Why E: The Contraindications section of the Latuda label addresses this combination: lurasidone levels fall about 80%: it stops working. Clinical rulebook row 33.",
+   "quote": "Angioedema has been observed with lurasidone [see Adverse Reactions ( 6.1 )] . • Strong CYP3A4 inhibitors (e.g., ketoconazole, clarithromycin, ritonavir, voriconazole, mibefradil, etc.) [see Drug Interactions ( 7.1 )]. • Strong CYP3A4 inducers (e.g., rifampin, avasimibe, St.",
+   "source": "From the Latuda label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Rifampin cut lurasidone exposure by about 80%; the lurasidone label contraindicates strong CYP3A4 inducers because the drug loses its effect (efficacy loss).",
+   "action": "Do not use together; choose an antipsychotic less dependent on CYP3A4.",
+   "includes": null,
+   "sources": "FDA labels: Rifadin\n · Latuda\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a97b59db-29e8-4b00-9d35-56b47335ee25"
+    },
+    {
+     "text": "Rifadin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ab68e-5085-4edc-bd83-784b43d64eab"
+    },
+    {
+     "text": "Latuda",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a97b59db-29e8-4b00-9d35-56b47335ee25"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Latuda, Dolophine",
+   "category": "2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: The Boxed Warning section of the Dolophine label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Dolophine label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Latuda\n · Dolophine\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Latuda",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a97b59db-29e8-4b00-9d35-56b47335ee25"
+    },
+    {
+     "text": "Dolophine",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Prograf, Dolophine",
+   "category": "2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes",
+   "basis": "Why D: The Warnings and Precautions section of the Prograf label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.",
+   "quote": "Closely monitor patients with risk factors for development of prolonged QT interval, a history of cardiac conduction abnormalities, and those taking medications affecting cardiac conduction for changes in cardiac rhythm during initiation and titration of methadone hydrochloride tablets [see Warnings and Precautions (5.4) ].",
+   "source": "From the Dolophine label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": "Get a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.",
+   "includes": null,
+   "sources": "FDA labels: Prograf\n · Dolophine\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Prograf",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6b89e8a4-9f11-42e3-8e79-fe617e7c461f"
+    },
+    {
+     "text": "Dolophine",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Rifadin, Prograf",
+   "category": "Prograf with Rifadin: immunosuppressant levels fall: risk of rejection",
+   "basis": "Why D: The Warnings and Precautions section of the Prograf label addresses this combination: immunosuppressant levels fall: risk of rejection. Clinical rulebook row 33.",
+   "quote": "5.11 Interactions with CYP3A4 Inhibitors and Inducers When co-administering tacrolimus with strong CYP3A4 inhibitors (e.g., telaprevir, boceprevir, ritonavir, ketoconazole, itraconazole, voriconazole, clarithromycin) and strong inducers (e.g., rifampin, rifabutin), adjustments in the dosing regimen of tacrolimus and subsequent frequent monitoring of tacrolimus whole blood trough concentrations and tacrolimus-associated adverse reactions are recommended.",
+   "source": "From the Prograf label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Enzyme inducers speed tacrolimus and cyclosporine clearance, so levels fall sharply within 1 to 2 weeks (efficacy loss) and graft rejection can follow.",
+   "action": "Avoid if possible; otherwise raise the dose and follow trough levels closely, including after the inducer stops.",
+   "includes": null,
+   "sources": "FDA labels: Rifadin\n · Prograf\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6b89e8a4-9f11-42e3-8e79-fe617e7c461f"
+    },
+    {
+     "text": "Rifadin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ab68e-5085-4edc-bd83-784b43d64eab"
+    },
+    {
+     "text": "Prograf",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6b89e8a4-9f11-42e3-8e79-fe617e7c461f"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Rifadin, Xarelto",
+   "category": "Xarelto with Rifadin: anticoagulant levels fall: risk of stroke or clot",
+   "basis": "Why D: The Warnings and Precautions section of the Xarelto label addresses this combination: anticoagulant levels fall: risk of stroke or clot. Clinical rulebook row 33.",
+   "quote": "Avoid concomitant use of XARELTO with drugs that are known combined P-gp and strong CYP3A inducers [see Drug Interactions (7.3) ] .",
+   "source": "From the Xarelto label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Rifampin, carbamazepine, phenytoin, and St. John's wort induce CYP3A4 and P-glycoprotein and roughly halve DOAC exposure, so the anticoagulant can fail (efficacy loss).",
+   "action": "Avoid; use another anticoagulant (such as warfarin with INR monitoring) while the inducer is needed.",
+   "includes": null,
+   "sources": "FDA labels: Rifadin\n · Xarelto",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610"
+    },
+    {
+     "text": "Rifadin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ab68e-5085-4edc-bd83-784b43d64eab"
+    },
+    {
+     "text": "Xarelto",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Rifadin, Sprintec",
+   "category": "Sprintec with Rifadin: contraceptive failure: unintended pregnancy",
+   "basis": "Why D: The Drug Interactions section of the Sprintec label addresses this combination: contraceptive failure: unintended pregnancy. Clinical rulebook row 33.",
+   "quote": "Examples Aprepitant, barbiturates, bosentan, carbamazepine, efavirenz, felbamate, griseofulvin, oxcarbazepine, phenytoin, rifampin, rifabutin, rufinamide, topiramate, products containing St.",
+   "source": "From the Sprintec label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These drugs induce CYP3A4 and speed the clearance of ethinyl estradiol and progestins, so hormonal contraception can fail (efficacy loss).",
+   "action": "Use a non-hormonal or IUD method during the course and for 28 days after the inducer stops.",
+   "includes": null,
+   "sources": "FDA labels: Rifadin\n · Sprintec",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcaf8db0-1750-425d-b008-255b5e7a9cc6"
+    },
+    {
+     "text": "Rifadin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ab68e-5085-4edc-bd83-784b43d64eab"
+    },
+    {
+     "text": "Sprintec",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcaf8db0-1750-425d-b008-255b5e7a9cc6"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Rifadin, Dolophine",
+   "category": "Dolophine with Rifadin: opioid levels fall: withdrawal or loss of pain control",
+   "basis": "Why D: The Drug Interactions section of the Dolophine label addresses this combination: opioid levels fall: withdrawal or loss of pain control. Clinical rulebook row 33.",
+   "quote": "Examples: Rifampin, carbamazepine, phenytoin, St.",
+   "source": "From the Dolophine label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Rifampin, carbamazepine, and phenytoin induce CYP3A4 and cut opioid levels within days (efficacy loss), causing withdrawal; stopping the inducer later can cause overdose.",
+   "action": "Raise the opioid dose under close monitoring, and lower it again when the inducer stops.",
+   "includes": null,
+   "sources": "FDA labels: Rifadin\n · Dolophine",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    },
+    {
+     "text": "Rifadin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ab68e-5085-4edc-bd83-784b43d64eab"
+    },
+    {
+     "text": "Dolophine",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "1"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "6"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Rifadin",
+   "generic": "rifampin",
+   "dose": "600 mg · once a day · 600 mg/day total",
+   "facts": "Rifamycin Antibacterial [EPC]\nContraindicated Combination",
+   "text": "Rifadin\nrifampin\n600 mg · once a day · 600 mg/day total\nRifamycin Antibacterial [EPC]\nContraindicated Combination"
+  },
+  {
+   "brand": "Xarelto",
+   "generic": "rivaroxaban",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "Factor Xa Inhibitor [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment",
+   "text": "Xarelto\nrivaroxaban\n20 mg · once a day · 20 mg/day total\nFactor Xa Inhibitor [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment"
+  },
+  {
+   "brand": "Sprintec",
+   "generic": "ethinyl estradiol, norgestimate",
+   "dose": "norgestimate 0.25 mg / ethinyl estradiol 35 mcg · once a day",
+   "facts": "",
+   "text": "Sprintec\nethinyl estradiol, norgestimate\nnorgestimate 0.25 mg / ethinyl estradiol 35 mcg · once a day"
+  },
+  {
+   "brand": "Prograf",
+   "generic": "tacrolimus",
+   "dose": "2 mg · twice a day · 4 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk",
+   "text": "Prograf\ntacrolimus\n2 mg · twice a day · 4 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Latuda",
+   "generic": "lurasidone",
+   "dose": "80 mg · once a day · 80 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment",
+   "text": "Latuda\nlurasidone\n80 mg · once a day · 80 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment"
+  },
+  {
+   "brand": "Dolophine",
+   "generic": "methadone",
+   "dose": "60 mg · once a day · 60 mg/day total",
+   "facts": "Schedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk",
+   "text": "Dolophine\nmethadone\n60 mg · once a day · 60 mg/day total\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk"
+  }
+ ],
+ "totals": [
+  "ethinyl estradiol\n35 mcg (0.035 mg)/day",
+  "lurasidone\n80 mg/day",
+  "methadone\n60 mg/day · 282 MME",
+  "norgestimate\n250 mcg (0.25 mg)/day",
+  "rifampin\n600 mg/day",
+  "rivaroxaban\n20 mg/day",
+  "tacrolimus\n4 mg/day"
+ ],
+ "totalMme": "Total opioid dose: 282 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a97b59db-29e8-4b00-9d35-56b47335ee25",
+   "in_alert": true
+  },
+  {
+   "text": "Rifadin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ab68e-5085-4edc-bd83-784b43d64eab",
+   "in_alert": true
+  },
+  {
+   "text": "Latuda",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a97b59db-29e8-4b00-9d35-56b47335ee25",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Latuda",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a97b59db-29e8-4b00-9d35-56b47335ee25",
+   "in_alert": true
+  },
+  {
+   "text": "Dolophine",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Prograf",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6b89e8a4-9f11-42e3-8e79-fe617e7c461f",
+   "in_alert": true
+  },
+  {
+   "text": "Dolophine",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6b89e8a4-9f11-42e3-8e79-fe617e7c461f",
+   "in_alert": true
+  },
+  {
+   "text": "Rifadin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ab68e-5085-4edc-bd83-784b43d64eab",
+   "in_alert": true
+  },
+  {
+   "text": "Prograf",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6b89e8a4-9f11-42e3-8e79-fe617e7c461f",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610",
+   "in_alert": true
+  },
+  {
+   "text": "Rifadin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ab68e-5085-4edc-bd83-784b43d64eab",
+   "in_alert": true
+  },
+  {
+   "text": "Xarelto",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcaf8db0-1750-425d-b008-255b5e7a9cc6",
+   "in_alert": true
+  },
+  {
+   "text": "Rifadin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ab68e-5085-4edc-bd83-784b43d64eab",
+   "in_alert": true
+  },
+  {
+   "text": "Sprintec",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcaf8db0-1750-425d-b008-255b5e7a9cc6",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  },
+  {
+   "text": "Rifadin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ab68e-5085-4edc-bd83-784b43d64eab",
+   "in_alert": true
+  },
+  {
+   "text": "Dolophine",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=540edd43-165d-4257-b989-3bccc8f54afb",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: E, Avoid combination. Do not use these drugs together.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n7 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n1\nD\nConsider changing therapy\n6\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: E, Avoid combination. Do not use these drugs together.\nE\nAvoid combination — Do not use these drugs together.\nRifadin, Latuda\n\nLatuda with Rifadin: lurasidone levels fall about 80%: it stops working\n\nWhy E: The Contraindications section of the Latuda label addresses this combination: lurasidone levels fall about 80%: it stops working. Clinical rulebook row 33.\n\nAngioedema has been observed with lurasidone [see Adverse Reactions ( 6.1 )] . • Strong CYP3A4 inhibitors (e.g., ketoconazole, clarithromycin, ritonavir, voriconazole, mibefradil, etc.) [see Drug Interactions ( 7.1 )]. • Strong CYP3A4 inducers (e.g., rifampin, avasimibe, St.\n\nFrom the Latuda label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nRifampin cut lurasidone exposure by about 80%; the lurasidone label contraindicates strong CYP3A4 inducers because the drug loses its effect (efficacy loss).\n\nWhat to do\n\nDo not use together; choose an antipsychotic less dependent on CYP3A4.\n\nFDA labels: Rifadin\n · Latuda\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nLatuda, Dolophine\n\n2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: The Boxed Warning section of the Dolophine label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nRisks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Dolophine label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Latuda\n · Dolophine\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nPrograf, Dolophine\n\n2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes\n\nWhy D: The Warnings and Precautions section of the Prograf label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.\n\nClosely monitor patients with risk factors for development of prolonged QT interval, a history of cardiac conduction abnormalities, and those taking medications affecting cardiac conduction for changes in cardiac rhythm during initiation and titration of methadone hydrochloride tablets [see Warnings and Precautions (5.4) ].\n\nFrom the Dolophine label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.\n\nWhat to do\n\nGet a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.\n\nFDA labels: Prograf\n · Dolophine\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n\nShow 1 more label sentence\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nRifadin, Prograf\n\nPrograf with Rifadin: immunosuppressant levels fall: risk of rejection\n\nWhy D: The Warnings and Precautions section of the Prograf label addresses this combination: immunosuppressant levels fall: risk of rejection. Clinical rulebook row 33.\n\n5.11 Interactions with CYP3A4 Inhibitors and Inducers When co-administering tacrolimus with strong CYP3A4 inhibitors (e.g., telaprevir, boceprevir, ritonavir, ketoconazole, itraconazole, voriconazole, clarithromycin) and strong inducers (e.g., rifampin, rifabutin), adjustments in the dosing regimen of tacrolimus and subsequent frequent monitoring of tacrolimus whole blood trough concentrations and tacrolimus-associated adverse reactions are recommended.\n\nFrom the Prograf label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEnzyme inducers speed tacrolimus and cyclosporine clearance, so levels fall sharply within 1 to 2 weeks (efficacy loss) and graft rejection can follow.\n\nWhat to do\n\nAvoid if possible; otherwise raise the dose and follow trough levels closely, including after the inducer stops.\n\nFDA labels: Rifadin\n · Prograf\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nRifadin, Xarelto\n\nXarelto with Rifadin: anticoagulant levels fall: risk of stroke or clot\n\nWhy D: The Warnings and Precautions section of the Xarelto label addresses this combination: anticoagulant levels fall: risk of stroke or clot. Clinical rulebook row 33.\n\nAvoid concomitant use of XARELTO with drugs that are known combined P-gp and strong CYP3A inducers [see Drug Interactions (7.3) ] .\n\nFrom the Xarelto label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nRifampin, carbamazepine, phenytoin, and St. John's wort induce CYP3A4 and P-glycoprotein and roughly halve DOAC exposure, so the anticoagulant can fail (efficacy loss).\n\nWhat to do\n\nAvoid; use another anticoagulant (such as warfarin with INR monitoring) while the inducer is needed.\n\nFDA labels: Rifadin\n · Xarelto\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nRifadin, Sprintec\n\nSprintec with Rifadin: contraceptive failure: unintended pregnancy\n\nWhy D: The Drug Interactions section of the Sprintec label addresses this combination: contraceptive failure: unintended pregnancy. Clinical rulebook row 33.\n\nExamples Aprepitant, barbiturates, bosentan, carbamazepine, efavirenz, felbamate, griseofulvin, oxcarbazepine, phenytoin, rifampin, rifabutin, rufinamide, topiramate, products containing St.\n\nFrom the Sprintec label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese drugs induce CYP3A4 and speed the clearance of ethinyl estradiol and progestins, so hormonal contraception can fail (efficacy loss).\n\nWhat to do\n\nUse a non-hormonal or IUD method during the course and for 28 days after the inducer stops.\n\nFDA labels: Rifadin\n · Sprintec\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nRifadin, Dolophine\n\nDolophine with Rifadin: opioid levels fall: withdrawal or loss of pain control\n\nWhy D: The Drug Interactions section of the Dolophine label addresses this combination: opioid levels fall: withdrawal or loss of pain control. Clinical rulebook row 33.\n\nExamples: Rifampin, carbamazepine, phenytoin, St.\n\nFrom the Dolophine label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nRifampin, carbamazepine, and phenytoin induce CYP3A4 and cut opioid levels within days (efficacy loss), causing withdrawal; stopping the inducer later can cause overdose.\n\nWhat to do\n\nRaise the opioid dose under close monitoring, and lower it again when the inducer stops.\n\nFDA labels: Rifadin\n · Dolophine\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nethinyl estradiol\n35 mcg (0.035 mg)/day\nlurasidone\n80 mg/day\nmethadone\n60 mg/day · 282 MME\nnorgestimate\n250 mcg (0.25 mg)/day\nrifampin\n600 mg/day\nrivaroxaban\n20 mg/day\ntacrolimus\n4 mg/day\n\nTotal opioid dose: 282 MME/day (CDC 2022 conversion factors).\n\nRifadin\nrifampin\n600 mg · once a day · 600 mg/day total\nRifamycin Antibacterial [EPC]\nContraindicated Combination\nXarelto\nrivaroxaban\n20 mg · once a day · 20 mg/day total\nFactor Xa Inhibitor [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSprintec\nethinyl estradiol, norgestimate\nnorgestimate 0.25 mg / ethinyl estradiol 35 mcg · once a day\nPrograf\ntacrolimus\n2 mg · twice a day · 4 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nLatuda\nlurasidone\n80 mg · once a day · 80 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nDolophine\nmethadone\n60 mg · once a day · 60 mg/day total\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk\n7 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:06:37.131Z"
+}

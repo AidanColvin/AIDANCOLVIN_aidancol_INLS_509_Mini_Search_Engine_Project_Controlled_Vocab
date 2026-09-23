@@ -1,0 +1,457 @@
+{
+ "id": "L02",
+ "input": "Zoloft (sertraline) 100 mg once daily = 100 mg/day, Ultram (tramadol) 50 mg four times daily = 200 mg/day, Imitrex (sumatriptan) 50 mg as needed may repeat once after 2 hours = 100 mg/day max, Flexeril (cyclobenzaprine) 10 mg three times daily = 30 mg/day, Zofran (ondansetron) 8 mg twice daily = 16 mg/day, Lipitor (atorvastatin) 40 mg once daily = 40 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.906,
+ "secondsToResults": 0.405,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Ultram, Flexeril",
+   "category": "2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: The Boxed Warning section of the Ultram label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "( 5.3 ) Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Ultram label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Ultram\n · Flexeril\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Ultram",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Flexeril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d536e88-62be-45bd-bd09-0efc53fe12b9"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Zoloft, Ultram, Imitrex, Flexeril, Zofran",
+   "category": "5 serotonergic drugs: risk of serotonin syndrome",
+   "basis": "Why D: The Contraindications section of the Zoloft label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.",
+   "quote": "4 CONTRAINDICATIONS Sertraline hydrochloride tablets are contraindicated in patients: Taking, or within 14 days of stopping, MAOIs, (including the MAOIs linezolid and intravenous methylene blue) because of an increased risk of serotonin syndrome [See Warnings and Precautions (5.2) , Drug Interactions (7.1) ] .",
+   "source": "From the Zoloft label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.",
+   "action": "Avoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.",
+   "includes": null,
+   "sources": "FDA labels: Zoloft\n · Ultram\n · Imitrex\n · Flexeril\n · Zofran\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "Zoloft",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "Ultram",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Imitrex",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7328ab4f-2985-448d-8724-8f1b55693b41"
+    },
+    {
+     "text": "Flexeril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d536e88-62be-45bd-bd09-0efc53fe12b9"
+    },
+    {
+     "text": "Zofran",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=269c920c-643a-4eea-9bf9-b1f008915db9"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Zoloft, Ultram",
+   "category": "2 drugs: risk of seizures",
+   "basis": "Why C: The Warnings and Precautions section of the Ultram label addresses this combination: risk of seizures. Clinical rulebook row 8.",
+   "quote": "Concomitant use with other drugs may increase seizure risk.",
+   "source": "From the Ultram label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Tramadol and bupropion lower the seizure threshold in a dose-related way. The other drugs listed lower it too, so the risk adds up.",
+   "action": "Keep tramadol and bupropion at or below labeled doses, avoid them in patients with seizure risk factors, and prefer alternatives when several threshold-lowering drugs are needed.",
+   "includes": null,
+   "sources": "FDA labels: Zoloft\n · Ultram",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Zoloft",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "Ultram",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Zoloft, Ultram",
+   "category": "Ultram with Zoloft: less pain relief; more parent-drug side effects",
+   "basis": "Why C: The Warnings and Precautions section of the Ultram label addresses this combination: less pain relief; more parent-drug side effects. Clinical rulebook row 8, 35.",
+   "quote": "Risks of Concomitant Use or Discontinuation of Cytochrome P450 2D6 Inhibitors The concomitant use of tramadol hydrochloride tablets with all cytochrome P450 2D6 inhibitors (e.g., amiodarone, quinidine) may result in an increase in tramadol plasma levels and a decrease in the levels of the active metabolite, M1.",
+   "source": "From the Ultram label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "CYP2D6 turns codeine into morphine and tramadol into its active opioid metabolite. Blocking it reduces pain relief, and for tramadol leaves more parent drug with its seizure and serotonin effects.",
+   "action": "Expect weaker analgesia; watch for serotonin effects with tramadol, and consider a different analgesic.",
+   "includes": null,
+   "sources": "FDA labels: Zoloft\n · Ultram\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Zoloft",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "Ultram",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Ultram, Zofran",
+   "category": "Ultram with Zofran: may reduce tramadol's pain relief",
+   "basis": "Why A: Class rule: may reduce tramadol's pain relief.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Part of tramadol's analgesia runs through serotonin; blocking 5-HT3 receptors may reduce it (loss of effect).",
+   "action": "Usually minor; assess pain control.",
+   "includes": null,
+   "sources": "FDA labels: Ultram\n · Zofran",
+   "links": [
+    {
+     "text": "Ultram",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Zofran",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=269c920c-643a-4eea-9bf9-b1f008915db9"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Flexeril",
+   "category": "cyclobenzaprine 30 mg/day is at the labeled maximum of 30 mg/day (maximum)",
+   "basis": "Why A: Daily total 30 mg against a labeled maximum of 30 mg.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of cyclobenzaprine; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Flexeril",
+   "links": [
+    {
+     "text": "Flexeril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d536e88-62be-45bd-bd09-0efc53fe12b9"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Zoloft, Zofran",
+   "category": "QT Prolongation Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "QTc Prolongation: Sertraline hydrochloride should be used with caution in patients with risk factors for QTc prolongation.",
+   "source": "From the Zoloft label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: QT prolongation",
+   "why_text": "Each of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Zoloft\n · Zofran",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "National Heart, Lung, and Blood Institute, NIH",
+     "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome"
+    },
+    {
+     "text": "Zoloft",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "Zofran",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=269c920c-643a-4eea-9bf9-b1f008915db9"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "2"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "3"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Zoloft",
+   "generic": "sertraline",
+   "dose": "100 mg · once a day · 100 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Zoloft\nsertraline\n100 mg · once a day · 100 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Ultram",
+   "generic": "tramadol",
+   "dose": "50 mg · 4 times a day · 200 mg/day total",
+   "facts": "Schedule IV (C-IV)\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk",
+   "text": "Ultram\ntramadol\n50 mg · 4 times a day · 200 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk"
+  },
+  {
+   "brand": "Imitrex",
+   "generic": "sumatriptan",
+   "dose": "50 mg · as needed, up to twice a day · 100 mg/day max",
+   "facts": "Serotonin-1b and Serotonin-1d Receptor Agonist [EPC]\nSerotonin Syndrome Risk\nContraindicated Combination",
+   "text": "Imitrex\nsumatriptan\n50 mg · as needed, up to twice a day · 100 mg/day max\nSerotonin-1b and Serotonin-1d Receptor Agonist [EPC]\nSerotonin Syndrome Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Flexeril",
+   "generic": "cyclobenzaprine",
+   "dose": "10 mg · 3 times a day · 30 mg/day total",
+   "facts": "High-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk",
+   "text": "Flexeril\ncyclobenzaprine\n10 mg · 3 times a day · 30 mg/day total\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk"
+  },
+  {
+   "brand": "Zofran",
+   "generic": "ondansetron",
+   "dose": "8 mg · twice a day · 16 mg/day total",
+   "facts": "Serotonin-3 Receptor Antagonist [EPC]\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Zofran\nondansetron\n8 mg · twice a day · 16 mg/day total\nSerotonin-3 Receptor Antagonist [EPC]\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Lipitor",
+   "generic": "atorvastatin",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "HMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect",
+   "text": "Lipitor\natorvastatin\n40 mg · once a day · 40 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect"
+  }
+ ],
+ "totals": [
+  "atorvastatin\n40 mg/day",
+  "cyclobenzaprine\n30 mg/day",
+  "ondansetron\n16 mg/day",
+  "sertraline\n100 mg/day",
+  "sumatriptan\n100 mg/day max",
+  "tramadol\n200 mg/day · 40 MME"
+ ],
+ "totalMme": "Total opioid dose: 40 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Ultram",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Flexeril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d536e88-62be-45bd-bd09-0efc53fe12b9",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "Zoloft",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "Ultram",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Imitrex",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7328ab4f-2985-448d-8724-8f1b55693b41",
+   "in_alert": true
+  },
+  {
+   "text": "Flexeril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d536e88-62be-45bd-bd09-0efc53fe12b9",
+   "in_alert": true
+  },
+  {
+   "text": "Zofran",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=269c920c-643a-4eea-9bf9-b1f008915db9",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Zoloft",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "Ultram",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Zoloft",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "Ultram",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Ultram",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Zofran",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=269c920c-643a-4eea-9bf9-b1f008915db9",
+   "in_alert": true
+  },
+  {
+   "text": "Flexeril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d536e88-62be-45bd-bd09-0efc53fe12b9",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "National Heart, Lung, and Blood Institute, NIH",
+   "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome",
+   "in_alert": true
+  },
+  {
+   "text": "Zoloft",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "Zofran",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=269c920c-643a-4eea-9bf9-b1f008915db9",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n7 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n2\nC\nMonitor closely\n2\nB\nMonitor\n–\nA\nMinor\n3\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nUltram, Flexeril\n\n2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: The Boxed Warning section of the Ultram label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\n( 5.3 ) Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Ultram label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Ultram\n · Flexeril\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 1 more label sentence\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nZoloft, Ultram, Imitrex, Flexeril, Zofran\n\n5 serotonergic drugs: risk of serotonin syndrome\n\nWhy D: The Contraindications section of the Zoloft label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.\n\n4 CONTRAINDICATIONS Sertraline hydrochloride tablets are contraindicated in patients: Taking, or within 14 days of stopping, MAOIs, (including the MAOIs linezolid and intravenous methylene blue) because of an increased risk of serotonin syndrome [See Warnings and Precautions (5.2) , Drug Interactions (7.1) ] .\n\nFrom the Zoloft label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.\n\nWhat to do\n\nAvoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.\n\nFDA labels: Zoloft\n · Ultram\n · Imitrex\n · Flexeril\n · Zofran\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n\nShow 4 more label sentences\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nZoloft, Ultram\n\n2 drugs: risk of seizures\n\nWhy C: The Warnings and Precautions section of the Ultram label addresses this combination: risk of seizures. Clinical rulebook row 8.\n\nConcomitant use with other drugs may increase seizure risk.\n\nFrom the Ultram label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nTramadol and bupropion lower the seizure threshold in a dose-related way. The other drugs listed lower it too, so the risk adds up.\n\nWhat to do\n\nKeep tramadol and bupropion at or below labeled doses, avoid them in patients with seizure risk factors, and prefer alternatives when several threshold-lowering drugs are needed.\n\nFDA labels: Zoloft\n · Ultram\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nZoloft, Ultram\n\nUltram with Zoloft: less pain relief; more parent-drug side effects\n\nWhy C: The Warnings and Precautions section of the Ultram label addresses this combination: less pain relief; more parent-drug side effects. Clinical rulebook row 8, 35.\n\nRisks of Concomitant Use or Discontinuation of Cytochrome P450 2D6 Inhibitors The concomitant use of tramadol hydrochloride tablets with all cytochrome P450 2D6 inhibitors (e.g., amiodarone, quinidine) may result in an increase in tramadol plasma levels and a decrease in the levels of the active metabolite, M1.\n\nFrom the Ultram label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nCYP2D6 turns codeine into morphine and tramadol into its active opioid metabolite. Blocking it reduces pain relief, and for tramadol leaves more parent drug with its seizure and serotonin effects.\n\nWhat to do\n\nExpect weaker analgesia; watch for serotonin effects with tramadol, and consider a different analgesic.\n\nFDA labels: Zoloft\n · Ultram\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nA\nMinor — Minor: usually no action needed.\nUltram, Zofran\n\nUltram with Zofran: may reduce tramadol's pain relief\n\nWhy A: Class rule: may reduce tramadol's pain relief.\n\nWhy it happens\n\nPart of tramadol's analgesia runs through serotonin; blocking 5-HT3 receptors may reduce it (loss of effect).\n\nWhat to do\n\nUsually minor; assess pain control.\n\nFDA labels: Ultram\n · Zofran\n\nA\nMinor — Minor: usually no action needed.\nFlexeril\n\ncyclobenzaprine 30 mg/day is at the labeled maximum of 30 mg/day (maximum)\n\nWhy A: Daily total 30 mg against a labeled maximum of 30 mg.\n\nWhy it happens\n\nThe total counts every entry of cyclobenzaprine; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Flexeril\n\nA\nMinor — Minor: usually no action needed.\nZoloft, Zofran\n\nQT Prolongation Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\nQTc Prolongation: Sertraline hydrochloride should be used with caution in patients with risk factors for QTc prolongation.\n\nFrom the Zoloft label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhat this means: QT prolongation\n\nEach of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.\n\nSource: National Heart, Lung, and Blood Institute, NIH\n\nFDA labels: Zoloft\n · Zofran\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\natorvastatin\n40 mg/day\ncyclobenzaprine\n30 mg/day\nondansetron\n16 mg/day\nsertraline\n100 mg/day\nsumatriptan\n100 mg/day max\ntramadol\n200 mg/day · 40 MME\n\nTotal opioid dose: 40 MME/day (CDC 2022 conversion factors).\n\nZoloft\nsertraline\n100 mg · once a day · 100 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nUltram\ntramadol\n50 mg · 4 times a day · 200 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nImitrex\nsumatriptan\n50 mg · as needed, up to twice a day · 100 mg/day max\nSerotonin-1b and Serotonin-1d Receptor Agonist [EPC]\nSerotonin Syndrome Risk\nContraindicated Combination\nFlexeril\ncyclobenzaprine\n10 mg · 3 times a day · 30 mg/day total\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nZofran\nondansetron\n8 mg · twice a day · 16 mg/day total\nSerotonin-3 Receptor Antagonist [EPC]\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nLipitor\natorvastatin\n40 mg · once a day · 40 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\n7 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:05:06.008Z"
+}

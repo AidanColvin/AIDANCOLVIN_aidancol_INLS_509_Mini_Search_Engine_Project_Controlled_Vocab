@@ -1,0 +1,544 @@
+{
+ "id": "L34",
+ "input": "Vyvanse (lisdexamfetamine) 70 mg once daily in the morning = 70 mg/day, Strattera (atomoxetine) 80 mg once daily = 80 mg/day, Intuniv (guanfacine ER) 3 mg once daily at bedtime = 3 mg/day, Kapvay (clonidine ER) 0.1 mg twice daily = 0.2 mg/day, Paxil (paroxetine) 20 mg once daily = 20 mg/day, Seroquel (quetiapine) 100 mg once daily at bedtime = 100 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.838,
+ "secondsToResults": 0.81,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Strattera, Paxil",
+   "category": "Strattera with Paxil: atomoxetine levels rise 6- to 8-fold",
+   "basis": "Why D: The Drug Interactions section of the Strattera label addresses this combination: atomoxetine levels rise 6- to 8-fold.",
+   "quote": "( 4 , 7 ) Strong CYP2D6 Inhibitors: With concomitant use of atomoxetine capsules and strong CYP2D6 inhibitors, increase the titration intervals.",
+   "source": "From the Strattera label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Atomoxetine is cleared by CYP2D6. Strong inhibitors raise exposure 6- to 8-fold, like a poor metabolizer: faster heart rate, higher blood pressure, side effects.",
+   "action": "Start atomoxetine at 40 mg a day and raise to 80 mg only after 4 weeks if needed, as the label directs.",
+   "includes": null,
+   "sources": "FDA labels: Strattera\n · Paxil\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d7ea8f7-981c-4acc-aeaf-7516325bfc0c"
+    },
+    {
+     "text": "Strattera",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d7ea8f7-981c-4acc-aeaf-7516325bfc0c"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Intuniv, Kapvay",
+   "category": "2 central alpha-2 agonists: duplicate therapy: low blood pressure, slow heart rate, sedation, and rebound hypertension if stopped",
+   "basis": "Why D: Class rule: duplicate therapy: low blood pressure, slow heart rate, sedation, and rebound hypertension if stopped.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These are all central alpha-2 agonists: taking more than one is therapeutic duplication.",
+   "action": "Use one central alpha-2 agonist.",
+   "includes": null,
+   "sources": "FDA labels: Intuniv\n · Kapvay",
+   "links": [
+    {
+     "text": "Intuniv",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec4fed6-cafc-49a0-9540-8d70ac435769"
+    },
+    {
+     "text": "Kapvay",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Vyvanse, Paxil",
+   "category": "2 serotonergic drugs: risk of serotonin syndrome",
+   "basis": "Why C: The Warnings and Precautions section of the Paxil label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.",
+   "quote": "Serotonin Syndrome: Increased risk when co-administered with serotonergic agents (e.g., SSRIs, SNRIs, triptans), but also during overdosage situations.",
+   "source": "From the Vyvanse label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.",
+   "action": "Avoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.",
+   "includes": null,
+   "sources": "FDA labels: Vyvanse\n · Paxil\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f"
+    },
+    {
+     "text": "Vyvanse",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Intuniv, Kapvay, Seroquel",
+   "category": "3 drugs: risk of low blood pressure on standing, fainting, and falls",
+   "basis": "Why C: The Warnings and Precautions section of the Intuniv label addresses this combination: risk of low blood pressure on standing, fainting, and falls. Clinical rulebook row 22.",
+   "quote": "Monitor blood pressure and heart rate, and adjust dosages accordingly in patients treated concomitantly with antihypertensives or other drugs that can reduce blood pressure or heart rate or increase the risk of syncope.",
+   "source": "From the Intuniv label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug lowers blood pressure or blocks the reflex that holds it up when standing. Together they can cause orthostatic hypotension, fainting, and falls.",
+   "action": "Start low, raise one drug at a time, check standing blood pressure, and tell the patient to stand up slowly.",
+   "includes": null,
+   "sources": "FDA labels: Intuniv\n · Kapvay\n · Seroquel",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec4fed6-cafc-49a0-9540-8d70ac435769"
+    },
+    {
+     "text": "Intuniv",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec4fed6-cafc-49a0-9540-8d70ac435769"
+    },
+    {
+     "text": "Kapvay",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Intuniv, Kapvay",
+   "category": "2 heart-rate-slowing drugs: risk of slow heart rate (bradycardia) and heart block",
+   "basis": "Why C: The Warnings and Precautions section of the Intuniv label addresses this combination: risk of slow heart rate (bradycardia) and heart block. Clinical rulebook row 20.",
+   "quote": "Caution patients against operating heavy equipment or driving until they know how they respond to guanfacine extended-release tablets ( 5.2 ) Cardiac Conduction Abnormalities: May worsen sinus node dysfunction and atrioventricular (AV) block, especially in patients taking other sympatholytic drugs.",
+   "source": "From the Intuniv label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart rate or conduction through the AV node. Together they can cause severe bradycardia, AV block, or heart failure.",
+   "action": "Check pulse and an ECG after starting or raising any of them; lower doses or stop one if the heart rate drops below 50 or new AV block appears.",
+   "includes": null,
+   "sources": "FDA labels: Intuniv\n · Kapvay",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec4fed6-cafc-49a0-9540-8d70ac435769"
+    },
+    {
+     "text": "Intuniv",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec4fed6-cafc-49a0-9540-8d70ac435769"
+    },
+    {
+     "text": "Kapvay",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Paxil, Seroquel",
+   "category": "2 anticholinergic drugs: anticholinergic burden: confusion, urinary retention, constipation, falls",
+   "basis": "Why C: The Warnings and Precautions section of the Seroquel label addresses this combination: anticholinergic burden: confusion, urinary retention, constipation, falls. Clinical rulebook row 6.",
+   "quote": "Lens examination is recommended when starting treatment and at 6-month intervals during chronic treatment (5.11) • Anticholinergic (antimuscarinic) Effects: Use with caution with other anticholinergic drugs and in patients with urinary retention, prostatic hypertrophy, or constipation (5.20) .",
+   "source": "From the Seroquel label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug blocks acetylcholine. Together they cause confusion or delirium, dry mouth, blurred vision, urinary retention, constipation or ileus, overheating, and falls, worst in older adults (Beers criteria).",
+   "action": "Replace the strongest anticholinergic with an alternative and avoid the combination in older adults.",
+   "includes": null,
+   "sources": "FDA labels: Paxil\n · Seroquel",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Vyvanse, Strattera",
+   "category": "2 ADHD medications: duplicate therapy: two ADHD medicines raise heart rate and blood pressure",
+   "basis": "Why C: Class rule: duplicate therapy: two ADHD medicines raise heart rate and blood pressure.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These are all ADHD medications: taking more than one is therapeutic duplication.",
+   "action": "Confirm the combination is intended and monitor heart rate and blood pressure.",
+   "includes": null,
+   "sources": "FDA labels: Vyvanse\n · Strattera",
+   "links": [
+    {
+     "text": "Vyvanse",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f"
+    },
+    {
+     "text": "Strattera",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d7ea8f7-981c-4acc-aeaf-7516325bfc0c"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Vyvanse, Seroquel",
+   "category": "Vyvanse with Seroquel: opposing effects partly cancel",
+   "basis": "Why A: Class rule: opposing effects partly cancel.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "A stimulant works against sedating drugs and dopamine blockers; each may blunt the other.",
+   "action": "Review whether both are needed.",
+   "includes": null,
+   "sources": "FDA labels: Vyvanse\n · Seroquel",
+   "links": [
+    {
+     "text": "Vyvanse",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Vyvanse",
+   "category": "lisdexamfetamine 70 mg/day is at the labeled maximum of 70 mg/day (maximum)",
+   "basis": "Why A: Daily total 70 mg against a labeled maximum of 70 mg.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of lisdexamfetamine; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Vyvanse",
+   "links": [
+    {
+     "text": "Vyvanse",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Paxil, Seroquel",
+   "category": "QT Prolongation Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "5.3 Drug Interactions Leading to QT Prolongation The CYP2D6 inhibitory properties of paroxetine can elevate plasma levels of thioridazine and pimozide.",
+   "source": "From the Paxil label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: QT prolongation",
+   "why_text": "Each of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Paxil\n · Seroquel",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "National Heart, Lung, and Blood Institute, NIH",
+     "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "5"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "3"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Vyvanse",
+   "generic": "lisdexamfetamine",
+   "dose": "70 mg · once a day · 70 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk",
+   "text": "Vyvanse\nlisdexamfetamine\n70 mg · once a day · 70 mg/day total\nBoxed Warning\nPediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk"
+  },
+  {
+   "brand": "Strattera",
+   "generic": "atomoxetine",
+   "dose": "80 mg · once a day · 80 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nContraindicated Combination",
+   "text": "Strattera\natomoxetine\n80 mg · once a day · 80 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nContraindicated Combination"
+  },
+  {
+   "brand": "Intuniv",
+   "generic": "guanfacine",
+   "dose": "3 mg · once a day · 3 mg/day total",
+   "facts": "extended release\nCentral alpha-2 Adrenergic Agonist [EPC]\nHigh-Frequency Adverse Effect\nCNS Depression Risk",
+   "text": "Intuniv\nguanfacine\n3 mg · once a day · 3 mg/day total\nextended release\nCentral alpha-2 Adrenergic Agonist [EPC]\nHigh-Frequency Adverse Effect\nCNS Depression Risk"
+  },
+  {
+   "brand": "Kapvay",
+   "generic": "clonidine",
+   "dose": "0.1 mg · twice a day · 0.2 mg/day total",
+   "facts": "extended release\nCentral alpha-2 Adrenergic Agonist [EPC]",
+   "text": "Kapvay\nclonidine\n0.1 mg · twice a day · 0.2 mg/day total\nextended release\nCentral alpha-2 Adrenergic Agonist [EPC]"
+  },
+  {
+   "brand": "Paxil",
+   "generic": "paroxetine",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Paxil\nparoxetine\n20 mg · once a day · 20 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Seroquel",
+   "generic": "quetiapine",
+   "dose": "100 mg · once a day · 100 mg/day total",
+   "facts": "Atypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk",
+   "text": "Seroquel\nquetiapine\n100 mg · once a day · 100 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk"
+  }
+ ],
+ "totals": [
+  "atomoxetine\n80 mg/day",
+  "clonidine\n200 mcg (0.2 mg)/day",
+  "guanfacine\n3 mg/day",
+  "lisdexamfetamine\n70 mg/day",
+  "paroxetine\n20 mg/day",
+  "quetiapine\n100 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d7ea8f7-981c-4acc-aeaf-7516325bfc0c",
+   "in_alert": true
+  },
+  {
+   "text": "Strattera",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d7ea8f7-981c-4acc-aeaf-7516325bfc0c",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Intuniv",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec4fed6-cafc-49a0-9540-8d70ac435769",
+   "in_alert": true
+  },
+  {
+   "text": "Kapvay",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f",
+   "in_alert": true
+  },
+  {
+   "text": "Vyvanse",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec4fed6-cafc-49a0-9540-8d70ac435769",
+   "in_alert": true
+  },
+  {
+   "text": "Intuniv",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec4fed6-cafc-49a0-9540-8d70ac435769",
+   "in_alert": true
+  },
+  {
+   "text": "Kapvay",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec4fed6-cafc-49a0-9540-8d70ac435769",
+   "in_alert": true
+  },
+  {
+   "text": "Intuniv",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec4fed6-cafc-49a0-9540-8d70ac435769",
+   "in_alert": true
+  },
+  {
+   "text": "Kapvay",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Vyvanse",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f",
+   "in_alert": true
+  },
+  {
+   "text": "Strattera",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d7ea8f7-981c-4acc-aeaf-7516325bfc0c",
+   "in_alert": true
+  },
+  {
+   "text": "Vyvanse",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Vyvanse",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "National Heart, Lung, and Blood Institute, NIH",
+   "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n10 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n2\nC\nMonitor closely\n5\nB\nMonitor\n–\nA\nMinor\n3\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nStrattera, Paxil\n\nStrattera with Paxil: atomoxetine levels rise 6- to 8-fold\n\nWhy D: The Drug Interactions section of the Strattera label addresses this combination: atomoxetine levels rise 6- to 8-fold.\n\n( 4 , 7 ) Strong CYP2D6 Inhibitors: With concomitant use of atomoxetine capsules and strong CYP2D6 inhibitors, increase the titration intervals.\n\nFrom the Strattera label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nAtomoxetine is cleared by CYP2D6. Strong inhibitors raise exposure 6- to 8-fold, like a poor metabolizer: faster heart rate, higher blood pressure, side effects.\n\nWhat to do\n\nStart atomoxetine at 40 mg a day and raise to 80 mg only after 4 weeks if needed, as the label directs.\n\nFDA labels: Strattera\n · Paxil\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nIntuniv, Kapvay\n\n2 central alpha-2 agonists: duplicate therapy: low blood pressure, slow heart rate, sedation, and rebound hypertension if stopped\n\nWhy D: Class rule: duplicate therapy: low blood pressure, slow heart rate, sedation, and rebound hypertension if stopped.\n\nWhy it happens\n\nThese are all central alpha-2 agonists: taking more than one is therapeutic duplication.\n\nWhat to do\n\nUse one central alpha-2 agonist.\n\nFDA labels: Intuniv\n · Kapvay\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nVyvanse, Paxil\n\n2 serotonergic drugs: risk of serotonin syndrome\n\nWhy C: The Warnings and Precautions section of the Paxil label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.\n\nSerotonin Syndrome: Increased risk when co-administered with serotonergic agents (e.g., SSRIs, SNRIs, triptans), but also during overdosage situations.\n\nFrom the Vyvanse label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.\n\nWhat to do\n\nAvoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.\n\nFDA labels: Vyvanse\n · Paxil\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n\nShow 1 more label sentence\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nIntuniv, Kapvay, Seroquel\n\n3 drugs: risk of low blood pressure on standing, fainting, and falls\n\nWhy C: The Warnings and Precautions section of the Intuniv label addresses this combination: risk of low blood pressure on standing, fainting, and falls. Clinical rulebook row 22.\n\nMonitor blood pressure and heart rate, and adjust dosages accordingly in patients treated concomitantly with antihypertensives or other drugs that can reduce blood pressure or heart rate or increase the risk of syncope.\n\nFrom the Intuniv label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug lowers blood pressure or blocks the reflex that holds it up when standing. Together they can cause orthostatic hypotension, fainting, and falls.\n\nWhat to do\n\nStart low, raise one drug at a time, check standing blood pressure, and tell the patient to stand up slowly.\n\nFDA labels: Intuniv\n · Kapvay\n · Seroquel\n\nShow 1 more label sentence\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nIntuniv, Kapvay\n\n2 heart-rate-slowing drugs: risk of slow heart rate (bradycardia) and heart block\n\nWhy C: The Warnings and Precautions section of the Intuniv label addresses this combination: risk of slow heart rate (bradycardia) and heart block. Clinical rulebook row 20.\n\nCaution patients against operating heavy equipment or driving until they know how they respond to guanfacine extended-release tablets ( 5.2 ) Cardiac Conduction Abnormalities: May worsen sinus node dysfunction and atrioventricular (AV) block, especially in patients taking other sympatholytic drugs.\n\nFrom the Intuniv label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart rate or conduction through the AV node. Together they can cause severe bradycardia, AV block, or heart failure.\n\nWhat to do\n\nCheck pulse and an ECG after starting or raising any of them; lower doses or stop one if the heart rate drops below 50 or new AV block appears.\n\nFDA labels: Intuniv\n · Kapvay\n\nShow 1 more label sentence\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nPaxil, Seroquel\n\n2 anticholinergic drugs: anticholinergic burden: confusion, urinary retention, constipation, falls\n\nWhy C: The Warnings and Precautions section of the Seroquel label addresses this combination: anticholinergic burden: confusion, urinary retention, constipation, falls. Clinical rulebook row 6.\n\nLens examination is recommended when starting treatment and at 6-month intervals during chronic treatment (5.11) • Anticholinergic (antimuscarinic) Effects: Use with caution with other anticholinergic drugs and in patients with urinary retention, prostatic hypertrophy, or constipation (5.20) .\n\nFrom the Seroquel label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug blocks acetylcholine. Together they cause confusion or delirium, dry mouth, blurred vision, urinary retention, constipation or ileus, overheating, and falls, worst in older adults (Beers criteria).\n\nWhat to do\n\nReplace the strongest anticholinergic with an alternative and avoid the combination in older adults.\n\nFDA labels: Paxil\n · Seroquel\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nVyvanse, Strattera\n\n2 ADHD medications: duplicate therapy: two ADHD medicines raise heart rate and blood pressure\n\nWhy C: Class rule: duplicate therapy: two ADHD medicines raise heart rate and blood pressure.\n\nWhy it happens\n\nThese are all ADHD medications: taking more than one is therapeutic duplication.\n\nWhat to do\n\nConfirm the combination is intended and monitor heart rate and blood pressure.\n\nFDA labels: Vyvanse\n · Strattera\n\nA\nMinor — Minor: usually no action needed.\nVyvanse, Seroquel\n\nVyvanse with Seroquel: opposing effects partly cancel\n\nWhy A: Class rule: opposing effects partly cancel.\n\nWhy it happens\n\nA stimulant works against sedating drugs and dopamine blockers; each may blunt the other.\n\nWhat to do\n\nReview whether both are needed.\n\nFDA labels: Vyvanse\n · Seroquel\n\nA\nMinor — Minor: usually no action needed.\nVyvanse\n\nlisdexamfetamine 70 mg/day is at the labeled maximum of 70 mg/day (maximum)\n\nWhy A: Daily total 70 mg against a labeled maximum of 70 mg.\n\nWhy it happens\n\nThe total counts every entry of lisdexamfetamine; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Vyvanse\n\nA\nMinor — Minor: usually no action needed.\nPaxil, Seroquel\n\nQT Prolongation Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\n5.3 Drug Interactions Leading to QT Prolongation The CYP2D6 inhibitory properties of paroxetine can elevate plasma levels of thioridazine and pimozide.\n\nFrom the Paxil label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhat this means: QT prolongation\n\nEach of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.\n\nSource: National Heart, Lung, and Blood Institute, NIH\n\nFDA labels: Paxil\n · Seroquel\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\natomoxetine\n80 mg/day\nclonidine\n200 mcg (0.2 mg)/day\nguanfacine\n3 mg/day\nlisdexamfetamine\n70 mg/day\nparoxetine\n20 mg/day\nquetiapine\n100 mg/day\nVyvanse\nlisdexamfetamine\n70 mg · once a day · 70 mg/day total\nBoxed Warning\nPediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk\nStrattera\natomoxetine\n80 mg · once a day · 80 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nContraindicated Combination\nIntuniv\nguanfacine\n3 mg · once a day · 3 mg/day total\nextended release\nCentral alpha-2 Adrenergic Agonist [EPC]\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nKapvay\nclonidine\n0.1 mg · twice a day · 0.2 mg/day total\nextended release\nCentral alpha-2 Adrenergic Agonist [EPC]\nPaxil\nparoxetine\n20 mg · once a day · 20 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nSeroquel\nquetiapine\n100 mg · once a day · 100 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\n10 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:07:50.122Z"
+}

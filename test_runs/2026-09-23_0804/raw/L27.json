@@ -1,0 +1,432 @@
+{
+ "id": "L27",
+ "input": "Sinemet (carbidopa/levodopa) 25/100 mg three times daily = 75/300 mg/day, Azilect (rasagiline) 1 mg once daily = 1 mg/day, Reglan (metoclopramide) 10 mg four times daily before meals and at bedtime = 40 mg/day, Haldol (haloperidol) 2 mg once daily at bedtime = 2 mg/day, Demerol (meperidine) 50 mg every 6 hours as needed max 4 doses/day = 200 mg/day max, Lexapro (escitalopram) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.838,
+ "secondsToResults": 0.404,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Azilect, Demerol",
+   "category": "Azilect with Demerol: can cause serotonin syndrome",
+   "basis": "Why E: The Contraindications section of the Azilect label addresses this combination: can cause serotonin syndrome. Clinical rulebook row 7.",
+   "quote": "4 CONTRAINDICATIONS Rasagiline is contraindicated for use with meperidine, tramadol, methadone, propoxyphene and MAO inhibitors (MAOIs), including other selective MAO-B inhibitors, because of risk of serotonin syndrome [see Warnings and Precautions ( 5.2 )] .",
+   "source": "From the Azilect label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "The rasagiline and selegiline labels contraindicate meperidine, tramadol, methadone, dextromethorphan, and similar drugs because serious, sometimes fatal serotonin syndrome has occurred.",
+   "action": "Do not use together; wait at least 14 days after stopping the MAO-B inhibitor.",
+   "includes": null,
+   "sources": "FDA labels: Azilect\n · Demerol\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9bf059f4-4da8-48fe-aacb-c50717d36606"
+    },
+    {
+     "text": "Azilect",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9bf059f4-4da8-48fe-aacb-c50717d36606"
+    },
+    {
+     "text": "Demerol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Haldol, Demerol",
+   "category": "2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: The Boxed Warning section of the Demerol label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "Risks from Concomitant Use with Benzodiazepines or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Demerol label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Haldol\n · Demerol\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975"
+    },
+    {
+     "text": "Haldol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621"
+    },
+    {
+     "text": "Demerol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Azilect, Reglan, Demerol, Lexapro",
+   "category": "4 serotonergic drugs: risk of serotonin syndrome",
+   "basis": "Why D: The Contraindications section of the Lexapro label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.",
+   "quote": "4 CONTRAINDICATIONS Escitalopram tablets is contraindicated in patients: taking MAOIs with Escitalopram tablets or within 14 days of stopping treatment with Escitalopram tablets because of an increased risk of serotonin syndrome.",
+   "source": "From the Lexapro label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.",
+   "action": "Avoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.",
+   "includes": null,
+   "sources": "FDA labels: Azilect\n · Reglan\n · Demerol\n · Lexapro\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd"
+    },
+    {
+     "text": "Azilect",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9bf059f4-4da8-48fe-aacb-c50717d36606"
+    },
+    {
+     "text": "Reglan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=595439ae-cf01-821c-e063-6294a90af16a"
+    },
+    {
+     "text": "Demerol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975"
+    },
+    {
+     "text": "Lexapro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Sinemet, Reglan, Haldol",
+   "category": "Sinemet with 2 drugs that block dopamine: blocks levodopa and worsens parkinsonism",
+   "basis": "Why D: The Drug Interactions section of the Reglan label addresses this combination: blocks levodopa and worsens parkinsonism.",
+   "quote": "Examples apomorphine, bromocriptine, cabergoline, levodopa, pramipexole, ropinirole, and rotigotine 7.2 Effects of Metoclopramide on Other Drugs Table 4 displays the effects of metoclopramide on other drugs.",
+   "source": "From the Reglan label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These drugs block dopamine D2 receptors, directly opposing levodopa and worsening Parkinson's symptoms. Metoclopramide's label warns against use in Parkinson's disease.",
+   "action": "Avoid; for nausea use domperidone where available or ondansetron, and if an antipsychotic is needed use quetiapine, clozapine, or pimavanserin.",
+   "includes": null,
+   "sources": "FDA labels: Sinemet\n · Reglan\n · Haldol",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=595439ae-cf01-821c-e063-6294a90af16a"
+    },
+    {
+     "text": "Sinemet",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9b17b028-964a-473c-823d-81423535bd66"
+    },
+    {
+     "text": "Reglan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=595439ae-cf01-821c-e063-6294a90af16a"
+    },
+    {
+     "text": "Haldol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2cdd9fca-afe5-4bfa-8db1-337beec13c6b"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Reglan, Haldol",
+   "category": "2 dopamine-blocking drugs: duplicate therapy: two dopamine blockers add movement side effects, tardive dyskinesia, and NMS risk",
+   "basis": "Why D: Class rule: duplicate therapy: two dopamine blockers add movement side effects, tardive dyskinesia, and NMS risk.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These are all dopamine-blocking drugs: taking more than one is therapeutic duplication.",
+   "action": "Avoid combining metoclopramide with an antipsychotic.",
+   "includes": null,
+   "sources": "FDA labels: Reglan\n · Haldol",
+   "links": [
+    {
+     "text": "Reglan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=595439ae-cf01-821c-e063-6294a90af16a"
+    },
+    {
+     "text": "Haldol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Haldol, Lexapro",
+   "category": "2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes",
+   "basis": "Why C: The Warnings section of the Haldol label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.",
+   "quote": "Although cases have been reported even in the absence of predisposing factors, particular caution is advised in treating patients with other QT-prolonging conditions (including electrolyte imbalance [particularly hypokalemia and hypomagnesemia], drugs known to prolong QT, underlying cardiac abnormalities, hypothyroidism, and familial long QT-syndrome).",
+   "source": "From the Haldol label, Warnings section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": "Get a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.",
+   "includes": null,
+   "sources": "FDA labels: Haldol\n · Lexapro\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621"
+    },
+    {
+     "text": "Haldol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621"
+    },
+    {
+     "text": "Lexapro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "1"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "4"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "1"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Sinemet",
+   "generic": "carbidopa, levodopa",
+   "dose": "carbidopa 25 mg / levodopa 100 mg · 3 times a day",
+   "facts": "Aromatic Amino Acid Decarboxylation Inhibitor [EPC], Aromatic Amino Acid [EPC]\nContraindicated Combination",
+   "text": "Sinemet\ncarbidopa, levodopa\ncarbidopa 25 mg / levodopa 100 mg · 3 times a day\nAromatic Amino Acid Decarboxylation Inhibitor [EPC], Aromatic Amino Acid [EPC]\nContraindicated Combination"
+  },
+  {
+   "brand": "Azilect",
+   "generic": "rasagiline",
+   "dose": "1 mg · once a day · 1 mg/day total",
+   "facts": "Renal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nContraindicated Combination",
+   "text": "Azilect\nrasagiline\n1 mg · once a day · 1 mg/day total\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Reglan",
+   "generic": "metoclopramide",
+   "dose": "10 mg · 4 times a day · 40 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk",
+   "text": "Reglan\nmetoclopramide\n10 mg · 4 times a day · 40 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk"
+  },
+  {
+   "brand": "Haldol",
+   "generic": "haloperidol",
+   "dose": "2 mg · once a day · 2 mg/day total",
+   "facts": "Typical Antipsychotic [EPC]\nBoxed Warning\nCNS Depression Risk\nQT Prolongation Risk",
+   "text": "Haldol\nhaloperidol\n2 mg · once a day · 2 mg/day total\nTypical Antipsychotic [EPC]\nBoxed Warning\nCNS Depression Risk\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Demerol",
+   "generic": "meperidine",
+   "dose": "50 mg · as needed, up to 4 times a day · 200 mg/day max",
+   "facts": "Schedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nContraindicated Combination",
+   "text": "Demerol\nmeperidine\n50 mg · as needed, up to 4 times a day · 200 mg/day max\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Lexapro",
+   "generic": "escitalopram",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Lexapro\nescitalopram\n10 mg · once a day · 10 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  }
+ ],
+ "totals": [
+  "carbidopa\n75 mg/day",
+  "escitalopram\n10 mg/day",
+  "haloperidol\n2 mg/day",
+  "levodopa\n300 mg/day",
+  "meperidine\n200 mg/day max · 20 MME",
+  "metoclopramide\n40 mg/day",
+  "rasagiline\n1 mg/day"
+ ],
+ "totalMme": "Total opioid dose: 20 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9bf059f4-4da8-48fe-aacb-c50717d36606",
+   "in_alert": true
+  },
+  {
+   "text": "Azilect",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9bf059f4-4da8-48fe-aacb-c50717d36606",
+   "in_alert": true
+  },
+  {
+   "text": "Demerol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+   "in_alert": true
+  },
+  {
+   "text": "Haldol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621",
+   "in_alert": true
+  },
+  {
+   "text": "Demerol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd",
+   "in_alert": true
+  },
+  {
+   "text": "Azilect",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9bf059f4-4da8-48fe-aacb-c50717d36606",
+   "in_alert": true
+  },
+  {
+   "text": "Reglan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=595439ae-cf01-821c-e063-6294a90af16a",
+   "in_alert": true
+  },
+  {
+   "text": "Demerol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+   "in_alert": true
+  },
+  {
+   "text": "Lexapro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=595439ae-cf01-821c-e063-6294a90af16a",
+   "in_alert": true
+  },
+  {
+   "text": "Sinemet",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9b17b028-964a-473c-823d-81423535bd66",
+   "in_alert": true
+  },
+  {
+   "text": "Reglan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=595439ae-cf01-821c-e063-6294a90af16a",
+   "in_alert": true
+  },
+  {
+   "text": "Haldol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2cdd9fca-afe5-4bfa-8db1-337beec13c6b",
+   "in_alert": true
+  },
+  {
+   "text": "Reglan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=595439ae-cf01-821c-e063-6294a90af16a",
+   "in_alert": true
+  },
+  {
+   "text": "Haldol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621",
+   "in_alert": true
+  },
+  {
+   "text": "Haldol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621",
+   "in_alert": true
+  },
+  {
+   "text": "Lexapro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: E, Avoid combination. Do not use these drugs together.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n6 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n1\nD\nConsider changing therapy\n4\nC\nMonitor closely\n1\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: E, Avoid combination. Do not use these drugs together.\nE\nAvoid combination — Do not use these drugs together.\nAzilect, Demerol\n\nAzilect with Demerol: can cause serotonin syndrome\n\nWhy E: The Contraindications section of the Azilect label addresses this combination: can cause serotonin syndrome. Clinical rulebook row 7.\n\n4 CONTRAINDICATIONS Rasagiline is contraindicated for use with meperidine, tramadol, methadone, propoxyphene and MAO inhibitors (MAOIs), including other selective MAO-B inhibitors, because of risk of serotonin syndrome [see Warnings and Precautions ( 5.2 )] .\n\nFrom the Azilect label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nThe rasagiline and selegiline labels contraindicate meperidine, tramadol, methadone, dextromethorphan, and similar drugs because serious, sometimes fatal serotonin syndrome has occurred.\n\nWhat to do\n\nDo not use together; wait at least 14 days after stopping the MAO-B inhibitor.\n\nFDA labels: Azilect\n · Demerol\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nHaldol, Demerol\n\n2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: The Boxed Warning section of the Demerol label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nRisks from Concomitant Use with Benzodiazepines or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Demerol label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Haldol\n · Demerol\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 1 more label sentence\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nAzilect, Reglan, Demerol, Lexapro\n\n4 serotonergic drugs: risk of serotonin syndrome\n\nWhy D: The Contraindications section of the Lexapro label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.\n\n4 CONTRAINDICATIONS Escitalopram tablets is contraindicated in patients: taking MAOIs with Escitalopram tablets or within 14 days of stopping treatment with Escitalopram tablets because of an increased risk of serotonin syndrome.\n\nFrom the Lexapro label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.\n\nWhat to do\n\nAvoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.\n\nFDA labels: Azilect\n · Reglan\n · Demerol\n · Lexapro\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n\nShow 3 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nSinemet, Reglan, Haldol\n\nSinemet with 2 drugs that block dopamine: blocks levodopa and worsens parkinsonism\n\nWhy D: The Drug Interactions section of the Reglan label addresses this combination: blocks levodopa and worsens parkinsonism.\n\nExamples apomorphine, bromocriptine, cabergoline, levodopa, pramipexole, ropinirole, and rotigotine 7.2 Effects of Metoclopramide on Other Drugs Table 4 displays the effects of metoclopramide on other drugs.\n\nFrom the Reglan label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese drugs block dopamine D2 receptors, directly opposing levodopa and worsening Parkinson's symptoms. Metoclopramide's label warns against use in Parkinson's disease.\n\nWhat to do\n\nAvoid; for nausea use domperidone where available or ondansetron, and if an antipsychotic is needed use quetiapine, clozapine, or pimavanserin.\n\nFDA labels: Sinemet\n · Reglan\n · Haldol\n\nShow 1 more label sentence\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nReglan, Haldol\n\n2 dopamine-blocking drugs: duplicate therapy: two dopamine blockers add movement side effects, tardive dyskinesia, and NMS risk\n\nWhy D: Class rule: duplicate therapy: two dopamine blockers add movement side effects, tardive dyskinesia, and NMS risk.\n\nWhy it happens\n\nThese are all dopamine-blocking drugs: taking more than one is therapeutic duplication.\n\nWhat to do\n\nAvoid combining metoclopramide with an antipsychotic.\n\nFDA labels: Reglan\n · Haldol\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nHaldol, Lexapro\n\n2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes\n\nWhy C: The Warnings section of the Haldol label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.\n\nAlthough cases have been reported even in the absence of predisposing factors, particular caution is advised in treating patients with other QT-prolonging conditions (including electrolyte imbalance [particularly hypokalemia and hypomagnesemia], drugs known to prolong QT, underlying cardiac abnormalities, hypothyroidism, and familial long QT-syndrome).\n\nFrom the Haldol label, Warnings section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.\n\nWhat to do\n\nGet a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.\n\nFDA labels: Haldol\n · Lexapro\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\ncarbidopa\n75 mg/day\nescitalopram\n10 mg/day\nhaloperidol\n2 mg/day\nlevodopa\n300 mg/day\nmeperidine\n200 mg/day max · 20 MME\nmetoclopramide\n40 mg/day\nrasagiline\n1 mg/day\n\nTotal opioid dose: 20 MME/day (CDC 2022 conversion factors).\n\nSinemet\ncarbidopa, levodopa\ncarbidopa 25 mg / levodopa 100 mg · 3 times a day\nAromatic Amino Acid Decarboxylation Inhibitor [EPC], Aromatic Amino Acid [EPC]\nContraindicated Combination\nAzilect\nrasagiline\n1 mg · once a day · 1 mg/day total\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nContraindicated Combination\nReglan\nmetoclopramide\n10 mg · 4 times a day · 40 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nHaldol\nhaloperidol\n2 mg · once a day · 2 mg/day total\nTypical Antipsychotic [EPC]\nBoxed Warning\nCNS Depression Risk\nQT Prolongation Risk\nDemerol\nmeperidine\n50 mg · as needed, up to 4 times a day · 200 mg/day max\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nContraindicated Combination\nLexapro\nescitalopram\n10 mg · once a day · 10 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\n6 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:07:12.688Z"
+}

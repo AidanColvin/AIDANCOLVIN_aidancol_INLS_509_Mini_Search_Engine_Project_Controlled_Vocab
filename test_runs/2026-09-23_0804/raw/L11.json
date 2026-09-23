@@ -1,0 +1,103 @@
+{
+ "id": "L11",
+ "input": "Synthroid (levothyroxine) 75 mcg once daily = 75 mcg/day, Lipitor (atorvastatin) 20 mg once daily = 20 mg/day, Zestril (lisinopril) 10 mg once daily = 10 mg/day, Lexapro (escitalopram) 10 mg once daily = 10 mg/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.851,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Synthroid",
+   "generic": "levothyroxine",
+   "dose": "75 mcg · once a day · 75 mcg/day total",
+   "facts": "Boxed Warning\nContraindicated Combination",
+   "text": "Synthroid\nlevothyroxine\n75 mcg · once a day · 75 mcg/day total\nBoxed Warning\nContraindicated Combination"
+  },
+  {
+   "brand": "Lipitor",
+   "generic": "atorvastatin",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "HMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect",
+   "text": "Lipitor\natorvastatin\n20 mg · once a day · 20 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Zestril",
+   "generic": "lisinopril",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Zestril\nlisinopril\n10 mg · once a day · 10 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Lexapro",
+   "generic": "escitalopram",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Lexapro\nescitalopram\n10 mg · once a day · 10 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Singulair",
+   "generic": "montelukast",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Leukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication",
+   "text": "Singulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication"
+  }
+ ],
+ "totals": [
+  "atorvastatin\n20 mg/day",
+  "escitalopram\n10 mg/day",
+  "levothyroxine\n75 mcg (0.075 mg)/day",
+  "lisinopril\n10 mg/day",
+  "montelukast\n10 mg/day"
+ ],
+ "totalMme": null,
+ "links": [],
+ "statusText": "5 of 5 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n5 of 5 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n5 medications\nClear all\nTotals by ingredient\natorvastatin\n20 mg/day\nescitalopram\n10 mg/day\nlevothyroxine\n75 mcg (0.075 mg)/day\nlisinopril\n10 mg/day\nmontelukast\n10 mg/day\nSynthroid\nlevothyroxine\n75 mcg · once a day · 75 mcg/day total\nBoxed Warning\nContraindicated Combination\nLipitor\natorvastatin\n20 mg · once a day · 20 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nZestril\nlisinopril\n10 mg · once a day · 10 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nLexapro\nescitalopram\n10 mg · once a day · 10 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nSingulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:05:51.107Z"
+}

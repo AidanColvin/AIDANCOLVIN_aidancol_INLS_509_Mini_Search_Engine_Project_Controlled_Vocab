@@ -1,0 +1,529 @@
+{
+ "id": "L18",
+ "input": "Elavil (amitriptyline) 75 mg once daily at bedtime = 75 mg/day, Ditropan (oxybutynin) 5 mg three times daily = 15 mg/day, Vistaril (hydroxyzine) 50 mg three times daily = 150 mg/day, Cogentin (benztropine) 1 mg twice daily = 2 mg/day, Aricept (donepezil) 10 mg once daily = 10 mg/day, Paxil (paroxetine) 40 mg once daily = 40 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.85,
+ "secondsToResults": 0.406,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Elavil, Ditropan, Vistaril, Cogentin, Paxil",
+   "category": "5 anticholinergic drugs: anticholinergic burden: confusion, urinary retention, constipation, falls",
+   "basis": "Why D: The Precautions section of the Elavil label addresses this combination: anticholinergic burden: confusion, urinary retention, constipation, falls. Clinical rulebook row 6.",
+   "quote": "When benztropine mesylate is given concomitantly with phenothiazines, haloperidol, or other drugs with anticholinergic or antidopaminergic activity, patients should be advised to report gastrointestinal complaints, fever or heat intolerance promptly.",
+   "source": "From the Cogentin label, Warnings section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug blocks acetylcholine. Together they cause confusion or delirium, dry mouth, blurred vision, urinary retention, constipation or ileus, overheating, and falls, worst in older adults (Beers criteria).",
+   "action": "Replace the strongest anticholinergic with an alternative and avoid the combination in older adults.",
+   "includes": null,
+   "sources": "FDA labels: Elavil\n · Ditropan\n · Vistaril\n · Cogentin\n · Paxil",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53c02a89-012c-e724-e063-6294a90acc75"
+    },
+    {
+     "text": "Elavil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587"
+    },
+    {
+     "text": "Ditropan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20dee37f-1412-44ed-9e8b-f4379ce23eb0"
+    },
+    {
+     "text": "Vistaril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50"
+    },
+    {
+     "text": "Cogentin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53c02a89-012c-e724-e063-6294a90acc75"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Elavil, Ditropan, Vistaril, Cogentin, Aricept, Paxil",
+   "category": "6 drugs: the anticholinergics work against the dementia drug",
+   "basis": "Why D: The Drug Interactions section of the Aricept label addresses this combination: the anticholinergics work against the dementia drug. Clinical rulebook row 6.",
+   "quote": "7 DRUG INTERACTIONS Cholinesterase inhibitors have the potential to interfere with the activity of anticholinergic medications (7.1) A synergistic effect may be expected with concomitant administration of succinylcholine, similar neuromuscular blocking agents, or cholinergic agonists (7.2) 7.1 Use with Anticholinergics Because of their mechanism of action, cholinesterase inhibitors have the potential to interfere with the activity of anticholinergic medications.",
+   "source": "From the Aricept label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Cholinesterase inhibitors raise acetylcholine to help memory; anticholinergic drugs block acetylcholine. The two work in opposite directions (therapeutic antagonism), so the dementia drug does less and confusion gets worse.",
+   "action": "Stop or replace the anticholinergic drugs, or reconsider the cholinesterase inhibitor.",
+   "includes": null,
+   "sources": "FDA labels: Elavil\n · Ditropan\n · Vistaril\n · Cogentin\n · Aricept\n · Paxil",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de96349a-5fee-4de9-921c-e453d44b3203"
+    },
+    {
+     "text": "Elavil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587"
+    },
+    {
+     "text": "Ditropan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20dee37f-1412-44ed-9e8b-f4379ce23eb0"
+    },
+    {
+     "text": "Vistaril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50"
+    },
+    {
+     "text": "Cogentin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53c02a89-012c-e724-e063-6294a90acc75"
+    },
+    {
+     "text": "Aricept",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de96349a-5fee-4de9-921c-e453d44b3203"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Elavil, Paxil",
+   "category": "Elavil with Paxil: tricyclic levels rise: toxicity, QT prolongation, seizures",
+   "basis": "Why D: The Precautions section of the Elavil label addresses this combination: tricyclic levels rise: toxicity, QT prolongation, seizures.",
+   "quote": "The drugs that inhibit cytochrome P450 2D6 include some that are not metabolized by the enzyme (quinidine; cimetidine) and many that are substrates for P450 2D6 (many other antidepressants, phenothiazines, and the Type 1C antiarrhythmics propafenone and flecainide).",
+   "source": "From the Elavil label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Tricyclics are cleared by CYP2D6. Strong inhibitors can raise tricyclic levels several-fold, causing anticholinergic toxicity, QT prolongation, and seizures.",
+   "action": "Use a low tricyclic dose and check a level, or choose another drug.",
+   "includes": null,
+   "sources": "FDA labels: Elavil\n · Paxil\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587"
+    },
+    {
+     "text": "Elavil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Elavil, Vistaril",
+   "category": "2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why C: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "Amitriptyline hydrochloride may enhance the response to alcohol and the effects of barbiturates and other CNS depressants.",
+   "source": "From the Elavil label, Warnings section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Elavil\n · Vistaril\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587"
+    },
+    {
+     "text": "Elavil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587"
+    },
+    {
+     "text": "Vistaril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Elavil, Paxil",
+   "category": "2 serotonergic drugs: risk of serotonin syndrome",
+   "basis": "Why C: The Warnings and Precautions section of the Paxil label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.",
+   "quote": "5 WARNINGS AND PRECAUTIONS • Serotonin Syndrome: Increased risk when co-administered with other serotonergic agents, but also when taken alone.",
+   "source": "From the Paxil label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.",
+   "action": "Avoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.",
+   "includes": null,
+   "sources": "FDA labels: Elavil\n · Paxil\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "Elavil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Elavil, Vistaril",
+   "category": "2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes",
+   "basis": "Why C: The Precautions section of the Vistaril label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.",
+   "quote": "The majority of reports occurred in patients with other risk factors for QT prolongation/TdP (pre-existing heart disease, electrolyte imbalances or concomitant arrhythmogenic drug use).",
+   "source": "From the Vistaril label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": "Get a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.",
+   "includes": null,
+   "sources": "FDA labels: Elavil\n · Vistaril\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50"
+    },
+    {
+     "text": "Elavil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587"
+    },
+    {
+     "text": "Vistaril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Vistaril, Paxil",
+   "category": "QT Prolongation Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "5.3 Drug Interactions Leading to QT Prolongation The CYP2D6 inhibitory properties of paroxetine can elevate plasma levels of thioridazine and pimozide.",
+   "source": "From the Paxil label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: QT prolongation",
+   "why_text": "Each of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Vistaril\n · Paxil",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "National Heart, Lung, and Blood Institute, NIH",
+     "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome"
+    },
+    {
+     "text": "Vistaril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "3"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "3"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Elavil",
+   "generic": "amitriptyline",
+   "dose": "75 mg · once a day · 75 mg/day total",
+   "facts": "Boxed Warning\nSerotonin Syndrome Risk\nCNS Depression Risk",
+   "text": "Elavil\namitriptyline\n75 mg · once a day · 75 mg/day total\nBoxed Warning\nSerotonin Syndrome Risk\nCNS Depression Risk"
+  },
+  {
+   "brand": "Ditropan",
+   "generic": "oxybutynin",
+   "dose": "5 mg · 3 times a day · 15 mg/day total",
+   "facts": "Cholinergic Muscarinic Antagonist [EPC]\nHigh-Frequency Adverse Effect",
+   "text": "Ditropan\noxybutynin\n5 mg · 3 times a day · 15 mg/day total\nCholinergic Muscarinic Antagonist [EPC]\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Vistaril",
+   "generic": "hydroxyzine",
+   "dose": "50 mg · 3 times a day · 150 mg/day total",
+   "facts": "CNS Depression Risk\nQT Prolongation Risk",
+   "text": "Vistaril\nhydroxyzine\n50 mg · 3 times a day · 150 mg/day total\nCNS Depression Risk\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Cogentin",
+   "generic": "benztropine",
+   "dose": "1 mg · twice a day · 2 mg/day total",
+   "facts": "Contraindicated Combination",
+   "text": "Cogentin\nbenztropine\n1 mg · twice a day · 2 mg/day total\nContraindicated Combination"
+  },
+  {
+   "brand": "Aricept",
+   "generic": "donepezil",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "High-Frequency Adverse Effect",
+   "text": "Aricept\ndonepezil\n10 mg · once a day · 10 mg/day total\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Paxil",
+   "generic": "paroxetine",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Paxil\nparoxetine\n40 mg · once a day · 40 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  }
+ ],
+ "totals": [
+  "amitriptyline\n75 mg/day",
+  "benztropine\n2 mg/day",
+  "donepezil\n10 mg/day",
+  "hydroxyzine\n150 mg/day",
+  "oxybutynin\n15 mg/day",
+  "paroxetine\n40 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53c02a89-012c-e724-e063-6294a90acc75",
+   "in_alert": true
+  },
+  {
+   "text": "Elavil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587",
+   "in_alert": true
+  },
+  {
+   "text": "Ditropan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20dee37f-1412-44ed-9e8b-f4379ce23eb0",
+   "in_alert": true
+  },
+  {
+   "text": "Vistaril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50",
+   "in_alert": true
+  },
+  {
+   "text": "Cogentin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53c02a89-012c-e724-e063-6294a90acc75",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de96349a-5fee-4de9-921c-e453d44b3203",
+   "in_alert": true
+  },
+  {
+   "text": "Elavil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587",
+   "in_alert": true
+  },
+  {
+   "text": "Ditropan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20dee37f-1412-44ed-9e8b-f4379ce23eb0",
+   "in_alert": true
+  },
+  {
+   "text": "Vistaril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50",
+   "in_alert": true
+  },
+  {
+   "text": "Cogentin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53c02a89-012c-e724-e063-6294a90acc75",
+   "in_alert": true
+  },
+  {
+   "text": "Aricept",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de96349a-5fee-4de9-921c-e453d44b3203",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587",
+   "in_alert": true
+  },
+  {
+   "text": "Elavil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587",
+   "in_alert": true
+  },
+  {
+   "text": "Elavil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587",
+   "in_alert": true
+  },
+  {
+   "text": "Vistaril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Elavil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50",
+   "in_alert": true
+  },
+  {
+   "text": "Elavil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587",
+   "in_alert": true
+  },
+  {
+   "text": "Vistaril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "National Heart, Lung, and Blood Institute, NIH",
+   "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome",
+   "in_alert": true
+  },
+  {
+   "text": "Vistaril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n7 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n3\nC\nMonitor closely\n3\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nElavil, Ditropan, Vistaril, Cogentin, Paxil\n\n5 anticholinergic drugs: anticholinergic burden: confusion, urinary retention, constipation, falls\n\nWhy D: The Precautions section of the Elavil label addresses this combination: anticholinergic burden: confusion, urinary retention, constipation, falls. Clinical rulebook row 6.\n\nWhen benztropine mesylate is given concomitantly with phenothiazines, haloperidol, or other drugs with anticholinergic or antidopaminergic activity, patients should be advised to report gastrointestinal complaints, fever or heat intolerance promptly.\n\nFrom the Cogentin label, Warnings section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug blocks acetylcholine. Together they cause confusion or delirium, dry mouth, blurred vision, urinary retention, constipation or ileus, overheating, and falls, worst in older adults (Beers criteria).\n\nWhat to do\n\nReplace the strongest anticholinergic with an alternative and avoid the combination in older adults.\n\nFDA labels: Elavil\n · Ditropan\n · Vistaril\n · Cogentin\n · Paxil\n\nShow 2 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nElavil, Ditropan, Vistaril, Cogentin, Aricept, Paxil\n\n6 drugs: the anticholinergics work against the dementia drug\n\nWhy D: The Drug Interactions section of the Aricept label addresses this combination: the anticholinergics work against the dementia drug. Clinical rulebook row 6.\n\n7 DRUG INTERACTIONS Cholinesterase inhibitors have the potential to interfere with the activity of anticholinergic medications (7.1) A synergistic effect may be expected with concomitant administration of succinylcholine, similar neuromuscular blocking agents, or cholinergic agonists (7.2) 7.1 Use with Anticholinergics Because of their mechanism of action, cholinesterase inhibitors have the potential to interfere with the activity of anticholinergic medications.\n\nFrom the Aricept label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nCholinesterase inhibitors raise acetylcholine to help memory; anticholinergic drugs block acetylcholine. The two work in opposite directions (therapeutic antagonism), so the dementia drug does less and confusion gets worse.\n\nWhat to do\n\nStop or replace the anticholinergic drugs, or reconsider the cholinesterase inhibitor.\n\nFDA labels: Elavil\n · Ditropan\n · Vistaril\n · Cogentin\n · Aricept\n · Paxil\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nElavil, Paxil\n\nElavil with Paxil: tricyclic levels rise: toxicity, QT prolongation, seizures\n\nWhy D: The Precautions section of the Elavil label addresses this combination: tricyclic levels rise: toxicity, QT prolongation, seizures.\n\nThe drugs that inhibit cytochrome P450 2D6 include some that are not metabolized by the enzyme (quinidine; cimetidine) and many that are substrates for P450 2D6 (many other antidepressants, phenothiazines, and the Type 1C antiarrhythmics propafenone and flecainide).\n\nFrom the Elavil label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nTricyclics are cleared by CYP2D6. Strong inhibitors can raise tricyclic levels several-fold, causing anticholinergic toxicity, QT prolongation, and seizures.\n\nWhat to do\n\nUse a low tricyclic dose and check a level, or choose another drug.\n\nFDA labels: Elavil\n · Paxil\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nElavil, Vistaril\n\n2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy C: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nAmitriptyline hydrochloride may enhance the response to alcohol and the effects of barbiturates and other CNS depressants.\n\nFrom the Elavil label, Warnings section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Elavil\n · Vistaril\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 1 more label sentence\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nElavil, Paxil\n\n2 serotonergic drugs: risk of serotonin syndrome\n\nWhy C: The Warnings and Precautions section of the Paxil label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.\n\n5 WARNINGS AND PRECAUTIONS • Serotonin Syndrome: Increased risk when co-administered with other serotonergic agents, but also when taken alone.\n\nFrom the Paxil label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.\n\nWhat to do\n\nAvoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.\n\nFDA labels: Elavil\n · Paxil\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n\nShow 1 more label sentence\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nElavil, Vistaril\n\n2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes\n\nWhy C: The Precautions section of the Vistaril label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.\n\nThe majority of reports occurred in patients with other risk factors for QT prolongation/TdP (pre-existing heart disease, electrolyte imbalances or concomitant arrhythmogenic drug use).\n\nFrom the Vistaril label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.\n\nWhat to do\n\nGet a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.\n\nFDA labels: Elavil\n · Vistaril\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n\nA\nMinor — Minor: usually no action needed.\nVistaril, Paxil\n\nQT Prolongation Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\n5.3 Drug Interactions Leading to QT Prolongation The CYP2D6 inhibitory properties of paroxetine can elevate plasma levels of thioridazine and pimozide.\n\nFrom the Paxil label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhat this means: QT prolongation\n\nEach of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.\n\nSource: National Heart, Lung, and Blood Institute, NIH\n\nFDA labels: Vistaril\n · Paxil\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\namitriptyline\n75 mg/day\nbenztropine\n2 mg/day\ndonepezil\n10 mg/day\nhydroxyzine\n150 mg/day\noxybutynin\n15 mg/day\nparoxetine\n40 mg/day\nElavil\namitriptyline\n75 mg · once a day · 75 mg/day total\nBoxed Warning\nSerotonin Syndrome Risk\nCNS Depression Risk\nDitropan\noxybutynin\n5 mg · 3 times a day · 15 mg/day total\nCholinergic Muscarinic Antagonist [EPC]\nHigh-Frequency Adverse Effect\nVistaril\nhydroxyzine\n50 mg · 3 times a day · 150 mg/day total\nCNS Depression Risk\nQT Prolongation Risk\nCogentin\nbenztropine\n1 mg · twice a day · 2 mg/day total\nContraindicated Combination\nAricept\ndonepezil\n10 mg · once a day · 10 mg/day total\nHigh-Frequency Adverse Effect\nPaxil\nparoxetine\n40 mg · once a day · 40 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\n7 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:06:26.286Z"
+}

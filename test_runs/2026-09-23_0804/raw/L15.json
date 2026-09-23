@@ -1,0 +1,440 @@
+{
+ "id": "L15",
+ "input": "Toprol-XL (metoprolol succinate) 200 mg once daily = 200 mg/day, Cardizem CD (diltiazem ER) 240 mg once daily = 240 mg/day, Lanoxin (digoxin) 0.25 mg once daily = 0.25 mg/day, Cordarone (amiodarone) 200 mg once daily = 200 mg/day, Aricept (donepezil) 10 mg once daily at bedtime = 10 mg/day, Lasix (furosemide) 40 mg once daily = 40 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.975,
+ "secondsToResults": 0.815,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Toprol-XL, Cardizem CD, Lanoxin, Cordarone, Aricept",
+   "category": "5 heart-rate-slowing drugs: risk of slow heart rate (bradycardia) and heart block",
+   "basis": "Why D: The Warnings and Precautions section of the Toprol-XL label addresses this combination: risk of slow heart rate (bradycardia) and heart block. Clinical rulebook row 20.",
+   "quote": "( 5.3 ) Concomitant use of glycosides, clonidine, and diltiazem and verapamil with beta-blockers can increase the risk of bradycardia.",
+   "source": "From the Toprol-XL label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart rate or conduction through the AV node. Together they can cause severe bradycardia, AV block, or heart failure.",
+   "action": "Check pulse and an ECG after starting or raising any of them; lower doses or stop one if the heart rate drops below 50 or new AV block appears.",
+   "includes": "Toprol-XL with Cardizem CD: severe bradycardia, heart block, heart failure. Beta-blockers and verapamil or diltiazem both slow the AV node and weaken heart contraction. Together they can cause profound bradycardia, AV block, or cardiogenic shock.",
+   "sources": "FDA labels: Toprol-XL\n · Cardizem CD\n · Lanoxin\n · Cordarone\n · Aricept",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a"
+    },
+    {
+     "text": "Toprol-XL",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a"
+    },
+    {
+     "text": "Cardizem CD",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6"
+    },
+    {
+     "text": "Lanoxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    },
+    {
+     "text": "Cordarone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de"
+    },
+    {
+     "text": "Aricept",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de96349a-5fee-4de9-921c-e453d44b3203"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Lanoxin, Cordarone",
+   "category": "Lanoxin with Cordarone: digoxin levels rise: toxicity",
+   "basis": "Why D: The Drug Interactions section of the Lanoxin label addresses this combination: digoxin levels rise: toxicity. Clinical rulebook row 18.",
+   "quote": "7.2 Pharmacokinetic Drug Interactions Digoxin concentrations increased greater than 50% Digoxin Serum Concentration Increase Digoxin AUC Increase Recommendations Amiodarone 70% NA Measure serum digoxin concentrations before initiating concomitant drugs.",
+   "source": "From the Lanoxin label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These drugs block P-glycoprotein, the pump that clears digoxin, and raise digoxin levels by 50 to 150% (amiodarone about 70%, dronedarone about 2.5-fold). Digoxin has a narrow margin.",
+   "action": "Halve the digoxin dose when starting amiodarone or dronedarone, and check a digoxin level within 1 to 2 weeks (target 0.5 to 0.9 ng/mL in heart failure).",
+   "includes": null,
+   "sources": "FDA labels: Lanoxin\n · Cordarone\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    },
+    {
+     "text": "Lanoxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    },
+    {
+     "text": "Cordarone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Lanoxin, Cordarone, Lasix",
+   "category": "3 drugs: low potassium and magnesium from the diuretic raise the rhythm risk",
+   "basis": "Why C: The Precautions section of the Lasix label addresses this combination: low potassium and magnesium from the diuretic raise the rhythm risk. Clinical rulebook row 18, 23.",
+   "quote": "Hypokalemia may develop with furosemide, especially with brisk diuresis, inadequate oral electrolyte intake, when cirrhosis is present, or during concomitant use of corticosteroids, ACTH, licorice in large amounts, or prolonged use of laxatives.",
+   "source": "From the Lasix label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Loop and thiazide diuretics lower potassium and magnesium. Low levels make QT-prolonging drugs more likely to cause torsades and make digoxin more toxic.",
+   "action": "Check potassium and magnesium at the start and after dose changes; replace them to keep potassium above 4.0 mmol/L.",
+   "includes": null,
+   "sources": "FDA labels: Lanoxin\n · Cordarone\n · Lasix",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a"
+    },
+    {
+     "text": "Lanoxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    },
+    {
+     "text": "Cordarone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de"
+    },
+    {
+     "text": "Lasix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Cardizem CD, Lanoxin",
+   "category": "Lanoxin with Cardizem CD: digoxin levels rise",
+   "basis": "Why C: The Drug Interactions section of the Lanoxin label addresses this combination: digoxin levels rise. Clinical rulebook row 18.",
+   "quote": "Captopril 58% 39% Clarithromycin NA 70% Dronedarone NA 150% Gentamicin 129-212% NA Erythromycin 100% NA Itraconazole 80% NA Lapatinib NA 180% Propafenone NA 60-270% Quinidine 100% NA Ranolazine 50% NA Ritonavir NA 86% Telaprevir 50% 85% Tetracycline 100% NA Verapamil 50-75% NA Digoxin concentrations increased less than 50% Atorvastatin 22% 15% Carvedilol 16% 14% Measure serum digoxin concentrations before initiating concomitant drugs.",
+   "source": "From the Lanoxin label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Verapamil raises digoxin 50 to 75% and diltiazem 20 to 50% by blocking P-glycoprotein, and both add to digoxin's slowing of the heart.",
+   "action": "Check a digoxin level and heart rate after starting; lower the digoxin dose if needed.",
+   "includes": null,
+   "sources": "FDA labels: Cardizem CD\n · Lanoxin",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    },
+    {
+     "text": "Cardizem CD",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6"
+    },
+    {
+     "text": "Lanoxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Toprol-XL, Cordarone",
+   "category": "Toprol-XL with Cordarone: metoprolol levels rise: slower heart rate, lower blood pressure",
+   "basis": "Why C: The Drug Interactions section of the Toprol-XL label addresses this combination: metoprolol levels rise: slower heart rate, lower blood pressure.",
+   "quote": "( 7.1 ) CYP2D6 Inhibitors are likely to increase metoprolol concentration.",
+   "source": "From the Toprol-XL label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Metoprolol is cleared by CYP2D6; inhibitors raise its level 2- to 5-fold.",
+   "action": "Check heart rate and blood pressure; lower the metoprolol dose or switch to a beta-blocker not cleared by CYP2D6 (atenolol, bisoprolol).",
+   "includes": null,
+   "sources": "FDA labels: Toprol-XL\n · Cordarone\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a"
+    },
+    {
+     "text": "Toprol-XL",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a"
+    },
+    {
+     "text": "Cordarone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Lanoxin, Cordarone",
+   "category": "QT Prolongation Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "5.4 Worsened Arrhythmia Amiodarone hydrochloride can exacerbate the presenting arrhythmia in about 2 to 5% of patients or cause new ventricular fibrillation, incessant ventricular tachycardia, increased resistance to cardioversion, and polymorphic ventricular tachycardia associated with QTc prolongation (Torsade de Pointes [TdP]).",
+   "source": "From the Cordarone label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: QT prolongation",
+   "why_text": "Each of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Lanoxin\n · Cordarone",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de"
+    },
+    {
+     "text": "National Heart, Lung, and Blood Institute, NIH",
+     "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome"
+    },
+    {
+     "text": "Lanoxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    },
+    {
+     "text": "Cordarone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "3"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Toprol-XL",
+   "generic": "metoprolol",
+   "dose": "200 mg · once a day · 200 mg/day total",
+   "facts": "extended release\nHigh-Frequency Adverse Effect",
+   "text": "Toprol-XL\nmetoprolol\n200 mg · once a day · 200 mg/day total\nextended release\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Cardizem CD",
+   "generic": "diltiazem",
+   "dose": "240 mg · once a day · 240 mg/day total",
+   "facts": "extended release",
+   "text": "Cardizem CD\ndiltiazem\n240 mg · once a day · 240 mg/day total\nextended release"
+  },
+  {
+   "brand": "Lanoxin",
+   "generic": "digoxin",
+   "dose": "0.25 mg · once a day · 0.25 mg/day total",
+   "facts": "Cardiac Glycoside [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk",
+   "text": "Lanoxin\ndigoxin\n0.25 mg · once a day · 0.25 mg/day total\nCardiac Glycoside [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Cordarone",
+   "generic": "amiodarone",
+   "dose": "200 mg · once a day · 200 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk",
+   "text": "Cordarone\namiodarone\n200 mg · once a day · 200 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Aricept",
+   "generic": "donepezil",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "High-Frequency Adverse Effect",
+   "text": "Aricept\ndonepezil\n10 mg · once a day · 10 mg/day total\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Lasix",
+   "generic": "furosemide",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "Loop Diuretic [EPC]",
+   "text": "Lasix\nfurosemide\n40 mg · once a day · 40 mg/day total\nLoop Diuretic [EPC]"
+  }
+ ],
+ "totals": [
+  "amiodarone\n200 mg/day",
+  "digoxin\n250 mcg (0.25 mg)/day",
+  "diltiazem\n240 mg/day",
+  "donepezil\n10 mg/day",
+  "furosemide\n40 mg/day",
+  "metoprolol\n200 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a",
+   "in_alert": true
+  },
+  {
+   "text": "Toprol-XL",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a",
+   "in_alert": true
+  },
+  {
+   "text": "Cardizem CD",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6",
+   "in_alert": true
+  },
+  {
+   "text": "Lanoxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Cordarone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de",
+   "in_alert": true
+  },
+  {
+   "text": "Aricept",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de96349a-5fee-4de9-921c-e453d44b3203",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Lanoxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Cordarone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": true
+  },
+  {
+   "text": "Lanoxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Cordarone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de",
+   "in_alert": true
+  },
+  {
+   "text": "Lasix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Cardizem CD",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6",
+   "in_alert": true
+  },
+  {
+   "text": "Lanoxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a",
+   "in_alert": true
+  },
+  {
+   "text": "Toprol-XL",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a",
+   "in_alert": true
+  },
+  {
+   "text": "Cordarone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de",
+   "in_alert": true
+  },
+  {
+   "text": "National Heart, Lung, and Blood Institute, NIH",
+   "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome",
+   "in_alert": true
+  },
+  {
+   "text": "Lanoxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Cordarone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n6 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n2\nC\nMonitor closely\n3\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nToprol-XL, Cardizem CD, Lanoxin, Cordarone, Aricept\n\n5 heart-rate-slowing drugs: risk of slow heart rate (bradycardia) and heart block\n\nWhy D: The Warnings and Precautions section of the Toprol-XL label addresses this combination: risk of slow heart rate (bradycardia) and heart block. Clinical rulebook row 20.\n\n( 5.3 ) Concomitant use of glycosides, clonidine, and diltiazem and verapamil with beta-blockers can increase the risk of bradycardia.\n\nFrom the Toprol-XL label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart rate or conduction through the AV node. Together they can cause severe bradycardia, AV block, or heart failure.\n\nWhat to do\n\nCheck pulse and an ECG after starting or raising any of them; lower doses or stop one if the heart rate drops below 50 or new AV block appears.\n\nToprol-XL with Cardizem CD: severe bradycardia, heart block, heart failure. Beta-blockers and verapamil or diltiazem both slow the AV node and weaken heart contraction. Together they can cause profound bradycardia, AV block, or cardiogenic shock.\n\nFDA labels: Toprol-XL\n · Cardizem CD\n · Lanoxin\n · Cordarone\n · Aricept\n\nShow 1 more label sentence\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nLanoxin, Cordarone\n\nLanoxin with Cordarone: digoxin levels rise: toxicity\n\nWhy D: The Drug Interactions section of the Lanoxin label addresses this combination: digoxin levels rise: toxicity. Clinical rulebook row 18.\n\n7.2 Pharmacokinetic Drug Interactions Digoxin concentrations increased greater than 50% Digoxin Serum Concentration Increase Digoxin AUC Increase Recommendations Amiodarone 70% NA Measure serum digoxin concentrations before initiating concomitant drugs.\n\nFrom the Lanoxin label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese drugs block P-glycoprotein, the pump that clears digoxin, and raise digoxin levels by 50 to 150% (amiodarone about 70%, dronedarone about 2.5-fold). Digoxin has a narrow margin.\n\nWhat to do\n\nHalve the digoxin dose when starting amiodarone or dronedarone, and check a digoxin level within 1 to 2 weeks (target 0.5 to 0.9 ng/mL in heart failure).\n\nFDA labels: Lanoxin\n · Cordarone\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nLanoxin, Cordarone, Lasix\n\n3 drugs: low potassium and magnesium from the diuretic raise the rhythm risk\n\nWhy C: The Precautions section of the Lasix label addresses this combination: low potassium and magnesium from the diuretic raise the rhythm risk. Clinical rulebook row 18, 23.\n\nHypokalemia may develop with furosemide, especially with brisk diuresis, inadequate oral electrolyte intake, when cirrhosis is present, or during concomitant use of corticosteroids, ACTH, licorice in large amounts, or prolonged use of laxatives.\n\nFrom the Lasix label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nLoop and thiazide diuretics lower potassium and magnesium. Low levels make QT-prolonging drugs more likely to cause torsades and make digoxin more toxic.\n\nWhat to do\n\nCheck potassium and magnesium at the start and after dose changes; replace them to keep potassium above 4.0 mmol/L.\n\nFDA labels: Lanoxin\n · Cordarone\n · Lasix\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nCardizem CD, Lanoxin\n\nLanoxin with Cardizem CD: digoxin levels rise\n\nWhy C: The Drug Interactions section of the Lanoxin label addresses this combination: digoxin levels rise. Clinical rulebook row 18.\n\nCaptopril 58% 39% Clarithromycin NA 70% Dronedarone NA 150% Gentamicin 129-212% NA Erythromycin 100% NA Itraconazole 80% NA Lapatinib NA 180% Propafenone NA 60-270% Quinidine 100% NA Ranolazine 50% NA Ritonavir NA 86% Telaprevir 50% 85% Tetracycline 100% NA Verapamil 50-75% NA Digoxin concentrations increased less than 50% Atorvastatin 22% 15% Carvedilol 16% 14% Measure serum digoxin concentrations before initiating concomitant drugs.\n\nFrom the Lanoxin label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nVerapamil raises digoxin 50 to 75% and diltiazem 20 to 50% by blocking P-glycoprotein, and both add to digoxin's slowing of the heart.\n\nWhat to do\n\nCheck a digoxin level and heart rate after starting; lower the digoxin dose if needed.\n\nFDA labels: Cardizem CD\n · Lanoxin\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nToprol-XL, Cordarone\n\nToprol-XL with Cordarone: metoprolol levels rise: slower heart rate, lower blood pressure\n\nWhy C: The Drug Interactions section of the Toprol-XL label addresses this combination: metoprolol levels rise: slower heart rate, lower blood pressure.\n\n( 7.1 ) CYP2D6 Inhibitors are likely to increase metoprolol concentration.\n\nFrom the Toprol-XL label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nMetoprolol is cleared by CYP2D6; inhibitors raise its level 2- to 5-fold.\n\nWhat to do\n\nCheck heart rate and blood pressure; lower the metoprolol dose or switch to a beta-blocker not cleared by CYP2D6 (atenolol, bisoprolol).\n\nFDA labels: Toprol-XL\n · Cordarone\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nA\nMinor — Minor: usually no action needed.\nLanoxin, Cordarone\n\nQT Prolongation Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\n5.4 Worsened Arrhythmia Amiodarone hydrochloride can exacerbate the presenting arrhythmia in about 2 to 5% of patients or cause new ventricular fibrillation, incessant ventricular tachycardia, increased resistance to cardioversion, and polymorphic ventricular tachycardia associated with QTc prolongation (Torsade de Pointes [TdP]).\n\nFrom the Cordarone label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhat this means: QT prolongation\n\nEach of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.\n\nSource: National Heart, Lung, and Blood Institute, NIH\n\nFDA labels: Lanoxin\n · Cordarone\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\namiodarone\n200 mg/day\ndigoxin\n250 mcg (0.25 mg)/day\ndiltiazem\n240 mg/day\ndonepezil\n10 mg/day\nfurosemide\n40 mg/day\nmetoprolol\n200 mg/day\nToprol-XL\nmetoprolol\n200 mg · once a day · 200 mg/day total\nextended release\nHigh-Frequency Adverse Effect\nCardizem CD\ndiltiazem\n240 mg · once a day · 240 mg/day total\nextended release\nLanoxin\ndigoxin\n0.25 mg · once a day · 0.25 mg/day total\nCardiac Glycoside [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nCordarone\namiodarone\n200 mg · once a day · 200 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk\nAricept\ndonepezil\n10 mg · once a day · 10 mg/day total\nHigh-Frequency Adverse Effect\nLasix\nfurosemide\n40 mg · once a day · 40 mg/day total\nLoop Diuretic [EPC]\n6 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:06:11.378Z"
+}

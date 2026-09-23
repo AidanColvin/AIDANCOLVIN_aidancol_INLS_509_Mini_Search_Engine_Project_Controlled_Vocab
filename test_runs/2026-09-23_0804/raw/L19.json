@@ -1,0 +1,607 @@
+{
+ "id": "L19",
+ "input": "Wellbutrin XL (bupropion XL) 450 mg once daily = 450 mg/day, Ultram (tramadol) 100 mg four times daily = 400 mg/day, Theo-24 (theophylline ER) 400 mg once daily = 400 mg/day, Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day, Seroquel (quetiapine) 400 mg once daily at bedtime = 400 mg/day, Lipitor (atorvastatin) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.833,
+ "secondsToResults": 0.406,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Ultram, Seroquel",
+   "category": "2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: The Boxed Warning section of the Ultram label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "( 5.3 ) Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Ultram label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Ultram\n · Seroquel\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Ultram",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Wellbutrin XL, Ultram, Theo-24, Cipro, Seroquel",
+   "category": "5 drugs: risk of seizures",
+   "basis": "Why D: The Warnings and Precautions section of the Wellbutrin XL label addresses this combination: risk of seizures. Clinical rulebook row 8.",
+   "quote": "The risk of seizures is also related to patient factors, clinical situations, and concomitant medications that lower the seizure threshold.",
+   "source": "From the Wellbutrin XL label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Tramadol and bupropion lower the seizure threshold in a dose-related way. The other drugs listed lower it too, so the risk adds up.",
+   "action": "Keep tramadol and bupropion at or below labeled doses, avoid them in patients with seizure risk factors, and prefer alternatives when several threshold-lowering drugs are needed.",
+   "includes": null,
+   "sources": "FDA labels: Wellbutrin XL\n · Ultram\n · Theo-24\n · Cipro\n · Seroquel",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43"
+    },
+    {
+     "text": "Wellbutrin XL",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43"
+    },
+    {
+     "text": "Ultram",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Theo-24",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32b9780f-c46f-4e0f-9641-2cab60600e6e"
+    },
+    {
+     "text": "Cipro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Ultram, Cipro",
+   "category": "Ultram with Cipro: opioid levels rise: risk of fatal respiratory depression",
+   "basis": "Why D: The Warnings and Precautions section of the Ultram label addresses this combination: opioid levels rise: risk of fatal respiratory depression. Clinical rulebook row 3.",
+   "quote": "Evaluate patients receiving tramadol hydrochloride tablets and any CYP3A4 inhibitor or inducer at frequent intervals for the risk for serious adverse events including seizures and serotonin syndrome, signs and symptoms that may reflect opioid toxicity and opioid withdrawal when tramadol hydrochloride tablets are used in conjunction with inhibitors and inducers of CYP3A4 [see Drug Interactions (7)].",
+   "source": "From the Ultram label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These opioids are cleared by CYP3A4. A CYP3A4 inhibitor raises opioid levels (fentanyl and oxycodone roughly 2 to 3 times), and the effect can build over days. The opioid labels carry a boxed warning on CYP3A4 inhibitors.",
+   "action": "Avoid if possible; otherwise lower the opioid dose, monitor closely for sedation and slow breathing, and re-adjust when the inhibitor stops.",
+   "includes": null,
+   "sources": "FDA labels: Ultram\n · Cipro\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Ultram",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Cipro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Theo-24, Cipro",
+   "category": "Theo-24 with Cipro: theophylline levels rise: seizures and arrhythmias",
+   "basis": "Why D: The Precautions section of the Theo-24 label addresses this combination: theophylline levels rise: seizures and arrhythmias.",
+   "quote": "70% increase Ciprofloxacin Similar to cimetidine.",
+   "source": "From the Theo-24 label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Theophylline is cleared by CYP1A2 and has a narrow margin. Ciprofloxacin raises levels 20 to 100% or more, and fluvoxamine even more; toxicity causes seizures and arrhythmias.",
+   "action": "Avoid, or cut the theophylline dose and check a level within 2 to 3 days.",
+   "includes": null,
+   "sources": "FDA labels: Theo-24\n · Cipro\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32b9780f-c46f-4e0f-9641-2cab60600e6e"
+    },
+    {
+     "text": "Theo-24",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32b9780f-c46f-4e0f-9641-2cab60600e6e"
+    },
+    {
+     "text": "Cipro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Cipro, Seroquel",
+   "category": "2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes",
+   "basis": "Why C: The Warnings and Precautions section of the Cipro label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.",
+   "quote": "Avoid use in patients with known prolongation, those with hypokalemia, and with other drugs that prolong the QT interval.",
+   "source": "From the Cipro label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": "Get a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.",
+   "includes": null,
+   "sources": "FDA labels: Cipro\n · Seroquel\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "Cipro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Cipro, Seroquel",
+   "category": "Seroquel with Cipro: quetiapine levels rise",
+   "basis": "Why C: The Drug Interactions section of the Seroquel label addresses this combination: quetiapine levels rise.",
+   "quote": "7 DRUG INTERACTIONS • Concomitant use of strong: CYP3A4 inhibitors Reduce quetiapine dose to one-sixth when coadministered with strong CYP3A4 inhibitors (e.g., ketoconazole, ritonavir) ( 2.5 , 7.1 , 12.3 ) • Concomitant use of strong CYP3A4 inducers: Increase quetiapine dose up to 5 fold when used in combination with a chronic treatment (more than 7 to 14 days) of potent CYP3A4 inducers (e.g., phenytoin, rifampin, St.",
+   "source": "From the Seroquel label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Quetiapine is cleared by CYP3A4; moderate inhibitors raise its level, adding sedation, low blood pressure, and QT effect.",
+   "action": "Watch for sedation and dizziness; lower the quetiapine dose if they appear.",
+   "includes": null,
+   "sources": "FDA labels: Cipro\n · Seroquel\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    },
+    {
+     "text": "Cipro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Wellbutrin XL, Ultram",
+   "category": "Ultram with Wellbutrin XL: less pain relief; more parent-drug side effects",
+   "basis": "Why C: The Warnings and Precautions section of the Ultram label addresses this combination: less pain relief; more parent-drug side effects. Clinical rulebook row 8, 35.",
+   "quote": "Risks of Concomitant Use or Discontinuation of Cytochrome P450 2D6 Inhibitors The concomitant use of tramadol hydrochloride tablets with all cytochrome P450 2D6 inhibitors (e.g., amiodarone, quinidine) may result in an increase in tramadol plasma levels and a decrease in the levels of the active metabolite, M1.",
+   "source": "From the Ultram label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "CYP2D6 turns codeine into morphine and tramadol into its active opioid metabolite. Blocking it reduces pain relief, and for tramadol leaves more parent drug with its seizure and serotonin effects.",
+   "action": "Expect weaker analgesia; watch for serotonin effects with tramadol, and consider a different analgesic.",
+   "includes": null,
+   "sources": "FDA labels: Wellbutrin XL\n · Ultram\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Wellbutrin XL",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43"
+    },
+    {
+     "text": "Ultram",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Wellbutrin XL",
+   "category": "bupropion 450 mg/day is at the labeled maximum of 450 mg/day (maximum)",
+   "basis": "Why A: Daily total 450 mg against a labeled maximum of 450 mg.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of bupropion; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Wellbutrin XL",
+   "links": [
+    {
+     "text": "Wellbutrin XL",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Ultram",
+   "category": "tramadol 400 mg/day is at the labeled maximum of 400 mg/day (maximum)",
+   "basis": "Why A: Daily total 400 mg against a labeled maximum of 400 mg.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of tramadol; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Ultram",
+   "links": [
+    {
+     "text": "Ultram",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Ultram, Theo-24",
+   "category": "CNS Depression Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Ultram label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "What this means: CNS depression",
+   "why_text": "Each of these drugs slows the central nervous system. Together the effect adds up: heavy sedation, slowed breathing, and a higher risk of overdose, especially when an opioid and a benzodiazepine are combined.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Ultram\n · Theo-24",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "National Institute on Drug Abuse, NIH",
+     "href": "https://nida.nih.gov/research-topics/opioids/benzodiazepines-opioids"
+    },
+    {
+     "text": "Ultram",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+    },
+    {
+     "text": "Theo-24",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32b9780f-c46f-4e0f-9641-2cab60600e6e"
+    }
+   ],
+   "classes": "alert alert--tier-2 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "4"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "3"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "3"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Wellbutrin XL",
+   "generic": "bupropion",
+   "dose": "450 mg · once a day · 450 mg/day total",
+   "facts": "extended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination",
+   "text": "Wellbutrin XL\nbupropion\n450 mg · once a day · 450 mg/day total\nextended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Ultram",
+   "generic": "tramadol",
+   "dose": "100 mg · 4 times a day · 400 mg/day total",
+   "facts": "Schedule IV (C-IV)\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk",
+   "text": "Ultram\ntramadol\n100 mg · 4 times a day · 400 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk"
+  },
+  {
+   "brand": "Theo-24",
+   "generic": "theophylline",
+   "dose": "400 mg · once a day · 400 mg/day total",
+   "facts": "extended release\nHigh-Frequency Adverse Effect\nCNS Depression Risk",
+   "text": "Theo-24\ntheophylline\n400 mg · once a day · 400 mg/day total\nextended release\nHigh-Frequency Adverse Effect\nCNS Depression Risk"
+  },
+  {
+   "brand": "Cipro",
+   "generic": "ciprofloxacin",
+   "dose": "500 mg · twice a day · 1000 mg/day total",
+   "facts": "Fluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Cipro\nciprofloxacin\n500 mg · twice a day · 1000 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Seroquel",
+   "generic": "quetiapine",
+   "dose": "400 mg · once a day · 400 mg/day total",
+   "facts": "Atypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk",
+   "text": "Seroquel\nquetiapine\n400 mg · once a day · 400 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Lipitor",
+   "generic": "atorvastatin",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "HMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect",
+   "text": "Lipitor\natorvastatin\n10 mg · once a day · 10 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect"
+  }
+ ],
+ "totals": [
+  "atorvastatin\n10 mg/day",
+  "bupropion\n450 mg/day",
+  "ciprofloxacin\n1,000 mg (1 g)/day",
+  "quetiapine\n400 mg/day",
+  "theophylline\n400 mg/day",
+  "tramadol\n400 mg/day · 80 MME"
+ ],
+ "totalMme": "Total opioid dose: 80 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Ultram",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43",
+   "in_alert": true
+  },
+  {
+   "text": "Wellbutrin XL",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43",
+   "in_alert": true
+  },
+  {
+   "text": "Ultram",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Theo-24",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32b9780f-c46f-4e0f-9641-2cab60600e6e",
+   "in_alert": true
+  },
+  {
+   "text": "Cipro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Ultram",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Cipro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32b9780f-c46f-4e0f-9641-2cab60600e6e",
+   "in_alert": true
+  },
+  {
+   "text": "Theo-24",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32b9780f-c46f-4e0f-9641-2cab60600e6e",
+   "in_alert": true
+  },
+  {
+   "text": "Cipro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "Cipro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Cipro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Wellbutrin XL",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43",
+   "in_alert": true
+  },
+  {
+   "text": "Ultram",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Wellbutrin XL",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43",
+   "in_alert": true
+  },
+  {
+   "text": "Ultram",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "National Institute on Drug Abuse, NIH",
+   "href": "https://nida.nih.gov/research-topics/opioids/benzodiazepines-opioids",
+   "in_alert": true
+  },
+  {
+   "text": "Ultram",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": true
+  },
+  {
+   "text": "Theo-24",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32b9780f-c46f-4e0f-9641-2cab60600e6e",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n10 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n4\nC\nMonitor closely\n3\nB\nMonitor\n–\nA\nMinor\n3\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nUltram, Seroquel\n\n2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: The Boxed Warning section of the Ultram label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\n( 5.3 ) Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Ultram label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Ultram\n · Seroquel\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nWellbutrin XL, Ultram, Theo-24, Cipro, Seroquel\n\n5 drugs: risk of seizures\n\nWhy D: The Warnings and Precautions section of the Wellbutrin XL label addresses this combination: risk of seizures. Clinical rulebook row 8.\n\nThe risk of seizures is also related to patient factors, clinical situations, and concomitant medications that lower the seizure threshold.\n\nFrom the Wellbutrin XL label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nTramadol and bupropion lower the seizure threshold in a dose-related way. The other drugs listed lower it too, so the risk adds up.\n\nWhat to do\n\nKeep tramadol and bupropion at or below labeled doses, avoid them in patients with seizure risk factors, and prefer alternatives when several threshold-lowering drugs are needed.\n\nFDA labels: Wellbutrin XL\n · Ultram\n · Theo-24\n · Cipro\n · Seroquel\n\nShow 1 more label sentence\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nUltram, Cipro\n\nUltram with Cipro: opioid levels rise: risk of fatal respiratory depression\n\nWhy D: The Warnings and Precautions section of the Ultram label addresses this combination: opioid levels rise: risk of fatal respiratory depression. Clinical rulebook row 3.\n\nEvaluate patients receiving tramadol hydrochloride tablets and any CYP3A4 inhibitor or inducer at frequent intervals for the risk for serious adverse events including seizures and serotonin syndrome, signs and symptoms that may reflect opioid toxicity and opioid withdrawal when tramadol hydrochloride tablets are used in conjunction with inhibitors and inducers of CYP3A4 [see Drug Interactions (7)].\n\nFrom the Ultram label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese opioids are cleared by CYP3A4. A CYP3A4 inhibitor raises opioid levels (fentanyl and oxycodone roughly 2 to 3 times), and the effect can build over days. The opioid labels carry a boxed warning on CYP3A4 inhibitors.\n\nWhat to do\n\nAvoid if possible; otherwise lower the opioid dose, monitor closely for sedation and slow breathing, and re-adjust when the inhibitor stops.\n\nFDA labels: Ultram\n · Cipro\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nTheo-24, Cipro\n\nTheo-24 with Cipro: theophylline levels rise: seizures and arrhythmias\n\nWhy D: The Precautions section of the Theo-24 label addresses this combination: theophylline levels rise: seizures and arrhythmias.\n\n70% increase Ciprofloxacin Similar to cimetidine.\n\nFrom the Theo-24 label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nTheophylline is cleared by CYP1A2 and has a narrow margin. Ciprofloxacin raises levels 20 to 100% or more, and fluvoxamine even more; toxicity causes seizures and arrhythmias.\n\nWhat to do\n\nAvoid, or cut the theophylline dose and check a level within 2 to 3 days.\n\nFDA labels: Theo-24\n · Cipro\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nCipro, Seroquel\n\n2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes\n\nWhy C: The Warnings and Precautions section of the Cipro label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.\n\nAvoid use in patients with known prolongation, those with hypokalemia, and with other drugs that prolong the QT interval.\n\nFrom the Cipro label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.\n\nWhat to do\n\nGet a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.\n\nFDA labels: Cipro\n · Seroquel\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n\nShow 1 more label sentence\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nCipro, Seroquel\n\nSeroquel with Cipro: quetiapine levels rise\n\nWhy C: The Drug Interactions section of the Seroquel label addresses this combination: quetiapine levels rise.\n\n7 DRUG INTERACTIONS • Concomitant use of strong: CYP3A4 inhibitors Reduce quetiapine dose to one-sixth when coadministered with strong CYP3A4 inhibitors (e.g., ketoconazole, ritonavir) ( 2.5 , 7.1 , 12.3 ) • Concomitant use of strong CYP3A4 inducers: Increase quetiapine dose up to 5 fold when used in combination with a chronic treatment (more than 7 to 14 days) of potent CYP3A4 inducers (e.g., phenytoin, rifampin, St.\n\nFrom the Seroquel label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nQuetiapine is cleared by CYP3A4; moderate inhibitors raise its level, adding sedation, low blood pressure, and QT effect.\n\nWhat to do\n\nWatch for sedation and dizziness; lower the quetiapine dose if they appear.\n\nFDA labels: Cipro\n · Seroquel\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nWellbutrin XL, Ultram\n\nUltram with Wellbutrin XL: less pain relief; more parent-drug side effects\n\nWhy C: The Warnings and Precautions section of the Ultram label addresses this combination: less pain relief; more parent-drug side effects. Clinical rulebook row 8, 35.\n\nRisks of Concomitant Use or Discontinuation of Cytochrome P450 2D6 Inhibitors The concomitant use of tramadol hydrochloride tablets with all cytochrome P450 2D6 inhibitors (e.g., amiodarone, quinidine) may result in an increase in tramadol plasma levels and a decrease in the levels of the active metabolite, M1.\n\nFrom the Ultram label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nCYP2D6 turns codeine into morphine and tramadol into its active opioid metabolite. Blocking it reduces pain relief, and for tramadol leaves more parent drug with its seizure and serotonin effects.\n\nWhat to do\n\nExpect weaker analgesia; watch for serotonin effects with tramadol, and consider a different analgesic.\n\nFDA labels: Wellbutrin XL\n · Ultram\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nA\nMinor — Minor: usually no action needed.\nWellbutrin XL\n\nbupropion 450 mg/day is at the labeled maximum of 450 mg/day (maximum)\n\nWhy A: Daily total 450 mg against a labeled maximum of 450 mg.\n\nWhy it happens\n\nThe total counts every entry of bupropion; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Wellbutrin XL\n\nA\nMinor — Minor: usually no action needed.\nUltram\n\ntramadol 400 mg/day is at the labeled maximum of 400 mg/day (maximum)\n\nWhy A: Daily total 400 mg against a labeled maximum of 400 mg.\n\nWhy it happens\n\nThe total counts every entry of tramadol; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Ultram\n\nA\nMinor — Minor: usually no action needed.\nUltram, Theo-24\n\nCNS Depression Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\nConcomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Ultram label, Boxed Warning section.\nOpen on DailyMed\n\nWhat this means: CNS depression\n\nEach of these drugs slows the central nervous system. Together the effect adds up: heavy sedation, slowed breathing, and a higher risk of overdose, especially when an opioid and a benzodiazepine are combined.\n\nSource: National Institute on Drug Abuse, NIH\n\nFDA labels: Ultram\n · Theo-24\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\natorvastatin\n10 mg/day\nbupropion\n450 mg/day\nciprofloxacin\n1,000 mg (1 g)/day\nquetiapine\n400 mg/day\ntheophylline\n400 mg/day\ntramadol\n400 mg/day · 80 MME\n\nTotal opioid dose: 80 MME/day (CDC 2022 conversion factors).\n\nWellbutrin XL\nbupropion\n450 mg · once a day · 450 mg/day total\nextended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination\nUltram\ntramadol\n100 mg · 4 times a day · 400 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nTheo-24\ntheophylline\n400 mg · once a day · 400 mg/day total\nextended release\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nCipro\nciprofloxacin\n500 mg · twice a day · 1000 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination\nSeroquel\nquetiapine\n400 mg · once a day · 400 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nLipitor\natorvastatin\n10 mg · once a day · 10 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\n10 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:06:31.319Z"
+}

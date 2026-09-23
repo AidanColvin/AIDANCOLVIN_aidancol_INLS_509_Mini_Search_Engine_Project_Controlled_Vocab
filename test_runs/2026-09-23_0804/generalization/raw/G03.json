@@ -1,0 +1,196 @@
+{
+ "id": "G03",
+ "input": "Tylenol with Codeine (acetaminophen/codeine) 300/30 mg every 6 hours as needed max 4 doses/day = 1200/120 mg/day max, Paxil (paroxetine) 20 mg once daily = 20 mg/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.915,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Tylenol with Codeine, Paxil",
+   "category": "Tylenol with Codeine with Paxil: less pain relief; more parent-drug side effects",
+   "basis": "Why C: The Warnings section of the Tylenol with Codeine label addresses this combination: less pain relief; more parent-drug side effects. Clinical rulebook row 8, 35.",
+   "quote": "Risks of Concomitant Use or Discontinuation of Cytochrome P450 2D6 Inhibitors The concomitant use of acetaminophen and codeine phosphate tablets with all cytochrome P450 2D6 inhibitors (e.g., amiodarone, quinidine) may result in an increase in codeine plasma concentrations and a decrease in active metabolite morphine plasma concentration which could result in an analgesic efficacy reduction or symptoms of opioid withdrawal.",
+   "source": "From the Tylenol with Codeine label, Warnings section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "CYP2D6 turns codeine into morphine and tramadol into its active opioid metabolite. Blocking it reduces pain relief, and for tramadol leaves more parent drug with its seizure and serotonin effects.",
+   "action": "Expect weaker analgesia; watch for serotonin effects with tramadol, and consider a different analgesic.",
+   "includes": null,
+   "sources": "FDA labels: Tylenol with Codeine\n · Paxil\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40d4a71e-341e-48b3-b925-ba35b7910dff"
+    },
+    {
+     "text": "Tylenol with Codeine",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40d4a71e-341e-48b3-b925-ba35b7910dff"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Tylenol with Codeine, Paxil",
+   "category": "Serotonin Syndrome Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "• Serotonin Syndrome: Increased risk when co-administered with other serotonergic agents, but also when taken alone.",
+   "source": "From the Paxil label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: Serotonin syndrome",
+   "why_text": "Too much serotonin activity in the nervous system, most often when two or more serotonergic drugs are taken together. Signs include agitation, fast heartbeat, high temperature, sweating, and twitching muscles. It can be life-threatening.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Tylenol with Codeine\n · Paxil",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "MedlinePlus, National Library of Medicine",
+     "href": "https://medlineplus.gov/ency/article/007272.htm"
+    },
+    {
+     "text": "Tylenol with Codeine",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40d4a71e-341e-48b3-b925-ba35b7910dff"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "1"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Tylenol with Codeine",
+   "generic": "acetaminophen, codeine",
+   "dose": "acetaminophen 300 mg / codeine 30 mg · as needed, up to 4 times a day",
+   "facts": "Boxed Warning\nSerotonin Syndrome Risk\nCNS Depression Risk\nContraindicated Combination",
+   "text": "Tylenol with Codeine\nacetaminophen, codeine\nacetaminophen 300 mg / codeine 30 mg · as needed, up to 4 times a day\nBoxed Warning\nSerotonin Syndrome Risk\nCNS Depression Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Paxil",
+   "generic": "paroxetine",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Paxil\nparoxetine\n20 mg · once a day · 20 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Singulair",
+   "generic": "montelukast",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Leukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication",
+   "text": "Singulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication"
+  }
+ ],
+ "totals": [
+  "acetaminophen\n1,200 mg (1.2 g)/day max",
+  "codeine\n120 mg/day max · 18 MME",
+  "montelukast\n10 mg/day",
+  "paroxetine\n20 mg/day"
+ ],
+ "totalMme": "Total opioid dose: 18 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40d4a71e-341e-48b3-b925-ba35b7910dff",
+   "in_alert": true
+  },
+  {
+   "text": "Tylenol with Codeine",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40d4a71e-341e-48b3-b925-ba35b7910dff",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "MedlinePlus, National Library of Medicine",
+   "href": "https://medlineplus.gov/ency/article/007272.htm",
+   "in_alert": true
+  },
+  {
+   "text": "Tylenol with Codeine",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40d4a71e-341e-48b3-b925-ba35b7910dff",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  }
+ ],
+ "statusText": "3 of 3 medications checked",
+ "caption": "Most severe: C, Monitor closely. Clinically significant: adjust the dose or timing, or monitor a named measure.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n2 interactions\n\n3 of 3 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n1\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: C, Monitor closely. Clinically significant: adjust the dose or timing, or monitor a named measure.\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nTylenol with Codeine, Paxil\n\nTylenol with Codeine with Paxil: less pain relief; more parent-drug side effects\n\nWhy C: The Warnings section of the Tylenol with Codeine label addresses this combination: less pain relief; more parent-drug side effects. Clinical rulebook row 8, 35.\n\nRisks of Concomitant Use or Discontinuation of Cytochrome P450 2D6 Inhibitors The concomitant use of acetaminophen and codeine phosphate tablets with all cytochrome P450 2D6 inhibitors (e.g., amiodarone, quinidine) may result in an increase in codeine plasma concentrations and a decrease in active metabolite morphine plasma concentration which could result in an analgesic efficacy reduction or symptoms of opioid withdrawal.\n\nFrom the Tylenol with Codeine label, Warnings section.\nOpen on DailyMed\n\nWhy it happens\n\nCYP2D6 turns codeine into morphine and tramadol into its active opioid metabolite. Blocking it reduces pain relief, and for tramadol leaves more parent drug with its seizure and serotonin effects.\n\nWhat to do\n\nExpect weaker analgesia; watch for serotonin effects with tramadol, and consider a different analgesic.\n\nFDA labels: Tylenol with Codeine\n · Paxil\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nA\nMinor — Minor: usually no action needed.\nTylenol with Codeine, Paxil\n\nSerotonin Syndrome Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\n• Serotonin Syndrome: Increased risk when co-administered with other serotonergic agents, but also when taken alone.\n\nFrom the Paxil label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhat this means: Serotonin syndrome\n\nToo much serotonin activity in the nervous system, most often when two or more serotonergic drugs are taken together. Signs include agitation, fast heartbeat, high temperature, sweating, and twitching muscles. It can be life-threatening.\n\nSource: MedlinePlus, National Library of Medicine\n\nFDA labels: Tylenol with Codeine\n · Paxil\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n3 medications\nClear all\nTotals by ingredient\nacetaminophen\n1,200 mg (1.2 g)/day max\ncodeine\n120 mg/day max · 18 MME\nmontelukast\n10 mg/day\nparoxetine\n20 mg/day\n\nTotal opioid dose: 18 MME/day (CDC 2022 conversion factors).\n\nTylenol with Codeine\nacetaminophen, codeine\nacetaminophen 300 mg / codeine 30 mg · as needed, up to 4 times a day\nBoxed Warning\nSerotonin Syndrome Risk\nCNS Depression Risk\nContraindicated Combination\nPaxil\nparoxetine\n20 mg · once a day · 20 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nSingulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication\n2 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:09:00.313Z"
+}

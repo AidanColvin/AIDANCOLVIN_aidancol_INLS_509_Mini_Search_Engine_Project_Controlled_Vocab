@@ -1,0 +1,441 @@
+{
+ "id": "L28",
+ "input": "Prezcobix (darunavir/cobicistat) 800/150 mg once daily with food = 800/150 mg/day, Truvada (emtricitabine/tenofovir disoproxil fumarate) 200/300 mg once daily = 200/300 mg/day, Lipitor (atorvastatin) 80 mg once daily = 80 mg/day, Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day, Flonase (fluticasone propionate nasal) 50 mcg per spray 2 sprays each nostril once daily = 200 mcg/day, Viagra (sildenafil) 50 mg as needed no more than once daily = 50 mg/day max",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.821,
+ "secondsToResults": 0.815,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Prezcobix, Lipitor",
+   "category": "Lipitor with Prezcobix: atorvastatin levels rise: risk of muscle injury",
+   "basis": "Why D: The Warnings and Precautions section of the Lipitor label addresses this combination: atorvastatin levels rise: risk of muscle injury. Clinical rulebook row 27.",
+   "quote": "Concomitant use of cyclosporine, gemfibrozil, tipranavir plus ritonavir, or glecaprevir plus pibrentasvir with atorvastatin calcium tablets is not recommended.",
+   "source": "From the Lipitor label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Strong CYP3A4 inhibitors raise atorvastatin exposure several-fold. The atorvastatin label limits the dose (20 mg with clarithromycin, itraconazole, or boosted protease inhibitors) and advises avoiding cyclosporine, gemfibrozil, and tipranavir.",
+   "action": "Use the lowest atorvastatin dose (at most 20 mg with these), or switch to pravastatin or rosuvastatin; watch for muscle pain and dark urine.",
+   "includes": null,
+   "sources": "FDA labels: Prezcobix\n · Lipitor\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22"
+    },
+    {
+     "text": "Prezcobix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f"
+    },
+    {
+     "text": "Lipitor",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Prezcobix, Xanax",
+   "category": "Xanax with Prezcobix: alprazolam levels rise: prolonged sedation and slowed breathing",
+   "basis": "Why D: The Contraindications section of the Xanax label addresses this combination: alprazolam levels rise: prolonged sedation and slowed breathing.",
+   "quote": "Angioedema has been reported [see Adverse Reactions ( 6.2 )] . taking strong cytochrome P450 3A (CYP3A) inhibitors (e.g., ketoconazole, itraconazole), except ritonavir [see Dosage and Administration ( 2.6 ), Warnings and Precautions ( 5.5 ), Drug Interactions ( 7.1 )] Known hypersensitivity to alprazolam or other benzodiazepines.",
+   "source": "From the Xanax label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Strong CYP3A4 inhibitors such as ritonavir, cobicistat, and clarithromycin raise alprazolam exposure; the label advises avoiding them or cutting the dose.",
+   "action": "Avoid, or reduce the alprazolam dose and monitor sedation; lorazepam is an alternative.",
+   "includes": null,
+   "sources": "FDA labels: Prezcobix\n · Xanax\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    },
+    {
+     "text": "Prezcobix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f"
+    },
+    {
+     "text": "Xanax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Prezcobix, Flonase",
+   "category": "Flonase with Prezcobix: steroid builds up: Cushing's syndrome and adrenal suppression",
+   "basis": "Why D: The Warnings and Precautions section of the Flonase label addresses this combination: steroid builds up: Cushing's syndrome and adrenal suppression.",
+   "quote": "5.6 Drug Interactions with Strong Cytochrome P450 3A4 Inhibitors The use of strong cytochrome P450 3A4 (CYP3A4) inhibitors (e.g., ritonavir, atazanavir, clarithromycin, indinavir, itraconazole, nefazodone, nelfinavir, saquinavir, ketoconazole, telithromycin, conivaptan, lopinavir, nefazodone, voriconazole) with fluticasone propionate nasal spray is not recommended because increased systemic corticosteroid adverse effects may occur [see Drug Interactions ( 7.1 ), Clinical Pharmacology ( 12.3 )] .",
+   "source": "From the Flonase label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Ritonavir and cobicistat block CYP3A4 clearance of fluticasone and budesonide, so even nasal or inhaled doses reach systemic levels and cause Cushing's syndrome and adrenal suppression. The fluticasone label advises against the combination.",
+   "action": "Switch to beclomethasone, or stop the nasal or inhaled steroid.",
+   "includes": null,
+   "sources": "FDA labels: Prezcobix\n · Flonase",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc08915f-fa3a-4509-a01c-42b577f39b99"
+    },
+    {
+     "text": "Prezcobix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f"
+    },
+    {
+     "text": "Flonase",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc08915f-fa3a-4509-a01c-42b577f39b99"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Prezcobix, Viagra",
+   "category": "Viagra with Prezcobix: PDE5 inhibitor levels rise up to 10-fold: low blood pressure",
+   "basis": "Why D: The Warnings and Precautions section of the Viagra label addresses this combination: PDE5 inhibitor levels rise up to 10-fold: low blood pressure.",
+   "quote": "John's wort ( Hypericum perforatum ) Hepatitis C direct acting antiviral: elbasvir/grazoprevir Lipid modifying agents: lomitapide, lovastatin, simvastatin Opioid Antagonist: naloxegol PDE-5 inhibitor: sildenafil when used for treatment of pulmonary arterial hypertension Sedatives/hypnotics: orally administered midazolam, triazolam PREZCOBIX or PREZCOBIX PED is contraindicated in patients receiving certain co-administered drugs for which altered plasma concentrations are associated with serious and/or life-threatening events or loss of therapeutic effect.",
+   "source": "From the Prezcobix label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Ritonavir raises sildenafil exposure about 11-fold; the sildenafil label limits the dose to 25 mg in 48 hours with ritonavir-class inhibitors.",
+   "action": "Use sildenafil 25 mg no more than once in 48 hours (tadalafil 10 mg in 72 hours).",
+   "includes": null,
+   "sources": "FDA labels: Prezcobix\n · Viagra\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f"
+    },
+    {
+     "text": "Prezcobix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f"
+    },
+    {
+     "text": "Viagra",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=174ef537-e3e6-42bd-a478-47b930ddc761"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Prezcobix, Truvada",
+   "category": "Truvada with Prezcobix: tenofovir exposure rises; creatinine rises",
+   "basis": "Why C: The Drug Interactions section of the Truvada label addresses this combination: tenofovir exposure rises; creatinine rises.",
+   "quote": "When coadministered with emtricitabine and tenofovir disoproxil fumarate tablets, use atazanavir given with ritonavir.",
+   "source": "From the Truvada label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Boosters raise tenofovir disoproxil exposure, adding kidney risk, and cobicistat blocks tubular creatinine secretion (MATE1), raising creatinine without a true loss of filtration.",
+   "action": "Monitor creatinine, urine protein, and phosphate; consider tenofovir alafenamide.",
+   "includes": null,
+   "sources": "FDA labels: Prezcobix\n · Truvada",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41bd03ea-b92e-459c-968b-c9095ae90aef"
+    },
+    {
+     "text": "Prezcobix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f"
+    },
+    {
+     "text": "Truvada",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41bd03ea-b92e-459c-968b-c9095ae90aef"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Lipitor",
+   "category": "atorvastatin 80 mg/day is at the labeled maximum of 80 mg/day (maximum)",
+   "basis": "Why A: Daily total 80 mg against a labeled maximum of 80 mg.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of atorvastatin; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Lipitor",
+   "links": [
+    {
+     "text": "Lipitor",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Prezcobix, Xanax",
+   "category": "CNS Depression Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "WARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Xanax label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "What this means: CNS depression",
+   "why_text": "Each of these drugs slows the central nervous system. Together the effect adds up: heavy sedation, slowed breathing, and a higher risk of overdose, especially when an opioid and a benzodiazepine are combined.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Prezcobix\n · Xanax",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    },
+    {
+     "text": "National Institute on Drug Abuse, NIH",
+     "href": "https://nida.nih.gov/research-topics/opioids/benzodiazepines-opioids"
+    },
+    {
+     "text": "Prezcobix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f"
+    },
+    {
+     "text": "Xanax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    }
+   ],
+   "classes": "alert alert--tier-2 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "4"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "1"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "2"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Prezcobix",
+   "generic": "cobicistat, darunavir",
+   "dose": "darunavir 800 mg / cobicistat 150 mg · once a day",
+   "facts": "Cytochrome P450 3A Inhibitor [EPC]\nPediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Prezcobix\ncobicistat, darunavir\ndarunavir 800 mg / cobicistat 150 mg · once a day\nCytochrome P450 3A Inhibitor [EPC]\nPediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Truvada",
+   "generic": "emtricitabine, tenofovir disoproxil",
+   "dose": "emtricitabine 200 mg / tenofovir disoproxil fumarate 300 mg · once a day",
+   "facts": "Human Immunodeficiency Virus Nucleoside Analog Reverse Transcriptase Inhibitor [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment",
+   "text": "Truvada\nemtricitabine, tenofovir disoproxil\nemtricitabine 200 mg / tenofovir disoproxil fumarate 300 mg · once a day\nHuman Immunodeficiency Virus Nucleoside Analog Reverse Transcriptase Inhibitor [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment"
+  },
+  {
+   "brand": "Lipitor",
+   "generic": "atorvastatin",
+   "dose": "80 mg · once a day · 80 mg/day total",
+   "facts": "HMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect",
+   "text": "Lipitor\natorvastatin\n80 mg · once a day · 80 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Xanax",
+   "generic": "alprazolam",
+   "dose": "0.5 mg · 3 times a day · 1.5 mg/day total",
+   "facts": "Benzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Xanax\nalprazolam\n0.5 mg · 3 times a day · 1.5 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Flonase",
+   "generic": "fluticasone",
+   "dose": "50 mcg · 4 per dose · once a day · 200 mcg/day total",
+   "facts": "",
+   "text": "Flonase\nfluticasone\n50 mcg · 4 per dose · once a day · 200 mcg/day total"
+  },
+  {
+   "brand": "Viagra",
+   "generic": "sildenafil",
+   "dose": "50 mg · as needed, up to once a day · 50 mg/day max",
+   "facts": "Phosphodiesterase 5 Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment",
+   "text": "Viagra\nsildenafil\n50 mg · as needed, up to once a day · 50 mg/day max\nPhosphodiesterase 5 Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment"
+  }
+ ],
+ "totals": [
+  "alprazolam\n1.5 mg/day",
+  "atorvastatin\n80 mg/day",
+  "cobicistat\n150 mg/day",
+  "darunavir\n800 mg/day",
+  "emtricitabine\n200 mg/day",
+  "fluticasone\n200 mcg (0.2 mg)/day",
+  "sildenafil\n50 mg/day max",
+  "tenofovir disoproxil\n300 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22",
+   "in_alert": true
+  },
+  {
+   "text": "Prezcobix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f",
+   "in_alert": true
+  },
+  {
+   "text": "Lipitor",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Prezcobix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f",
+   "in_alert": true
+  },
+  {
+   "text": "Xanax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc08915f-fa3a-4509-a01c-42b577f39b99",
+   "in_alert": true
+  },
+  {
+   "text": "Prezcobix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f",
+   "in_alert": true
+  },
+  {
+   "text": "Flonase",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc08915f-fa3a-4509-a01c-42b577f39b99",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f",
+   "in_alert": true
+  },
+  {
+   "text": "Prezcobix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f",
+   "in_alert": true
+  },
+  {
+   "text": "Viagra",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=174ef537-e3e6-42bd-a478-47b930ddc761",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41bd03ea-b92e-459c-968b-c9095ae90aef",
+   "in_alert": true
+  },
+  {
+   "text": "Prezcobix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f",
+   "in_alert": true
+  },
+  {
+   "text": "Truvada",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41bd03ea-b92e-459c-968b-c9095ae90aef",
+   "in_alert": true
+  },
+  {
+   "text": "Lipitor",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "National Institute on Drug Abuse, NIH",
+   "href": "https://nida.nih.gov/research-topics/opioids/benzodiazepines-opioids",
+   "in_alert": true
+  },
+  {
+   "text": "Prezcobix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f",
+   "in_alert": true
+  },
+  {
+   "text": "Xanax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n7 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n4\nC\nMonitor closely\n1\nB\nMonitor\n–\nA\nMinor\n2\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nPrezcobix, Lipitor\n\nLipitor with Prezcobix: atorvastatin levels rise: risk of muscle injury\n\nWhy D: The Warnings and Precautions section of the Lipitor label addresses this combination: atorvastatin levels rise: risk of muscle injury. Clinical rulebook row 27.\n\nConcomitant use of cyclosporine, gemfibrozil, tipranavir plus ritonavir, or glecaprevir plus pibrentasvir with atorvastatin calcium tablets is not recommended.\n\nFrom the Lipitor label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nStrong CYP3A4 inhibitors raise atorvastatin exposure several-fold. The atorvastatin label limits the dose (20 mg with clarithromycin, itraconazole, or boosted protease inhibitors) and advises avoiding cyclosporine, gemfibrozil, and tipranavir.\n\nWhat to do\n\nUse the lowest atorvastatin dose (at most 20 mg with these), or switch to pravastatin or rosuvastatin; watch for muscle pain and dark urine.\n\nFDA labels: Prezcobix\n · Lipitor\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nPrezcobix, Xanax\n\nXanax with Prezcobix: alprazolam levels rise: prolonged sedation and slowed breathing\n\nWhy D: The Contraindications section of the Xanax label addresses this combination: alprazolam levels rise: prolonged sedation and slowed breathing.\n\nAngioedema has been reported [see Adverse Reactions ( 6.2 )] . taking strong cytochrome P450 3A (CYP3A) inhibitors (e.g., ketoconazole, itraconazole), except ritonavir [see Dosage and Administration ( 2.6 ), Warnings and Precautions ( 5.5 ), Drug Interactions ( 7.1 )] Known hypersensitivity to alprazolam or other benzodiazepines.\n\nFrom the Xanax label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nStrong CYP3A4 inhibitors such as ritonavir, cobicistat, and clarithromycin raise alprazolam exposure; the label advises avoiding them or cutting the dose.\n\nWhat to do\n\nAvoid, or reduce the alprazolam dose and monitor sedation; lorazepam is an alternative.\n\nFDA labels: Prezcobix\n · Xanax\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nPrezcobix, Flonase\n\nFlonase with Prezcobix: steroid builds up: Cushing's syndrome and adrenal suppression\n\nWhy D: The Warnings and Precautions section of the Flonase label addresses this combination: steroid builds up: Cushing's syndrome and adrenal suppression.\n\n5.6 Drug Interactions with Strong Cytochrome P450 3A4 Inhibitors The use of strong cytochrome P450 3A4 (CYP3A4) inhibitors (e.g., ritonavir, atazanavir, clarithromycin, indinavir, itraconazole, nefazodone, nelfinavir, saquinavir, ketoconazole, telithromycin, conivaptan, lopinavir, nefazodone, voriconazole) with fluticasone propionate nasal spray is not recommended because increased systemic corticosteroid adverse effects may occur [see Drug Interactions ( 7.1 ), Clinical Pharmacology ( 12.3 )] .\n\nFrom the Flonase label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nRitonavir and cobicistat block CYP3A4 clearance of fluticasone and budesonide, so even nasal or inhaled doses reach systemic levels and cause Cushing's syndrome and adrenal suppression. The fluticasone label advises against the combination.\n\nWhat to do\n\nSwitch to beclomethasone, or stop the nasal or inhaled steroid.\n\nFDA labels: Prezcobix\n · Flonase\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nPrezcobix, Viagra\n\nViagra with Prezcobix: PDE5 inhibitor levels rise up to 10-fold: low blood pressure\n\nWhy D: The Warnings and Precautions section of the Viagra label addresses this combination: PDE5 inhibitor levels rise up to 10-fold: low blood pressure.\n\nJohn's wort ( Hypericum perforatum ) Hepatitis C direct acting antiviral: elbasvir/grazoprevir Lipid modifying agents: lomitapide, lovastatin, simvastatin Opioid Antagonist: naloxegol PDE-5 inhibitor: sildenafil when used for treatment of pulmonary arterial hypertension Sedatives/hypnotics: orally administered midazolam, triazolam PREZCOBIX or PREZCOBIX PED is contraindicated in patients receiving certain co-administered drugs for which altered plasma concentrations are associated with serious and/or life-threatening events or loss of therapeutic effect.\n\nFrom the Prezcobix label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nRitonavir raises sildenafil exposure about 11-fold; the sildenafil label limits the dose to 25 mg in 48 hours with ritonavir-class inhibitors.\n\nWhat to do\n\nUse sildenafil 25 mg no more than once in 48 hours (tadalafil 10 mg in 72 hours).\n\nFDA labels: Prezcobix\n · Viagra\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nShow 1 more label sentence\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nPrezcobix, Truvada\n\nTruvada with Prezcobix: tenofovir exposure rises; creatinine rises\n\nWhy C: The Drug Interactions section of the Truvada label addresses this combination: tenofovir exposure rises; creatinine rises.\n\nWhen coadministered with emtricitabine and tenofovir disoproxil fumarate tablets, use atazanavir given with ritonavir.\n\nFrom the Truvada label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nBoosters raise tenofovir disoproxil exposure, adding kidney risk, and cobicistat blocks tubular creatinine secretion (MATE1), raising creatinine without a true loss of filtration.\n\nWhat to do\n\nMonitor creatinine, urine protein, and phosphate; consider tenofovir alafenamide.\n\nFDA labels: Prezcobix\n · Truvada\n\nA\nMinor — Minor: usually no action needed.\nLipitor\n\natorvastatin 80 mg/day is at the labeled maximum of 80 mg/day (maximum)\n\nWhy A: Daily total 80 mg against a labeled maximum of 80 mg.\n\nWhy it happens\n\nThe total counts every entry of atorvastatin; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Lipitor\n\nA\nMinor — Minor: usually no action needed.\nPrezcobix, Xanax\n\nCNS Depression Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\nWARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Xanax label, Boxed Warning section.\nOpen on DailyMed\n\nWhat this means: CNS depression\n\nEach of these drugs slows the central nervous system. Together the effect adds up: heavy sedation, slowed breathing, and a higher risk of overdose, especially when an opioid and a benzodiazepine are combined.\n\nSource: National Institute on Drug Abuse, NIH\n\nFDA labels: Prezcobix\n · Xanax\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nalprazolam\n1.5 mg/day\natorvastatin\n80 mg/day\ncobicistat\n150 mg/day\ndarunavir\n800 mg/day\nemtricitabine\n200 mg/day\nfluticasone\n200 mcg (0.2 mg)/day\nsildenafil\n50 mg/day max\ntenofovir disoproxil\n300 mg/day\nPrezcobix\ncobicistat, darunavir\ndarunavir 800 mg / cobicistat 150 mg · once a day\nCytochrome P450 3A Inhibitor [EPC]\nPediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination\nTruvada\nemtricitabine, tenofovir disoproxil\nemtricitabine 200 mg / tenofovir disoproxil fumarate 300 mg · once a day\nHuman Immunodeficiency Virus Nucleoside Analog Reverse Transcriptase Inhibitor [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nLipitor\natorvastatin\n80 mg · once a day · 80 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nXanax\nalprazolam\n0.5 mg · 3 times a day · 1.5 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nFlonase\nfluticasone\n50 mcg · 4 per dose · once a day · 200 mcg/day total\nViagra\nsildenafil\n50 mg · as needed, up to once a day · 50 mg/day max\nPhosphodiesterase 5 Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\n7 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:07:18.036Z"
+}

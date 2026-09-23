@@ -1,0 +1,133 @@
+{
+ "id": "G04",
+ "input": "Levaquin (levofloxacin) 750 mg once daily = 750 mg/day, Deltasone (prednisone) 40 mg once daily = 40 mg/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.956,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Levaquin, Deltasone",
+   "category": "Levaquin with Deltasone: tendinitis and tendon rupture",
+   "basis": "Why D: The Warnings and Precautions section of the Levaquin label addresses this combination: tendinitis and tendon rupture. Clinical rulebook row 36.",
+   "quote": "The risk of developing fluoroquinolone-associated tendinitis and tendon rupture is increased in patients over 60 years of age, in those taking corticosteroid drugs, and in patients with kidney, heart or lung transplants.",
+   "source": "From the Levaquin label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Fluoroquinolones injure tendon tissue; the risk is highest with corticosteroids and after age 60. Fluoroquinolone labels carry a boxed warning.",
+   "action": "Choose another antibiotic if possible; tell the patient to stop and call at the first sign of tendon pain.",
+   "includes": null,
+   "sources": "FDA labels: Levaquin\n · Deltasone",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a65b2bc-9edc-f193-e063-6394a90a0104"
+    },
+    {
+     "text": "Levaquin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a65b2bc-9edc-f193-e063-6394a90a0104"
+    },
+    {
+     "text": "Deltasone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0062fcc7-aa08-4990-9d33-d798725907f1"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "1"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Levaquin",
+   "generic": "levofloxacin",
+   "dose": "750 mg · once a day · 750 mg/day total",
+   "facts": "Fluoroquinolone Antibacterial [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk",
+   "text": "Levaquin\nlevofloxacin\n750 mg · once a day · 750 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Deltasone",
+   "generic": "prednisone",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "Corticosteroid [EPC]",
+   "text": "Deltasone\nprednisone\n40 mg · once a day · 40 mg/day total\nCorticosteroid [EPC]"
+  },
+  {
+   "brand": "Singulair",
+   "generic": "montelukast",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Leukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication",
+   "text": "Singulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication"
+  }
+ ],
+ "totals": [
+  "levofloxacin\n750 mg/day",
+  "montelukast\n10 mg/day",
+  "prednisone\n40 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a65b2bc-9edc-f193-e063-6394a90a0104",
+   "in_alert": true
+  },
+  {
+   "text": "Levaquin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a65b2bc-9edc-f193-e063-6394a90a0104",
+   "in_alert": true
+  },
+  {
+   "text": "Deltasone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0062fcc7-aa08-4990-9d33-d798725907f1",
+   "in_alert": true
+  }
+ ],
+ "statusText": "3 of 3 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n1 interaction\n\n3 of 3 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n1\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nLevaquin, Deltasone\n\nLevaquin with Deltasone: tendinitis and tendon rupture\n\nWhy D: The Warnings and Precautions section of the Levaquin label addresses this combination: tendinitis and tendon rupture. Clinical rulebook row 36.\n\nThe risk of developing fluoroquinolone-associated tendinitis and tendon rupture is increased in patients over 60 years of age, in those taking corticosteroid drugs, and in patients with kidney, heart or lung transplants.\n\nFrom the Levaquin label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nFluoroquinolones injure tendon tissue; the risk is highest with corticosteroids and after age 60. Fluoroquinolone labels carry a boxed warning.\n\nWhat to do\n\nChoose another antibiotic if possible; tell the patient to stop and call at the first sign of tendon pain.\n\nFDA labels: Levaquin\n · Deltasone\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n3 medications\nClear all\nTotals by ingredient\nlevofloxacin\n750 mg/day\nmontelukast\n10 mg/day\nprednisone\n40 mg/day\nLevaquin\nlevofloxacin\n750 mg · once a day · 750 mg/day total\nFluoroquinolone Antibacterial [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nDeltasone\nprednisone\n40 mg · once a day · 40 mg/day total\nCorticosteroid [EPC]\nSingulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication\n1 alert",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:09:05.229Z"
+}

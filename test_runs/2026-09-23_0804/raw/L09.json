@@ -1,0 +1,458 @@
+{
+ "id": "L09",
+ "input": "Prozac (fluoxetine) 40 mg once daily = 40 mg/day, Paxil (paroxetine) 20 mg once daily = 20 mg/day, Nolvadex (tamoxifen) 20 mg once daily = 20 mg/day, Toprol-XL (metoprolol succinate) 100 mg once daily = 100 mg/day, Naprosyn (naproxen) 500 mg twice daily = 1000 mg/day, Nexium (esomeprazole) 40 mg once daily = 40 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.838,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Prozac, Paxil, Nolvadex",
+   "category": "Nolvadex with 2 drugs that block CYP2D6: tamoxifen may not work",
+   "basis": "Why D: The Warnings and Precautions section of the Paxil label addresses this combination: tamoxifen may not work. Clinical rulebook row 35.",
+   "quote": "5.11 Reduction of Efficacy of Tamoxifen Some studies have shown that the efficacy of tamoxifen, as measured by the risk of breast cancer relapse/mortality, may be reduced with concomitant use of paroxetine as a result of paroxetine's irreversible inhibition of CYP2D6 and lower blood levels of tamoxifen [see Drug Interactions ( 7 )].",
+   "source": "From the Paxil label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Tamoxifen works through its active metabolite endoxifen, made by CYP2D6. Strong CYP2D6 inhibitors cut endoxifen levels, which has been associated with more breast cancer recurrence (efficacy loss).",
+   "action": "Avoid; for depression choose an antidepressant with little CYP2D6 effect (venlafaxine, escitalopram, citalopram).",
+   "includes": null,
+   "sources": "FDA labels: Prozac\n · Paxil\n · Nolvadex\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "Nolvadex",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=509f8ba3-214d-aec8-e063-6294a90af498"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Prozac, Paxil",
+   "category": "2 serotonin reuptake inhibitors: duplicate therapy, no added benefit, more serotonin syndrome and bleeding risk",
+   "basis": "Why D: Class rule: duplicate therapy, no added benefit, more serotonin syndrome and bleeding risk.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These are all serotonin reuptake inhibitors: taking more than one is therapeutic duplication.",
+   "action": "Keep one antidepressant; cross-taper if switching (fluoxetine's long half-life needs a washout).",
+   "includes": null,
+   "sources": "FDA labels: Prozac\n · Paxil",
+   "links": [
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Prozac, Paxil",
+   "category": "2 serotonergic drugs: risk of serotonin syndrome",
+   "basis": "Why C: The Contraindications section of the Prozac label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.",
+   "quote": "In addition, do not start fluoxetine tablets in a patient who is being treated with linezolid or intravenous methylene blue (4.1, 7.1) Pimozide (4.2, 5.11, 7.6, 7.7) Thioridazine : Do not use concomitantly with or within 5 weeks of discontinuing fluoxetine tablets (4.2, 5.11, 7.6, 7.7) Known hypersensitivity to fluoxetine products (4.2, 5.3) 4.1 Monoamine Oxidase Inhibitors (MAOIs) The use of MAOIs intended to treat psychiatric disorders with fluoxetine tablets or within 5 weeks of stopping treatment with fluoxetine tablets is contraindicated because of an increased risk of serotonin syndrome.",
+   "source": "From the Prozac label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.",
+   "action": "Avoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.",
+   "includes": null,
+   "sources": "FDA labels: Prozac\n · Paxil\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Prozac, Paxil, Naprosyn",
+   "category": "3 drugs: risk of serious bleeding, especially stomach and gut bleeding",
+   "basis": "Why C: Class rule: risk of serious bleeding, especially stomach and gut bleeding. Clinical rulebook row 9, 12, 13.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Anticoagulants slow clotting, aspirin and other antiplatelets stop platelets from sticking, NSAIDs block platelets and injure the stomach lining, and SSRIs and SNRIs drain the serotonin platelets need. Each added drug raises the bleeding risk.",
+   "action": "Drop any drug that is not essential (WOEST and AUGUSTUS support dropping aspirin from triple therapy), add a proton pump inhibitor for stomach protection, and watch for black stools, vomiting blood, or anemia.",
+   "includes": null,
+   "sources": "FDA labels: Prozac\n · Paxil\n · Naprosyn\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n · Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy\n · Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+   "links": [
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "Naprosyn",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5954565a-d9bd-9e26-e063-6294a90a03cb"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    },
+    {
+     "text": "Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/23415013/"
+    },
+    {
+     "text": "Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/30883055/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Prozac, Paxil, Toprol-XL",
+   "category": "Toprol-XL with 2 drugs that block CYP2D6: metoprolol levels rise: slower heart rate, lower blood pressure",
+   "basis": "Why C: The Drug Interactions section of the Toprol-XL label addresses this combination: metoprolol levels rise: slower heart rate, lower blood pressure.",
+   "quote": "( 7.1 ) CYP2D6 Inhibitors are likely to increase metoprolol concentration.",
+   "source": "From the Toprol-XL label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Metoprolol is cleared by CYP2D6; inhibitors raise its level 2- to 5-fold.",
+   "action": "Check heart rate and blood pressure; lower the metoprolol dose or switch to a beta-blocker not cleared by CYP2D6 (atenolol, bisoprolol).",
+   "includes": null,
+   "sources": "FDA labels: Prozac\n · Paxil\n · Toprol-XL\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a"
+    },
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "Toprol-XL",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Prozac, Paxil, Nexium",
+   "category": "QT Prolongation Risk shared by 3 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "Such conditions include concomitant use of drugs that prolong the QT interval; hypokalemia or hypomagnesemia; recent myocardial infarction, uncompensated heart failure, bradyarrhythmias, and other significant arrhythmias; and conditions that predispose to increased fluoxetine exposure (overdose, hepatic impairment, use of CYP2D6 inhibitors, CYP2D6 poor metabolizer status, or use of other highly protein-bound drugs).",
+   "source": "From the Prozac label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: QT prolongation",
+   "why_text": "Each of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Prozac\n · Paxil\n · Nexium",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "National Heart, Lung, and Blood Institute, NIH",
+     "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome"
+    },
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Paxil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411"
+    },
+    {
+     "text": "Nexium",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d68c9247-91c7-4e0f-adc4-2cfa7446580f"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "3"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Prozac",
+   "generic": "fluoxetine",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "Serotonin Reuptake Inhibitor [EPC]\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Prozac\nfluoxetine\n40 mg · once a day · 40 mg/day total\nSerotonin Reuptake Inhibitor [EPC]\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Paxil",
+   "generic": "paroxetine",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Paxil\nparoxetine\n20 mg · once a day · 20 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Nolvadex",
+   "generic": "tamoxifen",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nContraindicated Combination",
+   "text": "Nolvadex\ntamoxifen\n20 mg · once a day · 20 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nContraindicated Combination"
+  },
+  {
+   "brand": "Toprol-XL",
+   "generic": "metoprolol",
+   "dose": "100 mg · once a day · 100 mg/day total",
+   "facts": "extended release\nHigh-Frequency Adverse Effect",
+   "text": "Toprol-XL\nmetoprolol\n100 mg · once a day · 100 mg/day total\nextended release\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Naprosyn",
+   "generic": "naproxen",
+   "dose": "500 mg · twice a day · 1000 mg/day total",
+   "facts": "Nonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nContraindicated Combination",
+   "text": "Naprosyn\nnaproxen\n500 mg · twice a day · 1000 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nContraindicated Combination"
+  },
+  {
+   "brand": "Nexium",
+   "generic": "esomeprazole",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "Proton Pump Inhibitor [EPC]\nPediatric Indication\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Nexium\nesomeprazole\n40 mg · once a day · 40 mg/day total\nProton Pump Inhibitor [EPC]\nPediatric Indication\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination"
+  }
+ ],
+ "totals": [
+  "esomeprazole\n40 mg/day",
+  "fluoxetine\n40 mg/day",
+  "metoprolol\n100 mg/day",
+  "naproxen\n1,000 mg (1 g)/day",
+  "paroxetine\n20 mg/day",
+  "tamoxifen\n20 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Nolvadex",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=509f8ba3-214d-aec8-e063-6294a90af498",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Naprosyn",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5954565a-d9bd-9e26-e063-6294a90a03cb",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/23415013/",
+   "in_alert": true
+  },
+  {
+   "text": "Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/30883055/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Toprol-XL",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "National Heart, Lung, and Blood Institute, NIH",
+   "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Paxil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": true
+  },
+  {
+   "text": "Nexium",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d68c9247-91c7-4e0f-adc4-2cfa7446580f",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n6 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n2\nC\nMonitor closely\n3\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nProzac, Paxil, Nolvadex\n\nNolvadex with 2 drugs that block CYP2D6: tamoxifen may not work\n\nWhy D: The Warnings and Precautions section of the Paxil label addresses this combination: tamoxifen may not work. Clinical rulebook row 35.\n\n5.11 Reduction of Efficacy of Tamoxifen Some studies have shown that the efficacy of tamoxifen, as measured by the risk of breast cancer relapse/mortality, may be reduced with concomitant use of paroxetine as a result of paroxetine's irreversible inhibition of CYP2D6 and lower blood levels of tamoxifen [see Drug Interactions ( 7 )].\n\nFrom the Paxil label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nTamoxifen works through its active metabolite endoxifen, made by CYP2D6. Strong CYP2D6 inhibitors cut endoxifen levels, which has been associated with more breast cancer recurrence (efficacy loss).\n\nWhat to do\n\nAvoid; for depression choose an antidepressant with little CYP2D6 effect (venlafaxine, escitalopram, citalopram).\n\nFDA labels: Prozac\n · Paxil\n · Nolvadex\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nProzac, Paxil\n\n2 serotonin reuptake inhibitors: duplicate therapy, no added benefit, more serotonin syndrome and bleeding risk\n\nWhy D: Class rule: duplicate therapy, no added benefit, more serotonin syndrome and bleeding risk.\n\nWhy it happens\n\nThese are all serotonin reuptake inhibitors: taking more than one is therapeutic duplication.\n\nWhat to do\n\nKeep one antidepressant; cross-taper if switching (fluoxetine's long half-life needs a washout).\n\nFDA labels: Prozac\n · Paxil\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nProzac, Paxil\n\n2 serotonergic drugs: risk of serotonin syndrome\n\nWhy C: The Contraindications section of the Prozac label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.\n\nIn addition, do not start fluoxetine tablets in a patient who is being treated with linezolid or intravenous methylene blue (4.1, 7.1) Pimozide (4.2, 5.11, 7.6, 7.7) Thioridazine : Do not use concomitantly with or within 5 weeks of discontinuing fluoxetine tablets (4.2, 5.11, 7.6, 7.7) Known hypersensitivity to fluoxetine products (4.2, 5.3) 4.1 Monoamine Oxidase Inhibitors (MAOIs) The use of MAOIs intended to treat psychiatric disorders with fluoxetine tablets or within 5 weeks of stopping treatment with fluoxetine tablets is contraindicated because of an increased risk of serotonin syndrome.\n\nFrom the Prozac label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.\n\nWhat to do\n\nAvoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.\n\nFDA labels: Prozac\n · Paxil\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n\nShow 1 more label sentence\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nProzac, Paxil, Naprosyn\n\n3 drugs: risk of serious bleeding, especially stomach and gut bleeding\n\nWhy C: Class rule: risk of serious bleeding, especially stomach and gut bleeding. Clinical rulebook row 9, 12, 13.\n\nWhy it happens\n\nAnticoagulants slow clotting, aspirin and other antiplatelets stop platelets from sticking, NSAIDs block platelets and injure the stomach lining, and SSRIs and SNRIs drain the serotonin platelets need. Each added drug raises the bleeding risk.\n\nWhat to do\n\nDrop any drug that is not essential (WOEST and AUGUSTUS support dropping aspirin from triple therapy), add a proton pump inhibitor for stomach protection, and watch for black stools, vomiting blood, or anemia.\n\nFDA labels: Prozac\n · Paxil\n · Naprosyn\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n · Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy\n · Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nProzac, Paxil, Toprol-XL\n\nToprol-XL with 2 drugs that block CYP2D6: metoprolol levels rise: slower heart rate, lower blood pressure\n\nWhy C: The Drug Interactions section of the Toprol-XL label addresses this combination: metoprolol levels rise: slower heart rate, lower blood pressure.\n\n( 7.1 ) CYP2D6 Inhibitors are likely to increase metoprolol concentration.\n\nFrom the Toprol-XL label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nMetoprolol is cleared by CYP2D6; inhibitors raise its level 2- to 5-fold.\n\nWhat to do\n\nCheck heart rate and blood pressure; lower the metoprolol dose or switch to a beta-blocker not cleared by CYP2D6 (atenolol, bisoprolol).\n\nFDA labels: Prozac\n · Paxil\n · Toprol-XL\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nA\nMinor — Minor: usually no action needed.\nProzac, Paxil, Nexium\n\nQT Prolongation Risk shared by 3 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\nSuch conditions include concomitant use of drugs that prolong the QT interval; hypokalemia or hypomagnesemia; recent myocardial infarction, uncompensated heart failure, bradyarrhythmias, and other significant arrhythmias; and conditions that predispose to increased fluoxetine exposure (overdose, hepatic impairment, use of CYP2D6 inhibitors, CYP2D6 poor metabolizer status, or use of other highly protein-bound drugs).\n\nFrom the Prozac label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhat this means: QT prolongation\n\nEach of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.\n\nSource: National Heart, Lung, and Blood Institute, NIH\n\nFDA labels: Prozac\n · Paxil\n · Nexium\n\nShow 2 more label sentences\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nesomeprazole\n40 mg/day\nfluoxetine\n40 mg/day\nmetoprolol\n100 mg/day\nnaproxen\n1,000 mg (1 g)/day\nparoxetine\n20 mg/day\ntamoxifen\n20 mg/day\nProzac\nfluoxetine\n40 mg · once a day · 40 mg/day total\nSerotonin Reuptake Inhibitor [EPC]\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nPaxil\nparoxetine\n20 mg · once a day · 20 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nNolvadex\ntamoxifen\n20 mg · once a day · 20 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nContraindicated Combination\nToprol-XL\nmetoprolol\n100 mg · once a day · 100 mg/day total\nextended release\nHigh-Frequency Adverse Effect\nNaprosyn\nnaproxen\n500 mg · twice a day · 1000 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nContraindicated Combination\nNexium\nesomeprazole\n40 mg · once a day · 40 mg/day total\nProton Pump Inhibitor [EPC]\nPediatric Indication\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination\n6 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:05:41.447Z"
+}

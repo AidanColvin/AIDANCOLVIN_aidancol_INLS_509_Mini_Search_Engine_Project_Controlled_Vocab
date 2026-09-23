@@ -1,0 +1,431 @@
+{
+ "id": "L03",
+ "input": "Celexa (citalopram) 40 mg once daily = 40 mg/day, Haldol (haloperidol) 5 mg twice daily = 10 mg/day, Zithromax (azithromycin) 500 mg once daily = 500 mg/day, Diflucan (fluconazole) 200 mg once daily = 200 mg/day, Lasix (furosemide) 40 mg once daily = 40 mg/day, Protonix (pantoprazole) 40 mg once daily = 40 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.916,
+ "secondsToResults": 0.405,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Celexa, Haldol, Zithromax, Diflucan",
+   "category": "4 QT-prolonging drugs: risk of QT prolongation and torsades de pointes",
+   "basis": "Why D: The Contraindications section of the Celexa label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.",
+   "quote": "4 CONTRAINDICATIONS Citalopram tablets are contraindicated in patients: taking, or within 14 days of stopping, MAOIs (including MAOIs such as linezolid or intravenous methylene blue) because of an increased risk of serotonin syndrome [see Warnings and Precautions (5.3) , Drug Interactions (7) ] . taking pimozide because of risk of QT prolongation [see Drug Interactions (7) ] . with known hypersensitivity to citalopram or any of the inactive ingredients in citalopram tablets.",
+   "source": "From the Celexa label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": "Get a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.",
+   "includes": null,
+   "sources": "FDA labels: Celexa\n · Haldol\n · Zithromax\n · Diflucan\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db"
+    },
+    {
+     "text": "Celexa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db"
+    },
+    {
+     "text": "Haldol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621"
+    },
+    {
+     "text": "Zithromax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=94e17ae5-0871-67a0-e053-2995a90ae0ae"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Celexa, Diflucan",
+   "category": "Celexa with Diflucan: citalopram levels rise: dose-related QT prolongation",
+   "basis": "Why D: The Warnings and Precautions section of the Celexa label addresses this combination: citalopram levels rise: dose-related QT prolongation. Clinical rulebook row 23.",
+   "quote": "The maximum dose should be limited to 20 mg once daily in patients who are CYP2C19 poor metabolizers or those patients receiving concomitant cimetidine or another CYP2C19 inhibitor, since higher citalopram exposures would be expected.",
+   "source": "From the Celexa label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Citalopram is cleared by CYP2C19 and prolongs QT in a dose-related way. The citalopram label caps the dose at 20 mg a day with CYP2C19 inhibitors.",
+   "action": "Keep citalopram at 20 mg a day or less, or switch to an antidepressant that does not prolong QT.",
+   "includes": null,
+   "sources": "FDA labels: Celexa\n · Diflucan",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db"
+    },
+    {
+     "text": "Celexa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Celexa, Haldol, Zithromax, Diflucan, Lasix",
+   "category": "5 drugs: low potassium and magnesium from the diuretic raise the rhythm risk",
+   "basis": "Why C: The Precautions section of the Lasix label addresses this combination: low potassium and magnesium from the diuretic raise the rhythm risk. Clinical rulebook row 18, 23.",
+   "quote": "Hypokalemia may develop with furosemide, especially with brisk diuresis, inadequate oral electrolyte intake, when cirrhosis is present, or during concomitant use of corticosteroids, ACTH, licorice in large amounts, or prolonged use of laxatives.",
+   "source": "From the Lasix label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Loop and thiazide diuretics lower potassium and magnesium. Low levels make QT-prolonging drugs more likely to cause torsades and make digoxin more toxic.",
+   "action": "Check potassium and magnesium at the start and after dose changes; replace them to keep potassium above 4.0 mmol/L.",
+   "includes": null,
+   "sources": "FDA labels: Celexa\n · Haldol\n · Zithromax\n · Diflucan\n · Lasix",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a"
+    },
+    {
+     "text": "Celexa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db"
+    },
+    {
+     "text": "Haldol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621"
+    },
+    {
+     "text": "Zithromax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=94e17ae5-0871-67a0-e053-2995a90ae0ae"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    },
+    {
+     "text": "Lasix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Haldol, Diflucan",
+   "category": "Haldol with Diflucan: haloperidol levels rise: more QT and movement side effects",
+   "basis": "Why C: The Precautions section of the Haldol label addresses this combination: haloperidol levels rise: more QT and movement side effects. Clinical rulebook row 23.",
+   "quote": "Examples include (but are not limited to): Class 1A antiarrhythmics (e.g., procainamide, quinidine, disopyramide); Class 3 antiarrhythmics (e.g., amiodarone, sotalol); and other drugs such as citalopram, erythromycin, levofloxacin, methadone, and ziprasidone.",
+   "source": "From the Haldol label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Haloperidol is partly cleared by CYP3A4; inhibitors raise its level, adding QT prolongation and extrapyramidal side effects.",
+   "action": "Monitor for stiffness, restlessness, and QT changes; lower the dose if needed.",
+   "includes": null,
+   "sources": "FDA labels: Haldol\n · Diflucan\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4289f7db-e25d-4578-8adf-f0222ae64aa6"
+    },
+    {
+     "text": "Haldol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4289f7db-e25d-4578-8adf-f0222ae64aa6"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Celexa",
+   "category": "citalopram 40 mg/day is at the labeled maximum of 40 mg/day (maximum)",
+   "basis": "Why A: Daily total 40 mg against a labeled maximum of 40 mg (20 mg over age 60).",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of citalopram; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Celexa",
+   "links": [
+    {
+     "text": "Celexa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Haldol, Diflucan",
+   "category": "CNS Depression Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "As with other antipsychotic agents, it should be noted that haloperidol may be capable of potentiating CNS depressants such as anesthetics, opiates, and alcohol.",
+   "source": "From the Haldol label, Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: CNS depression",
+   "why_text": "Each of these drugs slows the central nervous system. Together the effect adds up: heavy sedation, slowed breathing, and a higher risk of overdose, especially when an opioid and a benzodiazepine are combined.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Haldol\n · Diflucan",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621"
+    },
+    {
+     "text": "National Institute on Drug Abuse, NIH",
+     "href": "https://nida.nih.gov/research-topics/opioids/benzodiazepines-opioids"
+    },
+    {
+     "text": "Haldol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "2"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "2"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Celexa",
+   "generic": "citalopram",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Celexa\ncitalopram\n40 mg · once a day · 40 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Haldol",
+   "generic": "haloperidol",
+   "dose": "5 mg · twice a day · 10 mg/day total",
+   "facts": "Typical Antipsychotic [EPC]\nBoxed Warning\nCNS Depression Risk\nQT Prolongation Risk",
+   "text": "Haldol\nhaloperidol\n5 mg · twice a day · 10 mg/day total\nTypical Antipsychotic [EPC]\nBoxed Warning\nCNS Depression Risk\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Zithromax",
+   "generic": "azithromycin",
+   "dose": "500 mg · once a day · 500 mg/day total",
+   "facts": "High-Frequency Adverse Effect\nQT Prolongation Risk",
+   "text": "Zithromax\nazithromycin\n500 mg · once a day · 500 mg/day total\nHigh-Frequency Adverse Effect\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Diflucan",
+   "generic": "fluconazole",
+   "dose": "200 mg · once a day · 200 mg/day total",
+   "facts": "Azole Antifungal [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Diflucan\nfluconazole\n200 mg · once a day · 200 mg/day total\nAzole Antifungal [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Lasix",
+   "generic": "furosemide",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "Loop Diuretic [EPC]",
+   "text": "Lasix\nfurosemide\n40 mg · once a day · 40 mg/day total\nLoop Diuretic [EPC]"
+  },
+  {
+   "brand": "Protonix",
+   "generic": "pantoprazole",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "",
+   "text": "Protonix\npantoprazole\n40 mg · once a day · 40 mg/day total"
+  }
+ ],
+ "totals": [
+  "azithromycin\n500 mg/day",
+  "citalopram\n40 mg/day",
+  "fluconazole\n200 mg/day",
+  "furosemide\n40 mg/day",
+  "haloperidol\n10 mg/day",
+  "pantoprazole\n40 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db",
+   "in_alert": true
+  },
+  {
+   "text": "Celexa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db",
+   "in_alert": true
+  },
+  {
+   "text": "Haldol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621",
+   "in_alert": true
+  },
+  {
+   "text": "Zithromax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=94e17ae5-0871-67a0-e053-2995a90ae0ae",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db",
+   "in_alert": true
+  },
+  {
+   "text": "Celexa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": true
+  },
+  {
+   "text": "Celexa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db",
+   "in_alert": true
+  },
+  {
+   "text": "Haldol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621",
+   "in_alert": true
+  },
+  {
+   "text": "Zithromax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=94e17ae5-0871-67a0-e053-2995a90ae0ae",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  },
+  {
+   "text": "Lasix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4289f7db-e25d-4578-8adf-f0222ae64aa6",
+   "in_alert": true
+  },
+  {
+   "text": "Haldol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4289f7db-e25d-4578-8adf-f0222ae64aa6",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Celexa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621",
+   "in_alert": true
+  },
+  {
+   "text": "National Institute on Drug Abuse, NIH",
+   "href": "https://nida.nih.gov/research-topics/opioids/benzodiazepines-opioids",
+   "in_alert": true
+  },
+  {
+   "text": "Haldol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n6 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n2\nC\nMonitor closely\n2\nB\nMonitor\n–\nA\nMinor\n2\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nCelexa, Haldol, Zithromax, Diflucan\n\n4 QT-prolonging drugs: risk of QT prolongation and torsades de pointes\n\nWhy D: The Contraindications section of the Celexa label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.\n\n4 CONTRAINDICATIONS Citalopram tablets are contraindicated in patients: taking, or within 14 days of stopping, MAOIs (including MAOIs such as linezolid or intravenous methylene blue) because of an increased risk of serotonin syndrome [see Warnings and Precautions (5.3) , Drug Interactions (7) ] . taking pimozide because of risk of QT prolongation [see Drug Interactions (7) ] . with known hypersensitivity to citalopram or any of the inactive ingredients in citalopram tablets.\n\nFrom the Celexa label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.\n\nWhat to do\n\nGet a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.\n\nFDA labels: Celexa\n · Haldol\n · Zithromax\n · Diflucan\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n\nShow 3 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nCelexa, Diflucan\n\nCelexa with Diflucan: citalopram levels rise: dose-related QT prolongation\n\nWhy D: The Warnings and Precautions section of the Celexa label addresses this combination: citalopram levels rise: dose-related QT prolongation. Clinical rulebook row 23.\n\nThe maximum dose should be limited to 20 mg once daily in patients who are CYP2C19 poor metabolizers or those patients receiving concomitant cimetidine or another CYP2C19 inhibitor, since higher citalopram exposures would be expected.\n\nFrom the Celexa label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nCitalopram is cleared by CYP2C19 and prolongs QT in a dose-related way. The citalopram label caps the dose at 20 mg a day with CYP2C19 inhibitors.\n\nWhat to do\n\nKeep citalopram at 20 mg a day or less, or switch to an antidepressant that does not prolong QT.\n\nFDA labels: Celexa\n · Diflucan\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nCelexa, Haldol, Zithromax, Diflucan, Lasix\n\n5 drugs: low potassium and magnesium from the diuretic raise the rhythm risk\n\nWhy C: The Precautions section of the Lasix label addresses this combination: low potassium and magnesium from the diuretic raise the rhythm risk. Clinical rulebook row 18, 23.\n\nHypokalemia may develop with furosemide, especially with brisk diuresis, inadequate oral electrolyte intake, when cirrhosis is present, or during concomitant use of corticosteroids, ACTH, licorice in large amounts, or prolonged use of laxatives.\n\nFrom the Lasix label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nLoop and thiazide diuretics lower potassium and magnesium. Low levels make QT-prolonging drugs more likely to cause torsades and make digoxin more toxic.\n\nWhat to do\n\nCheck potassium and magnesium at the start and after dose changes; replace them to keep potassium above 4.0 mmol/L.\n\nFDA labels: Celexa\n · Haldol\n · Zithromax\n · Diflucan\n · Lasix\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nHaldol, Diflucan\n\nHaldol with Diflucan: haloperidol levels rise: more QT and movement side effects\n\nWhy C: The Precautions section of the Haldol label addresses this combination: haloperidol levels rise: more QT and movement side effects. Clinical rulebook row 23.\n\nExamples include (but are not limited to): Class 1A antiarrhythmics (e.g., procainamide, quinidine, disopyramide); Class 3 antiarrhythmics (e.g., amiodarone, sotalol); and other drugs such as citalopram, erythromycin, levofloxacin, methadone, and ziprasidone.\n\nFrom the Haldol label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nHaloperidol is partly cleared by CYP3A4; inhibitors raise its level, adding QT prolongation and extrapyramidal side effects.\n\nWhat to do\n\nMonitor for stiffness, restlessness, and QT changes; lower the dose if needed.\n\nFDA labels: Haldol\n · Diflucan\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nA\nMinor — Minor: usually no action needed.\nCelexa\n\ncitalopram 40 mg/day is at the labeled maximum of 40 mg/day (maximum)\n\nWhy A: Daily total 40 mg against a labeled maximum of 40 mg (20 mg over age 60).\n\nWhy it happens\n\nThe total counts every entry of citalopram; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Celexa\n\nA\nMinor — Minor: usually no action needed.\nHaldol, Diflucan\n\nCNS Depression Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\nAs with other antipsychotic agents, it should be noted that haloperidol may be capable of potentiating CNS depressants such as anesthetics, opiates, and alcohol.\n\nFrom the Haldol label, Precautions section.\nOpen on DailyMed\n\nWhat this means: CNS depression\n\nEach of these drugs slows the central nervous system. Together the effect adds up: heavy sedation, slowed breathing, and a higher risk of overdose, especially when an opioid and a benzodiazepine are combined.\n\nSource: National Institute on Drug Abuse, NIH\n\nFDA labels: Haldol\n · Diflucan\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nazithromycin\n500 mg/day\ncitalopram\n40 mg/day\nfluconazole\n200 mg/day\nfurosemide\n40 mg/day\nhaloperidol\n10 mg/day\npantoprazole\n40 mg/day\nCelexa\ncitalopram\n40 mg · once a day · 40 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nHaldol\nhaloperidol\n5 mg · twice a day · 10 mg/day total\nTypical Antipsychotic [EPC]\nBoxed Warning\nCNS Depression Risk\nQT Prolongation Risk\nZithromax\nazithromycin\n500 mg · once a day · 500 mg/day total\nHigh-Frequency Adverse Effect\nQT Prolongation Risk\nDiflucan\nfluconazole\n200 mg · once a day · 200 mg/day total\nAzole Antifungal [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination\nLasix\nfurosemide\n40 mg · once a day · 40 mg/day total\nLoop Diuretic [EPC]\nProtonix\npantoprazole\n40 mg · once a day · 40 mg/day total\n6 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:05:11.008Z"
+}

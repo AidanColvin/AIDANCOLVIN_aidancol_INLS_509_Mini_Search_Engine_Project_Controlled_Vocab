@@ -1,0 +1,421 @@
+{
+ "id": "L07",
+ "input": "Nardil (phenelzine) 15 mg three times daily = 45 mg/day, Wellbutrin SR (bupropion SR) 150 mg twice daily = 300 mg/day, Demerol (meperidine) 50 mg every 6 hours as needed max 4 doses/day = 200 mg/day max, Ritalin (methylphenidate) 10 mg twice daily = 20 mg/day, Norvasc (amlodipine) 10 mg once daily = 10 mg/day, Synthroid (levothyroxine) 100 mcg once daily = 100 mcg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.872,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Nardil, Demerol",
+   "category": "Nardil with Demerol: can cause fatal serotonin syndrome",
+   "basis": "Why E: The Contraindications section of the Demerol label addresses this combination: can cause fatal serotonin syndrome. Clinical rulebook row 7.",
+   "quote": "( 4 ) • Concurrent use of monoamine oxidase inhibitors (MAOIs) or use of MAOIs within the last 14 days.",
+   "source": "From the Demerol label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "An MAO inhibitor stops the breakdown of serotonin; these drugs release it or block its reuptake. Together serotonin can rise to toxic levels: high fever, rigidity, seizures, death.",
+   "action": "Do not use together. Allow the washout the labels require (usually 14 days after stopping an MAO inhibitor, 5 weeks after fluoxetine).",
+   "includes": null,
+   "sources": "FDA labels: Nardil\n · Demerol\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975"
+    },
+    {
+     "text": "Nardil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075"
+    },
+    {
+     "text": "Demerol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Nardil, Wellbutrin SR",
+   "category": "Nardil with Wellbutrin SR: risk of a hypertensive crisis",
+   "basis": "Why E: The Contraindications section of the Wellbutrin SR label addresses this combination: risk of a hypertensive crisis. Clinical rulebook row 24.",
+   "quote": "There is an increased risk of hypertensive reactions when bupropion hydrobromide extended-release tablets are used concomitantly with MAOIs.",
+   "source": "From the Wellbutrin SR label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Bupropion raises norepinephrine and dopamine; with an MAO inhibitor these build up and can cause a sudden, severe rise in blood pressure. The bupropion label contraindicates the combination and requires 14 days between them.",
+   "action": "Do not use together. Wait at least 14 days after stopping the MAO inhibitor.",
+   "includes": null,
+   "sources": "FDA labels: Nardil\n · Wellbutrin SR",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43"
+    },
+    {
+     "text": "Nardil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075"
+    },
+    {
+     "text": "Wellbutrin SR",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Nardil, Ritalin",
+   "category": "Nardil with Ritalin: risk of a hypertensive crisis",
+   "basis": "Why E: The Contraindications section of the Ritalin label addresses this combination: risk of a hypertensive crisis. Clinical rulebook row 24.",
+   "quote": "Concomitant treatment with monoamine oxidase inhibitors (MAOIs), and also within a minimum of 14 days following discontinuation of treatment with a monoamine oxidase inhibitor because of the risk of hypertensive crisis [see Drug Interactions (7.1) ].",
+   "source": "From the Ritalin label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "MAO inhibitors stop the breakdown of norepinephrine; stimulants and decongestants release it. Together blood pressure can spike to a hypertensive crisis with stroke or heart damage.",
+   "action": "Do not use together, or within 14 days of stopping the MAO inhibitor.",
+   "includes": null,
+   "sources": "FDA labels: Nardil\n · Ritalin",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2fec19b-6610-4ce0-8e60-f8218a11f62f"
+    },
+    {
+     "text": "Nardil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075"
+    },
+    {
+     "text": "Ritalin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2fec19b-6610-4ce0-8e60-f8218a11f62f"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Nardil, Demerol",
+   "category": "2 serotonergic drugs: risk of serotonin syndrome",
+   "basis": "Why D: Class rule: risk of serotonin syndrome. Clinical rulebook row 7.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Each drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.",
+   "action": "Avoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.",
+   "includes": null,
+   "sources": "FDA labels: Nardil\n · Demerol\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "links": [
+    {
+     "text": "Nardil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075"
+    },
+    {
+     "text": "Demerol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Nardil, Norvasc",
+   "category": "2 drugs: risk of low blood pressure on standing, fainting, and falls",
+   "basis": "Why C: The Contraindications section of the Nardil label addresses this combination: risk of low blood pressure on standing, fainting, and falls. Clinical rulebook row 22.",
+   "quote": "A List of MAO Inhibitors by Generic Name Follows: pargyline hydrochloride pargyline hydrochloride and methylclothiazide furazolidone isocarboxazid procarbazine tranylcypromine Phenelzine sulfate should also not be used in combination with buspirone HCl, since several cases of elevated blood pressure have been reported in patients taking MAO inhibitors who were then given buspirone HCl.",
+   "source": "From the Nardil label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug lowers blood pressure or blocks the reflex that holds it up when standing. Together they can cause orthostatic hypotension, fainting, and falls.",
+   "action": "Start low, raise one drug at a time, check standing blood pressure, and tell the patient to stand up slowly.",
+   "includes": null,
+   "sources": "FDA labels: Nardil\n · Norvasc",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075"
+    },
+    {
+     "text": "Nardil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075"
+    },
+    {
+     "text": "Norvasc",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=614d974f-51c7-4b18-8171-39eb6e8d4c03"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Wellbutrin SR, Demerol",
+   "category": "2 drugs: risk of seizures",
+   "basis": "Why C: The Warnings and Precautions section of the Wellbutrin SR label addresses this combination: risk of seizures. Clinical rulebook row 8.",
+   "quote": "The risk of seizures is also related to patient factors, clinical situations, and concomitant medications that lower the seizure threshold.",
+   "source": "From the Wellbutrin SR label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Tramadol and bupropion lower the seizure threshold in a dose-related way. The other drugs listed lower it too, so the risk adds up.",
+   "action": "Keep tramadol and bupropion at or below labeled doses, avoid them in patients with seizure risk factors, and prefer alternatives when several threshold-lowering drugs are needed.",
+   "includes": null,
+   "sources": "FDA labels: Wellbutrin SR\n · Demerol",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43"
+    },
+    {
+     "text": "Wellbutrin SR",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43"
+    },
+    {
+     "text": "Demerol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Norvasc",
+   "category": "amlodipine 10 mg/day is at the labeled maximum of 10 mg/day (maximum)",
+   "basis": "Why A: Daily total 10 mg against a labeled maximum of 10 mg.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of amlodipine; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Norvasc",
+   "links": [
+    {
+     "text": "Norvasc",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=614d974f-51c7-4b18-8171-39eb6e8d4c03"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "3"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "1"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "2"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Nardil",
+   "generic": "phenelzine",
+   "dose": "15 mg · 3 times a day · 45 mg/day total",
+   "facts": "Boxed Warning\nContraindicated Combination",
+   "text": "Nardil\nphenelzine\n15 mg · 3 times a day · 45 mg/day total\nBoxed Warning\nContraindicated Combination"
+  },
+  {
+   "brand": "Wellbutrin SR",
+   "generic": "bupropion",
+   "dose": "150 mg · twice a day · 300 mg/day total",
+   "facts": "extended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination",
+   "text": "Wellbutrin SR\nbupropion\n150 mg · twice a day · 300 mg/day total\nextended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Demerol",
+   "generic": "meperidine",
+   "dose": "50 mg · as needed, up to 4 times a day · 200 mg/day max",
+   "facts": "Schedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nContraindicated Combination",
+   "text": "Demerol\nmeperidine\n50 mg · as needed, up to 4 times a day · 200 mg/day max\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Ritalin",
+   "generic": "methylphenidate",
+   "dose": "10 mg · twice a day · 20 mg/day total",
+   "facts": "Central Nervous System Stimulant [EPC]\nBoxed Warning\nPediatric Indication",
+   "text": "Ritalin\nmethylphenidate\n10 mg · twice a day · 20 mg/day total\nCentral Nervous System Stimulant [EPC]\nBoxed Warning\nPediatric Indication"
+  },
+  {
+   "brand": "Norvasc",
+   "generic": "amlodipine",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Dihydropyridine Calcium Channel Blocker [EPC], Calcium Channel Blocker [EPC]\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment",
+   "text": "Norvasc\namlodipine\n10 mg · once a day · 10 mg/day total\nDihydropyridine Calcium Channel Blocker [EPC], Calcium Channel Blocker [EPC]\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment"
+  },
+  {
+   "brand": "Synthroid",
+   "generic": "levothyroxine",
+   "dose": "100 mcg · once a day · 100 mcg/day total",
+   "facts": "Boxed Warning\nContraindicated Combination",
+   "text": "Synthroid\nlevothyroxine\n100 mcg · once a day · 100 mcg/day total\nBoxed Warning\nContraindicated Combination"
+  }
+ ],
+ "totals": [
+  "amlodipine\n10 mg/day",
+  "bupropion\n300 mg/day",
+  "levothyroxine\n100 mcg (0.1 mg)/day",
+  "meperidine\n200 mg/day max · 20 MME",
+  "methylphenidate\n20 mg/day",
+  "phenelzine\n45 mg/day"
+ ],
+ "totalMme": "Total opioid dose: 20 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+   "in_alert": true
+  },
+  {
+   "text": "Nardil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075",
+   "in_alert": true
+  },
+  {
+   "text": "Demerol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43",
+   "in_alert": true
+  },
+  {
+   "text": "Nardil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075",
+   "in_alert": true
+  },
+  {
+   "text": "Wellbutrin SR",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2fec19b-6610-4ce0-8e60-f8218a11f62f",
+   "in_alert": true
+  },
+  {
+   "text": "Nardil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075",
+   "in_alert": true
+  },
+  {
+   "text": "Ritalin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c2fec19b-6610-4ce0-8e60-f8218a11f62f",
+   "in_alert": true
+  },
+  {
+   "text": "Nardil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075",
+   "in_alert": true
+  },
+  {
+   "text": "Demerol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075",
+   "in_alert": true
+  },
+  {
+   "text": "Nardil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075",
+   "in_alert": true
+  },
+  {
+   "text": "Norvasc",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=614d974f-51c7-4b18-8171-39eb6e8d4c03",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43",
+   "in_alert": true
+  },
+  {
+   "text": "Wellbutrin SR",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43",
+   "in_alert": true
+  },
+  {
+   "text": "Demerol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b31d1308-28c3-43f4-e0a6-2f3ed76b8975",
+   "in_alert": true
+  },
+  {
+   "text": "Norvasc",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=614d974f-51c7-4b18-8171-39eb6e8d4c03",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: E, Avoid combination. Do not use these drugs together.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n7 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n3\nD\nConsider changing therapy\n1\nC\nMonitor closely\n2\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: E, Avoid combination. Do not use these drugs together.\nE\nAvoid combination — Do not use these drugs together.\nNardil, Demerol\n\nNardil with Demerol: can cause fatal serotonin syndrome\n\nWhy E: The Contraindications section of the Demerol label addresses this combination: can cause fatal serotonin syndrome. Clinical rulebook row 7.\n\n( 4 ) • Concurrent use of monoamine oxidase inhibitors (MAOIs) or use of MAOIs within the last 14 days.\n\nFrom the Demerol label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nAn MAO inhibitor stops the breakdown of serotonin; these drugs release it or block its reuptake. Together serotonin can rise to toxic levels: high fever, rigidity, seizures, death.\n\nWhat to do\n\nDo not use together. Allow the washout the labels require (usually 14 days after stopping an MAO inhibitor, 5 weeks after fluoxetine).\n\nFDA labels: Nardil\n · Demerol\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nE\nAvoid combination — Do not use these drugs together.\nNardil, Wellbutrin SR\n\nNardil with Wellbutrin SR: risk of a hypertensive crisis\n\nWhy E: The Contraindications section of the Wellbutrin SR label addresses this combination: risk of a hypertensive crisis. Clinical rulebook row 24.\n\nThere is an increased risk of hypertensive reactions when bupropion hydrobromide extended-release tablets are used concomitantly with MAOIs.\n\nFrom the Wellbutrin SR label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nBupropion raises norepinephrine and dopamine; with an MAO inhibitor these build up and can cause a sudden, severe rise in blood pressure. The bupropion label contraindicates the combination and requires 14 days between them.\n\nWhat to do\n\nDo not use together. Wait at least 14 days after stopping the MAO inhibitor.\n\nFDA labels: Nardil\n · Wellbutrin SR\n\nE\nAvoid combination — Do not use these drugs together.\nNardil, Ritalin\n\nNardil with Ritalin: risk of a hypertensive crisis\n\nWhy E: The Contraindications section of the Ritalin label addresses this combination: risk of a hypertensive crisis. Clinical rulebook row 24.\n\nConcomitant treatment with monoamine oxidase inhibitors (MAOIs), and also within a minimum of 14 days following discontinuation of treatment with a monoamine oxidase inhibitor because of the risk of hypertensive crisis [see Drug Interactions (7.1) ].\n\nFrom the Ritalin label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nMAO inhibitors stop the breakdown of norepinephrine; stimulants and decongestants release it. Together blood pressure can spike to a hypertensive crisis with stroke or heart damage.\n\nWhat to do\n\nDo not use together, or within 14 days of stopping the MAO inhibitor.\n\nFDA labels: Nardil\n · Ritalin\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nNardil, Demerol\n\n2 serotonergic drugs: risk of serotonin syndrome\n\nWhy D: Class rule: risk of serotonin syndrome. Clinical rulebook row 7.\n\nWhy it happens\n\nEach drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.\n\nWhat to do\n\nAvoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.\n\nFDA labels: Nardil\n · Demerol\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nNardil, Norvasc\n\n2 drugs: risk of low blood pressure on standing, fainting, and falls\n\nWhy C: The Contraindications section of the Nardil label addresses this combination: risk of low blood pressure on standing, fainting, and falls. Clinical rulebook row 22.\n\nA List of MAO Inhibitors by Generic Name Follows: pargyline hydrochloride pargyline hydrochloride and methylclothiazide furazolidone isocarboxazid procarbazine tranylcypromine Phenelzine sulfate should also not be used in combination with buspirone HCl, since several cases of elevated blood pressure have been reported in patients taking MAO inhibitors who were then given buspirone HCl.\n\nFrom the Nardil label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug lowers blood pressure or blocks the reflex that holds it up when standing. Together they can cause orthostatic hypotension, fainting, and falls.\n\nWhat to do\n\nStart low, raise one drug at a time, check standing blood pressure, and tell the patient to stand up slowly.\n\nFDA labels: Nardil\n · Norvasc\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nWellbutrin SR, Demerol\n\n2 drugs: risk of seizures\n\nWhy C: The Warnings and Precautions section of the Wellbutrin SR label addresses this combination: risk of seizures. Clinical rulebook row 8.\n\nThe risk of seizures is also related to patient factors, clinical situations, and concomitant medications that lower the seizure threshold.\n\nFrom the Wellbutrin SR label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nTramadol and bupropion lower the seizure threshold in a dose-related way. The other drugs listed lower it too, so the risk adds up.\n\nWhat to do\n\nKeep tramadol and bupropion at or below labeled doses, avoid them in patients with seizure risk factors, and prefer alternatives when several threshold-lowering drugs are needed.\n\nFDA labels: Wellbutrin SR\n · Demerol\n\nA\nMinor — Minor: usually no action needed.\nNorvasc\n\namlodipine 10 mg/day is at the labeled maximum of 10 mg/day (maximum)\n\nWhy A: Daily total 10 mg against a labeled maximum of 10 mg.\n\nWhy it happens\n\nThe total counts every entry of amlodipine; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Norvasc\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\namlodipine\n10 mg/day\nbupropion\n300 mg/day\nlevothyroxine\n100 mcg (0.1 mg)/day\nmeperidine\n200 mg/day max · 20 MME\nmethylphenidate\n20 mg/day\nphenelzine\n45 mg/day\n\nTotal opioid dose: 20 MME/day (CDC 2022 conversion factors).\n\nNardil\nphenelzine\n15 mg · 3 times a day · 45 mg/day total\nBoxed Warning\nContraindicated Combination\nWellbutrin SR\nbupropion\n150 mg · twice a day · 300 mg/day total\nextended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination\nDemerol\nmeperidine\n50 mg · as needed, up to 4 times a day · 200 mg/day max\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nContraindicated Combination\nRitalin\nmethylphenidate\n10 mg · twice a day · 20 mg/day total\nCentral Nervous System Stimulant [EPC]\nBoxed Warning\nPediatric Indication\nNorvasc\namlodipine\n10 mg · once a day · 10 mg/day total\nDihydropyridine Calcium Channel Blocker [EPC], Calcium Channel Blocker [EPC]\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSynthroid\nlevothyroxine\n100 mcg · once a day · 100 mcg/day total\nBoxed Warning\nContraindicated Combination\n7 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:05:31.489Z"
+}

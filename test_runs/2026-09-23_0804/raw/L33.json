@@ -1,0 +1,467 @@
+{
+ "id": "L33",
+ "input": "Dilantin (phenytoin ER) 300 mg once daily at bedtime = 300 mg/day, Coumadin (warfarin) 5 mg once daily = 5 mg/day, Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day, Prozac (fluoxetine) 20 mg once daily = 20 mg/day, Diflucan (fluconazole) 100 mg once daily = 100 mg/day, Lipitor (atorvastatin) 20 mg once daily = 20 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.96,
+ "secondsToResults": 1.216,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Coumadin, Diflucan",
+   "category": "Coumadin with Diflucan: INR rises: risk of serious bleeding",
+   "basis": "Why D: Class rule: INR rises: risk of serious bleeding. Clinical rulebook row 10.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These drugs block CYP2C9, which clears S-warfarin (the more potent half of warfarin). The INR can double within days; amiodarone's effect lasts for weeks after it stops.",
+   "action": "Choose another drug if possible; otherwise lower the warfarin dose (often 25 to 50%) and check the INR within 3 to 5 days.",
+   "includes": null,
+   "sources": "FDA labels: Coumadin\n · Diflucan\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Coumadin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Dilantin, Coumadin",
+   "category": "Coumadin with Dilantin: INR swings both ways: bleeding risk first, then clotting risk; phenytoin levels may rise",
+   "basis": "Why D: Class rule: INR swings both ways: bleeding risk first, then clotting risk; phenytoin levels may rise. Clinical rulebook row 10, 33.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Phenytoin first displaces warfarin from albumin and raises the INR (bleeding risk), then induces its metabolism and lowers the INR (clot risk); warfarin can also raise phenytoin levels.",
+   "action": "Check the INR and phenytoin levels often when either drug is started, stopped, or changed.",
+   "includes": null,
+   "sources": "FDA labels: Dilantin\n · Coumadin",
+   "links": [
+    {
+     "text": "Dilantin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3580e6a8-f7c3-44a0-a1eb-2a84ae589d21"
+    },
+    {
+     "text": "Coumadin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Dilantin, Prozac, Diflucan",
+   "category": "Dilantin with 2 drugs that raise phenytoin levels: phenytoin levels rise: toxicity (unsteadiness, confusion)",
+   "basis": "Why D: The Drug Interactions section of the Dilantin label addresses this combination: phenytoin levels rise: toxicity (unsteadiness, confusion).",
+   "quote": "Table 3: Drugs Affected by Phenytoin Interacting Agent Examples Drugs whose efficacy is impaired by phenytoin Azoles Fluconazole, ketoconazole, itraconazole, posaconazole, voriconazole Antineoplastic agents Irinotecan, paclitaxel, teniposide Delavirdine Phenytoin can substantially reduce the concentrations of delavirdine.",
+   "source": "From the Dilantin label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Phenytoin is cleared by CYP2C9 and CYP2C19 with saturable kinetics, so a small drop in clearance causes a large rise in level. These drugs inhibit those enzymes.",
+   "action": "Check a phenytoin level within 1 to 2 weeks and watch for nystagmus, unsteadiness, and confusion.",
+   "includes": null,
+   "sources": "FDA labels: Dilantin\n · Prozac\n · Diflucan\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3580e6a8-f7c3-44a0-a1eb-2a84ae589d21"
+    },
+    {
+     "text": "Dilantin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3580e6a8-f7c3-44a0-a1eb-2a84ae589d21"
+    },
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Dilantin, Sprintec",
+   "category": "Sprintec with Dilantin: contraceptive failure: unintended pregnancy",
+   "basis": "Why D: The Drug Interactions section of the Sprintec label addresses this combination: contraceptive failure: unintended pregnancy. Clinical rulebook row 33.",
+   "quote": "Examples Aprepitant, barbiturates, bosentan, carbamazepine, efavirenz, felbamate, griseofulvin, oxcarbazepine, phenytoin, rifampin, rifabutin, rufinamide, topiramate, products containing St.",
+   "source": "From the Sprintec label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These drugs induce CYP3A4 and speed the clearance of ethinyl estradiol and progestins, so hormonal contraception can fail (efficacy loss).",
+   "action": "Use a non-hormonal or IUD method during the course and for 28 days after the inducer stops.",
+   "includes": null,
+   "sources": "FDA labels: Dilantin\n · Sprintec",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcaf8db0-1750-425d-b008-255b5e7a9cc6"
+    },
+    {
+     "text": "Dilantin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3580e6a8-f7c3-44a0-a1eb-2a84ae589d21"
+    },
+    {
+     "text": "Sprintec",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcaf8db0-1750-425d-b008-255b5e7a9cc6"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Coumadin, Prozac",
+   "category": "2 drugs: risk of serious bleeding, especially stomach and gut bleeding",
+   "basis": "Why C: The Warnings and Precautions section of the Coumadin label addresses this combination: risk of serious bleeding, especially stomach and gut bleeding. Clinical rulebook row 9, 12, 13.",
+   "quote": "Risk factors for bleeding include high intensity of anticoagulation (INR >4.0), age greater than or equal to 65, history of highly variable INRs, history of gastrointestinal bleeding, hypertension, cerebrovascular disease, anemia, malignancy, trauma, renal impairment, certain genetic factors [see Clinical Pharmacology (12.5) ] , certain concomitant drugs [see Drug Interactions (7) ] , and long duration of warfarin therapy.",
+   "source": "From the Coumadin label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Anticoagulants slow clotting, aspirin and other antiplatelets stop platelets from sticking, NSAIDs block platelets and injure the stomach lining, and SSRIs and SNRIs drain the serotonin platelets need. Each added drug raises the bleeding risk.",
+   "action": "Drop any drug that is not essential (WOEST and AUGUSTUS support dropping aspirin from triple therapy), add a proton pump inhibitor for stomach protection, and watch for black stools, vomiting blood, or anemia.",
+   "includes": null,
+   "sources": "FDA labels: Coumadin\n · Prozac\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n · Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy\n · Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f"
+    },
+    {
+     "text": "Coumadin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f"
+    },
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    },
+    {
+     "text": "Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/23415013/"
+    },
+    {
+     "text": "Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/30883055/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "B",
+   "grade_text": "Monitor — Real but manageable: monitor.",
+   "drugs": "Dilantin, Lipitor",
+   "category": "Lipitor with Dilantin: statin levels fall",
+   "basis": "Why B: The Drug Interactions section of the Lipitor label addresses this combination: statin levels fall. Clinical rulebook row 33.",
+   "quote": "Rifampin : May reduce atorvastatin plasma concentrations.",
+   "source": "From the Lipitor label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "CYP3A4 induction lowers statin exposure, so cholesterol lowering weakens (efficacy loss).",
+   "action": "Check the lipid panel; use a higher dose or a statin not cleared by CYP3A4.",
+   "includes": null,
+   "sources": "FDA labels: Dilantin\n · Lipitor",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22"
+    },
+    {
+     "text": "Dilantin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3580e6a8-f7c3-44a0-a1eb-2a84ae589d21"
+    },
+    {
+     "text": "Lipitor",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-b"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Prozac, Diflucan",
+   "category": "QT Prolongation Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "Such conditions include concomitant use of drugs that prolong the QT interval; hypokalemia or hypomagnesemia; recent myocardial infarction, uncompensated heart failure, bradyarrhythmias, and other significant arrhythmias; and conditions that predispose to increased fluoxetine exposure (overdose, hepatic impairment, use of CYP2D6 inhibitors, CYP2D6 poor metabolizer status, or use of other highly protein-bound drugs).",
+   "source": "From the Prozac label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: QT prolongation",
+   "why_text": "Each of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Prozac\n · Diflucan",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "National Heart, Lung, and Blood Institute, NIH",
+     "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome"
+    },
+    {
+     "text": "Prozac",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce"
+    },
+    {
+     "text": "Diflucan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "4"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "1"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "1"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Dilantin",
+   "generic": "phenytoin",
+   "dose": "300 mg · once a day · 300 mg/day total",
+   "facts": "extended release\nAnti-epileptic Agent [EPC]",
+   "text": "Dilantin\nphenytoin\n300 mg · once a day · 300 mg/day total\nextended release\nAnti-epileptic Agent [EPC]"
+  },
+  {
+   "brand": "Coumadin",
+   "generic": "warfarin",
+   "dose": "5 mg · once a day · 5 mg/day total",
+   "facts": "Boxed Warning",
+   "text": "Coumadin\nwarfarin\n5 mg · once a day · 5 mg/day total\nBoxed Warning"
+  },
+  {
+   "brand": "Sprintec",
+   "generic": "ethinyl estradiol, norgestimate",
+   "dose": "norgestimate 0.25 mg / ethinyl estradiol 35 mcg · once a day",
+   "facts": "",
+   "text": "Sprintec\nethinyl estradiol, norgestimate\nnorgestimate 0.25 mg / ethinyl estradiol 35 mcg · once a day"
+  },
+  {
+   "brand": "Prozac",
+   "generic": "fluoxetine",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "Serotonin Reuptake Inhibitor [EPC]\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Prozac\nfluoxetine\n20 mg · once a day · 20 mg/day total\nSerotonin Reuptake Inhibitor [EPC]\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Diflucan",
+   "generic": "fluconazole",
+   "dose": "100 mg · once a day · 100 mg/day total",
+   "facts": "Azole Antifungal [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Diflucan\nfluconazole\n100 mg · once a day · 100 mg/day total\nAzole Antifungal [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Lipitor",
+   "generic": "atorvastatin",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "HMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect",
+   "text": "Lipitor\natorvastatin\n20 mg · once a day · 20 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect"
+  }
+ ],
+ "totals": [
+  "atorvastatin\n20 mg/day",
+  "ethinyl estradiol\n35 mcg (0.035 mg)/day",
+  "fluconazole\n100 mg/day",
+  "fluoxetine\n20 mg/day",
+  "norgestimate\n250 mcg (0.25 mg)/day",
+  "phenytoin\n300 mg/day",
+  "warfarin\n5 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Coumadin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Dilantin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3580e6a8-f7c3-44a0-a1eb-2a84ae589d21",
+   "in_alert": true
+  },
+  {
+   "text": "Coumadin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3580e6a8-f7c3-44a0-a1eb-2a84ae589d21",
+   "in_alert": true
+  },
+  {
+   "text": "Dilantin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3580e6a8-f7c3-44a0-a1eb-2a84ae589d21",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcaf8db0-1750-425d-b008-255b5e7a9cc6",
+   "in_alert": true
+  },
+  {
+   "text": "Dilantin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3580e6a8-f7c3-44a0-a1eb-2a84ae589d21",
+   "in_alert": true
+  },
+  {
+   "text": "Sprintec",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bcaf8db0-1750-425d-b008-255b5e7a9cc6",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+   "in_alert": true
+  },
+  {
+   "text": "Coumadin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/23415013/",
+   "in_alert": true
+  },
+  {
+   "text": "Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/30883055/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22",
+   "in_alert": true
+  },
+  {
+   "text": "Dilantin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3580e6a8-f7c3-44a0-a1eb-2a84ae589d21",
+   "in_alert": true
+  },
+  {
+   "text": "Lipitor",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "National Heart, Lung, and Blood Institute, NIH",
+   "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome",
+   "in_alert": true
+  },
+  {
+   "text": "Prozac",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": true
+  },
+  {
+   "text": "Diflucan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n7 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n4\nC\nMonitor closely\n1\nB\nMonitor\n1\nA\nMinor\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nCoumadin, Diflucan\n\nCoumadin with Diflucan: INR rises: risk of serious bleeding\n\nWhy D: Class rule: INR rises: risk of serious bleeding. Clinical rulebook row 10.\n\nWhy it happens\n\nThese drugs block CYP2C9, which clears S-warfarin (the more potent half of warfarin). The INR can double within days; amiodarone's effect lasts for weeks after it stops.\n\nWhat to do\n\nChoose another drug if possible; otherwise lower the warfarin dose (often 25 to 50%) and check the INR within 3 to 5 days.\n\nFDA labels: Coumadin\n · Diflucan\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDilantin, Coumadin\n\nCoumadin with Dilantin: INR swings both ways: bleeding risk first, then clotting risk; phenytoin levels may rise\n\nWhy D: Class rule: INR swings both ways: bleeding risk first, then clotting risk; phenytoin levels may rise. Clinical rulebook row 10, 33.\n\nWhy it happens\n\nPhenytoin first displaces warfarin from albumin and raises the INR (bleeding risk), then induces its metabolism and lowers the INR (clot risk); warfarin can also raise phenytoin levels.\n\nWhat to do\n\nCheck the INR and phenytoin levels often when either drug is started, stopped, or changed.\n\nFDA labels: Dilantin\n · Coumadin\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDilantin, Prozac, Diflucan\n\nDilantin with 2 drugs that raise phenytoin levels: phenytoin levels rise: toxicity (unsteadiness, confusion)\n\nWhy D: The Drug Interactions section of the Dilantin label addresses this combination: phenytoin levels rise: toxicity (unsteadiness, confusion).\n\nTable 3: Drugs Affected by Phenytoin Interacting Agent Examples Drugs whose efficacy is impaired by phenytoin Azoles Fluconazole, ketoconazole, itraconazole, posaconazole, voriconazole Antineoplastic agents Irinotecan, paclitaxel, teniposide Delavirdine Phenytoin can substantially reduce the concentrations of delavirdine.\n\nFrom the Dilantin label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nPhenytoin is cleared by CYP2C9 and CYP2C19 with saturable kinetics, so a small drop in clearance causes a large rise in level. These drugs inhibit those enzymes.\n\nWhat to do\n\nCheck a phenytoin level within 1 to 2 weeks and watch for nystagmus, unsteadiness, and confusion.\n\nFDA labels: Dilantin\n · Prozac\n · Diflucan\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDilantin, Sprintec\n\nSprintec with Dilantin: contraceptive failure: unintended pregnancy\n\nWhy D: The Drug Interactions section of the Sprintec label addresses this combination: contraceptive failure: unintended pregnancy. Clinical rulebook row 33.\n\nExamples Aprepitant, barbiturates, bosentan, carbamazepine, efavirenz, felbamate, griseofulvin, oxcarbazepine, phenytoin, rifampin, rifabutin, rufinamide, topiramate, products containing St.\n\nFrom the Sprintec label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese drugs induce CYP3A4 and speed the clearance of ethinyl estradiol and progestins, so hormonal contraception can fail (efficacy loss).\n\nWhat to do\n\nUse a non-hormonal or IUD method during the course and for 28 days after the inducer stops.\n\nFDA labels: Dilantin\n · Sprintec\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nCoumadin, Prozac\n\n2 drugs: risk of serious bleeding, especially stomach and gut bleeding\n\nWhy C: The Warnings and Precautions section of the Coumadin label addresses this combination: risk of serious bleeding, especially stomach and gut bleeding. Clinical rulebook row 9, 12, 13.\n\nRisk factors for bleeding include high intensity of anticoagulation (INR >4.0), age greater than or equal to 65, history of highly variable INRs, history of gastrointestinal bleeding, hypertension, cerebrovascular disease, anemia, malignancy, trauma, renal impairment, certain genetic factors [see Clinical Pharmacology (12.5) ] , certain concomitant drugs [see Drug Interactions (7) ] , and long duration of warfarin therapy.\n\nFrom the Coumadin label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nAnticoagulants slow clotting, aspirin and other antiplatelets stop platelets from sticking, NSAIDs block platelets and injure the stomach lining, and SSRIs and SNRIs drain the serotonin platelets need. Each added drug raises the bleeding risk.\n\nWhat to do\n\nDrop any drug that is not essential (WOEST and AUGUSTUS support dropping aspirin from triple therapy), add a proton pump inhibitor for stomach protection, and watch for black stools, vomiting blood, or anemia.\n\nFDA labels: Coumadin\n · Prozac\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n · Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy\n · Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation\n\nB\nMonitor — Real but manageable: monitor.\nDilantin, Lipitor\n\nLipitor with Dilantin: statin levels fall\n\nWhy B: The Drug Interactions section of the Lipitor label addresses this combination: statin levels fall. Clinical rulebook row 33.\n\nRifampin : May reduce atorvastatin plasma concentrations.\n\nFrom the Lipitor label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nCYP3A4 induction lowers statin exposure, so cholesterol lowering weakens (efficacy loss).\n\nWhat to do\n\nCheck the lipid panel; use a higher dose or a statin not cleared by CYP3A4.\n\nFDA labels: Dilantin\n · Lipitor\n\nA\nMinor — Minor: usually no action needed.\nProzac, Diflucan\n\nQT Prolongation Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\nSuch conditions include concomitant use of drugs that prolong the QT interval; hypokalemia or hypomagnesemia; recent myocardial infarction, uncompensated heart failure, bradyarrhythmias, and other significant arrhythmias; and conditions that predispose to increased fluoxetine exposure (overdose, hepatic impairment, use of CYP2D6 inhibitors, CYP2D6 poor metabolizer status, or use of other highly protein-bound drugs).\n\nFrom the Prozac label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhat this means: QT prolongation\n\nEach of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.\n\nSource: National Heart, Lung, and Blood Institute, NIH\n\nFDA labels: Prozac\n · Diflucan\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\natorvastatin\n20 mg/day\nethinyl estradiol\n35 mcg (0.035 mg)/day\nfluconazole\n100 mg/day\nfluoxetine\n20 mg/day\nnorgestimate\n250 mcg (0.25 mg)/day\nphenytoin\n300 mg/day\nwarfarin\n5 mg/day\nDilantin\nphenytoin\n300 mg · once a day · 300 mg/day total\nextended release\nAnti-epileptic Agent [EPC]\nCoumadin\nwarfarin\n5 mg · once a day · 5 mg/day total\nBoxed Warning\nSprintec\nethinyl estradiol, norgestimate\nnorgestimate 0.25 mg / ethinyl estradiol 35 mcg · once a day\nProzac\nfluoxetine\n20 mg · once a day · 20 mg/day total\nSerotonin Reuptake Inhibitor [EPC]\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nDiflucan\nfluconazole\n100 mg · once a day · 100 mg/day total\nAzole Antifungal [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination\nLipitor\natorvastatin\n20 mg · once a day · 20 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\n7 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:07:44.691Z"
+}

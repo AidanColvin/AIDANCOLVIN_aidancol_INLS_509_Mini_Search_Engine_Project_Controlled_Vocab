@@ -1,0 +1,236 @@
+{
+ "id": "L06",
+ "input": "OxyContin (oxycodone ER) 30 mg twice daily = 60 mg/day, Roxicodone (oxycodone IR) 10 mg every 4 hours as needed max 6 doses/day = 60 mg/day max, Klonopin (clonazepam) 1 mg twice daily = 2 mg/day, Neurontin (gabapentin) 600 mg three times daily = 1800 mg/day, Soma (carisoprodol) 350 mg three times daily = 1050 mg/day, Vistaril (hydroxyzine) 25 mg three times daily = 75 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.843,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "OxyContin, Roxicodone, Klonopin, Neurontin, Soma, Vistaril",
+   "category": "5 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: The Boxed Warning section of the OxyContin label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "( 5.2 ) Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the OxyContin label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": "OxyContin with Klonopin: boxed warning: profound sedation, respiratory depression, coma, death. Opioids and benzodiazepines both suppress the brainstem's drive to breathe. Both drug classes carry an FDA boxed warning against this combination.\nOxyContin with Neurontin: risk of respiratory depression. Gabapentin and pregabalin add to opioid respiratory depression; the FDA added this warning to both in 2019. Both are cleared by the kidney, so kidney injury raises exposure.",
+   "sources": "FDA labels: OxyContin\n · Roxicodone\n · Klonopin\n · Neurontin\n · Soma\n · Vistaril\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c"
+    },
+    {
+     "text": "OxyContin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c"
+    },
+    {
+     "text": "Roxicodone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c"
+    },
+    {
+     "text": "Klonopin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011"
+    },
+    {
+     "text": "Neurontin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4a975ebe-ae0a-446a-8a3d-2ca325e28f93"
+    },
+    {
+     "text": "Soma",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b83f7fd1-11e3-4e94-ae53-4637e892b372"
+    },
+    {
+     "text": "Vistaril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "OxyContin, Roxicodone",
+   "category": "Duplicate: OxyContin (oxycodone) and Roxicodone (oxycodone) are the same drug under different names: combined oxycodone 120 mg/day max",
+   "basis": "Why D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Both entries deliver the same active drug, so the patient gets the combined dose.",
+   "action": "Confirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.",
+   "includes": null,
+   "sources": "FDA labels: OxyContin\n · Roxicodone",
+   "links": [
+    {
+     "text": "OxyContin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c"
+    },
+    {
+     "text": "Roxicodone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "OxyContin",
+   "generic": "oxycodone",
+   "dose": "30 mg · twice a day · 60 mg/day total",
+   "facts": "extended release\nOpioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk",
+   "text": "OxyContin\noxycodone\n30 mg · twice a day · 60 mg/day total\nextended release\nOpioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk"
+  },
+  {
+   "brand": "Roxicodone",
+   "generic": "oxycodone",
+   "dose": "10 mg · as needed, up to 6 times a day · 60 mg/day max",
+   "facts": "immediate release\nOpioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk",
+   "text": "Roxicodone\noxycodone\n10 mg · as needed, up to 6 times a day · 60 mg/day max\nimmediate release\nOpioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk"
+  },
+  {
+   "brand": "Klonopin",
+   "generic": "clonazepam",
+   "dose": "1 mg · twice a day · 2 mg/day total",
+   "facts": "Benzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination",
+   "text": "Klonopin\nclonazepam\n1 mg · twice a day · 2 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Neurontin",
+   "generic": "gabapentin",
+   "dose": "600 mg · 3 times a day · 1800 mg/day total",
+   "facts": "High-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk",
+   "text": "Neurontin\ngabapentin\n600 mg · 3 times a day · 1800 mg/day total\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Soma",
+   "generic": "carisoprodol",
+   "dose": "350 mg · 3 times a day · 1050 mg/day total",
+   "facts": "Muscle Relaxant [EPC]\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination",
+   "text": "Soma\ncarisoprodol\n350 mg · 3 times a day · 1050 mg/day total\nMuscle Relaxant [EPC]\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Vistaril",
+   "generic": "hydroxyzine",
+   "dose": "25 mg · 3 times a day · 75 mg/day total",
+   "facts": "CNS Depression Risk\nQT Prolongation Risk",
+   "text": "Vistaril\nhydroxyzine\n25 mg · 3 times a day · 75 mg/day total\nCNS Depression Risk\nQT Prolongation Risk"
+  }
+ ],
+ "totals": [
+  "carisoprodol\n1,050 mg (1.05 g)/day",
+  "clonazepam\n2 mg/day",
+  "gabapentin\n1,800 mg (1.8 g)/day",
+  "hydroxyzine\n75 mg/day",
+  "oxycodone\n120 mg/day max · from 2 entries · 180 MME"
+ ],
+ "totalMme": "Total opioid dose: 180 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c",
+   "in_alert": true
+  },
+  {
+   "text": "OxyContin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c",
+   "in_alert": true
+  },
+  {
+   "text": "Roxicodone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c",
+   "in_alert": true
+  },
+  {
+   "text": "Klonopin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011",
+   "in_alert": true
+  },
+  {
+   "text": "Neurontin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4a975ebe-ae0a-446a-8a3d-2ca325e28f93",
+   "in_alert": true
+  },
+  {
+   "text": "Soma",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b83f7fd1-11e3-4e94-ae53-4637e892b372",
+   "in_alert": true
+  },
+  {
+   "text": "Vistaril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "OxyContin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c",
+   "in_alert": true
+  },
+  {
+   "text": "Roxicodone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n2 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n2\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nOxyContin, Roxicodone, Klonopin, Neurontin, Soma, Vistaril\n\n5 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: The Boxed Warning section of the OxyContin label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\n( 5.2 ) Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the OxyContin label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nOxyContin with Klonopin: boxed warning: profound sedation, respiratory depression, coma, death. Opioids and benzodiazepines both suppress the brainstem's drive to breathe. Both drug classes carry an FDA boxed warning against this combination.\nOxyContin with Neurontin: risk of respiratory depression. Gabapentin and pregabalin add to opioid respiratory depression; the FDA added this warning to both in 2019. Both are cleared by the kidney, so kidney injury raises exposure.\n\nFDA labels: OxyContin\n · Roxicodone\n · Klonopin\n · Neurontin\n · Soma\n · Vistaril\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 5 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nOxyContin, Roxicodone\n\nDuplicate: OxyContin (oxycodone) and Roxicodone (oxycodone) are the same drug under different names: combined oxycodone 120 mg/day max\n\nWhy D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.\n\nWhy it happens\n\nBoth entries deliver the same active drug, so the patient gets the combined dose.\n\nWhat to do\n\nConfirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.\n\nFDA labels: OxyContin\n · Roxicodone\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\ncarisoprodol\n1,050 mg (1.05 g)/day\nclonazepam\n2 mg/day\ngabapentin\n1,800 mg (1.8 g)/day\nhydroxyzine\n75 mg/day\noxycodone\n120 mg/day max · from 2 entries · 180 MME\n\nTotal opioid dose: 180 MME/day (CDC 2022 conversion factors).\n\nOxyContin\noxycodone\n30 mg · twice a day · 60 mg/day total\nextended release\nOpioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nRoxicodone\noxycodone\n10 mg · as needed, up to 6 times a day · 60 mg/day max\nimmediate release\nOpioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nKlonopin\nclonazepam\n1 mg · twice a day · 2 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination\nNeurontin\ngabapentin\n600 mg · 3 times a day · 1800 mg/day total\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nSoma\ncarisoprodol\n350 mg · 3 times a day · 1050 mg/day total\nMuscle Relaxant [EPC]\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination\nVistaril\nhydroxyzine\n25 mg · 3 times a day · 75 mg/day total\nCNS Depression Risk\nQT Prolongation Risk\n2 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:05:26.502Z"
+}

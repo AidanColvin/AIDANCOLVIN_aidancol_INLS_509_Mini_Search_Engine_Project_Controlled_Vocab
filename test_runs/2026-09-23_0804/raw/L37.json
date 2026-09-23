@@ -1,0 +1,519 @@
+{
+ "id": "L37",
+ "input": "Pradaxa (dabigatran etexilate) 150 mg twice daily = 300 mg/day, Multaq (dronedarone) 400 mg twice daily with meals = 800 mg/day, Calan SR (verapamil ER) 240 mg once daily = 240 mg/day, Lanoxin (digoxin) 0.125 mg once daily = 0.125 mg/day, Zocor (simvastatin) 20 mg once daily at bedtime = 20 mg/day, Lasix (furosemide) 20 mg once daily = 20 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.868,
+ "secondsToResults": 0.406,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Multaq, Calan SR, Lanoxin",
+   "category": "3 heart-rate-slowing drugs: risk of slow heart rate (bradycardia) and heart block",
+   "basis": "Why D: The Drug Interactions section of the Multaq label addresses this combination: risk of slow heart rate (bradycardia) and heart block. Clinical rulebook row 20.",
+   "quote": "Beta-blockers: Concomitant therapy with beta-adrenergic blockers and verapamil may result in additive negative effects on heart rate, atrioventricular conduction and/or cardiac contractility.",
+   "source": "From the Calan SR label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart rate or conduction through the AV node. Together they can cause severe bradycardia, AV block, or heart failure.",
+   "action": "Check pulse and an ECG after starting or raising any of them; lower doses or stop one if the heart rate drops below 50 or new AV block appears.",
+   "includes": null,
+   "sources": "FDA labels: Multaq\n · Calan SR\n · Lanoxin",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed182ebe-8299-4680-9dea-ef79d30db683"
+    },
+    {
+     "text": "Multaq",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c"
+    },
+    {
+     "text": "Calan SR",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed182ebe-8299-4680-9dea-ef79d30db683"
+    },
+    {
+     "text": "Lanoxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Multaq, Calan SR, Zocor",
+   "category": "Zocor with 2 drugs that raise the statin level: raises the statin level: risk of muscle injury",
+   "basis": "Why D: The Warnings and Precautions section of the Zocor label addresses this combination: raises the statin level: risk of muscle injury. Clinical rulebook row 27.",
+   "quote": "Simvastatin dosage modifications are recommended for patients taking lomitapide, verapamil, diltiazem, dronedarone, amiodarone, amlodipine or ranolazine [see DOSAGE AND ADMINISTRATION ( 2.5 )].",
+   "source": "From the Zocor label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These drugs slow simvastatin's clearance. The simvastatin label caps the dose at 10 mg a day with verapamil, diltiazem, or dronedarone, and 20 mg with amiodarone, amlodipine, or ranolazine.",
+   "action": "Keep simvastatin at or below the label's cap, or switch to a statin not cleared by CYP3A4 (pravastatin, rosuvastatin).",
+   "includes": null,
+   "sources": "FDA labels: Multaq\n · Calan SR\n · Zocor\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e"
+    },
+    {
+     "text": "Multaq",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c"
+    },
+    {
+     "text": "Calan SR",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed182ebe-8299-4680-9dea-ef79d30db683"
+    },
+    {
+     "text": "Zocor",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Pradaxa, Multaq",
+   "category": "Pradaxa with Multaq: dabigatran levels rise: risk of major bleeding",
+   "basis": "Why D: The Warnings and Precautions section of the Pradaxa label addresses this combination: dabigatran levels rise: risk of major bleeding. Clinical rulebook row 11.",
+   "quote": "Reduction of Risk of Stroke and Systemic Embolism in Non-valvular Atrial Fibrillation in Adult Patients Reduce the dosage of Dabigatran Etexilate Capsules to 75 mg twice daily when dronedarone or systemic ketoconazole is co-administered with Dabigatran Etexilate Capsules in patients with moderate renal impairment (CrCl 30 to 50 mL/min).",
+   "source": "From the Pradaxa label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Dabigatran is moved out of the gut by P-glycoprotein (P-gp) and cleared about 80% by the kidney. Dronedarone and ketoconazole block P-gp and roughly double dabigatran exposure.",
+   "action": "Avoid when kidney function is reduced (CrCl below 50 mL/min); otherwise follow the label's dose reduction and watch for bleeding.",
+   "includes": null,
+   "sources": "FDA labels: Pradaxa\n · Multaq",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a8ec82a-c367-40dc-9302-e1896fcb05ea"
+    },
+    {
+     "text": "Pradaxa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a8ec82a-c367-40dc-9302-e1896fcb05ea"
+    },
+    {
+     "text": "Multaq",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Multaq, Lanoxin",
+   "category": "Lanoxin with Multaq: digoxin levels rise: toxicity",
+   "basis": "Why D: The Drug Interactions section of the Lanoxin label addresses this combination: digoxin levels rise: toxicity. Clinical rulebook row 18.",
+   "quote": "7.2 Pharmacokinetic Drug Interactions Digoxin concentrations increased greater than 50% Digoxin Serum Concentration Increase Digoxin AUC Increase Recommendations Amiodarone 70% NA Measure serum digoxin concentrations before initiating concomitant drugs.",
+   "source": "From the Lanoxin label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These drugs block P-glycoprotein, the pump that clears digoxin, and raise digoxin levels by 50 to 150% (amiodarone about 70%, dronedarone about 2.5-fold). Digoxin has a narrow margin.",
+   "action": "Halve the digoxin dose when starting amiodarone or dronedarone, and check a digoxin level within 1 to 2 weeks (target 0.5 to 0.9 ng/mL in heart failure).",
+   "includes": null,
+   "sources": "FDA labels: Multaq\n · Lanoxin\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    },
+    {
+     "text": "Multaq",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c"
+    },
+    {
+     "text": "Lanoxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Multaq, Lanoxin, Lasix",
+   "category": "3 drugs: low potassium and magnesium from the diuretic raise the rhythm risk",
+   "basis": "Why C: The Precautions section of the Lasix label addresses this combination: low potassium and magnesium from the diuretic raise the rhythm risk. Clinical rulebook row 18, 23.",
+   "quote": "Hypokalemia may develop with furosemide, especially with brisk diuresis, inadequate oral electrolyte intake, when cirrhosis is present, or during concomitant use of corticosteroids, ACTH, licorice in large amounts, or prolonged use of laxatives.",
+   "source": "From the Lasix label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Loop and thiazide diuretics lower potassium and magnesium. Low levels make QT-prolonging drugs more likely to cause torsades and make digoxin more toxic.",
+   "action": "Check potassium and magnesium at the start and after dose changes; replace them to keep potassium above 4.0 mmol/L.",
+   "includes": null,
+   "sources": "FDA labels: Multaq\n · Lanoxin\n · Lasix",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a"
+    },
+    {
+     "text": "Multaq",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c"
+    },
+    {
+     "text": "Lanoxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    },
+    {
+     "text": "Lasix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Pradaxa, Calan SR",
+   "category": "Pradaxa with Calan SR: dabigatran levels rise",
+   "basis": "Why C: The Drug Interactions section of the Pradaxa label addresses this combination: dabigatran levels rise. Clinical rulebook row 11.",
+   "quote": "The use of the P-gp inhibitors verapamil, amiodarone, quinidine, clarithromycin, and ticagrelor does not require a dosage adjustment of Dabigatran Etexilate Capsules.",
+   "source": "From the Pradaxa label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These drugs block P-glycoprotein (P-gp) and raise dabigatran levels; verapamil raises them 50 to 180% depending on timing.",
+   "action": "Give dabigatran at least 2 hours before verapamil, check kidney function, and watch for bleeding.",
+   "includes": null,
+   "sources": "FDA labels: Pradaxa\n · Calan SR",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a8ec82a-c367-40dc-9302-e1896fcb05ea"
+    },
+    {
+     "text": "Pradaxa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a8ec82a-c367-40dc-9302-e1896fcb05ea"
+    },
+    {
+     "text": "Calan SR",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed182ebe-8299-4680-9dea-ef79d30db683"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Calan SR, Lanoxin",
+   "category": "Lanoxin with Calan SR: digoxin levels rise",
+   "basis": "Why C: The Drug Interactions section of the Lanoxin label addresses this combination: digoxin levels rise. Clinical rulebook row 18.",
+   "quote": "Captopril 58% 39% Clarithromycin NA 70% Dronedarone NA 150% Gentamicin 129-212% NA Erythromycin 100% NA Itraconazole 80% NA Lapatinib NA 180% Propafenone NA 60-270% Quinidine 100% NA Ranolazine 50% NA Ritonavir NA 86% Telaprevir 50% 85% Tetracycline 100% NA Verapamil 50-75% NA Digoxin concentrations increased less than 50% Atorvastatin 22% 15% Carvedilol 16% 14% Measure serum digoxin concentrations before initiating concomitant drugs.",
+   "source": "From the Lanoxin label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Verapamil raises digoxin 50 to 75% and diltiazem 20 to 50% by blocking P-glycoprotein, and both add to digoxin's slowing of the heart.",
+   "action": "Check a digoxin level and heart rate after starting; lower the digoxin dose if needed.",
+   "includes": null,
+   "sources": "FDA labels: Calan SR\n · Lanoxin",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    },
+    {
+     "text": "Calan SR",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed182ebe-8299-4680-9dea-ef79d30db683"
+    },
+    {
+     "text": "Lanoxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Multaq, Lanoxin",
+   "category": "QT Prolongation Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "MULTAQ is contraindicated in patients with: • Permanent atrial fibrillation (patients in whom normal sinus rhythm will not or cannot be restored) [see Boxed Warning , Warnings and Precautions (5.2) ] • Symptomatic heart failure with recent decompensation requiring hospitalization or NYHA Class IV symptoms [see Boxed Warning , Warnings and Precautions (5.1) ] • Second or third-degree atrioventricular (AV) block, or sick sinus syndrome (except when used in conjunction with a functioning pacemaker) • Bradycardia <50 bpm • Concomitant use of strong CYP3A inhibitors, such as ketoconazole, itraconazole, voriconazole, cyclosporine, telithromycin, clarithromycin, nefazodone, and ritonavir [see Drug Interactions (7.2) ] • Concomitant use of erythromycin [see Clinical Pharmacology (12.3) ] • Concomitant use of drugs or herbal products that prolong the QT interval and might increase the risk of torsade de pointes, such as phenothiazine antipsychotics, tricyclic antidepressants, certain oral macrolide antibiotics, and Class I and III antiarrhythmics • Liver or lung toxicity related to the previous use of amiodarone • QTc interval >500 ms or PR interval >280 ms • Severe hepatic impairment • Hypersensitivity to the active substance or to any of the excipients • Permanent AF (patients in whom normal sinus rhythm will not or cannot be restored) ( Boxed Warning , 4 ) • Recently decompensated heart failure requiring hospitalization or Class IV heart failure ( Boxed Warning , 4 ) • Second or third-degree atrioventricular (AV) block or sick sinus syndrome (except when used in conjunction with a functioning pacemaker) ( 4 ) • Bradycardia <50 bpm ( 4 ) • Concomitant use of a strong CYP3A inhibitor ( 4 ) • Concomitant use of erythromycin ( 4 ) • Concomitant use of drugs or herbal products that prolong the QT interval and may induce torsade de pointes ( 4 ) • Liver or lung toxicity related to the previous use of amiodarone ( 4 ) • QTc interval >500 ms or PR interval >280 ms ( 4 ) • Severe hepatic impairment ( 4 ) • Hypersensitivity to the active substance or to any of the excipients ( 4 )",
+   "source": "From the Multaq label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "What this means: QT prolongation",
+   "why_text": "Each of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Multaq\n · Lanoxin",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c"
+    },
+    {
+     "text": "National Heart, Lung, and Blood Institute, NIH",
+     "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome"
+    },
+    {
+     "text": "Multaq",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c"
+    },
+    {
+     "text": "Lanoxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967"
+    }
+   ],
+   "classes": "alert alert--tier-1 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "4"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "3"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Pradaxa",
+   "generic": "dabigatran etexilate",
+   "dose": "150 mg · twice a day · 300 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment",
+   "text": "Pradaxa\ndabigatran etexilate\n150 mg · twice a day · 300 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment"
+  },
+  {
+   "brand": "Multaq",
+   "generic": "dronedarone",
+   "dose": "400 mg · twice a day · 800 mg/day total",
+   "facts": "Antiarrhythmic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Multaq\ndronedarone\n400 mg · twice a day · 800 mg/day total\nAntiarrhythmic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Calan SR",
+   "generic": "verapamil",
+   "dose": "240 mg · once a day · 240 mg/day total",
+   "facts": "extended release\nHigh-Frequency Adverse Effect",
+   "text": "Calan SR\nverapamil\n240 mg · once a day · 240 mg/day total\nextended release\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Lanoxin",
+   "generic": "digoxin",
+   "dose": "0.125 mg · once a day · 0.125 mg/day total",
+   "facts": "Cardiac Glycoside [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk",
+   "text": "Lanoxin\ndigoxin\n0.125 mg · once a day · 0.125 mg/day total\nCardiac Glycoside [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Zocor",
+   "generic": "simvastatin",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "HMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Zocor\nsimvastatin\n20 mg · once a day · 20 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Lasix",
+   "generic": "furosemide",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "Loop Diuretic [EPC]",
+   "text": "Lasix\nfurosemide\n20 mg · once a day · 20 mg/day total\nLoop Diuretic [EPC]"
+  }
+ ],
+ "totals": [
+  "dabigatran etexilate\n300 mg/day",
+  "digoxin\n125 mcg (0.125 mg)/day",
+  "dronedarone\n800 mg/day",
+  "furosemide\n20 mg/day",
+  "simvastatin\n20 mg/day",
+  "verapamil\n240 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed182ebe-8299-4680-9dea-ef79d30db683",
+   "in_alert": true
+  },
+  {
+   "text": "Multaq",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c",
+   "in_alert": true
+  },
+  {
+   "text": "Calan SR",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed182ebe-8299-4680-9dea-ef79d30db683",
+   "in_alert": true
+  },
+  {
+   "text": "Lanoxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": true
+  },
+  {
+   "text": "Multaq",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c",
+   "in_alert": true
+  },
+  {
+   "text": "Calan SR",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed182ebe-8299-4680-9dea-ef79d30db683",
+   "in_alert": true
+  },
+  {
+   "text": "Zocor",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a8ec82a-c367-40dc-9302-e1896fcb05ea",
+   "in_alert": true
+  },
+  {
+   "text": "Pradaxa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a8ec82a-c367-40dc-9302-e1896fcb05ea",
+   "in_alert": true
+  },
+  {
+   "text": "Multaq",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Multaq",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c",
+   "in_alert": true
+  },
+  {
+   "text": "Lanoxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": true
+  },
+  {
+   "text": "Multaq",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c",
+   "in_alert": true
+  },
+  {
+   "text": "Lanoxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Lasix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a8ec82a-c367-40dc-9302-e1896fcb05ea",
+   "in_alert": true
+  },
+  {
+   "text": "Pradaxa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a8ec82a-c367-40dc-9302-e1896fcb05ea",
+   "in_alert": true
+  },
+  {
+   "text": "Calan SR",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed182ebe-8299-4680-9dea-ef79d30db683",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Calan SR",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed182ebe-8299-4680-9dea-ef79d30db683",
+   "in_alert": true
+  },
+  {
+   "text": "Lanoxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c",
+   "in_alert": true
+  },
+  {
+   "text": "National Heart, Lung, and Blood Institute, NIH",
+   "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome",
+   "in_alert": true
+  },
+  {
+   "text": "Multaq",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c",
+   "in_alert": true
+  },
+  {
+   "text": "Lanoxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n8 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n4\nC\nMonitor closely\n3\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nMultaq, Calan SR, Lanoxin\n\n3 heart-rate-slowing drugs: risk of slow heart rate (bradycardia) and heart block\n\nWhy D: The Drug Interactions section of the Multaq label addresses this combination: risk of slow heart rate (bradycardia) and heart block. Clinical rulebook row 20.\n\nBeta-blockers: Concomitant therapy with beta-adrenergic blockers and verapamil may result in additive negative effects on heart rate, atrioventricular conduction and/or cardiac contractility.\n\nFrom the Calan SR label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart rate or conduction through the AV node. Together they can cause severe bradycardia, AV block, or heart failure.\n\nWhat to do\n\nCheck pulse and an ECG after starting or raising any of them; lower doses or stop one if the heart rate drops below 50 or new AV block appears.\n\nFDA labels: Multaq\n · Calan SR\n · Lanoxin\n\nShow 1 more label sentence\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nMultaq, Calan SR, Zocor\n\nZocor with 2 drugs that raise the statin level: raises the statin level: risk of muscle injury\n\nWhy D: The Warnings and Precautions section of the Zocor label addresses this combination: raises the statin level: risk of muscle injury. Clinical rulebook row 27.\n\nSimvastatin dosage modifications are recommended for patients taking lomitapide, verapamil, diltiazem, dronedarone, amiodarone, amlodipine or ranolazine [see DOSAGE AND ADMINISTRATION ( 2.5 )].\n\nFrom the Zocor label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese drugs slow simvastatin's clearance. The simvastatin label caps the dose at 10 mg a day with verapamil, diltiazem, or dronedarone, and 20 mg with amiodarone, amlodipine, or ranolazine.\n\nWhat to do\n\nKeep simvastatin at or below the label's cap, or switch to a statin not cleared by CYP3A4 (pravastatin, rosuvastatin).\n\nFDA labels: Multaq\n · Calan SR\n · Zocor\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nPradaxa, Multaq\n\nPradaxa with Multaq: dabigatran levels rise: risk of major bleeding\n\nWhy D: The Warnings and Precautions section of the Pradaxa label addresses this combination: dabigatran levels rise: risk of major bleeding. Clinical rulebook row 11.\n\nReduction of Risk of Stroke and Systemic Embolism in Non-valvular Atrial Fibrillation in Adult Patients Reduce the dosage of Dabigatran Etexilate Capsules to 75 mg twice daily when dronedarone or systemic ketoconazole is co-administered with Dabigatran Etexilate Capsules in patients with moderate renal impairment (CrCl 30 to 50 mL/min).\n\nFrom the Pradaxa label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nDabigatran is moved out of the gut by P-glycoprotein (P-gp) and cleared about 80% by the kidney. Dronedarone and ketoconazole block P-gp and roughly double dabigatran exposure.\n\nWhat to do\n\nAvoid when kidney function is reduced (CrCl below 50 mL/min); otherwise follow the label's dose reduction and watch for bleeding.\n\nFDA labels: Pradaxa\n · Multaq\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nMultaq, Lanoxin\n\nLanoxin with Multaq: digoxin levels rise: toxicity\n\nWhy D: The Drug Interactions section of the Lanoxin label addresses this combination: digoxin levels rise: toxicity. Clinical rulebook row 18.\n\n7.2 Pharmacokinetic Drug Interactions Digoxin concentrations increased greater than 50% Digoxin Serum Concentration Increase Digoxin AUC Increase Recommendations Amiodarone 70% NA Measure serum digoxin concentrations before initiating concomitant drugs.\n\nFrom the Lanoxin label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese drugs block P-glycoprotein, the pump that clears digoxin, and raise digoxin levels by 50 to 150% (amiodarone about 70%, dronedarone about 2.5-fold). Digoxin has a narrow margin.\n\nWhat to do\n\nHalve the digoxin dose when starting amiodarone or dronedarone, and check a digoxin level within 1 to 2 weeks (target 0.5 to 0.9 ng/mL in heart failure).\n\nFDA labels: Multaq\n · Lanoxin\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nMultaq, Lanoxin, Lasix\n\n3 drugs: low potassium and magnesium from the diuretic raise the rhythm risk\n\nWhy C: The Precautions section of the Lasix label addresses this combination: low potassium and magnesium from the diuretic raise the rhythm risk. Clinical rulebook row 18, 23.\n\nHypokalemia may develop with furosemide, especially with brisk diuresis, inadequate oral electrolyte intake, when cirrhosis is present, or during concomitant use of corticosteroids, ACTH, licorice in large amounts, or prolonged use of laxatives.\n\nFrom the Lasix label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nLoop and thiazide diuretics lower potassium and magnesium. Low levels make QT-prolonging drugs more likely to cause torsades and make digoxin more toxic.\n\nWhat to do\n\nCheck potassium and magnesium at the start and after dose changes; replace them to keep potassium above 4.0 mmol/L.\n\nFDA labels: Multaq\n · Lanoxin\n · Lasix\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nPradaxa, Calan SR\n\nPradaxa with Calan SR: dabigatran levels rise\n\nWhy C: The Drug Interactions section of the Pradaxa label addresses this combination: dabigatran levels rise. Clinical rulebook row 11.\n\nThe use of the P-gp inhibitors verapamil, amiodarone, quinidine, clarithromycin, and ticagrelor does not require a dosage adjustment of Dabigatran Etexilate Capsules.\n\nFrom the Pradaxa label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese drugs block P-glycoprotein (P-gp) and raise dabigatran levels; verapamil raises them 50 to 180% depending on timing.\n\nWhat to do\n\nGive dabigatran at least 2 hours before verapamil, check kidney function, and watch for bleeding.\n\nFDA labels: Pradaxa\n · Calan SR\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nCalan SR, Lanoxin\n\nLanoxin with Calan SR: digoxin levels rise\n\nWhy C: The Drug Interactions section of the Lanoxin label addresses this combination: digoxin levels rise. Clinical rulebook row 18.\n\nCaptopril 58% 39% Clarithromycin NA 70% Dronedarone NA 150% Gentamicin 129-212% NA Erythromycin 100% NA Itraconazole 80% NA Lapatinib NA 180% Propafenone NA 60-270% Quinidine 100% NA Ranolazine 50% NA Ritonavir NA 86% Telaprevir 50% 85% Tetracycline 100% NA Verapamil 50-75% NA Digoxin concentrations increased less than 50% Atorvastatin 22% 15% Carvedilol 16% 14% Measure serum digoxin concentrations before initiating concomitant drugs.\n\nFrom the Lanoxin label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nVerapamil raises digoxin 50 to 75% and diltiazem 20 to 50% by blocking P-glycoprotein, and both add to digoxin's slowing of the heart.\n\nWhat to do\n\nCheck a digoxin level and heart rate after starting; lower the digoxin dose if needed.\n\nFDA labels: Calan SR\n · Lanoxin\n\nA\nMinor — Minor: usually no action needed.\nMultaq, Lanoxin\n\nQT Prolongation Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\nMULTAQ is contraindicated in patients with: • Permanent atrial fibrillation (patients in whom normal sinus rhythm will not or cannot be restored) [see Boxed Warning , Warnings and Precautions (5.2) ] • Symptomatic heart failure with recent decompensation requiring hospitalization or NYHA Class IV symptoms [see Boxed Warning , Warnings and Precautions (5.1) ] • Second or third-degree atrioventricular (AV) block, or sick sinus syndrome (except when used in conjunction with a functioning pacemaker) • Bradycardia <50 bpm • Concomitant use of strong CYP3A inhibitors, such as ketoconazole, itraconazole, voriconazole, cyclosporine, telithromycin, clarithromycin, nefazodone, and ritonavir [see Drug Interactions (7.2) ] • Concomitant use of erythromycin [see Clinical Pharmacology (12.3) ] • Concomitant use of drugs or herbal products that prolong the QT interval and might increase the risk of torsade de pointes, such as phenothiazine antipsychotics, tricyclic antidepressants, certain oral macrolide antibiotics, and Class I and III antiarrhythmics • Liver or lung toxicity related to the previous use of amiodarone • QTc interval >500 ms or PR interval >280 ms • Severe hepatic impairment • Hypersensitivity to the active substance or to any of the excipients • Permanent AF (patients in whom normal sinus rhythm will not or cannot be restored) ( Boxed Warning , 4 ) • Recently decompensated heart failure requiring hospitalization or Class IV heart failure ( Boxed Warning , 4 ) • Second or third-degree atrioventricular (AV) block or sick sinus syndrome (except when used in conjunction with a functioning pacemaker) ( 4 ) • Bradycardia <50 bpm ( 4 ) • Concomitant use of a strong CYP3A inhibitor ( 4 ) • Concomitant use of erythromycin ( 4 ) • Concomitant use of drugs or herbal products that prolong the QT interval and may induce torsade de pointes ( 4 ) • Liver or lung toxicity related to the previous use of amiodarone ( 4 ) • QTc interval >500 ms or PR interval >280 ms ( 4 ) • Severe hepatic impairment ( 4 ) • Hypersensitivity to the active substance or to any of the excipients ( 4 )\n\nFrom the Multaq label, Contraindications section.\nOpen on DailyMed\n\nWhat this means: QT prolongation\n\nEach of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.\n\nSource: National Heart, Lung, and Blood Institute, NIH\n\nFDA labels: Multaq\n · Lanoxin\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\ndabigatran etexilate\n300 mg/day\ndigoxin\n125 mcg (0.125 mg)/day\ndronedarone\n800 mg/day\nfurosemide\n20 mg/day\nsimvastatin\n20 mg/day\nverapamil\n240 mg/day\nPradaxa\ndabigatran etexilate\n150 mg · twice a day · 300 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nMultaq\ndronedarone\n400 mg · twice a day · 800 mg/day total\nAntiarrhythmic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk\nContraindicated Combination\nCalan SR\nverapamil\n240 mg · once a day · 240 mg/day total\nextended release\nHigh-Frequency Adverse Effect\nLanoxin\ndigoxin\n0.125 mg · once a day · 0.125 mg/day total\nCardiac Glycoside [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nZocor\nsimvastatin\n20 mg · once a day · 20 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nLasix\nfurosemide\n20 mg · once a day · 20 mg/day total\nLoop Diuretic [EPC]\n8 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:08:05.105Z"
+}

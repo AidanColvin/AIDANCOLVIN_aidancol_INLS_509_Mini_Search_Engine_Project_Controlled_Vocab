@@ -1,0 +1,378 @@
+{
+ "id": "L04",
+ "input": "Lithobid (lithium carbonate ER) 300 mg three times daily = 900 mg/day, Zestril (lisinopril) 20 mg once daily = 20 mg/day, Microzide (hydrochlorothiazide) 25 mg once daily = 25 mg/day, Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day, Topamax (topiramate) 100 mg twice daily = 200 mg/day, Glucophage (metformin) 1000 mg twice daily = 2000 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.873,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Zestril, Microzide, Motrin",
+   "category": "3 drugs: risk of acute kidney injury",
+   "basis": "Why D: The Warnings section of the Motrin label addresses this combination: risk of acute kidney injury. Clinical rulebook row 14.",
+   "quote": "Patients at greatest risk of this reaction are those with impaired renal function, heart failure, liver dysfunction, those taking diuretics and ACE inhibitors, and the elderly.",
+   "source": "From the Motrin label, Warnings section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "NSAIDs remove the prostaglandins that keep blood flowing into the kidney, ACE inhibitors and ARBs lower the pressure that keeps it filtering, and diuretics reduce blood volume (the \"triple whammy\"). Aminoglycosides, vancomycin, and other listed drugs injure the kidney directly.",
+   "action": "Avoid the NSAID if possible, keep the patient hydrated, and check creatinine within a week, sooner in the hospital.",
+   "includes": null,
+   "sources": "FDA labels: Zestril\n · Microzide\n · Motrin\n · Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741"
+    },
+    {
+     "text": "Zestril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533"
+    },
+    {
+     "text": "Microzide",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f20fd735-30c7-4f89-8ceb-b6186646eea6"
+    },
+    {
+     "text": "Motrin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741"
+    },
+    {
+     "text": "Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/23299844/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Lithobid, Zestril, Microzide, Motrin",
+   "category": "Lithobid with 3 drugs that raise lithium levels: lithium levels rise: lithium toxicity",
+   "basis": "Why D: The Precautions section of the Lithobid label addresses this combination: lithium levels rise: lithium toxicity. Clinical rulebook row 16.",
+   "quote": "Drug Interactions Diuretic-, ACE-, and ARB-induced sodium loss may increase serum lithium concentrations.",
+   "source": "From the Lithobid label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "The kidney handles lithium like sodium. Thiazides (levels up 25 to 40%), ACE inhibitors and ARBs, and NSAIDs all make the kidney hold on to lithium. Toxicity brings coarse tremor, unsteadiness, confusion, and arrhythmia.",
+   "action": "Avoid if possible; otherwise lower the lithium dose and check a lithium level within 5 to 7 days (therapeutic range 0.6 to 1.2 mEq/L), plus kidney function and sodium.",
+   "includes": null,
+   "sources": "FDA labels: Lithobid\n · Zestril\n · Microzide\n · Motrin\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7f5b69a-c2a1-4586-a189-1475d41387c0"
+    },
+    {
+     "text": "Lithobid",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7f5b69a-c2a1-4586-a189-1475d41387c0"
+    },
+    {
+     "text": "Zestril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533"
+    },
+    {
+     "text": "Microzide",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f20fd735-30c7-4f89-8ceb-b6186646eea6"
+    },
+    {
+     "text": "Motrin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Zestril, Motrin",
+   "category": "2 drugs: risk of high potassium (hyperkalemia)",
+   "basis": "Why C: Class rule: risk of high potassium (hyperkalemia). Clinical rulebook row 15.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "ACE inhibitors and ARBs lower aldosterone, spironolactone and eplerenone block it, trimethoprim blocks the kidney's potassium channel (like amiloride), and supplements add potassium. Together potassium can rise to levels that stop the heart.",
+   "action": "Check potassium and kidney function within 3 days and again at 1 week; stop the potassium supplement or change the antibiotic when possible.",
+   "includes": null,
+   "sources": "FDA labels: Zestril\n · Motrin\n · Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES\n · Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+   "links": [
+    {
+     "text": "Zestril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533"
+    },
+    {
+     "text": "Motrin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741"
+    },
+    {
+     "text": "Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/15295047/"
+    },
+    {
+     "text": "Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/25646289/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Topamax, Glucophage",
+   "category": "Glucophage with Topamax: risk of metabolic or lactic acidosis",
+   "basis": "Why C: Class rule: risk of metabolic or lactic acidosis. Clinical rulebook row 19.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Topiramate and other carbonic anhydrase inhibitors cause a metabolic acidosis that adds to metformin's rare lactic acidosis risk; the topiramate label warns about this.",
+   "action": "Check a bicarbonate level; stop metformin if acidosis develops or kidney function falls.",
+   "includes": null,
+   "sources": "FDA labels: Topamax\n · Glucophage",
+   "links": [
+    {
+     "text": "Topamax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8"
+    },
+    {
+     "text": "Glucophage",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05999192-ebc6-4198-bd1e-f46abbfb4f8a"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Microzide, Topamax",
+   "category": "Topamax with Microzide: topiramate exposure rises; potassium may fall",
+   "basis": "Why A: The Drug Interactions section of the Topamax label addresses this combination: topiramate exposure rises; potassium may fall.",
+   "quote": "7.5 Hydrochlorothiazide (HCTZ) Topiramate C max and AUC increased when HCTZ was added to topiramate tablets.",
+   "source": "From the Topamax label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Hydrochlorothiazide raised topiramate exposure about 30%, and both can lower potassium.",
+   "action": "Check potassium if symptoms suggest it.",
+   "includes": null,
+   "sources": "FDA labels: Microzide\n · Topamax",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8"
+    },
+    {
+     "text": "Microzide",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f20fd735-30c7-4f89-8ceb-b6186646eea6"
+    },
+    {
+     "text": "Topamax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "2"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Lithobid",
+   "generic": "lithium carbonate",
+   "dose": "300 mg · 3 times a day · 900 mg/day total",
+   "facts": "extended release\nBoxed Warning\nSerotonin Syndrome Risk",
+   "text": "Lithobid\nlithium carbonate\n300 mg · 3 times a day · 900 mg/day total\nextended release\nBoxed Warning\nSerotonin Syndrome Risk"
+  },
+  {
+   "brand": "Zestril",
+   "generic": "lisinopril",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Zestril\nlisinopril\n20 mg · once a day · 20 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Microzide",
+   "generic": "hydrochlorothiazide",
+   "dose": "25 mg · once a day · 25 mg/day total",
+   "facts": "Thiazide Diuretic [EPC]",
+   "text": "Microzide\nhydrochlorothiazide\n25 mg · once a day · 25 mg/day total\nThiazide Diuretic [EPC]"
+  },
+  {
+   "brand": "Motrin",
+   "generic": "ibuprofen",
+   "dose": "800 mg · 3 times a day · 2400 mg/day total",
+   "facts": "Nonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning",
+   "text": "Motrin\nibuprofen\n800 mg · 3 times a day · 2400 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning"
+  },
+  {
+   "brand": "Topamax",
+   "generic": "topiramate",
+   "dose": "100 mg · twice a day · 200 mg/day total",
+   "facts": "Pediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk",
+   "text": "Topamax\ntopiramate\n100 mg · twice a day · 200 mg/day total\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Glucophage",
+   "generic": "metformin",
+   "dose": "1000 mg · twice a day · 2000 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment",
+   "text": "Glucophage\nmetformin\n1000 mg · twice a day · 2000 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment"
+  }
+ ],
+ "totals": [
+  "hydrochlorothiazide\n25 mg/day",
+  "ibuprofen\n2,400 mg (2.4 g)/day",
+  "lisinopril\n20 mg/day",
+  "lithium carbonate\n900 mg/day",
+  "metformin\n2,000 mg (2 g)/day",
+  "topiramate\n200 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": true
+  },
+  {
+   "text": "Zestril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533",
+   "in_alert": true
+  },
+  {
+   "text": "Microzide",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f20fd735-30c7-4f89-8ceb-b6186646eea6",
+   "in_alert": true
+  },
+  {
+   "text": "Motrin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": true
+  },
+  {
+   "text": "Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/23299844/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7f5b69a-c2a1-4586-a189-1475d41387c0",
+   "in_alert": true
+  },
+  {
+   "text": "Lithobid",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7f5b69a-c2a1-4586-a189-1475d41387c0",
+   "in_alert": true
+  },
+  {
+   "text": "Zestril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533",
+   "in_alert": true
+  },
+  {
+   "text": "Microzide",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f20fd735-30c7-4f89-8ceb-b6186646eea6",
+   "in_alert": true
+  },
+  {
+   "text": "Motrin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Zestril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533",
+   "in_alert": true
+  },
+  {
+   "text": "Motrin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": true
+  },
+  {
+   "text": "Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/15295047/",
+   "in_alert": true
+  },
+  {
+   "text": "Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/25646289/",
+   "in_alert": true
+  },
+  {
+   "text": "Topamax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8",
+   "in_alert": true
+  },
+  {
+   "text": "Glucophage",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05999192-ebc6-4198-bd1e-f46abbfb4f8a",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8",
+   "in_alert": true
+  },
+  {
+   "text": "Microzide",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f20fd735-30c7-4f89-8ceb-b6186646eea6",
+   "in_alert": true
+  },
+  {
+   "text": "Topamax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n5 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n2\nC\nMonitor closely\n2\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nZestril, Microzide, Motrin\n\n3 drugs: risk of acute kidney injury\n\nWhy D: The Warnings section of the Motrin label addresses this combination: risk of acute kidney injury. Clinical rulebook row 14.\n\nPatients at greatest risk of this reaction are those with impaired renal function, heart failure, liver dysfunction, those taking diuretics and ACE inhibitors, and the elderly.\n\nFrom the Motrin label, Warnings section.\nOpen on DailyMed\n\nWhy it happens\n\nNSAIDs remove the prostaglandins that keep blood flowing into the kidney, ACE inhibitors and ARBs lower the pressure that keeps it filtering, and diuretics reduce blood volume (the \"triple whammy\"). Aminoglycosides, vancomycin, and other listed drugs injure the kidney directly.\n\nWhat to do\n\nAvoid the NSAID if possible, keep the patient hydrated, and check creatinine within a week, sooner in the hospital.\n\nFDA labels: Zestril\n · Microzide\n · Motrin\n · Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nLithobid, Zestril, Microzide, Motrin\n\nLithobid with 3 drugs that raise lithium levels: lithium levels rise: lithium toxicity\n\nWhy D: The Precautions section of the Lithobid label addresses this combination: lithium levels rise: lithium toxicity. Clinical rulebook row 16.\n\nDrug Interactions Diuretic-, ACE-, and ARB-induced sodium loss may increase serum lithium concentrations.\n\nFrom the Lithobid label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nThe kidney handles lithium like sodium. Thiazides (levels up 25 to 40%), ACE inhibitors and ARBs, and NSAIDs all make the kidney hold on to lithium. Toxicity brings coarse tremor, unsteadiness, confusion, and arrhythmia.\n\nWhat to do\n\nAvoid if possible; otherwise lower the lithium dose and check a lithium level within 5 to 7 days (therapeutic range 0.6 to 1.2 mEq/L), plus kidney function and sodium.\n\nFDA labels: Lithobid\n · Zestril\n · Microzide\n · Motrin\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nZestril, Motrin\n\n2 drugs: risk of high potassium (hyperkalemia)\n\nWhy C: Class rule: risk of high potassium (hyperkalemia). Clinical rulebook row 15.\n\nWhy it happens\n\nACE inhibitors and ARBs lower aldosterone, spironolactone and eplerenone block it, trimethoprim blocks the kidney's potassium channel (like amiloride), and supplements add potassium. Together potassium can rise to levels that stop the heart.\n\nWhat to do\n\nCheck potassium and kidney function within 3 days and again at 1 week; stop the potassium supplement or change the antibiotic when possible.\n\nFDA labels: Zestril\n · Motrin\n · Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES\n · Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nTopamax, Glucophage\n\nGlucophage with Topamax: risk of metabolic or lactic acidosis\n\nWhy C: Class rule: risk of metabolic or lactic acidosis. Clinical rulebook row 19.\n\nWhy it happens\n\nTopiramate and other carbonic anhydrase inhibitors cause a metabolic acidosis that adds to metformin's rare lactic acidosis risk; the topiramate label warns about this.\n\nWhat to do\n\nCheck a bicarbonate level; stop metformin if acidosis develops or kidney function falls.\n\nFDA labels: Topamax\n · Glucophage\n\nA\nMinor — Minor: usually no action needed.\nMicrozide, Topamax\n\nTopamax with Microzide: topiramate exposure rises; potassium may fall\n\nWhy A: The Drug Interactions section of the Topamax label addresses this combination: topiramate exposure rises; potassium may fall.\n\n7.5 Hydrochlorothiazide (HCTZ) Topiramate C max and AUC increased when HCTZ was added to topiramate tablets.\n\nFrom the Topamax label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nHydrochlorothiazide raised topiramate exposure about 30%, and both can lower potassium.\n\nWhat to do\n\nCheck potassium if symptoms suggest it.\n\nFDA labels: Microzide\n · Topamax\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nhydrochlorothiazide\n25 mg/day\nibuprofen\n2,400 mg (2.4 g)/day\nlisinopril\n20 mg/day\nlithium carbonate\n900 mg/day\nmetformin\n2,000 mg (2 g)/day\ntopiramate\n200 mg/day\nLithobid\nlithium carbonate\n300 mg · 3 times a day · 900 mg/day total\nextended release\nBoxed Warning\nSerotonin Syndrome Risk\nZestril\nlisinopril\n20 mg · once a day · 20 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nMicrozide\nhydrochlorothiazide\n25 mg · once a day · 25 mg/day total\nThiazide Diuretic [EPC]\nMotrin\nibuprofen\n800 mg · 3 times a day · 2400 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nTopamax\ntopiramate\n100 mg · twice a day · 200 mg/day total\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nGlucophage\nmetformin\n1000 mg · twice a day · 2000 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\n5 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:05:15.931Z"
+}

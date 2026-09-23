@@ -1,0 +1,282 @@
+{
+ "id": "L36",
+ "input": "Suboxone (buprenorphine/naloxone) 8/2 mg sublingual twice daily = 16/4 mg/day, Revia (naltrexone) 50 mg once daily = 50 mg/day, Campral (acamprosate) 666 mg three times daily = 1998 mg/day, Klonopin (clonazepam) 0.5 mg twice daily = 1 mg/day, Neurontin (gabapentin) 300 mg three times daily = 900 mg/day, Seroquel (quetiapine) 50 mg once daily at bedtime = 50 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.968,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Suboxone, Revia",
+   "category": "Suboxone with Revia: the antagonist blocks the opioid and can bring on withdrawal",
+   "basis": "Why E: The Contraindications section of the Revia label addresses this combination: the antagonist blocks the opioid and can bring on withdrawal.",
+   "quote": "CONTRAINDICATIONS Naltrexone hydrochloride is contraindicated in: Patients receiving opioid analgesics.",
+   "source": "From the Revia label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Naltrexone occupies opioid receptors: it blocks the opioid's effect and precipitates acute withdrawal in a patient who depends on the opioid. The naltrexone label contraindicates use in patients taking opioids. One of these prescriptions is likely an error.",
+   "action": "Do not use together. Decide which treatment is intended; naltrexone needs 7 to 10 opioid-free days first.",
+   "includes": null,
+   "sources": "FDA labels: Suboxone\n · Revia",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=db911559-26f5-43a0-b61f-3425176c936f"
+    },
+    {
+     "text": "Suboxone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2063d5bf-b3bc-4e73-9046-7e994446ab50"
+    },
+    {
+     "text": "Revia",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=db911559-26f5-43a0-b61f-3425176c936f"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Suboxone, Klonopin, Neurontin, Seroquel",
+   "category": "4 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: The Warnings and Precautions section of the Suboxone label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "WARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Klonopin label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": "Suboxone with Klonopin: boxed warning: profound sedation, respiratory depression, coma, death. Opioids and benzodiazepines both suppress the brainstem's drive to breathe. Both drug classes carry an FDA boxed warning against this combination.\nSuboxone with Neurontin: risk of respiratory depression. Gabapentin and pregabalin add to opioid respiratory depression; the FDA added this warning to both in 2019. Both are cleared by the kidney, so kidney injury raises exposure.",
+   "sources": "FDA labels: Suboxone\n · Klonopin\n · Neurontin\n · Seroquel\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011"
+    },
+    {
+     "text": "Suboxone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2063d5bf-b3bc-4e73-9046-7e994446ab50"
+    },
+    {
+     "text": "Klonopin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011"
+    },
+    {
+     "text": "Neurontin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4a975ebe-ae0a-446a-8a3d-2ca325e28f93"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Suboxone, Seroquel",
+   "category": "QT Prolongation Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "5.14 QTc Prolongation Thorough QT studies with buprenorphine products have demonstrated QT prolongation ≤15 msec.",
+   "source": "From the Suboxone label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: QT prolongation",
+   "why_text": "Each of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Suboxone\n · Seroquel",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2063d5bf-b3bc-4e73-9046-7e994446ab50"
+    },
+    {
+     "text": "National Heart, Lung, and Blood Institute, NIH",
+     "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome"
+    },
+    {
+     "text": "Suboxone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2063d5bf-b3bc-4e73-9046-7e994446ab50"
+    },
+    {
+     "text": "Seroquel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "1"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "1"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Suboxone",
+   "generic": "buprenorphine, naloxone",
+   "dose": "buprenorphine 8 mg / naloxone 2 mg · twice a day",
+   "facts": "Partial Opioid Agonist [EPC], Opioid Antagonist [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk",
+   "text": "Suboxone\nbuprenorphine, naloxone\nbuprenorphine 8 mg / naloxone 2 mg · twice a day\nPartial Opioid Agonist [EPC], Opioid Antagonist [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Revia",
+   "generic": "naltrexone",
+   "dose": "50 mg · once a day · 50 mg/day total",
+   "facts": "High-Frequency Adverse Effect\nCNS Depression Risk",
+   "text": "Revia\nnaltrexone\n50 mg · once a day · 50 mg/day total\nHigh-Frequency Adverse Effect\nCNS Depression Risk"
+  },
+  {
+   "brand": "Campral",
+   "generic": "acamprosate",
+   "dose": "666 mg · 3 times a day · 1998 mg/day total",
+   "facts": "High-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Campral\nacamprosate\n666 mg · 3 times a day · 1998 mg/day total\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Klonopin",
+   "generic": "clonazepam",
+   "dose": "0.5 mg · twice a day · 1 mg/day total",
+   "facts": "Benzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination",
+   "text": "Klonopin\nclonazepam\n0.5 mg · twice a day · 1 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Neurontin",
+   "generic": "gabapentin",
+   "dose": "300 mg · 3 times a day · 900 mg/day total",
+   "facts": "High-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk",
+   "text": "Neurontin\ngabapentin\n300 mg · 3 times a day · 900 mg/day total\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Seroquel",
+   "generic": "quetiapine",
+   "dose": "50 mg · once a day · 50 mg/day total",
+   "facts": "Atypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk",
+   "text": "Seroquel\nquetiapine\n50 mg · once a day · 50 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk"
+  }
+ ],
+ "totals": [
+  "acamprosate\n1,998 mg (1.998 g)/day",
+  "buprenorphine\n16 mg/day",
+  "clonazepam\n1 mg/day",
+  "gabapentin\n900 mg/day",
+  "naloxone\n4 mg/day",
+  "naltrexone\n50 mg/day",
+  "quetiapine\n50 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=db911559-26f5-43a0-b61f-3425176c936f",
+   "in_alert": true
+  },
+  {
+   "text": "Suboxone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2063d5bf-b3bc-4e73-9046-7e994446ab50",
+   "in_alert": true
+  },
+  {
+   "text": "Revia",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=db911559-26f5-43a0-b61f-3425176c936f",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011",
+   "in_alert": true
+  },
+  {
+   "text": "Suboxone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2063d5bf-b3bc-4e73-9046-7e994446ab50",
+   "in_alert": true
+  },
+  {
+   "text": "Klonopin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011",
+   "in_alert": true
+  },
+  {
+   "text": "Neurontin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4a975ebe-ae0a-446a-8a3d-2ca325e28f93",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2063d5bf-b3bc-4e73-9046-7e994446ab50",
+   "in_alert": true
+  },
+  {
+   "text": "National Heart, Lung, and Blood Institute, NIH",
+   "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome",
+   "in_alert": true
+  },
+  {
+   "text": "Suboxone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2063d5bf-b3bc-4e73-9046-7e994446ab50",
+   "in_alert": true
+  },
+  {
+   "text": "Seroquel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: E, Avoid combination. Do not use these drugs together.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n3 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n1\nD\nConsider changing therapy\n1\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: E, Avoid combination. Do not use these drugs together.\nE\nAvoid combination — Do not use these drugs together.\nSuboxone, Revia\n\nSuboxone with Revia: the antagonist blocks the opioid and can bring on withdrawal\n\nWhy E: The Contraindications section of the Revia label addresses this combination: the antagonist blocks the opioid and can bring on withdrawal.\n\nCONTRAINDICATIONS Naltrexone hydrochloride is contraindicated in: Patients receiving opioid analgesics.\n\nFrom the Revia label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nNaltrexone occupies opioid receptors: it blocks the opioid's effect and precipitates acute withdrawal in a patient who depends on the opioid. The naltrexone label contraindicates use in patients taking opioids. One of these prescriptions is likely an error.\n\nWhat to do\n\nDo not use together. Decide which treatment is intended; naltrexone needs 7 to 10 opioid-free days first.\n\nFDA labels: Suboxone\n · Revia\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nSuboxone, Klonopin, Neurontin, Seroquel\n\n4 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: The Warnings and Precautions section of the Suboxone label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nWARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Klonopin label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nSuboxone with Klonopin: boxed warning: profound sedation, respiratory depression, coma, death. Opioids and benzodiazepines both suppress the brainstem's drive to breathe. Both drug classes carry an FDA boxed warning against this combination.\nSuboxone with Neurontin: risk of respiratory depression. Gabapentin and pregabalin add to opioid respiratory depression; the FDA added this warning to both in 2019. Both are cleared by the kidney, so kidney injury raises exposure.\n\nFDA labels: Suboxone\n · Klonopin\n · Neurontin\n · Seroquel\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 2 more label sentences\nA\nMinor — Minor: usually no action needed.\nSuboxone, Seroquel\n\nQT Prolongation Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\n5.14 QTc Prolongation Thorough QT studies with buprenorphine products have demonstrated QT prolongation ≤15 msec.\n\nFrom the Suboxone label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhat this means: QT prolongation\n\nEach of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.\n\nSource: National Heart, Lung, and Blood Institute, NIH\n\nFDA labels: Suboxone\n · Seroquel\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nacamprosate\n1,998 mg (1.998 g)/day\nbuprenorphine\n16 mg/day\nclonazepam\n1 mg/day\ngabapentin\n900 mg/day\nnaloxone\n4 mg/day\nnaltrexone\n50 mg/day\nquetiapine\n50 mg/day\nSuboxone\nbuprenorphine, naloxone\nbuprenorphine 8 mg / naloxone 2 mg · twice a day\nPartial Opioid Agonist [EPC], Opioid Antagonist [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk\nRevia\nnaltrexone\n50 mg · once a day · 50 mg/day total\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nCampral\nacamprosate\n666 mg · 3 times a day · 1998 mg/day total\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nKlonopin\nclonazepam\n0.5 mg · twice a day · 1 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination\nNeurontin\ngabapentin\n300 mg · 3 times a day · 900 mg/day total\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nSeroquel\nquetiapine\n50 mg · once a day · 50 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\n3 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:08:00.063Z"
+}

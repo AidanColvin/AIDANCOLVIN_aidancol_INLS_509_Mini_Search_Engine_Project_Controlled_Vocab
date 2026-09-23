@@ -1,0 +1,133 @@
+{
+ "id": "G01",
+ "input": "Depakote (divalproex sodium) 500 mg twice daily = 1000 mg/day, Merrem (meropenem) 1 g IV every 8 hours = 3 g/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.837,
+ "secondsToResults": 0.408,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Depakote, Merrem",
+   "category": "Depakote with Merrem: valproate levels drop 60 to 100% within a day: breakthrough seizures",
+   "basis": "Why D: The Warnings and Precautions section of the Depakote label addresses this combination: valproate levels drop 60 to 100% within a day: breakthrough seizures. Clinical rulebook row 32.",
+   "quote": "5.15 Interaction with Carbapenem Antibiotics Carbapenem antibiotics (for example, ertapenem, imipenem, meropenem; this is not a complete list) may reduce serum valproate concentrations to subtherapeutic levels, resulting in loss of seizure control.",
+   "source": "From the Depakote label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Carbapenems block the enzyme that recycles valproate glucuronide, so valproate levels crash within 24 hours (efficacy loss), and extra valproate does not restore them.",
+   "action": "Avoid; choose a non-carbapenem antibiotic or add another antiseizure drug for the course.",
+   "includes": null,
+   "sources": "FDA labels: Depakote\n · Merrem",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Depakote",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Merrem",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=240325ba-47a8-4ad1-bcab-6772069ee790"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "1"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Depakote",
+   "generic": "valproate",
+   "dose": "500 mg · twice a day · 1000 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk",
+   "text": "Depakote\nvalproate\n500 mg · twice a day · 1000 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk"
+  },
+  {
+   "brand": "Merrem",
+   "generic": "meropenem",
+   "dose": "1 g · 3 times a day · 3 g/day total",
+   "facts": "Pediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment",
+   "text": "Merrem\nmeropenem\n1 g · 3 times a day · 3 g/day total\nPediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment"
+  },
+  {
+   "brand": "Singulair",
+   "generic": "montelukast",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Leukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication",
+   "text": "Singulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication"
+  }
+ ],
+ "totals": [
+  "meropenem\n3,000 mg (3 g)/day",
+  "montelukast\n10 mg/day",
+  "valproate\n1,000 mg (1 g)/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Depakote",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Merrem",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=240325ba-47a8-4ad1-bcab-6772069ee790",
+   "in_alert": true
+  }
+ ],
+ "statusText": "3 of 3 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n1 interaction\n\n3 of 3 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n1\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDepakote, Merrem\n\nDepakote with Merrem: valproate levels drop 60 to 100% within a day: breakthrough seizures\n\nWhy D: The Warnings and Precautions section of the Depakote label addresses this combination: valproate levels drop 60 to 100% within a day: breakthrough seizures. Clinical rulebook row 32.\n\n5.15 Interaction with Carbapenem Antibiotics Carbapenem antibiotics (for example, ertapenem, imipenem, meropenem; this is not a complete list) may reduce serum valproate concentrations to subtherapeutic levels, resulting in loss of seizure control.\n\nFrom the Depakote label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nCarbapenems block the enzyme that recycles valproate glucuronide, so valproate levels crash within 24 hours (efficacy loss), and extra valproate does not restore them.\n\nWhat to do\n\nAvoid; choose a non-carbapenem antibiotic or add another antiseizure drug for the course.\n\nFDA labels: Depakote\n · Merrem\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n3 medications\nClear all\nTotals by ingredient\nmeropenem\n3,000 mg (3 g)/day\nmontelukast\n10 mg/day\nvalproate\n1,000 mg (1 g)/day\nDepakote\nvalproate\n500 mg · twice a day · 1000 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nMerrem\nmeropenem\n1 g · 3 times a day · 3 g/day total\nPediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSingulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication\n1 alert",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:08:50.568Z"
+}

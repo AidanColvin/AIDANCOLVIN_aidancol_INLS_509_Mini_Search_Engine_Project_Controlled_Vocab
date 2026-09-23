@@ -1,0 +1,316 @@
+{
+ "id": "L05",
+ "input": "Coumadin (warfarin) 5 mg once daily Mon/Wed/Fri = 5 mg on those days, Coumadin (warfarin) 2.5 mg once daily Tue/Thu/Sat/Sun = 2.5 mg on those days, Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day, Cordarone (amiodarone) 200 mg once daily = 200 mg/day, Lexapro (escitalopram) 10 mg once daily = 10 mg/day, Bayer (aspirin OTC) 81 mg once daily = 81 mg/day, Plavix (clopidogrel) 75 mg once daily = 75 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.876,
+ "secondsToResults": 1.216,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Cordarone, Lexapro",
+   "category": "2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes",
+   "basis": "Why D: The Drug Interactions section of the Cordarone label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.",
+   "quote": "Table 1: Amiodarone Drug Interactions Concomitant Drug Class/Name Examples Clinical Comment Pharmacodynamic Interactions QT Prolonging Drugs class I and III antiarrhythmics, lithium, certain phenothiazines, tricyclic antidepressants, certain fluoroquinolone and macrolide antibiotics, azole antifungals, halogenated inhalation anesthetic agents Increased risk of Torsade de Pointes.",
+   "source": "From the Cordarone label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": "Get a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.",
+   "includes": null,
+   "sources": "FDA labels: Cordarone\n · Lexapro\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de"
+    },
+    {
+     "text": "Cordarone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de"
+    },
+    {
+     "text": "Lexapro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Coumadin, Lexapro, Bayer, Plavix",
+   "category": "4 drugs: risk of serious bleeding, especially stomach and gut bleeding",
+   "basis": "Why D: The Warnings and Precautions section of the Coumadin label addresses this combination: risk of serious bleeding, especially stomach and gut bleeding. Clinical rulebook row 9, 12, 13.",
+   "quote": "Risk factors for bleeding include high intensity of anticoagulation (INR >4.0), age greater than or equal to 65, history of highly variable INRs, history of gastrointestinal bleeding, hypertension, cerebrovascular disease, anemia, malignancy, trauma, renal impairment, certain genetic factors [see Clinical Pharmacology (12.5) ] , certain concomitant drugs [see Drug Interactions (7) ] , and long duration of warfarin therapy.",
+   "source": "From the Coumadin label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Anticoagulants slow clotting, aspirin and other antiplatelets stop platelets from sticking, NSAIDs block platelets and injure the stomach lining, and SSRIs and SNRIs drain the serotonin platelets need. Each added drug raises the bleeding risk.",
+   "action": "Drop any drug that is not essential (WOEST and AUGUSTUS support dropping aspirin from triple therapy), add a proton pump inhibitor for stomach protection, and watch for black stools, vomiting blood, or anemia.",
+   "includes": null,
+   "sources": "FDA labels: Coumadin\n · Lexapro\n · Bayer\n · Plavix\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n · Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy\n · Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f"
+    },
+    {
+     "text": "Coumadin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f"
+    },
+    {
+     "text": "Lexapro",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd"
+    },
+    {
+     "text": "Bayer",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=aspirin"
+    },
+    {
+     "text": "Plavix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b573aefa-e337-478f-97e4-eb8472a7e497"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    },
+    {
+     "text": "Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/23415013/"
+    },
+    {
+     "text": "Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/30883055/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Coumadin, Bactrim DS, Cordarone",
+   "category": "Coumadin with 2 drugs that raise the INR: INR rises: risk of serious bleeding",
+   "basis": "Why D: Class rule: INR rises: risk of serious bleeding. Clinical rulebook row 10.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These drugs block CYP2C9, which clears S-warfarin (the more potent half of warfarin). The INR can double within days; amiodarone's effect lasts for weeks after it stops.",
+   "action": "Choose another drug if possible; otherwise lower the warfarin dose (often 25 to 50%) and check the INR within 3 to 5 days.",
+   "includes": null,
+   "sources": "FDA labels: Coumadin\n · Bactrim DS\n · Cordarone\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Coumadin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f"
+    },
+    {
+     "text": "Bactrim DS",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d60c218c-6529-4944-af0b-a9dc720f32e9"
+    },
+    {
+     "text": "Cordarone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "3"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Coumadin",
+   "generic": "warfarin",
+   "dose": "5 mg · Mon/Wed/Fri · 15 mg/week",
+   "facts": "Boxed Warning",
+   "text": "Coumadin\nwarfarin\n5 mg · Mon/Wed/Fri · 15 mg/week\nBoxed Warning"
+  },
+  {
+   "brand": "Coumadin",
+   "generic": "warfarin",
+   "dose": "2.5 mg · Tue/Thu/Sat/Sun · 10 mg/week",
+   "facts": "Boxed Warning",
+   "text": "Coumadin\nwarfarin\n2.5 mg · Tue/Thu/Sat/Sun · 10 mg/week\nBoxed Warning"
+  },
+  {
+   "brand": "Bactrim DS",
+   "generic": "sulfamethoxazole, trimethoprim",
+   "dose": "sulfamethoxazole 800 mg / trimethoprim 160 mg · twice a day",
+   "facts": "Sulfonamide Antimicrobial [EPC], Dihydrofolate Reductase Inhibitor Antibacterial [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Bactrim DS\nsulfamethoxazole, trimethoprim\nsulfamethoxazole 800 mg / trimethoprim 160 mg · twice a day\nSulfonamide Antimicrobial [EPC], Dihydrofolate Reductase Inhibitor Antibacterial [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Cordarone",
+   "generic": "amiodarone",
+   "dose": "200 mg · once a day · 200 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk",
+   "text": "Cordarone\namiodarone\n200 mg · once a day · 200 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Lexapro",
+   "generic": "escitalopram",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Lexapro\nescitalopram\n10 mg · once a day · 10 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Bayer",
+   "generic": "aspirin",
+   "dose": "81 mg · once a day · 81 mg/day total",
+   "facts": "",
+   "text": "Bayer\naspirin\n81 mg · once a day · 81 mg/day total"
+  },
+  {
+   "brand": "Plavix",
+   "generic": "clopidogrel",
+   "dose": "75 mg · once a day · 75 mg/day total",
+   "facts": "P2Y12 Platelet Inhibitor [EPC]\nBoxed Warning",
+   "text": "Plavix\nclopidogrel\n75 mg · once a day · 75 mg/day total\nP2Y12 Platelet Inhibitor [EPC]\nBoxed Warning"
+  }
+ ],
+ "totals": [
+  "amiodarone\n200 mg/day",
+  "aspirin\n81 mg/day",
+  "clopidogrel\n75 mg/day",
+  "escitalopram\n10 mg/day",
+  "sulfamethoxazole\n1,600 mg (1.6 g)/day",
+  "trimethoprim\n320 mg/day",
+  "warfarin\n25 mg/week · from 2 entries"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de",
+   "in_alert": true
+  },
+  {
+   "text": "Cordarone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de",
+   "in_alert": true
+  },
+  {
+   "text": "Lexapro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+   "in_alert": true
+  },
+  {
+   "text": "Coumadin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+   "in_alert": true
+  },
+  {
+   "text": "Lexapro",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd",
+   "in_alert": true
+  },
+  {
+   "text": "Bayer",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=aspirin",
+   "in_alert": true
+  },
+  {
+   "text": "Plavix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b573aefa-e337-478f-97e4-eb8472a7e497",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/23415013/",
+   "in_alert": true
+  },
+  {
+   "text": "Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/30883055/",
+   "in_alert": true
+  },
+  {
+   "text": "Coumadin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+   "in_alert": true
+  },
+  {
+   "text": "Bactrim DS",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d60c218c-6529-4944-af0b-a9dc720f32e9",
+   "in_alert": true
+  },
+  {
+   "text": "Cordarone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c149392-a4f0-4e2d-a13f-2b94810005de",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  }
+ ],
+ "statusText": "7 of 7 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n3 interactions\n\n7 of 7 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n3\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nCordarone, Lexapro\n\n2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes\n\nWhy D: The Drug Interactions section of the Cordarone label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.\n\nTable 1: Amiodarone Drug Interactions Concomitant Drug Class/Name Examples Clinical Comment Pharmacodynamic Interactions QT Prolonging Drugs class I and III antiarrhythmics, lithium, certain phenothiazines, tricyclic antidepressants, certain fluoroquinolone and macrolide antibiotics, azole antifungals, halogenated inhalation anesthetic agents Increased risk of Torsade de Pointes.\n\nFrom the Cordarone label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.\n\nWhat to do\n\nGet a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.\n\nFDA labels: Cordarone\n · Lexapro\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n\nShow 1 more label sentence\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nCoumadin, Lexapro, Bayer, Plavix\n\n4 drugs: risk of serious bleeding, especially stomach and gut bleeding\n\nWhy D: The Warnings and Precautions section of the Coumadin label addresses this combination: risk of serious bleeding, especially stomach and gut bleeding. Clinical rulebook row 9, 12, 13.\n\nRisk factors for bleeding include high intensity of anticoagulation (INR >4.0), age greater than or equal to 65, history of highly variable INRs, history of gastrointestinal bleeding, hypertension, cerebrovascular disease, anemia, malignancy, trauma, renal impairment, certain genetic factors [see Clinical Pharmacology (12.5) ] , certain concomitant drugs [see Drug Interactions (7) ] , and long duration of warfarin therapy.\n\nFrom the Coumadin label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nAnticoagulants slow clotting, aspirin and other antiplatelets stop platelets from sticking, NSAIDs block platelets and injure the stomach lining, and SSRIs and SNRIs drain the serotonin platelets need. Each added drug raises the bleeding risk.\n\nWhat to do\n\nDrop any drug that is not essential (WOEST and AUGUSTUS support dropping aspirin from triple therapy), add a proton pump inhibitor for stomach protection, and watch for black stools, vomiting blood, or anemia.\n\nFDA labels: Coumadin\n · Lexapro\n · Bayer\n · Plavix\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n · Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy\n · Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation\n\nShow 1 more label sentence\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nCoumadin, Bactrim DS, Cordarone\n\nCoumadin with 2 drugs that raise the INR: INR rises: risk of serious bleeding\n\nWhy D: Class rule: INR rises: risk of serious bleeding. Clinical rulebook row 10.\n\nWhy it happens\n\nThese drugs block CYP2C9, which clears S-warfarin (the more potent half of warfarin). The INR can double within days; amiodarone's effect lasts for weeks after it stops.\n\nWhat to do\n\nChoose another drug if possible; otherwise lower the warfarin dose (often 25 to 50%) and check the INR within 3 to 5 days.\n\nFDA labels: Coumadin\n · Bactrim DS\n · Cordarone\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n7 medications\nClear all\nTotals by ingredient\namiodarone\n200 mg/day\naspirin\n81 mg/day\nclopidogrel\n75 mg/day\nescitalopram\n10 mg/day\nsulfamethoxazole\n1,600 mg (1.6 g)/day\ntrimethoprim\n320 mg/day\nwarfarin\n25 mg/week · from 2 entries\nCoumadin\nwarfarin\n5 mg · Mon/Wed/Fri · 15 mg/week\nBoxed Warning\nCoumadin\nwarfarin\n2.5 mg · Tue/Thu/Sat/Sun · 10 mg/week\nBoxed Warning\nBactrim DS\nsulfamethoxazole, trimethoprim\nsulfamethoxazole 800 mg / trimethoprim 160 mg · twice a day\nSulfonamide Antimicrobial [EPC], Dihydrofolate Reductase Inhibitor Antibacterial [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nCordarone\namiodarone\n200 mg · once a day · 200 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nQT Prolongation Risk\nLexapro\nescitalopram\n10 mg · once a day · 10 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nBayer\naspirin\n81 mg · once a day · 81 mg/day total\nPlavix\nclopidogrel\n75 mg · once a day · 75 mg/day total\nP2Y12 Platelet Inhibitor [EPC]\nBoxed Warning\n3 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:05:21.654Z"
+}

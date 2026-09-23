@@ -1,0 +1,457 @@
+{
+ "id": "L26",
+ "input": "Depakote (divalproex sodium DR) 750 mg twice daily = 1500 mg/day, Lamictal (lamotrigine) 200 mg once daily = 200 mg/day, Topamax (topiramate) 100 mg twice daily = 200 mg/day, Bayer (aspirin OTC) 325 mg once daily = 325 mg/day, Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day, Klonopin (clonazepam) 0.5 mg twice daily = 1 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.845,
+ "secondsToResults": 1.218,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Depakote, Lamictal, Topamax, Tegretol, Klonopin",
+   "category": "5 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "WARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Klonopin label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Depakote\n · Lamictal\n · Topamax\n · Tegretol\n · Klonopin\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011"
+    },
+    {
+     "text": "Depakote",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Lamictal",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20e156df-a2b6-4710-b526-0419cd17dd33"
+    },
+    {
+     "text": "Topamax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8"
+    },
+    {
+     "text": "Tegretol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816"
+    },
+    {
+     "text": "Klonopin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Depakote, Lamictal",
+   "category": "Lamictal with Depakote: lamotrigine levels double: risk of serious rash (Stevens-Johnson)",
+   "basis": "Why D: The Boxed Warning section of the Lamictal label addresses this combination: lamotrigine levels double: risk of serious rash (Stevens-Johnson).",
+   "quote": "In addition to age, factors that may increase the risk of occurrence or the severity of rash caused by lamotrigine include (1) coadministration of lamotrigine with valproate (includes valproic acid and divalproex sodium), (2) exceeding the recommended initial dose of lamotrigine, or (3) exceeding the recommended dose escalation for lamotrigine, or (4) the presence of the HLA-B*1502 allele.",
+   "source": "From the Lamictal label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Valproate inhibits lamotrigine's glucuronidation and roughly doubles its half-life, raising the risk of serious rash including Stevens-Johnson syndrome.",
+   "action": "Use the lamotrigine label's valproate dosing (about half the usual dose, slower titration) and teach the patient to report any rash.",
+   "includes": null,
+   "sources": "FDA labels: Depakote\n · Lamictal",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20e156df-a2b6-4710-b526-0419cd17dd33"
+    },
+    {
+     "text": "Depakote",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Lamictal",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20e156df-a2b6-4710-b526-0419cd17dd33"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Depakote, Topamax",
+   "category": "Depakote with Topamax: high ammonia with confusion (hyperammonemic encephalopathy) and low body temperature",
+   "basis": "Why D: The Warnings and Precautions section of the Depakote label addresses this combination: high ammonia with confusion (hyperammonemic encephalopathy) and low body temperature.",
+   "quote": "This adverse reaction can also occur in patients using concomitant topiramate ( 5.11 ) Drug Reaction with Eosinophilia and Systemic Symptoms (DRESS)/Multiorgan hypersensitivity reactions, serious dermatologic reactions, and angioedema: Discontinue divalproex sodium extended-release tablets unless an alternate etiology is established ( 5.12 , 5.13 , 5.14 ) 5.1 Hepatotoxicity General Information on Hepatotoxicity Hepatic failure resulting in fatalities has occurred in patients receiving valproate.",
+   "source": "From the Depakote label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Both labels warn that the combination can raise ammonia and cause encephalopathy and hypothermia, even when valproate levels are normal.",
+   "action": "Check ammonia if the patient becomes lethargic, confused, or vomits; stop one drug if it is high.",
+   "includes": null,
+   "sources": "FDA labels: Depakote\n · Topamax",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Depakote",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Topamax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Lamictal, Tegretol",
+   "category": "Lamictal with Tegretol: lamotrigine levels fall about 40%",
+   "basis": "Why C: The Drug Interactions section of the Lamictal label addresses this combination: lamotrigine levels fall about 40%. Clinical rulebook row 33.",
+   "quote": "Carbamazepine and Carbamazepine epoxide ↓ lamotrigine Addition of carbamazepine decreases lamotrigine concentration approximately 40%. ?",
+   "source": "From the Lamictal label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These drugs induce lamotrigine's glucuronidation and cut its levels by about 40 to 50%.",
+   "action": "Use the label's higher lamotrigine dosing with inducers, and re-adjust if the inducer stops.",
+   "includes": null,
+   "sources": "FDA labels: Lamictal\n · Tegretol",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20e156df-a2b6-4710-b526-0419cd17dd33"
+    },
+    {
+     "text": "Lamictal",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20e156df-a2b6-4710-b526-0419cd17dd33"
+    },
+    {
+     "text": "Tegretol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Depakote, Bayer",
+   "category": "Depakote with Bayer: free valproate rises and bleeding risk adds up",
+   "basis": "Why C: The Drug Interactions section of the Depakote label addresses this combination: free valproate rises and bleeding risk adds up.",
+   "quote": "Drugs for which a potentially important interaction has been observed Aspirin A study involving the co-administration of aspirin at antipyretic doses (11 to 16 mg/kg) with valproate to pediatric patients (n=6) revealed a decrease in protein binding and an inhibition of metabolism of valproate.",
+   "source": "From the Depakote label, Drug Interactions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Aspirin displaces valproate from albumin and slows its metabolism, raising free valproate; valproate can lower platelets, and aspirin blocks them.",
+   "action": "Watch for bruising and valproate side effects; check platelets.",
+   "includes": null,
+   "sources": "FDA labels: Depakote\n · Bayer",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Depakote",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Bayer",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=aspirin"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Depakote, Tegretol",
+   "category": "Depakote with Tegretol: valproate levels fall; carbamazepine epoxide rises",
+   "basis": "Why C: The Warnings and Precautions section of the Depakote label addresses this combination: valproate levels fall; carbamazepine epoxide rises. Clinical rulebook row 33.",
+   "quote": "The largest of these studies 1 is a prospective cohort study conducted in the United States and United Kingdom that found that children with prenatal exposure to valproate (n=62) had lower IQ scores at age 6 (97 [95% CI 94 to 101]) than children with prenatal exposure to the other antiepileptic drug monotherapy treatments evaluated: lamotrigine (108 [95% CI 105 to 110]), carbamazepine (105 [95% CI 102 to 108]), and phenytoin (108 [95% CI 104 to 112]).",
+   "source": "From the Depakote label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These drugs induce valproate metabolism and lower its levels, and valproate raises carbamazepine's toxic 10,11-epoxide metabolite.",
+   "action": "Check drug levels when either is started or changed, and watch for dizziness, double vision, and unsteadiness.",
+   "includes": null,
+   "sources": "FDA labels: Depakote\n · Tegretol",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Depakote",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779"
+    },
+    {
+     "text": "Tegretol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Tegretol, Klonopin",
+   "category": "Klonopin with Tegretol: benzodiazepine levels fall",
+   "basis": "Why A: The Precautions section of the Klonopin label addresses this combination: benzodiazepine levels fall. Clinical rulebook row 33.",
+   "quote": "Effect of Clonazepam on the Pharmacokinetics of Other Drugs: Clonazepam does not appear to alter the pharmacokinetics of carbamazepine or phenobarbital.",
+   "source": "From the Klonopin label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Enzyme inducers speed benzodiazepine clearance; carbamazepine lowers clonazepam about 20 to 30%.",
+   "action": "Usually minor; adjust if symptoms return.",
+   "includes": null,
+   "sources": "FDA labels: Tegretol\n · Klonopin",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011"
+    },
+    {
+     "text": "Tegretol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816"
+    },
+    {
+     "text": "Klonopin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "3"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "3"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Depakote",
+   "generic": "valproate",
+   "dose": "750 mg · twice a day · 1500 mg/day total",
+   "facts": "delayed release\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk",
+   "text": "Depakote\nvalproate\n750 mg · twice a day · 1500 mg/day total\ndelayed release\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk"
+  },
+  {
+   "brand": "Lamictal",
+   "generic": "lamotrigine",
+   "dose": "200 mg · once a day · 200 mg/day total",
+   "facts": "Anti-epileptic Agent [EPC], Mood Stabilizer [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment",
+   "text": "Lamictal\nlamotrigine\n200 mg · once a day · 200 mg/day total\nAnti-epileptic Agent [EPC], Mood Stabilizer [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment"
+  },
+  {
+   "brand": "Topamax",
+   "generic": "topiramate",
+   "dose": "100 mg · twice a day · 200 mg/day total",
+   "facts": "Pediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk",
+   "text": "Topamax\ntopiramate\n100 mg · twice a day · 200 mg/day total\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Bayer",
+   "generic": "aspirin",
+   "dose": "325 mg · once a day · 325 mg/day total",
+   "facts": "",
+   "text": "Bayer\naspirin\n325 mg · once a day · 325 mg/day total"
+  },
+  {
+   "brand": "Tegretol",
+   "generic": "carbamazepine",
+   "dose": "400 mg · twice a day · 800 mg/day total",
+   "facts": "Mood Stabilizer [EPC]\nBoxed Warning\nCNS Depression Risk\nContraindicated Combination",
+   "text": "Tegretol\ncarbamazepine\n400 mg · twice a day · 800 mg/day total\nMood Stabilizer [EPC]\nBoxed Warning\nCNS Depression Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Klonopin",
+   "generic": "clonazepam",
+   "dose": "0.5 mg · twice a day · 1 mg/day total",
+   "facts": "Benzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination",
+   "text": "Klonopin\nclonazepam\n0.5 mg · twice a day · 1 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination"
+  }
+ ],
+ "totals": [
+  "aspirin\n325 mg/day",
+  "carbamazepine\n800 mg/day",
+  "clonazepam\n1 mg/day",
+  "lamotrigine\n200 mg/day",
+  "topiramate\n200 mg/day",
+  "valproate\n1,500 mg (1.5 g)/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011",
+   "in_alert": true
+  },
+  {
+   "text": "Depakote",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Lamictal",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20e156df-a2b6-4710-b526-0419cd17dd33",
+   "in_alert": true
+  },
+  {
+   "text": "Topamax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8",
+   "in_alert": true
+  },
+  {
+   "text": "Tegretol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": true
+  },
+  {
+   "text": "Klonopin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20e156df-a2b6-4710-b526-0419cd17dd33",
+   "in_alert": true
+  },
+  {
+   "text": "Depakote",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Lamictal",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20e156df-a2b6-4710-b526-0419cd17dd33",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Depakote",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Topamax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20e156df-a2b6-4710-b526-0419cd17dd33",
+   "in_alert": true
+  },
+  {
+   "text": "Lamictal",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20e156df-a2b6-4710-b526-0419cd17dd33",
+   "in_alert": true
+  },
+  {
+   "text": "Tegretol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Depakote",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Bayer",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query=aspirin",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Depakote",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": true
+  },
+  {
+   "text": "Tegretol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011",
+   "in_alert": true
+  },
+  {
+   "text": "Tegretol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": true
+  },
+  {
+   "text": "Klonopin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n7 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n3\nC\nMonitor closely\n3\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDepakote, Lamictal, Topamax, Tegretol, Klonopin\n\n5 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nWARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Klonopin label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Depakote\n · Lamictal\n · Topamax\n · Tegretol\n · Klonopin\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 3 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDepakote, Lamictal\n\nLamictal with Depakote: lamotrigine levels double: risk of serious rash (Stevens-Johnson)\n\nWhy D: The Boxed Warning section of the Lamictal label addresses this combination: lamotrigine levels double: risk of serious rash (Stevens-Johnson).\n\nIn addition to age, factors that may increase the risk of occurrence or the severity of rash caused by lamotrigine include (1) coadministration of lamotrigine with valproate (includes valproic acid and divalproex sodium), (2) exceeding the recommended initial dose of lamotrigine, or (3) exceeding the recommended dose escalation for lamotrigine, or (4) the presence of the HLA-B*1502 allele.\n\nFrom the Lamictal label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nValproate inhibits lamotrigine's glucuronidation and roughly doubles its half-life, raising the risk of serious rash including Stevens-Johnson syndrome.\n\nWhat to do\n\nUse the lamotrigine label's valproate dosing (about half the usual dose, slower titration) and teach the patient to report any rash.\n\nFDA labels: Depakote\n · Lamictal\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDepakote, Topamax\n\nDepakote with Topamax: high ammonia with confusion (hyperammonemic encephalopathy) and low body temperature\n\nWhy D: The Warnings and Precautions section of the Depakote label addresses this combination: high ammonia with confusion (hyperammonemic encephalopathy) and low body temperature.\n\nThis adverse reaction can also occur in patients using concomitant topiramate ( 5.11 ) Drug Reaction with Eosinophilia and Systemic Symptoms (DRESS)/Multiorgan hypersensitivity reactions, serious dermatologic reactions, and angioedema: Discontinue divalproex sodium extended-release tablets unless an alternate etiology is established ( 5.12 , 5.13 , 5.14 ) 5.1 Hepatotoxicity General Information on Hepatotoxicity Hepatic failure resulting in fatalities has occurred in patients receiving valproate.\n\nFrom the Depakote label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nBoth labels warn that the combination can raise ammonia and cause encephalopathy and hypothermia, even when valproate levels are normal.\n\nWhat to do\n\nCheck ammonia if the patient becomes lethargic, confused, or vomits; stop one drug if it is high.\n\nFDA labels: Depakote\n · Topamax\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nLamictal, Tegretol\n\nLamictal with Tegretol: lamotrigine levels fall about 40%\n\nWhy C: The Drug Interactions section of the Lamictal label addresses this combination: lamotrigine levels fall about 40%. Clinical rulebook row 33.\n\nCarbamazepine and Carbamazepine epoxide ↓ lamotrigine Addition of carbamazepine decreases lamotrigine concentration approximately 40%. ?\n\nFrom the Lamictal label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese drugs induce lamotrigine's glucuronidation and cut its levels by about 40 to 50%.\n\nWhat to do\n\nUse the label's higher lamotrigine dosing with inducers, and re-adjust if the inducer stops.\n\nFDA labels: Lamictal\n · Tegretol\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nDepakote, Bayer\n\nDepakote with Bayer: free valproate rises and bleeding risk adds up\n\nWhy C: The Drug Interactions section of the Depakote label addresses this combination: free valproate rises and bleeding risk adds up.\n\nDrugs for which a potentially important interaction has been observed Aspirin A study involving the co-administration of aspirin at antipyretic doses (11 to 16 mg/kg) with valproate to pediatric patients (n=6) revealed a decrease in protein binding and an inhibition of metabolism of valproate.\n\nFrom the Depakote label, Drug Interactions section.\nOpen on DailyMed\n\nWhy it happens\n\nAspirin displaces valproate from albumin and slows its metabolism, raising free valproate; valproate can lower platelets, and aspirin blocks them.\n\nWhat to do\n\nWatch for bruising and valproate side effects; check platelets.\n\nFDA labels: Depakote\n · Bayer\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nDepakote, Tegretol\n\nDepakote with Tegretol: valproate levels fall; carbamazepine epoxide rises\n\nWhy C: The Warnings and Precautions section of the Depakote label addresses this combination: valproate levels fall; carbamazepine epoxide rises. Clinical rulebook row 33.\n\nThe largest of these studies 1 is a prospective cohort study conducted in the United States and United Kingdom that found that children with prenatal exposure to valproate (n=62) had lower IQ scores at age 6 (97 [95% CI 94 to 101]) than children with prenatal exposure to the other antiepileptic drug monotherapy treatments evaluated: lamotrigine (108 [95% CI 105 to 110]), carbamazepine (105 [95% CI 102 to 108]), and phenytoin (108 [95% CI 104 to 112]).\n\nFrom the Depakote label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese drugs induce valproate metabolism and lower its levels, and valproate raises carbamazepine's toxic 10,11-epoxide metabolite.\n\nWhat to do\n\nCheck drug levels when either is started or changed, and watch for dizziness, double vision, and unsteadiness.\n\nFDA labels: Depakote\n · Tegretol\n\nA\nMinor — Minor: usually no action needed.\nTegretol, Klonopin\n\nKlonopin with Tegretol: benzodiazepine levels fall\n\nWhy A: The Precautions section of the Klonopin label addresses this combination: benzodiazepine levels fall. Clinical rulebook row 33.\n\nEffect of Clonazepam on the Pharmacokinetics of Other Drugs: Clonazepam does not appear to alter the pharmacokinetics of carbamazepine or phenobarbital.\n\nFrom the Klonopin label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEnzyme inducers speed benzodiazepine clearance; carbamazepine lowers clonazepam about 20 to 30%.\n\nWhat to do\n\nUsually minor; adjust if symptoms return.\n\nFDA labels: Tegretol\n · Klonopin\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\naspirin\n325 mg/day\ncarbamazepine\n800 mg/day\nclonazepam\n1 mg/day\nlamotrigine\n200 mg/day\ntopiramate\n200 mg/day\nvalproate\n1,500 mg (1.5 g)/day\nDepakote\nvalproate\n750 mg · twice a day · 1500 mg/day total\ndelayed release\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nLamictal\nlamotrigine\n200 mg · once a day · 200 mg/day total\nAnti-epileptic Agent [EPC], Mood Stabilizer [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nTopamax\ntopiramate\n100 mg · twice a day · 200 mg/day total\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nBayer\naspirin\n325 mg · once a day · 325 mg/day total\nTegretol\ncarbamazepine\n400 mg · twice a day · 800 mg/day total\nMood Stabilizer [EPC]\nBoxed Warning\nCNS Depression Risk\nContraindicated Combination\nKlonopin\nclonazepam\n0.5 mg · twice a day · 1 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination\n7 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:07:07.740Z"
+}

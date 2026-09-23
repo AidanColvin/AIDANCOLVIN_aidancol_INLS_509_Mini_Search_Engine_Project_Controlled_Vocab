@@ -1,0 +1,351 @@
+{
+ "id": "L38",
+ "input": "Risperdal (risperidone) 2 mg twice daily = 4 mg/day, Invega (paliperidone ER) 6 mg once daily = 6 mg/day, Zyprexa (olanzapine) 10 mg once daily at bedtime = 10 mg/day, Cogentin (benztropine) 1 mg twice daily = 2 mg/day, Klonopin (clonazepam) 1 mg twice daily = 2 mg/day, Lipitor (atorvastatin) 20 mg once daily = 20 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.857,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Risperdal, Invega, Zyprexa, Klonopin",
+   "category": "4 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Risperdal\n · Invega\n · Zyprexa\n · Klonopin\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Risperdal",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3"
+    },
+    {
+     "text": "Invega",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661"
+    },
+    {
+     "text": "Zyprexa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8"
+    },
+    {
+     "text": "Klonopin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Risperdal, Invega, Zyprexa",
+   "category": "3 antipsychotics: duplicate therapy: more movement side effects, QT, prolactin, and metabolic effects",
+   "basis": "Why D: Class rule: duplicate therapy: more movement side effects, QT, prolactin, and metabolic effects.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These are all antipsychotics: taking more than one is therapeutic duplication.",
+   "action": "Use one antipsychotic unless a psychiatrist is deliberately combining them.",
+   "includes": null,
+   "sources": "FDA labels: Risperdal\n · Invega\n · Zyprexa",
+   "links": [
+    {
+     "text": "Risperdal",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3"
+    },
+    {
+     "text": "Invega",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661"
+    },
+    {
+     "text": "Zyprexa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Risperdal, Invega",
+   "category": "Duplicate: Risperdal (risperidone) and Invega (paliperidone): one is the active metabolite of the other: combined paliperidone 6 mg/day and risperidone 4 mg/day",
+   "basis": "Why D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Both entries deliver the same active drug, so the patient gets the combined dose. One is the active metabolite of the other.",
+   "action": "Confirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.",
+   "includes": null,
+   "sources": "FDA labels: Risperdal\n · Invega",
+   "links": [
+    {
+     "text": "Risperdal",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3"
+    },
+    {
+     "text": "Invega",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Risperdal, Invega",
+   "category": "2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes",
+   "basis": "Why C: The Warnings and Precautions section of the Invega label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.",
+   "quote": "Certain circumstances may increase the risk of the occurrence of torsade de pointes and/or sudden death in association with the use of drugs that prolong the QTc interval, including (1) bradycardia; (2) hypokalemia or hypomagnesemia; (3) concomitant use of other drugs that prolong the QTc interval; and (4) presence of congenital prolongation of the QT interval.",
+   "source": "From the Invega label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": "Get a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.",
+   "includes": null,
+   "sources": "FDA labels: Risperdal\n · Invega\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661"
+    },
+    {
+     "text": "Risperdal",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3"
+    },
+    {
+     "text": "Invega",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Zyprexa, Cogentin",
+   "category": "2 anticholinergic drugs: anticholinergic burden: confusion, urinary retention, constipation, falls",
+   "basis": "Why C: The Warnings and Precautions section of the Zyprexa label addresses this combination: anticholinergic burden: confusion, urinary retention, constipation, falls. Clinical rulebook row 6.",
+   "quote": "( 5.12 ) • Anticholinergic (antimuscarinic) Effects: Use with caution with other anticholinergic drugs and in patients with urinary retention, prostatic hypertrophy, constipation, paralytic ileus or related conditions.",
+   "source": "From the Zyprexa label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug blocks acetylcholine. Together they cause confusion or delirium, dry mouth, blurred vision, urinary retention, constipation or ileus, overheating, and falls, worst in older adults (Beers criteria).",
+   "action": "Replace the strongest anticholinergic with an alternative and avoid the combination in older adults.",
+   "includes": null,
+   "sources": "FDA labels: Zyprexa\n · Cogentin",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8"
+    },
+    {
+     "text": "Zyprexa",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8"
+    },
+    {
+     "text": "Cogentin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53c02a89-012c-e724-e063-6294a90acc75"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "3"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "2"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Risperdal",
+   "generic": "risperidone",
+   "dose": "2 mg · twice a day · 4 mg/day total",
+   "facts": "Atypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment",
+   "text": "Risperdal\nrisperidone\n2 mg · twice a day · 4 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment"
+  },
+  {
+   "brand": "Invega",
+   "generic": "paliperidone",
+   "dose": "6 mg · once a day · 6 mg/day total",
+   "facts": "extended release\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk",
+   "text": "Invega\npaliperidone\n6 mg · once a day · 6 mg/day total\nextended release\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk"
+  },
+  {
+   "brand": "Zyprexa",
+   "generic": "olanzapine",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Atypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment",
+   "text": "Zyprexa\nolanzapine\n10 mg · once a day · 10 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment"
+  },
+  {
+   "brand": "Cogentin",
+   "generic": "benztropine",
+   "dose": "1 mg · twice a day · 2 mg/day total",
+   "facts": "Contraindicated Combination",
+   "text": "Cogentin\nbenztropine\n1 mg · twice a day · 2 mg/day total\nContraindicated Combination"
+  },
+  {
+   "brand": "Klonopin",
+   "generic": "clonazepam",
+   "dose": "1 mg · twice a day · 2 mg/day total",
+   "facts": "Benzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination",
+   "text": "Klonopin\nclonazepam\n1 mg · twice a day · 2 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Lipitor",
+   "generic": "atorvastatin",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "HMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect",
+   "text": "Lipitor\natorvastatin\n20 mg · once a day · 20 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect"
+  }
+ ],
+ "totals": [
+  "atorvastatin\n20 mg/day",
+  "benztropine\n2 mg/day",
+  "clonazepam\n2 mg/day",
+  "olanzapine\n10 mg/day",
+  "paliperidone\n6 mg/day",
+  "risperidone\n4 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Risperdal",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3",
+   "in_alert": true
+  },
+  {
+   "text": "Invega",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661",
+   "in_alert": true
+  },
+  {
+   "text": "Zyprexa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": true
+  },
+  {
+   "text": "Klonopin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Risperdal",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3",
+   "in_alert": true
+  },
+  {
+   "text": "Invega",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661",
+   "in_alert": true
+  },
+  {
+   "text": "Zyprexa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": true
+  },
+  {
+   "text": "Risperdal",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3",
+   "in_alert": true
+  },
+  {
+   "text": "Invega",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661",
+   "in_alert": true
+  },
+  {
+   "text": "Risperdal",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3",
+   "in_alert": true
+  },
+  {
+   "text": "Invega",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": true
+  },
+  {
+   "text": "Zyprexa",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": true
+  },
+  {
+   "text": "Cogentin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53c02a89-012c-e724-e063-6294a90acc75",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n5 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n3\nC\nMonitor closely\n2\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nRisperdal, Invega, Zyprexa, Klonopin\n\n4 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Risperdal\n · Invega\n · Zyprexa\n · Klonopin\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nRisperdal, Invega, Zyprexa\n\n3 antipsychotics: duplicate therapy: more movement side effects, QT, prolactin, and metabolic effects\n\nWhy D: Class rule: duplicate therapy: more movement side effects, QT, prolactin, and metabolic effects.\n\nWhy it happens\n\nThese are all antipsychotics: taking more than one is therapeutic duplication.\n\nWhat to do\n\nUse one antipsychotic unless a psychiatrist is deliberately combining them.\n\nFDA labels: Risperdal\n · Invega\n · Zyprexa\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nRisperdal, Invega\n\nDuplicate: Risperdal (risperidone) and Invega (paliperidone): one is the active metabolite of the other: combined paliperidone 6 mg/day and risperidone 4 mg/day\n\nWhy D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.\n\nWhy it happens\n\nBoth entries deliver the same active drug, so the patient gets the combined dose. One is the active metabolite of the other.\n\nWhat to do\n\nConfirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.\n\nFDA labels: Risperdal\n · Invega\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nRisperdal, Invega\n\n2 QT-prolonging drugs: risk of QT prolongation and torsades de pointes\n\nWhy C: The Warnings and Precautions section of the Invega label addresses this combination: risk of QT prolongation and torsades de pointes. Clinical rulebook row 23.\n\nCertain circumstances may increase the risk of the occurrence of torsade de pointes and/or sudden death in association with the use of drugs that prolong the QTc interval, including (1) bradycardia; (2) hypokalemia or hypomagnesemia; (3) concomitant use of other drugs that prolong the QTc interval; and (4) presence of congenital prolongation of the QT interval.\n\nFrom the Invega label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.\n\nWhat to do\n\nGet a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.\n\nFDA labels: Risperdal\n · Invega\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nZyprexa, Cogentin\n\n2 anticholinergic drugs: anticholinergic burden: confusion, urinary retention, constipation, falls\n\nWhy C: The Warnings and Precautions section of the Zyprexa label addresses this combination: anticholinergic burden: confusion, urinary retention, constipation, falls. Clinical rulebook row 6.\n\n( 5.12 ) • Anticholinergic (antimuscarinic) Effects: Use with caution with other anticholinergic drugs and in patients with urinary retention, prostatic hypertrophy, constipation, paralytic ileus or related conditions.\n\nFrom the Zyprexa label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug blocks acetylcholine. Together they cause confusion or delirium, dry mouth, blurred vision, urinary retention, constipation or ileus, overheating, and falls, worst in older adults (Beers criteria).\n\nWhat to do\n\nReplace the strongest anticholinergic with an alternative and avoid the combination in older adults.\n\nFDA labels: Zyprexa\n · Cogentin\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\natorvastatin\n20 mg/day\nbenztropine\n2 mg/day\nclonazepam\n2 mg/day\nolanzapine\n10 mg/day\npaliperidone\n6 mg/day\nrisperidone\n4 mg/day\nRisperdal\nrisperidone\n2 mg · twice a day · 4 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nInvega\npaliperidone\n6 mg · once a day · 6 mg/day total\nextended release\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nQT Prolongation Risk\nZyprexa\nolanzapine\n10 mg · once a day · 10 mg/day total\nAtypical Antipsychotic [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCogentin\nbenztropine\n1 mg · twice a day · 2 mg/day total\nContraindicated Combination\nKlonopin\nclonazepam\n1 mg · twice a day · 2 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nCNS Depression Risk\nContraindicated Combination\nLipitor\natorvastatin\n20 mg · once a day · 20 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\n5 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:08:10.026Z"
+}

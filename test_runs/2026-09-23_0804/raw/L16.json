@@ -1,0 +1,386 @@
+{
+ "id": "L16",
+ "input": "Viagra (sildenafil) 100 mg as needed no more than once daily = 100 mg/day max, Nitrostat (nitroglycerin sublingual) 0.4 mg as needed for chest pain up to 3 tablets in 15 minutes = 1.2 mg per episode, Imdur (isosorbide mononitrate ER) 60 mg once daily = 60 mg/day, Flomax (tamsulosin) 0.4 mg once daily = 0.4 mg/day, Catapres (clonidine) 0.1 mg twice daily = 0.2 mg/day, Coreg (carvedilol) 25 mg twice daily = 50 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.866,
+ "secondsToResults": 0.404,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Viagra, Nitrostat",
+   "category": "Nitrostat with Viagra: severe, refractory low blood pressure",
+   "basis": "Why E: The Contraindications section of the Viagra label addresses this combination: severe, refractory low blood pressure. Clinical rulebook row 21.",
+   "quote": "4 CONTRAINDICATIONS Sildenafil for oral suspension is contraindicated in patients with: Concomitant use of organic nitrates in any form, either regularly or intermittently, because of the greater risk of hypotension [see Warnings and Precautions (5.1) ] .",
+   "source": "From the Viagra label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Nitrates release nitric oxide, which raises cGMP; PDE5 inhibitors block cGMP breakdown (riociguat stimulates its production). Together blood pressure can fall sharply and not respond to treatment. The labels contraindicate these combinations.",
+   "action": "Do not use together. Allow 24 hours after sildenafil or vardenafil and 48 hours after tadalafil before any nitrate.",
+   "includes": null,
+   "sources": "FDA labels: Viagra\n · Nitrostat\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff"
+    },
+    {
+     "text": "Viagra",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff"
+    },
+    {
+     "text": "Nitrostat",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5b150cd2-fac8-86ce-e063-6294a90a67b9"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Viagra, Imdur",
+   "category": "Imdur with Viagra: severe, refractory low blood pressure",
+   "basis": "Why E: The Contraindications section of the Viagra label addresses this combination: severe, refractory low blood pressure. Clinical rulebook row 21.",
+   "quote": "4 CONTRAINDICATIONS Sildenafil for oral suspension is contraindicated in patients with: Concomitant use of organic nitrates in any form, either regularly or intermittently, because of the greater risk of hypotension [see Warnings and Precautions (5.1) ] .",
+   "source": "From the Viagra label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Nitrates release nitric oxide, which raises cGMP; PDE5 inhibitors block cGMP breakdown (riociguat stimulates its production). Together blood pressure can fall sharply and not respond to treatment. The labels contraindicate these combinations.",
+   "action": "Do not use together. Allow 24 hours after sildenafil or vardenafil and 48 hours after tadalafil before any nitrate.",
+   "includes": null,
+   "sources": "FDA labels: Viagra\n · Imdur\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff"
+    },
+    {
+     "text": "Viagra",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff"
+    },
+    {
+     "text": "Imdur",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d01d4f0f-5164-4ea3-b772-72b97961c6fb"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Catapres, Coreg",
+   "category": "Catapres with Coreg: slow heart rate, and a rebound hypertensive crisis if clonidine stops suddenly",
+   "basis": "Why D: The Warnings section of the Catapres label addresses this combination: slow heart rate, and a rebound hypertensive crisis if clonidine stops suddenly. Clinical rulebook row 25.",
+   "quote": "The likelihood of such reactions to discontinuation of clonidine therapy appears to be greater after administration of higher doses or continuation of concomitant beta-blocker treatment and special caution is therefore advised in these situations.",
+   "source": "From the Catapres label, Warnings section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Both slow the heart. If clonidine is stopped abruptly, norepinephrine surges; with alpha receptors unopposed under beta-blockade, blood pressure can rebound to a crisis.",
+   "action": "Monitor heart rate. To stop, taper the beta-blocker first and then clonidine over several days.",
+   "includes": null,
+   "sources": "FDA labels: Catapres\n · Coreg",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d"
+    },
+    {
+     "text": "Catapres",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d"
+    },
+    {
+     "text": "Coreg",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7d6bfff-fbb6-4a1f-aa13-babbb9a1e878"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Viagra, Nitrostat, Imdur, Flomax, Catapres, Coreg",
+   "category": "6 drugs: risk of low blood pressure on standing, fainting, and falls",
+   "basis": "Why C: The Contraindications section of the Viagra label addresses this combination: risk of low blood pressure on standing, fainting, and falls. Clinical rulebook row 22.",
+   "quote": "4 CONTRAINDICATIONS Sildenafil for oral suspension is contraindicated in patients with: Concomitant use of organic nitrates in any form, either regularly or intermittently, because of the greater risk of hypotension [see Warnings and Precautions (5.1) ] .",
+   "source": "From the Viagra label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug lowers blood pressure or blocks the reflex that holds it up when standing. Together they can cause orthostatic hypotension, fainting, and falls.",
+   "action": "Start low, raise one drug at a time, check standing blood pressure, and tell the patient to stand up slowly.",
+   "includes": "Flomax with Viagra: symptomatic low blood pressure on standing. Alpha-1 blockers and PDE5 inhibitors both widen blood vessels. The sildenafil label advises being on a stable alpha-blocker dose first and starting at the lowest PDE5 dose.",
+   "sources": "FDA labels: Viagra\n · Nitrostat\n · Imdur\n · Flomax\n · Catapres\n · Coreg",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff"
+    },
+    {
+     "text": "Viagra",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff"
+    },
+    {
+     "text": "Nitrostat",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5b150cd2-fac8-86ce-e063-6294a90a67b9"
+    },
+    {
+     "text": "Imdur",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d01d4f0f-5164-4ea3-b772-72b97961c6fb"
+    },
+    {
+     "text": "Flomax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8302a6e-b8da-4931-a279-b49e37943816"
+    },
+    {
+     "text": "Catapres",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d"
+    },
+    {
+     "text": "Coreg",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7d6bfff-fbb6-4a1f-aa13-babbb9a1e878"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Catapres, Coreg",
+   "category": "2 heart-rate-slowing drugs: risk of slow heart rate (bradycardia) and heart block",
+   "basis": "Why C: The Precautions section of the Catapres label addresses this combination: risk of slow heart rate (bradycardia) and heart block. Clinical rulebook row 20.",
+   "quote": "The sympatholytic action of clonidine may worsen sinus node dysfunction and atrioventricular (AV) block, especially in patients taking other sympatholytic drugs.",
+   "source": "From the Catapres label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug slows the heart rate or conduction through the AV node. Together they can cause severe bradycardia, AV block, or heart failure.",
+   "action": "Check pulse and an ECG after starting or raising any of them; lower doses or stop one if the heart rate drops below 50 or new AV block appears.",
+   "includes": null,
+   "sources": "FDA labels: Catapres\n · Coreg",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d"
+    },
+    {
+     "text": "Catapres",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d"
+    },
+    {
+     "text": "Coreg",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7d6bfff-fbb6-4a1f-aa13-babbb9a1e878"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "2"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "1"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "2"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Viagra",
+   "generic": "sildenafil",
+   "dose": "100 mg · as needed, up to once a day · 100 mg/day max",
+   "facts": "Phosphodiesterase 5 Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment",
+   "text": "Viagra\nsildenafil\n100 mg · as needed, up to once a day · 100 mg/day max\nPhosphodiesterase 5 Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment"
+  },
+  {
+   "brand": "Nitrostat",
+   "generic": "nitroglycerin",
+   "dose": "0.4 mg",
+   "facts": "Nitrate Vasodilator [EPC]",
+   "text": "Nitrostat\nnitroglycerin\n0.4 mg\nNitrate Vasodilator [EPC]"
+  },
+  {
+   "brand": "Imdur",
+   "generic": "isosorbide",
+   "dose": "60 mg · once a day · 60 mg/day total",
+   "facts": "extended release\nNitrate Vasodilator [EPC]\nHigh-Frequency Adverse Effect",
+   "text": "Imdur\nisosorbide\n60 mg · once a day · 60 mg/day total\nextended release\nNitrate Vasodilator [EPC]\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Flomax",
+   "generic": "tamsulosin",
+   "dose": "0.4 mg · once a day · 0.4 mg/day total",
+   "facts": "High-Frequency Adverse Effect",
+   "text": "Flomax\ntamsulosin\n0.4 mg · once a day · 0.4 mg/day total\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Catapres",
+   "generic": "clonidine",
+   "dose": "0.1 mg · twice a day · 0.2 mg/day total",
+   "facts": "Central alpha-2 Adrenergic Agonist [EPC]",
+   "text": "Catapres\nclonidine\n0.1 mg · twice a day · 0.2 mg/day total\nCentral alpha-2 Adrenergic Agonist [EPC]"
+  },
+  {
+   "brand": "Coreg",
+   "generic": "carvedilol",
+   "dose": "25 mg · twice a day · 50 mg/day total",
+   "facts": "alpha-Adrenergic Blocker [EPC], beta-Adrenergic Blocker [EPC]\nHigh-Frequency Adverse Effect",
+   "text": "Coreg\ncarvedilol\n25 mg · twice a day · 50 mg/day total\nalpha-Adrenergic Blocker [EPC], beta-Adrenergic Blocker [EPC]\nHigh-Frequency Adverse Effect"
+  }
+ ],
+ "totals": [
+  "carvedilol\n50 mg/day",
+  "clonidine\n200 mcg (0.2 mg)/day",
+  "isosorbide\n60 mg/day",
+  "sildenafil\n100 mg/day max",
+  "tamsulosin\n400 mcg (0.4 mg)/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff",
+   "in_alert": true
+  },
+  {
+   "text": "Viagra",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff",
+   "in_alert": true
+  },
+  {
+   "text": "Nitrostat",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5b150cd2-fac8-86ce-e063-6294a90a67b9",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff",
+   "in_alert": true
+  },
+  {
+   "text": "Viagra",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff",
+   "in_alert": true
+  },
+  {
+   "text": "Imdur",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d01d4f0f-5164-4ea3-b772-72b97961c6fb",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d",
+   "in_alert": true
+  },
+  {
+   "text": "Catapres",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d",
+   "in_alert": true
+  },
+  {
+   "text": "Coreg",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7d6bfff-fbb6-4a1f-aa13-babbb9a1e878",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff",
+   "in_alert": true
+  },
+  {
+   "text": "Viagra",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff",
+   "in_alert": true
+  },
+  {
+   "text": "Nitrostat",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5b150cd2-fac8-86ce-e063-6294a90a67b9",
+   "in_alert": true
+  },
+  {
+   "text": "Imdur",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d01d4f0f-5164-4ea3-b772-72b97961c6fb",
+   "in_alert": true
+  },
+  {
+   "text": "Flomax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8302a6e-b8da-4931-a279-b49e37943816",
+   "in_alert": true
+  },
+  {
+   "text": "Catapres",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d",
+   "in_alert": true
+  },
+  {
+   "text": "Coreg",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7d6bfff-fbb6-4a1f-aa13-babbb9a1e878",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d",
+   "in_alert": true
+  },
+  {
+   "text": "Catapres",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d",
+   "in_alert": true
+  },
+  {
+   "text": "Coreg",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7d6bfff-fbb6-4a1f-aa13-babbb9a1e878",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: E, Avoid combination. Do not use these drugs together.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n5 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n2\nD\nConsider changing therapy\n1\nC\nMonitor closely\n2\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: E, Avoid combination. Do not use these drugs together.\nE\nAvoid combination — Do not use these drugs together.\nViagra, Nitrostat\n\nNitrostat with Viagra: severe, refractory low blood pressure\n\nWhy E: The Contraindications section of the Viagra label addresses this combination: severe, refractory low blood pressure. Clinical rulebook row 21.\n\n4 CONTRAINDICATIONS Sildenafil for oral suspension is contraindicated in patients with: Concomitant use of organic nitrates in any form, either regularly or intermittently, because of the greater risk of hypotension [see Warnings and Precautions (5.1) ] .\n\nFrom the Viagra label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nNitrates release nitric oxide, which raises cGMP; PDE5 inhibitors block cGMP breakdown (riociguat stimulates its production). Together blood pressure can fall sharply and not respond to treatment. The labels contraindicate these combinations.\n\nWhat to do\n\nDo not use together. Allow 24 hours after sildenafil or vardenafil and 48 hours after tadalafil before any nitrate.\n\nFDA labels: Viagra\n · Nitrostat\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nE\nAvoid combination — Do not use these drugs together.\nViagra, Imdur\n\nImdur with Viagra: severe, refractory low blood pressure\n\nWhy E: The Contraindications section of the Viagra label addresses this combination: severe, refractory low blood pressure. Clinical rulebook row 21.\n\n4 CONTRAINDICATIONS Sildenafil for oral suspension is contraindicated in patients with: Concomitant use of organic nitrates in any form, either regularly or intermittently, because of the greater risk of hypotension [see Warnings and Precautions (5.1) ] .\n\nFrom the Viagra label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nNitrates release nitric oxide, which raises cGMP; PDE5 inhibitors block cGMP breakdown (riociguat stimulates its production). Together blood pressure can fall sharply and not respond to treatment. The labels contraindicate these combinations.\n\nWhat to do\n\nDo not use together. Allow 24 hours after sildenafil or vardenafil and 48 hours after tadalafil before any nitrate.\n\nFDA labels: Viagra\n · Imdur\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nCatapres, Coreg\n\nCatapres with Coreg: slow heart rate, and a rebound hypertensive crisis if clonidine stops suddenly\n\nWhy D: The Warnings section of the Catapres label addresses this combination: slow heart rate, and a rebound hypertensive crisis if clonidine stops suddenly. Clinical rulebook row 25.\n\nThe likelihood of such reactions to discontinuation of clonidine therapy appears to be greater after administration of higher doses or continuation of concomitant beta-blocker treatment and special caution is therefore advised in these situations.\n\nFrom the Catapres label, Warnings section.\nOpen on DailyMed\n\nWhy it happens\n\nBoth slow the heart. If clonidine is stopped abruptly, norepinephrine surges; with alpha receptors unopposed under beta-blockade, blood pressure can rebound to a crisis.\n\nWhat to do\n\nMonitor heart rate. To stop, taper the beta-blocker first and then clonidine over several days.\n\nFDA labels: Catapres\n · Coreg\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nViagra, Nitrostat, Imdur, Flomax, Catapres, Coreg\n\n6 drugs: risk of low blood pressure on standing, fainting, and falls\n\nWhy C: The Contraindications section of the Viagra label addresses this combination: risk of low blood pressure on standing, fainting, and falls. Clinical rulebook row 22.\n\n4 CONTRAINDICATIONS Sildenafil for oral suspension is contraindicated in patients with: Concomitant use of organic nitrates in any form, either regularly or intermittently, because of the greater risk of hypotension [see Warnings and Precautions (5.1) ] .\n\nFrom the Viagra label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug lowers blood pressure or blocks the reflex that holds it up when standing. Together they can cause orthostatic hypotension, fainting, and falls.\n\nWhat to do\n\nStart low, raise one drug at a time, check standing blood pressure, and tell the patient to stand up slowly.\n\nFlomax with Viagra: symptomatic low blood pressure on standing. Alpha-1 blockers and PDE5 inhibitors both widen blood vessels. The sildenafil label advises being on a stable alpha-blocker dose first and starting at the lowest PDE5 dose.\n\nFDA labels: Viagra\n · Nitrostat\n · Imdur\n · Flomax\n · Catapres\n · Coreg\n\nShow 4 more label sentences\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nCatapres, Coreg\n\n2 heart-rate-slowing drugs: risk of slow heart rate (bradycardia) and heart block\n\nWhy C: The Precautions section of the Catapres label addresses this combination: risk of slow heart rate (bradycardia) and heart block. Clinical rulebook row 20.\n\nThe sympatholytic action of clonidine may worsen sinus node dysfunction and atrioventricular (AV) block, especially in patients taking other sympatholytic drugs.\n\nFrom the Catapres label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug slows the heart rate or conduction through the AV node. Together they can cause severe bradycardia, AV block, or heart failure.\n\nWhat to do\n\nCheck pulse and an ECG after starting or raising any of them; lower doses or stop one if the heart rate drops below 50 or new AV block appears.\n\nFDA labels: Catapres\n · Coreg\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\ncarvedilol\n50 mg/day\nclonidine\n200 mcg (0.2 mg)/day\nisosorbide\n60 mg/day\nsildenafil\n100 mg/day max\ntamsulosin\n400 mcg (0.4 mg)/day\nViagra\nsildenafil\n100 mg · as needed, up to once a day · 100 mg/day max\nPhosphodiesterase 5 Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nNitrostat\nnitroglycerin\n0.4 mg\nNitrate Vasodilator [EPC]\nImdur\nisosorbide\n60 mg · once a day · 60 mg/day total\nextended release\nNitrate Vasodilator [EPC]\nHigh-Frequency Adverse Effect\nFlomax\ntamsulosin\n0.4 mg · once a day · 0.4 mg/day total\nHigh-Frequency Adverse Effect\nCatapres\nclonidine\n0.1 mg · twice a day · 0.2 mg/day total\nCentral alpha-2 Adrenergic Agonist [EPC]\nCoreg\ncarvedilol\n25 mg · twice a day · 50 mg/day total\nalpha-Adrenergic Blocker [EPC], beta-Adrenergic Blocker [EPC]\nHigh-Frequency Adverse Effect\n5 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:06:16.319Z"
+}

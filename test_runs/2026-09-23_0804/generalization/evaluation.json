@@ -1,0 +1,748 @@
+{
+ "summary": {
+  "recall": {
+   "D": {
+    "expected": 2,
+    "hit": 2,
+    "partial": 0
+   },
+   "C": {
+    "expected": 2,
+    "hit": 2,
+    "partial": 0
+   },
+   "B": {
+    "expected": 2,
+    "hit": 2,
+    "partial": 0
+   },
+   "A": {
+    "expected": 0,
+    "hit": 0,
+    "partial": 0
+   }
+  },
+  "precision": {
+   "D": {
+    "shown": 2,
+    "supported": 2
+   },
+   "C": {
+    "shown": 3,
+    "supported": 3
+   },
+   "B": {
+    "shown": 2,
+    "supported": 2
+   },
+   "A": {
+    "shown": 1,
+    "supported": 1
+   }
+  },
+  "false_positives_total": 0,
+  "false_positives_controls": 0,
+  "totals_correct": 0,
+  "totals_expected": 0,
+  "duplicate_cases": 0,
+  "duplicate_resolved": 0,
+  "grouping_expected": 1,
+  "grouping_present": 1,
+  "flags_shown": 8,
+  "flags_with_working_primary_link": 8,
+  "flags_with_working_specific_link": 8,
+  "cd_flags": 5,
+  "cd_flags_with_working_specific_link": 5,
+  "coverage": {
+   "1": {
+    "name": "Opioid + benzodiazepine",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "2": {
+    "name": "Opioid + gabapentinoid",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "3": {
+    "name": "Oxycodone/fentanyl/methadone + strong CYP3A4 inhibitor",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "4": {
+    "name": "Tizanidine + ciprofloxacin or fluvoxamine",
+    "applies": 1,
+    "flagged": 1,
+    "named": 1,
+    "lists": [
+     "G02"
+    ]
+   },
+   "5": {
+    "name": "Clozapine + fluvoxamine or ciprofloxacin",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "6": {
+    "name": "Anticholinergic burden",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "7": {
+    "name": "SSRI/SNRI or MAOI + serotonergic drug",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "8": {
+    "name": "Tramadol/bupropion + threshold-lowering drug or CYP2D6 inhibitor",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "9": {
+    "name": "Warfarin + NSAID",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "10": {
+    "name": "Warfarin + CYP2C9 inhibitor (or rifampin)",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "11": {
+    "name": "DOAC + strong CYP3A4/P-gp inhibitor",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "12": {
+    "name": "Anticoagulant + DAPT or antiplatelet + NSAID",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "13": {
+    "name": "SSRI + NSAID or anticoagulant",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "14": {
+    "name": "Triple whammy: ACEi/ARB + diuretic + NSAID",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "15": {
+    "name": "ACEi/ARB or TMP-SMX + MRA (hyperkalemia)",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "16": {
+    "name": "Lithium + NSAID, ACEi/ARB, or thiazide",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "17": {
+    "name": "Thiazide + SSRI (hyponatremia)",
+    "applies": 1,
+    "flagged": 1,
+    "named": 1,
+    "lists": [
+     "G05"
+    ]
+   },
+   "18": {
+    "name": "Digoxin + P-gp inhibitor or loop/thiazide",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "19": {
+    "name": "Metformin + AKI cause",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "20": {
+    "name": "Beta-blocker + verapamil or diltiazem",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "21": {
+    "name": "Nitrate + PDE5 inhibitor or riociguat",
+    "applies": 1,
+    "flagged": 1,
+    "named": 1,
+    "lists": [
+     "G06"
+    ]
+   },
+   "22": {
+    "name": "Alpha-1 blocker + PDE5 inhibitor or antihypertensive",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "23": {
+    "name": "Stacked QT prolongers",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "24": {
+    "name": "MAOI + sympathomimetic",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "25": {
+    "name": "Clonidine + beta-blocker",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "26": {
+    "name": "Sulfonylurea + CYP2C9 inhibitor or beta-blocker",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "27": {
+    "name": "Statin + CYP3A4 inhibitor, gemfibrozil, or amiodarone/verapamil/diltiazem",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "28": {
+    "name": "Colchicine + CYP3A4/P-gp inhibitor",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "29": {
+    "name": "Xanthine oxidase inhibitor + thiopurine",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "30": {
+    "name": "Methotrexate + TMP-SMX, NSAID, PPI, or penicillin",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "31": {
+    "name": "Clopidogrel + omeprazole or esomeprazole",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "32": {
+    "name": "Valproate + carbapenem",
+    "applies": 1,
+    "flagged": 1,
+    "named": 1,
+    "lists": [
+     "G01"
+    ]
+   },
+   "33": {
+    "name": "Inducer + DOAC, calcineurin inhibitor, PI, OC, or methadone",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "34": {
+    "name": "Calcineurin inhibitor + azole, clarithromycin, diltiazem, or verapamil",
+    "applies": 0,
+    "flagged": 0,
+    "named": 0,
+    "lists": []
+   },
+   "35": {
+    "name": "Codeine/tramadol + CYP2D6 inhibitor",
+    "applies": 1,
+    "flagged": 1,
+    "named": 1,
+    "lists": [
+     "G03"
+    ]
+   },
+   "36": {
+    "name": "Fluoroquinolone + systemic corticosteroid",
+    "applies": 1,
+    "flagged": 1,
+    "named": 1,
+    "lists": [
+     "G04"
+    ]
+   }
+  },
+  "median_seconds": 0.407,
+  "worst_seconds": 0.408,
+  "lists_scored": 6,
+  "entries_not_found": 0,
+  "entries_total": 18,
+  "focused_on_load": 6
+ },
+ "lists": {
+  "G01": {
+   "input": "Depakote (divalproex sodium) 500 mg twice daily = 1000 mg/day, Merrem (meropenem) 1 g IV every 8 hours = 3 g/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+   "items": [
+    {
+     "drugs": [
+      "divalproex",
+      "meropenem"
+     ],
+     "category": "efficacy loss",
+     "severity": "major",
+     "why": "Carbapenems block valproate-glucuronide recycling; valproate levels fall 60-100% within 24 h; breakthrough seizures (row 32).",
+     "pack_grade": "C",
+     "status": "HIT",
+     "site_grade": "D (= C)",
+     "site_category": "Depakote with Merrem: valproate levels drop 60 to 100% within a day: breakthrough seizures",
+     "reason": "same drugs, equivalent category, same or higher grade"
+    }
+   ],
+   "false_positives": [],
+   "totals": [],
+   "grouping": [],
+   "links": [
+    {
+     "drugs": "Depakote, Merrem",
+     "grade": "D",
+     "specific_working": true,
+     "primary_working": true
+    }
+   ],
+   "rulebook": [
+    {
+     "row": 32,
+     "name": "Valproate + carbapenem",
+     "drugs": [
+      "divalproex",
+      "meropenem"
+     ],
+     "flagged": true,
+     "named": true
+    }
+   ],
+   "not_found": [],
+   "alerts": [
+    {
+     "grade": "D",
+     "pack_grade": "C",
+     "drugs": "Depakote, Merrem",
+     "category": "Depakote with Merrem: valproate levels drop 60 to 100% within a day: breakthrough seizures",
+     "ingredients": [
+      "divalproex",
+      "meropenem"
+     ]
+    }
+   ],
+   "seconds": 0.408,
+   "focused": true,
+   "defects": [],
+   "console_errors": [],
+   "bad_responses": [],
+   "theme": "Rulebook row 32"
+  },
+  "G02": {
+   "input": "Zanaflex (tizanidine) 4 mg three times daily = 12 mg/day, Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+   "items": [
+    {
+     "drugs": [
+      "tizanidine",
+      "ciprofloxacin"
+     ],
+     "category": "CYP inhibition",
+     "severity": "contraindicated",
+     "why": "CYP1A2 inhibition raises tizanidine AUC about 10-fold; label contraindication (row 4).",
+     "pack_grade": "D",
+     "status": "HIT",
+     "site_grade": "E (= D)",
+     "site_category": "Zanaflex with Cipro: tizanidine levels rise 10- to 33-fold: severe low blood pressure and sedation",
+     "reason": "same drugs, equivalent category, same or higher grade"
+    }
+   ],
+   "false_positives": [],
+   "totals": [],
+   "grouping": [],
+   "links": [
+    {
+     "drugs": "Zanaflex, Cipro",
+     "grade": "E",
+     "specific_working": true,
+     "primary_working": true
+    }
+   ],
+   "rulebook": [
+    {
+     "row": 4,
+     "name": "Tizanidine + ciprofloxacin or fluvoxamine",
+     "drugs": [
+      "ciprofloxacin",
+      "tizanidine"
+     ],
+     "flagged": true,
+     "named": true
+    }
+   ],
+   "not_found": [],
+   "alerts": [
+    {
+     "grade": "E",
+     "pack_grade": "D",
+     "drugs": "Zanaflex, Cipro",
+     "category": "Zanaflex with Cipro: tizanidine levels rise 10- to 33-fold: severe low blood pressure and sedation",
+     "ingredients": [
+      "ciprofloxacin",
+      "tizanidine"
+     ]
+    }
+   ],
+   "seconds": 0.408,
+   "focused": true,
+   "defects": [],
+   "console_errors": [],
+   "bad_responses": [],
+   "theme": "Rulebook row 4"
+  },
+  "G03": {
+   "input": "Tylenol with Codeine (acetaminophen/codeine) 300/30 mg every 6 hours as needed max 4 doses/day = 1200/120 mg/day max, Paxil (paroxetine) 20 mg once daily = 20 mg/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+   "items": [
+    {
+     "drugs": [
+      "codeine",
+      "paroxetine"
+     ],
+     "category": "CYP inhibition",
+     "severity": "moderate",
+     "why": "CYP2D6 inhibition blocks conversion of codeine to morphine: analgesic failure (row 35).",
+     "pack_grade": "B",
+     "status": "HIT",
+     "site_grade": "C (= B)",
+     "site_category": "Tylenol with Codeine with Paxil: less pain relief; more parent-drug side effects",
+     "reason": "same drugs, equivalent category, same or higher grade"
+    }
+   ],
+   "false_positives": [],
+   "totals": [],
+   "grouping": [],
+   "links": [
+    {
+     "drugs": "Tylenol with Codeine, Paxil",
+     "grade": "C",
+     "specific_working": true,
+     "primary_working": true
+    },
+    {
+     "drugs": "Tylenol with Codeine, Paxil",
+     "grade": "A",
+     "specific_working": true,
+     "primary_working": true
+    }
+   ],
+   "rulebook": [
+    {
+     "row": 35,
+     "name": "Codeine/tramadol + CYP2D6 inhibitor",
+     "drugs": [
+      "codeine",
+      "paroxetine"
+     ],
+     "flagged": true,
+     "named": true
+    }
+   ],
+   "not_found": [],
+   "alerts": [
+    {
+     "grade": "C",
+     "pack_grade": "B",
+     "drugs": "Tylenol with Codeine, Paxil",
+     "category": "Tylenol with Codeine with Paxil: less pain relief; more parent-drug side effects",
+     "ingredients": [
+      "acetaminophen",
+      "acetaminophen, codeine",
+      "codeine",
+      "paroxetine"
+     ]
+    },
+    {
+     "grade": "A",
+     "pack_grade": "A",
+     "drugs": "Tylenol with Codeine, Paxil",
+     "category": "Serotonin Syndrome Risk shared by 2 drugs",
+     "ingredients": [
+      "acetaminophen",
+      "acetaminophen, codeine",
+      "codeine",
+      "paroxetine"
+     ]
+    }
+   ],
+   "seconds": 0.407,
+   "focused": true,
+   "defects": [],
+   "console_errors": [],
+   "bad_responses": [],
+   "theme": "Rulebook row 35"
+  },
+  "G04": {
+   "input": "Levaquin (levofloxacin) 750 mg once daily = 750 mg/day, Deltasone (prednisone) 40 mg once daily = 40 mg/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+   "items": [
+    {
+     "drugs": [
+      "levofloxacin",
+      "prednisone"
+     ],
+     "category": "tendon rupture",
+     "severity": "major",
+     "why": "Fluoroquinolone with a systemic corticosteroid: tendinopathy and Achilles rupture; boxed warning (row 36).",
+     "pack_grade": "C",
+     "status": "HIT",
+     "site_grade": "D (= C)",
+     "site_category": "Levaquin with Deltasone: tendinitis and tendon rupture",
+     "reason": "same drugs, equivalent category, same or higher grade"
+    }
+   ],
+   "false_positives": [],
+   "totals": [],
+   "grouping": [],
+   "links": [
+    {
+     "drugs": "Levaquin, Deltasone",
+     "grade": "D",
+     "specific_working": true,
+     "primary_working": true
+    }
+   ],
+   "rulebook": [
+    {
+     "row": 36,
+     "name": "Fluoroquinolone + systemic corticosteroid",
+     "drugs": [
+      "levofloxacin",
+      "prednisone"
+     ],
+     "flagged": true,
+     "named": true
+    }
+   ],
+   "not_found": [],
+   "alerts": [
+    {
+     "grade": "D",
+     "pack_grade": "C",
+     "drugs": "Levaquin, Deltasone",
+     "category": "Levaquin with Deltasone: tendinitis and tendon rupture",
+     "ingredients": [
+      "levofloxacin",
+      "prednisone"
+     ]
+    }
+   ],
+   "seconds": 0.407,
+   "focused": true,
+   "defects": [],
+   "console_errors": [],
+   "bad_responses": [],
+   "theme": "Rulebook row 36"
+  },
+  "G05": {
+   "input": "Microzide (hydrochlorothiazide) 25 mg once daily = 25 mg/day, Zoloft (sertraline) 100 mg once daily = 100 mg/day, Tegretol (carbamazepine) 200 mg twice daily = 400 mg/day",
+   "items": [
+    {
+     "drugs": [
+      "hydrochlorothiazide",
+      "sertraline",
+      "carbamazepine"
+     ],
+     "category": "electrolyte",
+     "severity": "moderate",
+     "why": "Thiazide natriuresis plus the SIADH-like effect of an SSRI and carbamazepine: hyponatremia (row 17).",
+     "pack_grade": "B",
+     "status": "HIT",
+     "site_grade": "D (= C)",
+     "site_category": "3 drugs that lower sodium: risk of low sodium (hyponatremia)",
+     "reason": "same drugs, equivalent category, same or higher grade"
+    }
+   ],
+   "false_positives": [],
+   "totals": [],
+   "grouping": [
+    {
+     "drugs": [
+      "hydrochlorothiazide",
+      "sertraline",
+      "carbamazepine"
+     ],
+     "category": "electrolyte",
+     "present": true
+    }
+   ],
+   "links": [
+    {
+     "drugs": "Microzide, Zoloft, Tegretol",
+     "grade": "D",
+     "specific_working": true,
+     "primary_working": true
+    }
+   ],
+   "rulebook": [
+    {
+     "row": 17,
+     "name": "Thiazide + SSRI (hyponatremia)",
+     "drugs": [
+      "carbamazepine",
+      "hydrochlorothiazide",
+      "sertraline"
+     ],
+     "flagged": true,
+     "named": true
+    }
+   ],
+   "not_found": [],
+   "alerts": [
+    {
+     "grade": "D",
+     "pack_grade": "C",
+     "drugs": "Microzide, Zoloft, Tegretol",
+     "category": "3 drugs that lower sodium: risk of low sodium (hyponatremia)",
+     "ingredients": [
+      "carbamazepine",
+      "hydrochlorothiazide",
+      "sertraline"
+     ]
+    }
+   ],
+   "seconds": 0.407,
+   "focused": true,
+   "defects": [],
+   "console_errors": [],
+   "bad_responses": [],
+   "theme": "Rulebook row 17"
+  },
+  "G06": {
+   "input": "Adempas (riociguat) 1 mg three times daily = 3 mg/day, Imdur (isosorbide mononitrate ER) 30 mg once daily = 30 mg/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+   "items": [
+    {
+     "drugs": [
+      "riociguat",
+      "isosorbide mononitrate"
+     ],
+     "category": "hypotension",
+     "severity": "contraindicated",
+     "why": "Nitrate with riociguat: cGMP accumulation and refractory hypotension; contraindicated (row 21).",
+     "pack_grade": "D",
+     "status": "HIT",
+     "site_grade": "E (= D)",
+     "site_category": "Imdur with Adempas: severe, refractory low blood pressure",
+     "reason": "same drugs, equivalent category, same or higher grade"
+    }
+   ],
+   "false_positives": [],
+   "totals": [],
+   "grouping": [],
+   "links": [
+    {
+     "drugs": "Adempas, Imdur",
+     "grade": "E",
+     "specific_working": true,
+     "primary_working": true
+    },
+    {
+     "drugs": "Adempas, Imdur",
+     "grade": "C",
+     "specific_working": true,
+     "primary_working": true
+    }
+   ],
+   "rulebook": [
+    {
+     "row": 21,
+     "name": "Nitrate + PDE5 inhibitor or riociguat",
+     "drugs": [
+      "isosorbide mononitrate",
+      "riociguat"
+     ],
+     "flagged": true,
+     "named": true
+    }
+   ],
+   "not_found": [],
+   "alerts": [
+    {
+     "grade": "E",
+     "pack_grade": "D",
+     "drugs": "Adempas, Imdur",
+     "category": "Imdur with Adempas: severe, refractory low blood pressure",
+     "ingredients": [
+      "isosorbide",
+      "isosorbide mononitrate",
+      "riociguat"
+     ]
+    },
+    {
+     "grade": "C",
+     "pack_grade": "B",
+     "drugs": "Adempas, Imdur",
+     "category": "2 drugs: risk of low blood pressure on standing, fainting, and falls",
+     "ingredients": [
+      "isosorbide",
+      "isosorbide mononitrate",
+      "riociguat"
+     ]
+    }
+   ],
+   "seconds": 0.407,
+   "focused": true,
+   "defects": [],
+   "console_errors": [],
+   "bad_responses": [],
+   "theme": "Rulebook row 21"
+  }
+ }
+}

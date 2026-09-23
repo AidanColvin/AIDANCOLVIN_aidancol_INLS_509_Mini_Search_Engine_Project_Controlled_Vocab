@@ -1,0 +1,518 @@
+{
+ "id": "L24",
+ "input": "Norco (hydrocodone/acetaminophen) 10/325 mg every 6 hours = 40/1300 mg/day, Percocet (oxycodone/acetaminophen) 5/325 mg every 6 hours as needed max 4 doses/day = 20/1300 mg/day max, Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day, Lunesta (eszopiclone) 3 mg once daily at bedtime = 3 mg/day, Mobic (meloxicam) 15 mg once daily = 15 mg/day, Aleve (naproxen sodium OTC) 220 mg twice daily = 440 mg/day",
+ "viewport": "390x844",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.896,
+ "secondsToResults": 0.408,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Norco, Percocet, Ambien, Lunesta",
+   "category": "4 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: The Boxed Warning section of the Norco label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "Risks from Concomitant Use with Benzodiazepines or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Norco label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Norco\n · Percocet\n · Ambien\n · Lunesta\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7"
+    },
+    {
+     "text": "Norco",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7"
+    },
+    {
+     "text": "Percocet",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9cf218c-af5e-4249-aa3b-a8555ed02278"
+    },
+    {
+     "text": "Ambien",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721"
+    },
+    {
+     "text": "Lunesta",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9dfe774a-2c7a-4e10-bedd-cde64ad28676"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Ambien, Lunesta",
+   "category": "2 sedative-hypnotics: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing",
+   "basis": "Why D: Class rule: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These are all sedative-hypnotics: taking more than one is therapeutic duplication.",
+   "action": "Keep one sleep medicine at the lowest dose.",
+   "includes": null,
+   "sources": "FDA labels: Ambien\n · Lunesta",
+   "links": [
+    {
+     "text": "Ambien",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721"
+    },
+    {
+     "text": "Lunesta",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9dfe774a-2c7a-4e10-bedd-cde64ad28676"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Norco, Percocet",
+   "category": "2 full opioid agonists: duplicate therapy: the total opioid dose (MME) adds up",
+   "basis": "Why D: Class rule: duplicate therapy: the total opioid dose (MME) adds up.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These are all full opioid agonists: taking more than one is therapeutic duplication.",
+   "action": "Use one opioid, and count the total MME across all of them.",
+   "includes": null,
+   "sources": "FDA labels: Norco\n · Percocet",
+   "links": [
+    {
+     "text": "Norco",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7"
+    },
+    {
+     "text": "Percocet",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9cf218c-af5e-4249-aa3b-a8555ed02278"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Mobic, Aleve",
+   "category": "2 NSAIDs: duplicate therapy: more stomach bleeding, kidney, and heart risk with no added benefit",
+   "basis": "Why D: Class rule: duplicate therapy: more stomach bleeding, kidney, and heart risk with no added benefit.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These are all NSAIDs: taking more than one is therapeutic duplication.",
+   "action": "Keep one NSAID.",
+   "includes": null,
+   "sources": "FDA labels: Mobic\n · Aleve",
+   "links": [
+    {
+     "text": "Mobic",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=385b7cf4-976a-4a58-9ebc-def8b6e78b75"
+    },
+    {
+     "text": "Aleve",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5954565a-d9bd-9e26-e063-6294a90a03cb"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Norco, Percocet",
+   "category": "Duplicate: Norco (acetaminophen, hydrocodone) and Percocet (acetaminophen, oxycodone) are the same drug under different names: combined acetaminophen 2,600 mg (2.6 g)/day max",
+   "basis": "Why D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Both entries deliver the same active drug, so the patient gets the combined dose.",
+   "action": "Confirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.",
+   "includes": null,
+   "sources": "FDA labels: Norco\n · Percocet",
+   "links": [
+    {
+     "text": "Norco",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7"
+    },
+    {
+     "text": "Percocet",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9cf218c-af5e-4249-aa3b-a8555ed02278"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Mobic, Aleve",
+   "category": "2 drugs: risk of serious bleeding, especially stomach and gut bleeding",
+   "basis": "Why C: Class rule: risk of serious bleeding, especially stomach and gut bleeding. Clinical rulebook row 9, 12, 13.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Anticoagulants slow clotting, aspirin and other antiplatelets stop platelets from sticking, NSAIDs block platelets and injure the stomach lining, and SSRIs and SNRIs drain the serotonin platelets need. Each added drug raises the bleeding risk.",
+   "action": "Drop any drug that is not essential (WOEST and AUGUSTUS support dropping aspirin from triple therapy), add a proton pump inhibitor for stomach protection, and watch for black stools, vomiting blood, or anemia.",
+   "includes": null,
+   "sources": "FDA labels: Mobic\n · Aleve\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n · Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy\n · Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+   "links": [
+    {
+     "text": "Mobic",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=385b7cf4-976a-4a58-9ebc-def8b6e78b75"
+    },
+    {
+     "text": "Aleve",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5954565a-d9bd-9e26-e063-6294a90a03cb"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    },
+    {
+     "text": "Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/23415013/"
+    },
+    {
+     "text": "Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/30883055/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Mobic, Aleve",
+   "category": "2 drugs: risk of acute kidney injury",
+   "basis": "Why C: The Warnings and Precautions section of the Mobic label addresses this combination: risk of acute kidney injury. Clinical rulebook row 14.",
+   "quote": "Patients at greatest risk of this reaction are those with impaired renal function, dehydration, hypovolemia, heart failure, liver dysfunction, those taking diuretics and ACE inhibitors or ARBs, and the elderly.",
+   "source": "From the Mobic label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "NSAIDs remove the prostaglandins that keep blood flowing into the kidney, ACE inhibitors and ARBs lower the pressure that keeps it filtering, and diuretics reduce blood volume (the \"triple whammy\"). Aminoglycosides, vancomycin, and other listed drugs injure the kidney directly.",
+   "action": "Avoid the NSAID if possible, keep the patient hydrated, and check creatinine within a week, sooner in the hospital.",
+   "includes": null,
+   "sources": "FDA labels: Mobic\n · Aleve\n · Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=385b7cf4-976a-4a58-9ebc-def8b6e78b75"
+    },
+    {
+     "text": "Mobic",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=385b7cf4-976a-4a58-9ebc-def8b6e78b75"
+    },
+    {
+     "text": "Aleve",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5954565a-d9bd-9e26-e063-6294a90a03cb"
+    },
+    {
+     "text": "Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/23299844/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Lunesta",
+   "category": "eszopiclone 3 mg/day is at the labeled maximum of 3 mg/day (maximum)",
+   "basis": "Why A: Daily total 3 mg against a labeled maximum of 3 mg.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of eszopiclone; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Lunesta",
+   "links": [
+    {
+     "text": "Lunesta",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9dfe774a-2c7a-4e10-bedd-cde64ad28676"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Mobic",
+   "category": "meloxicam 15 mg/day is at the labeled maximum of 15 mg/day (maximum)",
+   "basis": "Why A: Daily total 15 mg against a labeled maximum of 15 mg.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of meloxicam; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Mobic",
+   "links": [
+    {
+     "text": "Mobic",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=385b7cf4-976a-4a58-9ebc-def8b6e78b75"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Ambien",
+   "category": "zolpidem 10 mg/day is at the labeled maximum of 10 mg/day (maximum)",
+   "basis": "Why A: Daily total 10 mg against a labeled maximum of 10 mg (5 mg for women and older adults).",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of zolpidem; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Ambien",
+   "links": [
+    {
+     "text": "Ambien",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "5"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "2"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "3"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Norco",
+   "generic": "acetaminophen, hydrocodone",
+   "dose": "hydrocodone 10 mg / acetaminophen 325 mg · 4 times a day",
+   "facts": "Schedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk",
+   "text": "Norco\nacetaminophen, hydrocodone\nhydrocodone 10 mg / acetaminophen 325 mg · 4 times a day\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk"
+  },
+  {
+   "brand": "Percocet",
+   "generic": "acetaminophen, oxycodone",
+   "dose": "oxycodone 5 mg / acetaminophen 325 mg · as needed, up to 4 times a day",
+   "facts": "Opioid Agonist [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk",
+   "text": "Percocet\nacetaminophen, oxycodone\noxycodone 5 mg / acetaminophen 325 mg · as needed, up to 4 times a day\nOpioid Agonist [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk"
+  },
+  {
+   "brand": "Ambien",
+   "generic": "zolpidem",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Schedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Ambien\nzolpidem\n10 mg · once a day · 10 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Lunesta",
+   "generic": "eszopiclone",
+   "dose": "3 mg · once a day · 3 mg/day total",
+   "facts": "Schedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Lunesta\neszopiclone\n3 mg · once a day · 3 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Mobic",
+   "generic": "meloxicam",
+   "dose": "15 mg · once a day · 15 mg/day total",
+   "facts": "Nonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Mobic\nmeloxicam\n15 mg · once a day · 15 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Aleve",
+   "generic": "naproxen",
+   "dose": "220 mg · twice a day · 440 mg/day total",
+   "facts": "Nonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nContraindicated Combination",
+   "text": "Aleve\nnaproxen\n220 mg · twice a day · 440 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nContraindicated Combination"
+  }
+ ],
+ "totals": [
+  "acetaminophen\n2,600 mg (2.6 g)/day max · from 2 entries",
+  "eszopiclone\n3 mg/day",
+  "hydrocodone\n40 mg/day · 40 MME",
+  "meloxicam\n15 mg/day",
+  "naproxen\n440 mg/day",
+  "oxycodone\n20 mg/day max · 30 MME",
+  "zolpidem\n10 mg/day"
+ ],
+ "totalMme": "Total opioid dose: 70 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": true
+  },
+  {
+   "text": "Norco",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": true
+  },
+  {
+   "text": "Percocet",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9cf218c-af5e-4249-aa3b-a8555ed02278",
+   "in_alert": true
+  },
+  {
+   "text": "Ambien",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+   "in_alert": true
+  },
+  {
+   "text": "Lunesta",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9dfe774a-2c7a-4e10-bedd-cde64ad28676",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Ambien",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+   "in_alert": true
+  },
+  {
+   "text": "Lunesta",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9dfe774a-2c7a-4e10-bedd-cde64ad28676",
+   "in_alert": true
+  },
+  {
+   "text": "Norco",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": true
+  },
+  {
+   "text": "Percocet",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9cf218c-af5e-4249-aa3b-a8555ed02278",
+   "in_alert": true
+  },
+  {
+   "text": "Mobic",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=385b7cf4-976a-4a58-9ebc-def8b6e78b75",
+   "in_alert": true
+  },
+  {
+   "text": "Aleve",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5954565a-d9bd-9e26-e063-6294a90a03cb",
+   "in_alert": true
+  },
+  {
+   "text": "Norco",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": true
+  },
+  {
+   "text": "Percocet",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9cf218c-af5e-4249-aa3b-a8555ed02278",
+   "in_alert": true
+  },
+  {
+   "text": "Mobic",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=385b7cf4-976a-4a58-9ebc-def8b6e78b75",
+   "in_alert": true
+  },
+  {
+   "text": "Aleve",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5954565a-d9bd-9e26-e063-6294a90a03cb",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/23415013/",
+   "in_alert": true
+  },
+  {
+   "text": "Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/30883055/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=385b7cf4-976a-4a58-9ebc-def8b6e78b75",
+   "in_alert": true
+  },
+  {
+   "text": "Mobic",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=385b7cf4-976a-4a58-9ebc-def8b6e78b75",
+   "in_alert": true
+  },
+  {
+   "text": "Aleve",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5954565a-d9bd-9e26-e063-6294a90a03cb",
+   "in_alert": true
+  },
+  {
+   "text": "Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/23299844/",
+   "in_alert": true
+  },
+  {
+   "text": "Lunesta",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9dfe774a-2c7a-4e10-bedd-cde64ad28676",
+   "in_alert": true
+  },
+  {
+   "text": "Mobic",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=385b7cf4-976a-4a58-9ebc-def8b6e78b75",
+   "in_alert": true
+  },
+  {
+   "text": "Ambien",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n10 interactions\n\n6 of 6 medications checked\n\nE\n–\nD\n5\nC\n2\nB\n–\nA\n3\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nNorco, Percocet, Ambien, Lunesta\n\n4 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: The Boxed Warning section of the Norco label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nRisks from Concomitant Use with Benzodiazepines or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Norco label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Norco\n · Percocet\n · Ambien\n · Lunesta\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 3 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nAmbien, Lunesta\n\n2 sedative-hypnotics: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing\n\nWhy D: Class rule: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing.\n\nWhy it happens\n\nThese are all sedative-hypnotics: taking more than one is therapeutic duplication.\n\nWhat to do\n\nKeep one sleep medicine at the lowest dose.\n\nFDA labels: Ambien\n · Lunesta\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nNorco, Percocet\n\n2 full opioid agonists: duplicate therapy: the total opioid dose (MME) adds up\n\nWhy D: Class rule: duplicate therapy: the total opioid dose (MME) adds up.\n\nWhy it happens\n\nThese are all full opioid agonists: taking more than one is therapeutic duplication.\n\nWhat to do\n\nUse one opioid, and count the total MME across all of them.\n\nFDA labels: Norco\n · Percocet\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nMobic, Aleve\n\n2 NSAIDs: duplicate therapy: more stomach bleeding, kidney, and heart risk with no added benefit\n\nWhy D: Class rule: duplicate therapy: more stomach bleeding, kidney, and heart risk with no added benefit.\n\nWhy it happens\n\nThese are all NSAIDs: taking more than one is therapeutic duplication.\n\nWhat to do\n\nKeep one NSAID.\n\nFDA labels: Mobic\n · Aleve\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nNorco, Percocet\n\nDuplicate: Norco (acetaminophen, hydrocodone) and Percocet (acetaminophen, oxycodone) are the same drug under different names: combined acetaminophen 2,600 mg (2.6 g)/day max\n\nWhy D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.\n\nWhy it happens\n\nBoth entries deliver the same active drug, so the patient gets the combined dose.\n\nWhat to do\n\nConfirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.\n\nFDA labels: Norco\n · Percocet\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nMobic, Aleve\n\n2 drugs: risk of serious bleeding, especially stomach and gut bleeding\n\nWhy C: Class rule: risk of serious bleeding, especially stomach and gut bleeding. Clinical rulebook row 9, 12, 13.\n\nWhy it happens\n\nAnticoagulants slow clotting, aspirin and other antiplatelets stop platelets from sticking, NSAIDs block platelets and injure the stomach lining, and SSRIs and SNRIs drain the serotonin platelets need. Each added drug raises the bleeding risk.\n\nWhat to do\n\nDrop any drug that is not essential (WOEST and AUGUSTUS support dropping aspirin from triple therapy), add a proton pump inhibitor for stomach protection, and watch for black stools, vomiting blood, or anemia.\n\nFDA labels: Mobic\n · Aleve\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n · Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy\n · Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nMobic, Aleve\n\n2 drugs: risk of acute kidney injury\n\nWhy C: The Warnings and Precautions section of the Mobic label addresses this combination: risk of acute kidney injury. Clinical rulebook row 14.\n\nPatients at greatest risk of this reaction are those with impaired renal function, dehydration, hypovolemia, heart failure, liver dysfunction, those taking diuretics and ACE inhibitors or ARBs, and the elderly.\n\nFrom the Mobic label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nNSAIDs remove the prostaglandins that keep blood flowing into the kidney, ACE inhibitors and ARBs lower the pressure that keeps it filtering, and diuretics reduce blood volume (the \"triple whammy\"). Aminoglycosides, vancomycin, and other listed drugs injure the kidney directly.\n\nWhat to do\n\nAvoid the NSAID if possible, keep the patient hydrated, and check creatinine within a week, sooner in the hospital.\n\nFDA labels: Mobic\n · Aleve\n · Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury\n\nShow 1 more label sentence\nA\nMinor — Minor: usually no action needed.\nLunesta\n\neszopiclone 3 mg/day is at the labeled maximum of 3 mg/day (maximum)\n\nWhy A: Daily total 3 mg against a labeled maximum of 3 mg.\n\nWhy it happens\n\nThe total counts every entry of eszopiclone; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Lunesta\n\nA\nMinor — Minor: usually no action needed.\nMobic\n\nmeloxicam 15 mg/day is at the labeled maximum of 15 mg/day (maximum)\n\nWhy A: Daily total 15 mg against a labeled maximum of 15 mg.\n\nWhy it happens\n\nThe total counts every entry of meloxicam; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Mobic\n\nA\nMinor — Minor: usually no action needed.\nAmbien\n\nzolpidem 10 mg/day is at the labeled maximum of 10 mg/day (maximum)\n\nWhy A: Daily total 10 mg against a labeled maximum of 10 mg (5 mg for women and older adults).\n\nWhy it happens\n\nThe total counts every entry of zolpidem; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Ambien\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nacetaminophen\n2,600 mg (2.6 g)/day max · from 2 entries\neszopiclone\n3 mg/day\nhydrocodone\n40 mg/day · 40 MME\nmeloxicam\n15 mg/day\nnaproxen\n440 mg/day\noxycodone\n20 mg/day max · 30 MME\nzolpidem\n10 mg/day\n\nTotal opioid dose: 70 MME/day (CDC 2022 conversion factors).\n\nNorco\nacetaminophen, hydrocodone\nhydrocodone 10 mg / acetaminophen 325 mg · 4 times a day\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk\nPercocet\nacetaminophen, oxycodone\noxycodone 5 mg / acetaminophen 325 mg · as needed, up to 4 times a day\nOpioid Agonist [EPC]\nBoxed Warning\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nCNS Depression Risk\nAmbien\nzolpidem\n10 mg · once a day · 10 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nLunesta\neszopiclone\n3 mg · once a day · 3 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nMobic\nmeloxicam\n15 mg · once a day · 15 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nAleve\nnaproxen\n220 mg · twice a day · 440 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nContraindicated Combination\n10 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:08:40.412Z"
+}

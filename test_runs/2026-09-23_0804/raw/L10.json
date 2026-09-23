@@ -1,0 +1,272 @@
+{
+ "id": "L10",
+ "input": "Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day, Biaxin (clarithromycin) 500 mg twice daily = 1000 mg/day, Aldactone (spironolactone) 25 mg once daily = 25 mg/day, Vasotec (enalapril) 10 mg twice daily = 20 mg/day, Klor-Con (potassium chloride ER) 20 mEq once daily = 20 mEq/day, Trexall (methotrexate) 15 mg once weekly = 15 mg/week",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.822,
+ "secondsToResults": 0.406,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Zocor, Biaxin",
+   "category": "Zocor with Biaxin: statin levels rise many-fold: risk of rhabdomyolysis",
+   "basis": "Why E: The Contraindications section of the Zocor label addresses this combination: statin levels rise many-fold: risk of rhabdomyolysis. Clinical rulebook row 27.",
+   "quote": "4 CONTRAINDICATIONS Simvastatin is contraindicated in the following conditions: • Concomitant use of strong CYP3A4 inhibitors (select azole anti-fungals, macrolide antibiotics, anti-viral medications, and nefazodone) [see DRUG INTERACTIONS ( 7.1 )]. • Concomitant use of cyclosporine, danazol or gemfibrozil [see DRUG INTERACTIONS ( 7.1 )]. • Acute liver failure or decompensated cirrhosis [see WARNINGS AND PRECAUTIONS ( 5.3 )] • Hypersensitivity to simvastatin or any excipients in simvastatin tablets USP.",
+   "source": "From the Zocor label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Simvastatin and lovastatin are cleared almost entirely by CYP3A4. Strong CYP3A4 inhibitors (and erythromycin, cyclosporine, gemfibrozil, danazol) raise their levels roughly 10-fold, causing muscle breakdown and kidney failure. The simvastatin label contraindicates these combinations.",
+   "action": "Do not use together. Hold the statin during the antibiotic or antifungal course, or switch to pravastatin or rosuvastatin.",
+   "includes": null,
+   "sources": "FDA labels: Zocor\n · Biaxin\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e"
+    },
+    {
+     "text": "Zocor",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e"
+    },
+    {
+     "text": "Biaxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d5848f0-e9f0-4112-a7ca-bcc8ea2e69c6"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Aldactone, Vasotec, Klor-Con",
+   "category": "3 drugs: risk of high potassium (hyperkalemia)",
+   "basis": "Why D: The Contraindications section of the Aldactone label addresses this combination: risk of high potassium (hyperkalemia). Clinical rulebook row 15.",
+   "quote": "4 CONTRAINDICATIONS Spironolactone tablets are contraindicated in the patients with: Hyperkalemia Addison's disease Concomitant use of eplerenone Spironolactone tablets are contraindicated in patients with ( 4 ): Hyperkalemia Addison's disease Concomitant use of eplerenone",
+   "source": "From the Aldactone label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "ACE inhibitors and ARBs lower aldosterone, spironolactone and eplerenone block it, trimethoprim blocks the kidney's potassium channel (like amiloride), and supplements add potassium. Together potassium can rise to levels that stop the heart.",
+   "action": "Check potassium and kidney function within 3 days and again at 1 week; stop the potassium supplement or change the antibiotic when possible.",
+   "includes": null,
+   "sources": "FDA labels: Aldactone\n · Vasotec\n · Klor-Con\n · Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES\n · Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c"
+    },
+    {
+     "text": "Aldactone",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c"
+    },
+    {
+     "text": "Vasotec",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3fbc6cce-7ad5-49d5-9705-5f66ef92d544"
+    },
+    {
+     "text": "Klor-Con",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ace1eb11-b925-405a-b772-58c60b3ca7d4"
+    },
+    {
+     "text": "Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/15295047/"
+    },
+    {
+     "text": "Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/25646289/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Zocor",
+   "category": "simvastatin 40 mg/day is at the labeled maximum of 40 mg/day (maximum)",
+   "basis": "Why A: Daily total 40 mg against a labeled maximum of 40 mg (80 mg only for patients already on it for 12 months).",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of simvastatin; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Zocor",
+   "links": [
+    {
+     "text": "Zocor",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "1"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "1"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Zocor",
+   "generic": "simvastatin",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "HMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Zocor\nsimvastatin\n40 mg · once a day · 40 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Biaxin",
+   "generic": "clarithromycin",
+   "dose": "500 mg · twice a day · 1000 mg/day total",
+   "facts": "Macrolide Antimicrobial [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Biaxin\nclarithromycin\n500 mg · twice a day · 1000 mg/day total\nMacrolide Antimicrobial [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Aldactone",
+   "generic": "spironolactone",
+   "dose": "25 mg · once a day · 25 mg/day total",
+   "facts": "Aldosterone Antagonist [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Aldactone\nspironolactone\n25 mg · once a day · 25 mg/day total\nAldosterone Antagonist [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Vasotec",
+   "generic": "enalapril",
+   "dose": "10 mg · twice a day · 20 mg/day total",
+   "facts": "Boxed Warning\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Vasotec\nenalapril\n10 mg · twice a day · 20 mg/day total\nBoxed Warning\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Klor-Con",
+   "generic": "potassium chloride",
+   "dose": "20 mEq · once a day · 20 mEq/day total",
+   "facts": "extended release\nContraindicated Combination",
+   "text": "Klor-Con\npotassium chloride\n20 mEq · once a day · 20 mEq/day total\nextended release\nContraindicated Combination"
+  },
+  {
+   "brand": "Trexall",
+   "generic": "methotrexate",
+   "dose": "15 mg · once weekly · 15 mg/week",
+   "facts": "Folate Analog Metabolic Inhibitor [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect",
+   "text": "Trexall\nmethotrexate\n15 mg · once weekly · 15 mg/week\nFolate Analog Metabolic Inhibitor [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect"
+  }
+ ],
+ "totals": [
+  "clarithromycin\n1,000 mg (1 g)/day",
+  "enalapril\n20 mg/day",
+  "methotrexate\n15 mg/week",
+  "potassium chloride\n20 mEq/day",
+  "simvastatin\n40 mg/day",
+  "spironolactone\n25 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": true
+  },
+  {
+   "text": "Zocor",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": true
+  },
+  {
+   "text": "Biaxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d5848f0-e9f0-4112-a7ca-bcc8ea2e69c6",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c",
+   "in_alert": true
+  },
+  {
+   "text": "Aldactone",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c",
+   "in_alert": true
+  },
+  {
+   "text": "Vasotec",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3fbc6cce-7ad5-49d5-9705-5f66ef92d544",
+   "in_alert": true
+  },
+  {
+   "text": "Klor-Con",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ace1eb11-b925-405a-b772-58c60b3ca7d4",
+   "in_alert": true
+  },
+  {
+   "text": "Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/15295047/",
+   "in_alert": true
+  },
+  {
+   "text": "Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/25646289/",
+   "in_alert": true
+  },
+  {
+   "text": "Zocor",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: E, Avoid combination. Do not use these drugs together.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n3 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n1\nD\nConsider changing therapy\n1\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: E, Avoid combination. Do not use these drugs together.\nE\nAvoid combination — Do not use these drugs together.\nZocor, Biaxin\n\nZocor with Biaxin: statin levels rise many-fold: risk of rhabdomyolysis\n\nWhy E: The Contraindications section of the Zocor label addresses this combination: statin levels rise many-fold: risk of rhabdomyolysis. Clinical rulebook row 27.\n\n4 CONTRAINDICATIONS Simvastatin is contraindicated in the following conditions: • Concomitant use of strong CYP3A4 inhibitors (select azole anti-fungals, macrolide antibiotics, anti-viral medications, and nefazodone) [see DRUG INTERACTIONS ( 7.1 )]. • Concomitant use of cyclosporine, danazol or gemfibrozil [see DRUG INTERACTIONS ( 7.1 )]. • Acute liver failure or decompensated cirrhosis [see WARNINGS AND PRECAUTIONS ( 5.3 )] • Hypersensitivity to simvastatin or any excipients in simvastatin tablets USP.\n\nFrom the Zocor label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nSimvastatin and lovastatin are cleared almost entirely by CYP3A4. Strong CYP3A4 inhibitors (and erythromycin, cyclosporine, gemfibrozil, danazol) raise their levels roughly 10-fold, causing muscle breakdown and kidney failure. The simvastatin label contraindicates these combinations.\n\nWhat to do\n\nDo not use together. Hold the statin during the antibiotic or antifungal course, or switch to pravastatin or rosuvastatin.\n\nFDA labels: Zocor\n · Biaxin\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nAldactone, Vasotec, Klor-Con\n\n3 drugs: risk of high potassium (hyperkalemia)\n\nWhy D: The Contraindications section of the Aldactone label addresses this combination: risk of high potassium (hyperkalemia). Clinical rulebook row 15.\n\n4 CONTRAINDICATIONS Spironolactone tablets are contraindicated in the patients with: Hyperkalemia Addison's disease Concomitant use of eplerenone Spironolactone tablets are contraindicated in patients with ( 4 ): Hyperkalemia Addison's disease Concomitant use of eplerenone\n\nFrom the Aldactone label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nACE inhibitors and ARBs lower aldosterone, spironolactone and eplerenone block it, trimethoprim blocks the kidney's potassium channel (like amiloride), and supplements add potassium. Together potassium can rise to levels that stop the heart.\n\nWhat to do\n\nCheck potassium and kidney function within 3 days and again at 1 week; stop the potassium supplement or change the antibiotic when possible.\n\nFDA labels: Aldactone\n · Vasotec\n · Klor-Con\n · Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES\n · Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death\n\nA\nMinor — Minor: usually no action needed.\nZocor\n\nsimvastatin 40 mg/day is at the labeled maximum of 40 mg/day (maximum)\n\nWhy A: Daily total 40 mg against a labeled maximum of 40 mg (80 mg only for patients already on it for 12 months).\n\nWhy it happens\n\nThe total counts every entry of simvastatin; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Zocor\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nclarithromycin\n1,000 mg (1 g)/day\nenalapril\n20 mg/day\nmethotrexate\n15 mg/week\npotassium chloride\n20 mEq/day\nsimvastatin\n40 mg/day\nspironolactone\n25 mg/day\nZocor\nsimvastatin\n40 mg · once a day · 40 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nBiaxin\nclarithromycin\n500 mg · twice a day · 1000 mg/day total\nMacrolide Antimicrobial [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nQT Prolongation Risk\nContraindicated Combination\nAldactone\nspironolactone\n25 mg · once a day · 25 mg/day total\nAldosterone Antagonist [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nVasotec\nenalapril\n10 mg · twice a day · 20 mg/day total\nBoxed Warning\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nKlor-Con\npotassium chloride\n20 mEq · once a day · 20 mEq/day total\nextended release\nContraindicated Combination\nTrexall\nmethotrexate\n15 mg · once weekly · 15 mg/week\nFolate Analog Metabolic Inhibitor [EPC]\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\n3 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:05:46.298Z"
+}

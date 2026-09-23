@@ -1,0 +1,325 @@
+{
+ "id": "L31",
+ "input": "Vancocin (vancomycin) 1000 mg IV every 12 hours = 2000 mg/day, Garamycin (gentamicin) 80 mg IV every 8 hours = 240 mg/day, Lasix (furosemide) 40 mg IV twice daily = 80 mg/day, Toradol (ketorolac) 30 mg IV every 6 hours not to exceed 5 days = 120 mg/day, Zestril (lisinopril) 10 mg once daily = 10 mg/day, Zosyn (piperacillin/tazobactam) 3.375 g IV every 6 hours = 13.5 g/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.842,
+ "secondsToResults": 0.406,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Vancocin, Garamycin, Lasix, Toradol, Zestril, Zosyn",
+   "category": "6 drugs: risk of acute kidney injury",
+   "basis": "Why D: The Warnings section of the Toradol label addresses this combination: risk of acute kidney injury. Clinical rulebook row 14.",
+   "quote": "Patients at greatest risk of this reaction are those with impaired renal function, heart failure, liver dysfunction, those taking diuretics and ACE inhibitors, and the elderly.",
+   "source": "From the Toradol label, Warnings section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "NSAIDs remove the prostaglandins that keep blood flowing into the kidney, ACE inhibitors and ARBs lower the pressure that keeps it filtering, and diuretics reduce blood volume (the \"triple whammy\"). Aminoglycosides, vancomycin, and other listed drugs injure the kidney directly.",
+   "action": "Avoid the NSAID if possible, keep the patient hydrated, and check creatinine within a week, sooner in the hospital.",
+   "includes": null,
+   "sources": "FDA labels: Vancocin\n · Garamycin\n · Lasix\n · Toradol\n · Zestril\n · Zosyn\n · Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2a23b0fa-803c-4abb-b588-12cfe83326a9"
+    },
+    {
+     "text": "Vancocin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=72e9c5e2-07cc-4a8b-ba64-b2e7619ea560"
+    },
+    {
+     "text": "Garamycin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305"
+    },
+    {
+     "text": "Lasix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a"
+    },
+    {
+     "text": "Toradol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2a23b0fa-803c-4abb-b588-12cfe83326a9"
+    },
+    {
+     "text": "Zestril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533"
+    },
+    {
+     "text": "Zosyn",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=17a400ae-cbaa-4d07-95f4-c6917dfc0585"
+    },
+    {
+     "text": "Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/23299844/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Garamycin, Lasix",
+   "category": "Garamycin with Lasix: additive, sometimes permanent hearing loss",
+   "basis": "Why D: The Boxed Warning section of the Garamycin label addresses this combination: additive, sometimes permanent hearing loss.",
+   "quote": "The concurrent use of gentamicin with potent diuretics, such as ethacrynic acid or furosemide, should be avoided, since certain diuretics by themselves may cause ototoxicity.",
+   "source": "From the Garamycin label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Aminoglycosides and loop diuretics both damage the inner ear; together hearing loss can be permanent. Aminoglycoside labels carry a boxed warning against potent diuretics.",
+   "action": "Avoid if possible; monitor aminoglycoside levels, kidney function, and hearing.",
+   "includes": null,
+   "sources": "FDA labels: Garamycin\n · Lasix",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305"
+    },
+    {
+     "text": "Garamycin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305"
+    },
+    {
+     "text": "Lasix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Toradol, Zestril",
+   "category": "2 drugs: risk of high potassium (hyperkalemia)",
+   "basis": "Why C: Class rule: risk of high potassium (hyperkalemia). Clinical rulebook row 15.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "ACE inhibitors and ARBs lower aldosterone, spironolactone and eplerenone block it, trimethoprim blocks the kidney's potassium channel (like amiloride), and supplements add potassium. Together potassium can rise to levels that stop the heart.",
+   "action": "Check potassium and kidney function within 3 days and again at 1 week; stop the potassium supplement or change the antibiotic when possible.",
+   "includes": null,
+   "sources": "FDA labels: Toradol\n · Zestril\n · Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES\n · Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+   "links": [
+    {
+     "text": "Toradol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2a23b0fa-803c-4abb-b588-12cfe83326a9"
+    },
+    {
+     "text": "Zestril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533"
+    },
+    {
+     "text": "Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/15295047/"
+    },
+    {
+     "text": "Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/25646289/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Toradol",
+   "category": "ketorolac 120 mg/day is at the labeled maximum of 120 mg/day (maximum)",
+   "basis": "Why A: Daily total 120 mg against a labeled maximum of 120 mg (parenteral maximum).",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of ketorolac; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Toradol",
+   "links": [
+    {
+     "text": "Toradol",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2a23b0fa-803c-4abb-b588-12cfe83326a9"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "1"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Vancocin",
+   "generic": "vancomycin",
+   "dose": "1000 mg · twice a day · 2000 mg/day total",
+   "facts": "Glycopeptide Antibacterial [EPC]\nPediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment",
+   "text": "Vancocin\nvancomycin\n1000 mg · twice a day · 2000 mg/day total\nGlycopeptide Antibacterial [EPC]\nPediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment"
+  },
+  {
+   "brand": "Garamycin",
+   "generic": "gentamicin",
+   "dose": "80 mg · 3 times a day · 240 mg/day total",
+   "facts": "Boxed Warning\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment",
+   "text": "Garamycin\ngentamicin\n80 mg · 3 times a day · 240 mg/day total\nBoxed Warning\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment"
+  },
+  {
+   "brand": "Lasix",
+   "generic": "furosemide",
+   "dose": "40 mg · twice a day · 80 mg/day total",
+   "facts": "Loop Diuretic [EPC]",
+   "text": "Lasix\nfurosemide\n40 mg · twice a day · 80 mg/day total\nLoop Diuretic [EPC]"
+  },
+  {
+   "brand": "Toradol",
+   "generic": "ketorolac",
+   "dose": "30 mg · 4 times a day · 120 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nContraindicated Combination",
+   "text": "Toradol\nketorolac\n30 mg · 4 times a day · 120 mg/day total\nBoxed Warning\nPediatric Indication\nContraindicated Combination"
+  },
+  {
+   "brand": "Zestril",
+   "generic": "lisinopril",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Zestril\nlisinopril\n10 mg · once a day · 10 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Zosyn",
+   "generic": "piperacillin, tazobactam",
+   "dose": "3.375 g · 4 times a day · 13.5 g/day total",
+   "facts": "Boxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination",
+   "text": "Zosyn\npiperacillin, tazobactam\n3.375 g · 4 times a day · 13.5 g/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination"
+  }
+ ],
+ "totals": [
+  "furosemide\n80 mg/day",
+  "gentamicin\n240 mg/day",
+  "ketorolac\n120 mg/day",
+  "lisinopril\n10 mg/day",
+  "piperacillin/tazobactam\n13,500 mg (13.5 g)/day",
+  "vancomycin\n2,000 mg (2 g)/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2a23b0fa-803c-4abb-b588-12cfe83326a9",
+   "in_alert": true
+  },
+  {
+   "text": "Vancocin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=72e9c5e2-07cc-4a8b-ba64-b2e7619ea560",
+   "in_alert": true
+  },
+  {
+   "text": "Garamycin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305",
+   "in_alert": true
+  },
+  {
+   "text": "Lasix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": true
+  },
+  {
+   "text": "Toradol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2a23b0fa-803c-4abb-b588-12cfe83326a9",
+   "in_alert": true
+  },
+  {
+   "text": "Zestril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533",
+   "in_alert": true
+  },
+  {
+   "text": "Zosyn",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=17a400ae-cbaa-4d07-95f4-c6917dfc0585",
+   "in_alert": true
+  },
+  {
+   "text": "Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/23299844/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305",
+   "in_alert": true
+  },
+  {
+   "text": "Garamycin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305",
+   "in_alert": true
+  },
+  {
+   "text": "Lasix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": true
+  },
+  {
+   "text": "Toradol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2a23b0fa-803c-4abb-b588-12cfe83326a9",
+   "in_alert": true
+  },
+  {
+   "text": "Zestril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533",
+   "in_alert": true
+  },
+  {
+   "text": "Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/15295047/",
+   "in_alert": true
+  },
+  {
+   "text": "Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/25646289/",
+   "in_alert": true
+  },
+  {
+   "text": "Toradol",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2a23b0fa-803c-4abb-b588-12cfe83326a9",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n4 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n2\nC\nMonitor closely\n1\nB\nMonitor\n–\nA\nMinor\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nVancocin, Garamycin, Lasix, Toradol, Zestril, Zosyn\n\n6 drugs: risk of acute kidney injury\n\nWhy D: The Warnings section of the Toradol label addresses this combination: risk of acute kidney injury. Clinical rulebook row 14.\n\nPatients at greatest risk of this reaction are those with impaired renal function, heart failure, liver dysfunction, those taking diuretics and ACE inhibitors, and the elderly.\n\nFrom the Toradol label, Warnings section.\nOpen on DailyMed\n\nWhy it happens\n\nNSAIDs remove the prostaglandins that keep blood flowing into the kidney, ACE inhibitors and ARBs lower the pressure that keeps it filtering, and diuretics reduce blood volume (the \"triple whammy\"). Aminoglycosides, vancomycin, and other listed drugs injure the kidney directly.\n\nWhat to do\n\nAvoid the NSAID if possible, keep the patient hydrated, and check creatinine within a week, sooner in the hospital.\n\nFDA labels: Vancocin\n · Garamycin\n · Lasix\n · Toradol\n · Zestril\n · Zosyn\n · Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nGaramycin, Lasix\n\nGaramycin with Lasix: additive, sometimes permanent hearing loss\n\nWhy D: The Boxed Warning section of the Garamycin label addresses this combination: additive, sometimes permanent hearing loss.\n\nThe concurrent use of gentamicin with potent diuretics, such as ethacrynic acid or furosemide, should be avoided, since certain diuretics by themselves may cause ototoxicity.\n\nFrom the Garamycin label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nAminoglycosides and loop diuretics both damage the inner ear; together hearing loss can be permanent. Aminoglycoside labels carry a boxed warning against potent diuretics.\n\nWhat to do\n\nAvoid if possible; monitor aminoglycoside levels, kidney function, and hearing.\n\nFDA labels: Garamycin\n · Lasix\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nToradol, Zestril\n\n2 drugs: risk of high potassium (hyperkalemia)\n\nWhy C: Class rule: risk of high potassium (hyperkalemia). Clinical rulebook row 15.\n\nWhy it happens\n\nACE inhibitors and ARBs lower aldosterone, spironolactone and eplerenone block it, trimethoprim blocks the kidney's potassium channel (like amiloride), and supplements add potassium. Together potassium can rise to levels that stop the heart.\n\nWhat to do\n\nCheck potassium and kidney function within 3 days and again at 1 week; stop the potassium supplement or change the antibiotic when possible.\n\nFDA labels: Toradol\n · Zestril\n · Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES\n · Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death\n\nA\nMinor — Minor: usually no action needed.\nToradol\n\nketorolac 120 mg/day is at the labeled maximum of 120 mg/day (maximum)\n\nWhy A: Daily total 120 mg against a labeled maximum of 120 mg (parenteral maximum).\n\nWhy it happens\n\nThe total counts every entry of ketorolac; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Toradol\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nfurosemide\n80 mg/day\ngentamicin\n240 mg/day\nketorolac\n120 mg/day\nlisinopril\n10 mg/day\npiperacillin/tazobactam\n13,500 mg (13.5 g)/day\nvancomycin\n2,000 mg (2 g)/day\nVancocin\nvancomycin\n1000 mg · twice a day · 2000 mg/day total\nGlycopeptide Antibacterial [EPC]\nPediatric Indication\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nGaramycin\ngentamicin\n80 mg · 3 times a day · 240 mg/day total\nBoxed Warning\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nLasix\nfurosemide\n40 mg · twice a day · 80 mg/day total\nLoop Diuretic [EPC]\nToradol\nketorolac\n30 mg · 4 times a day · 120 mg/day total\nBoxed Warning\nPediatric Indication\nContraindicated Combination\nZestril\nlisinopril\n10 mg · once a day · 10 mg/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nZosyn\npiperacillin, tazobactam\n3.375 g · 4 times a day · 13.5 g/day total\nBoxed Warning\nPediatric Indication\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nContraindicated Combination\n4 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:07:33.905Z"
+}

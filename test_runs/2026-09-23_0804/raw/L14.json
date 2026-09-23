@@ -1,0 +1,281 @@
+{
+ "id": "L14",
+ "input": "Duragesic (fentanyl) 50 mcg/h transdermal patch one patch every 72 hours = 50 mcg/h continuous, Valium (diazepam) 10 mg three times daily = 30 mg/day, Restoril (temazepam) 30 mg once daily at bedtime = 30 mg/day, Lyrica (pregabalin) 150 mg twice daily = 300 mg/day, Phenergan (promethazine) 25 mg every 6 hours as needed max 4 doses/day = 100 mg/day max, Zanaflex (tizanidine) 4 mg three times daily = 12 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.886,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Duragesic, Valium, Restoril, Lyrica, Phenergan, Zanaflex",
+   "category": "6 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: The Boxed Warning section of the Duragesic label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Duragesic label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": "Duragesic with 2 benzodiazepines: boxed warning: profound sedation, respiratory depression, coma, death. Opioids and benzodiazepines both suppress the brainstem's drive to breathe. Both drug classes carry an FDA boxed warning against this combination.\nDuragesic with Lyrica: risk of respiratory depression. Gabapentin and pregabalin add to opioid respiratory depression; the FDA added this warning to both in 2019. Both are cleared by the kidney, so kidney injury raises exposure.",
+   "sources": "FDA labels: Duragesic\n · Valium\n · Restoril\n · Lyrica\n · Phenergan\n · Zanaflex\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e15a7e9b-8025-49dd-9a6d-bafcccf1959f"
+    },
+    {
+     "text": "Duragesic",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e15a7e9b-8025-49dd-9a6d-bafcccf1959f"
+    },
+    {
+     "text": "Valium",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba953b22-f0cd-4be5-9e0e-178bded88727"
+    },
+    {
+     "text": "Restoril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d83e474-0932-49ae-ad92-ca278cd5f1d5"
+    },
+    {
+     "text": "Lyrica",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ab06a36d-9a2d-4eae-8991-4eab5bc8311c"
+    },
+    {
+     "text": "Phenergan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bae9c9c1-107f-0fcb-e053-2a95a90a75b2"
+    },
+    {
+     "text": "Zanaflex",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7ce17c02-7f1f-4d52-8b6f-52e385e12239"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Valium, Restoril",
+   "category": "2 sedative-hypnotics: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing",
+   "basis": "Why D: Class rule: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These are all sedative-hypnotics: taking more than one is therapeutic duplication.",
+   "action": "Keep one sleep medicine at the lowest dose.",
+   "includes": null,
+   "sources": "FDA labels: Valium\n · Restoril",
+   "links": [
+    {
+     "text": "Valium",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba953b22-f0cd-4be5-9e0e-178bded88727"
+    },
+    {
+     "text": "Restoril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d83e474-0932-49ae-ad92-ca278cd5f1d5"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Valium, Restoril",
+   "category": "Duplicate: Valium (diazepam) and Restoril (temazepam): one is the active metabolite of the other: combined diazepam 30 mg/day and temazepam 30 mg/day",
+   "basis": "Why D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.",
+   "quote": "Metabolism Diazepam is N-demethylated by CYP3A4 and 2C19 to the active metabolite N-desmethyldiazepam, and is hydroxylated by CYP3A4 to the active metabolite temazepam.",
+   "source": "From the Valium label, clinical_pharmacology section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Both entries deliver the same active drug, so the patient gets the combined dose. One is the active metabolite of the other.",
+   "action": "Confirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.",
+   "includes": null,
+   "sources": "FDA labels: Valium\n · Restoril",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba953b22-f0cd-4be5-9e0e-178bded88727"
+    },
+    {
+     "text": "Valium",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba953b22-f0cd-4be5-9e0e-178bded88727"
+    },
+    {
+     "text": "Restoril",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d83e474-0932-49ae-ad92-ca278cd5f1d5"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "3"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Duragesic",
+   "generic": "fentanyl",
+   "dose": "50 mcg/h · 0.3333333333333333 times a day · 50 mcg/h/day total",
+   "facts": "Opioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk",
+   "text": "Duragesic\nfentanyl\n50 mcg/h · 0.3333333333333333 times a day · 50 mcg/h/day total\nOpioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk"
+  },
+  {
+   "brand": "Valium",
+   "generic": "diazepam",
+   "dose": "10 mg · 3 times a day · 30 mg/day total",
+   "facts": "Benzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nCNS Depression Risk",
+   "text": "Valium\ndiazepam\n10 mg · 3 times a day · 30 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nCNS Depression Risk"
+  },
+  {
+   "brand": "Restoril",
+   "generic": "temazepam",
+   "dose": "30 mg · once a day · 30 mg/day total",
+   "facts": "Benzodiazepine [EPC]\nBoxed Warning\nCNS Depression Risk",
+   "text": "Restoril\ntemazepam\n30 mg · once a day · 30 mg/day total\nBenzodiazepine [EPC]\nBoxed Warning\nCNS Depression Risk"
+  },
+  {
+   "brand": "Lyrica",
+   "generic": "pregabalin",
+   "dose": "150 mg · twice a day · 300 mg/day total",
+   "facts": "Schedule V (C-V)\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk",
+   "text": "Lyrica\npregabalin\n150 mg · twice a day · 300 mg/day total\nSchedule V (C-V)\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Phenergan",
+   "generic": "promethazine",
+   "dose": "25 mg · as needed, up to 4 times a day · 100 mg/day max",
+   "facts": "CNS Depression Risk",
+   "text": "Phenergan\npromethazine\n25 mg · as needed, up to 4 times a day · 100 mg/day max\nCNS Depression Risk"
+  },
+  {
+   "brand": "Zanaflex",
+   "generic": "tizanidine",
+   "dose": "4 mg · 3 times a day · 12 mg/day total",
+   "facts": "High-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Zanaflex\ntizanidine\n4 mg · 3 times a day · 12 mg/day total\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  }
+ ],
+ "totals": [
+  "diazepam\n30 mg/day",
+  "fentanyl\n50 mcg/h continuous · 120 MME",
+  "pregabalin\n300 mg/day",
+  "promethazine\n100 mg/day max",
+  "temazepam\n30 mg/day",
+  "tizanidine\n12 mg/day"
+ ],
+ "totalMme": "Total opioid dose: 120 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e15a7e9b-8025-49dd-9a6d-bafcccf1959f",
+   "in_alert": true
+  },
+  {
+   "text": "Duragesic",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e15a7e9b-8025-49dd-9a6d-bafcccf1959f",
+   "in_alert": true
+  },
+  {
+   "text": "Valium",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba953b22-f0cd-4be5-9e0e-178bded88727",
+   "in_alert": true
+  },
+  {
+   "text": "Restoril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d83e474-0932-49ae-ad92-ca278cd5f1d5",
+   "in_alert": true
+  },
+  {
+   "text": "Lyrica",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ab06a36d-9a2d-4eae-8991-4eab5bc8311c",
+   "in_alert": true
+  },
+  {
+   "text": "Phenergan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bae9c9c1-107f-0fcb-e053-2a95a90a75b2",
+   "in_alert": true
+  },
+  {
+   "text": "Zanaflex",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7ce17c02-7f1f-4d52-8b6f-52e385e12239",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Valium",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba953b22-f0cd-4be5-9e0e-178bded88727",
+   "in_alert": true
+  },
+  {
+   "text": "Restoril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d83e474-0932-49ae-ad92-ca278cd5f1d5",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba953b22-f0cd-4be5-9e0e-178bded88727",
+   "in_alert": true
+  },
+  {
+   "text": "Valium",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba953b22-f0cd-4be5-9e0e-178bded88727",
+   "in_alert": true
+  },
+  {
+   "text": "Restoril",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5d83e474-0932-49ae-ad92-ca278cd5f1d5",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n3 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n3\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDuragesic, Valium, Restoril, Lyrica, Phenergan, Zanaflex\n\n6 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: The Boxed Warning section of the Duragesic label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nRisks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Duragesic label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nDuragesic with 2 benzodiazepines: boxed warning: profound sedation, respiratory depression, coma, death. Opioids and benzodiazepines both suppress the brainstem's drive to breathe. Both drug classes carry an FDA boxed warning against this combination.\nDuragesic with Lyrica: risk of respiratory depression. Gabapentin and pregabalin add to opioid respiratory depression; the FDA added this warning to both in 2019. Both are cleared by the kidney, so kidney injury raises exposure.\n\nFDA labels: Duragesic\n · Valium\n · Restoril\n · Lyrica\n · Phenergan\n · Zanaflex\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 5 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nValium, Restoril\n\n2 sedative-hypnotics: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing\n\nWhy D: Class rule: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing.\n\nWhy it happens\n\nThese are all sedative-hypnotics: taking more than one is therapeutic duplication.\n\nWhat to do\n\nKeep one sleep medicine at the lowest dose.\n\nFDA labels: Valium\n · Restoril\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nValium, Restoril\n\nDuplicate: Valium (diazepam) and Restoril (temazepam): one is the active metabolite of the other: combined diazepam 30 mg/day and temazepam 30 mg/day\n\nWhy D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.\n\nMetabolism Diazepam is N-demethylated by CYP3A4 and 2C19 to the active metabolite N-desmethyldiazepam, and is hydroxylated by CYP3A4 to the active metabolite temazepam.\n\nFrom the Valium label, clinical_pharmacology section.\nOpen on DailyMed\n\nWhy it happens\n\nBoth entries deliver the same active drug, so the patient gets the combined dose. One is the active metabolite of the other.\n\nWhat to do\n\nConfirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.\n\nFDA labels: Valium\n · Restoril\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\ndiazepam\n30 mg/day\nfentanyl\n50 mcg/h continuous · 120 MME\npregabalin\n300 mg/day\npromethazine\n100 mg/day max\ntemazepam\n30 mg/day\ntizanidine\n12 mg/day\n\nTotal opioid dose: 120 MME/day (CDC 2022 conversion factors).\n\nDuragesic\nfentanyl\n50 mcg/h · 0.3333333333333333 times a day · 50 mcg/h/day total\nOpioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nValium\ndiazepam\n10 mg · 3 times a day · 30 mg/day total\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nCNS Depression Risk\nRestoril\ntemazepam\n30 mg · once a day · 30 mg/day total\nBenzodiazepine [EPC]\nBoxed Warning\nCNS Depression Risk\nLyrica\npregabalin\n150 mg · twice a day · 300 mg/day total\nSchedule V (C-V)\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nPhenergan\npromethazine\n25 mg · as needed, up to 4 times a day · 100 mg/day max\nCNS Depression Risk\nZanaflex\ntizanidine\n4 mg · 3 times a day · 12 mg/day total\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\n3 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:06:05.907Z"
+}

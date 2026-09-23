@@ -1,0 +1,387 @@
+{
+ "id": "L40",
+ "input": "Desyrel (trazodone) 100 mg once daily at bedtime = 100 mg/day, Zoloft (sertraline) 200 mg once daily = 200 mg/day, Belsomra (suvorexant) 20 mg once daily at bedtime = 20 mg/day, Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day, Xanax (alprazolam) 0.5 mg three times daily as needed max 3 doses/day = 1.5 mg/day max",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.837,
+ "secondsToResults": 0.406,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Desyrel, Belsomra, Ambien, Xanax",
+   "category": "4 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "WARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Xanax label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Desyrel\n · Belsomra\n · Ambien\n · Xanax\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    },
+    {
+     "text": "Desyrel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9"
+    },
+    {
+     "text": "Belsomra",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e5b72731-1acb-45b7-9c13-290ad12d3951"
+    },
+    {
+     "text": "Ambien",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721"
+    },
+    {
+     "text": "Xanax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Desyrel, Belsomra, Ambien, Xanax",
+   "category": "4 sedative-hypnotics: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing",
+   "basis": "Why D: Class rule: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "These are all sedative-hypnotics: taking more than one is therapeutic duplication.",
+   "action": "Keep one sleep medicine at the lowest dose.",
+   "includes": null,
+   "sources": "FDA labels: Desyrel\n · Belsomra\n · Ambien\n · Xanax",
+   "links": [
+    {
+     "text": "Desyrel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9"
+    },
+    {
+     "text": "Belsomra",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e5b72731-1acb-45b7-9c13-290ad12d3951"
+    },
+    {
+     "text": "Ambien",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721"
+    },
+    {
+     "text": "Xanax",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Desyrel, Zoloft",
+   "category": "2 serotonergic drugs: risk of serotonin syndrome",
+   "basis": "Why C: The Contraindications section of the Zoloft label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.",
+   "quote": "4 CONTRAINDICATIONS Sertraline hydrochloride tablets are contraindicated in patients: Taking, or within 14 days of stopping, MAOIs, (including the MAOIs linezolid and intravenous methylene blue) because of an increased risk of serotonin syndrome [See Warnings and Precautions (5.2) , Drug Interactions (7.1) ] .",
+   "source": "From the Zoloft label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.",
+   "action": "Avoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.",
+   "includes": null,
+   "sources": "FDA labels: Desyrel\n · Zoloft\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "Desyrel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9"
+    },
+    {
+     "text": "Zoloft",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Zoloft",
+   "category": "sertraline 200 mg/day is at the labeled maximum of 200 mg/day (maximum)",
+   "basis": "Why A: Daily total 200 mg against a labeled maximum of 200 mg.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of sertraline; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Zoloft",
+   "links": [
+    {
+     "text": "Zoloft",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Ambien",
+   "category": "zolpidem 10 mg/day is at the labeled maximum of 10 mg/day (maximum)",
+   "basis": "Why A: Daily total 10 mg against a labeled maximum of 10 mg (5 mg for women and older adults).",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of zolpidem; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Ambien",
+   "links": [
+    {
+     "text": "Ambien",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Desyrel, Zoloft",
+   "category": "QT Prolongation Risk shared by 2 drugs",
+   "basis": "Why A: These labels each mention this risk, but no class rule applies to this combination.",
+   "quote": "The use of trazodone hydrochloride tablets should be avoided in patients with known QT prolongation or in combination with other drugs that are inhibitors of CYP3A4 (e.g., itraconazole, clarithromycin, voriconazole), or known to prolong QT interval including Class 1A antiarrhythmics (e.g., quinidine, procainamide) or Class 3 antiarrhythmics (e.g., amiodarone, sotalol), certain antipsychotic medications (e.g., ziprasidone, chlorpromazine, thioridazine), and certain antibiotics (e.g., gatifloxacin).",
+   "source": "From the Desyrel label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "What this means: QT prolongation",
+   "why_text": "Each of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": null,
+   "includes": null,
+   "sources": "FDA labels: Desyrel\n · Zoloft",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9"
+    },
+    {
+     "text": "National Heart, Lung, and Blood Institute, NIH",
+     "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome"
+    },
+    {
+     "text": "Desyrel",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9"
+    },
+    {
+     "text": "Zoloft",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    }
+   ],
+   "classes": "alert alert--tier-3 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "1"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "3"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Desyrel",
+   "generic": "trazodone",
+   "dose": "100 mg · once a day · 100 mg/day total",
+   "facts": "Boxed Warning\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Desyrel\ntrazodone\n100 mg · once a day · 100 mg/day total\nBoxed Warning\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Zoloft",
+   "generic": "sertraline",
+   "dose": "200 mg · once a day · 200 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Zoloft\nsertraline\n200 mg · once a day · 200 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Belsomra",
+   "generic": "suvorexant",
+   "dose": "20 mg · once a day · 20 mg/day total",
+   "facts": "Orexin Receptor Antagonist [EPC]\nSchedule IV (C-IV)\nCNS Depression Risk",
+   "text": "Belsomra\nsuvorexant\n20 mg · once a day · 20 mg/day total\nOrexin Receptor Antagonist [EPC]\nSchedule IV (C-IV)\nCNS Depression Risk"
+  },
+  {
+   "brand": "Ambien",
+   "generic": "zolpidem",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Schedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Ambien\nzolpidem\n10 mg · once a day · 10 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Xanax",
+   "generic": "alprazolam",
+   "dose": "0.5 mg · as needed, up to 3 times a day · 1.5 mg/day max",
+   "facts": "Benzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk",
+   "text": "Xanax\nalprazolam\n0.5 mg · as needed, up to 3 times a day · 1.5 mg/day max\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk"
+  }
+ ],
+ "totals": [
+  "alprazolam\n1.5 mg/day max",
+  "sertraline\n200 mg/day",
+  "suvorexant\n20 mg/day",
+  "trazodone\n100 mg/day",
+  "zolpidem\n10 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Desyrel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9",
+   "in_alert": true
+  },
+  {
+   "text": "Belsomra",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e5b72731-1acb-45b7-9c13-290ad12d3951",
+   "in_alert": true
+  },
+  {
+   "text": "Ambien",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+   "in_alert": true
+  },
+  {
+   "text": "Xanax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Desyrel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9",
+   "in_alert": true
+  },
+  {
+   "text": "Belsomra",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e5b72731-1acb-45b7-9c13-290ad12d3951",
+   "in_alert": true
+  },
+  {
+   "text": "Ambien",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+   "in_alert": true
+  },
+  {
+   "text": "Xanax",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "Desyrel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9",
+   "in_alert": true
+  },
+  {
+   "text": "Zoloft",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  },
+  {
+   "text": "Zoloft",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "Ambien",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9",
+   "in_alert": true
+  },
+  {
+   "text": "National Heart, Lung, and Blood Institute, NIH",
+   "href": "https://www.nhlbi.nih.gov/health/long-qt-syndrome",
+   "in_alert": true
+  },
+  {
+   "text": "Desyrel",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9",
+   "in_alert": true
+  },
+  {
+   "text": "Zoloft",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  }
+ ],
+ "statusText": "5 of 5 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n6 interactions\n\n5 of 5 medications checked\n\nE\nAvoid combination\n–\nD\nConsider changing therapy\n2\nC\nMonitor closely\n1\nB\nMonitor\n–\nA\nMinor\n3\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDesyrel, Belsomra, Ambien, Xanax\n\n4 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: Class rule: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nWARNING: RISKS FROM CONCOMITANT USE WITH OPIOIDS; ABUSE, MISUSE, AND ADDICTION; and DEPENDENCE AND WITHDRAWAL REACTIONS Concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Xanax label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Desyrel\n · Belsomra\n · Ambien\n · Xanax\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 3 more label sentences\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDesyrel, Belsomra, Ambien, Xanax\n\n4 sedative-hypnotics: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing\n\nWhy D: Class rule: duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing.\n\nWhy it happens\n\nThese are all sedative-hypnotics: taking more than one is therapeutic duplication.\n\nWhat to do\n\nKeep one sleep medicine at the lowest dose.\n\nFDA labels: Desyrel\n · Belsomra\n · Ambien\n · Xanax\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nDesyrel, Zoloft\n\n2 serotonergic drugs: risk of serotonin syndrome\n\nWhy C: The Contraindications section of the Zoloft label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.\n\n4 CONTRAINDICATIONS Sertraline hydrochloride tablets are contraindicated in patients: Taking, or within 14 days of stopping, MAOIs, (including the MAOIs linezolid and intravenous methylene blue) because of an increased risk of serotonin syndrome [See Warnings and Precautions (5.2) , Drug Interactions (7.1) ] .\n\nFrom the Zoloft label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.\n\nWhat to do\n\nAvoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.\n\nFDA labels: Desyrel\n · Zoloft\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n\nShow 1 more label sentence\nA\nMinor — Minor: usually no action needed.\nZoloft\n\nsertraline 200 mg/day is at the labeled maximum of 200 mg/day (maximum)\n\nWhy A: Daily total 200 mg against a labeled maximum of 200 mg.\n\nWhy it happens\n\nThe total counts every entry of sertraline; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Zoloft\n\nA\nMinor — Minor: usually no action needed.\nAmbien\n\nzolpidem 10 mg/day is at the labeled maximum of 10 mg/day (maximum)\n\nWhy A: Daily total 10 mg against a labeled maximum of 10 mg (5 mg for women and older adults).\n\nWhy it happens\n\nThe total counts every entry of zolpidem; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Ambien\n\nA\nMinor — Minor: usually no action needed.\nDesyrel, Zoloft\n\nQT Prolongation Risk shared by 2 drugs\n\nWhy A: These labels each mention this risk, but no class rule applies to this combination.\n\nThe use of trazodone hydrochloride tablets should be avoided in patients with known QT prolongation or in combination with other drugs that are inhibitors of CYP3A4 (e.g., itraconazole, clarithromycin, voriconazole), or known to prolong QT interval including Class 1A antiarrhythmics (e.g., quinidine, procainamide) or Class 3 antiarrhythmics (e.g., amiodarone, sotalol), certain antipsychotic medications (e.g., ziprasidone, chlorpromazine, thioridazine), and certain antibiotics (e.g., gatifloxacin).\n\nFrom the Desyrel label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhat this means: QT prolongation\n\nEach of these drugs can delay the heart's electrical recovery after a beat, seen as a longer QT interval on an ECG. Together the delay can add up and trigger torsades de pointes, a dangerous heart rhythm.\n\nSource: National Heart, Lung, and Blood Institute, NIH\n\nFDA labels: Desyrel\n · Zoloft\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n5 medications\nClear all\nTotals by ingredient\nalprazolam\n1.5 mg/day max\nsertraline\n200 mg/day\nsuvorexant\n20 mg/day\ntrazodone\n100 mg/day\nzolpidem\n10 mg/day\nDesyrel\ntrazodone\n100 mg · once a day · 100 mg/day total\nBoxed Warning\nSerotonin Syndrome Risk\nCNS Depression Risk\nQT Prolongation Risk\nContraindicated Combination\nZoloft\nsertraline\n200 mg · once a day · 200 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nBelsomra\nsuvorexant\n20 mg · once a day · 20 mg/day total\nOrexin Receptor Antagonist [EPC]\nSchedule IV (C-IV)\nCNS Depression Risk\nAmbien\nzolpidem\n10 mg · once a day · 10 mg/day total\nSchedule IV (C-IV)\nBoxed Warning\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\nXanax\nalprazolam\n0.5 mg · as needed, up to 3 times a day · 1.5 mg/day max\nBenzodiazepine [EPC]\nSchedule IV (C-IV)\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nCNS Depression Risk\n6 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:08:19.931Z"
+}

@@ -1,0 +1,308 @@
+{
+ "id": "L13",
+ "input": "Zyvox (linezolid) 600 mg twice daily = 1200 mg/day, Effexor XR (venlafaxine ER) 225 mg once daily = 225 mg/day, Buspar (buspirone) 15 mg twice daily = 30 mg/day, Reglan (metoclopramide) 10 mg four times daily before meals and at bedtime = 40 mg/day, Duragesic (fentanyl) 25 mcg/h transdermal patch one patch every 72 hours = 25 mcg/h continuous, Robaxin (methocarbamol) 750 mg four times daily = 3000 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.877,
+ "secondsToResults": 0.405,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Zyvox, Effexor XR",
+   "category": "Zyvox with Effexor XR: can cause fatal serotonin syndrome",
+   "basis": "Why E: The Contraindications section of the Effexor XR label addresses this combination: can cause fatal serotonin syndrome. Clinical rulebook row 7.",
+   "quote": "4 CONTRAINDICATIONS Venlafaxine Extended-Release Tablets are contraindicated in patients: with known hypersensitivity to venlafaxine besylate, venlafaxine hydrochloride, desvenlafaxine succinate or to any excipients in Venlafaxine Extended-Release Tablets [see Adverse Reactions ( 6.2 )] . taking, or within 14 days of stopping, MAOIs (including the MAOIs linezolid and intravenous methylene blue) because of increased risk of serotonin syndrome [see Dosage and Administration ( 2.9 ), Warnings and Precautions ( 5.2 ), Drug Interactions ( 7.1 )] .",
+   "source": "From the Effexor XR label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "An MAO inhibitor stops the breakdown of serotonin; these drugs release it or block its reuptake. Together serotonin can rise to toxic levels: high fever, rigidity, seizures, death.",
+   "action": "Do not use together. Allow the washout the labels require (usually 14 days after stopping an MAO inhibitor, 5 weeks after fluoxetine).",
+   "includes": null,
+   "sources": "FDA labels: Zyvox\n · Effexor XR\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100"
+    },
+    {
+     "text": "Zyvox",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3d630d3d-510d-43a4-8703-8b6234831564"
+    },
+    {
+     "text": "Effexor XR",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Duragesic, Robaxin",
+   "category": "2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "basis": "Why D: The Boxed Warning section of the Duragesic label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.",
+   "quote": "Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.",
+   "source": "From the Duragesic label, Boxed Warning section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "includes": null,
+   "sources": "FDA labels: Duragesic\n · Robaxin\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e15a7e9b-8025-49dd-9a6d-bafcccf1959f"
+    },
+    {
+     "text": "Duragesic",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e15a7e9b-8025-49dd-9a6d-bafcccf1959f"
+    },
+    {
+     "text": "Robaxin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a585c87-6361-420d-e063-6294a90a1838"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Zyvox, Effexor XR, Buspar, Reglan, Duragesic",
+   "category": "5 serotonergic drugs: risk of serotonin syndrome",
+   "basis": "Why D: The Contraindications section of the Effexor XR label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.",
+   "quote": "4 CONTRAINDICATIONS Venlafaxine Extended-Release Tablets are contraindicated in patients: with known hypersensitivity to venlafaxine besylate, venlafaxine hydrochloride, desvenlafaxine succinate or to any excipients in Venlafaxine Extended-Release Tablets [see Adverse Reactions ( 6.2 )] . taking, or within 14 days of stopping, MAOIs (including the MAOIs linezolid and intravenous methylene blue) because of increased risk of serotonin syndrome [see Dosage and Administration ( 2.9 ), Warnings and Precautions ( 5.2 ), Drug Interactions ( 7.1 )] .",
+   "source": "From the Effexor XR label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.",
+   "action": "Avoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.",
+   "includes": "Zyvox with 2 serotonergic drugs: risk of serotonin syndrome. An MAO inhibitor stops the breakdown of serotonin, and these drugs add serotonin activity. The labels advise against the combination.",
+   "sources": "FDA labels: Zyvox\n · Effexor XR\n · Buspar\n · Reglan\n · Duragesic\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100"
+    },
+    {
+     "text": "Zyvox",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3d630d3d-510d-43a4-8703-8b6234831564"
+    },
+    {
+     "text": "Effexor XR",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100"
+    },
+    {
+     "text": "Buspar",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f101c5f3-d533-474d-a8bf-90d054933d16"
+    },
+    {
+     "text": "Reglan",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=595439ae-cf01-821c-e063-6294a90af16a"
+    },
+    {
+     "text": "Duragesic",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e15a7e9b-8025-49dd-9a6d-bafcccf1959f"
+    },
+    {
+     "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "1"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "2"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Zyvox",
+   "generic": "linezolid",
+   "dose": "600 mg · twice a day · 1200 mg/day total",
+   "facts": "Oxazolidinone Antibacterial [EPC]\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nContraindicated Combination",
+   "text": "Zyvox\nlinezolid\n600 mg · twice a day · 1200 mg/day total\nOxazolidinone Antibacterial [EPC]\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Effexor XR",
+   "generic": "venlafaxine",
+   "dose": "225 mg · once a day · 225 mg/day total",
+   "facts": "extended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nContraindicated Combination",
+   "text": "Effexor XR\nvenlafaxine\n225 mg · once a day · 225 mg/day total\nextended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Buspar",
+   "generic": "buspirone",
+   "dose": "15 mg · twice a day · 30 mg/day total",
+   "facts": "High-Frequency Adverse Effect\nSerotonin Syndrome Risk\nContraindicated Combination",
+   "text": "Buspar\nbuspirone\n15 mg · twice a day · 30 mg/day total\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Reglan",
+   "generic": "metoclopramide",
+   "dose": "10 mg · 4 times a day · 40 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk",
+   "text": "Reglan\nmetoclopramide\n10 mg · 4 times a day · 40 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk"
+  },
+  {
+   "brand": "Duragesic",
+   "generic": "fentanyl",
+   "dose": "25 mcg/h · 0.3333333333333333 times a day · 25 mcg/h/day total",
+   "facts": "Opioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk",
+   "text": "Duragesic\nfentanyl\n25 mcg/h · 0.3333333333333333 times a day · 25 mcg/h/day total\nOpioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk"
+  },
+  {
+   "brand": "Robaxin",
+   "generic": "methocarbamol",
+   "dose": "750 mg · 4 times a day · 3000 mg/day total",
+   "facts": "Muscle Relaxant [EPC]\nCNS Depression Risk",
+   "text": "Robaxin\nmethocarbamol\n750 mg · 4 times a day · 3000 mg/day total\nMuscle Relaxant [EPC]\nCNS Depression Risk"
+  }
+ ],
+ "totals": [
+  "buspirone\n30 mg/day",
+  "fentanyl\n25 mcg/h continuous · 60 MME",
+  "linezolid\n1,200 mg (1.2 g)/day",
+  "methocarbamol\n3,000 mg (3 g)/day",
+  "metoclopramide\n40 mg/day",
+  "venlafaxine\n225 mg/day"
+ ],
+ "totalMme": "Total opioid dose: 60 MME/day (CDC 2022 conversion factors).",
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100",
+   "in_alert": true
+  },
+  {
+   "text": "Zyvox",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3d630d3d-510d-43a4-8703-8b6234831564",
+   "in_alert": true
+  },
+  {
+   "text": "Effexor XR",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e15a7e9b-8025-49dd-9a6d-bafcccf1959f",
+   "in_alert": true
+  },
+  {
+   "text": "Duragesic",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e15a7e9b-8025-49dd-9a6d-bafcccf1959f",
+   "in_alert": true
+  },
+  {
+   "text": "Robaxin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a585c87-6361-420d-e063-6294a90a1838",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100",
+   "in_alert": true
+  },
+  {
+   "text": "Zyvox",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3d630d3d-510d-43a4-8703-8b6234831564",
+   "in_alert": true
+  },
+  {
+   "text": "Effexor XR",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100",
+   "in_alert": true
+  },
+  {
+   "text": "Buspar",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f101c5f3-d533-474d-a8bf-90d054933d16",
+   "in_alert": true
+  },
+  {
+   "text": "Reglan",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=595439ae-cf01-821c-e063-6294a90af16a",
+   "in_alert": true
+  },
+  {
+   "text": "Duragesic",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e15a7e9b-8025-49dd-9a6d-bafcccf1959f",
+   "in_alert": true
+  },
+  {
+   "text": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/12925718/",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: E, Avoid combination. Do not use these drugs together.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n3 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n1\nD\nConsider changing therapy\n2\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: E, Avoid combination. Do not use these drugs together.\nE\nAvoid combination — Do not use these drugs together.\nZyvox, Effexor XR\n\nZyvox with Effexor XR: can cause fatal serotonin syndrome\n\nWhy E: The Contraindications section of the Effexor XR label addresses this combination: can cause fatal serotonin syndrome. Clinical rulebook row 7.\n\n4 CONTRAINDICATIONS Venlafaxine Extended-Release Tablets are contraindicated in patients: with known hypersensitivity to venlafaxine besylate, venlafaxine hydrochloride, desvenlafaxine succinate or to any excipients in Venlafaxine Extended-Release Tablets [see Adverse Reactions ( 6.2 )] . taking, or within 14 days of stopping, MAOIs (including the MAOIs linezolid and intravenous methylene blue) because of increased risk of serotonin syndrome [see Dosage and Administration ( 2.9 ), Warnings and Precautions ( 5.2 ), Drug Interactions ( 7.1 )] .\n\nFrom the Effexor XR label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nAn MAO inhibitor stops the breakdown of serotonin; these drugs release it or block its reuptake. Together serotonin can rise to toxic levels: high fever, rigidity, seizures, death.\n\nWhat to do\n\nDo not use together. Allow the washout the labels require (usually 14 days after stopping an MAO inhibitor, 5 weeks after fluoxetine).\n\nFDA labels: Zyvox\n · Effexor XR\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nDuragesic, Robaxin\n\n2 CNS depressants: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose\n\nWhy D: The Boxed Warning section of the Duragesic label addresses this combination: risk of oversedation, slowed breathing (respiratory depression), falls, and overdose. Clinical rulebook row 1, 2.\n\nRisks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death.\n\nFrom the Duragesic label, Boxed Warning section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.\n\nWhat to do\n\nUse the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.\n\nFDA labels: Duragesic\n · Robaxin\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nShow 1 more label sentence\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nZyvox, Effexor XR, Buspar, Reglan, Duragesic\n\n5 serotonergic drugs: risk of serotonin syndrome\n\nWhy D: The Contraindications section of the Effexor XR label addresses this combination: risk of serotonin syndrome. Clinical rulebook row 7.\n\n4 CONTRAINDICATIONS Venlafaxine Extended-Release Tablets are contraindicated in patients: with known hypersensitivity to venlafaxine besylate, venlafaxine hydrochloride, desvenlafaxine succinate or to any excipients in Venlafaxine Extended-Release Tablets [see Adverse Reactions ( 6.2 )] . taking, or within 14 days of stopping, MAOIs (including the MAOIs linezolid and intravenous methylene blue) because of increased risk of serotonin syndrome [see Dosage and Administration ( 2.9 ), Warnings and Precautions ( 5.2 ), Drug Interactions ( 7.1 )] .\n\nFrom the Effexor XR label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.\n\nWhat to do\n\nAvoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.\n\nZyvox with 2 serotonergic drugs: risk of serotonin syndrome. An MAO inhibitor stops the breakdown of serotonin, and these drugs add serotonin activity. The labels advise against the combination.\n\nFDA labels: Zyvox\n · Effexor XR\n · Buspar\n · Reglan\n · Duragesic\n · Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria\n\nShow 4 more label sentences\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nbuspirone\n30 mg/day\nfentanyl\n25 mcg/h continuous · 60 MME\nlinezolid\n1,200 mg (1.2 g)/day\nmethocarbamol\n3,000 mg (3 g)/day\nmetoclopramide\n40 mg/day\nvenlafaxine\n225 mg/day\n\nTotal opioid dose: 60 MME/day (CDC 2022 conversion factors).\n\nZyvox\nlinezolid\n600 mg · twice a day · 1200 mg/day total\nOxazolidinone Antibacterial [EPC]\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nContraindicated Combination\nEffexor XR\nvenlafaxine\n225 mg · once a day · 225 mg/day total\nextended release\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nContraindicated Combination\nBuspar\nbuspirone\n15 mg · twice a day · 30 mg/day total\nHigh-Frequency Adverse Effect\nSerotonin Syndrome Risk\nContraindicated Combination\nReglan\nmetoclopramide\n10 mg · 4 times a day · 40 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nDuragesic\nfentanyl\n25 mcg/h · 0.3333333333333333 times a day · 25 mcg/h/day total\nOpioid Agonist [EPC]\nSchedule II (C-II)\nBoxed Warning\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nSerotonin Syndrome Risk\nCNS Depression Risk\nRobaxin\nmethocarbamol\n750 mg · 4 times a day · 3000 mg/day total\nMuscle Relaxant [EPC]\nCNS Depression Risk\n3 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:06:00.982Z"
+}

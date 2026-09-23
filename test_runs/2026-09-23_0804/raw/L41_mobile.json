@@ -1,0 +1,330 @@
+{
+ "id": "L41",
+ "input": "Zoloft (sertraline) 50 mg once daily = 50 mg/day, sertraline (generic) 50 mg once daily = 50 mg/day, Synthroid (levothyroxine) 0.1 mg once daily = 0.1 mg/day, levothyroxine (generic) 100 mcg once daily = 100 mcg/day, Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day, Advil (ibuprofen OTC) 200 mg 2 tablets twice daily = 800 mg/day",
+ "viewport": "390x844",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.916,
+ "secondsToResults": 0.405,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Zoloft, sertraline",
+   "category": "Duplicate: Zoloft (sertraline) and sertraline (sertraline) are the same drug under different names: combined sertraline 100 mg/day",
+   "basis": "Why D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Both entries deliver the same active drug, so the patient gets the combined dose.",
+   "action": "Confirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.",
+   "includes": null,
+   "sources": "FDA labels: Zoloft\n · sertraline",
+   "links": [
+    {
+     "text": "Zoloft",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "sertraline",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Synthroid, levothyroxine",
+   "category": "Duplicate: Synthroid (levothyroxine) and levothyroxine (levothyroxine) are the same drug under different names: combined levothyroxine 200 mcg (0.2 mg)/day",
+   "basis": "Why D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Both entries deliver the same active drug, so the patient gets the combined dose.",
+   "action": "Confirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.",
+   "includes": null,
+   "sources": "FDA labels: Synthroid\n · levothyroxine",
+   "links": [
+    {
+     "text": "Synthroid",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901"
+    },
+    {
+     "text": "levothyroxine",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Motrin, Advil",
+   "category": "Duplicate: Motrin (ibuprofen) and Advil (ibuprofen) are the same drug under different names: combined ibuprofen 3,200 mg (3.2 g)/day; ibuprofen is at or above its labeled maximum of 3,200 mg (3.2 g)/day",
+   "basis": "Why D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Both entries deliver the same active drug, so the patient gets the combined dose.",
+   "action": "Confirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.",
+   "includes": null,
+   "sources": "FDA labels: Motrin\n · Advil",
+   "links": [
+    {
+     "text": "Motrin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741"
+    },
+    {
+     "text": "Advil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741"
+    }
+   ],
+   "classes": "alert alert--duplication alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Zoloft, sertraline, Motrin, Advil",
+   "category": "2 drugs: risk of serious bleeding, especially stomach and gut bleeding",
+   "basis": "Why C: Class rule: risk of serious bleeding, especially stomach and gut bleeding. Clinical rulebook row 9, 12, 13.",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "Anticoagulants slow clotting, aspirin and other antiplatelets stop platelets from sticking, NSAIDs block platelets and injure the stomach lining, and SSRIs and SNRIs drain the serotonin platelets need. Each added drug raises the bleeding risk.",
+   "action": "Drop any drug that is not essential (WOEST and AUGUSTUS support dropping aspirin from triple therapy), add a proton pump inhibitor for stomach protection, and watch for black stools, vomiting blood, or anemia.",
+   "includes": null,
+   "sources": "FDA labels: Zoloft\n · sertraline\n · Motrin\n · Advil\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n · Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy\n · Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+   "links": [
+    {
+     "text": "Zoloft",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "sertraline",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+    },
+    {
+     "text": "Motrin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741"
+    },
+    {
+     "text": "Advil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741"
+    },
+    {
+     "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+    },
+    {
+     "text": "Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/23415013/"
+    },
+    {
+     "text": "Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/30883055/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Motrin, Advil",
+   "category": "ibuprofen 3,200 mg (3.2 g)/day is at the labeled maximum of 3,200 mg (3.2 g)/day (maximum)",
+   "basis": "Why A: Daily total 3,200 mg (3.2 g) against a labeled maximum of 3,200 mg (3.2 g) (prescription maximum).",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of ibuprofen; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Motrin\n · Advil",
+   "links": [
+    {
+     "text": "Motrin",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741"
+    },
+    {
+     "text": "Advil",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "3"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "1"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "1"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Zoloft",
+   "generic": "sertraline",
+   "dose": "50 mg · once a day · 50 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "Zoloft\nsertraline\n50 mg · once a day · 50 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "sertraline (generic) 50 mg once daily = 50 mg/day",
+   "generic": "sertraline",
+   "dose": "50 mg · once a day · 50 mg/day total",
+   "facts": "Boxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination",
+   "text": "sertraline (generic) 50 mg once daily = 50 mg/day\nsertraline\n50 mg · once a day · 50 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination"
+  },
+  {
+   "brand": "Synthroid",
+   "generic": "levothyroxine",
+   "dose": "0.1 mg · once a day · 0.1 mg/day total",
+   "facts": "Boxed Warning\nContraindicated Combination",
+   "text": "Synthroid\nlevothyroxine\n0.1 mg · once a day · 0.1 mg/day total\nBoxed Warning\nContraindicated Combination"
+  },
+  {
+   "brand": "levothyroxine (generic) 100 mcg once daily = 100 mcg/day",
+   "generic": "levothyroxine",
+   "dose": "100 mcg · once a day · 100 mcg/day total",
+   "facts": "Boxed Warning\nContraindicated Combination",
+   "text": "levothyroxine (generic) 100 mcg once daily = 100 mcg/day\nlevothyroxine\n100 mcg · once a day · 100 mcg/day total\nBoxed Warning\nContraindicated Combination"
+  },
+  {
+   "brand": "Motrin",
+   "generic": "ibuprofen",
+   "dose": "800 mg · 3 times a day · 2400 mg/day total",
+   "facts": "Nonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning",
+   "text": "Motrin\nibuprofen\n800 mg · 3 times a day · 2400 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning"
+  },
+  {
+   "brand": "Advil",
+   "generic": "ibuprofen",
+   "dose": "200 mg · 2 per dose · twice a day · 800 mg/day total",
+   "facts": "Nonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning",
+   "text": "Advil\nibuprofen\n200 mg · 2 per dose · twice a day · 800 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning"
+  }
+ ],
+ "totals": [
+  "ibuprofen\n3,200 mg (3.2 g)/day · from 2 entries",
+  "levothyroxine\n200 mcg (0.2 mg)/day · from 2 entries",
+  "sertraline\n100 mg/day · from 2 entries"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Zoloft",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "sertraline",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "Synthroid",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901",
+   "in_alert": true
+  },
+  {
+   "text": "levothyroxine",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901",
+   "in_alert": true
+  },
+  {
+   "text": "Motrin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": true
+  },
+  {
+   "text": "Advil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": true
+  },
+  {
+   "text": "Zoloft",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "sertraline",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": true
+  },
+  {
+   "text": "Motrin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": true
+  },
+  {
+   "text": "Advil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": true
+  },
+  {
+   "text": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/24616171/",
+   "in_alert": true
+  },
+  {
+   "text": "Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/23415013/",
+   "in_alert": true
+  },
+  {
+   "text": "Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/30883055/",
+   "in_alert": true
+  },
+  {
+   "text": "Motrin",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": true
+  },
+  {
+   "text": "Advil",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n5 interactions\n\n6 of 6 medications checked\n\nE\n–\nD\n3\nC\n1\nB\n–\nA\n1\nMost severe: D, Consider changing therapy. Dangerous: avoid, or use only with a specific reason and close monitoring.\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nZoloft, sertraline\n\nDuplicate: Zoloft (sertraline) and sertraline (sertraline) are the same drug under different names: combined sertraline 100 mg/day\n\nWhy D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.\n\nWhy it happens\n\nBoth entries deliver the same active drug, so the patient gets the combined dose.\n\nWhat to do\n\nConfirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.\n\nFDA labels: Zoloft\n · sertraline\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nSynthroid, levothyroxine\n\nDuplicate: Synthroid (levothyroxine) and levothyroxine (levothyroxine) are the same drug under different names: combined levothyroxine 200 mcg (0.2 mg)/day\n\nWhy D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.\n\nWhy it happens\n\nBoth entries deliver the same active drug, so the patient gets the combined dose.\n\nWhat to do\n\nConfirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.\n\nFDA labels: Synthroid\n · levothyroxine\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nMotrin, Advil\n\nDuplicate: Motrin (ibuprofen) and Advil (ibuprofen) are the same drug under different names: combined ibuprofen 3,200 mg (3.2 g)/day; ibuprofen is at or above its labeled maximum of 3,200 mg (3.2 g)/day\n\nWhy D: Hidden duplication: the entries name one drug differently, so the doses add up unnoticed.\n\nWhy it happens\n\nBoth entries deliver the same active drug, so the patient gets the combined dose.\n\nWhat to do\n\nConfirm whether both lines are meant. If one is a duplicate entry, remove it; if both are real, treat the combined total as the dose.\n\nFDA labels: Motrin\n · Advil\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nZoloft, sertraline, Motrin, Advil\n\n2 drugs: risk of serious bleeding, especially stomach and gut bleeding\n\nWhy C: Class rule: risk of serious bleeding, especially stomach and gut bleeding. Clinical rulebook row 9, 12, 13.\n\nWhy it happens\n\nAnticoagulants slow clotting, aspirin and other antiplatelets stop platelets from sticking, NSAIDs block platelets and injure the stomach lining, and SSRIs and SNRIs drain the serotonin platelets need. Each added drug raises the bleeding risk.\n\nWhat to do\n\nDrop any drug that is not essential (WOEST and AUGUSTUS support dropping aspirin from triple therapy), add a proton pump inhibitor for stomach protection, and watch for black stools, vomiting blood, or anemia.\n\nFDA labels: Zoloft\n · sertraline\n · Motrin\n · Advil\n · Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions\n · Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy\n · Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation\n\nA\nMinor — Minor: usually no action needed.\nMotrin, Advil\n\nibuprofen 3,200 mg (3.2 g)/day is at the labeled maximum of 3,200 mg (3.2 g)/day (maximum)\n\nWhy A: Daily total 3,200 mg (3.2 g) against a labeled maximum of 3,200 mg (3.2 g) (prescription maximum).\n\nWhy it happens\n\nThe total counts every entry of ibuprofen; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Motrin\n · Advil\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nibuprofen\n3,200 mg (3.2 g)/day · from 2 entries\nlevothyroxine\n200 mcg (0.2 mg)/day · from 2 entries\nsertraline\n100 mg/day · from 2 entries\nZoloft\nsertraline\n50 mg · once a day · 50 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nsertraline (generic) 50 mg once daily = 50 mg/day\nsertraline\n50 mg · once a day · 50 mg/day total\nBoxed Warning\nHigh-Frequency Adverse Effect\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nSerotonin Syndrome Risk\nQT Prolongation Risk\nContraindicated Combination\nSynthroid\nlevothyroxine\n0.1 mg · once a day · 0.1 mg/day total\nBoxed Warning\nContraindicated Combination\nlevothyroxine (generic) 100 mcg once daily = 100 mcg/day\nlevothyroxine\n100 mcg · once a day · 100 mcg/day total\nBoxed Warning\nContraindicated Combination\nMotrin\nibuprofen\n800 mg · 3 times a day · 2400 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\nAdvil\nibuprofen\n200 mg · 2 per dose · twice a day · 800 mg/day total\nNonsteroidal Anti-inflammatory Drug [EPC]\nBoxed Warning\n5 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:08:45.337Z"
+}

@@ -1,0 +1,51 @@
+L01  alerts 6 secs 0.812 
+L02  alerts 7 secs 0.405 
+L03  alerts 6 secs 0.405 
+L04  alerts 5 secs 0.407 
+L05  alerts 3 secs 1.216 
+L06  alerts 2 secs 0.407 
+L07  alerts 7 secs 0.407 
+L08  alerts 6 secs 0.408 
+L09  alerts 6 secs 0.407 
+L10  alerts 3 secs 0.406 
+L11  alerts 0 secs 0.407 
+L12  alerts 7 secs 0.405 
+L13  alerts 3 secs 0.405 
+L14  alerts 3 secs 0.407 
+L15  alerts 6 secs 0.815 
+L16  alerts 5 secs 0.404 
+L17  alerts 3 secs 0.406 
+L18  alerts 7 secs 0.406 
+L19  alerts 10 secs 0.406 
+L20  alerts 7 secs 1.217 
+L21  alerts 9 secs 0.405 
+L22  alerts 6 secs 0.407 
+L23  alerts 3 secs 0.406 
+L24  alerts 10 secs 0.406 
+L25  alerts 6 secs 0.407 
+L26  alerts 7 secs 1.218 
+L27  alerts 6 secs 0.404 
+L28  alerts 7 secs 0.815 
+L29  alerts 0 secs 0.406 
+L30  alerts 6 secs 1.618 
+L31  alerts 4 secs 0.406 
+L32  alerts 5 secs 0.412 
+L33  alerts 7 secs 1.216 
+L34  alerts 10 secs 0.81 
+L35  alerts 8 secs 0.405 
+L36  alerts 3 secs 0.407 
+L37  alerts 8 secs 0.406 
+L38  alerts 5 secs 0.407 
+L39  alerts 9 secs 0.404 
+L40  alerts 6 secs 0.406 
+L41  alerts 5 secs 0.406 
+L01 _mobile alerts 6 secs 0.405 
+L12 _mobile alerts 7 secs 0.406 
+L24 _mobile alerts 10 secs 0.408 
+L41 _mobile alerts 5 secs 0.405 
+G01  alerts 1 secs 0.408 
+G02  alerts 1 secs 0.408 
+G03  alerts 2 secs 0.407 
+G04  alerts 1 secs 0.407 
+G05  alerts 1 secs 0.407 
+G06  alerts 2 secs 0.407 

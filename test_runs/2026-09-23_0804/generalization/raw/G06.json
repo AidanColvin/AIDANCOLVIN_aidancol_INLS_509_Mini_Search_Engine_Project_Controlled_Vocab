@@ -1,0 +1,186 @@
+{
+ "id": "G06",
+ "input": "Adempas (riociguat) 1 mg three times daily = 3 mg/day, Imdur (isosorbide mononitrate ER) 30 mg once daily = 30 mg/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.9,
+ "secondsToResults": 0.407,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Adempas, Imdur",
+   "category": "Imdur with Adempas: severe, refractory low blood pressure",
+   "basis": "Why E: The Contraindications section of the Adempas label addresses this combination: severe, refractory low blood pressure. Clinical rulebook row 21.",
+   "quote": "4 CONTRAINDICATIONS • Pregnancy ( 4.1 ) • Use with nitrates or nitric oxide donors in any form ( 4.2 , 7.1 ) • Use with PDE inhibitors ( 2.6 , 4.3 , 7.1 ) • Patients with concomitant use of other soluble guanylate cyclase (sGC) stimulators.",
+   "source": "From the Adempas label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Nitrates release nitric oxide, which raises cGMP; PDE5 inhibitors block cGMP breakdown (riociguat stimulates its production). Together blood pressure can fall sharply and not respond to treatment. The labels contraindicate these combinations.",
+   "action": "Do not use together. Allow 24 hours after sildenafil or vardenafil and 48 hours after tadalafil before any nitrate.",
+   "includes": null,
+   "sources": "FDA labels: Adempas\n · Imdur\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b57509a-3d5d-41d4-8fed-1471e26372a3"
+    },
+    {
+     "text": "Adempas",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b57509a-3d5d-41d4-8fed-1471e26372a3"
+    },
+    {
+     "text": "Imdur",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d01d4f0f-5164-4ea3-b772-72b97961c6fb"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Adempas, Imdur",
+   "category": "2 drugs: risk of low blood pressure on standing, fainting, and falls",
+   "basis": "Why C: The Warnings and Precautions section of the Adempas label addresses this combination: risk of low blood pressure on standing, fainting, and falls. Clinical rulebook row 22.",
+   "quote": "Consider the potential for symptomatic hypotension or ischemia in patients with hypovolemia, severe left ventricular outflow obstruction, resting hypotension, autonomic dysfunction, or concomitant treatment with antihypertensives or strong CYP and P-gp/BCRP inhibitors [see Drug Interactions (7.2) and Clinical Pharmacology (12.3) ] .",
+   "source": "From the Adempas label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Each drug lowers blood pressure or blocks the reflex that holds it up when standing. Together they can cause orthostatic hypotension, fainting, and falls.",
+   "action": "Start low, raise one drug at a time, check standing blood pressure, and tell the patient to stand up slowly.",
+   "includes": null,
+   "sources": "FDA labels: Adempas\n · Imdur",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b57509a-3d5d-41d4-8fed-1471e26372a3"
+    },
+    {
+     "text": "Adempas",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b57509a-3d5d-41d4-8fed-1471e26372a3"
+    },
+    {
+     "text": "Imdur",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d01d4f0f-5164-4ea3-b772-72b97961c6fb"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "1"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "1"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Adempas",
+   "generic": "riociguat",
+   "dose": "1 mg · 3 times a day · 3 mg/day total",
+   "facts": "Soluble Guanylate Cyclase Stimulator [EPC]\nBoxed Warning\nContraindicated Combination",
+   "text": "Adempas\nriociguat\n1 mg · 3 times a day · 3 mg/day total\nSoluble Guanylate Cyclase Stimulator [EPC]\nBoxed Warning\nContraindicated Combination"
+  },
+  {
+   "brand": "Imdur",
+   "generic": "isosorbide",
+   "dose": "30 mg · once a day · 30 mg/day total",
+   "facts": "extended release\nNitrate Vasodilator [EPC]\nHigh-Frequency Adverse Effect",
+   "text": "Imdur\nisosorbide\n30 mg · once a day · 30 mg/day total\nextended release\nNitrate Vasodilator [EPC]\nHigh-Frequency Adverse Effect"
+  },
+  {
+   "brand": "Singulair",
+   "generic": "montelukast",
+   "dose": "10 mg · once a day · 10 mg/day total",
+   "facts": "Leukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication",
+   "text": "Singulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication"
+  }
+ ],
+ "totals": [
+  "isosorbide\n30 mg/day",
+  "montelukast\n10 mg/day",
+  "riociguat\n3 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b57509a-3d5d-41d4-8fed-1471e26372a3",
+   "in_alert": true
+  },
+  {
+   "text": "Adempas",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b57509a-3d5d-41d4-8fed-1471e26372a3",
+   "in_alert": true
+  },
+  {
+   "text": "Imdur",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d01d4f0f-5164-4ea3-b772-72b97961c6fb",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b57509a-3d5d-41d4-8fed-1471e26372a3",
+   "in_alert": true
+  },
+  {
+   "text": "Adempas",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b57509a-3d5d-41d4-8fed-1471e26372a3",
+   "in_alert": true
+  },
+  {
+   "text": "Imdur",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d01d4f0f-5164-4ea3-b772-72b97961c6fb",
+   "in_alert": true
+  }
+ ],
+ "statusText": "3 of 3 medications checked",
+ "caption": "Most severe: E, Avoid combination. Do not use these drugs together.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n2 interactions\n\n3 of 3 medications checked\n\nE\nAvoid combination\n1\nD\nConsider changing therapy\n–\nC\nMonitor closely\n1\nB\nMonitor\n–\nA\nMinor\n–\nMost severe: E, Avoid combination. Do not use these drugs together.\nE\nAvoid combination — Do not use these drugs together.\nAdempas, Imdur\n\nImdur with Adempas: severe, refractory low blood pressure\n\nWhy E: The Contraindications section of the Adempas label addresses this combination: severe, refractory low blood pressure. Clinical rulebook row 21.\n\n4 CONTRAINDICATIONS • Pregnancy ( 4.1 ) • Use with nitrates or nitric oxide donors in any form ( 4.2 , 7.1 ) • Use with PDE inhibitors ( 2.6 , 4.3 , 7.1 ) • Patients with concomitant use of other soluble guanylate cyclase (sGC) stimulators.\n\nFrom the Adempas label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nNitrates release nitric oxide, which raises cGMP; PDE5 inhibitors block cGMP breakdown (riociguat stimulates its production). Together blood pressure can fall sharply and not respond to treatment. The labels contraindicate these combinations.\n\nWhat to do\n\nDo not use together. Allow 24 hours after sildenafil or vardenafil and 48 hours after tadalafil before any nitrate.\n\nFDA labels: Adempas\n · Imdur\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nAdempas, Imdur\n\n2 drugs: risk of low blood pressure on standing, fainting, and falls\n\nWhy C: The Warnings and Precautions section of the Adempas label addresses this combination: risk of low blood pressure on standing, fainting, and falls. Clinical rulebook row 22.\n\nConsider the potential for symptomatic hypotension or ischemia in patients with hypovolemia, severe left ventricular outflow obstruction, resting hypotension, autonomic dysfunction, or concomitant treatment with antihypertensives or strong CYP and P-gp/BCRP inhibitors [see Drug Interactions (7.2) and Clinical Pharmacology (12.3) ] .\n\nFrom the Adempas label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nEach drug lowers blood pressure or blocks the reflex that holds it up when standing. Together they can cause orthostatic hypotension, fainting, and falls.\n\nWhat to do\n\nStart low, raise one drug at a time, check standing blood pressure, and tell the patient to stand up slowly.\n\nFDA labels: Adempas\n · Imdur\n\nShow 1 more label sentence\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n3 medications\nClear all\nTotals by ingredient\nisosorbide\n30 mg/day\nmontelukast\n10 mg/day\nriociguat\n3 mg/day\nAdempas\nriociguat\n1 mg · 3 times a day · 3 mg/day total\nSoluble Guanylate Cyclase Stimulator [EPC]\nBoxed Warning\nContraindicated Combination\nImdur\nisosorbide\n30 mg · once a day · 30 mg/day total\nextended release\nNitrate Vasodilator [EPC]\nHigh-Frequency Adverse Effect\nSingulair\nmontelukast\n10 mg · once a day · 10 mg/day total\nLeukotriene Receptor Antagonist [EPC]\nBoxed Warning\nPediatric Indication\n2 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:09:14.959Z"
+}

@@ -1,0 +1,527 @@
+{
+ "id": "L39",
+ "input": "Colcrys (colchicine) 0.6 mg twice daily = 1.2 mg/day, Ery-Tab (erythromycin) 500 mg four times daily = 2000 mg/day, Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day, Zyloprim (allopurinol) 300 mg once daily = 300 mg/day, Cardizem CD (diltiazem ER) 240 mg once daily = 240 mg/day, Lasix (furosemide) 40 mg once daily = 40 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.833,
+ "secondsToResults": 0.404,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [
+  {
+   "grade": "E",
+   "grade_text": "Avoid combination — Do not use these drugs together.",
+   "drugs": "Ery-Tab, Zocor",
+   "category": "Zocor with Ery-Tab: statin levels rise many-fold: risk of rhabdomyolysis",
+   "basis": "Why E: The Contraindications section of the Zocor label addresses this combination: statin levels rise many-fold: risk of rhabdomyolysis. Clinical rulebook row 27.",
+   "quote": "4 CONTRAINDICATIONS Simvastatin is contraindicated in the following conditions: • Concomitant use of strong CYP3A4 inhibitors (select azole anti-fungals, macrolide antibiotics, anti-viral medications, and nefazodone) [see DRUG INTERACTIONS ( 7.1 )]. • Concomitant use of cyclosporine, danazol or gemfibrozil [see DRUG INTERACTIONS ( 7.1 )]. • Acute liver failure or decompensated cirrhosis [see WARNINGS AND PRECAUTIONS ( 5.3 )] • Hypersensitivity to simvastatin or any excipients in simvastatin tablets USP.",
+   "source": "From the Zocor label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Simvastatin and lovastatin are cleared almost entirely by CYP3A4. Strong CYP3A4 inhibitors (and erythromycin, cyclosporine, gemfibrozil, danazol) raise their levels roughly 10-fold, causing muscle breakdown and kidney failure. The simvastatin label contraindicates these combinations.",
+   "action": "Do not use together. Hold the statin during the antibiotic or antifungal course, or switch to pravastatin or rosuvastatin.",
+   "includes": null,
+   "sources": "FDA labels: Ery-Tab\n · Zocor\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e"
+    },
+    {
+     "text": "Ery-Tab",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=061ddd20-94a6-4e3c-ba84-1ebd8529eea6"
+    },
+    {
+     "text": "Zocor",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    },
+    {
+     "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-e"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Zocor, Cardizem CD",
+   "category": "Zocor with Cardizem CD: raises the statin level: risk of muscle injury",
+   "basis": "Why D: The Warnings and Precautions section of the Zocor label addresses this combination: raises the statin level: risk of muscle injury. Clinical rulebook row 27.",
+   "quote": "Simvastatin dosage modifications are recommended for patients taking lomitapide, verapamil, diltiazem, dronedarone, amiodarone, amlodipine or ranolazine [see DOSAGE AND ADMINISTRATION ( 2.5 )].",
+   "source": "From the Zocor label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "These drugs slow simvastatin's clearance. The simvastatin label caps the dose at 10 mg a day with verapamil, diltiazem, or dronedarone, and 20 mg with amiodarone, amlodipine, or ranolazine.",
+   "action": "Keep simvastatin at or below the label's cap, or switch to a statin not cleared by CYP3A4 (pravastatin, rosuvastatin).",
+   "includes": null,
+   "sources": "FDA labels: Zocor\n · Cardizem CD\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e"
+    },
+    {
+     "text": "Zocor",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e"
+    },
+    {
+     "text": "Cardizem CD",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Colcrys, Ery-Tab",
+   "category": "Colcrys with Ery-Tab: colchicine levels rise: risk of fatal colchicine toxicity",
+   "basis": "Why D: The Contraindications section of the Colcrys label addresses this combination: colchicine levels rise: risk of fatal colchicine toxicity. Clinical rulebook row 28.",
+   "quote": "Patients with renal or hepatic impairment should not be given colchicine tablets in conjunction with P-gp or strong CYP3A4 inhibitors (this includes all protease inhibitors except fosamprenavir).",
+   "source": "From the Colcrys label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Colchicine is cleared by CYP3A4 and pumped out by P-glycoprotein (P-gp). Blocking these raises colchicine to toxic levels (diarrhea, muscle damage, bone-marrow failure); fatal cases are reported. The colchicine label contraindicates these inhibitors in patients with kidney or liver impairment and requires a lower dose otherwise.",
+   "action": "Reduce the colchicine dose as the label directs (for gout prophylaxis, 0.3 mg a day or less) or avoid; do not combine at all with kidney or liver impairment.",
+   "includes": null,
+   "sources": "FDA labels: Colcrys\n · Ery-Tab\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871"
+    },
+    {
+     "text": "Colcrys",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871"
+    },
+    {
+     "text": "Ery-Tab",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=061ddd20-94a6-4e3c-ba84-1ebd8529eea6"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "D",
+   "grade_text": "Consider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.",
+   "drugs": "Ery-Tab, Cardizem CD",
+   "category": "Ery-Tab with Cardizem CD: macrolide levels rise: about 5 times the rate of sudden cardiac death",
+   "basis": "Why D: The Warnings section of the Ery-Tab label addresses this combination: macrolide levels rise: about 5 times the rate of sudden cardiac death. Clinical rulebook row 23.",
+   "quote": "These include colchicine toxicity with colchicine; rhabdomyolysis with simvastatin, lovastatin, and atorvastatin; and hypotension with calcium channel blockers metabolized by CYP3A4 (e.g., verapamil, amlodipine, diltiazem) (see PRECAUTIONS – Drug Interactions ).",
+   "source": "From the Ery-Tab label, Warnings section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Erythromycin prolongs QT and is cleared by CYP3A4. With a CYP3A4 inhibitor its level rises; users of both had about 5 times the rate of sudden cardiac death (Ray et al., NEJM 2004).",
+   "action": "Avoid; choose azithromycin or a non-macrolide antibiotic.",
+   "includes": null,
+   "sources": "FDA labels: Ery-Tab\n · Cardizem CD\n · Ray et al., NEJM 2004: oral erythromycin with CYP3A inhibitors and sudden cardiac death",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49b3ca93-43cc-439c-8f5d-e3ea2e87ad2f"
+    },
+    {
+     "text": "Ery-Tab",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49b3ca93-43cc-439c-8f5d-e3ea2e87ad2f"
+    },
+    {
+     "text": "Cardizem CD",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6"
+    },
+    {
+     "text": "Ray et al., NEJM 2004: oral erythromycin with CYP3A inhibitors and sudden cardiac death",
+     "href": "https://pubmed.ncbi.nlm.nih.gov/15356306/"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-d"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Ery-Tab, Lasix",
+   "category": "2 drugs: low potassium and magnesium from the diuretic raise the rhythm risk",
+   "basis": "Why C: The Precautions section of the Lasix label addresses this combination: low potassium and magnesium from the diuretic raise the rhythm risk. Clinical rulebook row 18, 23.",
+   "quote": "Hypokalemia may develop with furosemide, especially with brisk diuresis, inadequate oral electrolyte intake, when cirrhosis is present, or during concomitant use of corticosteroids, ACTH, licorice in large amounts, or prolonged use of laxatives.",
+   "source": "From the Lasix label, Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Loop and thiazide diuretics lower potassium and magnesium. Low levels make QT-prolonging drugs more likely to cause torsades and make digoxin more toxic.",
+   "action": "Check potassium and magnesium at the start and after dose changes; replace them to keep potassium above 4.0 mmol/L.",
+   "includes": null,
+   "sources": "FDA labels: Ery-Tab\n · Lasix",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a"
+    },
+    {
+     "text": "Ery-Tab",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=061ddd20-94a6-4e3c-ba84-1ebd8529eea6"
+    },
+    {
+     "text": "Lasix",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Colcrys, Cardizem CD",
+   "category": "Colcrys with Cardizem CD: colchicine levels rise",
+   "basis": "Why C: The Contraindications section of the Colcrys label addresses this combination: colchicine levels rise. Clinical rulebook row 28.",
+   "quote": "Patients with renal or hepatic impairment should not be given colchicine tablets in conjunction with P-gp or strong CYP3A4 inhibitors (this includes all protease inhibitors except fosamprenavir).",
+   "source": "From the Colcrys label, Contraindications section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Moderate CYP3A4 inhibitors (and the weak P-glycoprotein effect of diltiazem) raise colchicine levels. The colchicine label calls for a dose reduction.",
+   "action": "Lower the colchicine dose as the label directs and watch for diarrhea, muscle pain, and low blood counts.",
+   "includes": null,
+   "sources": "FDA labels: Colcrys\n · Cardizem CD\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871"
+    },
+    {
+     "text": "Colcrys",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871"
+    },
+    {
+     "text": "Cardizem CD",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6"
+    },
+    {
+     "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+     "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "C",
+   "grade_text": "Monitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.",
+   "drugs": "Colcrys, Zocor",
+   "category": "Colcrys with Zocor: additive muscle toxicity",
+   "basis": "Why C: The Warnings and Precautions section of the Colcrys label addresses this combination: additive muscle toxicity. Clinical rulebook row 27, 28.",
+   "quote": "Concomitant use of atorvastatin, simvastatin, pravastatin, fluvastatin, lovastatin, gemfibrozil, fenofibrate, fenofibric acid or benzafibrate (themselves associated with myotoxicity) or cyclosporine with colchicine tablets may potentiate the development of myopathy [see Drug Interactions (7)].",
+   "source": "From the Colcrys label, Warnings and Precautions section.\nOpen on DailyMed",
+   "why_title": "Why it happens",
+   "why_text": "Colchicine and statins can each injure muscle; myopathy and rhabdomyolysis have been reported with the combination, worse when a CYP3A4 inhibitor raises both.",
+   "action": "Watch for muscle pain or weakness and check CK if symptoms appear.",
+   "includes": null,
+   "sources": "FDA labels: Colcrys\n · Zocor",
+   "links": [
+    {
+     "text": "Open on DailyMed",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871"
+    },
+    {
+     "text": "Colcrys",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871"
+    },
+    {
+     "text": "Zocor",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-c"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Colcrys",
+   "category": "colchicine 1.2 mg/day is at the labeled maximum of 1.2 mg/day (maximum)",
+   "basis": "Why A: Daily total 1.2 mg against a labeled maximum of 1.2 mg (prophylaxis maximum).",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of colchicine; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Colcrys",
+   "links": [
+    {
+     "text": "Colcrys",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  },
+  {
+   "grade": "A",
+   "grade_text": "Minor — Minor: usually no action needed.",
+   "drugs": "Zocor",
+   "category": "simvastatin 40 mg/day is at the labeled maximum of 40 mg/day (maximum)",
+   "basis": "Why A: Daily total 40 mg against a labeled maximum of 40 mg (80 mg only for patients already on it for 12 months).",
+   "quote": null,
+   "source": null,
+   "why_title": "Why it happens",
+   "why_text": "The total counts every entry of simvastatin; it is at the labeled maximum, not over it.",
+   "action": "No change needed for the ceiling; do not add more from any source.",
+   "includes": null,
+   "sources": "FDA labels: Zocor",
+   "links": [
+    {
+     "text": "Zocor",
+     "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e"
+    }
+   ],
+   "classes": "alert alert--tier-4 alert--grade-a"
+  }
+ ],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "1"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "3"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "3"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "2"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Colcrys",
+   "generic": "colchicine",
+   "dose": "0.6 mg · twice a day · 1.2 mg/day total",
+   "facts": "Alkaloid [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment",
+   "text": "Colcrys\ncolchicine\n0.6 mg · twice a day · 1.2 mg/day total\nAlkaloid [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment"
+  },
+  {
+   "brand": "Ery-Tab",
+   "generic": "erythromycin",
+   "dose": "500 mg · 4 times a day · 2000 mg/day total",
+   "facts": "Macrolide [EPC], Macrolide Antimicrobial [EPC]",
+   "text": "Ery-Tab\nerythromycin\n500 mg · 4 times a day · 2000 mg/day total\nMacrolide [EPC], Macrolide Antimicrobial [EPC]"
+  },
+  {
+   "brand": "Zocor",
+   "generic": "simvastatin",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "HMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination",
+   "text": "Zocor\nsimvastatin\n40 mg · once a day · 40 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination"
+  },
+  {
+   "brand": "Zyloprim",
+   "generic": "allopurinol",
+   "dose": "300 mg · once a day · 300 mg/day total",
+   "facts": "Xanthine Oxidase Inhibitor [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk",
+   "text": "Zyloprim\nallopurinol\n300 mg · once a day · 300 mg/day total\nXanthine Oxidase Inhibitor [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk"
+  },
+  {
+   "brand": "Cardizem CD",
+   "generic": "diltiazem",
+   "dose": "240 mg · once a day · 240 mg/day total",
+   "facts": "extended release",
+   "text": "Cardizem CD\ndiltiazem\n240 mg · once a day · 240 mg/day total\nextended release"
+  },
+  {
+   "brand": "Lasix",
+   "generic": "furosemide",
+   "dose": "40 mg · once a day · 40 mg/day total",
+   "facts": "Loop Diuretic [EPC]",
+   "text": "Lasix\nfurosemide\n40 mg · once a day · 40 mg/day total\nLoop Diuretic [EPC]"
+  }
+ ],
+ "totals": [
+  "allopurinol\n300 mg/day",
+  "colchicine\n1.2 mg/day",
+  "diltiazem\n240 mg/day",
+  "erythromycin\n2,000 mg (2 g)/day",
+  "furosemide\n40 mg/day",
+  "simvastatin\n40 mg/day"
+ ],
+ "totalMme": null,
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": true
+  },
+  {
+   "text": "Ery-Tab",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=061ddd20-94a6-4e3c-ba84-1ebd8529eea6",
+   "in_alert": true
+  },
+  {
+   "text": "Zocor",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/22539083/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": true
+  },
+  {
+   "text": "Zocor",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": true
+  },
+  {
+   "text": "Cardizem CD",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871",
+   "in_alert": true
+  },
+  {
+   "text": "Colcrys",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871",
+   "in_alert": true
+  },
+  {
+   "text": "Ery-Tab",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=061ddd20-94a6-4e3c-ba84-1ebd8529eea6",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49b3ca93-43cc-439c-8f5d-e3ea2e87ad2f",
+   "in_alert": true
+  },
+  {
+   "text": "Ery-Tab",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49b3ca93-43cc-439c-8f5d-e3ea2e87ad2f",
+   "in_alert": true
+  },
+  {
+   "text": "Cardizem CD",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6",
+   "in_alert": true
+  },
+  {
+   "text": "Ray et al., NEJM 2004: oral erythromycin with CYP3A inhibitors and sudden cardiac death",
+   "href": "https://pubmed.ncbi.nlm.nih.gov/15356306/",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": true
+  },
+  {
+   "text": "Ery-Tab",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=061ddd20-94a6-4e3c-ba84-1ebd8529eea6",
+   "in_alert": true
+  },
+  {
+   "text": "Lasix",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871",
+   "in_alert": true
+  },
+  {
+   "text": "Colcrys",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871",
+   "in_alert": true
+  },
+  {
+   "text": "Cardizem CD",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6",
+   "in_alert": true
+  },
+  {
+   "text": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "href": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers",
+   "in_alert": true
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871",
+   "in_alert": true
+  },
+  {
+   "text": "Colcrys",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871",
+   "in_alert": true
+  },
+  {
+   "text": "Zocor",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": true
+  },
+  {
+   "text": "Colcrys",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871",
+   "in_alert": true
+  },
+  {
+   "text": "Zocor",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": true
+  }
+ ],
+ "statusText": "6 of 6 medications checked",
+ "caption": "Most severe: E, Avoid combination. Do not use these drugs together.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\n9 interactions\n\n6 of 6 medications checked\n\nE\nAvoid combination\n1\nD\nConsider changing therapy\n3\nC\nMonitor closely\n3\nB\nMonitor\n–\nA\nMinor\n2\nMost severe: E, Avoid combination. Do not use these drugs together.\nE\nAvoid combination — Do not use these drugs together.\nEry-Tab, Zocor\n\nZocor with Ery-Tab: statin levels rise many-fold: risk of rhabdomyolysis\n\nWhy E: The Contraindications section of the Zocor label addresses this combination: statin levels rise many-fold: risk of rhabdomyolysis. Clinical rulebook row 27.\n\n4 CONTRAINDICATIONS Simvastatin is contraindicated in the following conditions: • Concomitant use of strong CYP3A4 inhibitors (select azole anti-fungals, macrolide antibiotics, anti-viral medications, and nefazodone) [see DRUG INTERACTIONS ( 7.1 )]. • Concomitant use of cyclosporine, danazol or gemfibrozil [see DRUG INTERACTIONS ( 7.1 )]. • Acute liver failure or decompensated cirrhosis [see WARNINGS AND PRECAUTIONS ( 5.3 )] • Hypersensitivity to simvastatin or any excipients in simvastatin tablets USP.\n\nFrom the Zocor label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nSimvastatin and lovastatin are cleared almost entirely by CYP3A4. Strong CYP3A4 inhibitors (and erythromycin, cyclosporine, gemfibrozil, danazol) raise their levels roughly 10-fold, causing muscle breakdown and kidney failure. The simvastatin label contraindicates these combinations.\n\nWhat to do\n\nDo not use together. Hold the statin during the antibiotic or antifungal course, or switch to pravastatin or rosuvastatin.\n\nFDA labels: Ery-Tab\n · Zocor\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n · Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nZocor, Cardizem CD\n\nZocor with Cardizem CD: raises the statin level: risk of muscle injury\n\nWhy D: The Warnings and Precautions section of the Zocor label addresses this combination: raises the statin level: risk of muscle injury. Clinical rulebook row 27.\n\nSimvastatin dosage modifications are recommended for patients taking lomitapide, verapamil, diltiazem, dronedarone, amiodarone, amlodipine or ranolazine [see DOSAGE AND ADMINISTRATION ( 2.5 )].\n\nFrom the Zocor label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nThese drugs slow simvastatin's clearance. The simvastatin label caps the dose at 10 mg a day with verapamil, diltiazem, or dronedarone, and 20 mg with amiodarone, amlodipine, or ranolazine.\n\nWhat to do\n\nKeep simvastatin at or below the label's cap, or switch to a statin not cleared by CYP3A4 (pravastatin, rosuvastatin).\n\nFDA labels: Zocor\n · Cardizem CD\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nColcrys, Ery-Tab\n\nColcrys with Ery-Tab: colchicine levels rise: risk of fatal colchicine toxicity\n\nWhy D: The Contraindications section of the Colcrys label addresses this combination: colchicine levels rise: risk of fatal colchicine toxicity. Clinical rulebook row 28.\n\nPatients with renal or hepatic impairment should not be given colchicine tablets in conjunction with P-gp or strong CYP3A4 inhibitors (this includes all protease inhibitors except fosamprenavir).\n\nFrom the Colcrys label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nColchicine is cleared by CYP3A4 and pumped out by P-glycoprotein (P-gp). Blocking these raises colchicine to toxic levels (diarrhea, muscle damage, bone-marrow failure); fatal cases are reported. The colchicine label contraindicates these inhibitors in patients with kidney or liver impairment and requires a lower dose otherwise.\n\nWhat to do\n\nReduce the colchicine dose as the label directs (for gout prophylaxis, 0.3 mg a day or less) or avoid; do not combine at all with kidney or liver impairment.\n\nFDA labels: Colcrys\n · Ery-Tab\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nD\nConsider changing therapy — Dangerous: avoid, or use only with a specific reason and close monitoring.\nEry-Tab, Cardizem CD\n\nEry-Tab with Cardizem CD: macrolide levels rise: about 5 times the rate of sudden cardiac death\n\nWhy D: The Warnings section of the Ery-Tab label addresses this combination: macrolide levels rise: about 5 times the rate of sudden cardiac death. Clinical rulebook row 23.\n\nThese include colchicine toxicity with colchicine; rhabdomyolysis with simvastatin, lovastatin, and atorvastatin; and hypotension with calcium channel blockers metabolized by CYP3A4 (e.g., verapamil, amlodipine, diltiazem) (see PRECAUTIONS – Drug Interactions ).\n\nFrom the Ery-Tab label, Warnings section.\nOpen on DailyMed\n\nWhy it happens\n\nErythromycin prolongs QT and is cleared by CYP3A4. With a CYP3A4 inhibitor its level rises; users of both had about 5 times the rate of sudden cardiac death (Ray et al., NEJM 2004).\n\nWhat to do\n\nAvoid; choose azithromycin or a non-macrolide antibiotic.\n\nFDA labels: Ery-Tab\n · Cardizem CD\n · Ray et al., NEJM 2004: oral erythromycin with CYP3A inhibitors and sudden cardiac death\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nEry-Tab, Lasix\n\n2 drugs: low potassium and magnesium from the diuretic raise the rhythm risk\n\nWhy C: The Precautions section of the Lasix label addresses this combination: low potassium and magnesium from the diuretic raise the rhythm risk. Clinical rulebook row 18, 23.\n\nHypokalemia may develop with furosemide, especially with brisk diuresis, inadequate oral electrolyte intake, when cirrhosis is present, or during concomitant use of corticosteroids, ACTH, licorice in large amounts, or prolonged use of laxatives.\n\nFrom the Lasix label, Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nLoop and thiazide diuretics lower potassium and magnesium. Low levels make QT-prolonging drugs more likely to cause torsades and make digoxin more toxic.\n\nWhat to do\n\nCheck potassium and magnesium at the start and after dose changes; replace them to keep potassium above 4.0 mmol/L.\n\nFDA labels: Ery-Tab\n · Lasix\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nColcrys, Cardizem CD\n\nColcrys with Cardizem CD: colchicine levels rise\n\nWhy C: The Contraindications section of the Colcrys label addresses this combination: colchicine levels rise. Clinical rulebook row 28.\n\nPatients with renal or hepatic impairment should not be given colchicine tablets in conjunction with P-gp or strong CYP3A4 inhibitors (this includes all protease inhibitors except fosamprenavir).\n\nFrom the Colcrys label, Contraindications section.\nOpen on DailyMed\n\nWhy it happens\n\nModerate CYP3A4 inhibitors (and the weak P-glycoprotein effect of diltiazem) raise colchicine levels. The colchicine label calls for a dose reduction.\n\nWhat to do\n\nLower the colchicine dose as the label directs and watch for diarrhea, muscle pain, and low blood counts.\n\nFDA labels: Colcrys\n · Cardizem CD\n · FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers\n\nC\nMonitor closely — Clinically significant: adjust the dose or timing, or monitor a named measure.\nColcrys, Zocor\n\nColcrys with Zocor: additive muscle toxicity\n\nWhy C: The Warnings and Precautions section of the Colcrys label addresses this combination: additive muscle toxicity. Clinical rulebook row 27, 28.\n\nConcomitant use of atorvastatin, simvastatin, pravastatin, fluvastatin, lovastatin, gemfibrozil, fenofibrate, fenofibric acid or benzafibrate (themselves associated with myotoxicity) or cyclosporine with colchicine tablets may potentiate the development of myopathy [see Drug Interactions (7)].\n\nFrom the Colcrys label, Warnings and Precautions section.\nOpen on DailyMed\n\nWhy it happens\n\nColchicine and statins can each injure muscle; myopathy and rhabdomyolysis have been reported with the combination, worse when a CYP3A4 inhibitor raises both.\n\nWhat to do\n\nWatch for muscle pain or weakness and check CK if symptoms appear.\n\nFDA labels: Colcrys\n · Zocor\n\nA\nMinor — Minor: usually no action needed.\nColcrys\n\ncolchicine 1.2 mg/day is at the labeled maximum of 1.2 mg/day (maximum)\n\nWhy A: Daily total 1.2 mg against a labeled maximum of 1.2 mg (prophylaxis maximum).\n\nWhy it happens\n\nThe total counts every entry of colchicine; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Colcrys\n\nA\nMinor — Minor: usually no action needed.\nZocor\n\nsimvastatin 40 mg/day is at the labeled maximum of 40 mg/day (maximum)\n\nWhy A: Daily total 40 mg against a labeled maximum of 40 mg (80 mg only for patients already on it for 12 months).\n\nWhy it happens\n\nThe total counts every entry of simvastatin; it is at the labeled maximum, not over it.\n\nWhat to do\n\nNo change needed for the ceiling; do not add more from any source.\n\nFDA labels: Zocor\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nTotals by ingredient\nallopurinol\n300 mg/day\ncolchicine\n1.2 mg/day\ndiltiazem\n240 mg/day\nerythromycin\n2,000 mg (2 g)/day\nfurosemide\n40 mg/day\nsimvastatin\n40 mg/day\nColcrys\ncolchicine\n0.6 mg · twice a day · 1.2 mg/day total\nAlkaloid [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nHepatic Dose Adjustment\nEry-Tab\nerythromycin\n500 mg · 4 times a day · 2000 mg/day total\nMacrolide [EPC], Macrolide Antimicrobial [EPC]\nZocor\nsimvastatin\n40 mg · once a day · 40 mg/day total\nHMG-CoA Reductase Inhibitor [EPC]\nHigh-Frequency Adverse Effect\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nContraindicated Combination\nZyloprim\nallopurinol\n300 mg · once a day · 300 mg/day total\nXanthine Oxidase Inhibitor [EPC]\nRenal Dose Adjustment\nOrgan Impairment Dose Adjustment\nCNS Depression Risk\nCardizem CD\ndiltiazem\n240 mg · once a day · 240 mg/day total\nextended release\nLasix\nfurosemide\n40 mg · once a day · 40 mg/day total\nLoop Diuretic [EPC]\n9 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 928b6b8 (deployed by workflow run 35856741406); run started 2026-09-23T08:04-04:00",
+ "runAt": "2026-09-23T12:08:15.025Z"
+}
