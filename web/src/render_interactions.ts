@@ -10,6 +10,8 @@ import {
   alertExplanation,
   alertGrade,
   alertIconKey,
+  GRADES,
+  gradeCounts,
   primaryEvidenceMember,
   sortAlerts,
 } from "./alerts.js";
@@ -603,6 +605,8 @@ function buildAlertsColumn(state: AppState, callbacks: InteractionsCallbacks): r
     wrap.append(buildUncheckedList(state.checkResponse.unresolved_entries));
   }
 
+  wrap.append(buildSeverityStrip(state.checkResponse.alerts));
+
   if (state.checkResponse.alerts.length === 0) {
     const none = document.createElement("p");
     none.className = "results__none";
@@ -623,6 +627,51 @@ function buildAlertsColumn(state: AppState, callbacks: InteractionsCallbacks): r
   notice.textContent = state.checkResponse.notice;
   wrap.append(notice);
   return [wrap];
+}
+
+/**
+ * Takes the alerts from a check response.
+ * Builds the A-to-E severity strip, worst grade first, marking each grade that has alerts with its count and the most severe one as the headline.
+ * Gives the strip element, with every cell empty when there are no alerts.
+ */
+function buildSeverityStrip(alerts: readonly AlertRecord[]): HTMLElement {
+  const counts = gradeCounts(alerts);
+  const worst = GRADES.find((grade) => counts[grade.letter] > 0);
+  const figure = document.createElement("figure");
+  figure.className = "severity";
+  figure.setAttribute("aria-label", worst === undefined ? "No graded interactions" : `Most severe grade: ${worst.letter}, ${worst.name}`);
+  const scale = document.createElement("ol");
+  scale.className = "severity__scale";
+  for (const grade of GRADES) {
+    const count = counts[grade.letter];
+    const cell = document.createElement("li");
+    const classes = ["severity__cell", `severity__cell--${grade.letter.toLowerCase()}`];
+    if (count > 0) {
+      classes.push("severity__cell--on");
+    }
+    if (worst !== undefined && grade.letter === worst.letter) {
+      classes.push("severity__cell--worst");
+    }
+    cell.className = classes.join(" ");
+    const letter = document.createElement("span");
+    letter.className = "severity__letter";
+    letter.textContent = grade.letter;
+    const name = document.createElement("span");
+    name.className = "severity__name";
+    name.textContent = grade.name;
+    const tally = document.createElement("span");
+    tally.className = "severity__count";
+    tally.textContent = count === 0 ? "–" : String(count);
+    cell.append(letter, name, tally);
+    scale.append(cell);
+  }
+  const caption = document.createElement("figcaption");
+  caption.className = "severity__caption";
+  caption.textContent = worst === undefined
+    ? "No graded interaction found in the labels checked."
+    : `Most severe: ${worst.letter}, ${worst.name}. ${worst.meaning}`;
+  figure.append(scale, caption);
+  return figure;
 }
 
 /**
@@ -696,6 +745,15 @@ function buildAlertCard(alert: AlertRecord, alertIndex: number, expanded: boolea
   ruleLine.append(ruleText);
 
   card.append(head, drugs, ruleLine);
+
+  if (alert.grade_basis !== null && alert.grade_basis.length > 0) {
+    const basis = document.createElement("p");
+    basis.className = "alert__basis";
+    const label = document.createElement("strong");
+    label.textContent = `Why ${grade.letter}: `;
+    basis.append(label, document.createTextNode(alert.grade_basis));
+    card.append(basis);
+  }
 
   const primary = primaryEvidenceMember(alert.members);
   if (primary !== undefined) {

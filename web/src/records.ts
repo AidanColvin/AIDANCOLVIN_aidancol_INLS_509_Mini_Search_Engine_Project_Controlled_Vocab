@@ -50,6 +50,8 @@ export interface AlertRecord {
   readonly tier_name: string;
   readonly members: readonly AlertMember[];
   readonly note: string;
+  readonly grade: string | null;
+  readonly grade_basis: string | null;
 }
 
 export interface UnresolvedEntry {

@@ -75,14 +75,25 @@ def t17_evidence(drug: Mapping[str, Any]) -> TermEvidence | None:
     return None
 
 
+def shares_base_ingredient(source: Mapping[str, Any], other: Mapping[str, Any]) -> bool:
+    """
+    Takes two resolved drugs.
+    Checks whether any base ingredient of one is also a base ingredient of the other, as with Synthroid and levothyroxine, or Symbyax and Prozac.
+    Gives True when they share one, False otherwise or when either lists none.
+    """
+    first = {name.lower() for name in source["record"].get("base_ingredients", ()) if name}
+    second = {name.lower() for name in other["record"].get("base_ingredients", ()) if name}
+    return bool(first & second)
+
+
 def build_pair_alert(source: Mapping[str, Any], other: Mapping[str, Any]) -> Alert | None:
     """
     Takes one resolved drug carrying T17 and one other listed drug.
-    Checks whether the other drug matches a drug or class named in the source drug's contraindication sentence.
-    Gives the Alert, or None when the sentence does not name the other drug or its class.
+    Checks whether the other drug matches a drug or class named in the source drug's contraindication sentence, skipping a drug that shares the source's own ingredient, since a label naming its own ingredient is not a contraindicated combination and the duplication flag already covers it.
+    Gives the Alert, or None when the sentence does not name the other drug or its class, or the two share an ingredient.
     """
     evidence = t17_evidence(source)
-    if evidence is None or not sentence_mentions_drug(evidence.sentence, other):
+    if evidence is None or shares_base_ingredient(source, other) or not sentence_mentions_drug(evidence.sentence, other):
         return None
     source_record, other_record = source["record"], other["record"]
     member_source = evidence_for_term(source["display_name"], source_record["set_id"], source_record["effective_time"], evidence)

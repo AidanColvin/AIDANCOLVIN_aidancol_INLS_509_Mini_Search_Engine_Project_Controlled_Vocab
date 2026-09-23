@@ -558,6 +558,74 @@ button:disabled {
   color: var(--text-2);
 }
 
+/* Severity strip: the five grades, worst first, with counts. */
+
+.severity {
+  margin: var(--space-2) 0 0;
+}
+
+.severity__scale {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+
+.severity__cell {
+  padding: 10px 8px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--text-2);
+}
+
+.severity__letter {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.severity__name {
+  font-size: 12px;
+  line-height: 1.25;
+  min-height: 2.5em;
+}
+
+.severity__count {
+  font-size: var(--size-caption);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.severity__cell--on {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.severity__cell--worst {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.severity__caption {
+  margin-top: var(--space-1);
+  font-size: var(--size-caption);
+  font-weight: 600;
+}
+
+.alert__basis {
+  margin: 0;
+  font-size: var(--size-caption);
+  color: var(--text-2);
+}
+.alert__basis strong {
+  color: var(--text);
+}
+
 /* Grades */
 
 .alert__head {
@@ -579,8 +647,8 @@ button:disabled {
   font-weight: 800;
   line-height: 1;
 }
-.alert--grade-d .grade,
-.alert--grade-c .grade {
+.alert--grade-e .grade,
+.alert--grade-d .grade {
   background: var(--text);
   color: var(--bg);
 }
@@ -696,7 +764,7 @@ button:disabled {
   flex-direction: column;
   gap: var(--space-1);
 }
-.alert--grade-d {
+.alert--grade-e {
   border-color: var(--text);
   border-width: 2px;
 }
@@ -1299,6 +1367,228 @@ button:disabled {
   border-left: 1px solid var(--text);
 }
 
+.flow--five {
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-2);
+}
+.flow--five .flow__step + .flow__step::before {
+  left: calc(-1 * var(--space-2));
+  width: var(--space-2);
+}
+
+/* Grade scale: the five grades, worst first. */
+
+.gradescale {
+  margin: var(--space-3) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.gradescale__row {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1.2fr) minmax(0, 1.4fr) 5.5em;
+  gap: var(--space-2);
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+}
+.gradescale__row div {
+  display: flex;
+  flex-direction: column;
+}
+.gradescale__row div span,
+.gradescale__cue {
+  font-size: var(--size-caption);
+  color: var(--text-2);
+}
+.gradescale__letter {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--text);
+  border-radius: 8px;
+  font-size: 22px;
+  font-weight: 800;
+}
+.gradescale__row--e .gradescale__letter,
+.gradescale__row--d .gradescale__letter {
+  background: var(--text);
+  color: var(--bg);
+}
+.gradescale__row--e {
+  border: 2px solid var(--text);
+}
+.gradescale__row--a .gradescale__letter {
+  border-color: var(--text-2);
+  color: var(--text-2);
+}
+.gradescale__lexi {
+  justify-self: end;
+  font-size: var(--size-caption);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.gradescale figcaption,
+.matrix figcaption {
+  margin-top: var(--space-1);
+  font-size: var(--size-caption);
+  color: var(--text-2);
+}
+
+.grade--solid {
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  background: var(--text);
+  color: var(--bg);
+  vertical-align: middle;
+}
+.anatomy__grade {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+/* Decision list: questions top to bottom, each with the grade a "yes" gives. */
+
+.decide {
+  list-style: none;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+}
+.decide__q {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-2);
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px solid var(--text);
+  border-radius: var(--radius);
+  font-size: var(--size-caption);
+}
+.decide__q + .decide__q {
+  margin-top: var(--space-3);
+}
+.decide__q + .decide__q::before {
+  content: "no";
+  position: absolute;
+  left: var(--space-3);
+  top: calc(-1 * var(--space-3));
+  height: var(--space-3);
+  padding-left: 8px;
+  border-left: 1px solid var(--text);
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.decide__to {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.decide__to::before {
+  content: "yes →";
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+.decide__q--last .decide__to::before {
+  content: "→";
+}
+
+.why3 {
+  margin-top: var(--space-3);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+.why3__cell {
+  padding: var(--space-2);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--size-caption);
+}
+.why3__cell span {
+  color: var(--text-2);
+}
+
+/* Agreement matrix: key severity against tool grade. */
+
+.matrix {
+  margin: var(--space-3) 0 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: start;
+}
+.matrix__grid {
+  display: grid;
+  grid-template-columns: auto repeat(4, 1fr);
+  gap: 3px;
+  font-size: var(--size-caption);
+}
+.matrix__corner,
+.matrix__h,
+.matrix__r {
+  padding: 6px;
+  color: var(--text-2);
+  font-size: 12px;
+}
+.matrix__h {
+  text-align: center;
+}
+.matrix__c {
+  aspect-ratio: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  background: color-mix(in srgb, var(--text) min(calc(var(--n) * 2.6%), 40%), var(--bg));
+  color: var(--text);
+}
+.matrix__c--diag {
+  outline: 2px solid var(--text);
+  outline-offset: -2px;
+}
+.matrix__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-1);
+}
+.matrix__stats div {
+  padding: 10px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+}
+.matrix__stats b {
+  font-size: 20px;
+}
+.matrix__stats span {
+  font-size: 12px;
+  color: var(--text-2);
+}
+.matrix figcaption {
+  grid-column: 1 / -1;
+}
+
 /* Stack figure: the three layers. */
 
 .stack {
@@ -1422,6 +1712,37 @@ button:disabled {
   .report {
     grid-template-columns: 1fr;
     gap: var(--space-4);
+  }
+  .flow--five,
+  .why3,
+  .matrix {
+    grid-template-columns: 1fr;
+  }
+  .gradescale__row {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+  .gradescale__cue,
+  .gradescale__lexi {
+    grid-column: 2;
+    justify-self: start;
+  }
+  .severity__name {
+    display: none;
+  }
+  .matrix__grid {
+    grid-template-columns: 5.2em repeat(4, minmax(0, 1fr));
+  }
+  .matrix__corner,
+  .matrix__h,
+  .matrix__r {
+    padding: 4px 2px;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+  .matrix__c {
+    aspect-ratio: auto;
+    min-height: 36px;
   }
   .flow,
   .flow--three,

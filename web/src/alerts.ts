@@ -20,35 +20,65 @@ const SECTION_STRENGTH_ORDER: readonly string[] = [
 
 const DUPLICATE_THERAPY_LABEL = "Duplicate therapy";
 
-export type GradeLetter = "A" | "B" | "C" | "D";
+export type GradeLetter = "A" | "B" | "C" | "D" | "E";
 
 export interface AlertGrade {
   readonly letter: GradeLetter;
   readonly name: string;
   readonly meaning: string;
+  readonly lexicomp: string;
   readonly rank: number;
 }
 
-// One grade per label section, worst first. The section an alert's sentence
-// came from is the label's own signal of how serious it is, so the grade is a
-// heuristic and every card says so.
-const GRADE_D: AlertGrade = { letter: "D", name: "Do not combine", meaning: "The label lists this combination as contraindicated.", rank: 0 };
-const GRADE_C: AlertGrade = { letter: "C", name: "Major", meaning: "A boxed warning, the label's strongest caution.", rank: 1 };
-const GRADE_B: AlertGrade = { letter: "B", name: "Serious", meaning: "A warning in the label. Watch for it.", rank: 2 };
-const GRADE_A: AlertGrade = { letter: "A", name: "Minor", meaning: "An interaction note in the label.", rank: 3 };
-const GRADE_DUPLICATE: AlertGrade = { letter: "B", name: "Same drug twice", meaning: "Two entries add up to one drug's daily total.", rank: 2 };
+// The five grades, worst first. Each is set by the FDA label itself: the
+// section the evidence sentence sits in, and what the label says to do about
+// using the drugs together. Each lines up with a published Lexicomp level.
+export const GRADES: readonly AlertGrade[] = [
+  { letter: "E", name: "Avoid combination", meaning: "The label says these drugs must not be used together.", lexicomp: "X", rank: 0 },
+  { letter: "D", name: "Consider changing therapy", meaning: "A boxed warning, or the label says to avoid using them together.", lexicomp: "D", rank: 1 },
+  { letter: "C", name: "Monitor closely", meaning: "A clinically significant warning in the label.", lexicomp: "C", rank: 2 },
+  { letter: "B", name: "Monitor", meaning: "The label describes the interaction and says to monitor or adjust.", lexicomp: "C", rank: 3 },
+  { letter: "A", name: "Minor", meaning: "The label notes the interaction and states no action.", lexicomp: "B", rank: 4 },
+];
+
+/**
+ * Takes a grade letter.
+ * Looks it up in the five-grade table.
+ * Gives the AlertGrade, or undefined when the letter is not one of A to E.
+ */
+export function gradeByLetter(letter: string): AlertGrade | undefined {
+  return GRADES.find((grade) => grade.letter === letter);
+}
 
 /**
  * Takes one alert.
- * Grades it from D (contraindicated) to A (interaction note) by the label section its evidence came from, with a duplication flag graded B.
+ * Uses the grade the server assigned, falling back for an older response to the tier: 1 is E, 2 is D, 3 is C, 4 is A, and a duplication flag is C.
  * Gives the AlertGrade.
  */
 export function alertGrade(alert: AlertRecord): AlertGrade {
+  const assigned = alert.grade === null ? undefined : gradeByLetter(alert.grade);
+  if (assigned !== undefined) {
+    return assigned;
+  }
   if (alert.kind === "duplication") {
-    return GRADE_DUPLICATE;
+    return GRADES[2] as AlertGrade;
   }
   const tier = alert.tier ?? 4;
-  return tier === 1 ? GRADE_D : tier === 2 ? GRADE_C : tier === 3 ? GRADE_B : GRADE_A;
+  const letter = tier === 1 ? "E" : tier === 2 ? "D" : tier === 3 ? "C" : "A";
+  return gradeByLetter(letter) as AlertGrade;
+}
+
+/**
+ * Takes the alerts from a check response.
+ * Counts how many fall in each of the five grades.
+ * Gives the counts keyed by letter, zero for a grade with no alerts.
+ */
+export function gradeCounts(alerts: readonly AlertRecord[]): Readonly<Record<GradeLetter, number>> {
+  const counts: Record<GradeLetter, number> = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+  for (const alert of alerts) {
+    counts[alertGrade(alert).letter] += 1;
+  }
+  return counts;
 }
 
 export interface AlertExplanation {
@@ -111,7 +141,7 @@ export function alertExplanation(alert: AlertRecord): AlertExplanation | null {
 
 /**
  * Takes the alerts from a check response, in API order.
- * Orders them worst grade first (D, C, B, A), keeping API order within a grade.
+ * Orders them worst grade first (E, D, C, B, A), keeping API order within a grade.
  * Gives a new array; the input array is never mutated.
  */
 export function sortAlerts(alerts: readonly AlertRecord[]): readonly AlertRecord[] {

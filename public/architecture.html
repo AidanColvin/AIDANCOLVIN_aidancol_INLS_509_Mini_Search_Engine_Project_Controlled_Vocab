@@ -96,7 +96,7 @@
       <li class="flow__step"><span class="flow__n">3</span><strong>Map ingredients</strong><span>Roll every substance up to its base ingredient through RxNorm.</span></li>
       <li class="flow__step"><span class="flow__n">4</span><strong>Tag</strong><span>Run the 17 vocabulary rules on every label. Keep the sentence behind each tag.</span></li>
       <li class="flow__step"><span class="flow__n">5</span><strong>Index</strong><span>Build the BM25 index, the name dictionary, and the checker's per-label tables.</span></li>
-      <li class="flow__step"><span class="flow__n">6</span><strong>Test and deploy</strong><span>322 Python tests and 106 front-end tests must pass. Then the built files go to Vercel.</span></li>
+      <li class="flow__step"><span class="flow__n">6</span><strong>Test and deploy</strong><span>330 Python tests and 107 front-end tests must pass. Then the built files go to Vercel.</span></li>
     </ol>
   </section>
 
@@ -228,7 +228,7 @@ k₁ = 1.2    b = 0.75    N = 2,481    avgdl = 3,872</pre>
         <span>Two entries share a base ingredient, or one is the other's active metabolite in a small reference list. Their daily totals are summed.</span>
       </div>
     </div>
-    <p>An alert's tier is the label section its sentence came from: contraindications, boxed warning, warnings and precautions, or drug interactions. The section is a heuristic for seriousness, and every alert says so.</p>
+
     <ol class="flow" aria-label="A check request">
       <li class="flow__step"><span class="flow__n">1</span><strong>Parse</strong><span>Split entries; read name, strength, frequency.</span></li>
       <li class="flow__step"><span class="flow__n">2</span><strong>Resolve</strong><span>Dictionary, then RxNorm.</span></li>
@@ -238,19 +238,64 @@ k₁ = 1.2    b = 0.75    N = 2,481    avgdl = 3,872</pre>
   </section>
 
   <section class="doc__section">
+    <h2>Severity grading</h2>
+    <p>Every alert is graded A to E. The grade is read from the label, not assigned by hand. Each member sentence is graded on its own; the alert takes the most severe.</p>
+    <ol class="decide" aria-label="How one label sentence is graded">
+      <li class="decide__q"><span>Is it a pair alert, from the Contraindications section?</span><b class="decide__to decide__to--e">E</b></li>
+      <li class="decide__q"><span>From Contraindications or the Boxed Warning, or does it say "avoid" or "not recommended" about using the drugs together?</span><b class="decide__to decide__to--d">D</b></li>
+      <li class="decide__q"><span>From Warnings and Precautions, Warnings, or Precautions?</span><b class="decide__to decide__to--c">C</b></li>
+      <li class="decide__q"><span>From Drug Interactions, and says to monitor or adjust the dose?</span><b class="decide__to decide__to--b">B</b></li>
+      <li class="decide__q decide__q--last"><span>From Drug Interactions, no action stated.</span><b class="decide__to decide__to--a">A</b></li>
+    </ol>
+    <p class="doc__fine">Read top to bottom; the first "yes" sets the grade. A duplicate (two entries of one ingredient) is graded C.</p>
+    <figure class="gradescale" aria-label="The five severity grades, worst first">
+      <div class="gradescale__row gradescale__row--e"><span class="gradescale__letter">E</span><div><strong>Avoid combination</strong><span>The label says these drugs must not be used together.</span></div><span class="gradescale__cue">Contraindications section names the other drug or its class</span><span class="gradescale__lexi">Lexicomp X</span></div>
+      <div class="gradescale__row gradescale__row--d"><span class="gradescale__letter">D</span><div><strong>Consider changing therapy</strong><span>Serious risk. A prescriber should weigh changing a drug.</span></div><span class="gradescale__cue">Boxed Warning, or "avoid" / "not recommended" about using them together</span><span class="gradescale__lexi">Lexicomp D</span></div>
+      <div class="gradescale__row gradescale__row--c"><span class="gradescale__letter">C</span><div><strong>Monitor closely</strong><span>A clinically significant risk. Watch for it.</span></div><span class="gradescale__cue">Warnings and Precautions section</span><span class="gradescale__lexi">Lexicomp C</span></div>
+      <div class="gradescale__row gradescale__row--b"><span class="gradescale__letter">B</span><div><strong>Monitor</strong><span>The label describes it and gives an instruction.</span></div><span class="gradescale__cue">Drug Interactions section says "monitor" or to adjust the dose</span><span class="gradescale__lexi">Lexicomp C</span></div>
+      <div class="gradescale__row gradescale__row--a"><span class="gradescale__letter">A</span><div><strong>Minor</strong><span>Recorded. Worth knowing.</span></div><span class="gradescale__cue">Drug Interactions section, no action stated</span><span class="gradescale__lexi">Lexicomp B</span></div>
+      <figcaption>Worst first. The grade comes from the FDA label itself: which section states the risk, and what it tells a prescriber to do.</figcaption>
+    </figure>
+    <div class="why3">
+      <div class="why3__cell"><strong>Why the label section</strong><span>FDA's labeling rule defines each section by seriousness. Contraindications: the risk clearly outweighs any benefit. Boxed Warning: serious or life-threatening risk. (21 CFR 201.57)</span></div>
+      <div class="why3__cell"><strong>Why Lexicomp's levels</strong><span>Clinicians already read A/B/C/D/X. Each grade here carries Lexicomp's action: avoid, consider changing therapy, monitor, or no action.</span></div>
+      <div class="why3__cell"><strong>Why not copy a database</strong><span>Commercial databases disagree with each other on severity: Fleiss' κ = 0.16 across Drugs.com, Lexicomp, and Epocrates (Pinkoh et al., 2023). A grade you can trace to a sentence is easier to check.</span></div>
+    </div>
+  </section>
+
+  <section class="doc__section">
     <h2>Evaluation</h2>
     <p>The checker is measured the way retrieval systems are: a fixed collection, a fixed set of test inputs, and relevance judgments made in advance. The test set is a blind fixture of 41 patient medication lists, written the way a prescriber would write them, with an answer key of 196 expected interactions (drugs, category, severity) plus per-drug daily totals and pairs that should not be flagged. The harness sends every list to the live API, in four entry-order and separator variants, and scores each expected item against the alerts returned.</p>
     <table class="doc__table">
       <thead><tr><th scope="col">Result</th><th scope="col">Count</th><th scope="col">Meaning</th></tr></thead>
       <tbody>
-        <tr><td>Hit</td><td>31</td><td>An alert covers the expected drugs, under an equivalent category, at the expected severity or higher.</td></tr>
-        <tr><td>Partial</td><td>15</td><td>The drugs are covered, but the category or severity differs.</td></tr>
+        <tr><td>Hit</td><td>29</td><td>An alert covers the expected drugs, under an equivalent category, at the expected severity or higher.</td></tr>
+        <tr><td>Partial</td><td>17</td><td>The drugs are covered, but the category or severity differs.</td></tr>
         <tr><td>Miss, no rule</td><td>127</td><td>The expected category (CYP inhibition, bleeding, nephrotoxicity, and 26 others) has no rule in this checker.</td></tr>
         <tr><td>Miss, rule too narrow</td><td>23</td><td>The category is covered, but the specific pair or group is not reached.</td></tr>
         <tr><td>False positive</td><td>1</td><td>An alert at moderate or higher on a pair the key says not to flag.</td></tr>
       </tbody>
     </table>
-    <p>Strict recall against the key is 31 of 196, or 15.8%; counting partials, 23.5%. The gap is by design and is stated rather than hidden: the vocabulary covers four interaction-risk types plus duplication, and 127 of the 150 misses fall outside those types. Precision cannot be read from this fixture alone, because an alert the key does not mention is not thereby wrong; the one false positive is the only case the key rules out. Every list, every expected item, and what fired for it is in the <a href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab/blob/main/docs/interaction-validation.md" target="_blank" rel="noopener noreferrer">validation report</a>.</p>
+    <p>Strict recall against the key is 29 of 196, or 14.8%; counting partials, 23.5%. The gap is by design and is stated rather than hidden: the vocabulary covers four interaction-risk types plus duplication, and 127 of the 150 misses fall outside those types. Precision cannot be read from this fixture alone, because an alert the key does not mention is not thereby wrong; the one false positive is the only case the key rules out. Every list, every expected item, and what fired for it is in the <a href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab/blob/main/docs/interaction-validation.md" target="_blank" rel="noopener noreferrer">validation report</a>.</p>
+    <h3 class="doc__sub">Does the grade agree with the key?</h3>
+    <p>For the 46 items where an alert covered the right drugs, the tool's grade is compared with the key's severity. E maps to contraindicated, D to major, C and B to moderate, A to minor, following Pinkoh et al.'s correspondence for Lexicomp.</p>
+    <figure class="matrix" aria-label="Key severity against tool grade, 46 items">
+      <div class="matrix__grid">
+        <span class="matrix__corner">Key ↓ · Tool →</span><span class="matrix__h">Contra&shy;indicated</span><span class="matrix__h">Major</span><span class="matrix__h">Moderate</span><span class="matrix__h">Minor</span>
+        <span class="matrix__r">Contraindicated</span><span class="matrix__c matrix__c--diag" style="--n:2">2</span><span class="matrix__c" style="--n:1">1</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:0">0</span>
+        <span class="matrix__r">Major</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c matrix__c--diag" style="--n:15">15</span><span class="matrix__c" style="--n:11">11</span><span class="matrix__c" style="--n:0">0</span>
+        <span class="matrix__r">Moderate</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:3">3</span><span class="matrix__c matrix__c--diag" style="--n:13">13</span><span class="matrix__c" style="--n:0">0</span>
+        <span class="matrix__r">Minor</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:1">1</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c matrix__c--diag" style="--n:0">0</span>
+      </div>
+      <div class="matrix__stats">
+        <div><b>30 / 46</b><span>exact</span></div>
+        <div><b>45 / 46</b><span>within one level</span></div>
+        <div><b>κ = 0.39</b><span>Cohen's kappa, fair</span></div>
+        <div><b>κ = 0.16</b><span>commercial databases with each other (Pinkoh 2023)</span></div>
+      </div>
+      <figcaption>Shading shows the count. The diagonal is agreement.</figcaption>
+    </figure>
+    <p>The main gap is 11 items the key calls major that the tool grades moderate. In those, the label states the risk only in Warnings and Precautions, with no boxed warning and no "avoid". Two causes: serotonin and QT stacks, where the labels are softer than clinical references; and every duplicate is graded C, even for an opioid, where doubling the dose is major. The rule is not tuned to fit these 41 lists.</p>
     <p>Two more harnesses exist in the code. The tagger can be scored per term (precision, recall, F1) against a hand-labeled gold file; only a placeholder gold file is committed so far, and it is never used as ground truth. The search index can be scored with precision@k, recall@k, mean average precision, and nDCG against a queries-and-judgments file; no judgments have been recorded yet.</p>
   </section>
 

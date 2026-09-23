@@ -25,11 +25,12 @@
   <h1 class="doc__title">How it works</h1>
   <p class="doc__lede">You type a medication list. The tool finds each drug's FDA label, reads what the labels say about taking them together, and shows the exact sentence behind every alert.</p>
 
-  <ol class="flow" aria-label="The four steps">
-    <li class="flow__step"><span class="flow__n">1</span><strong>Type</strong><span>Brand or generic. A dose is optional. Misspellings are fine.</span></li>
+  <ol class="flow flow--five" aria-label="The five steps">
+    <li class="flow__step"><span class="flow__n">1</span><strong>Type</strong><span>Brand or generic. Misspellings are fine.</span></li>
     <li class="flow__step"><span class="flow__n">2</span><strong>Resolve</strong><span>Each entry is matched to one FDA label.</span></li>
     <li class="flow__step"><span class="flow__n">3</span><strong>Check</strong><span>The labels are read for shared risks and named combinations.</span></li>
-    <li class="flow__step"><span class="flow__n">4</span><strong>Show</strong><span>Every alert carries the label sentence and a link to the full label.</span></li>
+    <li class="flow__step"><span class="flow__n">4</span><strong>Grade</strong><span>Each interaction gets a severity, A to E.</span></li>
+    <li class="flow__step"><span class="flow__n">5</span><strong>Show</strong><span>Worst first, with the label's own words.</span></li>
   </ol>
 
   <section class="doc__section">
@@ -73,29 +74,35 @@
         <em>Zoloft and sertraline · venlafaxine and desvenlafaxine</em>
       </div>
     </div>
-    <p>Each alert gets a tier from the label section its evidence came from. The section is the label's own signal of how serious the warning is.</p>
-    <table class="doc__table">
-      <thead><tr><th scope="col">Tier</th><th scope="col">Label section the sentence came from</th></tr></thead>
-      <tbody>
-        <tr><td>Contraindicated</td><td>Contraindications</td></tr>
-        <tr><td>Boxed warning</td><td>Boxed warning</td></tr>
-        <tr><td>Warning</td><td>Warnings and precautions</td></tr>
-        <tr><td>Interaction note</td><td>Drug interactions</td></tr>
-      </tbody>
-    </table>
   </section>
 
   <section class="doc__section">
-    <h2>4. Show</h2>
+    <h2>4. Grade</h2>
+    <p>Every interaction gets a severity, from A (minor) to E (avoid).</p>
+    <figure class="gradescale" aria-label="The five severity grades, worst first">
+      <div class="gradescale__row gradescale__row--e"><span class="gradescale__letter">E</span><div><strong>Avoid combination</strong><span>The label says these drugs must not be used together.</span></div><span class="gradescale__cue">Contraindications section names the other drug or its class</span><span class="gradescale__lexi">Lexicomp X</span></div>
+      <div class="gradescale__row gradescale__row--d"><span class="gradescale__letter">D</span><div><strong>Consider changing therapy</strong><span>Serious risk. A prescriber should weigh changing a drug.</span></div><span class="gradescale__cue">Boxed Warning, or "avoid" / "not recommended" about using them together</span><span class="gradescale__lexi">Lexicomp D</span></div>
+      <div class="gradescale__row gradescale__row--c"><span class="gradescale__letter">C</span><div><strong>Monitor closely</strong><span>A clinically significant risk. Watch for it.</span></div><span class="gradescale__cue">Warnings and Precautions section</span><span class="gradescale__lexi">Lexicomp C</span></div>
+      <div class="gradescale__row gradescale__row--b"><span class="gradescale__letter">B</span><div><strong>Monitor</strong><span>The label describes it and gives an instruction.</span></div><span class="gradescale__cue">Drug Interactions section says "monitor" or to adjust the dose</span><span class="gradescale__lexi">Lexicomp C</span></div>
+      <div class="gradescale__row gradescale__row--a"><span class="gradescale__letter">A</span><div><strong>Minor</strong><span>Recorded. Worth knowing.</span></div><span class="gradescale__cue">Drug Interactions section, no action stated</span><span class="gradescale__lexi">Lexicomp B</span></div>
+      <figcaption>Worst first. The grade comes from the FDA label itself: which section states the risk, and what it tells a prescriber to do.</figcaption>
+    </figure>
+    <p>Each grade lines up with a level in Lexicomp, the reference hospitals license. When an interaction has several label sentences, the most severe one sets the grade. The card always says why.</p>
+  </section>
+
+  <section class="doc__section">
+    <h2>5. Show</h2>
     <p>An alert names the drugs, the tier, the sentence from the label, which drug's label it came from and which section, and a link to that label on DailyMed. Nothing is paraphrased.</p>
     <figure class="anatomy" aria-label="What an alert looks like">
       <div class="anatomy__card">
-        <p class="anatomy__drugs">Escitalopram, Amiodarone <span class="anatomy__note">← the drugs</span></p>
-        <p class="anatomy__tier">Warning · QT Prolongation Risk shared by 2 drugs <span class="anatomy__note">← the tier and the rule</span></p>
-        <blockquote class="anatomy__quote">Amiodarone hydrochloride can exacerbate the presenting arrhythmia … associated with QTc prolongation.</blockquote>
-        <p class="anatomy__source">From the Amiodarone label, Warnings and Precautions section. Open on DailyMed ↗ <span class="anatomy__note">← the source</span></p>
+        <p class="anatomy__grade"><span class="grade grade--solid">E</span> <strong>Avoid combination</strong> <span class="anatomy__note">← the grade</span></p>
+        <p class="anatomy__drugs">Azilect, Demerol <span class="anatomy__note">← the drugs</span></p>
+        <p class="anatomy__tier">Why E: the Contraindications section of the Azilect label names this combination. <span class="anatomy__note">← why</span></p>
+        <blockquote class="anatomy__quote">Rasagiline is contraindicated for use with meperidine, tramadol, methadone, propoxyphene and MAO inhibitors … because of risk of serotonin syndrome.</blockquote>
+        <p class="anatomy__source">From the Azilect label, Contraindications section. Open on DailyMed ↗ <span class="anatomy__note">← the source</span></p>
+        <p class="anatomy__tier">What this means: a contraindication is a situation in which a drug should not be used. Source: MedlinePlus. <span class="anatomy__note">← plain words</span></p>
       </div>
-      <figcaption>The label's own words, and exactly where they came from.</figcaption>
+      <figcaption>A real result. Above the cards, a strip shows how many interactions fall in each grade.</figcaption>
     </figure>
   </section>
 

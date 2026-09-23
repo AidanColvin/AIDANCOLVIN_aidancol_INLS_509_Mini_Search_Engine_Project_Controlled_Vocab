@@ -11,7 +11,9 @@ import {
   additionalEvidenceMembers,
   alertDisplayTierName,
   alertDrugNames,
+  alertGrade,
   alertIconKey,
+  gradeCounts,
   membersWithEvidence,
   primaryEvidenceMember,
   sortAlerts,
@@ -49,16 +51,18 @@ function alert(overrides: Partial<AlertRecord>): AlertRecord {
     tier_name: "Warning (heuristic)",
     members: [member({})],
     note: "",
+    grade: null,
+    grade_basis: null,
     ...overrides,
   };
 }
 
 /**
  * Takes no arguments.
- * Checks grade ordering (D, C, B, A) with a duplication flag graded B alongside tier 3, and stable order within a grade.
+ * Checks grade ordering (E, D, C, B, A) with an ungraded duplication flag falling back to C alongside tier 3, and stable order within a grade.
  * Gives nothing; asserts the sorted order.
  */
-test("sortAlerts orders by grade, duplication graded B, and keeps API order within a grade", () => {
+test("sortAlerts orders by grade, an ungraded duplication falls back to C, and API order holds within a grade", () => {
   const a = alert({ tier: 3, title: "warning-a" });
   const b = alert({ tier: 1, title: "contraindicated" });
   const c = alert({ tier: null, kind: "duplication", title: "dup" });
@@ -68,6 +72,19 @@ test("sortAlerts orders by grade, duplication graded B, and keeps API order with
     sorted.map((x) => x.title),
     ["contraindicated", "warning-a", "dup", "warning-b"],
   );
+});
+
+/**
+ * Takes no arguments.
+ * Checks that a server-assigned grade wins over the tier, and counts alerts per grade.
+ * Gives nothing; asserts the grade letters and the counts.
+ */
+test("alertGrade prefers the server grade and gradeCounts tallies every grade", () => {
+  const graded = alert({ tier: 3, grade: "E" });
+  const fallback = alert({ tier: 2 });
+  assert.equal(alertGrade(graded).letter, "E");
+  assert.equal(alertGrade(fallback).letter, "D");
+  assert.deepEqual(gradeCounts([graded, fallback, alert({ grade: "D" })]), { A: 0, B: 0, C: 0, D: 2, E: 1 });
 });
 
 /**

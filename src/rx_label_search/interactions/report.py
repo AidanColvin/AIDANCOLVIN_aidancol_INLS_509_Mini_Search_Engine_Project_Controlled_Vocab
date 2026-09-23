@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections.abc import Mapping, Sequence
 from typing import Any
 
+from rx_label_search.interactions.grades import grade_fields
 from rx_label_search.interactions.tiers import tier_name as lookup_tier_name
 from rx_label_search.records import Alert, MedEntry
 from rx_label_search.vocabulary.hierarchy import term_ids
@@ -118,10 +119,11 @@ def _evidence_tuples(rows: Sequence[Mapping[str, Any]]) -> list[Any]:
 def alert_to_dict(alert: Alert) -> dict[str, Any]:
     """
     Takes one Alert.
-    Converts it to a JSON-ready dictionary with its tier name looked up.
+    Converts it to a JSON-ready dictionary with its tier name looked up and its A-to-E grade attached.
     Gives the dictionary.
     """
     return {
+        **grade_fields(alert),
         "kind": alert.kind,
         "risk": alert.risk,
         "title": alert.title,

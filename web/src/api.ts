@@ -213,6 +213,8 @@ function toAlertRecord(value: unknown): AlertRecord {
     tier_name: asString(record["tier_name"], "alerts[].tier_name"),
     members: asArray(record["members"], "alerts[].members", toAlertMember),
     note: asString(record["note"], "alerts[].note"),
+    grade: record["grade"] === undefined ? null : asNullableString(record["grade"], "alerts[].grade"),
+    grade_basis: record["grade_basis"] === undefined ? null : asNullableString(record["grade_basis"], "alerts[].grade_basis"),
   };
 }
 

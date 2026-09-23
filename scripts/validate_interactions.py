@@ -54,6 +54,8 @@ RISK_LABELS: dict[str, str] = {
 }
 # Alert tier -> fixture severity. None is the tier of every duplication flag.
 SEVERITY_BY_TIER: dict[int | None, str] = {1: "contraindicated", 2: "major", 3: "major", 4: "moderate", None: "minor"}
+SEVERITY_BY_GRADE: dict[str, str] = {"E": "contraindicated", "D": "major", "C": "moderate", "B": "moderate", "A": "minor"}
+SEVERITY_ORDER: tuple[str, ...] = ("contraindicated", "major", "moderate", "minor")
 SEVERITY_RANK: dict[str, int] = {"contraindicated": 0, "major": 1, "moderate": 2, "minor": 3}
 MODERATE_RANK = SEVERITY_RANK["moderate"]
 
@@ -118,6 +120,7 @@ class ExpectedScore:
     alert_risk: str | None = None
     alert_tier: int | None = None
     alert_severity: str | None = None
+    alert_grade: str | None = None
     label_sentence: str | None = None
     source_drug: str | None = None
     source_section: str | None = None
@@ -344,9 +347,12 @@ def alert_covers(drugs: list[str], members: tuple[MemberNames, ...]) -> bool:
 def alert_severity(alert: dict[str, Any]) -> str:
     """
     Takes one alert.
-    Maps its tier to the fixture severity scale.
-    Gives the severity word, "minor" for a null tier.
+    Maps its A-to-E grade to the fixture severity scale, falling back to its tier when the response predates grades.
+    Gives the severity word, "minor" for an ungraded alert with a null tier.
     """
+    grade = alert.get("grade")
+    if isinstance(grade, str) and grade in SEVERITY_BY_GRADE:
+        return SEVERITY_BY_GRADE[grade]
     return SEVERITY_BY_TIER.get(alert.get("tier"), "minor")
 
 
@@ -434,6 +440,8 @@ def attach_alert(score: ExpectedScore, alert: dict[str, Any], members: tuple[Mem
     score.alert_risk = str(alert.get("risk", ""))
     score.alert_tier = alert.get("tier")
     score.alert_severity = alert_severity(alert)
+    grade = alert.get("grade")
+    score.alert_grade = grade if isinstance(grade, str) else None
     cited = evidence_member(members)
     if cited is None:
         return
@@ -707,6 +715,57 @@ def score_list(medication_list: dict[str, Any], answer: dict[str, Any], results:
     return record
 
 
+def graded_pairs(lists: list[dict[str, Any]]) -> list[tuple[str, str]]:
+    """
+    Takes every scored list record.
+    Collects (expected severity, tool severity) for each expected item an alert covered with a supported category.
+    Gives the list of pairs, empty when no item was covered.
+    """
+    return [
+        (item["severity"], item["alert_severity"])
+        for record in lists
+        for item in record["expected"]
+        if item["result"] in (RESULT_HIT, RESULT_PARTIAL) and item["severity"] in SEVERITY_RANK and item["alert_severity"] in SEVERITY_RANK
+    ]
+
+
+def cohen_kappa(pairs: list[tuple[str, str]], labels: tuple[str, ...]) -> float | None:
+    """
+    Takes (rater one, rater two) label pairs and the label set.
+    Computes Cohen's kappa: observed agreement corrected for the agreement expected by chance from each rater's marginals.
+    Gives kappa, or None when there are no pairs or chance agreement is total.
+    """
+    if not pairs:
+        return None
+    total = len(pairs)
+    observed = sum(first == second for first, second in pairs) / total
+    chance = sum((sum(first == label for first, _ in pairs) / total) * (sum(second == label for _, second in pairs) / total) for label in labels)
+    if chance >= 1.0:
+        return None
+    return (observed - chance) / (1.0 - chance)
+
+
+def severity_agreement(lists: list[dict[str, Any]]) -> dict[str, Any]:
+    """
+    Takes every scored list record.
+    Cross-tabulates the key's severity against the tool's graded severity for covered items, with exact agreement, agreement within one level, and Cohen's kappa.
+    Gives the agreement dictionary.
+    """
+    pairs = graded_pairs(lists)
+    matrix = {expected: {tool: sum(pair == (expected, tool) for pair in pairs) for tool in SEVERITY_ORDER} for expected in SEVERITY_ORDER}
+    within_one = sum(abs(SEVERITY_RANK[first] - SEVERITY_RANK[second]) <= 1 for first, second in pairs)
+    kappa = cohen_kappa(pairs, SEVERITY_ORDER)
+    return {
+        "items": len(pairs),
+        "exact": sum(first == second for first, second in pairs),
+        "within_one_level": within_one,
+        "tool_more_severe": sum(SEVERITY_RANK[second] < SEVERITY_RANK[first] for first, second in pairs),
+        "tool_less_severe": sum(SEVERITY_RANK[second] > SEVERITY_RANK[first] for first, second in pairs),
+        "cohen_kappa": None if kappa is None else round(kappa, 3),
+        "matrix": matrix,
+    }
+
+
 def build_summary(lists: list[dict[str, Any]]) -> dict[str, Any]:
     """
     Takes every scored list record.
@@ -727,6 +786,7 @@ def build_summary(lists: list[dict[str, Any]]) -> dict[str, Any]:
         "lists_with_variant_differences": sum(not record["consistency"]["identical_across_variants"] for record in lists),
         "request_errors": sum(result["error"] is not None for record in lists for result in record["requests"].values()),
         "lists_with_unresolved_entries": sum(bool(record["unresolved"]) for record in lists),
+        "severity_agreement": severity_agreement(lists),
     }
 
 
@@ -836,7 +896,34 @@ def summary_lines(summary: dict[str, Any]) -> list[str]:
         f"- Lists with variant differences: {summary['lists_with_variant_differences']}",
         f"- Lists with unresolved entries: {summary['lists_with_unresolved_entries']}",
         f"- Request errors: {summary['request_errors']}",
+        *agreement_lines(summary.get("severity_agreement")),
     ]
+
+
+def agreement_lines(agreement: dict[str, Any] | None) -> list[str]:
+    """
+    Takes the severity-agreement dictionary, or None for an older summary.
+    Writes the agreement counts and the key-by-tool severity matrix as markdown.
+    Gives the lines, empty when there is no agreement data.
+    """
+    if not agreement:
+        return []
+    items = agreement["items"]
+    lines = [
+        "",
+        "### Severity agreement (covered items)",
+        "",
+        f"- Items where an alert covered the expected drugs in a supported category: {items}",
+        f"- Exact severity agreement: {agreement['exact']} of {items}",
+        f"- Within one level: {agreement['within_one_level']} of {items}",
+        f"- Tool more severe than the key: {agreement['tool_more_severe']}; less severe: {agreement['tool_less_severe']}",
+        f"- Cohen's kappa: {agreement['cohen_kappa']}",
+        "",
+        "| Key severity \\ Tool severity | " + " | ".join(SEVERITY_ORDER) + " |",
+        "| --- | " + " | ".join("---" for _ in SEVERITY_ORDER) + " |",
+    ]
+    lines.extend(f"| {expected} | " + " | ".join(str(agreement["matrix"][expected][tool]) for tool in SEVERITY_ORDER) + " |" for expected in SEVERITY_ORDER)
+    return lines
 
 
 def rules_lines() -> list[str]:
@@ -849,8 +936,10 @@ def rules_lines() -> list[str]:
     lines.extend(f"| {category} | {', '.join(RISK_LABELS[risk] for risk in risks)} |" for category, risks in CATEGORY_MAP.items())
     lines.append(f"| any category at severity contraindicated | also {RISK_LABELS[CONTRAINDICATED_RISK]} |")
     lines.append("| every other fixture category | unsupported by this checker's rule set; scored as a miss with cause \"category outside the checker's rules\" |")
-    lines.extend(["", "### Severity map (alert tier to fixture severity)", "", "| Tier | Severity |", "| --- | --- |"])
-    lines.extend(f"| {tier if tier is not None else 'null (duplication flags)'} | {severity} |" for tier, severity in SEVERITY_BY_TIER.items())
+    lines.extend(["", "### Severity map (alert grade to fixture severity)", "", "| Grade | Severity |", "| --- | --- |"])
+    lines.extend(f"| {grade} | {severity} |" for grade, severity in SEVERITY_BY_GRADE.items())
+    lines.append("")
+    lines.append("Grades follow the correspondence Pinkoh et al. (2023) give between Lexicomp and a four-level scale: X contraindicated, D major, C moderate, B minor. This tool's E, D, C and B, and A line up with Lexicomp X, D, C, and B. A response without grades falls back to the tier map: 1 contraindicated, 2 and 3 major, 4 moderate, none minor.")
     lines.extend([
         "",
         "### Scoring rules",
@@ -933,7 +1022,7 @@ def build_report(key: dict[str, Any], key_path: Path, base_url: str, label: str,
         "key_fixture": str(key.get("fixture", "")),
         "category_map": {category: list(risks) for category, risks in CATEGORY_MAP.items()},
         "contraindicated_also_matches": CONTRAINDICATED_RISK,
-        "severity_map": {str(tier): severity for tier, severity in SEVERITY_BY_TIER.items()},
+        "severity_map": dict(SEVERITY_BY_GRADE),
         "summary": build_summary(lists),
         "lists": lists,
     }

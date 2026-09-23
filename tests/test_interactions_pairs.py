@@ -11,6 +11,7 @@ from rx_label_search.interactions.pairs import (
     drug_own_names,
     name_appears,
     sentence_mentions_drug,
+    shares_base_ingredient,
     t17_evidence,
 )
 
@@ -169,3 +170,18 @@ def test_build_pair_alerts_checks_every_direction() -> None:
     alerts = build_pair_alerts([source, match, unrelated])
     assert len(alerts) == 1
     assert build_pair_alerts([]) == ()
+
+
+def test_build_pair_alert_skips_a_drug_sharing_the_source_ingredient() -> None:
+    """
+    Takes no arguments.
+    Builds a combination product whose contraindication names its own ingredient, against a single-ingredient drug of that ingredient.
+    Gives nothing, or fails if a pair alert is raised for what is the same drug listed twice.
+    """
+    symbyax = drug("Symbyax", {
+        "base_ingredients": ["olanzapine", "fluoxetine"],
+        "evidence": [{"term_id": "T17", "field_name": "contraindications", "sentence": "Do not use thioridazine within 5 weeks of discontinuing fluoxetine.", "rule_version": "v"}],
+    })
+    prozac = drug("Prozac", {"base_ingredients": ["fluoxetine"], "generic_names": ["FLUOXETINE"]})
+    assert shares_base_ingredient(symbyax, prozac)
+    assert build_pair_alert(symbyax, prozac) is None
