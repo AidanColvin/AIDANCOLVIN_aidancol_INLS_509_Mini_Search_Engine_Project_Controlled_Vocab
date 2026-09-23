@@ -151,12 +151,12 @@ function candidateIngredients(candidate: string): readonly string[] {
 /**
  * Takes every candidate string for one unresolved entry.
  * Picks a visible label and the text to re-check for each: the name when the names already differ, otherwise the ingredient set, which is what actually tells same-named products apart.
- * Gives one CandidateChoice per candidate, in order.
+ * Gives the distinct CandidateChoices in order, so two candidates differing only in case collapse to one.
  */
 export function candidateChoices(candidates: readonly string[]): readonly CandidateChoice[] {
   const names = candidates.map(candidateLabel);
   const namesAreDistinct = new Set(names).size === names.length;
-  return candidates.map((candidate, index) => {
+  const choices = candidates.map((candidate, index) => {
     const name = names[index] ?? candidateLabel(candidate);
     const ingredients = candidateIngredients(candidate);
     if (namesAreDistinct || ingredients.length === 0) {
@@ -164,6 +164,41 @@ export function candidateChoices(candidates: readonly string[]): readonly Candid
     }
     return { label: ingredients.join(" + "), entryText: ingredients.join(" / ") };
   });
+  return choices.filter((choice, index) => choices.findIndex((other) => other.entryText === choice.entryText) === index);
+}
+
+/**
+ * Takes the current check response, or null before the first one.
+ * Collects the lowercase brand, generic, and base-ingredient names of every medication that resolved, without duplicates.
+ * Gives the tuple of names, empty when there is no response yet.
+ */
+export function resolvedNames(response: CheckResponse | null): readonly string[] {
+  if (response === null) {
+    return [];
+  }
+  const names = new Set<string>();
+  for (const row of response.medication_table) {
+    if (row.matched_name === null) {
+      continue;
+    }
+    for (const value of [...row.brand, ...row.generic, ...row.base_ingredients]) {
+      const cleaned = value.trim().toLowerCase();
+      if (cleaned.length > 0) {
+        names.add(cleaned);
+      }
+    }
+  }
+  return [...names];
+}
+
+/**
+ * Takes the line as the user typed it and the choices built for its candidates.
+ * Drops any choice that would re-send the same text, since picking it could only ask the same question again.
+ * Gives the choices that would actually change the entry, possibly none.
+ */
+export function usefulChoices(line: string, choices: readonly CandidateChoice[]): readonly CandidateChoice[] {
+  const typed = line.trim().toLowerCase();
+  return choices.filter((choice) => choice.entryText.trim().toLowerCase() !== typed);
 }
 
 /**

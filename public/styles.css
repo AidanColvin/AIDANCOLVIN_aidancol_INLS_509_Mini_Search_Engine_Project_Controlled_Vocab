@@ -620,135 +620,95 @@ button:disabled {
   flex-shrink: 0;
 }
 
-/* "Have a question?" section: quiet until it is used. */
+/* Label lookup: shown under a word that is not a medication name. */
 
-.search-view {
-  margin-top: var(--space-12);
-  padding-top: var(--space-8);
-  border-top: 1px solid var(--hairline);
-  scroll-margin-top: var(--space-3);
-}
-
-.section-title {
-  margin: 0;
-  text-align: center;
-  font-size: var(--size-display);
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.section-lede {
-  margin: var(--space-1) auto 0;
-  max-width: 44ch;
-  text-align: center;
-  color: var(--text-2);
-}
-
-.search-field {
-  margin-top: var(--space-3);
-}
-
-.suggestions {
-  margin-top: var(--space-2);
+.med-row__tags {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-1);
+  gap: 4px 6px;
+  margin-top: 4px;
 }
 
-.suggestions__label {
+.med-hint {
+  margin: var(--space-1) 0 0;
+  padding: 0 var(--space-3);
+  text-align: center;
   font-size: var(--size-caption);
   color: var(--text-2);
 }
 
-.filters-row {
-  margin-top: var(--space-3);
+.lookup {
+  padding: 0 0 var(--space-2);
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   gap: var(--space-1);
   animation: fade-in var(--motion) ease-out;
 }
 
-.btn--selected {
-  background: var(--text);
-  border-color: var(--text);
-  color: var(--bg);
-}
-.btn--selected:hover {
-  background: var(--text);
-}
-
-.operator-toggle {
-  display: inline-flex;
-  gap: var(--space-1);
-  align-items: center;
-}
-
-.search-results {
-  max-width: 640px;
-  margin: var(--space-4) auto 0;
-}
-
-.search-results__heading {
+.lookup__caption,
+.lookup__heading {
   margin: 0;
   font-size: var(--size-caption);
+  color: var(--text-2);
+}
+
+.lookup__heading {
   font-weight: 600;
-  color: var(--text-2);
+  color: var(--text);
 }
 
-.search-results__empty {
+.lookup__list {
   margin: 0;
-  text-align: center;
-  color: var(--text-2);
-}
-
-.search-results__list {
-  margin: var(--space-1) 0 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--hairline);
 }
 
-.hit-row {
-  padding: var(--space-3) 0;
+.lookup__hit {
+  padding: var(--space-2) 0 var(--space-2) var(--space-2);
+  border-left: 2px solid var(--hairline);
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
-  border-bottom: 1px solid var(--hairline);
+  gap: 4px;
+}
+.lookup__hit + .lookup__hit {
+  margin-top: var(--space-1);
+}
+.lookup__hit--on-list {
+  border-left-color: var(--text);
 }
 
-.hit-row__head {
+.lookup__head {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  justify-content: space-between;
-  gap: 0 var(--space-2);
+  gap: 4px var(--space-1);
 }
 
-.hit-row__title-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  column-gap: var(--space-1);
-  min-width: 0;
+.lookup__name {
+  font-weight: 600;
 }
 
-.hit-row__title {
+.lookup__generic {
+  font-size: var(--size-caption);
+  color: var(--text-2);
+}
+
+.pill--on-list {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.lookup__snippet {
   margin: 0;
-  font-size: var(--size-body);
+  max-width: 72ch;
+  overflow-wrap: anywhere;
+}
+.lookup__snippet strong {
   font-weight: 700;
 }
 
-.hit-row__secondary {
-  font-size: var(--size-caption);
-  color: var(--text-2);
-}
-
-.hit-row__dailymed {
+.lookup__dailymed {
+  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -757,27 +717,8 @@ button:disabled {
   white-space: nowrap;
 }
 
-.hit-row__snippet {
-  margin: 0;
-  max-width: 72ch;
-  overflow-wrap: anywhere;
-}
-.hit-row__snippet strong {
-  font-weight: 700;
-}
-
-.hit-row__tags {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
-}
-
-.search-results__cap-note {
-  margin: var(--space-2) 0 0;
-  text-align: center;
-  font-size: var(--size-caption);
-  color: var(--text-2);
+.lookup__more {
+  align-self: flex-start;
 }
 
 /* Footer */
@@ -855,9 +796,8 @@ button:disabled {
   .med-row__detail-label {
     min-width: 0;
   }
-  .search-view {
-    margin-top: var(--space-8);
-    padding-top: var(--space-6);
+  .med-hint {
+    padding: 0 20px;
   }
   .error-card {
     flex-direction: column;

@@ -20,14 +20,14 @@ This repo also holds **Drug Interaction Screen**, live at https://rx-label-searc
 
 **What it does:**
 
-* **Search.** Keyword search over every label's main text and openfda names, ranked with BM25, refined with PDLA term filters (AND or OR).
+* **Search.** Keyword search over every label's main text and openfda names, ranked with BM25, refined with PDLA term filters (AND or OR). On the site this runs behind the one box: a word that is not a medication name is looked up in the labels.
 * **Tag.** Assigns all 17 PDLA terms to every label, with the field and sentence behind each tag, and categorizes each drug by active ingredient, FDA pharmacologic class, route, and DEA schedule.
 * **Check.** Takes a free-text medication list of any length, resolves brand names, generic names, and typos, and flags drug-drug interaction risks the FDA labels state, with the label sentence and a DailyMed link behind every flag.
 * **Rate.** Gives every flag a heuristic tier based on which label section its evidence came from: Contraindicated, Boxed warning, Warning, or Interaction note.
 
 **Notice shown on every result:** "Results reflect FDA label text as of {build date}. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database." The only negative wording it ever uses is "No warning found in the labels checked."
 
-**How to use it:** it's one page. The cursor starts in the medication field; type a drug and press Return, or paste a whole list separated by commas, semicolons, or new lines. Each entry becomes a row: a name the checker matched, the dose it read, and a chevron for its detail. An entry the checker can't place shows what happened and what to do ("More than one label matches. Choose one:" or "Not found in the FDA labels. Did you mean:"). Results appear under the list as soon as they're ready: alert cards with the drug names, a tier, the label sentence, and a DailyMed link; or "No warning found in the labels checked." Further down, "Have a question?" is free-text search over the FDA label text, filterable by the PDLA vocabulary above.
+**How to use it:** it's one page and one box. The cursor starts in it; type a medication and press Return, or paste a whole list separated by commas, semicolons, or new lines. Each entry becomes a row: the name the checker matched, the dose it read, and the label's own safety terms (Boxed Warning, QT Prolongation Risk, Renal Dose Adjustment, and so on). An entry the checker can't place says what happened and what to do ("More than one label matches. Choose one:" or "Not found in the FDA labels. Did you mean:"). Anything that isn't a medication name at all, like "grapefruit" or "drowsiness", is looked up in the label text instead, with the labels of the drugs already on the list shown first. Results appear under the list as soon as they're ready: alert cards with the drug names, a tier, the label sentence, and a DailyMed link; or "No warning found in the labels checked."
 
 ### Setup
 
@@ -98,7 +98,7 @@ needed the compiler's scanner rather than the classic parser API.
 
 ### Serving it as a website
 
-`api/search.py` and `api/check.py` are stateless Vercel Python functions (no framework, file-based routing) that call the same package the CLI does. `public/index.html`, `public/styles.css`, and the compiled `public/js/` (built from `web/src/`, gitignored) are the front end: one page, cursor already in an auto-focused medication field with inline spelling correction and candidate choice, alert cards sorted by heuristic tier under the medication list, and a "Have a question?" section further down the same page with grouped vocabulary filters. Deploys happen only through `.github/workflows/rebuild.yml`, never by hand; see `reports/phase7_serve.md` for the original Vercel project setup and `reports/redesign_phase4_toolchain.md` for the CI step that builds the front end before each deploy.
+`api/search.py` and `api/check.py` are stateless Vercel Python functions (no framework, file-based routing) that call the same package the CLI does. `public/index.html`, `public/styles.css`, and the compiled `public/js/` (built from `web/src/`, gitignored) are the front end: one page and one field, already focused, with inline spelling correction and candidate choice, the label's safety terms on every resolved row, a label-text lookup under any entry that is not a medication name, and alert cards sorted by heuristic tier under the list. There is no separate search page; the label search index serves those lookups. Deploys happen only through `.github/workflows/rebuild.yml`, never by hand; see `reports/phase7_serve.md` for the original Vercel project setup and `reports/redesign_phase4_toolchain.md` for the CI step that builds the front end before each deploy.
 
 ### Validating the interaction checker against a key
 

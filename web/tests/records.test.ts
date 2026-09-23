@@ -21,8 +21,7 @@ test("createInitialState starts with an empty medication list and no results", (
   assert.equal(state.checkLoading, false);
   assert.equal(state.checkError, null);
   assert.deepEqual(state.expandedRows, []);
-  assert.equal(state.searchQuery, "");
-  assert.equal(state.searchOperator, "AND");
+  assert.deepEqual(state.lookups, []);
   assert.equal(state.buildDate, null);
 });
 
@@ -33,10 +32,10 @@ test("createInitialState starts with an empty medication list and no results", (
  */
 test("withState replaces only the given fields and never mutates the input", () => {
   const original = createInitialState();
-  const next = withState(original, { searchQuery: "muscle spasm", searchOperator: "OR" });
-  assert.equal(next.searchQuery, "muscle spasm");
-  assert.equal(next.searchOperator, "OR");
-  assert.deepEqual(next.medicationLines, []);
-  assert.equal(original.searchQuery, "");
-  assert.equal(original.searchOperator, "AND");
+  const next = withState(original, { medicationLines: ["warfarin"], checkLoading: true });
+  assert.deepEqual(next.medicationLines, ["warfarin"]);
+  assert.equal(next.checkLoading, true);
+  assert.deepEqual(next.lookups, []);
+  assert.deepEqual(original.medicationLines, []);
+  assert.equal(original.checkLoading, false);
 });

@@ -1,29 +1,29 @@
 /**
  * Takes no arguments.
- * Builds the app's state, mounts the header and both sections on one page, and wires every event to a state change and a re-render.
+ * Builds the app's state, mounts the one-page app, and wires every event to a state change and a re-render.
  * Gives nothing; this module runs once when the page loads.
  */
 
 import { ApiHttpError, ApiShapeError, fetchCheck, fetchSearch, fetchTermsOnly, maxMedicationTextChars } from "./api.js";
 import { formatBuildDate } from "./format.js";
-import { isWithinLengthLimit, joinMedicationLines, replaceNameKeepingDose, splitEnteredText } from "./meds.js";
+import { isWithinLengthLimit, joinMedicationLines, replaceNameKeepingDose, resolvedNames, splitEnteredText } from "./meds.js";
 import { renderHeader } from "./render_header.js";
 import {
   mountInteractionsView,
   updateInteractionsView,
   type InteractionsCallbacks,
 } from "./render_interactions.js";
-import { mountSearchView, updateSearchView, type SearchCallbacks } from "./render_search.js";
-import { createInitialState, withState, type AppState, type CheckErrorState } from "./records.js";
+import { createInitialState, withState, type AppState, type CheckErrorState, type CheckResponse, type LabelLookup, type SearchHit, type SearchResponse } from "./records.js";
 
 const CHECK_DEBOUNCE_MS = 300;
-const SEARCH_LIMIT = 20;
+const LOOKUP_LIMIT = 12;
+const LOOKUP_LIST_NAMES_MAX = 8;
 const USE_RXNORM = true;
 
 let state: AppState = createInitialState();
 let checkAbortController: AbortController | null = null;
 let checkDebounceHandle: ReturnType<typeof setTimeout> | undefined;
-let searchAbortController: AbortController | null = null;
+const lookupAbortControllers = new Map<string, AbortController>();
 
 /**
  * Takes an unknown thrown value.
@@ -113,6 +113,7 @@ async function runCheck(joined: string, render: () => void): Promise<void> {
     }
     state = withState(state, { checkResponse: response, checkLoading: false, checkError: null, buildDate: response.build_date });
     render();
+    startLookups(linesNeedingLookup(response), render);
   } catch (err: unknown) {
     if (isAbortError(err)) {
       return;
@@ -123,52 +124,96 @@ async function runCheck(joined: string, render: () => void): Promise<void> {
 }
 
 /**
- * Takes the render callback.
- * Cancels any in-flight search request.
- * Gives nothing.
+ * Takes a check response.
+ * Finds every entry the checker could not place as one medication, whether it offered candidates or not.
+ * Gives their lines, the words worth looking up in the label text as well.
  */
-function cancelPendingSearch(): void {
-  searchAbortController?.abort();
-  searchAbortController = null;
+function linesNeedingLookup(response: CheckResponse): readonly string[] {
+  return response.unresolved_entries.map((entry) => entry.raw_text);
 }
 
 /**
- * Takes the render callback.
- * Runs GET /api/search for the current query, filters, and operator, or clears the results when there is nothing to search for.
+ * Takes a line and its new lookup record.
+ * Replaces that line's lookup in state, or adds it when the line has none yet.
+ * Gives nothing; state.lookups is updated.
+ */
+function setLookup(line: string, lookup: LabelLookup): void {
+  const others = state.lookups.filter((candidate) => candidate.line !== line);
+  state = withState(state, { lookups: [...others, lookup] });
+}
+
+/**
+ * Takes the lines that still need a label lookup and the render callback.
+ * Starts one GET /api/search per line that has no lookup yet, drops lookups for lines no longer on the list, and cancels their requests.
+ * Gives nothing; each lookup's state is updated as its request settles.
+ */
+function startLookups(lines: readonly string[], render: () => void): void {
+  for (const [line, controller] of lookupAbortControllers) {
+    if (!lines.includes(line)) {
+      controller.abort();
+      lookupAbortControllers.delete(line);
+    }
+  }
+  state = withState(state, { lookups: state.lookups.filter((lookup) => lines.includes(lookup.line)) });
+  for (const line of lines) {
+    if (state.lookups.some((lookup) => lookup.line === line)) {
+      continue;
+    }
+    void runLookup(line, render);
+  }
+  render();
+}
+
+/**
+ * Takes a search hit and the lowercase names of the medications on the list.
+ * Checks whether the hit's brand or generic name is one of those medications.
+ * Gives true when the label belongs to a drug on the list.
+ */
+function hitIsOnList(hit: SearchHit, namesOnList: readonly string[]): boolean {
+  const own = [hit.brand_name, hit.generic_name].map((value) => value.trim().toLowerCase());
+  return own.some((candidate) => candidate.length > 0 && namesOnList.some((listed) => listed === candidate || candidate.startsWith(`${listed} `) || listed.startsWith(`${candidate} `)));
+}
+
+/**
+ * Takes the general search response for a word, the response for that word plus the list's drug names, and the list's names.
+ * Puts the list's own labels that mention the word first, then the general hits, without repeating a label.
+ * Gives one merged SearchResponse.
+ */
+function mergeLookupResponses(general: SearchResponse, targeted: SearchResponse | null, namesOnList: readonly string[]): SearchResponse {
+  const own = targeted === null ? [] : targeted.hits.filter((hit) => hitIsOnList(hit, namesOnList));
+  const seen = new Set(own.map((hit) => hit.set_id));
+  const rest = general.hits.filter((hit) => !seen.has(hit.set_id));
+  return { ...general, hits: [...own, ...rest] };
+}
+
+/**
+ * Takes one line to look up and the render callback.
+ * Runs GET /api/search for that line's text and, when medications are on the list, a second search for the text with their names so their own labels come first, recording the loading, result, and error states as it settles.
  * Gives nothing.
  */
-function runSearch(render: () => void): void {
-  cancelPendingSearch();
-  const trimmedQuery = state.searchQuery.trim();
-  if (trimmedQuery.length === 0 && state.searchFilters.length === 0) {
-    state = withState(state, { searchResponse: null, searchLoading: false, searchError: null });
-    render();
-    return;
-  }
+async function runLookup(line: string, render: () => void): Promise<void> {
   const controller = new AbortController();
-  searchAbortController = controller;
-  state = withState(state, { searchLoading: true, searchError: null });
+  lookupAbortControllers.set(line, controller);
+  setLookup(line, { line, response: null, loading: true, error: null });
   render();
-  void fetchSearch({ q: trimmedQuery, terms: state.searchFilters, operator: state.searchOperator, limit: SEARCH_LIMIT }, controller.signal)
-    .then((response) => {
-      if (controller.signal.aborted) {
-        return;
-      }
-      state = withState(state, {
-        searchResponse: response,
-        searchLoading: false,
-        searchError: null,
-        buildDate: state.buildDate ?? response.build_date,
-      });
-      render();
-    })
-    .catch((err: unknown) => {
-      if (isAbortError(err)) {
-        return;
-      }
-      state = withState(state, { searchLoading: false, searchError: describeRequestError(err) });
-      render();
-    });
+  const namesOnList = resolvedNames(state.checkResponse).slice(0, LOOKUP_LIST_NAMES_MAX);
+  try {
+    const general = await fetchSearch({ q: line, terms: [], operator: "AND", limit: LOOKUP_LIMIT }, controller.signal);
+    const targeted = namesOnList.length === 0
+      ? null
+      : await fetchSearch({ q: `${line} ${namesOnList.join(" ")}`, terms: [], operator: "AND", limit: LOOKUP_LIMIT }, controller.signal);
+    if (controller.signal.aborted) {
+      return;
+    }
+    setLookup(line, { line, response: mergeLookupResponses(general, targeted, namesOnList), loading: false, error: null });
+    render();
+  } catch (err: unknown) {
+    if (isAbortError(err)) {
+      return;
+    }
+    setLookup(line, { line, response: null, loading: false, error: describeRequestError(err) });
+    render();
+  }
 }
 
 interface FooterRefs {
@@ -235,7 +280,7 @@ function keepMedicationFieldReady(input: HTMLInputElement): void {
 
 /**
  * Takes no arguments.
- * Builds the app, mounts both sections on one page, and wires every DOM event to a state update and a re-render.
+ * Builds the app, mounts it, and wires every DOM event to a state update and a re-render.
  * Gives nothing.
  */
 function main(): void {
@@ -249,7 +294,6 @@ function main(): void {
 
   const render = (): void => {
     updateInteractionsView(interactionsRefs, state, interactionsCallbacks);
-    updateSearchView(searchRefs, state, searchCallbacks);
     footer.root.hidden = state.buildDate === null;
     footer.dateLabel.textContent = state.buildDate === null ? "" : `FDA label data as of ${formatBuildDate(state.buildDate)}`;
   };
@@ -281,6 +325,7 @@ function main(): void {
     },
     onClearAll: () => {
       cancelPendingCheck();
+      startLookups([], render);
       state = withState(state, {
         medicationLines: [],
         checkResponse: null,
@@ -337,46 +382,12 @@ function main(): void {
     },
   };
 
-  const searchCallbacks: SearchCallbacks = {
-    onQueryChange: (query) => {
-      state = withState(state, { searchQuery: query });
-      runSearch(render);
-    },
-    onClearQuery: () => {
-      state = withState(state, { searchQuery: "" });
-      runSearch(render);
-      searchRefs.queryInput.focus();
-    },
-    onToggleFilter: (termId) => {
-      const active = state.searchFilters.includes(termId);
-      state = withState(state, {
-        searchFilters: active ? state.searchFilters.filter((id) => id !== termId) : [...state.searchFilters, termId],
-      });
-      runSearch(render);
-    },
-    onClearFilters: () => {
-      state = withState(state, { searchFilters: [] });
-      runSearch(render);
-    },
-    onSetOperator: (operator) => {
-      state = withState(state, { searchOperator: operator });
-      runSearch(render);
-    },
-    onRetry: () => {
-      runSearch(render);
-    },
-  };
-
   const interactionsRefs = mountInteractionsView(interactionsCallbacks);
-  const searchRefs = mountSearchView(searchCallbacks);
-  page.append(interactionsRefs.root, searchRefs.root);
+  page.append(interactionsRefs.root);
   appRoot.append(renderHeader(), page, footer.root);
 
   render();
   keepMedicationFieldReady(interactionsRefs.medicationInput);
-  if (location.hash === "#search") {
-    searchRefs.root.scrollIntoView();
-  }
 
   void fetchTermsOnly().then((response) => {
     state = withState(state, {

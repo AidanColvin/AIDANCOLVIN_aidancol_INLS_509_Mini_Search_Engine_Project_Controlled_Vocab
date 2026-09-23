@@ -10,6 +10,7 @@ import test from "node:test";
 import {
   candidateChoices,
   candidateLabel,
+  usefulChoices,
   countResolvedRows,
   findRowForLine,
   isSpellingCorrected,
@@ -169,6 +170,21 @@ test("candidateChoices tells same-named candidates apart by ingredient set", () 
     { label: "x", entryText: "x" },
     { label: "b", entryText: "b" },
   ]);
+  assert.deepEqual(candidateChoices(["GRAPEFRUIT", "Grapefruit"]), [{ label: "grapefruit", entryText: "grapefruit" }]);
+});
+
+/**
+ * Takes no arguments.
+ * Checks a choice that would re-send the typed text is dropped and the others are kept.
+ * Gives nothing; asserts the filtered choices.
+ */
+test("usefulChoices drops a choice that equals the line as typed", () => {
+  const choices = [
+    { label: "grapefruit", entryText: "grapefruit" },
+    { label: "bayer aspirin pill", entryText: "bayer aspirin pill" },
+  ];
+  assert.deepEqual(usefulChoices("Grapefruit ", choices), [choices[1]]);
+  assert.deepEqual(usefulChoices("warfarin", choices), choices);
 });
 
 /**

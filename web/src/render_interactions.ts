@@ -13,9 +13,10 @@ import {
   sortAlerts,
 } from "./alerts.js";
 import { formatDailyTotal, pluralizeCount, sectionDisplayName } from "./format.js";
-import { candidateChoices, countResolvedRows, isSpellingCorrected, rowHeadlineName, statusForLine } from "./meds.js";
+import { candidateChoices, countResolvedRows, isSpellingCorrected, resolvedNames, rowHeadlineName, statusForLine, usefulChoices } from "./meds.js";
 import { alertIcon, chevronDownIcon, chevronIcon, externalLinkIcon, plusIcon, removeIcon } from "./render_icons.js";
-import type { AlertMember, AlertRecord, AppState, MedicationRow, UnresolvedEntry } from "./records.js";
+import { buildLookupBlock } from "./render_lookup.js";
+import type { AlertMember, AlertRecord, AppState, LabelLookup, MedicationRow, PdlaTag, UnresolvedEntry } from "./records.js";
 
 export interface InteractionsCallbacks {
   readonly onAddMedication: (text: string) => void;
@@ -62,7 +63,7 @@ export function mountInteractionsView(callbacks: InteractionsCallbacks): Interac
 
   const lede = document.createElement("p");
   lede.className = "hello-lede";
-  lede.textContent = "Type or paste the medications, and I'll check their FDA labels for interactions.";
+  lede.textContent = "Type the medications, brand or generic, and I'll check their FDA labels for interactions.";
 
   const form = document.createElement("form");
   form.className = "med-form narrow";
@@ -94,7 +95,11 @@ export function mountInteractionsView(callbacks: InteractionsCallbacks): Interac
   checkStatus.className = "med-status";
   checkStatus.setAttribute("role", "status");
 
-  form.append(fieldWrap, checkStatus);
+  const hint = document.createElement("p");
+  hint.className = "med-hint";
+  hint.textContent = "Misspellings are fine. A word like grapefruit gets looked up in the labels instead.";
+
+  form.append(fieldWrap, checkStatus, hint);
 
   const listHeader = document.createElement("div");
   listHeader.className = "list-header narrow";
@@ -199,7 +204,8 @@ function buildMedicationRows(state: AppState, callbacks: InteractionsCallbacks):
       return buildResolvedRow(line, status.row, state.expandedRows.includes(line), callbacks);
     }
     if ("unresolved" in status) {
-      return buildUnresolvedRow(line, status.unresolved, callbacks);
+      const lookup = state.lookups.find((candidate) => candidate.line === line);
+      return buildUnresolvedRow(line, status.unresolved, lookup, resolvedNames(state.checkResponse), callbacks);
     }
     return buildPendingRow(line, state.checkError === null, callbacks);
   });
@@ -252,6 +258,18 @@ function buildResolvedRow(line: string, row: MedicationRow, expanded: boolean, c
     secondaryLine.append(tag);
   }
   textCol.append(headline, secondaryLine);
+  const tags = labelTags(row.pdla_tags);
+  if (tags.length > 0) {
+    const tagsRow = document.createElement("span");
+    tagsRow.className = "med-row__tags";
+    for (const tag of tags) {
+      const pill = document.createElement("span");
+      pill.className = "pill";
+      pill.textContent = tag.name;
+      tagsRow.append(pill);
+    }
+    textCol.append(tagsRow);
+  }
 
   const dose = document.createElement("span");
   dose.className = "med-row__dose";
@@ -313,26 +331,44 @@ function buildRowDetail(row: MedicationRow): HTMLElement {
   return detail;
 }
 
+// Label terms worth showing on a medication row. Route, product form, the
+// patient-guide flag, and the DEA terms (the C-II badge already covers those)
+// are noise next to a drug name; the safety, dosing, and interaction terms are not.
+const ROW_TAG_TERM_IDS: ReadonlySet<string> = new Set(["T01", "T03", "T04", "T06", "T11", "T12", "T14", "T15", "T16", "T17"]);
+
 /**
- * Takes one unresolved entry.
- * Writes the plain-English line that says what happened and what to do next for it.
- * Gives "More than one label matches. Choose one:" for an entry needing confirmation, otherwise the not-found sentence.
+ * Takes a resolved row's PDLA tags.
+ * Keeps the safety, dosing, and interaction-risk terms and drops route, form, guide, and DEA terms.
+ * Gives the tags to show on the row, in the API's order.
  */
-function unresolvedExplanation(entry: UnresolvedEntry): string {
-  if (entry.status === "needs_confirmation") {
-    return "More than one label matches. Choose one:";
-  }
-  return entry.candidates.length > 0
-    ? "Not found in the FDA labels. Did you mean:"
-    : "Not found in the FDA labels. Try the generic name, or remove it.";
+function labelTags(tags: readonly PdlaTag[]): readonly PdlaTag[] {
+  return tags.filter((tag) => ROW_TAG_TERM_IDS.has(tag.term_id));
 }
 
 /**
- * Takes one medication line, its unresolved entry, and the Interactions callbacks.
- * Builds the row that says the entry was not checked and why, with candidate buttons when there are any, plus Edit and remove buttons.
+ * Takes one unresolved entry and whether it has any choice worth offering.
+ * Writes the plain-English line that says what happened and what to do next for it.
+ * Gives "More than one label matches. Choose one:" for a real ambiguity, the "Did you mean" line when there are other names to try, or "Not a medication name we know." when the label lookup below says the rest.
+ */
+function unresolvedExplanation(entry: UnresolvedEntry, hasChoices: boolean): string {
+  if (!hasChoices) {
+    return "Not a medication name we know.";
+  }
+  return entry.status === "needs_confirmation" ? "More than one label matches. Choose one:" : "Not found in the FDA labels. Did you mean:";
+}
+
+/**
+ * Takes one medication line, its unresolved entry, its label lookup when one has started, the names on the list, and the Interactions callbacks.
+ * Builds the row that says the entry was not checked and why, with candidate buttons when any would help, the label lookup block once it has started, plus Edit and remove buttons.
  * Gives the list item element.
  */
-function buildUnresolvedRow(line: string, entry: UnresolvedEntry, callbacks: InteractionsCallbacks): HTMLElement {
+function buildUnresolvedRow(
+  line: string,
+  entry: UnresolvedEntry,
+  lookup: LabelLookup | undefined,
+  namesOnList: readonly string[],
+  callbacks: InteractionsCallbacks,
+): HTMLElement {
   const wrap = document.createElement("li");
   wrap.className = "med-row";
 
@@ -343,9 +379,10 @@ function buildUnresolvedRow(line: string, entry: UnresolvedEntry, callbacks: Int
   const headline = document.createElement("span");
   headline.className = "med-row__headline";
   headline.textContent = line;
+  const choices = usefulChoices(line, candidateChoices(entry.candidates));
   const explanation = document.createElement("span");
   explanation.className = "med-row__secondary";
-  explanation.textContent = unresolvedExplanation(entry);
+  explanation.textContent = unresolvedExplanation(entry, choices.length > 0);
   textCol.append(headline, explanation);
 
   const actions = document.createElement("span");
@@ -362,10 +399,10 @@ function buildUnresolvedRow(line: string, entry: UnresolvedEntry, callbacks: Int
   top.append(textCol, actions);
   wrap.append(top);
 
-  if (entry.candidates.length > 0) {
+  if (choices.length > 0) {
     const pills = document.createElement("div");
     pills.className = "candidate-pills";
-    for (const choice of candidateChoices(entry.candidates)) {
+    for (const choice of choices) {
       const pill = document.createElement("button");
       pill.type = "button";
       pill.className = "btn btn--small";
@@ -376,6 +413,9 @@ function buildUnresolvedRow(line: string, entry: UnresolvedEntry, callbacks: Int
       pills.append(pill);
     }
     wrap.append(pills);
+  }
+  if (lookup !== undefined) {
+    wrap.append(buildLookupBlock(lookup, namesOnList));
   }
   return wrap;
 }
@@ -450,6 +490,9 @@ function buildResultsSection(state: AppState, callbacks: InteractionsCallbacks):
 function uncheckedReason(entry: UnresolvedEntry): string {
   if (entry.status === "needs_confirmation") {
     return `${entry.raw_text}: more than one label matches. Choose one in the list above.`;
+  }
+  if (usefulChoices(entry.raw_text, candidateChoices(entry.candidates)).length === 0) {
+    return `${entry.raw_text}: not a medication name, so it was looked up in the labels instead. See the list above.`;
   }
   return `${entry.raw_text}: not found. Edit it in the list above, or remove it.`;
 }

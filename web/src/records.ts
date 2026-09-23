@@ -95,6 +95,13 @@ export interface CheckErrorState {
   readonly detail: string;
 }
 
+export interface LabelLookup {
+  readonly line: string;
+  readonly response: SearchResponse | null;
+  readonly loading: boolean;
+  readonly error: CheckErrorState | null;
+}
+
 export interface AppState {
   readonly medicationLines: readonly string[];
   readonly checkResponse: CheckResponse | null;
@@ -102,19 +109,14 @@ export interface AppState {
   readonly checkError: CheckErrorState | null;
   readonly expandedRows: readonly string[];
   readonly expandedAlerts: readonly number[];
-  readonly searchQuery: string;
-  readonly searchFilters: readonly string[];
-  readonly searchOperator: "AND" | "OR";
-  readonly searchResponse: SearchResponse | null;
-  readonly searchLoading: boolean;
-  readonly searchError: CheckErrorState | null;
+  readonly lookups: readonly LabelLookup[];
   readonly availableTerms: readonly TermInfo[];
   readonly buildDate: string | null;
 }
 
 /**
  * Takes no arguments.
- * Builds the app's starting state before any medication or search request has run.
+ * Builds the app's starting state before any medication has been entered.
  * Gives a fresh AppState with an empty medication list and no results.
  */
 export function createInitialState(): AppState {
@@ -125,12 +127,7 @@ export function createInitialState(): AppState {
     checkError: null,
     expandedRows: [],
     expandedAlerts: [],
-    searchQuery: "",
-    searchFilters: [],
-    searchOperator: "AND",
-    searchResponse: null,
-    searchLoading: false,
-    searchError: null,
+    lookups: [],
     availableTerms: [],
     buildDate: null,
   };
