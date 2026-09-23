@@ -2,18 +2,23 @@
 
 from __future__ import annotations
 
+from urllib.parse import quote
+
 from rx_label_search.records import AlertEvidence, TermEvidence
 from rx_label_search.vocabulary.terms import TERMS_BY_ID
 
 DAILYMED_URL_TEMPLATE = "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid={set_id}"
+DAILYMED_SEARCH_TEMPLATE = "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=all&query={name}"
 
 
-def dailymed_url(set_id: str) -> str:
+def dailymed_url(set_id: str, name: str = "") -> str:
     """
-    Takes an SPL set id.
-    Builds the DailyMed label page URL for it.
+    Takes an SPL set id and, for a drug with no label in the collection, its name.
+    Builds the DailyMed label page URL, or the DailyMed search page for the name when there is no set id.
     Gives the URL string.
     """
+    if not set_id and name:
+        return DAILYMED_SEARCH_TEMPLATE.format(name=quote(name))
     return DAILYMED_URL_TEMPLATE.format(set_id=set_id)
 
 

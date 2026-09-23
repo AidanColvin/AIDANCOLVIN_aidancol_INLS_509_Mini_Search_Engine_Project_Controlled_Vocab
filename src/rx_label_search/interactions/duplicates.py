@@ -25,7 +25,7 @@ def base_alert_member(drug: Mapping[str, Any]) -> AlertEvidence:
         effective_time=record["effective_time"],
         section="",
         sentence=f"base ingredients: {', '.join(record.get('base_ingredients', ()))}",
-        dailymed_url=dailymed_url(record["set_id"]),
+        dailymed_url=dailymed_url(record["set_id"], " ".join(record.get("base_ingredients", ()))),
     )
 
 

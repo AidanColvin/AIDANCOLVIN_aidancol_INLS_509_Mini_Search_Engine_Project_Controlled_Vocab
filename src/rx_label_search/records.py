@@ -73,6 +73,16 @@ class MedEntry:
     times_per_day: float | None
     daily_total: float | None
     notes: tuple[str, ...]
+    brand_text: str | None = None
+    components: tuple[str, ...] = ()
+    component_strengths: tuple[tuple[float, str], ...] = ()
+    dose_count: float | None = None
+    days_per_week: float | None = None
+    schedule_text: str | None = None
+    as_needed: bool = False
+    stated_total: str | None = None
+    release_form: str | None = None
+    route: str | None = None
 
 
 @dataclass(frozen=True)
@@ -112,6 +122,16 @@ class Alert:
     tier_name: str
     members: tuple[AlertEvidence, ...]
     note: str
+    grade: str | None = None
+    basis: str = ""
+    category: str = ""
+    family: str = ""
+    mechanism: str = ""
+    action: str = ""
+    rulebook_rows: tuple[int, ...] = ()
+    references: tuple[tuple[str, str], ...] = ()
+    includes: tuple[str, ...] = ()
+    rule_id: str = ""
 
 
 @dataclass(frozen=True)
