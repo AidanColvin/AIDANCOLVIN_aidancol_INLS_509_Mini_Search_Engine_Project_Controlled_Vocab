@@ -12,7 +12,8 @@
   --accent-press: #0062C4;
   --text-on-accent: #FFFFFF;
   --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --size-hello: clamp(56px, 14vw, 96px);
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino", Georgia, serif;
+  --size-title: clamp(40px, 7.5vw, 76px);
   --size-display: 32px;
   --size-body: 17px;
   --size-caption: 14px;
@@ -214,13 +215,17 @@ button:disabled {
   padding-top: clamp(var(--space-5), 10vh, var(--space-12));
 }
 
-.hello {
-  margin: 0;
+.site-title {
+  margin: 0 auto;
+  max-width: 14ch;
   text-align: center;
-  font-size: var(--size-hello);
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: -0.04em;
+  font-family: var(--font-display);
+  font-size: var(--size-title);
+  font-weight: 600;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
 }
 
 .hello-lede {

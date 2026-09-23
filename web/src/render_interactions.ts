@@ -48,7 +48,7 @@ const CHECKING_TEXT = "Checking…";
 
 /**
  * Takes the Interactions view's callbacks.
- * Builds the view's static shell once: greeting, lede, the medication form with its status line, list header, empty list and results containers.
+ * Builds the view's static shell once: the title, lede, the medication form with its status line, list header, empty list and results containers.
  * Gives the InteractionsViewRefs, so the caller can update the dynamic parts and keep the medication field's identity stable across renders.
  */
 export function mountInteractionsView(callbacks: InteractionsCallbacks): InteractionsViewRefs {
@@ -57,13 +57,13 @@ export function mountInteractionsView(callbacks: InteractionsCallbacks): Interac
   root.setAttribute("aria-labelledby", "hello-title");
 
   const title = document.createElement("h1");
-  title.className = "hello";
+  title.className = "site-title";
   title.id = "hello-title";
-  title.textContent = "Hello.";
+  title.textContent = "Drug Interaction Screen";
 
   const lede = document.createElement("p");
   lede.className = "hello-lede";
-  lede.textContent = "Type the medications, brand or generic, and I'll check their FDA labels for interactions.";
+  lede.textContent = "Type the medications, brand or generic. Their FDA labels are checked for interactions.";
 
   const form = document.createElement("form");
   form.className = "med-form narrow";
