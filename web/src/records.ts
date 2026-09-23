@@ -39,6 +39,36 @@ export interface MedicationRow {
   readonly as_needed: boolean;
   readonly release_form: string | null;
   readonly no_label: boolean;
+  readonly set_id: string;
+  readonly profile: DrugProfile | null;
+}
+
+export interface SourceLink {
+  readonly label: string;
+  readonly url: string;
+}
+
+export interface DrugClassInfo {
+  readonly name: string;
+  readonly what: string;
+  readonly how: string;
+  readonly duration: string | null;
+  readonly sources: readonly SourceLink[];
+}
+
+export interface LabelProfile {
+  readonly indications: readonly string[];
+  readonly mechanism: readonly string[];
+  readonly dose_recommended: readonly string[];
+  readonly dose_maximum: readonly string[];
+  readonly duration: readonly string[];
+}
+
+export interface DrugProfile {
+  readonly classes: readonly DrugClassInfo[];
+  readonly ingredient_references: readonly SourceLink[];
+  readonly label: LabelProfile;
+  readonly ceilings: readonly { readonly ingredient: string; readonly max_mg_per_day: number; readonly note: string }[];
 }
 
 export interface ComponentStrength {

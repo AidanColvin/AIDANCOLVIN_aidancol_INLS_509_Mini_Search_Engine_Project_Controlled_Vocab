@@ -753,6 +753,55 @@ button:disabled {
   gap: 3px;
 }
 
+/* Drug profile on the expanded medication card */
+
+.profile {
+  margin: 0 0 var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--hairline);
+}
+.profile__title {
+  margin: 0 0 6px;
+  font-size: var(--size-caption);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-2);
+}
+.profile__class {
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+.profile__sub {
+  margin: var(--space-1) 0 2px;
+  font-size: var(--size-caption);
+  font-weight: 700;
+}
+.profile__text {
+  margin: 0 0 6px;
+  font-size: var(--size-caption);
+  line-height: 1.55;
+}
+.profile__quote {
+  margin: 0 0 6px;
+  padding-left: 10px;
+  border-left: 2px solid var(--hairline);
+  font-size: var(--size-caption);
+  line-height: 1.5;
+  color: var(--text-2);
+}
+.profile__sources {
+  margin: 4px 0 0;
+  font-size: var(--size-caption);
+  line-height: 1.7;
+  color: var(--text-2);
+}
+.profile__sources a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
 /* Totals by ingredient */
 
 .totals {

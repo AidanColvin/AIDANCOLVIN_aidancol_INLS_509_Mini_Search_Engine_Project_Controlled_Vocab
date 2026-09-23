@@ -1,0 +1,2008 @@
+{
+ "description": "Plain-language drug classes for the medication card: what the class is for, how it acts on the brain or body, and typical duration where a guideline or boxed warning sets one. Each cites NIH NCBI Bookshelf (StatPearls, peer-reviewed) or PubMed. A drug's own FDA-approved uses, dosing, and duration statements come from its label at build time.",
+ "classes": [
+  {
+   "id": "benzodiazepine",
+   "name": "Benzodiazepine (sedative and anti-anxiety drug)",
+   "members": [
+    "alprazolam",
+    "clonazepam",
+    "lorazepam",
+    "diazepam",
+    "temazepam",
+    "triazolam",
+    "midazolam",
+    "chlordiazepoxide",
+    "clorazepate",
+    "oxazepam",
+    "estazolam",
+    "flurazepam",
+    "quazepam",
+    "clobazam"
+   ],
+   "what": "Used for anxiety, panic disorder, seizures, insomnia, and alcohol withdrawal.",
+   "how": "Benzodiazepines attach to the GABA-A receptor and make GABA, the brain's main \"calm down\" signal, work harder each time it binds. More chloride flows into nerve cells, so they fire less: the result is calm, drowsiness, muscle relaxation, and fewer seizures. Alcohol and barbiturates act on the same receptor, which is why combining them can stop breathing.",
+   "duration": "Meant for the shortest course that works. Physical dependence can develop within weeks, and the FDA's boxed warning (2020) covers abuse, dependence, and withdrawal, so they are tapered rather than stopped suddenly.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Benzodiazepines",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK470159/"
+    }
+   ]
+  },
+  {
+   "id": "z_drug",
+   "name": "Z-drug sleep medicine",
+   "members": [
+    "zolpidem",
+    "eszopiclone",
+    "zaleplon"
+   ],
+   "what": "Used for insomnia.",
+   "how": "Z-drugs bind the same GABA-A receptor as benzodiazepines, mostly the subtype that drives sleep, so they help people fall asleep with less muscle relaxation. They carry a boxed warning for complex sleep behaviors such as sleep-walking and sleep-driving.",
+   "duration": "Intended for short-term treatment of insomnia; next-day drowsiness is a known risk.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Zolpidem",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK442008/"
+    }
+   ]
+  },
+  {
+   "id": "orexin",
+   "name": "Orexin receptor antagonist (sleep medicine)",
+   "members": [
+    "suvorexant",
+    "lemborexant",
+    "daridorexant"
+   ],
+   "what": "Used for insomnia.",
+   "how": "Blocks orexin, a brain chemical that keeps people awake, so the wake signal is turned down at night. It does not act on GABA like benzodiazepines.",
+   "sources": []
+  },
+  {
+   "id": "opioid",
+   "name": "Opioid pain reliever",
+   "members": [
+    "morphine",
+    "hydromorphone",
+    "oxycodone",
+    "oxymorphone",
+    "hydrocodone",
+    "codeine",
+    "fentanyl",
+    "methadone",
+    "meperidine",
+    "tapentadol",
+    "levorphanol"
+   ],
+   "what": "Used for pain severe enough that other treatments are not enough; methadone is also used for opioid use disorder.",
+   "how": "Opioids activate mu-opioid receptors in the brain and spinal cord, which blocks pain signals, and release dopamine in the brain's reward areas, the source of euphoria and addiction risk. The same receptors in the brainstem control breathing, so too much slows or stops breathing.",
+   "duration": "For acute pain, the CDC's 2022 guideline advises prescribing no more than needed for the expected duration of pain severe enough to require an opioid, often a few days or less. Longer use raises the risk of dependence and overdose.",
+   "sources": [
+    {
+     "label": "Dowell et al., CDC Clinical Practice Guideline for Prescribing Opioids for Pain, 2022 (PubMed)",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36327391/"
+    }
+   ]
+  },
+  {
+   "id": "tramadol",
+   "name": "Opioid pain reliever with serotonin and norepinephrine effects",
+   "members": [
+    "tramadol"
+   ],
+   "what": "Used for pain.",
+   "how": "Tramadol weakly activates mu-opioid receptors (mostly through its metabolite, made by the liver enzyme CYP2D6) and also blocks the reuptake of serotonin and norepinephrine. That second action is why it can cause seizures and serotonin syndrome.",
+   "duration": "For acute pain, the shortest course that works; it is Schedule IV and can cause dependence.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Tramadol",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK537060/"
+    }
+   ]
+  },
+  {
+   "id": "buprenorphine",
+   "name": "Partial opioid agonist",
+   "members": [
+    "buprenorphine"
+   ],
+   "what": "Used for opioid use disorder and for pain.",
+   "how": "Buprenorphine binds mu-opioid receptors very tightly but only partly activates them, so its effect levels off (a \"ceiling\" on breathing depression). It relieves craving and withdrawal. Naloxone is added in some products to deter injection.",
+   "duration": "For opioid use disorder it is a long-term maintenance treatment; stopping is a clinical decision, not a fixed course.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Buprenorphine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK459126/"
+    }
+   ]
+  },
+  {
+   "id": "opioid_antagonist",
+   "name": "Opioid antagonist",
+   "members": [
+    "naltrexone",
+    "naloxone"
+   ],
+   "what": "Naltrexone is used for alcohol and opioid use disorder; naloxone reverses opioid overdose.",
+   "how": "Blocks mu-opioid receptors without activating them, so opioids cannot act. In someone taking opioids it brings on withdrawal.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Naltrexone",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK534811/"
+    }
+   ]
+  },
+  {
+   "id": "ssri",
+   "name": "Selective serotonin reuptake inhibitor (SSRI antidepressant)",
+   "members": [
+    "citalopram",
+    "escitalopram",
+    "fluoxetine",
+    "fluvoxamine",
+    "paroxetine",
+    "sertraline"
+   ],
+   "what": "Used for depression, anxiety disorders, OCD, and related conditions (each drug's approved uses are listed below).",
+   "how": "After a nerve cell releases serotonin, a pump (the serotonin transporter) pulls it back in: this is \"reuptake\". SSRIs block that pump, so more serotonin stays between nerve cells. The mood benefit takes 2 to 6 weeks, as the brain adapts to the change.",
+   "duration": "Usually continued for months after symptoms improve; stopping suddenly can cause discontinuation symptoms, so the dose is tapered.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Selective Serotonin Reuptake Inhibitors",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK554406/"
+    }
+   ]
+  },
+  {
+   "id": "snri",
+   "name": "Serotonin-norepinephrine reuptake inhibitor (SNRI antidepressant)",
+   "members": [
+    "venlafaxine",
+    "desvenlafaxine",
+    "duloxetine",
+    "levomilnacipran",
+    "milnacipran"
+   ],
+   "what": "Used for depression and anxiety; duloxetine is also approved for nerve pain and fibromyalgia.",
+   "how": "SNRIs block the reuptake pumps for both serotonin and norepinephrine, so both stay active longer. Norepinephrine adds effects on energy and on the spinal pain pathways, and can raise blood pressure.",
+   "duration": "Usually continued for months after improvement and tapered when stopped.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Venlafaxine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK535363/"
+    },
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Duloxetine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK549806/"
+    }
+   ]
+  },
+  {
+   "id": "tca",
+   "name": "Tricyclic antidepressant",
+   "members": [
+    "amitriptyline",
+    "nortriptyline",
+    "imipramine",
+    "desipramine",
+    "doxepin",
+    "clomipramine",
+    "protriptyline",
+    "trimipramine"
+   ],
+   "what": "Used for depression; also used for nerve pain and migraine prevention.",
+   "how": "Tricyclics block the reuptake of serotonin and norepinephrine. They also block histamine, acetylcholine, and alpha-adrenergic receptors, which causes drowsiness, dry mouth, constipation, dizziness on standing, and dangerous heart-rhythm effects in overdose.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Tricyclic Antidepressants",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK557791/"
+    }
+   ]
+  },
+  {
+   "id": "maoi",
+   "name": "Monoamine oxidase inhibitor (MAOI antidepressant)",
+   "members": [
+    "phenelzine",
+    "tranylcypromine",
+    "isocarboxazid"
+   ],
+   "what": "Used for depression that has not responded to other treatment.",
+   "how": "MAOIs block monoamine oxidase, the enzyme that breaks down serotonin, norepinephrine, and dopamine, so all three build up. The same enzyme clears tyramine from food, which is why aged cheeses and many medicines can trigger dangerous blood-pressure spikes.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Monoamine Oxidase Inhibitors (MAOIs)",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK539848/"
+    }
+   ]
+  },
+  {
+   "id": "mao_b",
+   "name": "MAO-B inhibitor (Parkinson's disease)",
+   "members": [
+    "rasagiline",
+    "selegiline",
+    "safinamide"
+   ],
+   "what": "Used for Parkinson's disease.",
+   "how": "Blocks MAO-B, the enzyme that breaks down dopamine in the brain, so the remaining dopamine lasts longer and movement improves.",
+   "sources": []
+  },
+  {
+   "id": "linezolid",
+   "name": "Oxazolidinone antibiotic (also an MAO inhibitor)",
+   "members": [
+    "linezolid"
+   ],
+   "what": "Used for serious bacterial infections, including MRSA and VRE.",
+   "how": "Linezolid stops bacteria from making proteins. It also weakly blocks monoamine oxidase, which is why it interacts with serotonergic drugs and stimulants.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Linezolid",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK539793/"
+    }
+   ]
+  },
+  {
+   "id": "amphetamine",
+   "name": "Amphetamine stimulant",
+   "members": [
+    "amphetamine",
+    "dextroamphetamine",
+    "lisdexamfetamine",
+    "methamphetamine"
+   ],
+   "what": "Used for ADHD; some products are also approved for narcolepsy or binge-eating disorder.",
+   "how": "Amphetamines push dopamine and norepinephrine out of nerve endings and block their reuptake, raising both in the brain's attention and reward circuits. That improves focus and impulse control, and also raises heart rate and blood pressure and carries misuse risk.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Amphetamine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK556103/"
+    }
+   ]
+  },
+  {
+   "id": "methylphenidate",
+   "name": "Methylphenidate stimulant",
+   "members": [
+    "methylphenidate",
+    "dexmethylphenidate"
+   ],
+   "what": "Used for ADHD and narcolepsy.",
+   "how": "Methylphenidate blocks the reuptake of dopamine and norepinephrine, so they stay active longer. Unlike amphetamine, it does not force their release.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Methylphenidate",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK482451/"
+    }
+   ]
+  },
+  {
+   "id": "atomoxetine",
+   "name": "Non-stimulant ADHD medicine",
+   "members": [
+    "atomoxetine"
+   ],
+   "what": "Used for ADHD.",
+   "how": "Blocks the reuptake of norepinephrine, raising norepinephrine (and dopamine in the prefrontal cortex). It is not a controlled substance.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Atomoxetine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK493234/"
+    }
+   ]
+  },
+  {
+   "id": "gabapentinoid",
+   "name": "Gabapentinoid",
+   "members": [
+    "gabapentin",
+    "pregabalin"
+   ],
+   "what": "Used for seizures and nerve pain; pregabalin also for fibromyalgia.",
+   "how": "Despite the name, they do not act on GABA receptors. They bind the alpha-2-delta part of calcium channels on overactive nerve cells and reduce the release of excitatory signals such as glutamate, calming pain and seizure circuits.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Gabapentin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK493228/"
+    },
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Pregabalin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK470341/"
+    }
+   ]
+  },
+  {
+   "id": "carisoprodol",
+   "name": "Centrally acting muscle relaxant",
+   "members": [
+    "carisoprodol"
+   ],
+   "what": "Used for short-term relief of acute, painful muscle and bone conditions.",
+   "how": "Acts in the brain and spinal cord rather than on the muscle. It is broken down to meprobamate, a sedative that acts much like a barbiturate, which is why it causes drowsiness and dependence.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Carisoprodol",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK553077/"
+    }
+   ]
+  },
+  {
+   "id": "cyclobenzaprine",
+   "name": "Centrally acting muscle relaxant",
+   "members": [
+    "cyclobenzaprine"
+   ],
+   "what": "Used for short-term relief of muscle spasm.",
+   "how": "Structurally related to the tricyclic antidepressants; it acts in the brainstem to reduce the nerve activity that keeps muscles tense, and shares their sedating and anticholinergic effects.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Cyclobenzaprine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK513362/"
+    }
+   ]
+  },
+  {
+   "id": "tizanidine",
+   "name": "Alpha-2 agonist muscle relaxant",
+   "members": [
+    "tizanidine"
+   ],
+   "what": "Used for spasticity.",
+   "how": "Activates alpha-2 receptors in the spinal cord, reducing the nerve signals that make muscles contract. The same action lowers blood pressure and causes drowsiness.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Tizanidine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK519505/"
+    }
+   ]
+  },
+  {
+   "id": "antipsychotic",
+   "name": "Antipsychotic",
+   "members": [
+    "olanzapine",
+    "quetiapine",
+    "clozapine",
+    "risperidone",
+    "paliperidone",
+    "haloperidol",
+    "chlorpromazine",
+    "fluphenazine",
+    "perphenazine",
+    "ziprasidone",
+    "aripiprazole",
+    "brexpiprazole",
+    "cariprazine",
+    "lurasidone",
+    "iloperidone",
+    "asenapine",
+    "lumateperone",
+    "pimozide",
+    "thioridazine",
+    "loxapine"
+   ],
+   "what": "Used for schizophrenia and bipolar disorder; several are also approved as add-on treatment for depression.",
+   "how": "Antipsychotics block dopamine D2 receptors, calming overactive dopamine signaling linked to psychosis and mania; newer \"atypical\" drugs also block serotonin 5-HT2A receptors. Blocking dopamine in movement circuits causes stiffness or restlessness, and blocking histamine causes sedation and weight gain.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Antipsychotic Medications",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK519503/"
+    },
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Atypical Antipsychotic Agents",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK448156/"
+    }
+   ]
+  },
+  {
+   "id": "beta_blocker",
+   "name": "Beta-blocker",
+   "members": [
+    "metoprolol",
+    "carvedilol",
+    "propranolol",
+    "atenolol",
+    "bisoprolol",
+    "nadolol",
+    "labetalol",
+    "nebivolol",
+    "sotalol",
+    "timolol"
+   ],
+   "what": "Used for high blood pressure, heart failure, angina, and heart-rhythm problems; propranolol also for migraine prevention and tremor.",
+   "how": "Beta-blockers block adrenaline at beta receptors in the heart, which slows the heart and lowers blood pressure. Non-selective ones such as propranolol also block beta receptors in the lungs and elsewhere, and can hide the shaking and fast heartbeat of low blood sugar.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Beta Blockers",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK532906/"
+    }
+   ]
+  },
+  {
+   "id": "acei",
+   "name": "ACE inhibitor",
+   "members": [
+    "lisinopril",
+    "enalapril",
+    "ramipril",
+    "benazepril",
+    "captopril",
+    "quinapril",
+    "fosinopril",
+    "perindopril",
+    "trandolapril"
+   ],
+   "what": "Used for high blood pressure, heart failure, and kidney protection in diabetes.",
+   "how": "Blocks angiotensin-converting enzyme, which makes angiotensin II, a hormone that tightens blood vessels and makes the body keep salt. Vessels relax and blood pressure falls. It also raises potassium and can cause a dry cough.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Angiotensin-Converting Enzyme Inhibitors (ACEI)",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK431051/"
+    }
+   ]
+  },
+  {
+   "id": "arb",
+   "name": "Angiotensin receptor blocker (ARB)",
+   "members": [
+    "losartan",
+    "valsartan",
+    "irbesartan",
+    "olmesartan",
+    "candesartan",
+    "telmisartan",
+    "azilsartan"
+   ],
+   "what": "Used for high blood pressure, heart failure, and kidney protection.",
+   "how": "Blocks the receptor angiotensin II acts on, so blood vessels relax and less salt is retained. Like ACE inhibitors it can raise potassium, but it rarely causes cough.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Angiotensin II Receptor Blockers (ARB)",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK537027/"
+    }
+   ]
+  },
+  {
+   "id": "ccb",
+   "name": "Calcium channel blocker",
+   "members": [
+    "amlodipine",
+    "nifedipine",
+    "felodipine",
+    "isradipine",
+    "nicardipine",
+    "diltiazem",
+    "verapamil"
+   ],
+   "what": "Used for high blood pressure and angina; diltiazem and verapamil also control fast heart rhythms.",
+   "how": "Blocks calcium channels in blood-vessel muscle so vessels relax. Diltiazem and verapamil also act on the heart, slowing the rate and conduction.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Calcium Channel Blockers",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK482473/"
+    }
+   ]
+  },
+  {
+   "id": "statin",
+   "name": "Statin (cholesterol-lowering)",
+   "members": [
+    "atorvastatin",
+    "simvastatin",
+    "rosuvastatin",
+    "pravastatin",
+    "lovastatin",
+    "pitavastatin",
+    "fluvastatin"
+   ],
+   "what": "Used to lower LDL cholesterol and prevent heart attack and stroke.",
+   "how": "Blocks HMG-CoA reductase, the liver enzyme that makes cholesterol. The liver responds by pulling more LDL cholesterol out of the blood.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): HMG-CoA Reductase Inhibitors",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK542212/"
+    }
+   ]
+  },
+  {
+   "id": "nsaid",
+   "name": "Nonsteroidal anti-inflammatory drug (NSAID)",
+   "members": [
+    "ibuprofen",
+    "naproxen",
+    "meloxicam",
+    "celecoxib",
+    "ketorolac",
+    "diclofenac",
+    "indomethacin",
+    "etodolac",
+    "nabumetone",
+    "piroxicam"
+   ],
+   "what": "Used for pain, fever, and inflammation.",
+   "how": "Blocks the COX enzymes that make prostaglandins, the chemicals behind pain, fever, and inflammation. Prostaglandins also protect the stomach lining and keep blood flowing into the kidneys, which is why NSAIDs can cause ulcers, bleeding, and kidney injury.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Nonsteroidal Anti-Inflammatory Drugs (NSAIDs)",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK547742/"
+    }
+   ]
+  },
+  {
+   "id": "aspirin",
+   "name": "Aspirin (antiplatelet and NSAID)",
+   "members": [
+    "aspirin"
+   ],
+   "what": "Used for pain and fever, and at low dose to prevent heart attack and stroke.",
+   "how": "Aspirin permanently switches off COX-1 in platelets for their 7- to 10-day life, so they cannot make the signal (thromboxane) that makes them clump. That is why low-dose aspirin prevents clots and also raises bleeding risk.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Salicylic Acid (Aspirin)",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK519032/"
+    }
+   ]
+  },
+  {
+   "id": "acetaminophen",
+   "name": "Pain and fever reliever",
+   "members": [
+    "acetaminophen"
+   ],
+   "what": "Used for pain and fever.",
+   "how": "Acts mainly in the brain to reduce pain and fever; its exact mechanism is still not fully understood. It does not reduce inflammation. Too much injures the liver, so the total from every product counts.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Acetaminophen",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK482369/"
+    }
+   ]
+  },
+  {
+   "id": "warfarin",
+   "name": "Vitamin K antagonist anticoagulant",
+   "members": [
+    "warfarin"
+   ],
+   "what": "Used to prevent and treat blood clots, including in atrial fibrillation and with mechanical heart valves.",
+   "how": "Blocks the recycling of vitamin K, so the liver makes less of several clotting factors. The effect is measured with the INR blood test and changes with diet and many other drugs.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Warfarin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK470313/"
+    }
+   ]
+  },
+  {
+   "id": "doac",
+   "name": "Direct oral anticoagulant",
+   "members": [
+    "apixaban",
+    "rivaroxaban",
+    "edoxaban",
+    "dabigatran"
+   ],
+   "what": "Used to prevent stroke in atrial fibrillation and to prevent and treat blood clots.",
+   "how": "Apixaban, rivaroxaban, and edoxaban directly block clotting factor Xa; dabigatran directly blocks thrombin. No routine INR test is needed.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Apixaban",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK507910/"
+    },
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Rivaroxaban",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK557502/"
+    }
+   ]
+  },
+  {
+   "id": "p2y12",
+   "name": "P2Y12 antiplatelet",
+   "members": [
+    "clopidogrel",
+    "prasugrel",
+    "ticagrelor"
+   ],
+   "what": "Used after heart attack, stents, and stroke to prevent clots.",
+   "how": "Blocks the P2Y12 receptor on platelets so they clump less. Clopidogrel is a prodrug that the liver enzyme CYP2C19 must activate.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Clopidogrel",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK470539/"
+    },
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Antiplatelet Medications",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK537062/"
+    }
+   ]
+  },
+  {
+   "id": "ppi",
+   "name": "Proton pump inhibitor",
+   "members": [
+    "omeprazole",
+    "esomeprazole",
+    "pantoprazole",
+    "lansoprazole",
+    "rabeprazole",
+    "dexlansoprazole"
+   ],
+   "what": "Used for acid reflux, ulcers, and H. pylori treatment.",
+   "how": "Switches off the proton pumps in the stomach-lining cells that secrete acid.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Omeprazole",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK539786/"
+    }
+   ]
+  },
+  {
+   "id": "sulfonylurea",
+   "name": "Sulfonylurea (diabetes)",
+   "members": [
+    "glipizide",
+    "glyburide",
+    "glimepiride"
+   ],
+   "what": "Used for type 2 diabetes.",
+   "how": "Makes the pancreas release insulin whatever the blood sugar is, which is why sulfonylureas can cause low blood sugar.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Sulfonylureas",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK513225/"
+    }
+   ]
+  },
+  {
+   "id": "insulin",
+   "name": "Insulin",
+   "members": [
+    "insulin glargine",
+    "insulin detemir",
+    "insulin degludec",
+    "insulin aspart",
+    "insulin lispro",
+    "insulin human",
+    "insulin"
+   ],
+   "what": "Used for type 1 and type 2 diabetes.",
+   "how": "Replaces or adds to the body's own insulin, moving glucose from the blood into cells.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Insulin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK560688/"
+    }
+   ]
+  },
+  {
+   "id": "glp1",
+   "name": "GLP-1 receptor agonist",
+   "members": [
+    "semaglutide",
+    "liraglutide",
+    "dulaglutide",
+    "exenatide",
+    "tirzepatide"
+   ],
+   "what": "Used for type 2 diabetes; some products are approved for weight management.",
+   "how": "Mimics the gut hormone GLP-1: more insulin when glucose is high, less glucagon, slower stomach emptying, and less appetite through signals to the brain.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Glucagon-Like Peptide-1 Receptor Agonists",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK551568/"
+    }
+   ]
+  },
+  {
+   "id": "sglt2",
+   "name": "SGLT2 inhibitor",
+   "members": [
+    "empagliflozin",
+    "dapagliflozin",
+    "canagliflozin",
+    "ertugliflozin"
+   ],
+   "what": "Used for type 2 diabetes, heart failure, and chronic kidney disease.",
+   "how": "Blocks the kidney's glucose transporter (SGLT2) so extra glucose leaves in the urine, which also causes a mild diuretic effect.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Empagliflozin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK532925/"
+    }
+   ]
+  },
+  {
+   "id": "metformin",
+   "name": "Biguanide (diabetes)",
+   "members": [
+    "metformin"
+   ],
+   "what": "Used for type 2 diabetes.",
+   "how": "Lowers the liver's glucose output and helps muscle respond to insulin. It rarely causes low blood sugar on its own.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Metformin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK518983/"
+    }
+   ]
+  },
+  {
+   "id": "fluoroquinolone",
+   "name": "Fluoroquinolone antibiotic",
+   "members": [
+    "ciprofloxacin",
+    "levofloxacin",
+    "moxifloxacin",
+    "ofloxacin"
+   ],
+   "what": "Used for bacterial infections.",
+   "how": "Blocks the bacterial enzymes that copy DNA (DNA gyrase and topoisomerase IV). Boxed warning: tendon rupture, nerve damage, and effects on the brain.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Quinolones",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK557777/"
+    }
+   ]
+  },
+  {
+   "id": "macrolide",
+   "name": "Macrolide antibiotic",
+   "members": [
+    "azithromycin",
+    "clarithromycin",
+    "erythromycin"
+   ],
+   "what": "Used for respiratory, skin, and other bacterial infections.",
+   "how": "Stops bacteria from making proteins. Clarithromycin and erythromycin also strongly block the liver enzyme CYP3A4, the cause of many drug interactions.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Macrolides",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK551495/"
+    }
+   ]
+  },
+  {
+   "id": "azole",
+   "name": "Azole antifungal",
+   "members": [
+    "fluconazole",
+    "ketoconazole",
+    "itraconazole",
+    "voriconazole",
+    "posaconazole"
+   ],
+   "what": "Used for fungal infections.",
+   "how": "Blocks the fungal enzyme that makes ergosterol, a building block of the fungal cell membrane. Azoles also block human liver enzymes (CYP3A4, CYP2C9), which drives their interactions.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Antifungal Agents",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK538168/"
+    }
+   ]
+  },
+  {
+   "id": "thiazide",
+   "name": "Thiazide diuretic",
+   "members": [
+    "hydrochlorothiazide",
+    "chlorthalidone",
+    "indapamide",
+    "metolazone"
+   ],
+   "what": "Used for high blood pressure and swelling.",
+   "how": "Blocks salt reabsorption in the kidney's distal tubule, so more salt and water leave in the urine. It can lower sodium and potassium and raise lithium levels.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Thiazide Diuretics",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK532918/"
+    }
+   ]
+  },
+  {
+   "id": "loop",
+   "name": "Loop diuretic",
+   "members": [
+    "furosemide",
+    "bumetanide",
+    "torsemide"
+   ],
+   "what": "Used for swelling from heart failure, kidney, or liver disease.",
+   "how": "Blocks salt reabsorption in the kidney's loop of Henle, the strongest diuretic effect; potassium and magnesium are lost too.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Loop Diuretics",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK546656/"
+    }
+   ]
+  },
+  {
+   "id": "mra",
+   "name": "Aldosterone antagonist",
+   "members": [
+    "spironolactone",
+    "eplerenone"
+   ],
+   "what": "Used for heart failure, high blood pressure, and fluid build-up.",
+   "how": "Blocks aldosterone, the hormone that makes the kidney keep salt and lose potassium, so it raises potassium.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Spironolactone",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK554421/"
+    }
+   ]
+  },
+  {
+   "id": "triptan",
+   "name": "Triptan (migraine)",
+   "members": [
+    "sumatriptan",
+    "rizatriptan",
+    "zolmitriptan",
+    "naratriptan",
+    "eletriptan",
+    "almotriptan",
+    "frovatriptan"
+   ],
+   "what": "Used to stop a migraine attack.",
+   "how": "Activates serotonin 5-HT1B/1D receptors on blood vessels and nerve endings around the brain, narrowing widened vessels and blocking the release of pain signals.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Triptans",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK554507/"
+    }
+   ]
+  },
+  {
+   "id": "cholinesterase",
+   "name": "Cholinesterase inhibitor (dementia)",
+   "members": [
+    "donepezil",
+    "rivastigmine",
+    "galantamine"
+   ],
+   "what": "Used for Alzheimer's disease dementia.",
+   "how": "Slows the breakdown of acetylcholine, a memory and attention signal that falls in Alzheimer's disease. It can also slow the heart.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Cholinesterase Inhibitors",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK544336/"
+    }
+   ]
+  },
+  {
+   "id": "antimuscarinic",
+   "name": "Anticholinergic (antimuscarinic)",
+   "members": [
+    "oxybutynin",
+    "tolterodine",
+    "solifenacin",
+    "darifenacin",
+    "trospium",
+    "fesoterodine",
+    "benztropine",
+    "trihexyphenidyl"
+   ],
+   "what": "Oxybutynin-type drugs treat overactive bladder; benztropine treats drug-induced movement problems and Parkinson's.",
+   "how": "Blocks acetylcholine at muscarinic receptors: it relaxes the bladder or rebalances movement circuits, but in the brain it can cause confusion and memory problems, especially in older adults.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Anticholinergic Medications",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK555893/"
+    }
+   ]
+  },
+  {
+   "id": "alpha1",
+   "name": "Alpha-1 blocker",
+   "members": [
+    "tamsulosin",
+    "doxazosin",
+    "prazosin",
+    "terazosin",
+    "alfuzosin",
+    "silodosin"
+   ],
+   "what": "Used for enlarged prostate symptoms; some also for high blood pressure.",
+   "how": "Blocks alpha-1 receptors so smooth muscle in the prostate and bladder neck (and blood vessels) relaxes, easing urine flow; it can cause dizziness on standing.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Alpha-Blockers",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK556066/"
+    }
+   ]
+  },
+  {
+   "id": "alpha2",
+   "name": "Central alpha-2 agonist",
+   "members": [
+    "clonidine",
+    "guanfacine"
+   ],
+   "what": "Used for high blood pressure and ADHD.",
+   "how": "Activates alpha-2 receptors in the brainstem and prefrontal cortex, turning down the body's \"fight or flight\" output: lower blood pressure and heart rate, and in ADHD better impulse control. Stopping suddenly can cause rebound high blood pressure.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Clonidine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK459124/"
+    }
+   ]
+  },
+  {
+   "id": "nitrate",
+   "name": "Nitrate",
+   "members": [
+    "nitroglycerin",
+    "isosorbide"
+   ],
+   "what": "Used to prevent and relieve angina.",
+   "how": "Releases nitric oxide, which relaxes blood vessels and lowers the heart's workload.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Nitroglycerin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK482382/"
+    },
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Isosorbide",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK557839/"
+    }
+   ]
+  },
+  {
+   "id": "pde5",
+   "name": "PDE5 inhibitor",
+   "members": [
+    "sildenafil",
+    "tadalafil",
+    "vardenafil",
+    "avanafil"
+   ],
+   "what": "Used for erectile dysfunction and pulmonary arterial hypertension; tadalafil also for enlarged prostate symptoms.",
+   "how": "Blocks PDE5, the enzyme that breaks down cGMP, so the blood-vessel relaxing signal from nitric oxide lasts longer.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Phosphodiesterase Inhibitors",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK559276/"
+    },
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Sildenafil",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK558978/"
+    }
+   ]
+  },
+  {
+   "id": "corticosteroid",
+   "name": "Corticosteroid",
+   "members": [
+    "prednisone",
+    "prednisolone",
+    "methylprednisolone",
+    "dexamethasone",
+    "hydrocortisone",
+    "fluticasone",
+    "budesonide",
+    "mometasone"
+   ],
+   "what": "Used for inflammation, allergies, asthma, and autoimmune diseases.",
+   "how": "Copies the body's cortisol: it switches off many genes that drive inflammation and immune responses. Long use suppresses the body's own cortisol production.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Corticosteroids",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK554612/"
+    }
+   ]
+  },
+  {
+   "id": "valproate",
+   "name": "Valproic Acid",
+   "members": [
+    "valproate"
+   ],
+   "what": "Used for seizures, bipolar mania, and migraine prevention.",
+   "how": "Raises brain GABA and blocks sodium and T-type calcium channels, calming overactive nerve firing.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Valproic Acid",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK559112/"
+    }
+   ]
+  },
+  {
+   "id": "lamotrigine",
+   "name": "Lamotrigine",
+   "members": [
+    "lamotrigine"
+   ],
+   "what": "Used for seizures and bipolar disorder maintenance.",
+   "how": "Blocks sodium channels and reduces the release of glutamate, the brain's main excitatory signal.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Lamotrigine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK470442/"
+    }
+   ]
+  },
+  {
+   "id": "carbamazepine",
+   "name": "Carbamazepine",
+   "members": [
+    "carbamazepine"
+   ],
+   "what": "Used for seizures, trigeminal neuralgia, and bipolar disorder.",
+   "how": "Blocks sodium channels so nerve cells cannot fire rapidly. It strongly speeds the liver's clearance of many other drugs (enzyme induction).",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Carbamazepine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK482455/"
+    }
+   ]
+  },
+  {
+   "id": "topiramate",
+   "name": "Topiramate",
+   "members": [
+    "topiramate"
+   ],
+   "what": "Used for seizures and migraine prevention.",
+   "how": "Blocks sodium channels, strengthens GABA, blocks glutamate receptors, and inhibits carbonic anhydrase (which can cause acidosis and kidney stones).",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Topiramate",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK554530/"
+    }
+   ]
+  },
+  {
+   "id": "phenytoin",
+   "name": "Phenytoin",
+   "members": [
+    "phenytoin"
+   ],
+   "what": "Used for seizures.",
+   "how": "Blocks sodium channels. Its levels rise steeply with small dose changes, so blood levels are checked.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Phenytoin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK551520/"
+    }
+   ]
+  },
+  {
+   "id": "lithium",
+   "name": "Lithium",
+   "members": [
+    "lithium"
+   ],
+   "what": "Used for bipolar disorder.",
+   "how": "A mood stabilizer whose exact mechanism is not fully known; it changes signaling inside nerve cells. The gap between an effective and a toxic level is small, so blood levels are checked.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Lithium",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK519062/"
+    }
+   ]
+  },
+  {
+   "id": "levothyroxine",
+   "name": "Levothyroxine",
+   "members": [
+    "levothyroxine"
+   ],
+   "what": "Used for an underactive thyroid.",
+   "how": "Replaces thyroxine (T4), the hormone the thyroid normally makes; the body converts it to the active T3.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Levothyroxine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK539808/"
+    }
+   ]
+  },
+  {
+   "id": "bupropion",
+   "name": "Bupropion",
+   "members": [
+    "bupropion"
+   ],
+   "what": "Used for depression, seasonal depression, and smoking cessation.",
+   "how": "Blocks the reuptake of dopamine and norepinephrine, with little effect on serotonin; seizure risk rises with dose.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Bupropion",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK470212/"
+    }
+   ]
+  },
+  {
+   "id": "trazodone",
+   "name": "Trazodone",
+   "members": [
+    "trazodone"
+   ],
+   "what": "Used for depression.",
+   "how": "Blocks serotonin 5-HT2A receptors and weakly blocks serotonin reuptake; it also blocks histamine, which makes it sedating.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Trazodone",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK470560/"
+    }
+   ]
+  },
+  {
+   "id": "mirtazapine",
+   "name": "Mirtazapine",
+   "members": [
+    "mirtazapine"
+   ],
+   "what": "Used for depression.",
+   "how": "Blocks alpha-2 receptors that normally brake serotonin and norepinephrine release, so both rise; strong histamine blocking causes sleepiness and appetite gain.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Mirtazapine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK519059/"
+    }
+   ]
+  },
+  {
+   "id": "buspirone",
+   "name": "Buspirone",
+   "members": [
+    "buspirone"
+   ],
+   "what": "Used for generalized anxiety disorder.",
+   "how": "Partly activates serotonin 5-HT1A receptors. It is not a benzodiazepine, is not habit-forming, and takes weeks to work.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Buspirone",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK531477/"
+    }
+   ]
+  },
+  {
+   "id": "hydroxyzine",
+   "name": "Antihistamines",
+   "members": [
+    "hydroxyzine"
+   ],
+   "what": "Used for anxiety and itching.",
+   "how": "Blocks histamine H1 receptors in the brain, which causes calm and drowsiness; it also has anticholinergic effects.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Antihistamines",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK538188/"
+    }
+   ]
+  },
+  {
+   "id": "promethazine",
+   "name": "Promethazine",
+   "members": [
+    "promethazine"
+   ],
+   "what": "Used for nausea, allergy, and sedation.",
+   "how": "A phenothiazine that blocks histamine H1 and dopamine receptors, causing strong sedation.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Promethazine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK544361/"
+    }
+   ]
+  },
+  {
+   "id": "colchicine",
+   "name": "Colchicine",
+   "members": [
+    "colchicine"
+   ],
+   "what": "Used for gout flares and prevention, and familial Mediterranean fever.",
+   "how": "Blocks microtubules in white blood cells so they cannot move into inflamed joints.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Colchicine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK431102/"
+    }
+   ]
+  },
+  {
+   "id": "allopurinol",
+   "name": "Allopurinol",
+   "members": [
+    "allopurinol"
+   ],
+   "what": "Used for gout and high uric acid.",
+   "how": "Blocks xanthine oxidase, the enzyme that makes uric acid.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Allopurinol",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK499942/"
+    }
+   ]
+  },
+  {
+   "id": "methotrexate",
+   "name": "Methotrexate",
+   "members": [
+    "methotrexate"
+   ],
+   "what": "Used for rheumatoid arthritis, psoriasis, and some cancers.",
+   "how": "Blocks dihydrofolate reductase, the enzyme that recycles folate, slowing fast-dividing cells; in arthritis it is taken once a week.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Methotrexate",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK556114/"
+    }
+   ]
+  },
+  {
+   "id": "azathioprine",
+   "name": "Azathioprine",
+   "members": [
+    "azathioprine"
+   ],
+   "what": "Used for kidney transplant rejection prevention and rheumatoid arthritis.",
+   "how": "Converted to 6-mercaptopurine, which blocks DNA building blocks in dividing immune cells.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Azathioprine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK542190/"
+    }
+   ]
+  },
+  {
+   "id": "tacrolimus",
+   "name": "Tacrolimus",
+   "members": [
+    "tacrolimus"
+   ],
+   "what": "Used to prevent organ transplant rejection.",
+   "how": "Blocks calcineurin, the switch that activates T cells; levels are checked because the margin is narrow.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Tacrolimus",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK544318/"
+    }
+   ]
+  },
+  {
+   "id": "digoxin",
+   "name": "Digoxin",
+   "members": [
+    "digoxin"
+   ],
+   "what": "Used for heart failure and atrial fibrillation rate control.",
+   "how": "Blocks the sodium-potassium pump in heart cells, which strengthens contraction and slows conduction through the AV node.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Digoxin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK556025/"
+    }
+   ]
+  },
+  {
+   "id": "amiodarone",
+   "name": "Amiodarone",
+   "members": [
+    "amiodarone"
+   ],
+   "what": "Used for serious heart-rhythm problems.",
+   "how": "Blocks potassium, sodium, and calcium channels and beta receptors in the heart; it stays in the body for weeks to months.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Amiodarone",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK482154/"
+    }
+   ]
+  },
+  {
+   "id": "ondansetron",
+   "name": "Ondansetron",
+   "members": [
+    "ondansetron"
+   ],
+   "what": "Used to prevent nausea and vomiting from chemotherapy, radiation, and surgery.",
+   "how": "Blocks serotonin 5-HT3 receptors in the gut and the brain's vomiting center.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Ondansetron",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK499839/"
+    }
+   ]
+  },
+  {
+   "id": "metoclopramide",
+   "name": "Metoclopramide",
+   "members": [
+    "metoclopramide"
+   ],
+   "what": "Used for reflux and slow stomach emptying (gastroparesis).",
+   "how": "Blocks dopamine D2 receptors, which speeds stomach emptying and reduces nausea; long use can cause tardive dyskinesia (boxed warning).",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Metoclopramide",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK519517/"
+    }
+   ]
+  },
+  {
+   "id": "methadone",
+   "name": "Methadone",
+   "members": [
+    "methadone"
+   ],
+   "what": "Used for pain and opioid use disorder.",
+   "how": "A long-acting mu-opioid agonist that also blocks NMDA receptors; it can prolong the QT interval.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Methadone",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK562216/"
+    }
+   ]
+  },
+  {
+   "id": "rifampin",
+   "name": "Rifampin",
+   "members": [
+    "rifampin"
+   ],
+   "what": "Used for tuberculosis and other infections.",
+   "how": "Blocks bacterial RNA polymerase; it also strongly speeds the liver's clearance of many drugs (enzyme induction).",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Rifampin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK557488/"
+    }
+   ]
+  },
+  {
+   "id": "tamoxifen",
+   "name": "Tamoxifen",
+   "members": [
+    "tamoxifen"
+   ],
+   "what": "Used to treat and prevent breast cancer.",
+   "how": "Blocks estrogen receptors in breast tissue; it works through its active metabolite endoxifen, made by CYP2D6.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Tamoxifen",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK532905/"
+    }
+   ]
+  },
+  {
+   "id": "montelukast",
+   "name": "Montelukast",
+   "members": [
+    "montelukast"
+   ],
+   "what": "Used for asthma and allergic rhinitis.",
+   "how": "Blocks leukotriene receptors, reducing airway swelling and constriction; boxed warning for neuropsychiatric events.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Montelukast",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK459301/"
+    }
+   ]
+  },
+  {
+   "id": "theophylline",
+   "name": "Theophylline",
+   "members": [
+    "theophylline"
+   ],
+   "what": "Used for asthma and COPD.",
+   "how": "Relaxes airway muscle by blocking phosphodiesterase and adenosine receptors; the margin between effective and toxic levels is narrow.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Theophylline",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK519024/"
+    }
+   ]
+  },
+  {
+   "id": "loratadine",
+   "name": "Loratadine",
+   "members": [
+    "loratadine"
+   ],
+   "what": "Used for allergy symptoms.",
+   "how": "Blocks histamine H1 receptors outside the brain, so it causes little drowsiness.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Loratadine",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK542278/"
+    }
+   ]
+  },
+  {
+   "id": "amoxicillin",
+   "name": "Amoxicillin",
+   "members": [
+    "amoxicillin"
+   ],
+   "what": "Used for bacterial infections.",
+   "how": "A penicillin that stops bacteria from building their cell wall.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Amoxicillin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK482250/"
+    }
+   ]
+  },
+  {
+   "id": "vancomycin",
+   "name": "Vancomycin",
+   "members": [
+    "vancomycin"
+   ],
+   "what": "Used for serious gram-positive infections including MRSA.",
+   "how": "Stops bacteria from building their cell wall; levels are monitored because it can injure the kidneys.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Vancomycin",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK459263/"
+    }
+   ]
+  },
+  {
+   "id": "gentamicin",
+   "name": "Aminoglycosides",
+   "members": [
+    "gentamicin"
+   ],
+   "what": "Used for serious bacterial infections.",
+   "how": "An aminoglycoside that stops bacteria from making proteins; it can damage the kidneys and inner ear.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Aminoglycosides",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK541105/"
+    }
+   ]
+  },
+  {
+   "id": "potassium_chloride",
+   "name": "Potassium Chloride",
+   "members": [
+    "potassium chloride"
+   ],
+   "what": "Used to treat or prevent low potassium.",
+   "how": "Replaces potassium.",
+   "sources": [
+    {
+     "label": "StatPearls (NIH NCBI Bookshelf, peer-reviewed): Potassium Chloride",
+     "url": "https://www.ncbi.nlm.nih.gov/books/NBK557785/"
+    }
+   ]
+  }
+ ],
+ "statpearls_by_ingredient": {
+  "benzodiazepines": {
+   "title": "Benzodiazepines",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK470159/"
+  },
+  "amphetamine": {
+   "title": "Amphetamine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK556103/"
+  },
+  "methylphenidate": {
+   "title": "Methylphenidate",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK482451/"
+  },
+  "zolpidem": {
+   "title": "Zolpidem",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK442008/"
+  },
+  "gabapentin": {
+   "title": "Gabapentin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK493228/"
+  },
+  "pregabalin": {
+   "title": "Pregabalin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK470341/"
+  },
+  "warfarin": {
+   "title": "Warfarin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK470313/"
+  },
+  "sulfonylureas": {
+   "title": "Sulfonylureas",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK513225/"
+  },
+  "insulin": {
+   "title": "Insulin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK560688/"
+  },
+  "metformin": {
+   "title": "Metformin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK518983/"
+  },
+  "macrolides": {
+   "title": "Macrolides",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK551495/"
+  },
+  "spironolactone": {
+   "title": "Spironolactone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK554421/"
+  },
+  "triptans": {
+   "title": "Triptans",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK554507/"
+  },
+  "alpha-blockers": {
+   "title": "Alpha-Blockers",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK556066/"
+  },
+  "clonidine": {
+   "title": "Clonidine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK459124/"
+  },
+  "nitroglycerin": {
+   "title": "Nitroglycerin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK482382/"
+  },
+  "corticosteroids": {
+   "title": "Corticosteroids",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK554612/"
+  },
+  "lamotrigine": {
+   "title": "Lamotrigine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK470442/"
+  },
+  "carbamazepine": {
+   "title": "Carbamazepine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK482455/"
+  },
+  "topiramate": {
+   "title": "Topiramate",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK554530/"
+  },
+  "lithium": {
+   "title": "Lithium",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK519062/"
+  },
+  "levothyroxine": {
+   "title": "Levothyroxine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK539808/"
+  },
+  "bupropion": {
+   "title": "Bupropion",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK470212/"
+  },
+  "trazodone": {
+   "title": "Trazodone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK470560/"
+  },
+  "buspirone": {
+   "title": "Buspirone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK531477/"
+  },
+  "atomoxetine": {
+   "title": "Atomoxetine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK493234/"
+  },
+  "antihistamines": {
+   "title": "Antihistamines",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK538188/"
+  },
+  "colchicine": {
+   "title": "Colchicine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK431102/"
+  },
+  "allopurinol": {
+   "title": "Allopurinol",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK499942/"
+  },
+  "methotrexate": {
+   "title": "Methotrexate",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK556114/"
+  },
+  "azathioprine": {
+   "title": "Azathioprine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK542190/"
+  },
+  "tacrolimus": {
+   "title": "Tacrolimus",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK544318/"
+  },
+  "digoxin": {
+   "title": "Digoxin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK556025/"
+  },
+  "amiodarone": {
+   "title": "Amiodarone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK482154/"
+  },
+  "ondansetron": {
+   "title": "Ondansetron",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK499839/"
+  },
+  "metoclopramide": {
+   "title": "Metoclopramide",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK519517/"
+  },
+  "naltrexone": {
+   "title": "Naltrexone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK534811/"
+  },
+  "buprenorphine": {
+   "title": "Buprenorphine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK459126/"
+  },
+  "tramadol": {
+   "title": "Tramadol",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK537060/"
+  },
+  "methadone": {
+   "title": "Methadone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK562216/"
+  },
+  "fentanyl": {
+   "title": "Fentanyl",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK459275/"
+  },
+  "linezolid": {
+   "title": "Linezolid",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK539793/"
+  },
+  "rifampin": {
+   "title": "Rifampin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK557488/"
+  },
+  "phenytoin": {
+   "title": "Phenytoin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK551520/"
+  },
+  "donepezil": {
+   "title": "Donepezil",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK513257/"
+  },
+  "tamoxifen": {
+   "title": "Tamoxifen",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK532905/"
+  },
+  "tizanidine": {
+   "title": "Tizanidine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK519505/"
+  },
+  "oxycodone": {
+   "title": "Oxycodone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK482226/"
+  },
+  "hydrocodone": {
+   "title": "Hydrocodone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK537288/"
+  },
+  "montelukast": {
+   "title": "Montelukast",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK459301/"
+  },
+  "amoxicillin": {
+   "title": "Amoxicillin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK482250/"
+  },
+  "mirtazapine": {
+   "title": "Mirtazapine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK519059/"
+  },
+  "heparin": {
+   "title": "Heparin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK538247/"
+  },
+  "clopidogrel": {
+   "title": "Clopidogrel",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK470539/"
+  },
+  "aspirin": {
+   "title": "Salicylic Acid (Aspirin)",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK519032/"
+  },
+  "acetaminophen": {
+   "title": "Acetaminophen",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK482369/"
+  },
+  "oxybutynin": {
+   "title": "Oxybutynin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK499985/"
+  },
+  "benztropine": {
+   "title": "Benztropine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK560633/"
+  },
+  "sildenafil": {
+   "title": "Sildenafil",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK558978/"
+  },
+  "isosorbide": {
+   "title": "Isosorbide",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK557839/"
+  },
+  "carisoprodol": {
+   "title": "Carisoprodol",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK553077/"
+  },
+  "cyclobenzaprine": {
+   "title": "Cyclobenzaprine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK513362/"
+  },
+  "ketorolac": {
+   "title": "Ketorolac",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK545172/"
+  },
+  "vancomycin": {
+   "title": "Vancomycin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK459263/"
+  },
+  "aminoglycosides": {
+   "title": "Aminoglycosides",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK541105/"
+  },
+  "fluconazole": {
+   "title": "Fluconazole",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK537158/"
+  },
+  "ketoconazole": {
+   "title": "Ketoconazole",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK559221/"
+  },
+  "theophylline": {
+   "title": "Theophylline",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK519024/"
+  },
+  "potassium chloride": {
+   "title": "Potassium Chloride",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK557785/"
+  },
+  "apixaban": {
+   "title": "Apixaban",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK507910/"
+  },
+  "rivaroxaban": {
+   "title": "Rivaroxaban",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK557502/"
+  },
+  "verapamil": {
+   "title": "Verapamil",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK538495/"
+  },
+  "diltiazem": {
+   "title": "Diltiazem",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK532937/"
+  },
+  "propranolol": {
+   "title": "Propranolol",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK557801/"
+  },
+  "metoprolol": {
+   "title": "Metoprolol",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK532923/"
+  },
+  "carvedilol": {
+   "title": "Carvedilol",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK534868/"
+  },
+  "olanzapine": {
+   "title": "Olanzapine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK532903/"
+  },
+  "quetiapine": {
+   "title": "Quetiapine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK459145/"
+  },
+  "risperidone": {
+   "title": "Risperidone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK459313/"
+  },
+  "haloperidol": {
+   "title": "Haloperidol",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK560892/"
+  },
+  "clozapine": {
+   "title": "Clozapine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK535399/"
+  },
+  "lurasidone": {
+   "title": "Lurasidone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK541057/"
+  },
+  "escitalopram": {
+   "title": "Escitalopram",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK557734/"
+  },
+  "citalopram": {
+   "title": "Citalopram",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK482222/"
+  },
+  "sertraline": {
+   "title": "Sertraline",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK547689/"
+  },
+  "fluoxetine": {
+   "title": "Fluoxetine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK459223/"
+  },
+  "paroxetine": {
+   "title": "Paroxetine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK526022/"
+  },
+  "fluvoxamine": {
+   "title": "Fluvoxamine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK619811/"
+  },
+  "venlafaxine": {
+   "title": "Venlafaxine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK535363/"
+  },
+  "duloxetine": {
+   "title": "Duloxetine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK549806/"
+  },
+  "amitriptyline": {
+   "title": "Amitriptyline",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK537225/"
+  },
+  "phenelzine": {
+   "title": "Phenelzine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK554508/"
+  },
+  "alprazolam": {
+   "title": "Alprazolam",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK538165/"
+  },
+  "clonazepam": {
+   "title": "Clonazepam",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK556010/"
+  },
+  "lorazepam": {
+   "title": "Lorazepam",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK532890/"
+  },
+  "diazepam": {
+   "title": "Diazepam",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK537022/"
+  },
+  "temazepam": {
+   "title": "Temazepam",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK599496/"
+  },
+  "promethazine": {
+   "title": "Promethazine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK544361/"
+  },
+  "meperidine": {
+   "title": "Meperidine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK470362/"
+  },
+  "codeine": {
+   "title": "Codeine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK526029/"
+  },
+  "morphine": {
+   "title": "Morphine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK526115/"
+  },
+  "hydromorphone": {
+   "title": "Hydromorphone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK470393/"
+  },
+  "glipizide": {
+   "title": "Glipizide",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK459177/"
+  },
+  "semaglutide": {
+   "title": "Semaglutide",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK603723/"
+  },
+  "empagliflozin": {
+   "title": "Empagliflozin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK532925/"
+  },
+  "simvastatin": {
+   "title": "Simvastatin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK532919/"
+  },
+  "atorvastatin": {
+   "title": "Atorvastatin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK430779/"
+  },
+  "lisinopril": {
+   "title": "Lisinopril",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK482230/"
+  },
+  "losartan": {
+   "title": "Losartan",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK526065/"
+  },
+  "amlodipine": {
+   "title": "Amlodipine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK519508/"
+  },
+  "furosemide": {
+   "title": "Furosemide",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK499921/"
+  },
+  "hydrochlorothiazide": {
+   "title": "Hydrochlorothiazide",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK430766/"
+  },
+  "ibuprofen": {
+   "title": "Ibuprofen",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK542299/"
+  },
+  "naproxen": {
+   "title": "Naproxen",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK525965/"
+  },
+  "celecoxib": {
+   "title": "Celecoxib",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK535359/"
+  },
+  "omeprazole": {
+   "title": "Omeprazole",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK539786/"
+  },
+  "pantoprazole": {
+   "title": "Pantoprazole",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK499945/"
+  },
+  "ciprofloxacin": {
+   "title": "Ciprofloxacin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK535454/"
+  },
+  "levofloxacin": {
+   "title": "Levofloxacin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK545180/"
+  },
+  "azithromycin": {
+   "title": "Azithromycin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK557766/"
+  },
+  "erythromycin": {
+   "title": "Erythromycin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK532249/"
+  },
+  "sumatriptan": {
+   "title": "Sumatriptan",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK470206/"
+  },
+  "prednisone": {
+   "title": "Prednisone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK534809/"
+  },
+  "emtricitabine": {
+   "title": "Emtricitabine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK539853/"
+  },
+  "loratadine": {
+   "title": "Loratadine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK542278/"
+  },
+  "caffeine": {
+   "title": "Caffeine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK519490/"
+  },
+  "naloxone": {
+   "title": "Naloxone",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK441910/"
+  },
+  "folic acid": {
+   "title": "Folic Acid",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK554487/"
+  },
+  "calcium carbonate": {
+   "title": "Calcium Carbonate",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK562303/"
+  },
+  "gentamicin": {
+   "title": "Gentamicin",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK557550/"
+  },
+  "ketamine": {
+   "title": "Ketamine",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK470357/"
+  },
+  "quinolones": {
+   "title": "Quinolones",
+   "url": "https://www.ncbi.nlm.nih.gov/books/NBK557777/"
+  }
+ }
+}

@@ -101,3 +101,19 @@ def test_units_beyond_mg_and_routes_are_read() -> None:
     assert parse_entry("Klor-Con (potassium chloride ER) 20 mEq once daily = 20 mEq/day").strength_unit == "mEq"
     patch = parse_entry("Duragesic (fentanyl) 25 mcg/h transdermal patch one patch every 72 hours = 25 mcg/h continuous")
     assert (patch.name_text, patch.strength_unit, patch.daily_total) == ("fentanyl", "mcg/h", 25.0)
+
+
+def test_dosed_medications_typed_without_separators_are_split() -> None:
+    """
+    Takes no arguments.
+    Splits the list a user typed on 2026-09-23 with no commas, and checks that a direction or stated total never splits a line.
+    Gives nothing; asserts one entry per dosed medication.
+    """
+    from rx_label_search.normalize.med_line_parser import split_entries
+
+    assert split_entries("Adderall 30 mg Valium 20 mg oxycodone 5 mg propanolol 120 mg Ritalin 30 mg Ativan 10 mg") == (
+        "Adderall 30 mg", "Valium 20 mg", "oxycodone 5 mg", "propanolol 120 mg", "Ritalin 30 mg", "Ativan 10 mg",
+    )
+    assert split_entries("Xanax 1 mg tid = 3 mg/day Valium 5mg twice daily") == ("Xanax 1 mg tid = 3 mg/day", "Valium 5mg twice daily")
+    nitro = "Nitrostat (nitroglycerin sublingual) 0.4 mg as needed for chest pain up to 3 tablets in 15 minutes = 1.2 mg per episode"
+    assert split_entries(nitro) == (nitro,)

@@ -28,7 +28,7 @@ import {
 } from "./meds.js";
 import { alertIcon, chevronIcon, externalLinkIcon, plusIcon, removeIcon } from "./render_icons.js";
 import { buildLookupBlock } from "./render_lookup.js";
-import type { AlertMember, AlertRecord, AppState, LabelLookup, LabelNote, MedicationRow, PdlaTag, UnresolvedEntry } from "./records.js";
+import type { AlertMember, AlertRecord, AppState, DrugProfile, LabelLookup, LabelNote, MedicationRow, PdlaTag, SourceLink, UnresolvedEntry } from "./records.js";
 
 export interface InteractionsCallbacks {
   readonly onAddMedication: (text: string) => void;
@@ -488,6 +488,9 @@ function fact(text: string, extraClass: string = ""): HTMLElement {
 function buildCardDetail(row: MedicationRow): HTMLElement {
   const detail = document.createElement("div");
   detail.className = "med-card__detail";
+  if (row.profile !== null) {
+    detail.append(...buildProfile(row, row.profile));
+  }
   if (row.label_notes.length === 0) {
     const none = document.createElement("p");
     none.className = "med-card__detail-empty";
@@ -506,6 +509,154 @@ function buildCardDetail(row: MedicationRow): HTMLElement {
     detail.append(meta);
   }
   return detail;
+}
+
+/**
+ * Takes one resolved row and its drug profile.
+ * Builds the profile sections: what kind of drug it is and how it acts on the brain or body (with NIH sources), what the FDA approved it to treat, how long it is meant to be used, and its usual and maximum doses, each label statement quoted from the drug's own label.
+ * Gives the section elements, skipping any section with nothing to show.
+ */
+function buildProfile(row: MedicationRow, profile: DrugProfile): readonly HTMLElement[] {
+  const parts: HTMLElement[] = [];
+  const label = profile.label;
+  const kind = profileSection("What kind of drug");
+  for (const drugClass of profile.classes) {
+    kind.append(profileText(drugClass.name, "profile__class"), profileText(drugClass.what));
+    kind.append(profileSubhead("How it works"), profileText(drugClass.how));
+  }
+  if (profile.classes.length === 0 && label.mechanism.length > 0) {
+    kind.append(profileSubhead("How it works, from the label"), ...label.mechanism.map((sentence) => profileQuote(sentence)));
+  }
+  const sources = [...profile.classes.flatMap((drugClass) => drugClass.sources), ...profile.ingredient_references.map((reference) => ({ label: `StatPearls (NIH): ${reference.label}`, url: reference.url }))];
+  if (sources.length > 0) {
+    kind.append(profileLinks(sources));
+  }
+  if (kind.childElementCount > 1) {
+    parts.push(kind);
+  }
+  if (label.indications.length > 0) {
+    const uses = profileSection("FDA-approved uses");
+    uses.append(...label.indications.slice(0, 2).map((sentence) => profileQuote(sentence)), profileLabelLink(row));
+    parts.push(uses);
+  }
+  const classDuration = profile.classes.map((drugClass) => drugClass.duration).filter((text): text is string => text !== null && text.length > 0);
+  if (classDuration.length > 0 || label.duration.length > 0) {
+    const duration = profileSection("How long it is meant to be used");
+    duration.append(...classDuration.map((text) => profileText(text)), ...label.duration.map((sentence) => profileQuote(sentence)));
+    parts.push(duration);
+  }
+  if (label.dose_recommended.length > 0 || label.dose_maximum.length > 0 || profile.ceilings.length > 0) {
+    const dose = profileSection("Usual and maximum dose");
+    if (label.dose_recommended.length > 0) {
+      dose.append(profileSubhead("Recommended, from the label"), ...label.dose_recommended.map((sentence) => profileQuote(sentence)));
+    }
+    if (label.dose_maximum.length > 0) {
+      dose.append(profileSubhead("Maximum, from the label"), ...label.dose_maximum.map((sentence) => profileQuote(sentence)));
+    }
+    for (const ceiling of profile.ceilings) {
+      dose.append(profileText(`Daily maximum this tool checks totals against: ${ceiling.max_mg_per_day} mg of ${ceiling.ingredient}${ceiling.note.length > 0 ? ` (${ceiling.note})` : ""}.`));
+    }
+    parts.push(dose);
+  }
+  return parts;
+}
+
+/**
+ * Takes a section title.
+ * Builds an empty profile section with its heading.
+ * Gives the section element.
+ */
+function profileSection(title: string): HTMLElement {
+  const section = document.createElement("section");
+  section.className = "profile";
+  const heading = document.createElement("h4");
+  heading.className = "profile__title";
+  heading.textContent = title;
+  section.append(heading);
+  return section;
+}
+
+/**
+ * Takes a subheading.
+ * Builds a small subheading inside a profile section.
+ * Gives the paragraph element.
+ */
+function profileSubhead(text: string): HTMLElement {
+  const sub = document.createElement("p");
+  sub.className = "profile__sub";
+  sub.textContent = text;
+  return sub;
+}
+
+/**
+ * Takes plain text and an optional class.
+ * Builds one paragraph of written explanation.
+ * Gives the paragraph element.
+ */
+function profileText(text: string, className: string = "profile__text"): HTMLElement {
+  const paragraph = document.createElement("p");
+  paragraph.className = className;
+  paragraph.textContent = text;
+  return paragraph;
+}
+
+/**
+ * Takes one sentence from the FDA label.
+ * Builds it as a quotation, so written explanation and label text are never confused.
+ * Gives the blockquote element.
+ */
+function profileQuote(sentence: string): HTMLElement {
+  const quote = document.createElement("blockquote");
+  quote.className = "profile__quote";
+  quote.textContent = sentence;
+  return quote;
+}
+
+/**
+ * Takes source links.
+ * Builds a "Sources" line of links that open in a new tab, each only to NIH or FDA pages.
+ * Gives the paragraph element.
+ */
+function profileLinks(sources: readonly SourceLink[]): HTMLElement {
+  const line = document.createElement("p");
+  line.className = "profile__sources";
+  line.append(document.createTextNode("Sources: "));
+  const seen = new Set<string>();
+  for (const source of sources) {
+    if (seen.has(source.url)) {
+      continue;
+    }
+    if (seen.size > 0) {
+      line.append(document.createTextNode(" · "));
+    }
+    seen.add(source.url);
+    line.append(buildExternalLink(source.label, safeProfileUrl(source.url), "profile__link"));
+  }
+  return line;
+}
+
+/**
+ * Takes one resolved row.
+ * Builds the link to that drug's full label on DailyMed.
+ * Gives the paragraph element, or an empty one when the drug has no label in the collection.
+ */
+function profileLabelLink(row: MedicationRow): HTMLElement {
+  const line = document.createElement("p");
+  line.className = "profile__sources";
+  if (row.set_id.length > 0) {
+    line.append(buildExternalLink("Full FDA label on DailyMed", `${DAILYMED_URL_PREFIX}dailymed/drugInfo.cfm?setid=${encodeURIComponent(row.set_id)}`, "profile__link"));
+  }
+  return line;
+}
+
+/**
+ * Takes a source URL from the API.
+ * Allows only NIH (NCBI Bookshelf, PubMed) and FDA pages.
+ * Gives the URL unchanged when allowed, or "#" otherwise.
+ */
+function safeProfileUrl(url: string): string {
+  const allowed = ["https://www.ncbi.nlm.nih.gov/books/", "https://pubmed.ncbi.nlm.nih.gov/", "https://www.fda.gov/", "https://medlineplus.gov/"];
+  return allowed.some((prefix) => url.startsWith(prefix)) ? url : "#";
 }
 
 /**

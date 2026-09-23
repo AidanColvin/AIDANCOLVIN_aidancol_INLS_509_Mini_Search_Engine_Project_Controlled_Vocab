@@ -79,6 +79,8 @@ def medication_table_row(entry: MedEntry, drug: Mapping[str, Any] | None) -> dic
         "pdla_tags": [{"term_id": term_id, "name": TERMS_BY_ID[term_id].name if term_id in TERMS_BY_ID else term_id} for term_id in tags],
         "label_notes": label_notes(record["evidence"]),
         "no_label": bool(record.get("no_label")),
+        "profile": drug.get("profile"),
+        "set_id": record.get("set_id", ""),
         **entry_detail(entry),
     }
 

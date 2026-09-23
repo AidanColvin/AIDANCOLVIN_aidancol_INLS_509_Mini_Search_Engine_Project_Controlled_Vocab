@@ -57,13 +57,66 @@ def drop_thousands_separators(text: str) -> str:
     return THOUSANDS_SEPARATOR.sub("", text)
 
 
+RUN_ON_STRENGTH = re.compile(rf"^(?:{_NUMBER}(?:/{_NUMBER})*)\s*(?:{_UNIT})(?:/\w+)?$|^(?:{_UNIT})(?:/\w+)?$", re.IGNORECASE)
+RUN_ON_NUMBER = re.compile(rf"^{_NUMBER}(?:/{_NUMBER})*$")
+RUN_ON_NAME_START = re.compile(r"^[A-Za-z][A-Za-z\-']*$")
+RUN_ON_LOOKAHEAD = 6
+DOSING_WORDS: frozenset[str] = frozenset(
+    "once twice three four times time daily day days a an per every each hours hour hrs hr h q qd bid tid qid qhs prn po as needed necessary "
+    "at bedtime night morning evening afternoon in the with without before after food meals meal breakfast lunch dinner supper on those "
+    "max maximum up to no more than may repeat not exceed doses dose tablet tablets tab tabs capsule capsules cap caps pill pills patch patches "
+    "spray sprays puff puffs drop drops nostril nostrils eye eyes ear ears weekly week weeks continuous episode for and or by mouth orally oral "
+    "iv im subcutaneous transdermal sublingual nasal inhaled topical er xr xl sr ir dr cd la ds otc generic x of one two".split()
+)
+
+
+def is_strength_token(tokens: list[str], index: int) -> bool:
+    """
+    Takes a list's whitespace tokens and a position.
+    Checks whether a strength starts there: "20mg", "20 mg", "10/325 mg", or "25 mcg/h".
+    Gives True when it does.
+    """
+    token = tokens[index]
+    if RUN_ON_STRENGTH.match(token) and any(ch.isdigit() for ch in token):
+        return True
+    return bool(RUN_ON_NUMBER.match(token)) and index + 1 < len(tokens) and bool(RUN_ON_STRENGTH.match(tokens[index + 1]))
+
+
+def split_run_on(entry: str) -> tuple[str, ...]:
+    """
+    Takes one entry that may hold several medications typed without separators, such as "Adderall 30 mg Valium 20 mg oxycodone 5 mg".
+    Starts a new entry at a word that follows a strength, is not a dosing word, and is itself followed by a strength within six words before any "=", so a direction like "as needed for chest pain" never splits a line.
+    Gives the entries, the entry alone when nothing splits it.
+    """
+    tokens = entry.split()
+    pieces: list[list[str]] = [[]]
+    seen_strength = False
+    for index, token in enumerate(tokens):
+        word = token.strip("(),.;:").lower()
+        starts_new = (
+            seen_strength
+            and RUN_ON_NAME_START.match(token.rstrip(",.;:")) is not None
+            and word not in DOSING_WORDS
+            and RUN_ON_STRENGTH.match(token) is None
+            and any(is_strength_token(tokens, ahead) for ahead in range(index + 1, min(len(tokens), index + 1 + RUN_ON_LOOKAHEAD)) if "=" not in tokens[index + 1 : ahead + 1])
+        )
+        if starts_new:
+            pieces.append([])
+            seen_strength = False
+        pieces[-1].append(token)
+        if is_strength_token(tokens, index):
+            seen_strength = True
+    return tuple(" ".join(piece) for piece in pieces if piece)
+
+
 def split_entries(text: str) -> tuple[str, ...]:
     """
     Takes a free-text medication list.
-    Splits it at commas, semicolons, and new lines, after removing thousands-separator commas inside numbers.
+    Splits it at commas, semicolons, and new lines, after removing thousands-separator commas inside numbers, then splits any entry that runs several dosed medications together.
     Gives the tuple of non-empty trimmed entries, empty for blank input.
     """
-    return tuple(part.strip() for part in ENTRY_SEPARATORS.split(drop_thousands_separators(text)) if part.strip())
+    parts = (part.strip() for part in ENTRY_SEPARATORS.split(drop_thousands_separators(text)) if part.strip())
+    return tuple(piece for part in parts for piece in split_run_on(part))
 
 
 def parse_combination_strength(text: str) -> tuple[float | None, str | None, str, tuple[str, ...]]:

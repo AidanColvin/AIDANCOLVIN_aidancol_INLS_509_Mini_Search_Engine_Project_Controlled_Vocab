@@ -10,6 +10,7 @@ from rx_label_search.interactions.checker import run_interaction_check
 from rx_label_search.interactions.knowledge import Knowledge
 from rx_label_search.interactions.knowledge_evidence import build_rule_evidence
 from rx_label_search.interactions.lookup import build_ingredient_set_index
+from rx_label_search.interactions.profiles import drug_profile, write_profiles
 from rx_label_search.interactions.report import build_check_report
 from rx_label_search.normalize.run import default_fetcher
 from rx_label_search.storage.read_json import read_json
@@ -22,6 +23,7 @@ from rx_label_search.vocabulary.terms import TERMS_BY_ID
 CHECKER_RECORDS_FILE = "checker_records.json"
 RULE_EVIDENCE_FILE = "rule_evidence.json"
 KNOWLEDGE_FILE = Path(__file__).resolve().parents[3] / "data" / "reference" / "interaction_knowledge.json"
+DRUG_CLASSES_FILE = Path(__file__).resolve().parents[3] / "data" / "reference" / "drug_classes.json"
 INGREDIENT_SET_INDEX_FILE = "ingredient_set_index.json"
 
 
@@ -75,7 +77,8 @@ def build_checker_data(build_dir: Path) -> dict[str, int]:
     salt_to_base = read_json(build_dir / "base_ingredients.json") if (build_dir / "base_ingredients.json").is_file() else {}
     evidence = build_rule_evidence(iter_jsonl(build_dir / "collection.jsonl"), Knowledge(read_json(KNOWLEDGE_FILE)), salt_to_base)
     write_json(build_dir / RULE_EVIDENCE_FILE, evidence)
-    return {"records": len(records), "rules_with_label_evidence": len(evidence["by_base"])}
+    profiles = write_profiles(iter_jsonl(build_dir / "collection.jsonl"), build_dir)
+    return {"records": len(records), "rules_with_label_evidence": len(evidence["by_base"]), "profiles": profiles}
 
 
 def run_check(build_dir: Path, medication_text: str, build_date: str, use_rxnorm: bool) -> dict[str, Any]:
@@ -94,4 +97,7 @@ def run_check(build_dir: Path, medication_text: str, build_date: str, use_rxnorm
     knowledge = Knowledge(read_json(KNOWLEDGE_FILE))
     rule_evidence = read_json(build_dir / RULE_EVIDENCE_FILE) if (build_dir / RULE_EVIDENCE_FILE).is_file() else {}
     result = run_interaction_check(medication_text, dictionary, fetch, summaries, salt_to_base, ingredient_index, checker_records, metabolite_reference, knowledge, rule_evidence)
+    classes = read_json(DRUG_CLASSES_FILE)
+    for drug in result["resolved_drugs"]:
+        drug["profile"] = drug_profile(build_dir, drug["record"], classes, knowledge.ceilings)
     return build_check_report(result, build_date)

@@ -53,6 +53,8 @@ function row(overrides: Partial<MedicationRow>): MedicationRow {
     as_needed: false,
     release_form: null,
     no_label: false,
+    set_id: "",
+    profile: null,
     ...overrides,
   };
 }
@@ -287,4 +289,25 @@ test("replaceNameKeepingDose keeps the dose tail and drops only the typed name",
   assert.equal(replaceNameKeepingDose("Tramadol HCl   50mg bid", "tramadol hydrochloride"), "tramadol hydrochloride 50mg bid");
   assert.equal(replaceNameKeepingDose("Bayer", "bayer aspirin pill"), "bayer aspirin pill");
   assert.equal(replaceNameKeepingDose("tramadol ", "tramadol hcl"), "tramadol hcl");
+});
+
+/**
+ * Takes no arguments.
+ * Checks the run-together list a user typed on 2026-09-23 with no commas, and lines that must stay whole.
+ * Gives nothing; asserts one entry per dosed medication and no split inside a direction or stated total.
+ */
+test("splitEnteredText splits dosed medications typed without separators", () => {
+  assert.deepEqual(splitEnteredText("Adderall 30 mg Valium 20 mg oxycodone 5 mg propanolol 120 mg Ritalin 30 mg Ativan 10 mg"), [
+    "Adderall 30 mg",
+    "Valium 20 mg",
+    "oxycodone 5 mg",
+    "propanolol 120 mg",
+    "Ritalin 30 mg",
+    "Ativan 10 mg",
+  ]);
+  assert.deepEqual(splitEnteredText("Xanax 1 mg tid = 3 mg/day Valium 5mg twice daily"), ["Xanax 1 mg tid = 3 mg/day", "Valium 5mg twice daily"]);
+  assert.deepEqual(splitEnteredText("Nitrostat (nitroglycerin sublingual) 0.4 mg as needed for chest pain up to 3 tablets in 15 minutes = 1.2 mg per episode"), [
+    "Nitrostat (nitroglycerin sublingual) 0.4 mg as needed for chest pain up to 3 tablets in 15 minutes = 1.2 mg per episode",
+  ]);
+  assert.deepEqual(splitEnteredText("Lyrica 100 mg tid"), ["Lyrica 100 mg tid"]);
 });

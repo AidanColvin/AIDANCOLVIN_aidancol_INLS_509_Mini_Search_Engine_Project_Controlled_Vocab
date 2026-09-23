@@ -10,11 +10,13 @@ import type {
   AlertReference,
   CheckResponse,
   ComponentStrength,
+  DrugProfile,
   LabelNote,
   MedicationRow,
   MoleculeTotal,
   PdlaTag,
   SearchHit,
+  SourceLink,
   SearchResponse,
   TermInfo,
   TermsOnlyResponse,
@@ -177,6 +179,62 @@ function toMedicationRow(value: unknown): MedicationRow {
     as_needed: record["as_needed"] === true,
     release_form: optionalString(record["release_form"], "medication_table[].release_form"),
     no_label: record["no_label"] === true,
+    set_id: optionalString(record["set_id"], "medication_table[].set_id") ?? "",
+    profile: record["profile"] === undefined || record["profile"] === null ? null : toDrugProfile(record["profile"]),
+  };
+}
+
+/**
+ * Takes an unknown value and a label for error messages.
+ * Reads a list of strings, treating a missing list as empty.
+ * Gives the strings, or throws ApiShapeError.
+ */
+function stringList(value: unknown, label: string): readonly string[] {
+  return value === undefined ? [] : asArray(value, label, (item) => asString(item, `${label}[]`));
+}
+
+/**
+ * Takes an unknown value.
+ * Validates it as a link with a label and a URL; StatPearls titles arrive under "title".
+ * Gives the SourceLink, or throws ApiShapeError.
+ */
+function toSourceLink(value: unknown): SourceLink {
+  const record = asRecord(value, "source");
+  const label = record["label"] ?? record["title"];
+  return { label: asString(label, "source.label"), url: asString(record["url"], "source.url") };
+}
+
+/**
+ * Takes an unknown value.
+ * Validates it as a drug profile: class explanations, ingredient references, the label's quoted statements, and labeled maximums.
+ * Gives the DrugProfile, or throws ApiShapeError.
+ */
+function toDrugProfile(value: unknown): DrugProfile {
+  const record = asRecord(value, "profile");
+  const label = record["label"] === undefined || record["label"] === null ? {} : asRecord(record["label"], "profile.label");
+  return {
+    classes: record["classes"] === undefined ? [] : asArray(record["classes"], "profile.classes", (item) => {
+      const entry = asRecord(item, "profile.classes[]");
+      return {
+        name: asString(entry["name"], "class.name"),
+        what: asString(entry["what"], "class.what"),
+        how: asString(entry["how"], "class.how"),
+        duration: optionalString(entry["duration"], "class.duration"),
+        sources: entry["sources"] === undefined ? [] : asArray(entry["sources"], "class.sources", toSourceLink),
+      };
+    }),
+    ingredient_references: record["ingredient_references"] === undefined ? [] : asArray(record["ingredient_references"], "profile.ingredient_references", toSourceLink),
+    label: {
+      indications: stringList(label["indications"], "label.indications"),
+      mechanism: stringList(label["mechanism"], "label.mechanism"),
+      dose_recommended: stringList(label["dose_recommended"], "label.dose_recommended"),
+      dose_maximum: stringList(label["dose_maximum"], "label.dose_maximum"),
+      duration: stringList(label["duration"], "label.duration"),
+    },
+    ceilings: record["ceilings"] === undefined ? [] : asArray(record["ceilings"], "profile.ceilings", (item) => {
+      const entry = asRecord(item, "profile.ceilings[]");
+      return { ingredient: asString(entry["ingredient"], "ceiling.ingredient"), max_mg_per_day: asNumber(entry["max_mg_per_day"], "ceiling.max"), note: asString(entry["note"] ?? "", "ceiling.note") };
+    }),
   };
 }
 

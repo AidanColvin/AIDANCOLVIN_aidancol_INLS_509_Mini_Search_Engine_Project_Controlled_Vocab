@@ -35,13 +35,75 @@ function splitBareNamesWithoutDose(entry: string): readonly string[] {
   return words;
 }
 
+const UNIT = "mcg/hr?|mg|mcg|g|ml|meq|units?|%";
+const NUMBER = "\\d+(?:\\.\\d+)?";
+const STRENGTH_TOKEN = new RegExp(`^(?:${NUMBER}(?:/${NUMBER})*)\\s*(?:${UNIT})(?:/\\w+)?$|^(?:${UNIT})(?:/\\w+)?$`, "i");
+const NUMBER_TOKEN = new RegExp(`^${NUMBER}(?:/${NUMBER})*$`);
+const NAME_START = /^[A-Za-z][A-Za-z\-']*$/;
+const LOOKAHEAD = 6;
+const DOSING_WORDS: ReadonlySet<string> = new Set(
+  ("once twice three four times time daily day days a an per every each hours hour hrs hr h q qd bid tid qid qhs prn po as needed necessary " +
+    "at bedtime night morning evening afternoon in the with without before after food meals meal breakfast lunch dinner supper on those " +
+    "max maximum up to no more than may repeat not exceed doses dose tablet tablets tab tabs capsule capsules cap caps pill pills patch patches " +
+    "spray sprays puff puffs drop drops nostril nostrils eye eyes ear ears weekly week weeks continuous episode for and or by mouth orally oral " +
+    "iv im subcutaneous transdermal sublingual nasal inhaled topical er xr xl sr ir dr cd la ds otc generic x of one two").split(" "),
+);
+
+/**
+ * Takes an entry's whitespace tokens and a position.
+ * Checks whether a strength starts there: "20mg", "20 mg", "10/325 mg", or "25 mcg/h".
+ * Gives true when it does.
+ */
+function isStrengthToken(tokens: readonly string[], index: number): boolean {
+  const token = tokens[index] ?? "";
+  if (STRENGTH_TOKEN.test(token) && /\d/.test(token)) {
+    return true;
+  }
+  const next = tokens[index + 1];
+  return NUMBER_TOKEN.test(token) && next !== undefined && STRENGTH_TOKEN.test(next);
+}
+
+/**
+ * Takes one entry that may hold several medications typed without separators, such as "Adderall 30 mg Valium 20 mg".
+ * Starts a new entry at a word that follows a strength, is not a dosing or unit word, and is followed by a strength within six words before any "=" (the same rule the server applies), so "as needed for chest pain" never splits a line.
+ * Gives the entries, the entry alone when nothing splits it.
+ */
+export function splitRunOnDoses(entry: string): readonly string[] {
+  const tokens = entry.split(/\s+/).filter((token) => token.length > 0);
+  const pieces: string[][] = [[]];
+  let seenStrength = false;
+  tokens.forEach((token, index) => {
+    const word = token.replace(/^[(),.;:]+|[(),.;:]+$/g, "").toLowerCase();
+    let strengthAhead = false;
+    for (let ahead = index + 1; ahead < Math.min(tokens.length, index + 1 + LOOKAHEAD); ahead += 1) {
+      if (tokens.slice(index + 1, ahead + 1).includes("=")) {
+        break;
+      }
+      if (isStrengthToken(tokens, ahead)) {
+        strengthAhead = true;
+        break;
+      }
+    }
+    const startsNew = seenStrength && NAME_START.test(token.replace(/[,.;:]+$/, "")) && !DOSING_WORDS.has(word) && !STRENGTH_TOKEN.test(token) && strengthAhead;
+    if (startsNew) {
+      pieces.push([]);
+      seenStrength = false;
+    }
+    pieces[pieces.length - 1]?.push(token);
+    if (isStrengthToken(tokens, index)) {
+      seenStrength = true;
+    }
+  });
+  return pieces.filter((piece) => piece.length > 0).map((piece) => piece.join(" "));
+}
+
 /**
  * Takes freshly typed or pasted medication text, the same input splitPastedText takes.
  * Splits it at commas, semicolons, and new lines first, then, for any resulting entry that still reads as several bare drug names run together with only spaces (no digit, two or more words), splits that entry on whitespace too -- so "Zoloft Flexeril Xanax" typed with no separator does not silently collapse into one unresolvable entry that drops four of five medications.
  * Gives the tuple of non-empty entries, in the order they appeared, empty for blank input.
  */
 export function splitEnteredText(text: string): readonly string[] {
-  return splitPastedText(text).flatMap(splitBareNamesWithoutDose);
+  return splitPastedText(text).flatMap(splitBareNamesWithoutDose).flatMap(splitRunOnDoses);
 }
 
 /**
