@@ -1,0 +1,223 @@
+{
+ "id": "L12",
+ "input": "Symbyax (olanzapine/fluoxetine) 6/25 mg once daily = 6/25 mg/day, Prozac (fluoxetine) 20 mg once daily = 20 mg/day, Norco (hydrocodone/acetaminophen) 10/325 mg four times daily = 40/1300 mg/day, Tylenol (acetaminophen OTC) 500 mg 2 tablets three times daily = 3000 mg/day, Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day, Xanax XR (alprazolam ER) 1 mg once daily = 1 mg/day",
+ "viewport": "390x844",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.989,
+ "secondsToResults": 4.043,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Symbyax (olanzapine/fluoxetine) 6/25 mg once daily = 6/25 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Symbyax (olanzapine/fluoxetine) 6/25 mg once daily = 6/25 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluoxetine 25 mg / olanzapine 6 mg [symbyax]\n\nWhat the labels say about “Symbyax (olanzapine/fluoxetine) 6/25 mg once daily = 6/25 mg/day”\n\nolanzapine\n\n1 INDICATIONS AND USAGE Olanzapine is an atypical antipsychotic indicated: As oral formulation for the:…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Fluoxetine capsules are indicated for the treatment of: • Acute and maintenance…\n\nOpen on DailyMed\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute dep…\n\nOpen on DailyMed\nfluoxetine hcl\n\n1 INDICATIONS AND USAGE Fluoxetine tablets are indicated for the treatment of: Major Depressive Disorder…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Prozac (fluoxetine) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Prozac (fluoxetine) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluoxetine 20 mg [prozac]\n\nWhat the labels say about “Prozac (fluoxetine) 20 mg once daily = 20 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute depressive episode…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Fluoxetine capsules are indicated for the treatment of: • Acute and maintenance…\n\nOpen on DailyMed\nolanzapine\n\n…. Maintenance efficacy has not been systematically evaluated. As Olanzapine and Fluoxetine in Combination for the: Treatment of depressive episodes associated w…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Norco (hydrocodone/acetaminophen) 10/325 mg four times daily = 40/1300 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Norco (hydrocodone/acetaminophen) 10/325 mg four times daily = 40/1300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nacetaminophen / hydrocodone oral tablet [norco]\n\nWhat the labels say about “Norco (hydrocodone/acetaminophen) 10/325 mg four times daily = 40/1300 mg/day”\n\nhydrocodone bitartrate and acetaminophen\n\nINDICATIONS AND USAGE Hydrocodone bitartrate and acetaminophen oral solution is indicated for the mana…\n\nOpen on DailyMed\nJOURNAVX\nsuzetrigine\n\n…ntact Vertex Pharmaceuticals Incorporated at 1-877-634-8789 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\nAPADAZ\nbenzhydrocodone and acetaminophen\n\n1 INDICATIONS AND USAGE APADAZ is indicated for the short-term (no more than 14 days) management of acute pain severe enough to require an opioid analgesic and…\n\nOpen on DailyMed\nhydrocodone bitartrate and ibuprofen\n\nINDICATIONS AND USAGE Hydrocodone Bitartrate and Ibuprofen Tablets are indicated for the short-term ma…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Tylenol (acetaminophen OTC) 500 mg 2 tablets three times daily = 3000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Tylenol (acetaminophen OTC) 500 mg 2 tablets three times daily = 3000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nacetaminophen 650 mg [tylenol]\nacetaminophen 325 mg [tylenol]\nacetaminophen 80 mg [tylenol]\nacetaminophen 160 mg [tylenol]\nacetaminophen 500 mg [tylenol]\n\nWhat the labels say about “Tylenol (acetaminophen OTC) 500 mg 2 tablets three times daily = 3000 mg/day”\n\nlevetiracetam\n\n…for adjunctive therapy for the treatment of: • Myoclonic seizures in patients 12 years of age and older with juvenile myoclonic epilepsy (1.2) • Primary genera…\n\nOpen on DailyMed\ndofetilide\n\n…and DIAMOND MI) in which 1,511 patients received dofetilide capsules for up to three years. In the following section, adverse reaction data for cardiac arrhyth…\n\nOpen on DailyMed\nvigabatrin\n\n1 INDICATIONS AND USAGE Vigabatrin tablets are indicated for the treatment of: • Refractory Complex Partial Seizure…\n\nOpen on DailyMed\ndiflunisal\n\n…ONS AND USAGE Carefully consider the potential benefits and risks of diflunisal tablets and other treatment options before deciding to use diflunisal tablets. U…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nalprazolam 1 mg [xanax]\n\nWhat the labels say about “Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day”\n\nnefazodone hydrochloride\n\n…relatively persistent depressed or dysphoric mood that usually interferes with daily functioning (nearly every day for at least 2 weeks). It must include eithe…\n\nOpen on DailyMed\nalprazolam\n\n1 INDICATIONS AND USAGE Alprazolam tablets are indicated for the: acute treatment of generalized anxiety…\n\nOpen on DailyMed\nfluoxetine hcl\n\n…The efficacy of fluoxetine tablets in MDD was established in one 5-week trial, three 6-week trials, and one maintenance study in adults. The efficacy of fluoxe…\n\nOpen on DailyMed\nclarithromycin\n\n…ryngitis/Tonsillitis ( 1.4 ) Uncomplicated Skin and Skin Structure Infections ( 1.5 ) Acute Otitis Media in Pediatric Patients ( 1.6 ) Treatment and Prophylaxis…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Xanax XR (alprazolam ER) 1 mg once daily = 1 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Xanax XR (alprazolam ER) 1 mg once daily = 1 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nalprazolam 1 mg oral tablet, extended release [xanax xr]\n\nWhat the labels say about “Xanax XR (alprazolam ER) 1 mg once daily = 1 mg/day”\n\nAdzenys XR-ODT\namphetamine\n\n1. INDICATIONS AND USAGE ADZENYS XR-ODT is a central nervous system (CNS) stimul…\n\nOpen on DailyMed\nnefazodone hydrochloride\n\n…blets are indicated for the treatment of depression. When deciding among the alternative treatments available for this condition, the prescriber should consider…\n\nOpen on DailyMed\nJAKAFI\nruxolitinib\n\n1 INDICATIONS AND USAGE JAKAFI/JAKAFI XR is a kinase inhibitor indicated for tre…\n\nOpen on DailyMed\nAustedo\ndeutetrabenazine\n\n1 INDICATIONS AND USAGE AUSTEDO XR ® and AUSTEDO ® are indicated in adults for t…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76b264ce-2a13-4511-8e21-4ffad0a327f9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76b264ce-2a13-4511-8e21-4ffad0a327f9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d229cf71-96ec-4206-960b-d56fafc250ac",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0590d4e5-7107-4015-a6a8-deac14265aa2",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=470df63a-5c0f-42df-9023-a330a901153e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0348fec4-d919-4307-ac90-35360819bc00",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26de5f8c-8cec-46f6-a468-69451758a278",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=93ba3894-fd97-4432-9f2d-e7050371e91f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=666f89b4-fd81-420a-a390-eb1cd4014f61",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0bd4c34a-4f43-4c84-8b98-1d074cba97d5",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d5848f0-e9f0-4112-a7ca-bcc8ea2e69c6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1179269-00b5-48ea-972d-31e614e99b7e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0bd4c34a-4f43-4c84-8b98-1d074cba97d5",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1c82580-87ae-11e0-bc84-0002a5d5c51b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7ea3c60a-45c7-44cc-afc2-d87fa53993c0",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nSymbyax (olanzapine/fluoxetine) 6/25 mg once daily = 6/25 mg/day: not found. Edit it in the list, or remove it.\nProzac (fluoxetine) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nNorco (hydrocodone/acetaminophen) 10/325 mg four times daily = 40/1300 mg/day: not found. Edit it in the list, or remove it.\nTylenol (acetaminophen OTC) 500 mg 2 tablets three times daily = 3000 mg/day: not found. Edit it in the list, or remove it.\nXanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day: not found. Edit it in the list, or remove it.\nXanax XR (alprazolam ER) 1 mg once daily = 1 mg/day: not found. Edit it in the list, or remove it.\nE\n–\nD\n–\nC\n–\nB\n–\nA\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nSymbyax (olanzapine/fluoxetine) 6/25 mg once daily = 6/25 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluoxetine 25 mg / olanzapine 6 mg [symbyax]\n\nWhat the labels say about “Symbyax (olanzapine/fluoxetine) 6/25 mg once daily = 6/25 mg/day”\n\nolanzapine\n\n1 INDICATIONS AND USAGE Olanzapine is an atypical antipsychotic indicated: As oral formulation for the:…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Fluoxetine capsules are indicated for the treatment of: • Acute and maintenance…\n\nOpen on DailyMed\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute dep…\n\nOpen on DailyMed\nfluoxetine hcl\n\n1 INDICATIONS AND USAGE Fluoxetine tablets are indicated for the treatment of: Major Depressive Disorder…\n\nOpen on DailyMed\nShow 8 more\nProzac (fluoxetine) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluoxetine 20 mg [prozac]\n\nWhat the labels say about “Prozac (fluoxetine) 20 mg once daily = 20 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute depressive episode…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Fluoxetine capsules are indicated for the treatment of: • Acute and maintenance…\n\nOpen on DailyMed\nolanzapine\n\n…. Maintenance efficacy has not been systematically evaluated. As Olanzapine and Fluoxetine in Combination for the: Treatment of depressive episodes associated w…\n\nOpen on DailyMed\nShow 8 more\nNorco (hydrocodone/acetaminophen) 10/325 mg four times daily = 40/1300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nacetaminophen / hydrocodone oral tablet [norco]\n\nWhat the labels say about “Norco (hydrocodone/acetaminophen) 10/325 mg four times daily = 40/1300 mg/day”\n\nhydrocodone bitartrate and acetaminophen\n\nINDICATIONS AND USAGE Hydrocodone bitartrate and acetaminophen oral solution is indicated for the mana…\n\nOpen on DailyMed\nJOURNAVX\nsuzetrigine\n\n…ntact Vertex Pharmaceuticals Incorporated at 1-877-634-8789 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\nAPADAZ\nbenzhydrocodone and acetaminophen\n\n1 INDICATIONS AND USAGE APADAZ is indicated for the short-term (no more than 14 days) management of acute pain severe enough to require an opioid analgesic and…\n\nOpen on DailyMed\nhydrocodone bitartrate and ibuprofen\n\nINDICATIONS AND USAGE Hydrocodone Bitartrate and Ibuprofen Tablets are indicated for the short-term ma…\n\nOpen on DailyMed\nShow 8 more\nTylenol (acetaminophen OTC) 500 mg 2 tablets three times daily = 3000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nacetaminophen 650 mg [tylenol]\nacetaminophen 325 mg [tylenol]\nacetaminophen 80 mg [tylenol]\nacetaminophen 160 mg [tylenol]\nacetaminophen 500 mg [tylenol]\n\nWhat the labels say about “Tylenol (acetaminophen OTC) 500 mg 2 tablets three times daily = 3000 mg/day”\n\nlevetiracetam\n\n…for adjunctive therapy for the treatment of: • Myoclonic seizures in patients 12 years of age and older with juvenile myoclonic epilepsy (1.2) • Primary genera…\n\nOpen on DailyMed\ndofetilide\n\n…and DIAMOND MI) in which 1,511 patients received dofetilide capsules for up to three years. In the following section, adverse reaction data for cardiac arrhyth…\n\nOpen on DailyMed\nvigabatrin\n\n1 INDICATIONS AND USAGE Vigabatrin tablets are indicated for the treatment of: • Refractory Complex Partial Seizure…\n\nOpen on DailyMed\ndiflunisal\n\n…ONS AND USAGE Carefully consider the potential benefits and risks of diflunisal tablets and other treatment options before deciding to use diflunisal tablets. U…\n\nOpen on DailyMed\nShow 8 more\nXanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nalprazolam 1 mg [xanax]\n\nWhat the labels say about “Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day”\n\nnefazodone hydrochloride\n\n…relatively persistent depressed or dysphoric mood that usually interferes with daily functioning (nearly every day for at least 2 weeks). It must include eithe…\n\nOpen on DailyMed\nalprazolam\n\n1 INDICATIONS AND USAGE Alprazolam tablets are indicated for the: acute treatment of generalized anxiety…\n\nOpen on DailyMed\nfluoxetine hcl\n\n…The efficacy of fluoxetine tablets in MDD was established in one 5-week trial, three 6-week trials, and one maintenance study in adults. The efficacy of fluoxe…\n\nOpen on DailyMed\nclarithromycin\n\n…ryngitis/Tonsillitis ( 1.4 ) Uncomplicated Skin and Skin Structure Infections ( 1.5 ) Acute Otitis Media in Pediatric Patients ( 1.6 ) Treatment and Prophylaxis…\n\nOpen on DailyMed\nShow 8 more\nXanax XR (alprazolam ER) 1 mg once daily = 1 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nalprazolam 1 mg oral tablet, extended release [xanax xr]\n\nWhat the labels say about “Xanax XR (alprazolam ER) 1 mg once daily = 1 mg/day”\n\nAdzenys XR-ODT\namphetamine\n\n1. INDICATIONS AND USAGE ADZENYS XR-ODT is a central nervous system (CNS) stimul…\n\nOpen on DailyMed\nnefazodone hydrochloride\n\n…blets are indicated for the treatment of depression. When deciding among the alternative treatments available for this condition, the prescriber should consider…\n\nOpen on DailyMed\nJAKAFI\nruxolitinib\n\n1 INDICATIONS AND USAGE JAKAFI/JAKAFI XR is a kinase inhibitor indicated for tre…\n\nOpen on DailyMed\nAustedo\ndeutetrabenazine\n\n1 INDICATIONS AND USAGE AUSTEDO XR ® and AUSTEDO ® are indicated in adults for t…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3",
+ "runAt": "2026-09-23T10:57:48.261Z"
+}

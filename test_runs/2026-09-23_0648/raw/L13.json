@@ -1,0 +1,223 @@
+{
+ "id": "L13",
+ "input": "Zyvox (linezolid) 600 mg twice daily = 1200 mg/day, Effexor XR (venlafaxine ER) 225 mg once daily = 225 mg/day, Buspar (buspirone) 15 mg twice daily = 30 mg/day, Reglan (metoclopramide) 10 mg four times daily before meals and at bedtime = 40 mg/day, Duragesic (fentanyl) 25 mcg/h transdermal patch one patch every 72 hours = 25 mcg/h continuous, Robaxin (methocarbamol) 750 mg four times daily = 3000 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.914,
+ "secondsToResults": 4.06,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Zyvox (linezolid) 600 mg twice daily = 1200 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zyvox (linezolid) 600 mg twice daily = 1200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlinezolid injection [zyvox]\n\nWhat the labels say about “Zyvox (linezolid) 600 mg twice daily = 1200 mg/day”\n\noxcarbazepine\n\n…ents converted from other AEDs to either high- dose oxcarbazepine tablets (2400 mg/day) or low-dose (300 mg/day) oxcarbazepine tablets. Note that in some of the…\n\nOpen on DailyMed\npretomanid\n\n…anid Tablet is indicated, as part of a combination regimen with bedaquiline and linezolid for the treatment of adults with pulmonary tuberculosis (TB) resistant…\n\nOpen on DailyMed\nrifabutin\n\n…hanges on electrocardiogram. When rifabutin was administered at doses from 1050 mg/day to 2400 mg/day, generalized arthralgia and uveitis were reported. These a…\n\nOpen on DailyMed\ncalcitriol\n\n…investigations have shown normalization of elevated serum calcium within a few days of treatment withdrawal, ie, much faster than in treatment with vitamin D 3…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Effexor XR (venlafaxine ER) 225 mg once daily = 225 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Effexor XR (venlafaxine ER) 225 mg once daily = 225 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nvenlafaxine extended release oral capsule [effexor]\n\nWhat the labels say about “Effexor XR (venlafaxine ER) 225 mg once daily = 225 mg/day”\n\nVYKAT XR\ndiazoxide choline\n\n1 INDICATIONS AND USAGE VYKAT XR is indicated for the treatment of hyperphagia in adults and pediatric patient…\n\nOpen on DailyMed\nvenlafaxine\n\n1 INDICATIONS AND USAGE Venlafaxine Extended-Release Tablets are indicated in adults for the treatment o…\n\nOpen on DailyMed\nvenlafaxine hydrochloride\n\n1 INDICATIONS AND USAGE Venlafaxine hydrochloride extended-release capsules are indicated in adults for…\n\nOpen on DailyMed\nAdzenys XR-ODT\namphetamine\n\n1. INDICATIONS AND USAGE ADZENYS XR-ODT is a central nervous system (CNS) stimulant indicated for the treatment o…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Buspar (buspirone) 15 mg twice daily = 30 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Buspar (buspirone) 15 mg twice daily = 30 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nbuspirone hydrochloride 30 mg [buspar]\n\nWhat the labels say about “Buspar (buspirone) 15 mg twice daily = 30 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nBucapsol\nbuspirone hydrochloride\n\n…the symptoms of anxiety. Anxiety or tension associated with the stress of everyday life usually does not require treatment with an anxiolytic. The efficacy of…\n\nOpen on DailyMed\nbuspirone hydrochloride\n\nINDICATIONS AND USAGE Buspirone hydrochloride tablets are indicated for the management of anxiety diso…\n\nOpen on DailyMed\nEMSAM\nselegiline\n\n…ion of Treatment Among 817 MDD patients treated with EMSAM at doses of either 3 mg per 24 hours (151 patients), 6 mg per 24 hours (550 patients) or 6 mg per 24…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Reglan (metoclopramide) 10 mg four times daily before meals and at bedtime = 40 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Reglan (metoclopramide) 10 mg four times daily before meals and at bedtime = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmetoclopramide 5 mg [reglan]\nmetoclopramide 10 mg [reglan]\n\nWhat the labels say about “Reglan (metoclopramide) 10 mg four times daily before meals and at bedtime = 40 mg/day”\n\nmetoclopramide\n\n1 INDICATIONS AND USAGE Metoclopramide tablets are indicated for the: Treatment for 4 t…\n\nOpen on DailyMed\nHyoscyamine Sulfate SL\nhyoscyamine sulfate\n\nINDICATIONS AND USAGE This product may be used in functional intestinal disorders to…\n\nOpen on DailyMed\ncimetidine hydrochloride\n\nINDICATIONS AND USAGE Cimetidine Hydrochloride Oral Solution is indicated in: (1) Sho…\n\nOpen on DailyMed\ncimetidine\n\nINDICATIONS AND USAGE Cimetidine tablets are indicated in: 1. Short-term treatment of…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Duragesic (fentanyl) 25 mcg/h transdermal patch one patch every 72 hours = 25 mcg/h continuous",
+   "generic": "Not a medication name we know.",
+   "dose": null,
+   "facts": null,
+   "text": "Duragesic (fentanyl) 25 mcg/h transdermal patch one patch every 72 hours = 25 mcg/h continuous\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Duragesic (fentanyl) 25 mcg/h transdermal patch one patch every 72 hours = 25 mcg/h continuous”\n\nfentanyl transdermal\n\n1 INDICATIONS AND USAGE Fentanyl transdermal system is indicated for the management of severe and persis…\n\nOpen on DailyMed\nTrubrexa\nlidocaine and capsaicin\n\n1. INDICATIONS & USAGE Trubrexa TM Transdermal Patch is indicated in adults over the age of 12 years old for the tr…\n\nOpen on DailyMed\nclonidine\n\nINDICATIONS AND USAGE Clonidine transdermal system is indicated in the treatment of hypertension. It may be empl…\n\nOpen on DailyMed\nGwyn Lo\nnorelgestromin and ethinyl estradiol\n\n1 INDICATIONS AND USAGE GWYN LO is indicated for the prevention of pregnancy in women with a body mass index (BMI) < 30 kg/m 2 for…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Robaxin (methocarbamol) 750 mg four times daily = 3000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Robaxin (methocarbamol) 750 mg four times daily = 3000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmethocarbamol injection [robaxin]\n\nWhat the labels say about “Robaxin (methocarbamol) 750 mg four times daily = 3000 mg/day”\n\nMethocarbamol\nmethocarbamol tablets\n\nINDICATIONS AND USAGE Methocarbamol tablets, USP are indicated as an adjunct to rest, physical therapy…\n\nOpen on DailyMed\nlevetiracetam\n\n…result of an adverse reaction. Pediatric Patients 1 Month to < 4 Years In the 7-day, controlled pediatric clinical study in children 1 month to less than 4 year…\n\nOpen on DailyMed\nZERBAXA\nceftolozane and tazobactam\n\n…tion where appropriate) and 1032 patients treated with comparator (levofloxacin 750 mg daily in cUTI or meropenem 1 g every 8 hours in cIAI) for up to 14 days.…\n\nOpen on DailyMed\nbexarotene\n\n…her trials. The mean duration of therapy for the 152 patients with CTCL was 166 days. The most common adverse events reported with an incidence of at least 10%…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8841174a-9f4b-424f-a50d-01478f2aeb29",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1906fc9-cb3c-4e13-8a4a-da76100c1bf3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=25a60937-cbbe-4a50-994f-2ce15203f589",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bf621b22-b783-416f-aee3-e0dbfdb782ca",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0e745e85-9512-e360-e063-6394a90aebf1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e81a2daf-b8b2-7c05-b532-bc775700b100",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c41d847b-88ba-49a5-9d73-269ac4caa4ed",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1179269-00b5-48ea-972d-31e614e99b7e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f101c5f3-d533-474d-a8bf-90d054933d16",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa4d5cac-f687-4440-99d2-8bb27cf2f4ed",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b891bd9f-fdb8-4862-89c5-ecdd700398a3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=595439ae-cf01-821c-e063-6294a90af16a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=584755e4-fea9-4827-e063-6394a90a4a0a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d1d73350-4e7e-428a-90a5-6000fd373a4f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06c0a509-026f-44e0-9975-a94a8de51d43",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e15a7e9b-8025-49dd-9a6d-bafcccf1959f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=074b53d0-d9d8-8d24-e063-6294a90a9fda",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7adfc439-e6d0-4593-87dd-0eef36d33c6d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e92741f4-87fe-429f-b5b5-c558ed5f4fa9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a585c87-6361-420d-e063-6294a90a1838",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0348fec4-d919-4307-ac90-35360819bc00",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9514265-6e2c-9030-e053-6394a90aa04b",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nZyvox (linezolid) 600 mg twice daily = 1200 mg/day: not found. Edit it in the list, or remove it.\nEffexor XR (venlafaxine ER) 225 mg once daily = 225 mg/day: not found. Edit it in the list, or remove it.\nBuspar (buspirone) 15 mg twice daily = 30 mg/day: not found. Edit it in the list, or remove it.\nReglan (metoclopramide) 10 mg four times daily before meals and at bedtime = 40 mg/day: not found. Edit it in the list, or remove it.\nDuragesic (fentanyl) 25 mcg/h transdermal patch one patch every 72 hours = 25 mcg/h continuous: not a medication name, so it was looked up in the labels instead.\nRobaxin (methocarbamol) 750 mg four times daily = 3000 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nZyvox (linezolid) 600 mg twice daily = 1200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlinezolid injection [zyvox]\n\nWhat the labels say about “Zyvox (linezolid) 600 mg twice daily = 1200 mg/day”\n\noxcarbazepine\n\n…ents converted from other AEDs to either high- dose oxcarbazepine tablets (2400 mg/day) or low-dose (300 mg/day) oxcarbazepine tablets. Note that in some of the…\n\nOpen on DailyMed\npretomanid\n\n…anid Tablet is indicated, as part of a combination regimen with bedaquiline and linezolid for the treatment of adults with pulmonary tuberculosis (TB) resistant…\n\nOpen on DailyMed\nrifabutin\n\n…hanges on electrocardiogram. When rifabutin was administered at doses from 1050 mg/day to 2400 mg/day, generalized arthralgia and uveitis were reported. These a…\n\nOpen on DailyMed\ncalcitriol\n\n…investigations have shown normalization of elevated serum calcium within a few days of treatment withdrawal, ie, much faster than in treatment with vitamin D 3…\n\nOpen on DailyMed\nShow 8 more\nEffexor XR (venlafaxine ER) 225 mg once daily = 225 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nvenlafaxine extended release oral capsule [effexor]\n\nWhat the labels say about “Effexor XR (venlafaxine ER) 225 mg once daily = 225 mg/day”\n\nVYKAT XR\ndiazoxide choline\n\n1 INDICATIONS AND USAGE VYKAT XR is indicated for the treatment of hyperphagia in adults and pediatric patient…\n\nOpen on DailyMed\nvenlafaxine\n\n1 INDICATIONS AND USAGE Venlafaxine Extended-Release Tablets are indicated in adults for the treatment o…\n\nOpen on DailyMed\nvenlafaxine hydrochloride\n\n1 INDICATIONS AND USAGE Venlafaxine hydrochloride extended-release capsules are indicated in adults for…\n\nOpen on DailyMed\nAdzenys XR-ODT\namphetamine\n\n1. INDICATIONS AND USAGE ADZENYS XR-ODT is a central nervous system (CNS) stimulant indicated for the treatment o…\n\nOpen on DailyMed\nShow 8 more\nBuspar (buspirone) 15 mg twice daily = 30 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nbuspirone hydrochloride 30 mg [buspar]\n\nWhat the labels say about “Buspar (buspirone) 15 mg twice daily = 30 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nBucapsol\nbuspirone hydrochloride\n\n…the symptoms of anxiety. Anxiety or tension associated with the stress of everyday life usually does not require treatment with an anxiolytic. The efficacy of…\n\nOpen on DailyMed\nbuspirone hydrochloride\n\nINDICATIONS AND USAGE Buspirone hydrochloride tablets are indicated for the management of anxiety diso…\n\nOpen on DailyMed\nEMSAM\nselegiline\n\n…ion of Treatment Among 817 MDD patients treated with EMSAM at doses of either 3 mg per 24 hours (151 patients), 6 mg per 24 hours (550 patients) or 6 mg per 24…\n\nOpen on DailyMed\nShow 8 more\nReglan (metoclopramide) 10 mg four times daily before meals and at bedtime = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmetoclopramide 5 mg [reglan]\nmetoclopramide 10 mg [reglan]\n\nWhat the labels say about “Reglan (metoclopramide) 10 mg four times daily before meals and at bedtime = 40 mg/day”\n\nmetoclopramide\n\n1 INDICATIONS AND USAGE Metoclopramide tablets are indicated for the: Treatment for 4 t…\n\nOpen on DailyMed\nHyoscyamine Sulfate SL\nhyoscyamine sulfate\n\nINDICATIONS AND USAGE This product may be used in functional intestinal disorders to…\n\nOpen on DailyMed\ncimetidine hydrochloride\n\nINDICATIONS AND USAGE Cimetidine Hydrochloride Oral Solution is indicated in: (1) Sho…\n\nOpen on DailyMed\ncimetidine\n\nINDICATIONS AND USAGE Cimetidine tablets are indicated in: 1. Short-term treatment of…\n\nOpen on DailyMed\nShow 8 more\nDuragesic (fentanyl) 25 mcg/h transdermal patch one patch every 72 hours = 25 mcg/h continuous\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Duragesic (fentanyl) 25 mcg/h transdermal patch one patch every 72 hours = 25 mcg/h continuous”\n\nfentanyl transdermal\n\n1 INDICATIONS AND USAGE Fentanyl transdermal system is indicated for the management of severe and persis…\n\nOpen on DailyMed\nTrubrexa\nlidocaine and capsaicin\n\n1. INDICATIONS & USAGE Trubrexa TM Transdermal Patch is indicated in adults over the age of 12 years old for the tr…\n\nOpen on DailyMed\nclonidine\n\nINDICATIONS AND USAGE Clonidine transdermal system is indicated in the treatment of hypertension. It may be empl…\n\nOpen on DailyMed\nGwyn Lo\nnorelgestromin and ethinyl estradiol\n\n1 INDICATIONS AND USAGE GWYN LO is indicated for the prevention of pregnancy in women with a body mass index (BMI) < 30 kg/m 2 for…\n\nOpen on DailyMed\nShow 8 more\nRobaxin (methocarbamol) 750 mg four times daily = 3000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmethocarbamol injection [robaxin]\n\nWhat the labels say about “Robaxin (methocarbamol) 750 mg four times daily = 3000 mg/day”\n\nMethocarbamol\nmethocarbamol tablets\n\nINDICATIONS AND USAGE Methocarbamol tablets, USP are indicated as an adjunct to rest, physical therapy…\n\nOpen on DailyMed\nlevetiracetam\n\n…result of an adverse reaction. Pediatric Patients 1 Month to < 4 Years In the 7-day, controlled pediatric clinical study in children 1 month to less than 4 year…\n\nOpen on DailyMed\nZERBAXA\nceftolozane and tazobactam\n\n…tion where appropriate) and 1032 patients treated with comparator (levofloxacin 750 mg daily in cUTI or meropenem 1 g every 8 hours in cIAI) for up to 14 days.…\n\nOpen on DailyMed\nbexarotene\n\n…her trials. The mean duration of therapy for the 152 patients with CTCL was 166 days. The most common adverse events reported with an incidence of at least 10%…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:53:46.807Z"
+}

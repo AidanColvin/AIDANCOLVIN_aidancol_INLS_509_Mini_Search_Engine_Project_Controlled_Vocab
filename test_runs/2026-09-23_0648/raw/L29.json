@@ -1,0 +1,223 @@
+{
+ "id": "L29",
+ "input": "Amoxil (amoxicillin) 500 mg three times daily = 1500 mg/day, Claritin (loratadine OTC) 10 mg once daily = 10 mg/day, Singulair (montelukast) 10 mg once daily = 10 mg/day, Norvasc (amlodipine) 5 mg once daily = 5 mg/day, Zoloft (sertraline) 50 mg once daily = 50 mg/day, Glucophage (metformin) 500 mg twice daily = 1000 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.829,
+ "secondsToResults": 4.047,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Amoxil (amoxicillin) 500 mg three times daily = 1500 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Amoxil (amoxicillin) 500 mg three times daily = 1500 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namoxicillin 750 mg [amoxil]\namoxicillin 500 mg [amoxil]\namoxicillin 200 mg [amoxil]\namoxicillin 400 mg [amoxil]\namoxicillin 875 mg [amoxil]\namoxicillin 250 mg [amoxil]\namoxicillin 125 mg [amoxil]\n\nWhat the labels say about “Amoxil (amoxicillin) 500 mg three times daily = 1500 mg/day”\n\namoxicillin\n\n1 INDICATIONS AND USAGE Amoxicillin is a penicillin-class antibacterial indicated for treatment of infec…\n\nOpen on DailyMed\nlansoprazole\n\n…nce Triple Therapy: Lansoprazole delayed-release orally disintegrating tablets /amoxicillin/clarithromycin Lansoprazole delayed-release orally disintegrating ta…\n\nOpen on DailyMed\nesomeprazole\n\n…lt patients to reduce the risk of duodenal ulcer recurrence in combination with amoxicillin and clarithromycin. ( 1.5 ) • Long-term treatment of pathological hy…\n\nOpen on DailyMed\nesomeprazole magnesium\n\n…lt patients to reduce the risk of duodenal ulcer recurrence in combination with amoxicillin and clarithromycin. ( 1.5 ) Long-term treatment of pathological hype…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Claritin (loratadine OTC) 10 mg once daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Claritin (loratadine OTC) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nloratadine 10 mg [claritin]\n\nWhat the labels say about “Claritin (loratadine OTC) 10 mg once daily = 10 mg/day”\n\nsodium phenylacetate and sodium benzoate\n\n…ED ADVERSE REACTIONS, contact Navinta LLC at 1-609-883-1135 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\nloratadine\n\n…any of its ingredients DIRECTIONS adults and children 6 years and over 1 tablet daily; not more than 1 tablet in 24 hours children under 6 years of age ask a do…\n\nOpen on DailyMed\nPHEBURANE\nsodium phenylbutyrate\n\n…deficiencies of carbamylphosphate synthetase (CPS), ornithine transcarbamylase (OTC) or argininosuccinic acid synthetase (AS). Limitations of Use Episodes of ac…\n\nOpen on DailyMed\ndesloratadine\n\n1 INDICATIONS AND USAGE Desloratadine Tablets are a histamine-1 (H1) receptor antagonist indicated for: Sea…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Singulair (montelukast) 10 mg once daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Singulair (montelukast) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmontelukast 10 mg [singulair]\n\nWhat the labels say about “Singulair (montelukast) 10 mg once daily = 10 mg/day”\n\nmontelukast\n\n1 INDICATIONS & USAGE Montelukast sodium tablets are a leukotriene receptor antagonist indicated for:…\n\nOpen on DailyMed\nmontelukast sodium\n\n1 INDICATIONS AND USAGE Montelukast sodium chewable tablets are a leukotriene receptor antagonist indica…\n\nOpen on DailyMed\nAPHEXDA\nmotixafortide\n\n…ED ADVERSE REACTIONS, contact Gamida Cell at (844) 477-7478 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\ngemfibrozil\n\n…em. Patients who present such risk typically have serum triglycerides over 2000 mg/dL and have elevations of VLDL-cholesterol as well as fasting chylomicrons (T…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Norvasc (amlodipine) 5 mg once daily = 5 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Norvasc (amlodipine) 5 mg once daily = 5 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namlodipine 5 mg [norvasc]\n\nWhat the labels say about “Norvasc (amlodipine) 5 mg once daily = 5 mg/day”\n\ntelmisartan and amlodipine\n\n1 INDICATIONS AND USAGE Telmisartan and amlodipine tablet is an angiotensin II receptor blocker (ARB) and a dihydropyrid…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment…\n\nOpen on DailyMed\nNORLIQVA\namlodipine\n\n…vascularization procedure. 6 ADVERSE REACTIONS Most common adverse reactions to amlodipine were edema, dizziness, flushing and palpitation which occurred in a d…\n\nOpen on DailyMed\nKaterzia\namlodipine\n\n…f antihypertensive drugs from a wide variety of pharmacologic classes including amlodipine. Control of high blood pressure should be part of comprehensive cardi…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zoloft (sertraline) 50 mg once daily = 50 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zoloft (sertraline) 50 mg once daily = 50 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsertraline 50 mg [zoloft]\n\nWhat the labels say about “Zoloft (sertraline) 50 mg once daily = 50 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nsertraline hydrochloride\n\n1 INDICATIONS AND USAGE Sertraline hydrochloride tablets are indicated for the treatment of the followin…\n\nOpen on DailyMed\nefavirenz\n\n…ons ( 5.9 )] Most common adverse reactions (>5%, moderate-severe) are impaired concentration, abnormal dreams, rash, dizziness, nausea, headache, fatigue, insom…\n\nOpen on DailyMed\ndarunavir\n\n…y data from the Phase 3 trial TMC114-C211 comparing darunavir/ritonavir 800/100 mg once daily versus lopinavir/ritonavir 800/200 mg per day in 689 antiretrovira…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Glucophage (metformin) 500 mg twice daily = 1000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Glucophage (metformin) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmetformin hydrochloride 1000 mg [glucophage]\n\nWhat the labels say about “Glucophage (metformin) 500 mg twice daily = 1000 mg/day”\n\nranolazine\n\n…, asthenia, constipation, and headache (each about 0.5% versus 0%). Doses above 1000 mg twice daily are poorly tolerated. In controlled clinical trials of angin…\n\nOpen on DailyMed\nalogliptin and metformin hydrochloride\n\n1 INDICATIONS AND USAGE Alogliptin and metformin HCl tablets are indicated as an adjunct to diet and exercise to improv…\n\nOpen on DailyMed\nsitagliptin and metformin hydrochloride\n\n1 INDICATIONS AND USAGE Sitagliptin and metformin hydrochloride tablets are indicated as an adjunct to diet and exercise…\n\nOpen on DailyMed\nsitagliptin and metformin hydrochloride\n\n1 INDICATIONS AND USAGE Sitagliptin and metformin hydrochloride tablets is a combination of sitagliptin, a dipeptidyl pe…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4adc198e-39d8-4b3e-bfa4-278aaf4064ae",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7daa1721-f92b-4096-b19e-4d27fc8acb51",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d68c9247-91c7-4e0f-adc4-2cfa7446580f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=28fbfa02-6c7b-4eb1-af24-86825e652326",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d20768fe-4516-483a-a082-ff1df9ad1d99",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0d74af21-3ef7-418b-a2ef-78737b0af288",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d15f2cbf-4d22-40b5-8ef9-16b9d323a7f9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21174c0f-9204-4c75-b6e6-2f9ada5b535d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=583a9499-97f0-2ebf-e063-6394a90a35af",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7ff11e37-9ea5-40b6-96f7-4caf27cab756",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e704b2db-f119-40ba-9346-9229e3281c9e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=42e40524-57e9-4fee-993f-be0fda14936b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a97fefa6-99e6-4eb7-9393-ab2252a2c7d8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c7b1b11-90a3-bc1c-0e45-9e2a14ef0b03",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=614d974f-51c7-4b18-8171-39eb6e8d4c03",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=df673a4d-acb8-444c-a472-c87ab8cbd366",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13ca3456-e5bf-4bb1-af95-b1378658a358",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=56daf67e-7501-4cd5-be22-566d7997d42e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90c5a0c2-542c-467e-9c0c-ef320534c560",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14d98490-4f8f-4d2f-a4e9-7a3d7a0199ba",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58f0e875-5d9b-be0b-e063-6394a90a5345",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e07abcb1-1f0c-4cad-8405-8eedba4b8ff8",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nAmoxil (amoxicillin) 500 mg three times daily = 1500 mg/day: not found. Edit it in the list, or remove it.\nClaritin (loratadine OTC) 10 mg once daily = 10 mg/day: not found. Edit it in the list, or remove it.\nSingulair (montelukast) 10 mg once daily = 10 mg/day: not found. Edit it in the list, or remove it.\nNorvasc (amlodipine) 5 mg once daily = 5 mg/day: not found. Edit it in the list, or remove it.\nZoloft (sertraline) 50 mg once daily = 50 mg/day: not found. Edit it in the list, or remove it.\nGlucophage (metformin) 500 mg twice daily = 1000 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nAmoxil (amoxicillin) 500 mg three times daily = 1500 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namoxicillin 750 mg [amoxil]\namoxicillin 500 mg [amoxil]\namoxicillin 200 mg [amoxil]\namoxicillin 400 mg [amoxil]\namoxicillin 875 mg [amoxil]\namoxicillin 250 mg [amoxil]\namoxicillin 125 mg [amoxil]\n\nWhat the labels say about “Amoxil (amoxicillin) 500 mg three times daily = 1500 mg/day”\n\namoxicillin\n\n1 INDICATIONS AND USAGE Amoxicillin is a penicillin-class antibacterial indicated for treatment of infec…\n\nOpen on DailyMed\nlansoprazole\n\n…nce Triple Therapy: Lansoprazole delayed-release orally disintegrating tablets /amoxicillin/clarithromycin Lansoprazole delayed-release orally disintegrating ta…\n\nOpen on DailyMed\nesomeprazole\n\n…lt patients to reduce the risk of duodenal ulcer recurrence in combination with amoxicillin and clarithromycin. ( 1.5 ) • Long-term treatment of pathological hy…\n\nOpen on DailyMed\nesomeprazole magnesium\n\n…lt patients to reduce the risk of duodenal ulcer recurrence in combination with amoxicillin and clarithromycin. ( 1.5 ) Long-term treatment of pathological hype…\n\nOpen on DailyMed\nShow 8 more\nClaritin (loratadine OTC) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nloratadine 10 mg [claritin]\n\nWhat the labels say about “Claritin (loratadine OTC) 10 mg once daily = 10 mg/day”\n\nsodium phenylacetate and sodium benzoate\n\n…ED ADVERSE REACTIONS, contact Navinta LLC at 1-609-883-1135 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\nloratadine\n\n…any of its ingredients DIRECTIONS adults and children 6 years and over 1 tablet daily; not more than 1 tablet in 24 hours children under 6 years of age ask a do…\n\nOpen on DailyMed\nPHEBURANE\nsodium phenylbutyrate\n\n…deficiencies of carbamylphosphate synthetase (CPS), ornithine transcarbamylase (OTC) or argininosuccinic acid synthetase (AS). Limitations of Use Episodes of ac…\n\nOpen on DailyMed\ndesloratadine\n\n1 INDICATIONS AND USAGE Desloratadine Tablets are a histamine-1 (H1) receptor antagonist indicated for: Sea…\n\nOpen on DailyMed\nShow 8 more\nSingulair (montelukast) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmontelukast 10 mg [singulair]\n\nWhat the labels say about “Singulair (montelukast) 10 mg once daily = 10 mg/day”\n\nmontelukast\n\n1 INDICATIONS & USAGE Montelukast sodium tablets are a leukotriene receptor antagonist indicated for:…\n\nOpen on DailyMed\nmontelukast sodium\n\n1 INDICATIONS AND USAGE Montelukast sodium chewable tablets are a leukotriene receptor antagonist indica…\n\nOpen on DailyMed\nAPHEXDA\nmotixafortide\n\n…ED ADVERSE REACTIONS, contact Gamida Cell at (844) 477-7478 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\ngemfibrozil\n\n…em. Patients who present such risk typically have serum triglycerides over 2000 mg/dL and have elevations of VLDL-cholesterol as well as fasting chylomicrons (T…\n\nOpen on DailyMed\nShow 8 more\nNorvasc (amlodipine) 5 mg once daily = 5 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namlodipine 5 mg [norvasc]\n\nWhat the labels say about “Norvasc (amlodipine) 5 mg once daily = 5 mg/day”\n\ntelmisartan and amlodipine\n\n1 INDICATIONS AND USAGE Telmisartan and amlodipine tablet is an angiotensin II receptor blocker (ARB) and a dihydropyrid…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment…\n\nOpen on DailyMed\nNORLIQVA\namlodipine\n\n…vascularization procedure. 6 ADVERSE REACTIONS Most common adverse reactions to amlodipine were edema, dizziness, flushing and palpitation which occurred in a d…\n\nOpen on DailyMed\nKaterzia\namlodipine\n\n…f antihypertensive drugs from a wide variety of pharmacologic classes including amlodipine. Control of high blood pressure should be part of comprehensive cardi…\n\nOpen on DailyMed\nShow 8 more\nZoloft (sertraline) 50 mg once daily = 50 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsertraline 50 mg [zoloft]\n\nWhat the labels say about “Zoloft (sertraline) 50 mg once daily = 50 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nsertraline hydrochloride\n\n1 INDICATIONS AND USAGE Sertraline hydrochloride tablets are indicated for the treatment of the followin…\n\nOpen on DailyMed\nefavirenz\n\n…ons ( 5.9 )] Most common adverse reactions (>5%, moderate-severe) are impaired concentration, abnormal dreams, rash, dizziness, nausea, headache, fatigue, insom…\n\nOpen on DailyMed\ndarunavir\n\n…y data from the Phase 3 trial TMC114-C211 comparing darunavir/ritonavir 800/100 mg once daily versus lopinavir/ritonavir 800/200 mg per day in 689 antiretrovira…\n\nOpen on DailyMed\nShow 8 more\nGlucophage (metformin) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmetformin hydrochloride 1000 mg [glucophage]\n\nWhat the labels say about “Glucophage (metformin) 500 mg twice daily = 1000 mg/day”\n\nranolazine\n\n…, asthenia, constipation, and headache (each about 0.5% versus 0%). Doses above 1000 mg twice daily are poorly tolerated. In controlled clinical trials of angin…\n\nOpen on DailyMed\nalogliptin and metformin hydrochloride\n\n1 INDICATIONS AND USAGE Alogliptin and metformin HCl tablets are indicated as an adjunct to diet and exercise to improv…\n\nOpen on DailyMed\nsitagliptin and metformin hydrochloride\n\n1 INDICATIONS AND USAGE Sitagliptin and metformin hydrochloride tablets are indicated as an adjunct to diet and exercise…\n\nOpen on DailyMed\nsitagliptin and metformin hydrochloride\n\n1 INDICATIONS AND USAGE Sitagliptin and metformin hydrochloride tablets is a combination of sitagliptin, a dipeptidyl pe…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:55:53.068Z"
+}

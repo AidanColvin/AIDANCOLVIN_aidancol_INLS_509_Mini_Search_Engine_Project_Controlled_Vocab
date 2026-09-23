@@ -1,0 +1,223 @@
+{
+ "id": "L39",
+ "input": "Colcrys (colchicine) 0.6 mg twice daily = 1.2 mg/day, Ery-Tab (erythromycin) 500 mg four times daily = 2000 mg/day, Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day, Zyloprim (allopurinol) 300 mg once daily = 300 mg/day, Cardizem CD (diltiazem ER) 240 mg once daily = 240 mg/day, Lasix (furosemide) 40 mg once daily = 40 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.872,
+ "secondsToResults": 3.64,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Colcrys (colchicine) 0.6 mg twice daily = 1.2 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Colcrys (colchicine) 0.6 mg twice daily = 1.2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncolchicine oral tablet [colcrys]\n\nWhat the labels say about “Colcrys (colchicine) 0.6 mg twice daily = 1.2 mg/day”\n\ncolchicine\n\n1.1 Gout Flares Colchicine tablets are indicated for prophylaxis and the treatment of acute gout…\n\nOpen on DailyMed\nlopinavir and ritonavir\n\n…agents for the treatment of HIV1 infection in adults and pediatric patients 14 days and older. Limitations of Use: Genotypic or phenotypic testing and/or treat…\n\nOpen on DailyMed\nfluvastatin\n\n…-pharmacologic measures alone has been inadequate. Fluvastatin capsules are an HMG-CoA reductase inhibitor (statin) indicated as an adjunctive therapy to diet t…\n\nOpen on DailyMed\nfosamprenavir calcium\n\n…r plus ritonavir are clinically equivalent [see Clinical Studies (14.2)] . Once-daily administration of fosamprenavir calcium tablets plus ritonavir is not reco…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Ery-Tab (erythromycin) 500 mg four times daily = 2000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Ery-Tab (erythromycin) 500 mg four times daily = 2000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nerythromycin 250 mg [ery-tab]\nerythromycin 333 mg [ery-tab]\nerythromycin 500 mg [ery-tab]\n\nWhat the labels say about “Ery-Tab (erythromycin) 500 mg four times daily = 2000 mg/day”\n\nzafirlukast\n\n…r. ADVERSE REACTIONS Adults and Children 12 years of age and older The safety database for zafirlukast consists of more than 4000 healthy volunteers and patient…\n\nOpen on DailyMed\nniacin\n\n…nonpharmacologic measures alone has been inadequate. 1. Niacin extended-release tablets are indicated to reduce elevated TC, LDL-C, Apo B and TG levels, and to…\n\nOpen on DailyMed\nSolu-Cortef\nhydrocortisone sodium succinate\n\n…Allergic states: Control of severe or incapacitating allergic conditions intractable to adequate trials of conventional treatment in asthma, atopic dermatitis,…\n\nOpen on DailyMed\nazithromycin\n\n…pment of drug-resistant bacteria and maintain the effectiveness of azithromycin tablets and other antibacterial drugs, azithromycin tablets should be used only…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsimvastatin 40 mg [zocor]\n\nWhat the labels say about “Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day”\n\nniacin\n\n1 INDICATIONS AND USAGE Therapy with lipid-altering agents should be only one component…\n\nOpen on DailyMed\nefavirenz\n\n1 INDICATIONS & USAGE Efavirenz in combination with other antiretroviral agents is indi…\n\nOpen on DailyMed\nsimvastatin\n\n1 INDICATIONS AND USAGE Simvastatin tablets USP are indicated: • To reduce the risk of…\n\nOpen on DailyMed\nezetimibe and simvastatin\n\n1 INDICATIONS AND USAGE Ezetimibe and Simvastatin Tablets Ezetimibe and Simvastatin Tab…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zyloprim (allopurinol) 300 mg once daily = 300 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zyloprim (allopurinol) 300 mg once daily = 300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nallopurinol 300 mg [zyloprim]\n\nWhat the labels say about “Zyloprim (allopurinol) 300 mg once daily = 300 mg/day”\n\nTABLOID\nthioguanine\n\n…on, and the prophylactic administration of a xanthine oxidase inhibitor such as ZYLOPRIM ® (allopurinol). Unlike PURINETHOL (mercaptopurine) and IMURAN ® (azath…\n\nOpen on DailyMed\nallopurinol\n\n1 INDICATIONS AND USAGE Allopurinol tablets are indicated for: The management of adults with signs and s…\n\nOpen on DailyMed\nfebuxostat\n\n…ients with gout who have an inadequate response to a maximally titrated dose of allopurinol, who are intolerant to allopurinol, or for whom treatment with allop…\n\nOpen on DailyMed\nAmpicillin and Sulbactam\nampicillin sodium and sulbactam sodium\n\n…beta-lactamase producing organisms listed above in the indicated organ systems. Once the results are known, therapy should be adjusted if appropriate. To reduce…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Cardizem CD (diltiazem ER) 240 mg once daily = 240 mg/day",
+   "generic": "Not a medication name we know.",
+   "dose": null,
+   "facts": null,
+   "text": "Cardizem CD (diltiazem ER) 240 mg once daily = 240 mg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Cardizem CD (diltiazem ER) 240 mg once daily = 240 mg/day”\n\ndiltiazem hydrochloride\n\nINDICATIONS AND USAGE Diltiazem hydrochloride extended-release capsules are indicated for the treatmen…\n\nOpen on DailyMed\ndiltiazem hydrochloride\n\nINDICATIONS AND USAGE Diltiazem Hydrochloride Extended-Release Capsules are indicated for the treatmen…\n\nOpen on DailyMed\nipratropium bromide and albuterol sulfate\n\nINDICATIONS AND USAGE Ipratropium Bromide and Albuterol Sulfate Inhalation Solution is indicated for the treatment of bronchospasm…\n\nOpen on DailyMed\nPREVYMIS\nletermovir\n\n1 INDICATIONS AND USAGE PREVYMIS is a CMV DNA terminase complex inhibitor indicated for: Prophylaxis of cytomegalovirus (CMV) i…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lasix (furosemide) 40 mg once daily = 40 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lasix (furosemide) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfurosemide 40 mg [lasix]\n\nWhat the labels say about “Lasix (furosemide) 40 mg once daily = 40 mg/day”\n\nfurosemide\n\nINDICATIONS AND USAGE Edema Furosemide tablets are indicated in adults and pediatric patients for the treatm…\n\nOpen on DailyMed\nminoxidil\n\n…nges, nor have there been alterations in blood cell counts or in plasma enzyme concentrations that would suggest myocardial damage. Long-term treatment of patie…\n\nOpen on DailyMed\ntamsulosin hydrochloride\n\n…se events (≥2% of patients and at a higher incidence than placebo) with the 0.4 mg dose or 0.8 mg dose were headache, dizziness, rhinitis, infection, abnormal e…\n\nOpen on DailyMed\nbumetanide\n\n…treatment with bumetanide tablets following instances of allergic reactions to furosemide suggests a lack of cross-sensitivity. ADVERSE REACTIONS The most freq…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0b4246-e7dd-29e5-e063-6294a90a2871",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=115178c8-5ee2-4d96-820e-ea8264c1ac10",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ccd6bbe1-e293-4e1c-9ec4-e6c217612e77",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5cd1eead-9fc1-426c-bee8-214ffa7d9dc1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=baba507f-6557-4551-815c-9ab6606e4ee1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8eff9205-84ac-e69d-e053-2995a90aad4b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65eefd58-b166-4d71-ade6-45c8fdf86922",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=94e17ae5-0871-67a0-e053-2995a90ae0ae",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8eff9205-84ac-e69d-e053-2995a90aad4b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13ca3456-e5bf-4bb1-af95-b1378658a358",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=52a46269-2262-4052-a3ff-5455523f591f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44b0c461-47fb-4106-ba11-6ed85530235c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8f50e91e-66a7-4fd4-888a-9f1986aa661c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f2c338dc-5bab-49f4-a4ac-d8dea8afeea5",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=139b4b2e-46f7-44a8-9cc1-774afa463b80",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0f67ad-17d8-a3f4-e063-6394a90afb32",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=594bb030-e6e5-1da4-e063-6394a90aba55",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b49df80-be4f-47e0-a0b7-123f3e69395b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0b4fc036-9497-442b-b629-c4b386932789",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8302a6e-b8da-4931-a279-b49e37943816",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de008936-e8a3-4e65-bb6a-d925b68a5f50",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nColcrys (colchicine) 0.6 mg twice daily = 1.2 mg/day: not found. Edit it in the list, or remove it.\nEry-Tab (erythromycin) 500 mg four times daily = 2000 mg/day: not found. Edit it in the list, or remove it.\nZocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day: not found. Edit it in the list, or remove it.\nZyloprim (allopurinol) 300 mg once daily = 300 mg/day: not found. Edit it in the list, or remove it.\nCardizem CD (diltiazem ER) 240 mg once daily = 240 mg/day: not a medication name, so it was looked up in the labels instead.\nLasix (furosemide) 40 mg once daily = 40 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nColcrys (colchicine) 0.6 mg twice daily = 1.2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncolchicine oral tablet [colcrys]\n\nWhat the labels say about “Colcrys (colchicine) 0.6 mg twice daily = 1.2 mg/day”\n\ncolchicine\n\n1.1 Gout Flares Colchicine tablets are indicated for prophylaxis and the treatment of acute gout…\n\nOpen on DailyMed\nlopinavir and ritonavir\n\n…agents for the treatment of HIV1 infection in adults and pediatric patients 14 days and older. Limitations of Use: Genotypic or phenotypic testing and/or treat…\n\nOpen on DailyMed\nfluvastatin\n\n…-pharmacologic measures alone has been inadequate. Fluvastatin capsules are an HMG-CoA reductase inhibitor (statin) indicated as an adjunctive therapy to diet t…\n\nOpen on DailyMed\nfosamprenavir calcium\n\n…r plus ritonavir are clinically equivalent [see Clinical Studies (14.2)] . Once-daily administration of fosamprenavir calcium tablets plus ritonavir is not reco…\n\nOpen on DailyMed\nShow 8 more\nEry-Tab (erythromycin) 500 mg four times daily = 2000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nerythromycin 250 mg [ery-tab]\nerythromycin 333 mg [ery-tab]\nerythromycin 500 mg [ery-tab]\n\nWhat the labels say about “Ery-Tab (erythromycin) 500 mg four times daily = 2000 mg/day”\n\nzafirlukast\n\n…r. ADVERSE REACTIONS Adults and Children 12 years of age and older The safety database for zafirlukast consists of more than 4000 healthy volunteers and patient…\n\nOpen on DailyMed\nniacin\n\n…nonpharmacologic measures alone has been inadequate. 1. Niacin extended-release tablets are indicated to reduce elevated TC, LDL-C, Apo B and TG levels, and to…\n\nOpen on DailyMed\nSolu-Cortef\nhydrocortisone sodium succinate\n\n…Allergic states: Control of severe or incapacitating allergic conditions intractable to adequate trials of conventional treatment in asthma, atopic dermatitis,…\n\nOpen on DailyMed\nazithromycin\n\n…pment of drug-resistant bacteria and maintain the effectiveness of azithromycin tablets and other antibacterial drugs, azithromycin tablets should be used only…\n\nOpen on DailyMed\nShow 8 more\nZocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsimvastatin 40 mg [zocor]\n\nWhat the labels say about “Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day”\n\nniacin\n\n1 INDICATIONS AND USAGE Therapy with lipid-altering agents should be only one component…\n\nOpen on DailyMed\nefavirenz\n\n1 INDICATIONS & USAGE Efavirenz in combination with other antiretroviral agents is indi…\n\nOpen on DailyMed\nsimvastatin\n\n1 INDICATIONS AND USAGE Simvastatin tablets USP are indicated: • To reduce the risk of…\n\nOpen on DailyMed\nezetimibe and simvastatin\n\n1 INDICATIONS AND USAGE Ezetimibe and Simvastatin Tablets Ezetimibe and Simvastatin Tab…\n\nOpen on DailyMed\nShow 8 more\nZyloprim (allopurinol) 300 mg once daily = 300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nallopurinol 300 mg [zyloprim]\n\nWhat the labels say about “Zyloprim (allopurinol) 300 mg once daily = 300 mg/day”\n\nTABLOID\nthioguanine\n\n…on, and the prophylactic administration of a xanthine oxidase inhibitor such as ZYLOPRIM ® (allopurinol). Unlike PURINETHOL (mercaptopurine) and IMURAN ® (azath…\n\nOpen on DailyMed\nallopurinol\n\n1 INDICATIONS AND USAGE Allopurinol tablets are indicated for: The management of adults with signs and s…\n\nOpen on DailyMed\nfebuxostat\n\n…ients with gout who have an inadequate response to a maximally titrated dose of allopurinol, who are intolerant to allopurinol, or for whom treatment with allop…\n\nOpen on DailyMed\nAmpicillin and Sulbactam\nampicillin sodium and sulbactam sodium\n\n…beta-lactamase producing organisms listed above in the indicated organ systems. Once the results are known, therapy should be adjusted if appropriate. To reduce…\n\nOpen on DailyMed\nShow 8 more\nCardizem CD (diltiazem ER) 240 mg once daily = 240 mg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Cardizem CD (diltiazem ER) 240 mg once daily = 240 mg/day”\n\ndiltiazem hydrochloride\n\nINDICATIONS AND USAGE Diltiazem hydrochloride extended-release capsules are indicated for the treatmen…\n\nOpen on DailyMed\ndiltiazem hydrochloride\n\nINDICATIONS AND USAGE Diltiazem Hydrochloride Extended-Release Capsules are indicated for the treatmen…\n\nOpen on DailyMed\nipratropium bromide and albuterol sulfate\n\nINDICATIONS AND USAGE Ipratropium Bromide and Albuterol Sulfate Inhalation Solution is indicated for the treatment of bronchospasm…\n\nOpen on DailyMed\nPREVYMIS\nletermovir\n\n1 INDICATIONS AND USAGE PREVYMIS is a CMV DNA terminase complex inhibitor indicated for: Prophylaxis of cytomegalovirus (CMV) i…\n\nOpen on DailyMed\nShow 8 more\nLasix (furosemide) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfurosemide 40 mg [lasix]\n\nWhat the labels say about “Lasix (furosemide) 40 mg once daily = 40 mg/day”\n\nfurosemide\n\nINDICATIONS AND USAGE Edema Furosemide tablets are indicated in adults and pediatric patients for the treatm…\n\nOpen on DailyMed\nminoxidil\n\n…nges, nor have there been alterations in blood cell counts or in plasma enzyme concentrations that would suggest myocardial damage. Long-term treatment of patie…\n\nOpen on DailyMed\ntamsulosin hydrochloride\n\n…se events (≥2% of patients and at a higher incidence than placebo) with the 0.4 mg dose or 0.8 mg dose were headache, dizziness, rhinitis, infection, abnormal e…\n\nOpen on DailyMed\nbumetanide\n\n…treatment with bumetanide tablets following instances of allergic reactions to furosemide suggests a lack of cross-sensitivity. ADVERSE REACTIONS The most freq…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:57:15.012Z"
+}

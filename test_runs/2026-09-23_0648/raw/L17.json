@@ -1,0 +1,223 @@
+{
+ "id": "L17",
+ "input": "Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day, Aldactone (spironolactone) 50 mg once daily = 50 mg/day, Cozaar (losartan) 100 mg once daily = 100 mg/day, Klor-Con (potassium chloride ER) 40 mEq once daily = 40 mEq/day, Celebrex (celecoxib) 200 mg twice daily = 400 mg/day, Jardiance (empagliflozin) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.878,
+ "secondsToResults": 4.049,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsulfamethoxazole 800 mg / trimethoprim 160 mg oral tablet [bactrim ds]\n\nWhat the labels say about “Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day”\n\nsulfamethoxazole and trimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of sulfamethoxazole and trimethoprim tablets and other antibacterial drugs, sulfame…\n\nOpen on DailyMed\ntrimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of trimethoprim tablets, USP and other antibacterial drugs, trimethoprim tablets, U…\n\nOpen on DailyMed\ndofetilide\n\n…RSE EVENTS, contact Dr.Reddy’s Laboratories Inc., at 1-888-375-3784 or FDA at 1-800-FDA-1088 or http://www.fda.gov/medwatch for voluntary reporting of adverse r…\n\nOpen on DailyMed\nLEVOLEUCOVORIN CALCIUM\nlevoleucovorin injection\n\n…) To report SUSPECTED ADVERSE REACTIONS, contact Slate Run Pharmaceuticals at 1-800-341-9214 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Tria…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Aldactone (spironolactone) 50 mg once daily = 50 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Aldactone (spironolactone) 50 mg once daily = 50 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nspironolactone 50 mg [aldactone]\n\nWhat the labels say about “Aldactone (spironolactone) 50 mg once daily = 50 mg/day”\n\nspironolactone\n\n1 INDICATIONS AND USAGE Spironolactone is an aldosterone antagonist indicated for: The treatment of NYHA…\n\nOpen on DailyMed\nspironolactone and hydrochlorothiazide\n\nINDICATIONS AND USAGE Spironolactone, an ingredient of spironolactone and hydrochlorothiazide tablets,…\n\nOpen on DailyMed\nbicalutamide\n\n1. INDICATIONS AND USAGE Bicalutamide tablets 50 mg daily is indicated for use in combination therapy with a luteinizing hormo…\n\nOpen on DailyMed\ndigoxin\n\n…within the recommended dose range, is maintained within the therapeutic serum concentration range, and when there is careful attention to concurrent medication…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Cozaar (losartan) 100 mg once daily = 100 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Cozaar (losartan) 100 mg once daily = 100 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlosartan potassium 100 mg [cozaar]\n\nWhat the labels say about “Cozaar (losartan) 100 mg once daily = 100 mg/day”\n\nlosartan potassium and hydrochlorothiazide\n\n1 INDICATIONS AND USAGE Losartan potassium and hydrochlorothiazide tablets are a combination of losartan…\n\nOpen on DailyMed\nlosartan potassium\n\n1 INDICATIONS & USAGE Losartan potassium tablets, USP are an angiotensin II receptor blocker (ARB) ind…\n\nOpen on DailyMed\nVelphoro\nsucroferric oxyhydroxide\n\n…peritoneal dialysis exposed for up to 55 weeks. Dosage regimens ranged from 250 mg to 3,000 mg per day. In a parallel design, dose-finding study of Velphoro wit…\n\nOpen on DailyMed\nfluconazole\n\n…re the results of the cultures and other laboratory studies are known; however, once these results become available, anti-infective therapy should be adjusted a…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Klor-Con (potassium chloride ER) 40 mEq once daily = 40 mEq/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Klor-Con (potassium chloride ER) 40 mEq once daily = 40 mEq/day\nNot found in the FDA labels. Did you mean:\nEdit\npotassium chloride 10 meq [klor-con]\npotassium chloride 20 meq [klor-con]\npotassium chloride 15 meq [klor-con]\npotassium chloride 8 meq [klor-con]\npotassium chloride 25 meq [klor-con]\n\nWhat the labels say about “Klor-Con (potassium chloride ER) 40 mEq once daily = 40 mEq/day”\n\nKLOR-Con/EF\npotassium bicarbonate\n\n…lkalosis; in digitalis intoxication; and in patients with hypokalemic familial periodic paralysis. If hypokalemia is the result of diuretic therapy, considerati…\n\nOpen on DailyMed\npotassium chloride extended-release\n\nINDICATIONS AND USAGE BECAUSE OF REPORTS OF INTESTINAL AND GASTRIC ULCERATION AND BLEEDING WITH CONTROLLED-RELEASE POTASSIUM CHLORIDE PREPARATIONS, TH…\n\nOpen on DailyMed\nPotassium Chloride in Dextrose\ndextrose monohydrate and potassium chloride injection, solution\n\nINDICATIONS AND USAGE This solution is indicated in patients requiring parenteral administration of potassium chloride with minimal carbohydrate calories. AD…\n\nOpen on DailyMed\nindapamide\n\nINDICATIONS AND USAGE Indapamide tablets are indicated for the treatment of hypertension, alone or in combination with other antihypertensive drugs. Indapamide…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Celebrex (celecoxib) 200 mg twice daily = 400 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Celebrex (celecoxib) 200 mg twice daily = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncelecoxib 400 mg [celebrex]\n\nWhat the labels say about “Celebrex (celecoxib) 200 mg twice daily = 400 mg/day”\n\ncelecoxib\n\n1 INDICATIONS AND USAGE Celecoxib is indicated Celecoxib is a nonsteroidal anti-inflammatory drug indica…\n\nOpen on DailyMed\nfluconazole\n\n…tates, 448 patients with vaginal candidiasis were treated with fluconazole, 150 mg single dose. The overall incidence of side effects possibly related to flucon…\n\nOpen on DailyMed\nnitisinone\n\n…lacetone in the urine or plasma. The starting dose of nitisinone was 0.3 to 0.5 mg/kg twice daily, and the dose was increased in some patients to 1 mg/kg twice…\n\nOpen on DailyMed\ntorsemide\n\n…urred in 6.7% of patients compared with 2.2% of patients receiving placebo. The daily doses of torsemide used in these trials ranged from 1.25 mg to 20 mg, with…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Jardiance (empagliflozin) 10 mg once daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Jardiance (empagliflozin) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nempagliflozin 10 mg [jardiance]\n\nWhat the labels say about “Jardiance (empagliflozin) 10 mg once daily = 10 mg/day”\n\nJardiance\nempagliflozin\n\n1 INDICATIONS AND USAGE JARDIANCE is indicated: to reduce the risk of cardiovascular death and hospitali…\n\nOpen on DailyMed\nGlyxambi\nempagliflozin and linagliptin\n\n1 INDICATIONS AND USAGE GLYXAMBI is a combination of empagliflozin and linagliptin indicated as an adjunct to diet and exercise to im…\n\nOpen on DailyMed\nSynjardy\nempagliflozin and metformin hydrochloride\n\n1 INDICATIONS AND USAGE SYNJARDY SYNJARDY is a combination of empagliflozin, a sodium-glucose co-transporter 2 (SGLT2) inhibitor and metformin…\n\nOpen on DailyMed\nTrijardy XR\nempagliflozin, linagliptin, metformin hydrochloride\n\n1 INDICATIONS AND USAGE TRIJARDY XR is a combination of empagliflozin, linagliptin, and metformin hydrochloride (HCl) indicated as an ad…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d60c218c-6529-4944-af0b-a9dc720f32e9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=249e938d-f181-47c4-a082-372d65462f33",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26de5f8c-8cec-46f6-a468-69451758a278",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=124bc214-62f8-40f9-a227-a35e2d1ff2a0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6fa96947-f4d8-4ca4-98fd-a2c123310d83",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26e30155-a50b-df14-e063-6394a90a9be4",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=446e6998-01f6-4de0-be57-7fecf5448e95",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a397502e-abe7-49cf-97c7-d53a616947eb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=237da26c-f38c-4faa-93ad-735e71c9d0c1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9d85c4f-aa46-40b2-ad76-89dbf6ec8e4d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ace1eb11-b925-405a-b772-58c60b3ca7d4",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02d694b5-3600-4d55-bd5c-924abaec5315",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59cd3331-7afe-432a-8b50-39533fd5f392",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a1eadd5-c0a7-473e-bde0-6b9450d11c95",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=437868f5-1c9e-4b0f-8a03-77df8ac0900d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26a3af16-39fc-482d-8a8e-9473af4b0e3f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59ed43d9-b4e0-72a2-e063-6394a90a327d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ddbab689-f76c-488c-9613-4168d41dd730",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0fdd0255-0055-65f3-b2c0-db8fbb87beae",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=71873567-9594-452a-bb92-34a129adecac",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nBactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day: not found. Edit it in the list, or remove it.\nAldactone (spironolactone) 50 mg once daily = 50 mg/day: not found. Edit it in the list, or remove it.\nCozaar (losartan) 100 mg once daily = 100 mg/day: not found. Edit it in the list, or remove it.\nKlor-Con (potassium chloride ER) 40 mEq once daily = 40 mEq/day: not found. Edit it in the list, or remove it.\nCelebrex (celecoxib) 200 mg twice daily = 400 mg/day: not found. Edit it in the list, or remove it.\nJardiance (empagliflozin) 10 mg once daily = 10 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nBactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsulfamethoxazole 800 mg / trimethoprim 160 mg oral tablet [bactrim ds]\n\nWhat the labels say about “Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day”\n\nsulfamethoxazole and trimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of sulfamethoxazole and trimethoprim tablets and other antibacterial drugs, sulfame…\n\nOpen on DailyMed\ntrimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of trimethoprim tablets, USP and other antibacterial drugs, trimethoprim tablets, U…\n\nOpen on DailyMed\ndofetilide\n\n…RSE EVENTS, contact Dr.Reddy’s Laboratories Inc., at 1-888-375-3784 or FDA at 1-800-FDA-1088 or http://www.fda.gov/medwatch for voluntary reporting of adverse r…\n\nOpen on DailyMed\nLEVOLEUCOVORIN CALCIUM\nlevoleucovorin injection\n\n…) To report SUSPECTED ADVERSE REACTIONS, contact Slate Run Pharmaceuticals at 1-800-341-9214 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Tria…\n\nOpen on DailyMed\nShow 8 more\nAldactone (spironolactone) 50 mg once daily = 50 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nspironolactone 50 mg [aldactone]\n\nWhat the labels say about “Aldactone (spironolactone) 50 mg once daily = 50 mg/day”\n\nspironolactone\n\n1 INDICATIONS AND USAGE Spironolactone is an aldosterone antagonist indicated for: The treatment of NYHA…\n\nOpen on DailyMed\nspironolactone and hydrochlorothiazide\n\nINDICATIONS AND USAGE Spironolactone, an ingredient of spironolactone and hydrochlorothiazide tablets,…\n\nOpen on DailyMed\nbicalutamide\n\n1. INDICATIONS AND USAGE Bicalutamide tablets 50 mg daily is indicated for use in combination therapy with a luteinizing hormo…\n\nOpen on DailyMed\ndigoxin\n\n…within the recommended dose range, is maintained within the therapeutic serum concentration range, and when there is careful attention to concurrent medication…\n\nOpen on DailyMed\nShow 8 more\nCozaar (losartan) 100 mg once daily = 100 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlosartan potassium 100 mg [cozaar]\n\nWhat the labels say about “Cozaar (losartan) 100 mg once daily = 100 mg/day”\n\nlosartan potassium and hydrochlorothiazide\n\n1 INDICATIONS AND USAGE Losartan potassium and hydrochlorothiazide tablets are a combination of losartan…\n\nOpen on DailyMed\nlosartan potassium\n\n1 INDICATIONS & USAGE Losartan potassium tablets, USP are an angiotensin II receptor blocker (ARB) ind…\n\nOpen on DailyMed\nVelphoro\nsucroferric oxyhydroxide\n\n…peritoneal dialysis exposed for up to 55 weeks. Dosage regimens ranged from 250 mg to 3,000 mg per day. In a parallel design, dose-finding study of Velphoro wit…\n\nOpen on DailyMed\nfluconazole\n\n…re the results of the cultures and other laboratory studies are known; however, once these results become available, anti-infective therapy should be adjusted a…\n\nOpen on DailyMed\nShow 8 more\nKlor-Con (potassium chloride ER) 40 mEq once daily = 40 mEq/day\nNot found in the FDA labels. Did you mean:\nEdit\npotassium chloride 10 meq [klor-con]\npotassium chloride 20 meq [klor-con]\npotassium chloride 15 meq [klor-con]\npotassium chloride 8 meq [klor-con]\npotassium chloride 25 meq [klor-con]\n\nWhat the labels say about “Klor-Con (potassium chloride ER) 40 mEq once daily = 40 mEq/day”\n\nKLOR-Con/EF\npotassium bicarbonate\n\n…lkalosis; in digitalis intoxication; and in patients with hypokalemic familial periodic paralysis. If hypokalemia is the result of diuretic therapy, considerati…\n\nOpen on DailyMed\npotassium chloride extended-release\n\nINDICATIONS AND USAGE BECAUSE OF REPORTS OF INTESTINAL AND GASTRIC ULCERATION AND BLEEDING WITH CONTROLLED-RELEASE POTASSIUM CHLORIDE PREPARATIONS, TH…\n\nOpen on DailyMed\nPotassium Chloride in Dextrose\ndextrose monohydrate and potassium chloride injection, solution\n\nINDICATIONS AND USAGE This solution is indicated in patients requiring parenteral administration of potassium chloride with minimal carbohydrate calories. AD…\n\nOpen on DailyMed\nindapamide\n\nINDICATIONS AND USAGE Indapamide tablets are indicated for the treatment of hypertension, alone or in combination with other antihypertensive drugs. Indapamide…\n\nOpen on DailyMed\nShow 8 more\nCelebrex (celecoxib) 200 mg twice daily = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncelecoxib 400 mg [celebrex]\n\nWhat the labels say about “Celebrex (celecoxib) 200 mg twice daily = 400 mg/day”\n\ncelecoxib\n\n1 INDICATIONS AND USAGE Celecoxib is indicated Celecoxib is a nonsteroidal anti-inflammatory drug indica…\n\nOpen on DailyMed\nfluconazole\n\n…tates, 448 patients with vaginal candidiasis were treated with fluconazole, 150 mg single dose. The overall incidence of side effects possibly related to flucon…\n\nOpen on DailyMed\nnitisinone\n\n…lacetone in the urine or plasma. The starting dose of nitisinone was 0.3 to 0.5 mg/kg twice daily, and the dose was increased in some patients to 1 mg/kg twice…\n\nOpen on DailyMed\ntorsemide\n\n…urred in 6.7% of patients compared with 2.2% of patients receiving placebo. The daily doses of torsemide used in these trials ranged from 1.25 mg to 20 mg, with…\n\nOpen on DailyMed\nShow 8 more\nJardiance (empagliflozin) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nempagliflozin 10 mg [jardiance]\n\nWhat the labels say about “Jardiance (empagliflozin) 10 mg once daily = 10 mg/day”\n\nJardiance\nempagliflozin\n\n1 INDICATIONS AND USAGE JARDIANCE is indicated: to reduce the risk of cardiovascular death and hospitali…\n\nOpen on DailyMed\nGlyxambi\nempagliflozin and linagliptin\n\n1 INDICATIONS AND USAGE GLYXAMBI is a combination of empagliflozin and linagliptin indicated as an adjunct to diet and exercise to im…\n\nOpen on DailyMed\nSynjardy\nempagliflozin and metformin hydrochloride\n\n1 INDICATIONS AND USAGE SYNJARDY SYNJARDY is a combination of empagliflozin, a sodium-glucose co-transporter 2 (SGLT2) inhibitor and metformin…\n\nOpen on DailyMed\nTrijardy XR\nempagliflozin, linagliptin, metformin hydrochloride\n\n1 INDICATIONS AND USAGE TRIJARDY XR is a combination of empagliflozin, linagliptin, and metformin hydrochloride (HCl) indicated as an ad…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:54:19.832Z"
+}

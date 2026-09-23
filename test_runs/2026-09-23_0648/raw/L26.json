@@ -1,0 +1,223 @@
+{
+ "id": "L26",
+ "input": "Depakote (divalproex sodium DR) 750 mg twice daily = 1500 mg/day, Lamictal (lamotrigine) 200 mg once daily = 200 mg/day, Topamax (topiramate) 100 mg twice daily = 200 mg/day, Bayer (aspirin OTC) 325 mg once daily = 325 mg/day, Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day, Klonopin (clonazepam) 0.5 mg twice daily = 1 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.842,
+ "secondsToResults": 2.832,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Depakote (divalproex sodium DR) 750 mg twice daily = 1500 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Depakote (divalproex sodium DR) 750 mg twice daily = 1500 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndivalproex sodium 125 mg [depakote]\ndivalproex sodium 500 mg [depakote]\ndivalproex sodium 250 mg [depakote]\n\nWhat the labels say about “Depakote (divalproex sodium DR) 750 mg twice daily = 1500 mg/day”\n\ndivalproex sodium\n\n1 INDICATIONS AND USAGE Divalproex sodium extended-release tablets are indicated for: Acute treatment of…\n\nOpen on DailyMed\nvalproic acid\n\n…gs and Precautions ( 5.8 )] Hypothermia [see Warnings and Precautions ( 5.11 )] Drug Reaction with Eosinophilia and Systemic Symptoms (DRESS)/Multiorgan hyperse…\n\nOpen on DailyMed\nvalproate sodium\n\n1 INDICATIONS AND USAGE Valproate Sodium Injection is indicated as an intravenous alternative in patients in whom…\n\nOpen on DailyMed\nmeropenem\n\n…n association with bacterial meningitis. 1.2 Usage To reduce the development of drug-resistant bacteria and maintain the effectiveness of Meropenem for Injectio…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lamictal (lamotrigine) 200 mg once daily = 200 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lamictal (lamotrigine) 200 mg once daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlamotrigine 200 mg [lamictal]\n\nWhat the labels say about “Lamictal (lamotrigine) 200 mg once daily = 200 mg/day”\n\nlamotrigine\n\n1 INDICATIONS AND USAGE Lamotrigine is indicated for: Epilepsy — adjunctive therapy in patients aged 2 y…\n\nOpen on DailyMed\nXcopri\ncenobamate\n\n…were 11%, 9%, and 21% for patients randomized to receive XCOPRI at doses of 100 mg/day, 200 mg/day, and 400 mg/day, respectively, compared to 4% in patients ran…\n\nOpen on DailyMed\nlopinavir and ritonavir\n\n…agents for the treatment of HIV1 infection in adults and pediatric patients 14 days and older. Limitations of Use: Genotypic or phenotypic testing and/or treat…\n\nOpen on DailyMed\nAtazanavir Sulfate\natazanavir\n\n…cipants with HIV-1 in clinical trials. 536 participants received atazanavir 300 mg with ritonavir 100 mg and 1089 participants received atazanavir 400 mg or hig…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Topamax (topiramate) 100 mg twice daily = 200 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Topamax (topiramate) 100 mg twice daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntopiramate 200 mg [topamax]\n\nWhat the labels say about “Topamax (topiramate) 100 mg twice daily = 200 mg/day”\n\ntopiramate\n\n1 INDICATIONS AND USAGE Topiramate tablets are indicated for: Epilepsy: initial monotherapy for the trea…\n\nOpen on DailyMed\nvalproate sodium\n\n…male volunteers and 352 patients with epilepsy, given at doses of 125 to 6,000 mg (total daily dose). A total of 2% of patients discontinued treatment with Val…\n\nOpen on DailyMed\nvalproic acid\n\n…ed lethargy and vomiting or changes in mental status, and also with concomitant topiramate use; consider discontinuation of valproate therapy ( 5.6 , 5.9 , 5.10…\n\nOpen on DailyMed\nphentermine and topiramate\n\n1 INDICATIONS AND USAGE Phentermine and topiramate extended-release capsules are indicated in combination with a reduced…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Bayer (aspirin OTC) 325 mg once daily = 325 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Bayer (aspirin OTC) 325 mg once daily = 325 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\naspirin 325 mg [bayer aspirin]\n\nWhat the labels say about “Bayer (aspirin OTC) 325 mg once daily = 325 mg/day”\n\nprasugrel\n\n…TRITON-TIMI 38, in which 6741 patients were treated with prasugrel tablets (60 mg loading dose and 10 mg once daily) for a median of 14.5 months (5802 patients…\n\nOpen on DailyMed\ncaffeine and sodium benzoate\n\n…at when used as a mild CNS stimulant to overcome fatigue, oral doses of 100-200 mg of anhydrous caffeine are required. One manufacturer recommends that citrated…\n\nOpen on DailyMed\nenoxaparin sodium\n\n…ngina and non-Q-wave myocardial infarction, when concurrently administered with aspirin. 1.4 Treatment of Acute ST-Segment Elevation Myocardial Infarction Enoxa…\n\nOpen on DailyMed\nniacin\n\n…ushing of the skin may be reduced in frequency or severity by pretreatment with aspirin (up to the recommended dose of 325 mg taken 30 minutes prior to niacin e…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncarbamazepine 400 mg [tegretol]\ncarbamazepine 125 mg [tegretol]\ncarbamazepine 250 mg [tegretol]\ncarbamazepine 200 mg [tegretol]\ncarbamazepine 100 mg [tegretol]\n\nWhat the labels say about “Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day”\n\nLivtencity\nmaribavir\n\n…da Pharmaceuticals America, Inc. at 1-877-TAKEDA-7 (1-877-825-3327) or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because cli…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\ncarbamazepine\n\nINDICATIONS AND USAGE Epilepsy Carbamazepine extended-release capsules are indicated for use as an anticonvulsa…\n\nOpen on DailyMed\nlopinavir and ritonavir\n\n…agents for the treatment of HIV1 infection in adults and pediatric patients 14 days and older. Limitations of Use: Genotypic or phenotypic testing and/or treat…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Klonopin (clonazepam) 0.5 mg twice daily = 1 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Klonopin (clonazepam) 0.5 mg twice daily = 1 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclonazepam 1 mg [klonopin]\n\nWhat the labels say about “Klonopin (clonazepam) 0.5 mg twice daily = 1 mg/day”\n\nclonazepam\n\nINDICATIONS AND USAGE Seizure Disorders: Clonazepam tablets are useful alone or as an adjunct in the treatment of the Len…\n\nOpen on DailyMed\nvigabatrin\n\n1 INDICATIONS AND USAGE Vigabatrin tablets are indicated for the treatment of: •…\n\nOpen on DailyMed\ndarunavir\ndarunavir 600 mg\n\n1 INDICATIONS AND USAGE Darunavir tablets, co-administered with ritonavir (darun…\n\nOpen on DailyMed\nDarunavir 600 and 800 mg\ndarunavir\n\n1 INDICATIONS AND USAGE Darunavir tablets, co-administered with ritonavir (darun…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1edd220d-d151-4177-9a29-9fee36489fb7",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8d5fc1c1-d3c0-497e-971b-6c4dba9a3fad",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6902fee1-6022-4145-a79a-4680ad1fb1e8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20e156df-a2b6-4710-b526-0419cd17dd33",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=565c2126-57ae-4e29-b443-723bbe7e2072",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=115178c8-5ee2-4d96-820e-ea8264c1ac10",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7fbea274-d6b5-4faa-bbf0-05fefab42114",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8d5fc1c1-d3c0-497e-971b-6c4dba9a3fad",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1edd220d-d151-4177-9a29-9fee36489fb7",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=876bd763-13fa-481e-b579-c2fc44dbf3c2",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f51e64e0-f556-65d0-a876-fb709aaeefea",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b2c6b352-f837-4903-8e4c-fb0a2b20bb60",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=45a66675-b159-42b8-9f18-ff80f28e1503",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8eff9205-84ac-e69d-e053-2995a90aad4b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c94fc2c5-e840-4f18-b7d8-d5eacb26d3a0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=115178c8-5ee2-4d96-820e-ea8264c1ac10",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=93ba3894-fd97-4432-9f2d-e7050371e91f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed977166-7ac0-4a8c-a10c-4b19a69403c0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bf99d8b8-c4e0-4cb4-924e-8cdcfd8d1aa1",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nDepakote (divalproex sodium DR) 750 mg twice daily = 1500 mg/day: not found. Edit it in the list, or remove it.\nLamictal (lamotrigine) 200 mg once daily = 200 mg/day: not found. Edit it in the list, or remove it.\nTopamax (topiramate) 100 mg twice daily = 200 mg/day: not found. Edit it in the list, or remove it.\nBayer (aspirin OTC) 325 mg once daily = 325 mg/day: not found. Edit it in the list, or remove it.\nTegretol (carbamazepine) 400 mg twice daily = 800 mg/day: not found. Edit it in the list, or remove it.\nKlonopin (clonazepam) 0.5 mg twice daily = 1 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nDepakote (divalproex sodium DR) 750 mg twice daily = 1500 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndivalproex sodium 125 mg [depakote]\ndivalproex sodium 500 mg [depakote]\ndivalproex sodium 250 mg [depakote]\n\nWhat the labels say about “Depakote (divalproex sodium DR) 750 mg twice daily = 1500 mg/day”\n\ndivalproex sodium\n\n1 INDICATIONS AND USAGE Divalproex sodium extended-release tablets are indicated for: Acute treatment of…\n\nOpen on DailyMed\nvalproic acid\n\n…gs and Precautions ( 5.8 )] Hypothermia [see Warnings and Precautions ( 5.11 )] Drug Reaction with Eosinophilia and Systemic Symptoms (DRESS)/Multiorgan hyperse…\n\nOpen on DailyMed\nvalproate sodium\n\n1 INDICATIONS AND USAGE Valproate Sodium Injection is indicated as an intravenous alternative in patients in whom…\n\nOpen on DailyMed\nmeropenem\n\n…n association with bacterial meningitis. 1.2 Usage To reduce the development of drug-resistant bacteria and maintain the effectiveness of Meropenem for Injectio…\n\nOpen on DailyMed\nShow 8 more\nLamictal (lamotrigine) 200 mg once daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlamotrigine 200 mg [lamictal]\n\nWhat the labels say about “Lamictal (lamotrigine) 200 mg once daily = 200 mg/day”\n\nlamotrigine\n\n1 INDICATIONS AND USAGE Lamotrigine is indicated for: Epilepsy — adjunctive therapy in patients aged 2 y…\n\nOpen on DailyMed\nXcopri\ncenobamate\n\n…were 11%, 9%, and 21% for patients randomized to receive XCOPRI at doses of 100 mg/day, 200 mg/day, and 400 mg/day, respectively, compared to 4% in patients ran…\n\nOpen on DailyMed\nlopinavir and ritonavir\n\n…agents for the treatment of HIV1 infection in adults and pediatric patients 14 days and older. Limitations of Use: Genotypic or phenotypic testing and/or treat…\n\nOpen on DailyMed\nAtazanavir Sulfate\natazanavir\n\n…cipants with HIV-1 in clinical trials. 536 participants received atazanavir 300 mg with ritonavir 100 mg and 1089 participants received atazanavir 400 mg or hig…\n\nOpen on DailyMed\nShow 8 more\nTopamax (topiramate) 100 mg twice daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntopiramate 200 mg [topamax]\n\nWhat the labels say about “Topamax (topiramate) 100 mg twice daily = 200 mg/day”\n\ntopiramate\n\n1 INDICATIONS AND USAGE Topiramate tablets are indicated for: Epilepsy: initial monotherapy for the trea…\n\nOpen on DailyMed\nvalproate sodium\n\n…male volunteers and 352 patients with epilepsy, given at doses of 125 to 6,000 mg (total daily dose). A total of 2% of patients discontinued treatment with Val…\n\nOpen on DailyMed\nvalproic acid\n\n…ed lethargy and vomiting or changes in mental status, and also with concomitant topiramate use; consider discontinuation of valproate therapy ( 5.6 , 5.9 , 5.10…\n\nOpen on DailyMed\nphentermine and topiramate\n\n1 INDICATIONS AND USAGE Phentermine and topiramate extended-release capsules are indicated in combination with a reduced…\n\nOpen on DailyMed\nShow 8 more\nBayer (aspirin OTC) 325 mg once daily = 325 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\naspirin 325 mg [bayer aspirin]\n\nWhat the labels say about “Bayer (aspirin OTC) 325 mg once daily = 325 mg/day”\n\nprasugrel\n\n…TRITON-TIMI 38, in which 6741 patients were treated with prasugrel tablets (60 mg loading dose and 10 mg once daily) for a median of 14.5 months (5802 patients…\n\nOpen on DailyMed\ncaffeine and sodium benzoate\n\n…at when used as a mild CNS stimulant to overcome fatigue, oral doses of 100-200 mg of anhydrous caffeine are required. One manufacturer recommends that citrated…\n\nOpen on DailyMed\nenoxaparin sodium\n\n…ngina and non-Q-wave myocardial infarction, when concurrently administered with aspirin. 1.4 Treatment of Acute ST-Segment Elevation Myocardial Infarction Enoxa…\n\nOpen on DailyMed\nniacin\n\n…ushing of the skin may be reduced in frequency or severity by pretreatment with aspirin (up to the recommended dose of 325 mg taken 30 minutes prior to niacin e…\n\nOpen on DailyMed\nShow 8 more\nTegretol (carbamazepine) 400 mg twice daily = 800 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncarbamazepine 400 mg [tegretol]\ncarbamazepine 125 mg [tegretol]\ncarbamazepine 250 mg [tegretol]\ncarbamazepine 200 mg [tegretol]\ncarbamazepine 100 mg [tegretol]\n\nWhat the labels say about “Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day”\n\nLivtencity\nmaribavir\n\n…da Pharmaceuticals America, Inc. at 1-877-TAKEDA-7 (1-877-825-3327) or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because cli…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\ncarbamazepine\n\nINDICATIONS AND USAGE Epilepsy Carbamazepine extended-release capsules are indicated for use as an anticonvulsa…\n\nOpen on DailyMed\nlopinavir and ritonavir\n\n…agents for the treatment of HIV1 infection in adults and pediatric patients 14 days and older. Limitations of Use: Genotypic or phenotypic testing and/or treat…\n\nOpen on DailyMed\nShow 8 more\nKlonopin (clonazepam) 0.5 mg twice daily = 1 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclonazepam 1 mg [klonopin]\n\nWhat the labels say about “Klonopin (clonazepam) 0.5 mg twice daily = 1 mg/day”\n\nclonazepam\n\nINDICATIONS AND USAGE Seizure Disorders: Clonazepam tablets are useful alone or as an adjunct in the treatment of the Len…\n\nOpen on DailyMed\nvigabatrin\n\n1 INDICATIONS AND USAGE Vigabatrin tablets are indicated for the treatment of: •…\n\nOpen on DailyMed\ndarunavir\ndarunavir 600 mg\n\n1 INDICATIONS AND USAGE Darunavir tablets, co-administered with ritonavir (darun…\n\nOpen on DailyMed\nDarunavir 600 and 800 mg\ndarunavir\n\n1 INDICATIONS AND USAGE Darunavir tablets, co-administered with ritonavir (darun…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:55:28.389Z"
+}

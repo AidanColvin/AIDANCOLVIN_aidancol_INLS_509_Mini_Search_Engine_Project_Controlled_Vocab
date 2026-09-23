@@ -1,0 +1,223 @@
+{
+ "id": "L03",
+ "input": "Celexa (citalopram) 40 mg once daily = 40 mg/day, Haldol (haloperidol) 5 mg twice daily = 10 mg/day, Zithromax (azithromycin) 500 mg once daily = 500 mg/day, Diflucan (fluconazole) 200 mg once daily = 200 mg/day, Lasix (furosemide) 40 mg once daily = 40 mg/day, Protonix (pantoprazole) 40 mg once daily = 40 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.854,
+ "secondsToResults": 2.839,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Celexa (citalopram) 40 mg once daily = 40 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Celexa (citalopram) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncitalopram 40 mg [celexa]\n\nWhat the labels say about “Celexa (citalopram) 40 mg once daily = 40 mg/day”\n\npimozide\n\n…ld be reserved for use in Tourette’s Disorder patients whose development and/or daily life function is severely compromised by the presence of motor and phonic…\n\nOpen on DailyMed\nCitalopram\ncitalopram hydrobromide\n\n1 INDICATIONS AND USAGE Citalopram tablets are indicated for the treatment of major depressive disorder…\n\nOpen on DailyMed\nescitalopram\n\n1 INDICATIONS AND USAGE Escitalopram tablets are indicated for the treatment of: major depressive disorder…\n\nOpen on DailyMed\nomeprazole\n\n…be associated with increased risk. (5.3) Bone Fracture: Long-term and multiple daily dose PPI therapy may be associated with an increased risk for osteoporosis…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Haldol (haloperidol) 5 mg twice daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Haldol (haloperidol) 5 mg twice daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nhaloperidol 10 mg [haldol]\n\nWhat the labels say about “Haldol (haloperidol) 5 mg twice daily = 10 mg/day”\n\npimozide\n\n…ld be reserved for use in Tourette’s Disorder patients whose development and/or daily life function is severely compromised by the presence of motor and phonic…\n\nOpen on DailyMed\nhaloperidol decanoate\n\n1 INDICATIONS AND USAGE Haloperidol decanoate injection is indicated for the treatment of schizophrenia…\n\nOpen on DailyMed\nhaloperidol\n\nINDICATIONS AND USAGE Haloperidol tablets are indicated for use in the management of manifestations of…\n\nOpen on DailyMed\nbenztropine mesylate\n\n…vehicle. When benztropine mesylate is given concomitantly with phenothiazines, haloperidol, or other drugs with anticholinergic or antidopaminergic activity, p…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zithromax (azithromycin) 500 mg once daily = 500 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zithromax (azithromycin) 500 mg once daily = 500 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nazithromycin 500 mg [zithromax]\n\nWhat the labels say about “Zithromax (azithromycin) 500 mg once daily = 500 mg/day”\n\nazithromycin\n\n1 INDICATIONS AND USAGE Azithromycin is a macrolide antibacterial drug indicated for the treatment of pa…\n\nOpen on DailyMed\nazithromycin monohydrate\n\n1 INDICATIONS AND USAGE Azithromycin for injection is a macrolide antibacterial drug indicated for the t…\n\nOpen on DailyMed\nNUZOLVENCE\nzoliflodacin\n\n…ither a single oral 3 g dose of NUZOLVENCE (N=619) or a combination of a single 500 mg intramuscular dose of ceftriaxone and a single 1 g oral dose of azithromy…\n\nOpen on DailyMed\nrifabutin\n\n…hanges on electrocardiogram. When rifabutin was administered at doses from 1050 mg/day to 2400 mg/day, generalized arthralgia and uveitis were reported. These a…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Diflucan (fluconazole) 200 mg once daily = 200 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Diflucan (fluconazole) 200 mg once daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluconazole 200 mg [diflucan]\n\nWhat the labels say about “Diflucan (fluconazole) 200 mg once daily = 200 mg/day”\n\nglipizide\n\n…ated for 5 to 8 years with diet plus a fixed dose of tolbutamide (1.5 grams per day) had a rate of cardiovascular mortality approximately 2½ times that of patie…\n\nOpen on DailyMed\nfluconazole\n\nINDICATIONS AND USAGE Fluconazole tablets are indicated for the treatment of: Vaginal candidiasis (vag…\n\nOpen on DailyMed\nERAXIS\nanidulafungin\n\n…re the results of the cultures and other laboratory studies are known. However, once these results become available, antifungal therapy should be adjusted accor…\n\nOpen on DailyMed\nJAKAFI\nruxolitinib\n\n…e than 12 months. One hundred and eleven (111) patients started treatment at 15 mg twice daily and 190 patients started at 20 mg twice daily. In patients starti…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lasix (furosemide) 40 mg once daily = 40 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lasix (furosemide) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfurosemide 40 mg [lasix]\n\nWhat the labels say about “Lasix (furosemide) 40 mg once daily = 40 mg/day”\n\nfurosemide\n\nINDICATIONS AND USAGE Edema Furosemide tablets are indicated in adults and pediatric patients for the treatm…\n\nOpen on DailyMed\nminoxidil\n\n…nges, nor have there been alterations in blood cell counts or in plasma enzyme concentrations that would suggest myocardial damage. Long-term treatment of patie…\n\nOpen on DailyMed\ntamsulosin hydrochloride\n\n…se events (≥2% of patients and at a higher incidence than placebo) with the 0.4 mg dose or 0.8 mg dose were headache, dizziness, rhinitis, infection, abnormal e…\n\nOpen on DailyMed\nbumetanide\n\n…treatment with bumetanide tablets following instances of allergic reactions to furosemide suggests a lack of cross-sensitivity. ADVERSE REACTIONS The most freq…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Protonix (pantoprazole) 40 mg once daily = 40 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Protonix (pantoprazole) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\npantoprazole 40 mg [protonix]\n\nWhat the labels say about “Protonix (pantoprazole) 40 mg once daily = 40 mg/day”\n\npantoprazole sodium\n\n1 INDICATIONS AND USAGE Pantoprazole sodium for injection is indicated for treatment of: • gastroesophag…\n\nOpen on DailyMed\nPREVYMIS\nletermovir\n\n…in adult and pediatric patients 12 years of age and older and weighing at least 40 kg who are kidney transplant recipients at high risk (Donor CMV seropositive/…\n\nOpen on DailyMed\nMycophenolic Acid\nmycophenilic acid\n\n…re administered either mycophenolic acid delayed-release tablets 1.44 grams per day (N = 213) or MMF 2 grams per day (N = 210) within 48 hours post-transplant f…\n\nOpen on DailyMed\nJuluca\ndolutegravir sodium and rilpivirine hydrochloride\n\n…retroviral regimen or be switched to dolutegravir plus rilpivirine administered once daily. Subjects originally assigned to continue their current antiretrovira…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70b079e2-a1f7-4a93-8685-d60a4d7c1280",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63b3982a-b541-4b0d-99d4-93a673e57d46",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70b079e2-a1f7-4a93-8685-d60a4d7c1280",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2cdd9fca-afe5-4bfa-8db1-337beec13c6b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53c02a89-012c-e724-e063-6294a90acc75",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=94e17ae5-0871-67a0-e053-2995a90ae0ae",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=55051e03-b6dc-4bc6-87c1-e4fb84b61fa3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4beda35a-21b0-4b34-84ea-be6ea8cae50f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=25a60937-cbbe-4a50-994f-2ce15203f589",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a88d9010-55fb-4a02-baff-042cd27688ea",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1c82580-87ae-11e0-bc84-0002a5d5c51b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0b4fc036-9497-442b-b629-c4b386932789",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8302a6e-b8da-4931-a279-b49e37943816",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de008936-e8a3-4e65-bb6a-d925b68a5f50",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1bb94d3c-8bc3-4193-9dd8-e9a22066707c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b49df80-be4f-47e0-a0b7-123f3e69395b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=30cb1078-929b-4c0f-be1d-49ef352dfab9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=806653d1-bf35-4924-b999-ad5d21821cc1",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nCelexa (citalopram) 40 mg once daily = 40 mg/day: not found. Edit it in the list, or remove it.\nHaldol (haloperidol) 5 mg twice daily = 10 mg/day: not found. Edit it in the list, or remove it.\nZithromax (azithromycin) 500 mg once daily = 500 mg/day: not found. Edit it in the list, or remove it.\nDiflucan (fluconazole) 200 mg once daily = 200 mg/day: not found. Edit it in the list, or remove it.\nLasix (furosemide) 40 mg once daily = 40 mg/day: not found. Edit it in the list, or remove it.\nProtonix (pantoprazole) 40 mg once daily = 40 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nCelexa (citalopram) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncitalopram 40 mg [celexa]\n\nWhat the labels say about “Celexa (citalopram) 40 mg once daily = 40 mg/day”\n\npimozide\n\n…ld be reserved for use in Tourette’s Disorder patients whose development and/or daily life function is severely compromised by the presence of motor and phonic…\n\nOpen on DailyMed\nCitalopram\ncitalopram hydrobromide\n\n1 INDICATIONS AND USAGE Citalopram tablets are indicated for the treatment of major depressive disorder…\n\nOpen on DailyMed\nescitalopram\n\n1 INDICATIONS AND USAGE Escitalopram tablets are indicated for the treatment of: major depressive disorder…\n\nOpen on DailyMed\nomeprazole\n\n…be associated with increased risk. (5.3) Bone Fracture: Long-term and multiple daily dose PPI therapy may be associated with an increased risk for osteoporosis…\n\nOpen on DailyMed\nShow 8 more\nHaldol (haloperidol) 5 mg twice daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nhaloperidol 10 mg [haldol]\n\nWhat the labels say about “Haldol (haloperidol) 5 mg twice daily = 10 mg/day”\n\npimozide\n\n…ld be reserved for use in Tourette’s Disorder patients whose development and/or daily life function is severely compromised by the presence of motor and phonic…\n\nOpen on DailyMed\nhaloperidol decanoate\n\n1 INDICATIONS AND USAGE Haloperidol decanoate injection is indicated for the treatment of schizophrenia…\n\nOpen on DailyMed\nhaloperidol\n\nINDICATIONS AND USAGE Haloperidol tablets are indicated for use in the management of manifestations of…\n\nOpen on DailyMed\nbenztropine mesylate\n\n…vehicle. When benztropine mesylate is given concomitantly with phenothiazines, haloperidol, or other drugs with anticholinergic or antidopaminergic activity, p…\n\nOpen on DailyMed\nShow 8 more\nZithromax (azithromycin) 500 mg once daily = 500 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nazithromycin 500 mg [zithromax]\n\nWhat the labels say about “Zithromax (azithromycin) 500 mg once daily = 500 mg/day”\n\nazithromycin\n\n1 INDICATIONS AND USAGE Azithromycin is a macrolide antibacterial drug indicated for the treatment of pa…\n\nOpen on DailyMed\nazithromycin monohydrate\n\n1 INDICATIONS AND USAGE Azithromycin for injection is a macrolide antibacterial drug indicated for the t…\n\nOpen on DailyMed\nNUZOLVENCE\nzoliflodacin\n\n…ither a single oral 3 g dose of NUZOLVENCE (N=619) or a combination of a single 500 mg intramuscular dose of ceftriaxone and a single 1 g oral dose of azithromy…\n\nOpen on DailyMed\nrifabutin\n\n…hanges on electrocardiogram. When rifabutin was administered at doses from 1050 mg/day to 2400 mg/day, generalized arthralgia and uveitis were reported. These a…\n\nOpen on DailyMed\nShow 8 more\nDiflucan (fluconazole) 200 mg once daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluconazole 200 mg [diflucan]\n\nWhat the labels say about “Diflucan (fluconazole) 200 mg once daily = 200 mg/day”\n\nglipizide\n\n…ated for 5 to 8 years with diet plus a fixed dose of tolbutamide (1.5 grams per day) had a rate of cardiovascular mortality approximately 2½ times that of patie…\n\nOpen on DailyMed\nfluconazole\n\nINDICATIONS AND USAGE Fluconazole tablets are indicated for the treatment of: Vaginal candidiasis (vag…\n\nOpen on DailyMed\nERAXIS\nanidulafungin\n\n…re the results of the cultures and other laboratory studies are known. However, once these results become available, antifungal therapy should be adjusted accor…\n\nOpen on DailyMed\nJAKAFI\nruxolitinib\n\n…e than 12 months. One hundred and eleven (111) patients started treatment at 15 mg twice daily and 190 patients started at 20 mg twice daily. In patients starti…\n\nOpen on DailyMed\nShow 8 more\nLasix (furosemide) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfurosemide 40 mg [lasix]\n\nWhat the labels say about “Lasix (furosemide) 40 mg once daily = 40 mg/day”\n\nfurosemide\n\nINDICATIONS AND USAGE Edema Furosemide tablets are indicated in adults and pediatric patients for the treatm…\n\nOpen on DailyMed\nminoxidil\n\n…nges, nor have there been alterations in blood cell counts or in plasma enzyme concentrations that would suggest myocardial damage. Long-term treatment of patie…\n\nOpen on DailyMed\ntamsulosin hydrochloride\n\n…se events (≥2% of patients and at a higher incidence than placebo) with the 0.4 mg dose or 0.8 mg dose were headache, dizziness, rhinitis, infection, abnormal e…\n\nOpen on DailyMed\nbumetanide\n\n…treatment with bumetanide tablets following instances of allergic reactions to furosemide suggests a lack of cross-sensitivity. ADVERSE REACTIONS The most freq…\n\nOpen on DailyMed\nShow 8 more\nProtonix (pantoprazole) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\npantoprazole 40 mg [protonix]\n\nWhat the labels say about “Protonix (pantoprazole) 40 mg once daily = 40 mg/day”\n\npantoprazole sodium\n\n1 INDICATIONS AND USAGE Pantoprazole sodium for injection is indicated for treatment of: • gastroesophag…\n\nOpen on DailyMed\nPREVYMIS\nletermovir\n\n…in adult and pediatric patients 12 years of age and older and weighing at least 40 kg who are kidney transplant recipients at high risk (Donor CMV seropositive/…\n\nOpen on DailyMed\nMycophenolic Acid\nmycophenilic acid\n\n…re administered either mycophenolic acid delayed-release tablets 1.44 grams per day (N = 213) or MMF 2 grams per day (N = 210) within 48 hours post-transplant f…\n\nOpen on DailyMed\nJuluca\ndolutegravir sodium and rilpivirine hydrochloride\n\n…retroviral regimen or be switched to dolutegravir plus rilpivirine administered once daily. Subjects originally assigned to continue their current antiretrovira…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:52:25.263Z"
+}

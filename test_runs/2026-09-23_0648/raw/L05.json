@@ -1,0 +1,250 @@
+{
+ "id": "L05",
+ "input": "Coumadin (warfarin) 5 mg once daily Mon/Wed/Fri = 5 mg on those days, Coumadin (warfarin) 2.5 mg once daily Tue/Thu/Sat/Sun = 2.5 mg on those days, Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day, Cordarone (amiodarone) 200 mg once daily = 200 mg/day, Lexapro (escitalopram) 10 mg once daily = 10 mg/day, Bayer (aspirin OTC) 81 mg once daily = 81 mg/day, Plavix (clopidogrel) 75 mg once daily = 75 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 1.079,
+ "secondsToResults": 3.243,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Coumadin (warfarin) 5 mg once daily Mon/Wed/Fri = 5 mg on those days",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Coumadin (warfarin) 5 mg once daily Mon/Wed/Fri = 5 mg on those days\nNot found in the FDA labels. Did you mean:\nEdit\nwarfarin sodium 5 mg [coumadin]\n\nWhat the labels say about “Coumadin (warfarin) 5 mg once daily Mon/Wed/Fri = 5 mg on those days”\n\nCampath\nalemtuzumab\n\n1 INDICATIONS AND USAGE CAMPATH is indicated as a single agent for the treatment of B-cell…\n\nOpen on DailyMed\ndesloratadine\n\n1 INDICATIONS AND USAGE Desloratadine Tablets are a histamine-1 (H1) receptor antagonist i…\n\nOpen on DailyMed\ncarbidopa, levodopa and entacapone\n\n1 INDICATIONS AND USAGE Carbidopa, levodopa and entacapone tablets, are indicated for the…\n\nOpen on DailyMed\nClinolipid\nolive oil and soybean oil\n\n1 INDICATIONS AND USAGE CLINOLIPID is indicated in adults and pediatric patients, includin…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Coumadin (warfarin) 2.5 mg once daily Tue/Thu/Sat/Sun = 2.5 mg on those days",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Coumadin (warfarin) 2.5 mg once daily Tue/Thu/Sat/Sun = 2.5 mg on those days\nNot found in the FDA labels. Did you mean:\nEdit\nwarfarin sodium 2.5 mg [coumadin]\n\nWhat the labels say about “Coumadin (warfarin) 2.5 mg once daily Tue/Thu/Sat/Sun = 2.5 mg on those days”\n\ncarbidopa, levodopa and entacapone\n\n1 INDICATIONS AND USAGE Carbidopa, levodopa and entacapone tablets, are indicated for the…\n\nOpen on DailyMed\nClinolipid\nolive oil and soybean oil\n\n1 INDICATIONS AND USAGE CLINOLIPID is indicated in adults and pediatric patients, includin…\n\nOpen on DailyMed\noxaprozin\n\n1 INDICATIONS AND USAGE Oxaprozin tablets are indicated: For relief of the signs and sympt…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Fluoxetine capsules are indicated for the treatment of: • Acute an…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsulfamethoxazole 800 mg / trimethoprim 160 mg oral tablet [bactrim ds]\n\nWhat the labels say about “Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day”\n\nsulfamethoxazole and trimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of sulfamethoxazole and trimethoprim tablets and other antibacterial drugs, sulfame…\n\nOpen on DailyMed\ntrimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of trimethoprim tablets, USP and other antibacterial drugs, trimethoprim tablets, U…\n\nOpen on DailyMed\ndofetilide\n\n…RSE EVENTS, contact Dr.Reddy’s Laboratories Inc., at 1-888-375-3784 or FDA at 1-800-FDA-1088 or http://www.fda.gov/medwatch for voluntary reporting of adverse r…\n\nOpen on DailyMed\nLEVOLEUCOVORIN CALCIUM\nlevoleucovorin injection\n\n…) To report SUSPECTED ADVERSE REACTIONS, contact Slate Run Pharmaceuticals at 1-800-341-9214 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Tria…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Cordarone (amiodarone) 200 mg once daily = 200 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Cordarone (amiodarone) 200 mg once daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namiodarone hydrochloride 200 mg [cordarone]\n\nWhat the labels say about “Cordarone (amiodarone) 200 mg once daily = 200 mg/day”\n\nSofosbuvir and Velpatasvir\nvelpatasvir and sofosbuvir\n\n…elsewhere in labeling: Serious Symptomatic Bradycardia When Coadministered with Amiodarone [see Warnings and Precautions (5.2) ]. The most common adverse reacti…\n\nOpen on DailyMed\nSovaldi\nsofosbuvir\n\n…where in the labeling: Serious Symptomatic Bradycardia When Coadministered with Amiodarone [see Warnings and Precautions (5.2) ] . The most common adverse event…\n\nOpen on DailyMed\nledipasvir and sofosbuvir\n\n…elsewhere in labeling: Serious Symptomatic Bradycardia When Coadministered with Amiodarone [see Warnings and Precautions (5.2) ]. The most common adverse reacti…\n\nOpen on DailyMed\nPREVYMIS\nletermovir\n\n…ositive Recipients [R+] of an Allogeneic HSCT Prophylaxis Through Week 14 (~100 days) Post-HSCT The safety of PREVYMIS was evaluated in a Phase 3 randomized, do…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lexapro (escitalopram) 10 mg once daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lexapro (escitalopram) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nescitalopram 10 mg [lexapro]\n\nWhat the labels say about “Lexapro (escitalopram) 10 mg once daily = 10 mg/day”\n\nescitalopram\n\n1 INDICATIONS AND USAGE Escitalopram tablets are indicated for the treatment of: major depressive disord…\n\nOpen on DailyMed\npimozide\n\n…ld be reserved for use in Tourette’s Disorder patients whose development and/or daily life function is severely compromised by the presence of motor and phonic…\n\nOpen on DailyMed\nCitalopram\ncitalopram hydrobromide\n\n…ngs and Precautions (5.9) ] Sexual Dysfunction [see Warnings and Precautions (5.10) ] Most common adverse reaction (incidence ≥ 5% and twice placebo) is ejacula…\n\nOpen on DailyMed\nWarfarin Sodium\nwarfarin\n\n…effect on an established thrombus, nor does it reverse ischemic tissue damage. Once a thrombus has occurred, however, the goals of anticoagulant treatment are…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Bayer (aspirin OTC) 81 mg once daily = 81 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Bayer (aspirin OTC) 81 mg once daily = 81 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\naspirin 81 mg [bayer aspirin]\n\nWhat the labels say about “Bayer (aspirin OTC) 81 mg once daily = 81 mg/day”\n\nsodium phenylacetate and sodium benzoate\n\n…8.54) years; 51% were male and 49% were female who had the following diagnoses: OTC (46%), ASS (22%), CPS (12%), ASL (2%), ARG (<1%), THN (<1%), and other (18%)…\n\nOpen on DailyMed\nCibinqo\nabrocitinib\n\n…rnings and Precautions (5.7) ] Most common adverse events (≥1% with CIBINQO 100 mg) are nasopharyngitis, nausea, headache, herpes simplex, increased blood creat…\n\nOpen on DailyMed\nrimantadine hydrochloride\n\n…dine hydrochloride in controlled clinical trials at the recommended dose of 200 mg daily, the most frequently reported adverse events involved the gastrointesti…\n\nOpen on DailyMed\nibandronate sodium\n\n…Postmenopausal Osteoporosis Monthly Dosing The safety of ibandronate sodium 150 mg once monthly in the treatment of postmenopausal osteoporosis was assessed in…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Plavix (clopidogrel) 75 mg once daily = 75 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Plavix (clopidogrel) 75 mg once daily = 75 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclopidogrel 75 mg [plavix]\n\nWhat the labels say about “Plavix (clopidogrel) 75 mg once daily = 75 mg/day”\n\nclopidogrel\n\n1 INDICATIONS & USAGE Clopidogrel tablets are a P2Y 12 platelet inhibitor indicated for: • Acute coron…\n\nOpen on DailyMed\nprasugrel\n\n…ular death, nonfatal myocardial infarction (MI), or nonfatal stroke compared to clopidogrel. The difference between treatments was driven predominantly by MI, w…\n\nOpen on DailyMed\nCLOPIDOGREL\nclopidogrel bisulfate\n\n1 INDICATIONS AND USAGE Clopidogrel tablets is a P2Y 12 platelet inhibitor indicated for: • Acute corona…\n\nOpen on DailyMed\nesomeprazole strontium\n\n…r randomized comparative clinical trials, which included 1,240 patients on 22.3 mg of esomeprazole magnesium (equivalent to 20 mg of esomeprazole), 2,434 patien…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4f5f7255-7abc-4328-bd1a-ceaf139ef3e0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21174c0f-9204-4c75-b6e6-2f9ada5b535d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f8e82d7-6baf-456a-b8c3-4fda6e317902",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ae98eb03-c0e7-49d1-b024-77968e3d9d6e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f8e82d7-6baf-456a-b8c3-4fda6e317902",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ae98eb03-c0e7-49d1-b024-77968e3d9d6e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e881dca6-004e-1c3e-e053-2a95a90a02ab",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76b264ce-2a13-4511-8e21-4ffad0a327f9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d60c218c-6529-4944-af0b-a9dc720f32e9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=249e938d-f181-47c4-a082-372d65462f33",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26de5f8c-8cec-46f6-a468-69451758a278",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=124bc214-62f8-40f9-a227-a35e2d1ff2a0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d0c1a945-4440-4b5c-81aa-693ed3db597c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=80beab2c-396e-4a37-a4dc-40fdb62859cf",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=46f4a73b-0cd6-4902-9092-3ac79e882c1a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b49df80-be4f-47e0-a0b7-123f3e69395b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70b079e2-a1f7-4a93-8685-d60a4d7c1280",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d20768fe-4516-483a-a082-ff1df9ad1d99",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f6d6fcd-e9f9-42c8-bfa2-bb2cfc9ed258",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49f7d69a-820b-4c75-a31d-b2104c019c12",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6ca94cce-a2bb-421f-bd8f-6b14bc2bd985",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b573aefa-e337-478f-97e4-eb8472a7e497",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f51e64e0-f556-65d0-a876-fb709aaeefea",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=669f0bc6-f173-484d-8efe-c006683b25d1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c916d32-f9e9-1d15-e054-00144ff88e88",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 7 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 7 medications checked\n\nNot checked\n\nCoumadin (warfarin) 5 mg once daily Mon/Wed/Fri = 5 mg on those days: not found. Edit it in the list, or remove it.\nCoumadin (warfarin) 2.5 mg once daily Tue/Thu/Sat/Sun = 2.5 mg on those days: not found. Edit it in the list, or remove it.\nBactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day: not found. Edit it in the list, or remove it.\nCordarone (amiodarone) 200 mg once daily = 200 mg/day: not found. Edit it in the list, or remove it.\nLexapro (escitalopram) 10 mg once daily = 10 mg/day: not found. Edit it in the list, or remove it.\nBayer (aspirin OTC) 81 mg once daily = 81 mg/day: not found. Edit it in the list, or remove it.\nPlavix (clopidogrel) 75 mg once daily = 75 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n7 medications\nClear all\nCoumadin (warfarin) 5 mg once daily Mon/Wed/Fri = 5 mg on those days\nNot found in the FDA labels. Did you mean:\nEdit\nwarfarin sodium 5 mg [coumadin]\n\nWhat the labels say about “Coumadin (warfarin) 5 mg once daily Mon/Wed/Fri = 5 mg on those days”\n\nCampath\nalemtuzumab\n\n1 INDICATIONS AND USAGE CAMPATH is indicated as a single agent for the treatment of B-cell…\n\nOpen on DailyMed\ndesloratadine\n\n1 INDICATIONS AND USAGE Desloratadine Tablets are a histamine-1 (H1) receptor antagonist i…\n\nOpen on DailyMed\ncarbidopa, levodopa and entacapone\n\n1 INDICATIONS AND USAGE Carbidopa, levodopa and entacapone tablets, are indicated for the…\n\nOpen on DailyMed\nClinolipid\nolive oil and soybean oil\n\n1 INDICATIONS AND USAGE CLINOLIPID is indicated in adults and pediatric patients, includin…\n\nOpen on DailyMed\nShow 8 more\nCoumadin (warfarin) 2.5 mg once daily Tue/Thu/Sat/Sun = 2.5 mg on those days\nNot found in the FDA labels. Did you mean:\nEdit\nwarfarin sodium 2.5 mg [coumadin]\n\nWhat the labels say about “Coumadin (warfarin) 2.5 mg once daily Tue/Thu/Sat/Sun = 2.5 mg on those days”\n\ncarbidopa, levodopa and entacapone\n\n1 INDICATIONS AND USAGE Carbidopa, levodopa and entacapone tablets, are indicated for the…\n\nOpen on DailyMed\nClinolipid\nolive oil and soybean oil\n\n1 INDICATIONS AND USAGE CLINOLIPID is indicated in adults and pediatric patients, includin…\n\nOpen on DailyMed\noxaprozin\n\n1 INDICATIONS AND USAGE Oxaprozin tablets are indicated: For relief of the signs and sympt…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Fluoxetine capsules are indicated for the treatment of: • Acute an…\n\nOpen on DailyMed\nShow 8 more\nBactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsulfamethoxazole 800 mg / trimethoprim 160 mg oral tablet [bactrim ds]\n\nWhat the labels say about “Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day”\n\nsulfamethoxazole and trimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of sulfamethoxazole and trimethoprim tablets and other antibacterial drugs, sulfame…\n\nOpen on DailyMed\ntrimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of trimethoprim tablets, USP and other antibacterial drugs, trimethoprim tablets, U…\n\nOpen on DailyMed\ndofetilide\n\n…RSE EVENTS, contact Dr.Reddy’s Laboratories Inc., at 1-888-375-3784 or FDA at 1-800-FDA-1088 or http://www.fda.gov/medwatch for voluntary reporting of adverse r…\n\nOpen on DailyMed\nLEVOLEUCOVORIN CALCIUM\nlevoleucovorin injection\n\n…) To report SUSPECTED ADVERSE REACTIONS, contact Slate Run Pharmaceuticals at 1-800-341-9214 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Tria…\n\nOpen on DailyMed\nShow 8 more\nCordarone (amiodarone) 200 mg once daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namiodarone hydrochloride 200 mg [cordarone]\n\nWhat the labels say about “Cordarone (amiodarone) 200 mg once daily = 200 mg/day”\n\nSofosbuvir and Velpatasvir\nvelpatasvir and sofosbuvir\n\n…elsewhere in labeling: Serious Symptomatic Bradycardia When Coadministered with Amiodarone [see Warnings and Precautions (5.2) ]. The most common adverse reacti…\n\nOpen on DailyMed\nSovaldi\nsofosbuvir\n\n…where in the labeling: Serious Symptomatic Bradycardia When Coadministered with Amiodarone [see Warnings and Precautions (5.2) ] . The most common adverse event…\n\nOpen on DailyMed\nledipasvir and sofosbuvir\n\n…elsewhere in labeling: Serious Symptomatic Bradycardia When Coadministered with Amiodarone [see Warnings and Precautions (5.2) ]. The most common adverse reacti…\n\nOpen on DailyMed\nPREVYMIS\nletermovir\n\n…ositive Recipients [R+] of an Allogeneic HSCT Prophylaxis Through Week 14 (~100 days) Post-HSCT The safety of PREVYMIS was evaluated in a Phase 3 randomized, do…\n\nOpen on DailyMed\nShow 8 more\nLexapro (escitalopram) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nescitalopram 10 mg [lexapro]\n\nWhat the labels say about “Lexapro (escitalopram) 10 mg once daily = 10 mg/day”\n\nescitalopram\n\n1 INDICATIONS AND USAGE Escitalopram tablets are indicated for the treatment of: major depressive disord…\n\nOpen on DailyMed\npimozide\n\n…ld be reserved for use in Tourette’s Disorder patients whose development and/or daily life function is severely compromised by the presence of motor and phonic…\n\nOpen on DailyMed\nCitalopram\ncitalopram hydrobromide\n\n…ngs and Precautions (5.9) ] Sexual Dysfunction [see Warnings and Precautions (5.10) ] Most common adverse reaction (incidence ≥ 5% and twice placebo) is ejacula…\n\nOpen on DailyMed\nWarfarin Sodium\nwarfarin\n\n…effect on an established thrombus, nor does it reverse ischemic tissue damage. Once a thrombus has occurred, however, the goals of anticoagulant treatment are…\n\nOpen on DailyMed\nShow 8 more\nBayer (aspirin OTC) 81 mg once daily = 81 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\naspirin 81 mg [bayer aspirin]\n\nWhat the labels say about “Bayer (aspirin OTC) 81 mg once daily = 81 mg/day”\n\nsodium phenylacetate and sodium benzoate\n\n…8.54) years; 51% were male and 49% were female who had the following diagnoses: OTC (46%), ASS (22%), CPS (12%), ASL (2%), ARG (<1%), THN (<1%), and other (18%)…\n\nOpen on DailyMed\nCibinqo\nabrocitinib\n\n…rnings and Precautions (5.7) ] Most common adverse events (≥1% with CIBINQO 100 mg) are nasopharyngitis, nausea, headache, herpes simplex, increased blood creat…\n\nOpen on DailyMed\nrimantadine hydrochloride\n\n…dine hydrochloride in controlled clinical trials at the recommended dose of 200 mg daily, the most frequently reported adverse events involved the gastrointesti…\n\nOpen on DailyMed\nibandronate sodium\n\n…Postmenopausal Osteoporosis Monthly Dosing The safety of ibandronate sodium 150 mg once monthly in the treatment of postmenopausal osteoporosis was assessed in…\n\nOpen on DailyMed\nShow 8 more\nPlavix (clopidogrel) 75 mg once daily = 75 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclopidogrel 75 mg [plavix]\n\nWhat the labels say about “Plavix (clopidogrel) 75 mg once daily = 75 mg/day”\n\nclopidogrel\n\n1 INDICATIONS & USAGE Clopidogrel tablets are a P2Y 12 platelet inhibitor indicated for: • Acute coron…\n\nOpen on DailyMed\nprasugrel\n\n…ular death, nonfatal myocardial infarction (MI), or nonfatal stroke compared to clopidogrel. The difference between treatments was driven predominantly by MI, w…\n\nOpen on DailyMed\nCLOPIDOGREL\nclopidogrel bisulfate\n\n1 INDICATIONS AND USAGE Clopidogrel tablets is a P2Y 12 platelet inhibitor indicated for: • Acute corona…\n\nOpen on DailyMed\nesomeprazole strontium\n\n…r randomized comparative clinical trials, which included 1,240 patients on 22.3 mg of esomeprazole magnesium (equivalent to 20 mg of esomeprazole), 2,434 patien…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:52:41.049Z"
+}

@@ -1,0 +1,223 @@
+{
+ "id": "L30",
+ "input": "Synthroid (levothyroxine) 100 mcg once daily = 100 mcg/day, Tums Ultra (calcium carbonate OTC) 1000 mg twice daily = 2000 mg/day, Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day, Feosol (ferrous sulfate OTC) 325 mg twice daily = 650 mg/day, Prilosec (omeprazole) 20 mg once daily = 20 mg/day, Plavix (clopidogrel) 75 mg once daily = 75 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.875,
+ "secondsToResults": 4.048,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Synthroid (levothyroxine) 100 mcg once daily = 100 mcg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Synthroid (levothyroxine) 100 mcg once daily = 100 mcg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlevothyroxine sodium 100 ug oral tablet [synthroid]\n\nWhat the labels say about “Synthroid (levothyroxine) 100 mcg once daily = 100 mcg/day”\n\nLevothyroxine Sodium\nlevothyroxine sodium anhydrous\n\n1 INDICATIONS AND USAGE Levothyroxine Sodium for Injection is indicated for the treatment of myxedema co…\n\nOpen on DailyMed\nNP Thyroid 15\nlevothyroxine, liothyronine\n\n…for the treatment of obesity. In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. Larger doses m…\n\nOpen on DailyMed\nlevothyroxine sodium\n\n1 INDICATIONS AND USAGE Hypothyroidism Levothyroxine sodium tablets are indicated in adult and pediatric patients, incl…\n\nOpen on DailyMed\nArmour Thyroid\nthyroid, porcine\n\n…for the treatment of obesity. In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. Larger doses m…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Tums Ultra (calcium carbonate OTC) 1000 mg twice daily = 2000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Tums Ultra (calcium carbonate OTC) 1000 mg twice daily = 2000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncalcium carbonate 1000 mg oral tablet, chewable [tums ultra]\n\nWhat the labels say about “Tums Ultra (calcium carbonate OTC) 1000 mg twice daily = 2000 mg/day”\n\nsevelamer carbonate\n\n1 INDICATIONS & USAGE Sevelamer carbonate tablets are indicated for the control of serum phosphorus in adults an…\n\nOpen on DailyMed\nPsorizide Ultra\npotassium bromide, nickel sulfate, and zinc bromide\n\nINDICATIONS PSORIZIDE ® ULTRA is indicated for the treatment of moderate to severe eczema, atopic dermat…\n\nOpen on DailyMed\nDaybue\ntrofinetide\n\n1 INDICATIONS AND USAGE DAYBUE and DAYBUE STIX are indicated for the treatment of Rett syndrome in adult…\n\nOpen on DailyMed\nniacin\n\n…ncy or severity by pretreatment with aspirin (up to the recommended dose of 325 mg taken 30 minutes prior to niacin extended-release tablets dose). ( 2.2 ) To r…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nciprofloxacin 1000 mg [cipro]\n\nWhat the labels say about “Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day”\n\npirfenidone\n\n…led trials (Studies 1, 2, and 3) in which a total of 623 patients received 2403 mg/day of pirfenidone and 624 patients received placebo. Subjects ages ranged fr…\n\nOpen on DailyMed\nORLYNVAH\nsulopenem etzadroxil and probenecid\n\n…en with uUTI. Therapy with oral ORLYNVAH tablets was administered as one tablet twice daily for 5 days [see Clinical Studies ( 14 )]. The trials included 1932 p…\n\nOpen on DailyMed\nciprofloxacin hydrochloride and hydrocortisone\n\nINDICATIONS AND USAGE Ciprofloxacin hydrochloride and hydrocortisone otic suspension is indicated for…\n\nOpen on DailyMed\nVERSACLOZ\nclozapine\n\n…ons of muscle groups, may occur in susceptible individuals during the first few days of treatment. Dystonic symptoms include: spasm of the neck muscles, sometim…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Feosol (ferrous sulfate OTC) 325 mg twice daily = 650 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Feosol (ferrous sulfate OTC) 325 mg twice daily = 650 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nferrous sulfate 200 mg [feosol]\nferrous sulfate 325 mg [feosol]\nferrous sulfate 50 mg [feosol]\nferrous sulfate 28 mg [feosol]\n\nWhat the labels say about “Feosol (ferrous sulfate OTC) 325 mg twice daily = 650 mg/day”\n\nACCRUFER\nferric maltol\n\n…-Controlled Period of Pooled Studies (Studies AEGIS1/2 and AEGIS 3) ACCRUFER 30 mg Twice Daily (N = 175) Placebo (N = 120) Body System Adverse Reaction Gastroin…\n\nOpen on DailyMed\nGlycerol Phenylbutyrate\nglycerol phenylbutyrate oral\n\n…emale and 14 male) with UCD subtype deficiencies of ornithine transcarbamylase (OTC, n=40), carbamoyl phosphate synthetase (CPS, n=2), and argininosuccinate syn…\n\nOpen on DailyMed\nmethyldopa\n\n…re, prolonged carotid sinus hypersensitivity, orthostatic hypotension (decrease daily dosage), edema or weight gain, bradycardia. Digestive : Pancreatitis, coli…\n\nOpen on DailyMed\nConcept OB\nvitamin mineral supplement\n\n…been reported following both oral and parenteral administration of folic acid. Ferrous Fumarate: Gastrointestinal disturbances (anorexia, nausea, diarrhea, con…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Prilosec (omeprazole) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Prilosec (omeprazole) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nomeprazole 20 mg [prilosec]\n\nWhat the labels say about “Prilosec (omeprazole) 20 mg once daily = 20 mg/day”\n\nPrilosec\nomeprazole magnesium\n\n1 INDICATIONS AND USAGE PRILOSEC is a proton pump inhibitor (PPI) indicated for the: • Treatment of acti…\n\nOpen on DailyMed\nclarithromycin\n\n…hromycin tablets in combination with amoxicillin and PREVACID (lansoprazole) or PRILOSEC (omeprazole) Delayed-Release Capsules, as triple therapy, are indicated…\n\nOpen on DailyMed\nomeprazole\n\n1 INDICATIONS AND USAGE Omeprazole is a proton pump inhibitor (PPI) indicated for the: • Treatment of ac…\n\nOpen on DailyMed\nOmeprazole/Bicarbonate\nomeprazole and sodium bicarbonate\n\n1 INDICATIONS AND USAGE Omeprazole and sodium bicarbonate is a proton pump inhibitor (PPI) indicated for…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Plavix (clopidogrel) 75 mg once daily = 75 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Plavix (clopidogrel) 75 mg once daily = 75 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclopidogrel 75 mg [plavix]\n\nWhat the labels say about “Plavix (clopidogrel) 75 mg once daily = 75 mg/day”\n\nclopidogrel\n\n1 INDICATIONS & USAGE Clopidogrel tablets are a P2Y 12 platelet inhibitor indicated for: • Acute coron…\n\nOpen on DailyMed\nprasugrel\n\n…ular death, nonfatal myocardial infarction (MI), or nonfatal stroke compared to clopidogrel. The difference between treatments was driven predominantly by MI, w…\n\nOpen on DailyMed\nCLOPIDOGREL\nclopidogrel bisulfate\n\n1 INDICATIONS AND USAGE Clopidogrel tablets is a P2Y 12 platelet inhibitor indicated for: • Acute corona…\n\nOpen on DailyMed\nesomeprazole strontium\n\n…r randomized comparative clinical trials, which included 1,240 patients on 22.3 mg of esomeprazole magnesium (equivalent to 20 mg of esomeprazole), 2,434 patien…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ae9954a5-e196-449c-abea-ebe4afbee517",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a3ff93ad-86ed-4324-ae86-7e7ed3a49db8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7a44b924-7545-4809-98ac-da207e0881ae",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=462a11b9-78a3-4d8b-ae5d-3d6528e4d743",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=78d05c25-6817-4763-b662-6dbb0625fa84",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=67e6f2d9-21f6-466f-9def-826c6a4b8257",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8eff9205-84ac-e69d-e053-2995a90aad4b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3115f15f-171c-4266-8dc8-5655f56e6acc",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=24c451c0-4cfb-37f3-e063-6394a90a895e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0881bbe-cc95-45d4-9878-3bc8946eff26",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=367ac157-2d25-4f34-99ce-b126e0f03851",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d3b52ded-b305-445c-b943-ef0fb2dedd2b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9e22e1d8-04ec-4b67-92ea-b09c706f2703",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=37992a25-68bd-4050-b936-596ddedc25a3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6761f84-53ac-4745-a8c8-1e5427d7e179",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d5848f0-e9f0-4112-a7ca-bcc8ea2e69c6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63b3982a-b541-4b0d-99d4-93a673e57d46",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4d642036-7175-4f29-9f07-dbd282231d4a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b573aefa-e337-478f-97e4-eb8472a7e497",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f51e64e0-f556-65d0-a876-fb709aaeefea",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=669f0bc6-f173-484d-8efe-c006683b25d1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c916d32-f9e9-1d15-e054-00144ff88e88",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nSynthroid (levothyroxine) 100 mcg once daily = 100 mcg/day: not found. Edit it in the list, or remove it.\nTums Ultra (calcium carbonate OTC) 1000 mg twice daily = 2000 mg/day: not found. Edit it in the list, or remove it.\nCipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day: not found. Edit it in the list, or remove it.\nFeosol (ferrous sulfate OTC) 325 mg twice daily = 650 mg/day: not found. Edit it in the list, or remove it.\nPrilosec (omeprazole) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nPlavix (clopidogrel) 75 mg once daily = 75 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nSynthroid (levothyroxine) 100 mcg once daily = 100 mcg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlevothyroxine sodium 100 ug oral tablet [synthroid]\n\nWhat the labels say about “Synthroid (levothyroxine) 100 mcg once daily = 100 mcg/day”\n\nLevothyroxine Sodium\nlevothyroxine sodium anhydrous\n\n1 INDICATIONS AND USAGE Levothyroxine Sodium for Injection is indicated for the treatment of myxedema co…\n\nOpen on DailyMed\nNP Thyroid 15\nlevothyroxine, liothyronine\n\n…for the treatment of obesity. In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. Larger doses m…\n\nOpen on DailyMed\nlevothyroxine sodium\n\n1 INDICATIONS AND USAGE Hypothyroidism Levothyroxine sodium tablets are indicated in adult and pediatric patients, incl…\n\nOpen on DailyMed\nArmour Thyroid\nthyroid, porcine\n\n…for the treatment of obesity. In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. Larger doses m…\n\nOpen on DailyMed\nShow 8 more\nTums Ultra (calcium carbonate OTC) 1000 mg twice daily = 2000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncalcium carbonate 1000 mg oral tablet, chewable [tums ultra]\n\nWhat the labels say about “Tums Ultra (calcium carbonate OTC) 1000 mg twice daily = 2000 mg/day”\n\nsevelamer carbonate\n\n1 INDICATIONS & USAGE Sevelamer carbonate tablets are indicated for the control of serum phosphorus in adults an…\n\nOpen on DailyMed\nPsorizide Ultra\npotassium bromide, nickel sulfate, and zinc bromide\n\nINDICATIONS PSORIZIDE ® ULTRA is indicated for the treatment of moderate to severe eczema, atopic dermat…\n\nOpen on DailyMed\nDaybue\ntrofinetide\n\n1 INDICATIONS AND USAGE DAYBUE and DAYBUE STIX are indicated for the treatment of Rett syndrome in adult…\n\nOpen on DailyMed\nniacin\n\n…ncy or severity by pretreatment with aspirin (up to the recommended dose of 325 mg taken 30 minutes prior to niacin extended-release tablets dose). ( 2.2 ) To r…\n\nOpen on DailyMed\nShow 8 more\nCipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nciprofloxacin 1000 mg [cipro]\n\nWhat the labels say about “Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day”\n\npirfenidone\n\n…led trials (Studies 1, 2, and 3) in which a total of 623 patients received 2403 mg/day of pirfenidone and 624 patients received placebo. Subjects ages ranged fr…\n\nOpen on DailyMed\nORLYNVAH\nsulopenem etzadroxil and probenecid\n\n…en with uUTI. Therapy with oral ORLYNVAH tablets was administered as one tablet twice daily for 5 days [see Clinical Studies ( 14 )]. The trials included 1932 p…\n\nOpen on DailyMed\nciprofloxacin hydrochloride and hydrocortisone\n\nINDICATIONS AND USAGE Ciprofloxacin hydrochloride and hydrocortisone otic suspension is indicated for…\n\nOpen on DailyMed\nVERSACLOZ\nclozapine\n\n…ons of muscle groups, may occur in susceptible individuals during the first few days of treatment. Dystonic symptoms include: spasm of the neck muscles, sometim…\n\nOpen on DailyMed\nShow 8 more\nFeosol (ferrous sulfate OTC) 325 mg twice daily = 650 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nferrous sulfate 200 mg [feosol]\nferrous sulfate 325 mg [feosol]\nferrous sulfate 50 mg [feosol]\nferrous sulfate 28 mg [feosol]\n\nWhat the labels say about “Feosol (ferrous sulfate OTC) 325 mg twice daily = 650 mg/day”\n\nACCRUFER\nferric maltol\n\n…-Controlled Period of Pooled Studies (Studies AEGIS1/2 and AEGIS 3) ACCRUFER 30 mg Twice Daily (N = 175) Placebo (N = 120) Body System Adverse Reaction Gastroin…\n\nOpen on DailyMed\nGlycerol Phenylbutyrate\nglycerol phenylbutyrate oral\n\n…emale and 14 male) with UCD subtype deficiencies of ornithine transcarbamylase (OTC, n=40), carbamoyl phosphate synthetase (CPS, n=2), and argininosuccinate syn…\n\nOpen on DailyMed\nmethyldopa\n\n…re, prolonged carotid sinus hypersensitivity, orthostatic hypotension (decrease daily dosage), edema or weight gain, bradycardia. Digestive : Pancreatitis, coli…\n\nOpen on DailyMed\nConcept OB\nvitamin mineral supplement\n\n…been reported following both oral and parenteral administration of folic acid. Ferrous Fumarate: Gastrointestinal disturbances (anorexia, nausea, diarrhea, con…\n\nOpen on DailyMed\nShow 8 more\nPrilosec (omeprazole) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nomeprazole 20 mg [prilosec]\n\nWhat the labels say about “Prilosec (omeprazole) 20 mg once daily = 20 mg/day”\n\nPrilosec\nomeprazole magnesium\n\n1 INDICATIONS AND USAGE PRILOSEC is a proton pump inhibitor (PPI) indicated for the: • Treatment of acti…\n\nOpen on DailyMed\nclarithromycin\n\n…hromycin tablets in combination with amoxicillin and PREVACID (lansoprazole) or PRILOSEC (omeprazole) Delayed-Release Capsules, as triple therapy, are indicated…\n\nOpen on DailyMed\nomeprazole\n\n1 INDICATIONS AND USAGE Omeprazole is a proton pump inhibitor (PPI) indicated for the: • Treatment of ac…\n\nOpen on DailyMed\nOmeprazole/Bicarbonate\nomeprazole and sodium bicarbonate\n\n1 INDICATIONS AND USAGE Omeprazole and sodium bicarbonate is a proton pump inhibitor (PPI) indicated for…\n\nOpen on DailyMed\nShow 8 more\nPlavix (clopidogrel) 75 mg once daily = 75 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclopidogrel 75 mg [plavix]\n\nWhat the labels say about “Plavix (clopidogrel) 75 mg once daily = 75 mg/day”\n\nclopidogrel\n\n1 INDICATIONS & USAGE Clopidogrel tablets are a P2Y 12 platelet inhibitor indicated for: • Acute coron…\n\nOpen on DailyMed\nprasugrel\n\n…ular death, nonfatal myocardial infarction (MI), or nonfatal stroke compared to clopidogrel. The difference between treatments was driven predominantly by MI, w…\n\nOpen on DailyMed\nCLOPIDOGREL\nclopidogrel bisulfate\n\n1 INDICATIONS AND USAGE Clopidogrel tablets is a P2Y 12 platelet inhibitor indicated for: • Acute corona…\n\nOpen on DailyMed\nesomeprazole strontium\n\n…r randomized comparative clinical trials, which included 1,240 patients on 22.3 mg of esomeprazole magnesium (equivalent to 20 mg of esomeprazole), 2,434 patien…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:56:01.736Z"
+}

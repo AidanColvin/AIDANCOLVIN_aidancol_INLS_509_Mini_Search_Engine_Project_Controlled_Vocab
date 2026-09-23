@@ -1,0 +1,223 @@
+{
+ "id": "L38",
+ "input": "Risperdal (risperidone) 2 mg twice daily = 4 mg/day, Invega (paliperidone ER) 6 mg once daily = 6 mg/day, Zyprexa (olanzapine) 10 mg once daily at bedtime = 10 mg/day, Cogentin (benztropine) 1 mg twice daily = 2 mg/day, Klonopin (clonazepam) 1 mg twice daily = 2 mg/day, Lipitor (atorvastatin) 20 mg once daily = 20 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.848,
+ "secondsToResults": 2.833,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Risperdal (risperidone) 2 mg twice daily = 4 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Risperdal (risperidone) 2 mg twice daily = 4 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nrisperidone 4 mg [risperdal]\n\nWhat the labels say about “Risperdal (risperidone) 2 mg twice daily = 4 mg/day”\n\npaliperidone\n\n…: Efficacy was established in three 6-week trials and one maintenance trial. ( 14.1 ) Adolescents (ages 12-17): Efficacy was established in one 6-week trial. (…\n\nOpen on DailyMed\nErzofri extended-release\npaliperidone palmitate\n\n…derly patients with dementia-related psychosis [see Warnings and Precautions (5.2) ] Neuroleptic malignant syndrome [see Warnings and Precautions (5.3) ] QT pro…\n\nOpen on DailyMed\nrisperidone\n\n1 INDICATIONS AND USAGE Risperidone is an atypical antipsychotic agent indicated for: Treatment of schiz…\n\nOpen on DailyMed\nmethylphenidate hydrochloride\n\n…e dosage [see Warnings and Precautions (5.7) and Use in Specific Populations (8.4)]. Methylphenidate hydrochloride extended-release tablets are a CNS stimulant…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Invega (paliperidone ER) 6 mg once daily = 6 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Invega (paliperidone ER) 6 mg once daily = 6 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\npaliperidone 6 mg oral tablet, extended release [invega]\n\nWhat the labels say about “Invega (paliperidone ER) 6 mg once daily = 6 mg/day”\n\npaliperidone\n\n1. INDICATIONS AND USAGE Paliperidone is an atypical antipsychotic agent indicated for Treatment of schiz…\n\nOpen on DailyMed\nErzofri extended-release\npaliperidone palmitate\n\n1 INDICATIONS AND USAGE ERZOFRI is indicated for the treatment of: Schizophrenia in adults . Schizoaffec…\n\nOpen on DailyMed\nrisperidone\n\n1 INDICATIONS AND USAGE Risperidone is an atypical antipsychotic agent indicated for: Treatment of schizophr…\n\nOpen on DailyMed\nHysingla ER\nhydrocodone bitartrate\n\n1 INDICATIONS AND USAGE HYSINGLA ER is indicated for the management of severe and persistent pain that requires a…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zyprexa (olanzapine) 10 mg once daily at bedtime = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zyprexa (olanzapine) 10 mg once daily at bedtime = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nolanzapine 10 mg [zyprexa]\n\nWhat the labels say about “Zyprexa (olanzapine) 10 mg once daily at bedtime = 10 mg/day”\n\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatm…\n\nOpen on DailyMed\neszopiclone\n\n1 INDICATIONS & USAGE Eszopiclone tablets are indicated for the treatment of insomnia.…\n\nOpen on DailyMed\nolanzapine\n\n1 INDICATIONS AND USAGE Olanzapine is an atypical antipsychotic indicated: As oral form…\n\nOpen on DailyMed\nLYBALVI\nolanzapine and samidorphan l-malate\n\n1 INDICATIONS AND USAGE LYBALVI is indicated for the treatment of: Schizophrenia in adu…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Cogentin (benztropine) 1 mg twice daily = 2 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Cogentin (benztropine) 1 mg twice daily = 2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nbenztropine injection [cogentin]\n\nWhat the labels say about “Cogentin (benztropine) 1 mg twice daily = 2 mg/day”\n\nbenztropine mesylate\n\n…, hyperthermia, fever. WARNINGS Safe use in pregnancy has not been established. Benztropine mesylate may impair mental and/or physical abilities required for pe…\n\nOpen on DailyMed\nDaTscan\nioflupane i-123\n\n1 INDICATIONS AND USAGE DATSCAN is indicated as an adjunct to other diagnostic e…\n\nOpen on DailyMed\nhaloperidol\n\n…ration of haloperidol have been reported frequently, often during the first few days of treatment. EPS can be categorized generally as Parkinson-like symptoms,…\n\nOpen on DailyMed\nperphenazine\n\n…controlled by the concomitant use of effective antiparkinsonian drugs, such as benztropine mesylate, and/or by reduction in dosage. In some instances, however,…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Klonopin (clonazepam) 1 mg twice daily = 2 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Klonopin (clonazepam) 1 mg twice daily = 2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclonazepam 2 mg [klonopin]\n\nWhat the labels say about “Klonopin (clonazepam) 1 mg twice daily = 2 mg/day”\n\nclonazepam\n\nINDICATIONS AND USAGE Seizure Disorders: Clonazepam tablets are useful alone or as an adjunct in the treatment of the Len…\n\nOpen on DailyMed\nvigabatrin\n\n1 INDICATIONS AND USAGE Vigabatrin tablets are indicated for the treatment of: •…\n\nOpen on DailyMed\nTybost\ncobicistat\n\n1 INDICATIONS AND USAGE TYBOST is a CYP3A inhibitor indicated to increase system…\n\nOpen on DailyMed\nStribild\nelvitegravir, cobicistat, emtricitabine, and tenofovir disoproxil fumarate\n\n1 INDICATIONS AND USAGE STRIBILD ® is indicated as a complete regimen for the tr…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lipitor (atorvastatin) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lipitor (atorvastatin) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 20 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 20 mg once daily = 20 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=492bf9dd-868e-421a-92db-8cca8973aac1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=768bf181-d0d8-49e5-9c87-cacbb069e0b2",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=492bf9dd-868e-421a-92db-8cca8973aac1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b7d23ac2-e776-9f62-3290-c64c2d6eb353",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9dfe774a-2c7a-4e10-bedd-cde64ad28676",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32ffddd1-4e2b-45d9-9b36-bb730167ec80",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53c02a89-012c-e724-e063-6294a90acc75",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef7804d7-c691-495b-8aaf-5bc54fd5d9f6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c4150683-0772-4344-bb1c-f050b84175d6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=93ba3894-fd97-4432-9f2d-e7050371e91f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3784c35c-e87f-410c-900b-8fd6313c6010",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=74ae2a93-b267-444c-8f0f-a2a6522260ee",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9adb9e4-c495-9530-e5e3-7e3b01d53e4c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57f9b462-f08e-483c-9b64-b7e4c8d46927",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c7b1b11-90a3-bc1c-0e45-9e2a14ef0b03",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nRisperdal (risperidone) 2 mg twice daily = 4 mg/day: not found. Edit it in the list, or remove it.\nInvega (paliperidone ER) 6 mg once daily = 6 mg/day: not found. Edit it in the list, or remove it.\nZyprexa (olanzapine) 10 mg once daily at bedtime = 10 mg/day: not found. Edit it in the list, or remove it.\nCogentin (benztropine) 1 mg twice daily = 2 mg/day: not found. Edit it in the list, or remove it.\nKlonopin (clonazepam) 1 mg twice daily = 2 mg/day: not found. Edit it in the list, or remove it.\nLipitor (atorvastatin) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nRisperdal (risperidone) 2 mg twice daily = 4 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nrisperidone 4 mg [risperdal]\n\nWhat the labels say about “Risperdal (risperidone) 2 mg twice daily = 4 mg/day”\n\npaliperidone\n\n…: Efficacy was established in three 6-week trials and one maintenance trial. ( 14.1 ) Adolescents (ages 12-17): Efficacy was established in one 6-week trial. (…\n\nOpen on DailyMed\nErzofri extended-release\npaliperidone palmitate\n\n…derly patients with dementia-related psychosis [see Warnings and Precautions (5.2) ] Neuroleptic malignant syndrome [see Warnings and Precautions (5.3) ] QT pro…\n\nOpen on DailyMed\nrisperidone\n\n1 INDICATIONS AND USAGE Risperidone is an atypical antipsychotic agent indicated for: Treatment of schiz…\n\nOpen on DailyMed\nmethylphenidate hydrochloride\n\n…e dosage [see Warnings and Precautions (5.7) and Use in Specific Populations (8.4)]. Methylphenidate hydrochloride extended-release tablets are a CNS stimulant…\n\nOpen on DailyMed\nShow 8 more\nInvega (paliperidone ER) 6 mg once daily = 6 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\npaliperidone 6 mg oral tablet, extended release [invega]\n\nWhat the labels say about “Invega (paliperidone ER) 6 mg once daily = 6 mg/day”\n\npaliperidone\n\n1. INDICATIONS AND USAGE Paliperidone is an atypical antipsychotic agent indicated for Treatment of schiz…\n\nOpen on DailyMed\nErzofri extended-release\npaliperidone palmitate\n\n1 INDICATIONS AND USAGE ERZOFRI is indicated for the treatment of: Schizophrenia in adults . Schizoaffec…\n\nOpen on DailyMed\nrisperidone\n\n1 INDICATIONS AND USAGE Risperidone is an atypical antipsychotic agent indicated for: Treatment of schizophr…\n\nOpen on DailyMed\nHysingla ER\nhydrocodone bitartrate\n\n1 INDICATIONS AND USAGE HYSINGLA ER is indicated for the management of severe and persistent pain that requires a…\n\nOpen on DailyMed\nShow 8 more\nZyprexa (olanzapine) 10 mg once daily at bedtime = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nolanzapine 10 mg [zyprexa]\n\nWhat the labels say about “Zyprexa (olanzapine) 10 mg once daily at bedtime = 10 mg/day”\n\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatm…\n\nOpen on DailyMed\neszopiclone\n\n1 INDICATIONS & USAGE Eszopiclone tablets are indicated for the treatment of insomnia.…\n\nOpen on DailyMed\nolanzapine\n\n1 INDICATIONS AND USAGE Olanzapine is an atypical antipsychotic indicated: As oral form…\n\nOpen on DailyMed\nLYBALVI\nolanzapine and samidorphan l-malate\n\n1 INDICATIONS AND USAGE LYBALVI is indicated for the treatment of: Schizophrenia in adu…\n\nOpen on DailyMed\nShow 8 more\nCogentin (benztropine) 1 mg twice daily = 2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nbenztropine injection [cogentin]\n\nWhat the labels say about “Cogentin (benztropine) 1 mg twice daily = 2 mg/day”\n\nbenztropine mesylate\n\n…, hyperthermia, fever. WARNINGS Safe use in pregnancy has not been established. Benztropine mesylate may impair mental and/or physical abilities required for pe…\n\nOpen on DailyMed\nDaTscan\nioflupane i-123\n\n1 INDICATIONS AND USAGE DATSCAN is indicated as an adjunct to other diagnostic e…\n\nOpen on DailyMed\nhaloperidol\n\n…ration of haloperidol have been reported frequently, often during the first few days of treatment. EPS can be categorized generally as Parkinson-like symptoms,…\n\nOpen on DailyMed\nperphenazine\n\n…controlled by the concomitant use of effective antiparkinsonian drugs, such as benztropine mesylate, and/or by reduction in dosage. In some instances, however,…\n\nOpen on DailyMed\nShow 8 more\nKlonopin (clonazepam) 1 mg twice daily = 2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclonazepam 2 mg [klonopin]\n\nWhat the labels say about “Klonopin (clonazepam) 1 mg twice daily = 2 mg/day”\n\nclonazepam\n\nINDICATIONS AND USAGE Seizure Disorders: Clonazepam tablets are useful alone or as an adjunct in the treatment of the Len…\n\nOpen on DailyMed\nvigabatrin\n\n1 INDICATIONS AND USAGE Vigabatrin tablets are indicated for the treatment of: •…\n\nOpen on DailyMed\nTybost\ncobicistat\n\n1 INDICATIONS AND USAGE TYBOST is a CYP3A inhibitor indicated to increase system…\n\nOpen on DailyMed\nStribild\nelvitegravir, cobicistat, emtricitabine, and tenofovir disoproxil fumarate\n\n1 INDICATIONS AND USAGE STRIBILD ® is indicated as a complete regimen for the tr…\n\nOpen on DailyMed\nShow 8 more\nLipitor (atorvastatin) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 20 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 20 mg once daily = 20 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:57:06.743Z"
+}

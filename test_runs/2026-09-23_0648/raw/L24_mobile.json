@@ -1,0 +1,223 @@
+{
+ "id": "L24",
+ "input": "Norco (hydrocodone/acetaminophen) 10/325 mg every 6 hours = 40/1300 mg/day, Percocet (oxycodone/acetaminophen) 5/325 mg every 6 hours as needed max 4 doses/day = 20/1300 mg/day max, Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day, Lunesta (eszopiclone) 3 mg once daily at bedtime = 3 mg/day, Mobic (meloxicam) 15 mg once daily = 15 mg/day, Aleve (naproxen sodium OTC) 220 mg twice daily = 440 mg/day",
+ "viewport": "390x844",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 1.565,
+ "secondsToResults": 2.827,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Norco (hydrocodone/acetaminophen) 10/325 mg every 6 hours = 40/1300 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Norco (hydrocodone/acetaminophen) 10/325 mg every 6 hours = 40/1300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nacetaminophen / hydrocodone oral tablet [norco]\n\nWhat the labels say about “Norco (hydrocodone/acetaminophen) 10/325 mg every 6 hours = 40/1300 mg/day”\n\nhydrocodone bitartrate and acetaminophen\n\nINDICATIONS AND USAGE Hydrocodone bitartrate and acetaminophen oral solution is indicated for the mana…\n\nOpen on DailyMed\nJOURNAVX\nsuzetrigine\n\n…f moderate to severe acute pain, including postoperative pain, in adults. ( 1 ) 6 ADVERSE REACTIONS The most common adverse reactions (greater incidence in JOUR…\n\nOpen on DailyMed\nAPADAZ\nbenzhydrocodone and acetaminophen\n\n1 INDICATIONS AND USAGE APADAZ is indicated for the short-term (no more than 14 days) management of acute pain severe enough to require an opioid analgesic and…\n\nOpen on DailyMed\noxycodone and acetaminophen\n\n…dverse reactions have been identified during post approval use of oxycodone and acetaminophen tablets. Because these reactions are reported voluntarily from a p…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Percocet (oxycodone/acetaminophen) 5/325 mg every 6 hours as needed max 4 doses/day = 20/1300 mg/day max",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Percocet (oxycodone/acetaminophen) 5/325 mg every 6 hours as needed max 4 doses/day = 20/1300 mg/day max\nNot found in the FDA labels. Did you mean:\nEdit\nacetaminophen / oxycodone oral tablet [percocet]\n\nWhat the labels say about “Percocet (oxycodone/acetaminophen) 5/325 mg every 6 hours as needed max 4 doses/day = 20/1300 mg/day max”\n\noxycodone and acetaminophen\n\n…er the course of therapy [see Warnings ] , reserve opioid analgesics, including oxycodone hydrochloride, for use in patients for whom alternative treatment opti…\n\nOpen on DailyMed\noxycodone hydrochloride and acetaminophen\n\nINDICATIONS & USAGE Oxycodone and acetaminophen tablets are indicated for the management of pain sev…\n\nOpen on DailyMed\npropafenone hydrochloride\n\n1 INDICATIONS AND USAGE Propafenone hydrochloride extended-release capsules are indicated to prolong the time to recurrence of symptomatic atri…\n\nOpen on DailyMed\nvoriconazole\n\n…he treatment of adults and pediatric patients 2 years of age and older with: Invasive aspergillosis (1.1) Candidemia in non-neutropenics and other deep tissue C…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nzolpidem tartrate 10 mg [ambien]\n\nWhat the labels say about “Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day”\n\nzolpidem tartrate\n\n1 INDICATIONS AND USAGE Zolpidem tartrate tablets, USP a gamma-amino butyric acid (GABA…\n\nOpen on DailyMed\nGOCOVRI\namantadine\n\n1 INDICATIONS AND USAGE GOCOVRI ® is indicated: For the treatment of dyskinesia in pati…\n\nOpen on DailyMed\nADDYI\nflibanserin\n\n1 INDICATIONS AND USAGE ADDYI is indicated for the treatment of women less than 65 year…\n\nOpen on DailyMed\ncimetidine\n\nINDICATIONS AND USAGE Cimetidine tablets are indicated in: 1. Short-term treatment of…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lunesta (eszopiclone) 3 mg once daily at bedtime = 3 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lunesta (eszopiclone) 3 mg once daily at bedtime = 3 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\neszopiclone 3 mg [lunesta]\n\nWhat the labels say about “Lunesta (eszopiclone) 3 mg once daily at bedtime = 3 mg/day”\n\neszopiclone\n\n1 INDICATIONS & USAGE Eszopiclone tablets are indicated for the treatment of insomnia.…\n\nOpen on DailyMed\nerythromycin lactobionate\n\nINDICATIONS AND USAGE Erythromycin lactobionate for injection, USP is indicated in th…\n\nOpen on DailyMed\nvoriconazole\n\n1 INDICATIONS AND USAGE Voriconazole tablets are an azole antifungal indicated for the…\n\nOpen on DailyMed\nADDYI\nflibanserin\n\n1 INDICATIONS AND USAGE ADDYI is indicated for the treatment of women less than 65 year…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Mobic (meloxicam) 15 mg once daily = 15 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Mobic (meloxicam) 15 mg once daily = 15 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmeloxicam 15 mg [mobic]\n\nWhat the labels say about “Mobic (meloxicam) 15 mg once daily = 15 mg/day”\n\nmeloxicam\n\n1 INDICATIONS AND USAGE Meloxicam is a non-steroidal anti-inflammatory drug indicated for: Osteoarthriti…\n\nOpen on DailyMed\nZYNRELEF\nbupivacaine and meloxicam\n\n…ollowing serious adverse reactions have been associated with bupivacaine HCl or meloxicam and are discussed in greater detail in other sections of the labeling:…\n\nOpen on DailyMed\nSYMBRAVO\nmeloxicam, rizatriptan\n\n…t indicated for the treatment of cluster headache. SYMBRAVO is a combination of meloxicam (an NSAID) and rizatriptan (a serotonin (5-HT) 1B/1D receptor agonist…\n\nOpen on DailyMed\nfluconazole\n\n…re the results of the cultures and other laboratory studies are known; however, once these results become available, anti-infective therapy should be adjusted a…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Aleve (naproxen sodium OTC) 220 mg twice daily = 440 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Aleve (naproxen sodium OTC) 220 mg twice daily = 440 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nnaproxen sodium 220 mg [aleve]\n\nWhat the labels say about “Aleve (naproxen sodium OTC) 220 mg twice daily = 440 mg/day”\n\ndofetilide\n\n…eatinine, serum electrolytes (calcium, chloride, glucose, magnesium, potassium, sodium), or creatine kinase. Similarly, no clinically relevant effects were obse…\n\nOpen on DailyMed\nnaproxen sodium\n\n1 INDICATIONS AND USAGE Naproxen tablets and naproxen sodium tablets are indicated for: the relief of th…\n\nOpen on DailyMed\nnaproxen sodium\n\n1 INDICATIONS AND USAGE Naproxen sodium tablets are indicated for: the relief of the signs and symptoms…\n\nOpen on DailyMed\nnaproxen and esomeprazole magnesium\n\n1 INDICATIONS AND USAGE Naproxen and esomeprazole magnesium delayed-release tablets, a combination of na…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=995a6cc7-8b72-4d35-b3b4-8c5752438fb7",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d229cf71-96ec-4206-960b-d56fafc250ac",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0590d4e5-7107-4015-a6a8-deac14265aa2",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9cf218c-af5e-4249-aa3b-a8555ed02278",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9cf218c-af5e-4249-aa3b-a8555ed02278",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40a68a27-4422-5ba0-e063-6294a90ac550",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2ecd6452-ccc3-493f-9a4a-69f0fbf67a42",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c620b2d7-3c2b-4252-8cfc-2f322d624435",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82ff865f-78f3-4c94-b6a9-727a54944b28",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3819daf3-e935-2c53-c527-e1d57922f394",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06c0a509-026f-44e0-9975-a94a8de51d43",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9dfe774a-2c7a-4e10-bedd-cde64ad28676",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee345752-0f0c-c69b-e053-2995a90a7dac",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c620b2d7-3c2b-4252-8cfc-2f322d624435",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3819daf3-e935-2c53-c527-e1d57922f394",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=385b7cf4-976a-4a58-9ebc-def8b6e78b75",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dab484a7-9353-43ba-9e74-7fab910c712b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dcf1ecd1-08a0-8e47-e053-2a95a90abdc7",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26de5f8c-8cec-46f6-a468-69451758a278",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6c5bb008-e66f-4ef0-bf84-aca7eb5983e9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6f4a670-235e-4235-84a8-a74dc8ca5586",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=733a93ff-8240-4afa-ba28-b0a6f8514efe",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nNorco (hydrocodone/acetaminophen) 10/325 mg every 6 hours = 40/1300 mg/day: not found. Edit it in the list, or remove it.\nPercocet (oxycodone/acetaminophen) 5/325 mg every 6 hours as needed max 4 doses/day = 20/1300 mg/day max: not found. Edit it in the list, or remove it.\nAmbien (zolpidem) 10 mg once daily at bedtime = 10 mg/day: not found. Edit it in the list, or remove it.\nLunesta (eszopiclone) 3 mg once daily at bedtime = 3 mg/day: not found. Edit it in the list, or remove it.\nMobic (meloxicam) 15 mg once daily = 15 mg/day: not found. Edit it in the list, or remove it.\nAleve (naproxen sodium OTC) 220 mg twice daily = 440 mg/day: not found. Edit it in the list, or remove it.\nE\n–\nD\n–\nC\n–\nB\n–\nA\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nNorco (hydrocodone/acetaminophen) 10/325 mg every 6 hours = 40/1300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nacetaminophen / hydrocodone oral tablet [norco]\n\nWhat the labels say about “Norco (hydrocodone/acetaminophen) 10/325 mg every 6 hours = 40/1300 mg/day”\n\nhydrocodone bitartrate and acetaminophen\n\nINDICATIONS AND USAGE Hydrocodone bitartrate and acetaminophen oral solution is indicated for the mana…\n\nOpen on DailyMed\nJOURNAVX\nsuzetrigine\n\n…f moderate to severe acute pain, including postoperative pain, in adults. ( 1 ) 6 ADVERSE REACTIONS The most common adverse reactions (greater incidence in JOUR…\n\nOpen on DailyMed\nAPADAZ\nbenzhydrocodone and acetaminophen\n\n1 INDICATIONS AND USAGE APADAZ is indicated for the short-term (no more than 14 days) management of acute pain severe enough to require an opioid analgesic and…\n\nOpen on DailyMed\noxycodone and acetaminophen\n\n…dverse reactions have been identified during post approval use of oxycodone and acetaminophen tablets. Because these reactions are reported voluntarily from a p…\n\nOpen on DailyMed\nShow 8 more\nPercocet (oxycodone/acetaminophen) 5/325 mg every 6 hours as needed max 4 doses/day = 20/1300 mg/day max\nNot found in the FDA labels. Did you mean:\nEdit\nacetaminophen / oxycodone oral tablet [percocet]\n\nWhat the labels say about “Percocet (oxycodone/acetaminophen) 5/325 mg every 6 hours as needed max 4 doses/day = 20/1300 mg/day max”\n\noxycodone and acetaminophen\n\n…er the course of therapy [see Warnings ] , reserve opioid analgesics, including oxycodone hydrochloride, for use in patients for whom alternative treatment opti…\n\nOpen on DailyMed\noxycodone hydrochloride and acetaminophen\n\nINDICATIONS & USAGE Oxycodone and acetaminophen tablets are indicated for the management of pain sev…\n\nOpen on DailyMed\npropafenone hydrochloride\n\n1 INDICATIONS AND USAGE Propafenone hydrochloride extended-release capsules are indicated to prolong the time to recurrence of symptomatic atri…\n\nOpen on DailyMed\nvoriconazole\n\n…he treatment of adults and pediatric patients 2 years of age and older with: Invasive aspergillosis (1.1) Candidemia in non-neutropenics and other deep tissue C…\n\nOpen on DailyMed\nShow 8 more\nAmbien (zolpidem) 10 mg once daily at bedtime = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nzolpidem tartrate 10 mg [ambien]\n\nWhat the labels say about “Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day”\n\nzolpidem tartrate\n\n1 INDICATIONS AND USAGE Zolpidem tartrate tablets, USP a gamma-amino butyric acid (GABA…\n\nOpen on DailyMed\nGOCOVRI\namantadine\n\n1 INDICATIONS AND USAGE GOCOVRI ® is indicated: For the treatment of dyskinesia in pati…\n\nOpen on DailyMed\nADDYI\nflibanserin\n\n1 INDICATIONS AND USAGE ADDYI is indicated for the treatment of women less than 65 year…\n\nOpen on DailyMed\ncimetidine\n\nINDICATIONS AND USAGE Cimetidine tablets are indicated in: 1. Short-term treatment of…\n\nOpen on DailyMed\nShow 8 more\nLunesta (eszopiclone) 3 mg once daily at bedtime = 3 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\neszopiclone 3 mg [lunesta]\n\nWhat the labels say about “Lunesta (eszopiclone) 3 mg once daily at bedtime = 3 mg/day”\n\neszopiclone\n\n1 INDICATIONS & USAGE Eszopiclone tablets are indicated for the treatment of insomnia.…\n\nOpen on DailyMed\nerythromycin lactobionate\n\nINDICATIONS AND USAGE Erythromycin lactobionate for injection, USP is indicated in th…\n\nOpen on DailyMed\nvoriconazole\n\n1 INDICATIONS AND USAGE Voriconazole tablets are an azole antifungal indicated for the…\n\nOpen on DailyMed\nADDYI\nflibanserin\n\n1 INDICATIONS AND USAGE ADDYI is indicated for the treatment of women less than 65 year…\n\nOpen on DailyMed\nShow 8 more\nMobic (meloxicam) 15 mg once daily = 15 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmeloxicam 15 mg [mobic]\n\nWhat the labels say about “Mobic (meloxicam) 15 mg once daily = 15 mg/day”\n\nmeloxicam\n\n1 INDICATIONS AND USAGE Meloxicam is a non-steroidal anti-inflammatory drug indicated for: Osteoarthriti…\n\nOpen on DailyMed\nZYNRELEF\nbupivacaine and meloxicam\n\n…ollowing serious adverse reactions have been associated with bupivacaine HCl or meloxicam and are discussed in greater detail in other sections of the labeling:…\n\nOpen on DailyMed\nSYMBRAVO\nmeloxicam, rizatriptan\n\n…t indicated for the treatment of cluster headache. SYMBRAVO is a combination of meloxicam (an NSAID) and rizatriptan (a serotonin (5-HT) 1B/1D receptor agonist…\n\nOpen on DailyMed\nfluconazole\n\n…re the results of the cultures and other laboratory studies are known; however, once these results become available, anti-infective therapy should be adjusted a…\n\nOpen on DailyMed\nShow 8 more\nAleve (naproxen sodium OTC) 220 mg twice daily = 440 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nnaproxen sodium 220 mg [aleve]\n\nWhat the labels say about “Aleve (naproxen sodium OTC) 220 mg twice daily = 440 mg/day”\n\ndofetilide\n\n…eatinine, serum electrolytes (calcium, chloride, glucose, magnesium, potassium, sodium), or creatine kinase. Similarly, no clinically relevant effects were obse…\n\nOpen on DailyMed\nnaproxen sodium\n\n1 INDICATIONS AND USAGE Naproxen tablets and naproxen sodium tablets are indicated for: the relief of th…\n\nOpen on DailyMed\nnaproxen sodium\n\n1 INDICATIONS AND USAGE Naproxen sodium tablets are indicated for: the relief of the signs and symptoms…\n\nOpen on DailyMed\nnaproxen and esomeprazole magnesium\n\n1 INDICATIONS AND USAGE Naproxen and esomeprazole magnesium delayed-release tablets, a combination of na…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3",
+ "runAt": "2026-09-23T10:57:56.288Z"
+}

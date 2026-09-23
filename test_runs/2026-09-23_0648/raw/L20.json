@@ -1,0 +1,223 @@
+{
+ "id": "L20",
+ "input": "Rifadin (rifampin) 600 mg once daily = 600 mg/day, Xarelto (rivaroxaban) 20 mg once daily with the evening meal = 20 mg/day, Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day, Prograf (tacrolimus) 2 mg twice daily = 4 mg/day, Latuda (lurasidone) 80 mg once daily with food = 80 mg/day, Dolophine (methadone) 60 mg once daily = 60 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.818,
+ "secondsToResults": 2.83,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Rifadin (rifampin) 600 mg once daily = 600 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Rifadin (rifampin) 600 mg once daily = 600 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nrifampin 600 mg [rifadin]\n\nWhat the labels say about “Rifadin (rifampin) 600 mg once daily = 600 mg/day”\n\nRifadin IV\nrifampin\n\n…ed before the start of therapy to confirm the susceptibility of the organism to rifampin and they should be repeated throughout therapy to monitor the response…\n\nOpen on DailyMed\npretomanid\n\n…table antibacterial drug OR adults with pulmonary TB resistant to isoniazid and rifampin, who are treatment-intolerant or nonresponsive to standard therapy. App…\n\nOpen on DailyMed\nrifapentine\n\n…ses of active antituberculous treatment. Rifapentine tablets should not be used once weekly in the continuation phase regimen in combination with isoniazid (INH…\n\nOpen on DailyMed\nefavirenz\n\n…ons ( 5.9 )] Most common adverse reactions (>5%, moderate-severe) are impaired concentration, abnormal dreams, rash, dizziness, nausea, headache, fatigue, insom…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Xarelto (rivaroxaban) 20 mg once daily with the evening meal = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Xarelto (rivaroxaban) 20 mg once daily with the evening meal = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nrivaroxaban 20 mg [xarelto]\n\nWhat the labels say about “Xarelto (rivaroxaban) 20 mg once daily with the evening meal = 20 mg/day”\n\nXarelto\nrivaroxaban\n\n1 INDICATIONS AND USAGE XARELTO is a factor Xa inhibitor indicated: to reduce risk of stroke and systemi…\n\nOpen on DailyMed\nLevemir\ninsulin detemir\n\n…EVEMIR is indicated to improve glycemic control in adult and pediatric patients with diabetes mellitus. Limitations of Use LEVEMIR is not recommended for the tr…\n\nOpen on DailyMed\nMetformin\nmetformin er 500 mg\n\n…ove glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus. Metformin hydrochloride extended-release tablets…\n\nOpen on DailyMed\nTuralio\npexidartinib hydrochloride\n\n1 INDICATIONS AND USAGE TURALIO is indicated for the treatment of adult patients with symptomatic tenosynovial giant cell tumor (…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day",
+   "generic": "Not a medication name we know.",
+   "dose": null,
+   "facts": null,
+   "text": "Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day”\n\nAngeliq\ndrospirenone and estradiol\n\n…1.1 Treatment of Moderate to Severe Vasomotor Symptoms due to Menopause Angeliq 0.25 mg drospirenone (DRSP)/0.5 mg estradiol (E2) is indicated for the treatment…\n\nOpen on DailyMed\netonogestrel and ethinyl estradiol vaginal\n\n1 INDICATIONS AND USAGE FOR VAGINAL USE ONLY Etonogestrel and ethinyl estradiol vaginal ring is indicated for use by females of reproductive a…\n\nOpen on DailyMed\nTrilitas\ntazarotene\n\n…dosing frequency or in the case of psoriasis, consider switching to the lower concentration. Trilitas™ gel should not be used on eczematous skin, as it may cau…\n\nOpen on DailyMed\nnevirapine\n\n…an immunodeficiency virus (HIV-1) infection in adults and pediatric patients 15 days and older [see Clinical Studies (14.1 , 14.2) ]. Limitations of Use: Based…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Prograf (tacrolimus) 2 mg twice daily = 4 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Prograf (tacrolimus) 2 mg twice daily = 4 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntacrolimus injection [prograf]\n\nWhat the labels say about “Prograf (tacrolimus) 2 mg twice daily = 4 mg/day”\n\ntacrolimus\n\n1 INDICATIONS AND USAGE Tacrolimus capsules are a calcineurin-inhibitor immunosuppressant indicated for…\n\nOpen on DailyMed\nposaconazole\n\n…logic malignancies with prolonged neutropenia from chemotherapy as follows: ( 1.2 ) Posaconazole delayed-release tablets: adults and pediatric patients 2 years…\n\nOpen on DailyMed\nLivtencity\nmaribavir\n\n…LIVTENCITY ® is indicated for the treatment of adults and pediatric patients (12 years of age and older and weighing at least 35 kg) with post-transplant cytom…\n\nOpen on DailyMed\nesomeprazole strontium\n\n…e Esophagitis Esomeprazole strontium is indicated for the short-term treatment (4 to 8 weeks) in the healing and symptomatic resolution of diagnostically confir…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Latuda (lurasidone) 80 mg once daily with food = 80 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Latuda (lurasidone) 80 mg once daily with food = 80 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlurasidone hydrochloride 80 mg [latuda]\n\nWhat the labels say about “Latuda (lurasidone) 80 mg once daily with food = 80 mg/day”\n\nlurasidone hydrochloride\n\n1 INDICATIONS AND USAGE Lurasidone hydrochloride tablets are indicated for: • Monotherapy treatment of a…\n\nOpen on DailyMed\ndarunavir\ndarunavir 600 mg\n\n1 INDICATIONS AND USAGE Darunavir tablets, co-administered with ritonavir (darunavir/ritonavir), in combination with other antiretroviral a…\n\nOpen on DailyMed\nDarunavir 600 and 800 mg\ndarunavir\n\n1 INDICATIONS AND USAGE Darunavir tablets, co-administered with ritonavir (darunavir/ritonavir), in combination with other antiretroviral a…\n\nOpen on DailyMed\ndarunavir\n\n1 INDICATIONS AND USAGE Darunavir tablets, co-administered with ritonavir (darunavir/ritonavir), in combination with other antiretroviral a…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Dolophine (methadone) 60 mg once daily = 60 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Dolophine (methadone) 60 mg once daily = 60 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmethadone injectable solution [dolophine]\nmethadone oral tablet [dolophine]\n\nWhat the labels say about “Dolophine (methadone) 60 mg once daily = 60 mg/day”\n\nabacavir\n\n…) with a greater than or equal to 5% frequency during therapy with abacavir 300 mg twice daily, lamivudine 150 mg twice daily, and efavirenz 600 mg daily compar…\n\nOpen on DailyMed\nMOVANTIK\nnaloxegol oxalate\n\n…Eligible patients were randomized in a 2:1 ratio to receive either naloxegol 25 mg once daily or usual care treatment for OIC. The most commonly used laxatives…\n\nOpen on DailyMed\nabacavir and lamivudine\n\n…r severe) with greater than or equal to 5% frequency during therapy with ZIAGEN 600 mg once daily or ZIAGEN 300 mg twice daily, both in combination with lamivud…\n\nOpen on DailyMed\nemtricitabine, rilpivirine and tenofovir disoproxil fumarate\n\n…2.5 to 5.0 x ULN 1% <1% Increased Total Cholesterol (fasted) Grade 1 200 to 239 mg/dL 14% 31% Grade 2 240 to 300 mg/dL 6% 18% Grade 3 >300 mg/dL <1% 2% Increase…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=036ab68e-5085-4edc-bd83-784b43d64eab",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1906fc9-cb3c-4e13-8a4a-da76100c1bf3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f95d726e-5a09-48dd-b719-e4400fb91c8f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13ca3456-e5bf-4bb1-af95-b1378658a358",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82192527-99aa-4b53-8ce9-9173668d309c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05999192-ebc6-4198-bd1e-f46abbfb4f8a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7b0ec4bf-b2ac-49ee-96af-7740ad3f2e16",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=761834c2-6b61-4583-84c2-f1ca4a97c4f2",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05e172aa-e18a-427b-e063-6294a90ae22f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1cf1faef-73b8-4ab2-a4c8-521f0bd3fc10",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6e93829-7024-48f6-8023-da6ff27dfc0a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6b89e8a4-9f11-42e3-8e79-fe617e7c461f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8a26673-261c-4e8e-b1e1-9e23aaf7f285",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c94fc2c5-e840-4f18-b7d8-d5eacb26d3a0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c916d32-f9e9-1d15-e054-00144ff88e88",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a97b59db-29e8-4b00-9d35-56b47335ee25",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed977166-7ac0-4a8c-a10c-4b19a69403c0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bf99d8b8-c4e0-4cb4-924e-8cdcfd8d1aa1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e80e44f8-1987-4b78-a63d-a4e4d5122ddb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e5cbf204-c10d-444b-aba0-180a30645d55",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=28596788-b73f-4247-85fc-3105f51fff5a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8988924-c18c-4e91-ab79-2d84e72bfa0d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7193c90e-456c-4cfb-8181-65a1618dae51",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nRifadin (rifampin) 600 mg once daily = 600 mg/day: not found. Edit it in the list, or remove it.\nXarelto (rivaroxaban) 20 mg once daily with the evening meal = 20 mg/day: not found. Edit it in the list, or remove it.\nSprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day: not a medication name, so it was looked up in the labels instead.\nPrograf (tacrolimus) 2 mg twice daily = 4 mg/day: not found. Edit it in the list, or remove it.\nLatuda (lurasidone) 80 mg once daily with food = 80 mg/day: not found. Edit it in the list, or remove it.\nDolophine (methadone) 60 mg once daily = 60 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nRifadin (rifampin) 600 mg once daily = 600 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nrifampin 600 mg [rifadin]\n\nWhat the labels say about “Rifadin (rifampin) 600 mg once daily = 600 mg/day”\n\nRifadin IV\nrifampin\n\n…ed before the start of therapy to confirm the susceptibility of the organism to rifampin and they should be repeated throughout therapy to monitor the response…\n\nOpen on DailyMed\npretomanid\n\n…table antibacterial drug OR adults with pulmonary TB resistant to isoniazid and rifampin, who are treatment-intolerant or nonresponsive to standard therapy. App…\n\nOpen on DailyMed\nrifapentine\n\n…ses of active antituberculous treatment. Rifapentine tablets should not be used once weekly in the continuation phase regimen in combination with isoniazid (INH…\n\nOpen on DailyMed\nefavirenz\n\n…ons ( 5.9 )] Most common adverse reactions (>5%, moderate-severe) are impaired concentration, abnormal dreams, rash, dizziness, nausea, headache, fatigue, insom…\n\nOpen on DailyMed\nShow 8 more\nXarelto (rivaroxaban) 20 mg once daily with the evening meal = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nrivaroxaban 20 mg [xarelto]\n\nWhat the labels say about “Xarelto (rivaroxaban) 20 mg once daily with the evening meal = 20 mg/day”\n\nXarelto\nrivaroxaban\n\n1 INDICATIONS AND USAGE XARELTO is a factor Xa inhibitor indicated: to reduce risk of stroke and systemi…\n\nOpen on DailyMed\nLevemir\ninsulin detemir\n\n…EVEMIR is indicated to improve glycemic control in adult and pediatric patients with diabetes mellitus. Limitations of Use LEVEMIR is not recommended for the tr…\n\nOpen on DailyMed\nMetformin\nmetformin er 500 mg\n\n…ove glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus. Metformin hydrochloride extended-release tablets…\n\nOpen on DailyMed\nTuralio\npexidartinib hydrochloride\n\n1 INDICATIONS AND USAGE TURALIO is indicated for the treatment of adult patients with symptomatic tenosynovial giant cell tumor (…\n\nOpen on DailyMed\nShow 8 more\nSprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day”\n\nAngeliq\ndrospirenone and estradiol\n\n…1.1 Treatment of Moderate to Severe Vasomotor Symptoms due to Menopause Angeliq 0.25 mg drospirenone (DRSP)/0.5 mg estradiol (E2) is indicated for the treatment…\n\nOpen on DailyMed\netonogestrel and ethinyl estradiol vaginal\n\n1 INDICATIONS AND USAGE FOR VAGINAL USE ONLY Etonogestrel and ethinyl estradiol vaginal ring is indicated for use by females of reproductive a…\n\nOpen on DailyMed\nTrilitas\ntazarotene\n\n…dosing frequency or in the case of psoriasis, consider switching to the lower concentration. Trilitas™ gel should not be used on eczematous skin, as it may cau…\n\nOpen on DailyMed\nnevirapine\n\n…an immunodeficiency virus (HIV-1) infection in adults and pediatric patients 15 days and older [see Clinical Studies (14.1 , 14.2) ]. Limitations of Use: Based…\n\nOpen on DailyMed\nShow 8 more\nPrograf (tacrolimus) 2 mg twice daily = 4 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntacrolimus injection [prograf]\n\nWhat the labels say about “Prograf (tacrolimus) 2 mg twice daily = 4 mg/day”\n\ntacrolimus\n\n1 INDICATIONS AND USAGE Tacrolimus capsules are a calcineurin-inhibitor immunosuppressant indicated for…\n\nOpen on DailyMed\nposaconazole\n\n…logic malignancies with prolonged neutropenia from chemotherapy as follows: ( 1.2 ) Posaconazole delayed-release tablets: adults and pediatric patients 2 years…\n\nOpen on DailyMed\nLivtencity\nmaribavir\n\n…LIVTENCITY ® is indicated for the treatment of adults and pediatric patients (12 years of age and older and weighing at least 35 kg) with post-transplant cytom…\n\nOpen on DailyMed\nesomeprazole strontium\n\n…e Esophagitis Esomeprazole strontium is indicated for the short-term treatment (4 to 8 weeks) in the healing and symptomatic resolution of diagnostically confir…\n\nOpen on DailyMed\nShow 8 more\nLatuda (lurasidone) 80 mg once daily with food = 80 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlurasidone hydrochloride 80 mg [latuda]\n\nWhat the labels say about “Latuda (lurasidone) 80 mg once daily with food = 80 mg/day”\n\nlurasidone hydrochloride\n\n1 INDICATIONS AND USAGE Lurasidone hydrochloride tablets are indicated for: • Monotherapy treatment of a…\n\nOpen on DailyMed\ndarunavir\ndarunavir 600 mg\n\n1 INDICATIONS AND USAGE Darunavir tablets, co-administered with ritonavir (darunavir/ritonavir), in combination with other antiretroviral a…\n\nOpen on DailyMed\nDarunavir 600 and 800 mg\ndarunavir\n\n1 INDICATIONS AND USAGE Darunavir tablets, co-administered with ritonavir (darunavir/ritonavir), in combination with other antiretroviral a…\n\nOpen on DailyMed\ndarunavir\n\n1 INDICATIONS AND USAGE Darunavir tablets, co-administered with ritonavir (darunavir/ritonavir), in combination with other antiretroviral a…\n\nOpen on DailyMed\nShow 8 more\nDolophine (methadone) 60 mg once daily = 60 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmethadone injectable solution [dolophine]\nmethadone oral tablet [dolophine]\n\nWhat the labels say about “Dolophine (methadone) 60 mg once daily = 60 mg/day”\n\nabacavir\n\n…) with a greater than or equal to 5% frequency during therapy with abacavir 300 mg twice daily, lamivudine 150 mg twice daily, and efavirenz 600 mg daily compar…\n\nOpen on DailyMed\nMOVANTIK\nnaloxegol oxalate\n\n…Eligible patients were randomized in a 2:1 ratio to receive either naloxegol 25 mg once daily or usual care treatment for OIC. The most commonly used laxatives…\n\nOpen on DailyMed\nabacavir and lamivudine\n\n…r severe) with greater than or equal to 5% frequency during therapy with ZIAGEN 600 mg once daily or ZIAGEN 300 mg twice daily, both in combination with lamivud…\n\nOpen on DailyMed\nemtricitabine, rilpivirine and tenofovir disoproxil fumarate\n\n…2.5 to 5.0 x ULN 1% <1% Increased Total Cholesterol (fasted) Grade 1 200 to 239 mg/dL 14% 31% Grade 2 240 to 300 mg/dL 6% 18% Grade 3 >300 mg/dL <1% 2% Increase…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:54:42.088Z"
+}

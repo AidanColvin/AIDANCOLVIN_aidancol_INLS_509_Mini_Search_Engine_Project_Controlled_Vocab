@@ -1,0 +1,223 @@
+{
+ "id": "L28",
+ "input": "Prezcobix (darunavir/cobicistat) 800/150 mg once daily with food = 800/150 mg/day, Truvada (emtricitabine/tenofovir disoproxil fumarate) 200/300 mg once daily = 200/300 mg/day, Lipitor (atorvastatin) 80 mg once daily = 80 mg/day, Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day, Flonase (fluticasone propionate nasal) 50 mcg per spray 2 sprays each nostril once daily = 200 mcg/day, Viagra (sildenafil) 50 mg as needed no more than once daily = 50 mg/day max",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.834,
+ "secondsToResults": 2.831,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Prezcobix (darunavir/cobicistat) 800/150 mg once daily with food = 800/150 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Prezcobix (darunavir/cobicistat) 800/150 mg once daily with food = 800/150 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncobicistat 150 mg / darunavir 800 mg [prezcobix]\n\nWhat the labels say about “Prezcobix (darunavir/cobicistat) 800/150 mg once daily with food = 800/150 mg/day”\n\nPREZCOBIX\ndarunavir ethanolate and cobicistat\n\n1 INDICATIONS AND USAGE PREZCOBIX and PREZCOBIX PED are indicated in combination with other antiretrovir…\n\nOpen on DailyMed\nSymtuza\ndarunavir, cobicistat, emtricitabine, and tenofovir alafenamide\n\n…oviral regimen for at least 6 months and have no known substitutions associated with resistance to darunavir or tenofovir. SYMTUZA is a four-drug combination of…\n\nOpen on DailyMed\nTybost\ncobicistat\n\n…T is a CYP3A inhibitor indicated to increase systemic exposure of atazanavir or darunavir (once daily dosing regimen) in combination with other antiretroviral a…\n\nOpen on DailyMed\nrifabutin\n\n…revention of disseminated Mycobacterium avium complex (MAC) disease in patients with advanced HIV infection. ADVERSE REACTIONS Adverse Reactions from Clinical T…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Truvada (emtricitabine/tenofovir disoproxil fumarate) 200/300 mg once daily = 200/300 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Truvada (emtricitabine/tenofovir disoproxil fumarate) 200/300 mg once daily = 200/300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nemtricitabine 200 mg / tenofovir disoproxil fumarate 300 mg [truvada]\n\nWhat the labels say about “Truvada (emtricitabine/tenofovir disoproxil fumarate) 200/300 mg once daily = 200/300 mg/day”\n\nStribild\nelvitegravir, cobicistat, emtricitabine, and tenofovir disoproxil fumarate\n\n…ase strand transfer inhibitor (HIV-1 INSTI), cobicistat, a CYP3A inhibitor, and emtricitabine and tenofovir disoproxil fumarate (TDF), both HIV nucleoside analo…\n\nOpen on DailyMed\nDESCOVY\nemtricitabine and tenofovir alafenamide\n\n…CATIONS AND USAGE HIV-1 Treatment ( 1.1 ): DESCOVY is a two-drug combination of emtricitabine (FTC) and tenofovir alafenamide (TAF), both HIV nucleoside analog…\n\nOpen on DailyMed\nemtricitabine and tenofovir disoproxil fumarate\n\n1 INDICATIONS & USAGE HIV-1 Treatment ( 1.1 ) Emtricitabine and Tenofovir Disoproxil Fumarate Tablets is a two-drug combinatio…\n\nOpen on DailyMed\nemtricitabine, rilpivirine and tenofovir disoproxil fumarate\n\n1 INDICATIONS AND USAGE Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are indicat…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lipitor (atorvastatin) 80 mg once daily = 80 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lipitor (atorvastatin) 80 mg once daily = 80 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 80 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 80 mg once daily = 80 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nalprazolam 1 mg [xanax]\n\nWhat the labels say about “Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day”\n\nnefazodone hydrochloride\n\n…relatively persistent depressed or dysphoric mood that usually interferes with daily functioning (nearly every day for at least 2 weeks). It must include eithe…\n\nOpen on DailyMed\nalprazolam\n\n1 INDICATIONS AND USAGE Alprazolam tablets are indicated for the: acute treatment of generalized anxiety…\n\nOpen on DailyMed\nfluoxetine hcl\n\n…The efficacy of fluoxetine tablets in MDD was established in one 5-week trial, three 6-week trials, and one maintenance study in adults. The efficacy of fluoxe…\n\nOpen on DailyMed\nclarithromycin\n\n…ryngitis/Tonsillitis ( 1.4 ) Uncomplicated Skin and Skin Structure Infections ( 1.5 ) Acute Otitis Media in Pediatric Patients ( 1.6 ) Treatment and Prophylaxis…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Flonase (fluticasone propionate nasal) 50 mcg per spray 2 sprays each nostril once daily = 200 mcg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Flonase (fluticasone propionate nasal) 50 mcg per spray 2 sprays each nostril once daily = 200 mcg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluticasone propionate metered dose nasal spray [flonase]\n\nWhat the labels say about “Flonase (fluticasone propionate nasal) 50 mcg per spray 2 sprays each nostril once daily = 200 mcg/day”\n\nfluticasone propionate\n\n1 INDICATIONS AND USAGE Fluticasone propionate nasal spray is indicated for the management of the nasal…\n\nOpen on DailyMed\nazelastine hydrochloride and fluticasone propionate\n\n1 INDICATIONS AND USAGE Azelastine hydrochloride and fluticasone propionate nasal spray is indicated for the relief of symptoms of se…\n\nOpen on DailyMed\nmometasone furoate\n\n1 INDICATIONS AND USAGE Mometasone furoate nasal spray is a corticosteroid indicated for: Prophylaxis of Nasal Symptoms of…\n\nOpen on DailyMed\nmometasone furoate monohydrate\n\n1 INDICATIONS AND USAGE Mometasone Furoate Monohydrate Nasal Spray is a corticosteroid indicated for: Prophylaxis of Nasal Symptoms of…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Viagra (sildenafil) 50 mg as needed no more than once daily = 50 mg/day max",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Viagra (sildenafil) 50 mg as needed no more than once daily = 50 mg/day max\nNot found in the FDA labels. Did you mean:\nEdit\nsildenafil 50 mg [viagra]\n\nWhat the labels say about “Viagra (sildenafil) 50 mg as needed no more than once daily = 50 mg/day max”\n\nsildenafil\n\n1 INDICATIONS AND USAGE Adults Sildenafil for oral suspension is indicated for the treatment of pulmonary arter…\n\nOpen on DailyMed\nE.E.S 400\nerythromycin ethylsuccinate\n\n…infections caused by susceptible strains of the designated organisms in the diseases listed below: Upper respiratory tract infections of mild to moderate degree…\n\nOpen on DailyMed\nAtazanavir Sulfate\natazanavir\n\n…1 infection in adults and in pediatric patients 6 years and older weighing at least 15 kg. Limitations of Use: Atazanavir capsules are not recommended for use i…\n\nOpen on DailyMed\nsildenafil\n\n1 INDICATIONS AND USAGE Sildenafil tablets are indicated for the treatment of erectile dysfunction. Sild…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c38fdb6-d0ba-4f16-a0e3-85d9ec334d9f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=85a17d00-6b7c-41ea-a6b3-5ad924820dab",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3784c35c-e87f-410c-900b-8fd6313c6010",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=25a60937-cbbe-4a50-994f-2ce15203f589",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=74ae2a93-b267-444c-8f0f-a2a6522260ee",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06f66e98-e6ee-4538-9506-6c1282cc14c1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41bd03ea-b92e-459c-968b-c9095ae90aef",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7193c90e-456c-4cfb-8181-65a1618dae51",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57f9b462-f08e-483c-9b64-b7e4c8d46927",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9adb9e4-c495-9530-e5e3-7e3b01d53e4c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c7b1b11-90a3-bc1c-0e45-9e2a14ef0b03",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0bd4c34a-4f43-4c84-8b98-1d074cba97d5",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d5848f0-e9f0-4112-a7ca-bcc8ea2e69c6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc08915f-fa3a-4509-a01c-42b577f39b99",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7bbc6514-bea3-0be0-e673-a8f6069025ff",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e30ca373-d9c0-4cad-b5c3-3be9c299dddc",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b24f80c5-afe2-4821-9185-2dad3cfe277a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49b3ca93-43cc-439c-8f5d-e3ea2e87ad2f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7fbea274-d6b5-4faa-bbf0-05fefab42114",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=174ef537-e3e6-42bd-a478-47b930ddc761",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nPrezcobix (darunavir/cobicistat) 800/150 mg once daily with food = 800/150 mg/day: not found. Edit it in the list, or remove it.\nTruvada (emtricitabine/tenofovir disoproxil fumarate) 200/300 mg once daily = 200/300 mg/day: not found. Edit it in the list, or remove it.\nLipitor (atorvastatin) 80 mg once daily = 80 mg/day: not found. Edit it in the list, or remove it.\nXanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day: not found. Edit it in the list, or remove it.\nFlonase (fluticasone propionate nasal) 50 mcg per spray 2 sprays each nostril once daily = 200 mcg/day: not found. Edit it in the list, or remove it.\nViagra (sildenafil) 50 mg as needed no more than once daily = 50 mg/day max: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nPrezcobix (darunavir/cobicistat) 800/150 mg once daily with food = 800/150 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncobicistat 150 mg / darunavir 800 mg [prezcobix]\n\nWhat the labels say about “Prezcobix (darunavir/cobicistat) 800/150 mg once daily with food = 800/150 mg/day”\n\nPREZCOBIX\ndarunavir ethanolate and cobicistat\n\n1 INDICATIONS AND USAGE PREZCOBIX and PREZCOBIX PED are indicated in combination with other antiretrovir…\n\nOpen on DailyMed\nSymtuza\ndarunavir, cobicistat, emtricitabine, and tenofovir alafenamide\n\n…oviral regimen for at least 6 months and have no known substitutions associated with resistance to darunavir or tenofovir. SYMTUZA is a four-drug combination of…\n\nOpen on DailyMed\nTybost\ncobicistat\n\n…T is a CYP3A inhibitor indicated to increase systemic exposure of atazanavir or darunavir (once daily dosing regimen) in combination with other antiretroviral a…\n\nOpen on DailyMed\nrifabutin\n\n…revention of disseminated Mycobacterium avium complex (MAC) disease in patients with advanced HIV infection. ADVERSE REACTIONS Adverse Reactions from Clinical T…\n\nOpen on DailyMed\nShow 8 more\nTruvada (emtricitabine/tenofovir disoproxil fumarate) 200/300 mg once daily = 200/300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nemtricitabine 200 mg / tenofovir disoproxil fumarate 300 mg [truvada]\n\nWhat the labels say about “Truvada (emtricitabine/tenofovir disoproxil fumarate) 200/300 mg once daily = 200/300 mg/day”\n\nStribild\nelvitegravir, cobicistat, emtricitabine, and tenofovir disoproxil fumarate\n\n…ase strand transfer inhibitor (HIV-1 INSTI), cobicistat, a CYP3A inhibitor, and emtricitabine and tenofovir disoproxil fumarate (TDF), both HIV nucleoside analo…\n\nOpen on DailyMed\nDESCOVY\nemtricitabine and tenofovir alafenamide\n\n…CATIONS AND USAGE HIV-1 Treatment ( 1.1 ): DESCOVY is a two-drug combination of emtricitabine (FTC) and tenofovir alafenamide (TAF), both HIV nucleoside analog…\n\nOpen on DailyMed\nemtricitabine and tenofovir disoproxil fumarate\n\n1 INDICATIONS & USAGE HIV-1 Treatment ( 1.1 ) Emtricitabine and Tenofovir Disoproxil Fumarate Tablets is a two-drug combinatio…\n\nOpen on DailyMed\nemtricitabine, rilpivirine and tenofovir disoproxil fumarate\n\n1 INDICATIONS AND USAGE Emtricitabine, rilpivirine and tenofovir disoproxil fumarate tablets are indicat…\n\nOpen on DailyMed\nShow 8 more\nLipitor (atorvastatin) 80 mg once daily = 80 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 80 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 80 mg once daily = 80 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more\nXanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nalprazolam 1 mg [xanax]\n\nWhat the labels say about “Xanax (alprazolam) 0.5 mg three times daily = 1.5 mg/day”\n\nnefazodone hydrochloride\n\n…relatively persistent depressed or dysphoric mood that usually interferes with daily functioning (nearly every day for at least 2 weeks). It must include eithe…\n\nOpen on DailyMed\nalprazolam\n\n1 INDICATIONS AND USAGE Alprazolam tablets are indicated for the: acute treatment of generalized anxiety…\n\nOpen on DailyMed\nfluoxetine hcl\n\n…The efficacy of fluoxetine tablets in MDD was established in one 5-week trial, three 6-week trials, and one maintenance study in adults. The efficacy of fluoxe…\n\nOpen on DailyMed\nclarithromycin\n\n…ryngitis/Tonsillitis ( 1.4 ) Uncomplicated Skin and Skin Structure Infections ( 1.5 ) Acute Otitis Media in Pediatric Patients ( 1.6 ) Treatment and Prophylaxis…\n\nOpen on DailyMed\nShow 8 more\nFlonase (fluticasone propionate nasal) 50 mcg per spray 2 sprays each nostril once daily = 200 mcg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluticasone propionate metered dose nasal spray [flonase]\n\nWhat the labels say about “Flonase (fluticasone propionate nasal) 50 mcg per spray 2 sprays each nostril once daily = 200 mcg/day”\n\nfluticasone propionate\n\n1 INDICATIONS AND USAGE Fluticasone propionate nasal spray is indicated for the management of the nasal…\n\nOpen on DailyMed\nazelastine hydrochloride and fluticasone propionate\n\n1 INDICATIONS AND USAGE Azelastine hydrochloride and fluticasone propionate nasal spray is indicated for the relief of symptoms of se…\n\nOpen on DailyMed\nmometasone furoate\n\n1 INDICATIONS AND USAGE Mometasone furoate nasal spray is a corticosteroid indicated for: Prophylaxis of Nasal Symptoms of…\n\nOpen on DailyMed\nmometasone furoate monohydrate\n\n1 INDICATIONS AND USAGE Mometasone Furoate Monohydrate Nasal Spray is a corticosteroid indicated for: Prophylaxis of Nasal Symptoms of…\n\nOpen on DailyMed\nShow 8 more\nViagra (sildenafil) 50 mg as needed no more than once daily = 50 mg/day max\nNot found in the FDA labels. Did you mean:\nEdit\nsildenafil 50 mg [viagra]\n\nWhat the labels say about “Viagra (sildenafil) 50 mg as needed no more than once daily = 50 mg/day max”\n\nsildenafil\n\n1 INDICATIONS AND USAGE Adults Sildenafil for oral suspension is indicated for the treatment of pulmonary arter…\n\nOpen on DailyMed\nE.E.S 400\nerythromycin ethylsuccinate\n\n…infections caused by susceptible strains of the designated organisms in the diseases listed below: Upper respiratory tract infections of mild to moderate degree…\n\nOpen on DailyMed\nAtazanavir Sulfate\natazanavir\n\n…1 infection in adults and in pediatric patients 6 years and older weighing at least 15 kg. Limitations of Use: Atazanavir capsules are not recommended for use i…\n\nOpen on DailyMed\nsildenafil\n\n1 INDICATIONS AND USAGE Sildenafil tablets are indicated for the treatment of erectile dysfunction. Sild…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:55:44.429Z"
+}

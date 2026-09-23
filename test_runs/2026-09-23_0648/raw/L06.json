@@ -1,0 +1,223 @@
+{
+ "id": "L06",
+ "input": "OxyContin (oxycodone ER) 30 mg twice daily = 60 mg/day, Roxicodone (oxycodone IR) 10 mg every 4 hours as needed max 6 doses/day = 60 mg/day max, Klonopin (clonazepam) 1 mg twice daily = 2 mg/day, Neurontin (gabapentin) 600 mg three times daily = 1800 mg/day, Soma (carisoprodol) 350 mg three times daily = 1050 mg/day, Vistaril (hydroxyzine) 25 mg three times daily = 75 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.894,
+ "secondsToResults": 2.835,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "OxyContin (oxycodone ER) 30 mg twice daily = 60 mg/day",
+   "generic": "Not a medication name we know.",
+   "dose": null,
+   "facts": null,
+   "text": "OxyContin (oxycodone ER) 30 mg twice daily = 60 mg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “OxyContin (oxycodone ER) 30 mg twice daily = 60 mg/day”\n\nXTAMPZA ER\noxycodone\n\n1 INDICATIONS AND USAGE XTAMPZA ER is indicated for the management of severe and persistent pain that requires a…\n\nOpen on DailyMed\nHysingla ER\nhydrocodone bitartrate\n\n1 INDICATIONS AND USAGE HYSINGLA ER is indicated for the management of severe and persistent pain that requires a…\n\nOpen on DailyMed\ntapentadol hydrochloride\n\n…AND USAGE Tapentadol tablets are indicated for the management of acute pain severe enough to require an opioid analgesic and for which alternative treatments a…\n\nOpen on DailyMed\nAdzenys XR-ODT\namphetamine\n\n1. INDICATIONS AND USAGE ADZENYS XR-ODT is a central nervous system (CNS) stimulant indicated for the treatment of Attention Deficit H…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Roxicodone (oxycodone IR) 10 mg every 4 hours as needed max 6 doses/day = 60 mg/day max",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Roxicodone (oxycodone IR) 10 mg every 4 hours as needed max 6 doses/day = 60 mg/day max\nNot found in the FDA labels. Did you mean:\nEdit\noxycodone oral tablet [roxicodone]\noxycodone oral solution [roxicodone]\n\nWhat the labels say about “Roxicodone (oxycodone IR) 10 mg every 4 hours as needed max 6 doses/day = 60 mg/day max”\n\nvoriconazole\n\n…he treatment of adults and pediatric patients 2 years of age and older with: Invasive aspergillosis (1.1) Candidemia in non-neutropenics and other deep tissue C…\n\nOpen on DailyMed\nXTAMPZA ER\noxycodone\n\n…AMPZA ER is indicated for the management of severe and persistent pain that requires an opioid analgesic and that cannot be adequately treated with alternative…\n\nOpen on DailyMed\nrifabutin\n\n…icated for the prevention of disseminated Mycobacterium avium complex (MAC) disease in patients with advanced HIV infection. ADVERSE REACTIONS Adverse Reactions…\n\nOpen on DailyMed\noxycodone hydrochloride\n\n1 INDICATIONS AND USAGE Oxycodone Hydrochloride Capsules are an opioid agonist indicated in adults for t…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Klonopin (clonazepam) 1 mg twice daily = 2 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Klonopin (clonazepam) 1 mg twice daily = 2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclonazepam 2 mg [klonopin]\n\nWhat the labels say about “Klonopin (clonazepam) 1 mg twice daily = 2 mg/day”\n\nclonazepam\n\nINDICATIONS AND USAGE Seizure Disorders: Clonazepam tablets are useful alone or as an adjunct in the treatment of the Len…\n\nOpen on DailyMed\nvigabatrin\n\n1 INDICATIONS AND USAGE Vigabatrin tablets are indicated for the treatment of: •…\n\nOpen on DailyMed\nTybost\ncobicistat\n\n1 INDICATIONS AND USAGE TYBOST is a CYP3A inhibitor indicated to increase system…\n\nOpen on DailyMed\nStribild\nelvitegravir, cobicistat, emtricitabine, and tenofovir disoproxil fumarate\n\n1 INDICATIONS AND USAGE STRIBILD ® is indicated as a complete regimen for the tr…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Neurontin (gabapentin) 600 mg three times daily = 1800 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Neurontin (gabapentin) 600 mg three times daily = 1800 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ngabapentin 100 mg [neurontin]\ngabapentin 300 mg [neurontin]\ngabapentin 400 mg [neurontin]\ngabapentin 600 mg [neurontin]\ngabapentin 800 mg [neurontin]\n\nWhat the labels say about “Neurontin (gabapentin) 600 mg three times daily = 1800 mg/day”\n\ngabapentin\n\n1 INDICATIONS AND USAGE Gabapentin Capsules are indicated for: Management of postherpetic neuralgia in a…\n\nOpen on DailyMed\nHorizant\ngabapentin enacarbil\n\n…. HORIZANT is not recommended for patients who are required to sleep during the daytime and remain awake at night. 1.2 Management of Postherpetic Neuralgia HORI…\n\nOpen on DailyMed\nZTALMY\nganaxolone\n\n…es the terms lethargy and hypersomnia adverse reactions that occurred with a 21-day titration; somnolence and sedation are expected to be reduced with the recom…\n\nOpen on DailyMed\nProtopam Chloride\npralidoxime chloride\n\n…and/or SGPT enzyme levels were observed in 1 of 6 normal volunteers given 1200 mg of pralidoxime chloride intramuscularly, and in 4 of 6 volunteers given 1800…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Soma (carisoprodol) 350 mg three times daily = 1050 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Soma (carisoprodol) 350 mg three times daily = 1050 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncarisoprodol 250 mg [soma]\ncarisoprodol 350 mg [soma]\n\nWhat the labels say about “Soma (carisoprodol) 350 mg three times daily = 1050 mg/day”\n\ncarisoprodol\n\n1 INDICATIONS AND USAGE Carisoprodol is indicated for the relief of discomfort associated with acute, pa…\n\nOpen on DailyMed\nmeprobamate\n\n…f the symptoms of anxiety.Anxiety or tension associated with the stress of everyday life usually do not require treatment with an anxiolytic. The effectiveness…\n\nOpen on DailyMed\ndonepezil hydrochloride\n\n…tates included approximately 900 patients. In regards to the highest dose of 10 mg/day, this population includes 650 patients treated for 3 months, 475 patients…\n\nOpen on DailyMed\nVizimpro\ndacomitinib\n\n…858R substitution mutations who received VIZIMPRO at the recommended dose of 45 mg once daily in 4 randomized, active-controlled trials [ARCHER 1050 (N=227), St…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Vistaril (hydroxyzine) 25 mg three times daily = 75 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Vistaril (hydroxyzine) 25 mg three times daily = 75 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nhydroxyzine injectable solution [vistaril]\nhydroxyzine oral capsule [vistaril]\nhydroxyzine oral suspension [vistaril]\n\nWhat the labels say about “Vistaril (hydroxyzine) 25 mg three times daily = 75 mg/day”\n\nhydroxyzine pamoate\n\n…tus. As a sedative when used as premedication and following general anesthesia, hydroxyzine may potentiate meperidine (Demerol ® ) and barbiturates, so their us…\n\nOpen on DailyMed\nhydroxyzine hydrochloride\n\n…s. As a sedative when used as a premedication and following general anesthesia, hydrOXYzine may potentiate meperidine and barbiturates , so their use in pre-ane…\n\nOpen on DailyMed\nhydroxyzine hydrochloride\n\n…s. As a sedative when used as a premedication and following general anesthesia, hydroxyzine may potentiate meperidine and barbiturates, so their use in pre-anes…\n\nOpen on DailyMed\nQUZYTTIR\ncetirizine hydrochloride\n\n…rt SUSPECTED ADVERSE REACTIONS, call Esteve Pharmaceuticals, S.A. at 1-888-306-6259 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experi…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b7d23ac2-e776-9f62-3290-c64c2d6eb353",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d4c5938a-68f0-46d2-9bad-8988d5724b09",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1179269-00b5-48ea-972d-31e614e99b7e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c620b2d7-3c2b-4252-8cfc-2f322d624435",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0a5ded2-8ee2-49ca-a86c-2b28ae40f60c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=25a60937-cbbe-4a50-994f-2ce15203f589",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=338b5391-e5f7-40a2-8b15-57f47cbc4813",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=93ba3894-fd97-4432-9f2d-e7050371e91f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3784c35c-e87f-410c-900b-8fd6313c6010",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=74ae2a93-b267-444c-8f0f-a2a6522260ee",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4a975ebe-ae0a-446a-8a3d-2ca325e28f93",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c486fc7-c8c4-4c6c-b30c-366dabaeaadd",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d91612c4-b03a-4be4-a1ee-6a13e3b83d4e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2741d8fd-51c2-46be-880b-99f2b20a6137",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b83f7fd1-11e3-4e94-ae53-4637e892b372",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=17d814e2-b277-4dce-8615-e7fd7cab773f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de96349a-5fee-4de9-921c-e453d44b3203",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab27d2f-e385-4e9c-b324-fa69c10b855a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c9101ee-0746-4833-83cf-d0d09e52c0a9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58d99cf6-2319-410b-b8be-de9c304541b6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=573770f6-b76e-f6ba-e063-6294a90aa54d",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nOxyContin (oxycodone ER) 30 mg twice daily = 60 mg/day: not a medication name, so it was looked up in the labels instead.\nRoxicodone (oxycodone IR) 10 mg every 4 hours as needed max 6 doses/day = 60 mg/day max: not found. Edit it in the list, or remove it.\nKlonopin (clonazepam) 1 mg twice daily = 2 mg/day: not found. Edit it in the list, or remove it.\nNeurontin (gabapentin) 600 mg three times daily = 1800 mg/day: not found. Edit it in the list, or remove it.\nSoma (carisoprodol) 350 mg three times daily = 1050 mg/day: not found. Edit it in the list, or remove it.\nVistaril (hydroxyzine) 25 mg three times daily = 75 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nOxyContin (oxycodone ER) 30 mg twice daily = 60 mg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “OxyContin (oxycodone ER) 30 mg twice daily = 60 mg/day”\n\nXTAMPZA ER\noxycodone\n\n1 INDICATIONS AND USAGE XTAMPZA ER is indicated for the management of severe and persistent pain that requires a…\n\nOpen on DailyMed\nHysingla ER\nhydrocodone bitartrate\n\n1 INDICATIONS AND USAGE HYSINGLA ER is indicated for the management of severe and persistent pain that requires a…\n\nOpen on DailyMed\ntapentadol hydrochloride\n\n…AND USAGE Tapentadol tablets are indicated for the management of acute pain severe enough to require an opioid analgesic and for which alternative treatments a…\n\nOpen on DailyMed\nAdzenys XR-ODT\namphetamine\n\n1. INDICATIONS AND USAGE ADZENYS XR-ODT is a central nervous system (CNS) stimulant indicated for the treatment of Attention Deficit H…\n\nOpen on DailyMed\nShow 8 more\nRoxicodone (oxycodone IR) 10 mg every 4 hours as needed max 6 doses/day = 60 mg/day max\nNot found in the FDA labels. Did you mean:\nEdit\noxycodone oral tablet [roxicodone]\noxycodone oral solution [roxicodone]\n\nWhat the labels say about “Roxicodone (oxycodone IR) 10 mg every 4 hours as needed max 6 doses/day = 60 mg/day max”\n\nvoriconazole\n\n…he treatment of adults and pediatric patients 2 years of age and older with: Invasive aspergillosis (1.1) Candidemia in non-neutropenics and other deep tissue C…\n\nOpen on DailyMed\nXTAMPZA ER\noxycodone\n\n…AMPZA ER is indicated for the management of severe and persistent pain that requires an opioid analgesic and that cannot be adequately treated with alternative…\n\nOpen on DailyMed\nrifabutin\n\n…icated for the prevention of disseminated Mycobacterium avium complex (MAC) disease in patients with advanced HIV infection. ADVERSE REACTIONS Adverse Reactions…\n\nOpen on DailyMed\noxycodone hydrochloride\n\n1 INDICATIONS AND USAGE Oxycodone Hydrochloride Capsules are an opioid agonist indicated in adults for t…\n\nOpen on DailyMed\nShow 8 more\nKlonopin (clonazepam) 1 mg twice daily = 2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclonazepam 2 mg [klonopin]\n\nWhat the labels say about “Klonopin (clonazepam) 1 mg twice daily = 2 mg/day”\n\nclonazepam\n\nINDICATIONS AND USAGE Seizure Disorders: Clonazepam tablets are useful alone or as an adjunct in the treatment of the Len…\n\nOpen on DailyMed\nvigabatrin\n\n1 INDICATIONS AND USAGE Vigabatrin tablets are indicated for the treatment of: •…\n\nOpen on DailyMed\nTybost\ncobicistat\n\n1 INDICATIONS AND USAGE TYBOST is a CYP3A inhibitor indicated to increase system…\n\nOpen on DailyMed\nStribild\nelvitegravir, cobicistat, emtricitabine, and tenofovir disoproxil fumarate\n\n1 INDICATIONS AND USAGE STRIBILD ® is indicated as a complete regimen for the tr…\n\nOpen on DailyMed\nShow 8 more\nNeurontin (gabapentin) 600 mg three times daily = 1800 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ngabapentin 100 mg [neurontin]\ngabapentin 300 mg [neurontin]\ngabapentin 400 mg [neurontin]\ngabapentin 600 mg [neurontin]\ngabapentin 800 mg [neurontin]\n\nWhat the labels say about “Neurontin (gabapentin) 600 mg three times daily = 1800 mg/day”\n\ngabapentin\n\n1 INDICATIONS AND USAGE Gabapentin Capsules are indicated for: Management of postherpetic neuralgia in a…\n\nOpen on DailyMed\nHorizant\ngabapentin enacarbil\n\n…. HORIZANT is not recommended for patients who are required to sleep during the daytime and remain awake at night. 1.2 Management of Postherpetic Neuralgia HORI…\n\nOpen on DailyMed\nZTALMY\nganaxolone\n\n…es the terms lethargy and hypersomnia adverse reactions that occurred with a 21-day titration; somnolence and sedation are expected to be reduced with the recom…\n\nOpen on DailyMed\nProtopam Chloride\npralidoxime chloride\n\n…and/or SGPT enzyme levels were observed in 1 of 6 normal volunteers given 1200 mg of pralidoxime chloride intramuscularly, and in 4 of 6 volunteers given 1800…\n\nOpen on DailyMed\nShow 8 more\nSoma (carisoprodol) 350 mg three times daily = 1050 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncarisoprodol 250 mg [soma]\ncarisoprodol 350 mg [soma]\n\nWhat the labels say about “Soma (carisoprodol) 350 mg three times daily = 1050 mg/day”\n\ncarisoprodol\n\n1 INDICATIONS AND USAGE Carisoprodol is indicated for the relief of discomfort associated with acute, pa…\n\nOpen on DailyMed\nmeprobamate\n\n…f the symptoms of anxiety.Anxiety or tension associated with the stress of everyday life usually do not require treatment with an anxiolytic. The effectiveness…\n\nOpen on DailyMed\ndonepezil hydrochloride\n\n…tates included approximately 900 patients. In regards to the highest dose of 10 mg/day, this population includes 650 patients treated for 3 months, 475 patients…\n\nOpen on DailyMed\nVizimpro\ndacomitinib\n\n…858R substitution mutations who received VIZIMPRO at the recommended dose of 45 mg once daily in 4 randomized, active-controlled trials [ARCHER 1050 (N=227), St…\n\nOpen on DailyMed\nShow 8 more\nVistaril (hydroxyzine) 25 mg three times daily = 75 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nhydroxyzine injectable solution [vistaril]\nhydroxyzine oral capsule [vistaril]\nhydroxyzine oral suspension [vistaril]\n\nWhat the labels say about “Vistaril (hydroxyzine) 25 mg three times daily = 75 mg/day”\n\nhydroxyzine pamoate\n\n…tus. As a sedative when used as premedication and following general anesthesia, hydroxyzine may potentiate meperidine (Demerol ® ) and barbiturates, so their us…\n\nOpen on DailyMed\nhydroxyzine hydrochloride\n\n…s. As a sedative when used as a premedication and following general anesthesia, hydrOXYzine may potentiate meperidine and barbiturates , so their use in pre-ane…\n\nOpen on DailyMed\nhydroxyzine hydrochloride\n\n…s. As a sedative when used as a premedication and following general anesthesia, hydroxyzine may potentiate meperidine and barbiturates, so their use in pre-anes…\n\nOpen on DailyMed\nQUZYTTIR\ncetirizine hydrochloride\n\n…rt SUSPECTED ADVERSE REACTIONS, call Esteve Pharmaceuticals, S.A. at 1-888-306-6259 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experi…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:52:48.513Z"
+}

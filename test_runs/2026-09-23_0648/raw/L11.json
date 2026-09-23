@@ -1,0 +1,196 @@
+{
+ "id": "L11",
+ "input": "Synthroid (levothyroxine) 75 mcg once daily = 75 mcg/day, Lipitor (atorvastatin) 20 mg once daily = 20 mg/day, Zestril (lisinopril) 10 mg once daily = 10 mg/day, Lexapro (escitalopram) 10 mg once daily = 10 mg/day, Singulair (montelukast) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.902,
+ "secondsToResults": 2.832,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Synthroid (levothyroxine) 75 mcg once daily = 75 mcg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Synthroid (levothyroxine) 75 mcg once daily = 75 mcg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlevothyroxine sodium 75 ug oral tablet [synthroid]\n\nWhat the labels say about “Synthroid (levothyroxine) 75 mcg once daily = 75 mcg/day”\n\nliothyronine sodium\n\n…obesity or for weight loss. • In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. • Larger doses…\n\nOpen on DailyMed\nLevothyroxine Sodium\nlevothyroxine sodium anhydrous\n\n1 INDICATIONS AND USAGE Levothyroxine Sodium for Injection is indicated for the treatment of myxedema co…\n\nOpen on DailyMed\nlevothyroxine sodium\n\n1 INDICATIONS AND USAGE Hypothyroidism Levothyroxine sodium tablets are indicated in adult and pediatric patients, incl…\n\nOpen on DailyMed\nNP Thyroid 15\nlevothyroxine, liothyronine\n\n…for the treatment of obesity. In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. Larger doses m…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lipitor (atorvastatin) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lipitor (atorvastatin) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 20 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 20 mg once daily = 20 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zestril (lisinopril) 10 mg once daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zestril (lisinopril) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlisinopril 10 mg [zestril]\n\nWhat the labels say about “Zestril (lisinopril) 10 mg once daily = 10 mg/day”\n\nlisinopril\n\n1 INDICATIONS AND USAGE Lisinopril tablets USP is an angiotensin converting enzyme (ACE) inhibitor indic…\n\nOpen on DailyMed\nLisinopril and Hydrochlorothiazide\nlisinopril and hydrochlorothiazide tablets\n\nINDICATIONS AND USAGE Lisinopril and hydrochlorothiazide tablets are indicated for the treatment of hy…\n\nOpen on DailyMed\nlosartan potassium\n\n…ated serum creatinine and proteinuria (urinary albumin to creatinine ratio ≥300 mg/g) in patients with type 2 diabetes and a history of hypertension. In this po…\n\nOpen on DailyMed\nlosartan potassium and hydrochlorothiazide\n\n…ACTIONS, contact Solco Healthcare US, LLC at 1-866-257-2597 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lexapro (escitalopram) 10 mg once daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lexapro (escitalopram) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nescitalopram 10 mg [lexapro]\n\nWhat the labels say about “Lexapro (escitalopram) 10 mg once daily = 10 mg/day”\n\nescitalopram\n\n1 INDICATIONS AND USAGE Escitalopram tablets are indicated for the treatment of: major depressive disord…\n\nOpen on DailyMed\npimozide\n\n…ld be reserved for use in Tourette’s Disorder patients whose development and/or daily life function is severely compromised by the presence of motor and phonic…\n\nOpen on DailyMed\nCitalopram\ncitalopram hydrobromide\n\n…ngs and Precautions (5.9) ] Sexual Dysfunction [see Warnings and Precautions (5.10) ] Most common adverse reaction (incidence ≥ 5% and twice placebo) is ejacula…\n\nOpen on DailyMed\nWarfarin Sodium\nwarfarin\n\n…effect on an established thrombus, nor does it reverse ischemic tissue damage. Once a thrombus has occurred, however, the goals of anticoagulant treatment are…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Singulair (montelukast) 10 mg once daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Singulair (montelukast) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmontelukast 10 mg [singulair]\n\nWhat the labels say about “Singulair (montelukast) 10 mg once daily = 10 mg/day”\n\nmontelukast\n\n1 INDICATIONS & USAGE Montelukast sodium tablets are a leukotriene receptor antagonist indicated for:…\n\nOpen on DailyMed\nmontelukast sodium\n\n1 INDICATIONS AND USAGE Montelukast sodium chewable tablets are a leukotriene receptor antagonist indica…\n\nOpen on DailyMed\nAPHEXDA\nmotixafortide\n\n…ED ADVERSE REACTIONS, contact Gamida Cell at (844) 477-7478 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\ngemfibrozil\n\n…em. Patients who present such risk typically have serum triglycerides over 2000 mg/dL and have elevations of VLDL-cholesterol as well as fasting chylomicrons (T…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=115a84c2-0126-4dd7-816e-1873875f1e49",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ae9954a5-e196-449c-abea-ebe4afbee517",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a3ff93ad-86ed-4324-ae86-7e7ed3a49db8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9adb9e4-c495-9530-e5e3-7e3b01d53e4c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57f9b462-f08e-483c-9b64-b7e4c8d46927",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c7b1b11-90a3-bc1c-0e45-9e2a14ef0b03",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bea11a3-eb07-46b2-9b91-f8a48a2f3b7e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a397502e-abe7-49cf-97c7-d53a616947eb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=446e6998-01f6-4de0-be57-7fecf5448e95",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70b079e2-a1f7-4a93-8685-d60a4d7c1280",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0109f365-bebd-4810-a56f-4451e10245db",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a5b5e3a-6556-a542-e063-6294a90a6d3f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=583a9499-97f0-2ebf-e063-6394a90a35af",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7ff11e37-9ea5-40b6-96f7-4caf27cab756",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e704b2db-f119-40ba-9346-9229e3281c9e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=42e40524-57e9-4fee-993f-be0fda14936b",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 5 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 5 medications checked\n\nNot checked\n\nSynthroid (levothyroxine) 75 mcg once daily = 75 mcg/day: not found. Edit it in the list, or remove it.\nLipitor (atorvastatin) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nZestril (lisinopril) 10 mg once daily = 10 mg/day: not found. Edit it in the list, or remove it.\nLexapro (escitalopram) 10 mg once daily = 10 mg/day: not found. Edit it in the list, or remove it.\nSingulair (montelukast) 10 mg once daily = 10 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n5 medications\nClear all\nSynthroid (levothyroxine) 75 mcg once daily = 75 mcg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlevothyroxine sodium 75 ug oral tablet [synthroid]\n\nWhat the labels say about “Synthroid (levothyroxine) 75 mcg once daily = 75 mcg/day”\n\nliothyronine sodium\n\n…obesity or for weight loss. • In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. • Larger doses…\n\nOpen on DailyMed\nLevothyroxine Sodium\nlevothyroxine sodium anhydrous\n\n1 INDICATIONS AND USAGE Levothyroxine Sodium for Injection is indicated for the treatment of myxedema co…\n\nOpen on DailyMed\nlevothyroxine sodium\n\n1 INDICATIONS AND USAGE Hypothyroidism Levothyroxine sodium tablets are indicated in adult and pediatric patients, incl…\n\nOpen on DailyMed\nNP Thyroid 15\nlevothyroxine, liothyronine\n\n…for the treatment of obesity. In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. Larger doses m…\n\nOpen on DailyMed\nShow 8 more\nLipitor (atorvastatin) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 20 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 20 mg once daily = 20 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more\nZestril (lisinopril) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlisinopril 10 mg [zestril]\n\nWhat the labels say about “Zestril (lisinopril) 10 mg once daily = 10 mg/day”\n\nlisinopril\n\n1 INDICATIONS AND USAGE Lisinopril tablets USP is an angiotensin converting enzyme (ACE) inhibitor indic…\n\nOpen on DailyMed\nLisinopril and Hydrochlorothiazide\nlisinopril and hydrochlorothiazide tablets\n\nINDICATIONS AND USAGE Lisinopril and hydrochlorothiazide tablets are indicated for the treatment of hy…\n\nOpen on DailyMed\nlosartan potassium\n\n…ated serum creatinine and proteinuria (urinary albumin to creatinine ratio ≥300 mg/g) in patients with type 2 diabetes and a history of hypertension. In this po…\n\nOpen on DailyMed\nlosartan potassium and hydrochlorothiazide\n\n…ACTIONS, contact Solco Healthcare US, LLC at 1-866-257-2597 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\nShow 8 more\nLexapro (escitalopram) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nescitalopram 10 mg [lexapro]\n\nWhat the labels say about “Lexapro (escitalopram) 10 mg once daily = 10 mg/day”\n\nescitalopram\n\n1 INDICATIONS AND USAGE Escitalopram tablets are indicated for the treatment of: major depressive disord…\n\nOpen on DailyMed\npimozide\n\n…ld be reserved for use in Tourette’s Disorder patients whose development and/or daily life function is severely compromised by the presence of motor and phonic…\n\nOpen on DailyMed\nCitalopram\ncitalopram hydrobromide\n\n…ngs and Precautions (5.9) ] Sexual Dysfunction [see Warnings and Precautions (5.10) ] Most common adverse reaction (incidence ≥ 5% and twice placebo) is ejacula…\n\nOpen on DailyMed\nWarfarin Sodium\nwarfarin\n\n…effect on an established thrombus, nor does it reverse ischemic tissue damage. Once a thrombus has occurred, however, the goals of anticoagulant treatment are…\n\nOpen on DailyMed\nShow 8 more\nSingulair (montelukast) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmontelukast 10 mg [singulair]\n\nWhat the labels say about “Singulair (montelukast) 10 mg once daily = 10 mg/day”\n\nmontelukast\n\n1 INDICATIONS & USAGE Montelukast sodium tablets are a leukotriene receptor antagonist indicated for:…\n\nOpen on DailyMed\nmontelukast sodium\n\n1 INDICATIONS AND USAGE Montelukast sodium chewable tablets are a leukotriene receptor antagonist indica…\n\nOpen on DailyMed\nAPHEXDA\nmotixafortide\n\n…ED ADVERSE REACTIONS, contact Gamida Cell at (844) 477-7478 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\ngemfibrozil\n\n…em. Patients who present such risk typically have serum triglycerides over 2000 mg/dL and have elevations of VLDL-cholesterol as well as fasting chylomicrons (T…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:53:29.746Z"
+}

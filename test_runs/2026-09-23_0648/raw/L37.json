@@ -1,0 +1,223 @@
+{
+ "id": "L37",
+ "input": "Pradaxa (dabigatran etexilate) 150 mg twice daily = 300 mg/day, Multaq (dronedarone) 400 mg twice daily with meals = 800 mg/day, Calan SR (verapamil ER) 240 mg once daily = 240 mg/day, Lanoxin (digoxin) 0.125 mg once daily = 0.125 mg/day, Zocor (simvastatin) 20 mg once daily at bedtime = 20 mg/day, Lasix (furosemide) 20 mg once daily = 20 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.932,
+ "secondsToResults": 2.833,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Pradaxa (dabigatran etexilate) 150 mg twice daily = 300 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Pradaxa (dabigatran etexilate) 150 mg twice daily = 300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndabigatran etexilate 20 mg [pradaxa]\ndabigatran etexilate 30 mg [pradaxa]\ndabigatran etexilate 40 mg [pradaxa]\ndabigatran etexilate 50 mg [pradaxa]\ndabigatran etexilate 150 mg [pradaxa]\ndabigatran etexilate 75 mg [pradaxa]\ndabigatran etexilate 110 mg [pradaxa]\n\nWhat the labels say about “Pradaxa (dabigatran etexilate) 150 mg twice daily = 300 mg/day”\n\ndabigatran etexilate\n\n1 INDICATIONS AND USAGE Dabigatran Etexilate Capsules is a direct thrombin inhibitor indicated: To reduc…\n\nOpen on DailyMed\nPraxbind\nidarucizumab\n\n1 INDICATIONS AND USAGE PRAXBIND is indicated in patients treated with Pradaxa when reversal of the anticoagulant effects of dabigatran is needed: For…\n\nOpen on DailyMed\ndarunavir\n\n…y data from the Phase 3 trial TMC114-C211 comparing darunavir/ritonavir 800/100 mg once daily versus lopinavir/ritonavir 800/200 mg per day in 689 antiretrovira…\n\nOpen on DailyMed\nMavyret\nglecaprevir and pibrentasvir\n\n…d from nine registrational Phase 2 and 3 trials which evaluated approximately 2,300 adults infected with genotype 1, 2, 3, 4, 5, or 6 HCV who received MAVYRET f…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Multaq (dronedarone) 400 mg twice daily with meals = 800 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Multaq (dronedarone) 400 mg twice daily with meals = 800 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndronedarone 400 mg [multaq]\n\nWhat the labels say about “Multaq (dronedarone) 400 mg twice daily with meals = 800 mg/day”\n\nMultaq\ndronedarone\n\n1 INDICATIONS AND USAGE MULTAQ ® is indicated to reduce the risk of hospitalization for atrial fibrillat…\n\nOpen on DailyMed\nritonavir\n\n1 INDICATIONS AND USAGE Ritonavir tablets are indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection. Ritonavir…\n\nOpen on DailyMed\nlovastatin\n\nIndications and Usage Therapy with lovastatin should be a component of multiple risk factor intervention in th…\n\nOpen on DailyMed\ndigoxin\n\n…re in adults. ( 1.1 ) Increasing myocardial contractility in pediatric patients with heart failure. ( 1.2 ) Control of resting ventricular rate in patients with…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Calan SR (verapamil ER) 240 mg once daily = 240 mg/day",
+   "generic": "Not a medication name we know.",
+   "dose": null,
+   "facts": null,
+   "text": "Calan SR (verapamil ER) 240 mg once daily = 240 mg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Calan SR (verapamil ER) 240 mg once daily = 240 mg/day”\n\ntrandolapril and verapamil hydrochloride\n\nINDICATIONS AND USAGE Trandolapril and verapamil hydrochloride extended-release tablets are indicated for the treatment…\n\nOpen on DailyMed\ndiltiazem hydrochloride\n\n…m hydrochloride extended-release capsules are indicated for the treatment of hypertension. It may be used alone or in combination with other antihypertensive me…\n\nOpen on DailyMed\ndiltiazem hydrochloride\n\n…m Hydrochloride Extended-Release Capsules are indicated for the treatment of hypertension. It may be used alone or in combination with other antihypertensive me…\n\nOpen on DailyMed\nPREVYMIS\nletermovir\n\n1 INDICATIONS AND USAGE PREVYMIS is a CMV DNA terminase complex inhibitor indicated for: Prophylaxis of cytomegalovirus (CMV) i…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lanoxin (digoxin) 0.125 mg once daily = 0.125 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lanoxin (digoxin) 0.125 mg once daily = 0.125 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndigoxin 0.125 mg [lanoxin]\n\nWhat the labels say about “Lanoxin (digoxin) 0.125 mg once daily = 0.125 mg/day”\n\npramipexole dihydrochloride\n\n…r detail in other sections of the labeling: Falling Asleep During Activities of Daily Living and Somnolence [ see Warnings and Precautions (5.1) ] Symptomatic O…\n\nOpen on DailyMed\ntriazolam\n\n…azolam is indicated for the short-term treatment of insomnia (generally 7 to 10 days) in adults. Triazolam is a benzodiazepine indicated for the short-term trea…\n\nOpen on DailyMed\nProvocholine\nmethacholine chloride\n\n…constitution and/ or silution prior to use. Provocholine inhalation solution 16 mg/mL in a single-dose vial requires dilution prior to use [see Dosage and Admin…\n\nOpen on DailyMed\ntiagabine hydrochloride\n\n…ss/irritability, tremor, abdominal pain, and thinking abnormal/difficulty with concentration or attention. Approximately 21% of the 2531 patients who received t…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zocor (simvastatin) 20 mg once daily at bedtime = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zocor (simvastatin) 20 mg once daily at bedtime = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsimvastatin 20 mg [zocor]\n\nWhat the labels say about “Zocor (simvastatin) 20 mg once daily at bedtime = 20 mg/day”\n\nniacin\n\n1 INDICATIONS AND USAGE Therapy with lipid-altering agents should be only one component…\n\nOpen on DailyMed\nefavirenz\n\n1 INDICATIONS & USAGE Efavirenz in combination with other antiretroviral agents is indi…\n\nOpen on DailyMed\nefavirenz, lamivudine and tenofovir disoproxil fumarate\n\n1 INDICATIONS AND USAGE Efavirenz, lamivudine and tenofovir disoproxil fumarate tablets…\n\nOpen on DailyMed\nefavirenz, emtricitabine and tenofovir disoproxil fumarate\n\n1 INDICATIONS AND USAGE Efavirenz, emtricitabine and tenofovir disoproxil fumarate tabl…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lasix (furosemide) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lasix (furosemide) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfurosemide 20 mg [lasix]\n\nWhat the labels say about “Lasix (furosemide) 20 mg once daily = 20 mg/day”\n\nfurosemide\n\nINDICATIONS AND USAGE Edema Furosemide tablets are indicated in adults and pediatric patients for the treatm…\n\nOpen on DailyMed\nmetolazone\n\n…hest pain/discomfort, orthostatic hypotension, excessive volume depletion, hemoconcentration, venous thrombosis, palpitations. Central and Peripheral Nervous Sy…\n\nOpen on DailyMed\nTekturna\naliskiren hemifumarate\n\n…stinal (GI) adverse reactions. Diarrhea was reported by 2.3% of patients at 300 mg, compared to 1.2% in placebo patients. In women and the elderly (age 65 years…\n\nOpen on DailyMed\ntamsulosin hydrochloride\n\n…se events (≥2% of patients and at a higher incidence than placebo) with the 0.4 mg dose or 0.8 mg dose were headache, dizziness, rhinitis, infection, abnormal e…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a8ec82a-c367-40dc-9302-e1896fcb05ea",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c7400f8a-dcf4-a6df-6d07-983081b1bf34",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=56daf67e-7501-4cd5-be22-566d7997d42e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7bf99777-0401-9095-8645-16c6e907fcc0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bd4006a-8bad-4909-ac6d-b6d84390155c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a32cb2e3-d4e5-4bbf-9d88-20b2b249e779",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9438d8a0-ca5b-4676-aab9-d0241ccff6c9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=39bad727-af4c-4d20-933b-7f287e88099a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a0f67ad-17d8-a3f4-e063-6394a90afb32",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=090aa3a9-910e-4f96-b748-783109aa96e6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b49df80-be4f-47e0-a0b7-123f3e69395b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=29b639e3-25a5-4c2f-b4ea-a119db79fe0c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5add318e-11b9-42f8-b052-0d8cebb32fcf",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e8983096-65e6-41f2-8b6f-bbf0a7227307",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=953ef3cc-e3cb-480f-b9ea-256520fd62b8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8eff9205-84ac-e69d-e053-2995a90aad4b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13ca3456-e5bf-4bb1-af95-b1378658a358",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=98342153-b9de-4318-aac4-9f8d19590cd7",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ec61f069-632e-4628-b9b1-701d381a1a06",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dba00759-87b4-4ecf-998e-ba03ed3d2f1a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efa8795e-2c89-4519-b49f-13146fb9ded1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3dd61fa5-1620-4ebf-bbdb-ede29b92fce2",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8302a6e-b8da-4931-a279-b49e37943816",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nPradaxa (dabigatran etexilate) 150 mg twice daily = 300 mg/day: not found. Edit it in the list, or remove it.\nMultaq (dronedarone) 400 mg twice daily with meals = 800 mg/day: not found. Edit it in the list, or remove it.\nCalan SR (verapamil ER) 240 mg once daily = 240 mg/day: not a medication name, so it was looked up in the labels instead.\nLanoxin (digoxin) 0.125 mg once daily = 0.125 mg/day: not found. Edit it in the list, or remove it.\nZocor (simvastatin) 20 mg once daily at bedtime = 20 mg/day: not found. Edit it in the list, or remove it.\nLasix (furosemide) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nPradaxa (dabigatran etexilate) 150 mg twice daily = 300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndabigatran etexilate 20 mg [pradaxa]\ndabigatran etexilate 30 mg [pradaxa]\ndabigatran etexilate 40 mg [pradaxa]\ndabigatran etexilate 50 mg [pradaxa]\ndabigatran etexilate 150 mg [pradaxa]\ndabigatran etexilate 75 mg [pradaxa]\ndabigatran etexilate 110 mg [pradaxa]\n\nWhat the labels say about “Pradaxa (dabigatran etexilate) 150 mg twice daily = 300 mg/day”\n\ndabigatran etexilate\n\n1 INDICATIONS AND USAGE Dabigatran Etexilate Capsules is a direct thrombin inhibitor indicated: To reduc…\n\nOpen on DailyMed\nPraxbind\nidarucizumab\n\n1 INDICATIONS AND USAGE PRAXBIND is indicated in patients treated with Pradaxa when reversal of the anticoagulant effects of dabigatran is needed: For…\n\nOpen on DailyMed\ndarunavir\n\n…y data from the Phase 3 trial TMC114-C211 comparing darunavir/ritonavir 800/100 mg once daily versus lopinavir/ritonavir 800/200 mg per day in 689 antiretrovira…\n\nOpen on DailyMed\nMavyret\nglecaprevir and pibrentasvir\n\n…d from nine registrational Phase 2 and 3 trials which evaluated approximately 2,300 adults infected with genotype 1, 2, 3, 4, 5, or 6 HCV who received MAVYRET f…\n\nOpen on DailyMed\nShow 8 more\nMultaq (dronedarone) 400 mg twice daily with meals = 800 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndronedarone 400 mg [multaq]\n\nWhat the labels say about “Multaq (dronedarone) 400 mg twice daily with meals = 800 mg/day”\n\nMultaq\ndronedarone\n\n1 INDICATIONS AND USAGE MULTAQ ® is indicated to reduce the risk of hospitalization for atrial fibrillat…\n\nOpen on DailyMed\nritonavir\n\n1 INDICATIONS AND USAGE Ritonavir tablets are indicated in combination with other antiretroviral agents for the treatment of HIV-1 infection. Ritonavir…\n\nOpen on DailyMed\nlovastatin\n\nIndications and Usage Therapy with lovastatin should be a component of multiple risk factor intervention in th…\n\nOpen on DailyMed\ndigoxin\n\n…re in adults. ( 1.1 ) Increasing myocardial contractility in pediatric patients with heart failure. ( 1.2 ) Control of resting ventricular rate in patients with…\n\nOpen on DailyMed\nShow 8 more\nCalan SR (verapamil ER) 240 mg once daily = 240 mg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Calan SR (verapamil ER) 240 mg once daily = 240 mg/day”\n\ntrandolapril and verapamil hydrochloride\n\nINDICATIONS AND USAGE Trandolapril and verapamil hydrochloride extended-release tablets are indicated for the treatment…\n\nOpen on DailyMed\ndiltiazem hydrochloride\n\n…m hydrochloride extended-release capsules are indicated for the treatment of hypertension. It may be used alone or in combination with other antihypertensive me…\n\nOpen on DailyMed\ndiltiazem hydrochloride\n\n…m Hydrochloride Extended-Release Capsules are indicated for the treatment of hypertension. It may be used alone or in combination with other antihypertensive me…\n\nOpen on DailyMed\nPREVYMIS\nletermovir\n\n1 INDICATIONS AND USAGE PREVYMIS is a CMV DNA terminase complex inhibitor indicated for: Prophylaxis of cytomegalovirus (CMV) i…\n\nOpen on DailyMed\nShow 8 more\nLanoxin (digoxin) 0.125 mg once daily = 0.125 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndigoxin 0.125 mg [lanoxin]\n\nWhat the labels say about “Lanoxin (digoxin) 0.125 mg once daily = 0.125 mg/day”\n\npramipexole dihydrochloride\n\n…r detail in other sections of the labeling: Falling Asleep During Activities of Daily Living and Somnolence [ see Warnings and Precautions (5.1) ] Symptomatic O…\n\nOpen on DailyMed\ntriazolam\n\n…azolam is indicated for the short-term treatment of insomnia (generally 7 to 10 days) in adults. Triazolam is a benzodiazepine indicated for the short-term trea…\n\nOpen on DailyMed\nProvocholine\nmethacholine chloride\n\n…constitution and/ or silution prior to use. Provocholine inhalation solution 16 mg/mL in a single-dose vial requires dilution prior to use [see Dosage and Admin…\n\nOpen on DailyMed\ntiagabine hydrochloride\n\n…ss/irritability, tremor, abdominal pain, and thinking abnormal/difficulty with concentration or attention. Approximately 21% of the 2531 patients who received t…\n\nOpen on DailyMed\nShow 8 more\nZocor (simvastatin) 20 mg once daily at bedtime = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsimvastatin 20 mg [zocor]\n\nWhat the labels say about “Zocor (simvastatin) 20 mg once daily at bedtime = 20 mg/day”\n\nniacin\n\n1 INDICATIONS AND USAGE Therapy with lipid-altering agents should be only one component…\n\nOpen on DailyMed\nefavirenz\n\n1 INDICATIONS & USAGE Efavirenz in combination with other antiretroviral agents is indi…\n\nOpen on DailyMed\nefavirenz, lamivudine and tenofovir disoproxil fumarate\n\n1 INDICATIONS AND USAGE Efavirenz, lamivudine and tenofovir disoproxil fumarate tablets…\n\nOpen on DailyMed\nefavirenz, emtricitabine and tenofovir disoproxil fumarate\n\n1 INDICATIONS AND USAGE Efavirenz, emtricitabine and tenofovir disoproxil fumarate tabl…\n\nOpen on DailyMed\nShow 8 more\nLasix (furosemide) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfurosemide 20 mg [lasix]\n\nWhat the labels say about “Lasix (furosemide) 20 mg once daily = 20 mg/day”\n\nfurosemide\n\nINDICATIONS AND USAGE Edema Furosemide tablets are indicated in adults and pediatric patients for the treatm…\n\nOpen on DailyMed\nmetolazone\n\n…hest pain/discomfort, orthostatic hypotension, excessive volume depletion, hemoconcentration, venous thrombosis, palpitations. Central and Peripheral Nervous Sy…\n\nOpen on DailyMed\nTekturna\naliskiren hemifumarate\n\n…stinal (GI) adverse reactions. Diarrhea was reported by 2.3% of patients at 300 mg, compared to 1.2% in placebo patients. In women and the elderly (age 65 years…\n\nOpen on DailyMed\ntamsulosin hydrochloride\n\n…se events (≥2% of patients and at a higher incidence than placebo) with the 0.4 mg dose or 0.8 mg dose were headache, dizziness, rhinitis, infection, abnormal e…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:56:59.280Z"
+}

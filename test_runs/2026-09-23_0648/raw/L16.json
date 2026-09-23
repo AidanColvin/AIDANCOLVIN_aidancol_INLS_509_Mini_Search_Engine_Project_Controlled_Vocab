@@ -1,0 +1,223 @@
+{
+ "id": "L16",
+ "input": "Viagra (sildenafil) 100 mg as needed no more than once daily = 100 mg/day max, Nitrostat (nitroglycerin sublingual) 0.4 mg as needed for chest pain up to 3 tablets in 15 minutes = 1.2 mg per episode, Imdur (isosorbide mononitrate ER) 60 mg once daily = 60 mg/day, Flomax (tamsulosin) 0.4 mg once daily = 0.4 mg/day, Catapres (clonidine) 0.1 mg twice daily = 0.2 mg/day, Coreg (carvedilol) 25 mg twice daily = 50 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.838,
+ "secondsToResults": 3.643,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Viagra (sildenafil) 100 mg as needed no more than once daily = 100 mg/day max",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Viagra (sildenafil) 100 mg as needed no more than once daily = 100 mg/day max\nNot found in the FDA labels. Did you mean:\nEdit\nsildenafil 100 mg [viagra]\n\nWhat the labels say about “Viagra (sildenafil) 100 mg as needed no more than once daily = 100 mg/day max”\n\nsildenafil\n\n1 INDICATIONS AND USAGE Adults Sildenafil for oral suspension is indicated for the treatment of pulmonary arter…\n\nOpen on DailyMed\nE.E.S 400\nerythromycin ethylsuccinate\n\n…infections caused by susceptible strains of the designated organisms in the diseases listed below: Upper respiratory tract infections of mild to moderate degree…\n\nOpen on DailyMed\nAtazanavir Sulfate\natazanavir\n\n…1 infection in adults and in pediatric patients 6 years and older weighing at least 15 kg. Limitations of Use: Atazanavir capsules are not recommended for use i…\n\nOpen on DailyMed\nsildenafil\n\n1 INDICATIONS AND USAGE Sildenafil tablets are indicated for the treatment of erectile dysfunction. Sild…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Nitrostat (nitroglycerin sublingual) 0.4 mg as needed for chest pain up to 3 tablets in 15 minutes = 1.2 mg per episode",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Nitrostat (nitroglycerin sublingual) 0.4 mg as needed for chest pain up to 3 tablets in 15 minutes = 1.2 mg per episode\nNot found in the FDA labels. Did you mean:\nEdit\nnitroglycerin sublingual tablet [nitrostat]\n\nWhat the labels say about “Nitrostat (nitroglycerin sublingual) 0.4 mg as needed for chest pain up to 3 tablets in 15 minutes = 1.2 mg per episode”\n\nnitroglycerin\n\n1 INDICATIONS AND USAGE Nitroglycerin sublingual tablets are indicated for the acu…\n\nOpen on DailyMed\napomorphine hydrocloride\napomorphine hydrochloride\n\n1 INDICATIONS AND USAGE Apomorphine hydrochloride injection is indicated for the a…\n\nOpen on DailyMed\ndipyridamole\n\nINDICATIONS AND USAGE Dipyridamole Injection is indicated as an alternative to e…\n\nOpen on DailyMed\nisosorbide dinitrate\n\nINDICATIONS AND USAGE Isosorbide dinitrate tablets are indicated for the prevent…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Imdur (isosorbide mononitrate ER) 60 mg once daily = 60 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Imdur (isosorbide mononitrate ER) 60 mg once daily = 60 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nisosorbide mononitrate 60 mg [imdur]\n\nWhat the labels say about “Imdur (isosorbide mononitrate ER) 60 mg once daily = 60 mg/day”\n\nisosorbide mononitrate\n\nINDICATIONS AND USAGE Isosorbide mononitrate extended-release tablets, USP are indicated for the preve…\n\nOpen on DailyMed\nBiDil\nhydralazine hydrochloride and isosorbide dinitrate\n\n1 INDICATIONS AND USAGE BiDil is a combination of isosorbide dinitrate, a nitrate vasodilator, and hydralazine hydrochloride, an a…\n\nOpen on DailyMed\nisosorbide dinitrate\n\nINDICATIONS AND USAGE Isosorbide dinitrate tablets are indicated for the prevention of angina pectoris…\n\nOpen on DailyMed\nVEPPANU\nvepdegestrant\n\n…USAGE VEPPANU is indicated for the treatment of adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative, estrogen…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Flomax (tamsulosin) 0.4 mg once daily = 0.4 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Flomax (tamsulosin) 0.4 mg once daily = 0.4 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntamsulosin hydrochloride 0.4 mg [flomax]\n\nWhat the labels say about “Flomax (tamsulosin) 0.4 mg once daily = 0.4 mg/day”\n\ntamsulosin hydrochloride\n\n1 INDICATIONS AND USAGE Tamsulosin hydrochloride capsules are indicated for the treatment of the signs a…\n\nOpen on DailyMed\nJalyn\ndutasteride and tamsulosin hydrochloride\n\n…USAGE JALYN is a combination of dutasteride, a 5-alpha-reductase inhibitor, and tamsulosin, an alpha-adrenergic antagonist, indicated for the treatment of sympt…\n\nOpen on DailyMed\ndutasteride\n\n…lated surgery. Dutasteride in combination with the alpha-adrenergic antagonist, tamsulosin, is indicated for the treatment of symptomatic BPH in men with an enl…\n\nOpen on DailyMed\nmirabegron\n\n…ntrol. For the combined Studies 1, 2, and 3,432 patients received mirabegron 25 mg, 1,375 received mirabegron 50 mg, and 929 received mirabegron 100 mg once dai…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Catapres (clonidine) 0.1 mg twice daily = 0.2 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Catapres (clonidine) 0.1 mg twice daily = 0.2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclonidine hydrochloride 0.2 mg [catapres]\n\nWhat the labels say about “Catapres (clonidine) 0.1 mg twice daily = 0.2 mg/day”\n\nclonidine hydrochloride\n\nINDICATIONS AND USAGE Clonidine hydrochloride tablets, USP are indicated in the treatment of hypertens…\n\nOpen on DailyMed\ncarvedilol\n\n…al trials in mild-to-moderate heart failure that compared Carvedilol tablets in daily doses up to 100 mg (n = 765) with placebo (n = 437), and in a multinationa…\n\nOpen on DailyMed\nbrimonidine tartrate and timolol maleate\n\n…INDICATIONS AND USAGE Brimonidine tartrate/timolol maleate ophthalmic solution 0.2%/0.5% is an alpha-adrenergic receptor agonist with a beta-adrenergic recepto…\n\nOpen on DailyMed\nbrimonidine tartrate\n\n1 INDICATIONS AND USAGE Brimonidine tartrate ophthalmic solution 0.1% is indicated for the reduction of elevated intraocular pressure (IOP) in pa…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Coreg (carvedilol) 25 mg twice daily = 50 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Coreg (carvedilol) 25 mg twice daily = 50 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncarvedilol 25 mg [coreg]\n\nWhat the labels say about “Coreg (carvedilol) 25 mg twice daily = 50 mg/day”\n\ncarvedilol\n\n1. INDICATIONS AND USAGE . Carvedilol tablets are an alpha/beta-adrenergic blocking agent indicated for the…\n\nOpen on DailyMed\ncarvedilol phosphate\n\n1 INDICATIONS AND USAGE Carvedilol phosphate extended-release capsules are an alpha-/beta-adrenergic blo…\n\nOpen on DailyMed\ncinacalcet\n\n…see Warnings and Precautions (5.4) ] The most common adverse reactions (i.e., ≥ 25%) associated with cinacalcet were nausea and vomiting. ( 6 ) To report SUSPEC…\n\nOpen on DailyMed\nTalzenna\ntalazoparib\n\n…l studies, including 286 patients enrolled in EMBRACA trial and to TALZENNA 0.5 mg daily with enzalutamide in 511 patients enrolled in the TALAPRO-2 trial that…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=845e6f49-2d5d-48b1-9ce5-26351536cbff",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49b3ca93-43cc-439c-8f5d-e3ea2e87ad2f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7fbea274-d6b5-4faa-bbf0-05fefab42114",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=174ef537-e3e6-42bd-a478-47b930ddc761",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5b150cd2-fac8-86ce-e063-6294a90a67b9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aedf70e4-1949-44bc-bf1b-0f282c4f0705",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6093dcd9-82d2-414f-8507-eda22c14f626",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6df6a2fa-c56c-4eb6-a485-c16585420eb0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d01d4f0f-5164-4ea3-b772-72b97961c6fb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e1e63cd5-d1e4-4af5-bad5-1ad41ea46b00",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6df6a2fa-c56c-4eb6-a485-c16585420eb0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=484e21ba-8fe1-4c6d-b923-8ba4cf5b2f20",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8302a6e-b8da-4931-a279-b49e37943816",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aab9a2d4-5328-40f3-986f-e7753a928bc0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c78d18cf-05df-4154-b2f9-39cc374ca9e3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5f7a1758-8691-4e53-96d6-a01626ee8140",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d7cfb02-e580-4658-a2fe-2149b515d434",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7d6bfff-fbb6-4a1f-aa13-babbb9a1e878",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b54e5bee-2329-4cc2-bed1-8eef11ee488c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e08a915a-77ca-4d16-d760-11b05848418d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7d6bfff-fbb6-4a1f-aa13-babbb9a1e878",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3697789e-ed17-4433-af94-e8ea19d8e04d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=44b548ef-1679-4d15-86ad-0d9636b48a45",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13839d4f-6acf-4ffb-a128-79df59319273",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nViagra (sildenafil) 100 mg as needed no more than once daily = 100 mg/day max: not found. Edit it in the list, or remove it.\nNitrostat (nitroglycerin sublingual) 0.4 mg as needed for chest pain up to 3 tablets in 15 minutes = 1.2 mg per episode: not found. Edit it in the list, or remove it.\nImdur (isosorbide mononitrate ER) 60 mg once daily = 60 mg/day: not found. Edit it in the list, or remove it.\nFlomax (tamsulosin) 0.4 mg once daily = 0.4 mg/day: not found. Edit it in the list, or remove it.\nCatapres (clonidine) 0.1 mg twice daily = 0.2 mg/day: not found. Edit it in the list, or remove it.\nCoreg (carvedilol) 25 mg twice daily = 50 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nViagra (sildenafil) 100 mg as needed no more than once daily = 100 mg/day max\nNot found in the FDA labels. Did you mean:\nEdit\nsildenafil 100 mg [viagra]\n\nWhat the labels say about “Viagra (sildenafil) 100 mg as needed no more than once daily = 100 mg/day max”\n\nsildenafil\n\n1 INDICATIONS AND USAGE Adults Sildenafil for oral suspension is indicated for the treatment of pulmonary arter…\n\nOpen on DailyMed\nE.E.S 400\nerythromycin ethylsuccinate\n\n…infections caused by susceptible strains of the designated organisms in the diseases listed below: Upper respiratory tract infections of mild to moderate degree…\n\nOpen on DailyMed\nAtazanavir Sulfate\natazanavir\n\n…1 infection in adults and in pediatric patients 6 years and older weighing at least 15 kg. Limitations of Use: Atazanavir capsules are not recommended for use i…\n\nOpen on DailyMed\nsildenafil\n\n1 INDICATIONS AND USAGE Sildenafil tablets are indicated for the treatment of erectile dysfunction. Sild…\n\nOpen on DailyMed\nShow 8 more\nNitrostat (nitroglycerin sublingual) 0.4 mg as needed for chest pain up to 3 tablets in 15 minutes = 1.2 mg per episode\nNot found in the FDA labels. Did you mean:\nEdit\nnitroglycerin sublingual tablet [nitrostat]\n\nWhat the labels say about “Nitrostat (nitroglycerin sublingual) 0.4 mg as needed for chest pain up to 3 tablets in 15 minutes = 1.2 mg per episode”\n\nnitroglycerin\n\n1 INDICATIONS AND USAGE Nitroglycerin sublingual tablets are indicated for the acu…\n\nOpen on DailyMed\napomorphine hydrocloride\napomorphine hydrochloride\n\n1 INDICATIONS AND USAGE Apomorphine hydrochloride injection is indicated for the a…\n\nOpen on DailyMed\ndipyridamole\n\nINDICATIONS AND USAGE Dipyridamole Injection is indicated as an alternative to e…\n\nOpen on DailyMed\nisosorbide dinitrate\n\nINDICATIONS AND USAGE Isosorbide dinitrate tablets are indicated for the prevent…\n\nOpen on DailyMed\nShow 8 more\nImdur (isosorbide mononitrate ER) 60 mg once daily = 60 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nisosorbide mononitrate 60 mg [imdur]\n\nWhat the labels say about “Imdur (isosorbide mononitrate ER) 60 mg once daily = 60 mg/day”\n\nisosorbide mononitrate\n\nINDICATIONS AND USAGE Isosorbide mononitrate extended-release tablets, USP are indicated for the preve…\n\nOpen on DailyMed\nBiDil\nhydralazine hydrochloride and isosorbide dinitrate\n\n1 INDICATIONS AND USAGE BiDil is a combination of isosorbide dinitrate, a nitrate vasodilator, and hydralazine hydrochloride, an a…\n\nOpen on DailyMed\nisosorbide dinitrate\n\nINDICATIONS AND USAGE Isosorbide dinitrate tablets are indicated for the prevention of angina pectoris…\n\nOpen on DailyMed\nVEPPANU\nvepdegestrant\n\n…USAGE VEPPANU is indicated for the treatment of adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative, estrogen…\n\nOpen on DailyMed\nShow 8 more\nFlomax (tamsulosin) 0.4 mg once daily = 0.4 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntamsulosin hydrochloride 0.4 mg [flomax]\n\nWhat the labels say about “Flomax (tamsulosin) 0.4 mg once daily = 0.4 mg/day”\n\ntamsulosin hydrochloride\n\n1 INDICATIONS AND USAGE Tamsulosin hydrochloride capsules are indicated for the treatment of the signs a…\n\nOpen on DailyMed\nJalyn\ndutasteride and tamsulosin hydrochloride\n\n…USAGE JALYN is a combination of dutasteride, a 5-alpha-reductase inhibitor, and tamsulosin, an alpha-adrenergic antagonist, indicated for the treatment of sympt…\n\nOpen on DailyMed\ndutasteride\n\n…lated surgery. Dutasteride in combination with the alpha-adrenergic antagonist, tamsulosin, is indicated for the treatment of symptomatic BPH in men with an enl…\n\nOpen on DailyMed\nmirabegron\n\n…ntrol. For the combined Studies 1, 2, and 3,432 patients received mirabegron 25 mg, 1,375 received mirabegron 50 mg, and 929 received mirabegron 100 mg once dai…\n\nOpen on DailyMed\nShow 8 more\nCatapres (clonidine) 0.1 mg twice daily = 0.2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclonidine hydrochloride 0.2 mg [catapres]\n\nWhat the labels say about “Catapres (clonidine) 0.1 mg twice daily = 0.2 mg/day”\n\nclonidine hydrochloride\n\nINDICATIONS AND USAGE Clonidine hydrochloride tablets, USP are indicated in the treatment of hypertens…\n\nOpen on DailyMed\ncarvedilol\n\n…al trials in mild-to-moderate heart failure that compared Carvedilol tablets in daily doses up to 100 mg (n = 765) with placebo (n = 437), and in a multinationa…\n\nOpen on DailyMed\nbrimonidine tartrate and timolol maleate\n\n…INDICATIONS AND USAGE Brimonidine tartrate/timolol maleate ophthalmic solution 0.2%/0.5% is an alpha-adrenergic receptor agonist with a beta-adrenergic recepto…\n\nOpen on DailyMed\nbrimonidine tartrate\n\n1 INDICATIONS AND USAGE Brimonidine tartrate ophthalmic solution 0.1% is indicated for the reduction of elevated intraocular pressure (IOP) in pa…\n\nOpen on DailyMed\nShow 8 more\nCoreg (carvedilol) 25 mg twice daily = 50 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncarvedilol 25 mg [coreg]\n\nWhat the labels say about “Coreg (carvedilol) 25 mg twice daily = 50 mg/day”\n\ncarvedilol\n\n1. INDICATIONS AND USAGE . Carvedilol tablets are an alpha/beta-adrenergic blocking agent indicated for the…\n\nOpen on DailyMed\ncarvedilol phosphate\n\n1 INDICATIONS AND USAGE Carvedilol phosphate extended-release capsules are an alpha-/beta-adrenergic blo…\n\nOpen on DailyMed\ncinacalcet\n\n…see Warnings and Precautions (5.4) ] The most common adverse reactions (i.e., ≥ 25%) associated with cinacalcet were nausea and vomiting. ( 6 ) To report SUSPEC…\n\nOpen on DailyMed\nTalzenna\ntalazoparib\n\n…l studies, including 286 patients enrolled in EMBRACA trial and to TALZENNA 0.5 mg daily with enzalutamide in 511 patients enrolled in the TALAPRO-2 trial that…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:54:11.119Z"
+}

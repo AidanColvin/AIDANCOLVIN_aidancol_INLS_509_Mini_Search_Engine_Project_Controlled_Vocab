@@ -1,0 +1,223 @@
+{
+ "id": "L04",
+ "input": "Lithobid (lithium carbonate ER) 300 mg three times daily = 900 mg/day, Zestril (lisinopril) 20 mg once daily = 20 mg/day, Microzide (hydrochlorothiazide) 25 mg once daily = 25 mg/day, Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day, Topamax (topiramate) 100 mg twice daily = 200 mg/day, Glucophage (metformin) 1000 mg twice daily = 2000 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 1.105,
+ "secondsToResults": 2.845,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Lithobid (lithium carbonate ER) 300 mg three times daily = 900 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lithobid (lithium carbonate ER) 300 mg three times daily = 900 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlithium carbonate extended release oral tablet [lithobid]\n\nWhat the labels say about “Lithobid (lithium carbonate ER) 300 mg three times daily = 900 mg/day”\n\nLITHOBID\nlithium carbonate\n\nADVERSE REACTIONS The occurrence and severity of adverse reactions are generally di…\n\nOpen on DailyMed\nlithium\n\n1 INDICATIONS AND USAGE Lithium is a mood-stabilizing agent indicated as monotherapy for the treatment o…\n\nOpen on DailyMed\nAdzenys XR-ODT\namphetamine\n\n1. INDICATIONS AND USAGE ADZENYS XR-ODT is a central nervous system (CNS) stimulant indicated for the treatment of Attention Deficit H…\n\nOpen on DailyMed\nzaleplon\n\nINDICATIONS AND USAGE Zaleplon is indicated for the short-term treatment of insomnia. Zaleplon has been shown to decrease the time to sleep…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zestril (lisinopril) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zestril (lisinopril) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlisinopril 20 mg [zestril]\n\nWhat the labels say about “Zestril (lisinopril) 20 mg once daily = 20 mg/day”\n\nlisinopril\n\n1 INDICATIONS AND USAGE Lisinopril tablets USP is an angiotensin converting enzyme (ACE) inhibitor indic…\n\nOpen on DailyMed\nLisinopril and Hydrochlorothiazide\nlisinopril and hydrochlorothiazide tablets\n\nINDICATIONS AND USAGE Lisinopril and hydrochlorothiazide tablets are indicated for the treatment of hy…\n\nOpen on DailyMed\nlosartan potassium\n\n…ated serum creatinine and proteinuria (urinary albumin to creatinine ratio ≥300 mg/g) in patients with type 2 diabetes and a history of hypertension. In this po…\n\nOpen on DailyMed\nMycapssa\noctreotide\n\n…3 months of treatment, and resolved on treatment within a median duration of 8 days. In the open-label study, gastrointestinal adverse reactions were reported…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Microzide (hydrochlorothiazide) 25 mg once daily = 25 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Microzide (hydrochlorothiazide) 25 mg once daily = 25 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nhydrochlorothiazide oral capsule [microzide]\n\nWhat the labels say about “Microzide (hydrochlorothiazide) 25 mg once daily = 25 mg/day”\n\nlosartan potassium and hydrochlorothiazide\n\n1 INDICATIONS AND USAGE Losartan potassium and hydrochlorothiazide tablets are a combination of losartan, an angiotensin II rec…\n\nOpen on DailyMed\nolmesartan medoxomil / amlodipine besylate / hydrochlorothiazide\n\n1 INDICATIONS AND USAGE Olmesartan medoxomil, amlodipine and hydrochlorothiazide tablets are indicated for the treatment of hypertension, alo…\n\nOpen on DailyMed\ntelmisartan and hydrochlorothiazide\n\n1 INDICATIONS AND USAGE Telmisartan and hydrochlorothiazide tablets are indicated for the treatment of hypertension, to…\n\nOpen on DailyMed\nbisoprolol fumarate and hydrochlorothiazide\n\nINDICATIONS & USAGE Bisoprolol fumarate and hydrochlorothiazide tablets are indicated in the management of hypertension. ADV…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nibuprofen 400 mg [motrin]\nibuprofen 200 mg [motrin]\nibuprofen 600 mg [motrin]\nibuprofen 800 mg [motrin]\nibuprofen 100 mg [motrin]\nibuprofen 300 mg [motrin]\nibuprofen 50 mg [motrin]\n\nWhat the labels say about “Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day”\n\nibuprofen\n\nINDICATIONS AND USAGE Carefully consider the potential benefits and risks of ibuprofen tablets and other treatment options before deciding to use ibuprofen.…\n\nOpen on DailyMed\nibuprofen and famotidine\n\n1 INDICATIONS AND USAGE Ibuprofen and famotidine tablet, a combination of the NSAID ibuprofen and the hi…\n\nOpen on DailyMed\nfelbamate\n\n…report SUSPECTED ADVERSE REACTIONS, contact Taro at 1-866-923-4914 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. The most common adverse reactions seen in…\n\nOpen on DailyMed\nCombogesic\nacetaminophen and ibuprofen\n\n…f mild to moderate acute pain. COMBOGESIC is a combination of acetaminophen and ibuprofen, a non-steroidal anti-inflammatory drug (NSAID), and is indicated in a…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Topamax (topiramate) 100 mg twice daily = 200 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Topamax (topiramate) 100 mg twice daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntopiramate 200 mg [topamax]\n\nWhat the labels say about “Topamax (topiramate) 100 mg twice daily = 200 mg/day”\n\ntopiramate\n\n1 INDICATIONS AND USAGE Topiramate tablets are indicated for: Epilepsy: initial monotherapy for the trea…\n\nOpen on DailyMed\nvalproate sodium\n\n…male volunteers and 352 patients with epilepsy, given at doses of 125 to 6,000 mg (total daily dose). A total of 2% of patients discontinued treatment with Val…\n\nOpen on DailyMed\nvalproic acid\n\n…ed lethargy and vomiting or changes in mental status, and also with concomitant topiramate use; consider discontinuation of valproate therapy ( 5.6 , 5.9 , 5.10…\n\nOpen on DailyMed\nphentermine and topiramate\n\n1 INDICATIONS AND USAGE Phentermine and topiramate extended-release capsules are indicated in combination with a reduced…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Glucophage (metformin) 1000 mg twice daily = 2000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Glucophage (metformin) 1000 mg twice daily = 2000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmetformin oral tablet [glucophage]\n\nWhat the labels say about “Glucophage (metformin) 1000 mg twice daily = 2000 mg/day”\n\nalogliptin and metformin hydrochloride\n\n1 INDICATIONS AND USAGE Alogliptin and metformin HCl tablets are indicated as an adjunct to diet and exercise to improv…\n\nOpen on DailyMed\nglyburide and metformin hydrochloride\n\n1 INDICATIONS AND USAGE Glyburide and metformin hydrochloride tablets are indicated as an adjunct to diet and exercise…\n\nOpen on DailyMed\nglipizide and metformin hydrochloride\n\nINDICATIONS AND USAGE Glipizide and metformin hydrochloride tablets, USP are indicated as an adjunct to diet and exe…\n\nOpen on DailyMed\nranolazine\n\n…, asthenia, constipation, and headache (each about 0.5% versus 0%). Doses above 1000 mg twice daily are poorly tolerated. In controlled clinical trials of angin…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7f5b69a-c2a1-4586-a189-1475d41387c0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1346df-4a39-45e8-874b-e2a496847fd5",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1179269-00b5-48ea-972d-31e614e99b7e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a1277ef5-6072-43ff-a6ce-0a7cea58b7cb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aa5d68e7-c2b9-41eb-ade4-2cd57edc1533",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bea11a3-eb07-46b2-9b91-f8a48a2f3b7e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a397502e-abe7-49cf-97c7-d53a616947eb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=62a5e1eb-b48e-4ea6-8781-f75e490b17e4",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=446e6998-01f6-4de0-be57-7fecf5448e95",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57ffeef7-bfa8-4f92-aadc-23cd00022607",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b303136-dccd-178b-e063-6394a90a35f8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=295532b5-65c8-40c3-8d27-cfd334d12802",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f5de6af-e555-4efd-a3ed-b72c34c051b6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0afffb17-e6ac-4bea-a90e-7ef3c8150290",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f3cee991-19ef-4a1c-bb14-cbc8b6f32776",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8d5fc1c1-d3c0-497e-971b-6c4dba9a3fad",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1edd220d-d151-4177-9a29-9fee36489fb7",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=876bd763-13fa-481e-b579-c2fc44dbf3c2",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14d98490-4f8f-4d2f-a4e9-7a3d7a0199ba",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4dcef36f-000e-43f5-8d67-0e2a079ab2c6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b18b903-eb52-4d08-b4a5-f984957eb116",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90c5a0c2-542c-467e-9c0c-ef320534c560",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nLithobid (lithium carbonate ER) 300 mg three times daily = 900 mg/day: not found. Edit it in the list, or remove it.\nZestril (lisinopril) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nMicrozide (hydrochlorothiazide) 25 mg once daily = 25 mg/day: not found. Edit it in the list, or remove it.\nMotrin (ibuprofen) 800 mg three times daily = 2400 mg/day: not found. Edit it in the list, or remove it.\nTopamax (topiramate) 100 mg twice daily = 200 mg/day: not found. Edit it in the list, or remove it.\nGlucophage (metformin) 1000 mg twice daily = 2000 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nLithobid (lithium carbonate ER) 300 mg three times daily = 900 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlithium carbonate extended release oral tablet [lithobid]\n\nWhat the labels say about “Lithobid (lithium carbonate ER) 300 mg three times daily = 900 mg/day”\n\nLITHOBID\nlithium carbonate\n\nADVERSE REACTIONS The occurrence and severity of adverse reactions are generally di…\n\nOpen on DailyMed\nlithium\n\n1 INDICATIONS AND USAGE Lithium is a mood-stabilizing agent indicated as monotherapy for the treatment o…\n\nOpen on DailyMed\nAdzenys XR-ODT\namphetamine\n\n1. INDICATIONS AND USAGE ADZENYS XR-ODT is a central nervous system (CNS) stimulant indicated for the treatment of Attention Deficit H…\n\nOpen on DailyMed\nzaleplon\n\nINDICATIONS AND USAGE Zaleplon is indicated for the short-term treatment of insomnia. Zaleplon has been shown to decrease the time to sleep…\n\nOpen on DailyMed\nShow 8 more\nZestril (lisinopril) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlisinopril 20 mg [zestril]\n\nWhat the labels say about “Zestril (lisinopril) 20 mg once daily = 20 mg/day”\n\nlisinopril\n\n1 INDICATIONS AND USAGE Lisinopril tablets USP is an angiotensin converting enzyme (ACE) inhibitor indic…\n\nOpen on DailyMed\nLisinopril and Hydrochlorothiazide\nlisinopril and hydrochlorothiazide tablets\n\nINDICATIONS AND USAGE Lisinopril and hydrochlorothiazide tablets are indicated for the treatment of hy…\n\nOpen on DailyMed\nlosartan potassium\n\n…ated serum creatinine and proteinuria (urinary albumin to creatinine ratio ≥300 mg/g) in patients with type 2 diabetes and a history of hypertension. In this po…\n\nOpen on DailyMed\nMycapssa\noctreotide\n\n…3 months of treatment, and resolved on treatment within a median duration of 8 days. In the open-label study, gastrointestinal adverse reactions were reported…\n\nOpen on DailyMed\nShow 8 more\nMicrozide (hydrochlorothiazide) 25 mg once daily = 25 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nhydrochlorothiazide oral capsule [microzide]\n\nWhat the labels say about “Microzide (hydrochlorothiazide) 25 mg once daily = 25 mg/day”\n\nlosartan potassium and hydrochlorothiazide\n\n1 INDICATIONS AND USAGE Losartan potassium and hydrochlorothiazide tablets are a combination of losartan, an angiotensin II rec…\n\nOpen on DailyMed\nolmesartan medoxomil / amlodipine besylate / hydrochlorothiazide\n\n1 INDICATIONS AND USAGE Olmesartan medoxomil, amlodipine and hydrochlorothiazide tablets are indicated for the treatment of hypertension, alo…\n\nOpen on DailyMed\ntelmisartan and hydrochlorothiazide\n\n1 INDICATIONS AND USAGE Telmisartan and hydrochlorothiazide tablets are indicated for the treatment of hypertension, to…\n\nOpen on DailyMed\nbisoprolol fumarate and hydrochlorothiazide\n\nINDICATIONS & USAGE Bisoprolol fumarate and hydrochlorothiazide tablets are indicated in the management of hypertension. ADV…\n\nOpen on DailyMed\nShow 8 more\nMotrin (ibuprofen) 800 mg three times daily = 2400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nibuprofen 400 mg [motrin]\nibuprofen 200 mg [motrin]\nibuprofen 600 mg [motrin]\nibuprofen 800 mg [motrin]\nibuprofen 100 mg [motrin]\nibuprofen 300 mg [motrin]\nibuprofen 50 mg [motrin]\n\nWhat the labels say about “Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day”\n\nibuprofen\n\nINDICATIONS AND USAGE Carefully consider the potential benefits and risks of ibuprofen tablets and other treatment options before deciding to use ibuprofen.…\n\nOpen on DailyMed\nibuprofen and famotidine\n\n1 INDICATIONS AND USAGE Ibuprofen and famotidine tablet, a combination of the NSAID ibuprofen and the hi…\n\nOpen on DailyMed\nfelbamate\n\n…report SUSPECTED ADVERSE REACTIONS, contact Taro at 1-866-923-4914 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. The most common adverse reactions seen in…\n\nOpen on DailyMed\nCombogesic\nacetaminophen and ibuprofen\n\n…f mild to moderate acute pain. COMBOGESIC is a combination of acetaminophen and ibuprofen, a non-steroidal anti-inflammatory drug (NSAID), and is indicated in a…\n\nOpen on DailyMed\nShow 8 more\nTopamax (topiramate) 100 mg twice daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntopiramate 200 mg [topamax]\n\nWhat the labels say about “Topamax (topiramate) 100 mg twice daily = 200 mg/day”\n\ntopiramate\n\n1 INDICATIONS AND USAGE Topiramate tablets are indicated for: Epilepsy: initial monotherapy for the trea…\n\nOpen on DailyMed\nvalproate sodium\n\n…male volunteers and 352 patients with epilepsy, given at doses of 125 to 6,000 mg (total daily dose). A total of 2% of patients discontinued treatment with Val…\n\nOpen on DailyMed\nvalproic acid\n\n…ed lethargy and vomiting or changes in mental status, and also with concomitant topiramate use; consider discontinuation of valproate therapy ( 5.6 , 5.9 , 5.10…\n\nOpen on DailyMed\nphentermine and topiramate\n\n1 INDICATIONS AND USAGE Phentermine and topiramate extended-release capsules are indicated in combination with a reduced…\n\nOpen on DailyMed\nShow 8 more\nGlucophage (metformin) 1000 mg twice daily = 2000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmetformin oral tablet [glucophage]\n\nWhat the labels say about “Glucophage (metformin) 1000 mg twice daily = 2000 mg/day”\n\nalogliptin and metformin hydrochloride\n\n1 INDICATIONS AND USAGE Alogliptin and metformin HCl tablets are indicated as an adjunct to diet and exercise to improv…\n\nOpen on DailyMed\nglyburide and metformin hydrochloride\n\n1 INDICATIONS AND USAGE Glyburide and metformin hydrochloride tablets are indicated as an adjunct to diet and exercise…\n\nOpen on DailyMed\nglipizide and metformin hydrochloride\n\nINDICATIONS AND USAGE Glipizide and metformin hydrochloride tablets, USP are indicated as an adjunct to diet and exe…\n\nOpen on DailyMed\nranolazine\n\n…, asthenia, constipation, and headache (each about 0.5% versus 0%). Doses above 1000 mg twice daily are poorly tolerated. In controlled clinical trials of angin…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:52:32.960Z"
+}

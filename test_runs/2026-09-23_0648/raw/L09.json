@@ -1,0 +1,223 @@
+{
+ "id": "L09",
+ "input": "Prozac (fluoxetine) 40 mg once daily = 40 mg/day, Paxil (paroxetine) 20 mg once daily = 20 mg/day, Nolvadex (tamoxifen) 20 mg once daily = 20 mg/day, Toprol-XL (metoprolol succinate) 100 mg once daily = 100 mg/day, Naprosyn (naproxen) 500 mg twice daily = 1000 mg/day, Nexium (esomeprazole) 40 mg once daily = 40 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.95,
+ "secondsToResults": 4.049,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Prozac (fluoxetine) 40 mg once daily = 40 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Prozac (fluoxetine) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluoxetine 40 mg [prozac]\n\nWhat the labels say about “Prozac (fluoxetine) 40 mg once daily = 40 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute depressive episode…\n\nOpen on DailyMed\nolanzapine\n\n…. Maintenance efficacy has not been systematically evaluated. As Olanzapine and Fluoxetine in Combination for the: Treatment of depressive episodes associated w…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Fluoxetine capsules are indicated for the treatment of: • Acute and maintenance…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Paxil (paroxetine) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Paxil (paroxetine) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nparoxetine hydrochloride 20 mg [paxil]\n\nWhat the labels say about “Paxil (paroxetine) 20 mg once daily = 20 mg/day”\n\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: • Major depress…\n\nOpen on DailyMed\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nPAROXETINE\nparoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Nolvadex (tamoxifen) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Nolvadex (tamoxifen) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntamoxifen 20 mg [nolvadex]\n\nWhat the labels say about “Nolvadex (tamoxifen) 20 mg once daily = 20 mg/day”\n\nanastrozole\n\n…vanced breast cancer in postmenopausal women with disease progression following tamoxifen therapy. Patients with ER-negative disease and patients who did not re…\n\nOpen on DailyMed\nAromasin\nexemestane\n\n…n-receptor positive early breast cancer who have received two to three years of tamoxifen and are switched to AROMASIN for completion of a total of five consecu…\n\nOpen on DailyMed\ntamoxifen citrate\n\nINDICATIONS AND USAGE Metastatic Breast Cancer: Tamoxifen citrate tablets are effective in the treatment of metastatic breast ca…\n\nOpen on DailyMed\nletrozole\n\n…pausal women with early breast cancer who have received prior standard adjuvant tamoxifen therapy. ( 1.2 ) First and second-line treatment of postmenopausal wom…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Toprol-XL (metoprolol succinate) 100 mg once daily = 100 mg/day",
+   "generic": "Not a medication name we know.",
+   "dose": null,
+   "facts": null,
+   "text": "Toprol-XL (metoprolol succinate) 100 mg once daily = 100 mg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Toprol-XL (metoprolol succinate) 100 mg once daily = 100 mg/day”\n\nmetoprolol succinate\n\n1 INDICATIONS AND USAGE Metoprolol succinate is a beta-adrenergic blocker indicated for the treatment of…\n\nOpen on DailyMed\nContrave Extended-Release\nnaltrexone hydrochloride and bupropion hydrochloride\n\n…t period up to 56 weeks. The majority of patients were treated with CONTRAVE 32 mg/360 mg total daily dose. In addition, some patients were treated with other c…\n\nOpen on DailyMed\ndesvenlafaxine\n\n…mon adverse reactions (incidence ≥5% and twice the rate of placebo in the 50 or 100 mg dose groups) were: nausea, dizziness, insomnia, hyperhidrosis, constipati…\n\nOpen on DailyMed\ndesvenlafaxine\n\n…mon adverse reactions (incidence ≥5% and twice the rate of placebo in the 50 or 100 mg dose groups) were: nausea, dizziness, insomnia, hyperhidrosis, constipati…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Naprosyn (naproxen) 500 mg twice daily = 1000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Naprosyn (naproxen) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nnaproxen 375 mg [naprosyn]\nnaproxen 250 mg [naprosyn]\nnaproxen 500 mg [naprosyn]\n\nWhat the labels say about “Naprosyn (naproxen) 500 mg twice daily = 1000 mg/day”\n\nnaproxen\n\n1 INDICATIONS AND USAGE Naproxen Tablets are indicated for: the relief of the signs and symptoms of: rhe…\n\nOpen on DailyMed\nnaproxen sodium\n\n1 INDICATIONS AND USAGE Naproxen tablets and naproxen sodium tablets are indicated for: the relief of th…\n\nOpen on DailyMed\nnaproxen and esomeprazole magnesium\n\n1 INDICATIONS AND USAGE Naproxen and esomeprazole magnesium delayed-release tablets, a combination of na…\n\nOpen on DailyMed\nnaproxen and esomeprazole magnesium\n\n1 INDICATIONS AND USAGE Naproxen and esomeprazole magnesium delayed-release tablets, a combination of na…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Nexium (esomeprazole) 40 mg once daily = 40 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Nexium (esomeprazole) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nesomeprazole 40 mg [nexium]\n\nWhat the labels say about “Nexium (esomeprazole) 40 mg once daily = 40 mg/day”\n\nEsomeprazole Magnesium for delayed-release oral suspension\nesomeprazole magnesium\n\n1 INDICATIONS AND USAGE Esomeprazole magnesium for delayed-release oral suspension is a proton pump inhi…\n\nOpen on DailyMed\nesomeprazole\n\n1 INDICATIONS & USAGE Esomeprazole magnesium delayed-release capsules are a proton pump inhibitor (PPI…\n\nOpen on DailyMed\nesomeprazole magnesium\n\n1 INDICATIONS AND USAGE Esomeprazole magnesium delayed-release capsules are a proton pump inhibitor (PPI…\n\nOpen on DailyMed\nesomeprazole magnesium\n\n1 INDICATIONS AND USAGE Esomeprazole magnesium delayed-release capsules are a proton pump inhibitor (PPI…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76b264ce-2a13-4511-8e21-4ffad0a327f9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=598efb76-93ef-f7de-e063-6394a90a632e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8e176ff2-ed3a-4909-94e1-6b9a3581a621",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1d1d5818-1594-4f54-90a9-ae9a9afcdc67",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cf066b7a-032a-416c-8d40-15ba581423e3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=509f8ba3-214d-aec8-e063-6294a90af498",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3cc750a5-cc88-4b42-b4ab-a87e760f291d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5431c8a-d92c-489e-b63b-4b9cc8f32a1a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485ff360-32c8-11df-928b-0002a5d5c51b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=91cf39c9-4d26-480a-a3a3-a3d8d4c4d222",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff837eb1-24c3-4c63-9b4b-c6b5935a9b47",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5954565a-d9bd-9e26-e063-6294a90a03cb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6c5bb008-e66f-4ef0-bf84-aca7eb5983e9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=733a93ff-8240-4afa-ba28-b0a6f8514efe",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65b892f2-8385-4bb0-8121-a58b01e8d13d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f907e633-4080-44ae-829f-141497876922",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d68c9247-91c7-4e0f-adc4-2cfa7446580f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=28fbfa02-6c7b-4eb1-af24-86825e652326",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ac12cd05-10cf-4694-a9e8-e5f04fe162a7",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nProzac (fluoxetine) 40 mg once daily = 40 mg/day: not found. Edit it in the list, or remove it.\nPaxil (paroxetine) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nNolvadex (tamoxifen) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nToprol-XL (metoprolol succinate) 100 mg once daily = 100 mg/day: not a medication name, so it was looked up in the labels instead.\nNaprosyn (naproxen) 500 mg twice daily = 1000 mg/day: not found. Edit it in the list, or remove it.\nNexium (esomeprazole) 40 mg once daily = 40 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nProzac (fluoxetine) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluoxetine 40 mg [prozac]\n\nWhat the labels say about “Prozac (fluoxetine) 40 mg once daily = 40 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute depressive episode…\n\nOpen on DailyMed\nolanzapine\n\n…. Maintenance efficacy has not been systematically evaluated. As Olanzapine and Fluoxetine in Combination for the: Treatment of depressive episodes associated w…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Fluoxetine capsules are indicated for the treatment of: • Acute and maintenance…\n\nOpen on DailyMed\nShow 8 more\nPaxil (paroxetine) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nparoxetine hydrochloride 20 mg [paxil]\n\nWhat the labels say about “Paxil (paroxetine) 20 mg once daily = 20 mg/day”\n\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: • Major depress…\n\nOpen on DailyMed\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nPAROXETINE\nparoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nShow 8 more\nNolvadex (tamoxifen) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntamoxifen 20 mg [nolvadex]\n\nWhat the labels say about “Nolvadex (tamoxifen) 20 mg once daily = 20 mg/day”\n\nanastrozole\n\n…vanced breast cancer in postmenopausal women with disease progression following tamoxifen therapy. Patients with ER-negative disease and patients who did not re…\n\nOpen on DailyMed\nAromasin\nexemestane\n\n…n-receptor positive early breast cancer who have received two to three years of tamoxifen and are switched to AROMASIN for completion of a total of five consecu…\n\nOpen on DailyMed\ntamoxifen citrate\n\nINDICATIONS AND USAGE Metastatic Breast Cancer: Tamoxifen citrate tablets are effective in the treatment of metastatic breast ca…\n\nOpen on DailyMed\nletrozole\n\n…pausal women with early breast cancer who have received prior standard adjuvant tamoxifen therapy. ( 1.2 ) First and second-line treatment of postmenopausal wom…\n\nOpen on DailyMed\nShow 8 more\nToprol-XL (metoprolol succinate) 100 mg once daily = 100 mg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Toprol-XL (metoprolol succinate) 100 mg once daily = 100 mg/day”\n\nmetoprolol succinate\n\n1 INDICATIONS AND USAGE Metoprolol succinate is a beta-adrenergic blocker indicated for the treatment of…\n\nOpen on DailyMed\nContrave Extended-Release\nnaltrexone hydrochloride and bupropion hydrochloride\n\n…t period up to 56 weeks. The majority of patients were treated with CONTRAVE 32 mg/360 mg total daily dose. In addition, some patients were treated with other c…\n\nOpen on DailyMed\ndesvenlafaxine\n\n…mon adverse reactions (incidence ≥5% and twice the rate of placebo in the 50 or 100 mg dose groups) were: nausea, dizziness, insomnia, hyperhidrosis, constipati…\n\nOpen on DailyMed\ndesvenlafaxine\n\n…mon adverse reactions (incidence ≥5% and twice the rate of placebo in the 50 or 100 mg dose groups) were: nausea, dizziness, insomnia, hyperhidrosis, constipati…\n\nOpen on DailyMed\nShow 8 more\nNaprosyn (naproxen) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nnaproxen 375 mg [naprosyn]\nnaproxen 250 mg [naprosyn]\nnaproxen 500 mg [naprosyn]\n\nWhat the labels say about “Naprosyn (naproxen) 500 mg twice daily = 1000 mg/day”\n\nnaproxen\n\n1 INDICATIONS AND USAGE Naproxen Tablets are indicated for: the relief of the signs and symptoms of: rhe…\n\nOpen on DailyMed\nnaproxen sodium\n\n1 INDICATIONS AND USAGE Naproxen tablets and naproxen sodium tablets are indicated for: the relief of th…\n\nOpen on DailyMed\nnaproxen and esomeprazole magnesium\n\n1 INDICATIONS AND USAGE Naproxen and esomeprazole magnesium delayed-release tablets, a combination of na…\n\nOpen on DailyMed\nnaproxen and esomeprazole magnesium\n\n1 INDICATIONS AND USAGE Naproxen and esomeprazole magnesium delayed-release tablets, a combination of na…\n\nOpen on DailyMed\nShow 8 more\nNexium (esomeprazole) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nesomeprazole 40 mg [nexium]\n\nWhat the labels say about “Nexium (esomeprazole) 40 mg once daily = 40 mg/day”\n\nEsomeprazole Magnesium for delayed-release oral suspension\nesomeprazole magnesium\n\n1 INDICATIONS AND USAGE Esomeprazole magnesium for delayed-release oral suspension is a proton pump inhi…\n\nOpen on DailyMed\nesomeprazole\n\n1 INDICATIONS & USAGE Esomeprazole magnesium delayed-release capsules are a proton pump inhibitor (PPI…\n\nOpen on DailyMed\nesomeprazole magnesium\n\n1 INDICATIONS AND USAGE Esomeprazole magnesium delayed-release capsules are a proton pump inhibitor (PPI…\n\nOpen on DailyMed\nesomeprazole magnesium\n\n1 INDICATIONS AND USAGE Esomeprazole magnesium delayed-release capsules are a proton pump inhibitor (PPI…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:53:14.706Z"
+}

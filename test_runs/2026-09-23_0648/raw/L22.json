@@ -1,0 +1,223 @@
+{
+ "id": "L22",
+ "input": "Prograf (tacrolimus) 3 mg twice daily = 6 mg/day, CellCept (mycophenolate mofetil) 1000 mg twice daily = 2000 mg/day, Diflucan (fluconazole) 400 mg once daily = 400 mg/day, Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day, Prilosec (omeprazole) 20 mg once daily = 20 mg/day, Zofran (ondansetron) 8 mg twice daily = 16 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.888,
+ "secondsToResults": 4.467,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Prograf (tacrolimus) 3 mg twice daily = 6 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Prograf (tacrolimus) 3 mg twice daily = 6 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntacrolimus injection [prograf]\n\nWhat the labels say about “Prograf (tacrolimus) 3 mg twice daily = 6 mg/day”\n\ntacrolimus\n\n1 INDICATIONS AND USAGE Tacrolimus capsules are a calcineurin-inhibitor immunosuppressant indicated for…\n\nOpen on DailyMed\nposaconazole\n\n…ing exclusivity rights, this drug product is not labeled with that information. 6 ADVERSE REACTIONS The following serious and otherwise important adverse reacti…\n\nOpen on DailyMed\nLivtencity\nmaribavir\n\n…adults and pediatric patients (12 years of age and older and weighing at least 35 kg) with post-transplant cytomegalovirus (CMV) infection/disease that is refr…\n\nOpen on DailyMed\nesomeprazole strontium\n\n…ion and healing of erosive esophagitis. Controlled studies do not extend beyond 6 months. Symptomatic Gastroesophageal Reflux Disease Esomeprazole strontium is…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "CellCept (mycophenolate mofetil) 1000 mg twice daily = 2000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "CellCept (mycophenolate mofetil) 1000 mg twice daily = 2000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmycophenolate mofetil injection [cellcept]\n\nWhat the labels say about “CellCept (mycophenolate mofetil) 1000 mg twice daily = 2000 mg/day”\n\nMycophenolate Mofetil\nmycophenolate mofetil hydrochloride\n\n1 INDICATIONS AND USAGE Mycophenolate Mofetil [mycophenolate mofetil (MMF)] is indicated for the prophyl…\n\nOpen on DailyMed\nCellCept\nmycophenolate mofetil\n\n1 INDICATIONS AND USAGE CELLCEPT [mycophenolate mofetil (MMF)] is indicated for the prophylaxis of organ…\n\nOpen on DailyMed\nmycophenolate mofetil\n\n1 INDICATIONS AND USAGE Mycophenolate mofetil (MMF) is indicated for the prophylaxis of organ rejection,…\n\nOpen on DailyMed\nmycophenolic acid\n\n…ds. ( 1.1 ) Limitations of Use: • Mycophenolic acid delayed-release tablets and mycophenolate mofetil tablets and capsules should not be used interchangeably. (…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Diflucan (fluconazole) 400 mg once daily = 400 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Diflucan (fluconazole) 400 mg once daily = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluconazole 50 mg [diflucan]\nfluconazole 150 mg [diflucan]\nfluconazole 200 mg [diflucan]\nfluconazole 100 mg [diflucan]\n\nWhat the labels say about “Diflucan (fluconazole) 400 mg once daily = 400 mg/day”\n\nglipizide\n\n…ated for 5 to 8 years with diet plus a fixed dose of tolbutamide (1.5 grams per day) had a rate of cardiovascular mortality approximately 2½ times that of patie…\n\nOpen on DailyMed\nfluconazole\n\nINDICATIONS AND USAGE Fluconazole tablets are indicated for the treatment of: Vaginal candidiasis (vag…\n\nOpen on DailyMed\nrifabutin\n\n…hanges on electrocardiogram. When rifabutin was administered at doses from 1050 mg/day to 2400 mg/day, generalized arthralgia and uveitis were reported. These a…\n\nOpen on DailyMed\nmicafungin\n\n…commended doses [see Dosage and Administration (2.1, 2.2)] and ranged from 0.75 mg/kg to 15 mg/kg in pediatric patients and 12.5 mg to 150 mg/day or greater in…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsimvastatin 40 mg [zocor]\n\nWhat the labels say about “Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day”\n\nniacin\n\n1 INDICATIONS AND USAGE Therapy with lipid-altering agents should be only one component…\n\nOpen on DailyMed\nefavirenz\n\n1 INDICATIONS & USAGE Efavirenz in combination with other antiretroviral agents is indi…\n\nOpen on DailyMed\nsimvastatin\n\n1 INDICATIONS AND USAGE Simvastatin tablets USP are indicated: • To reduce the risk of…\n\nOpen on DailyMed\nezetimibe and simvastatin\n\n1 INDICATIONS AND USAGE Ezetimibe and Simvastatin Tablets Ezetimibe and Simvastatin Tab…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Prilosec (omeprazole) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Prilosec (omeprazole) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nomeprazole 20 mg [prilosec]\n\nWhat the labels say about “Prilosec (omeprazole) 20 mg once daily = 20 mg/day”\n\nPrilosec\nomeprazole magnesium\n\n1 INDICATIONS AND USAGE PRILOSEC is a proton pump inhibitor (PPI) indicated for the: • Treatment of acti…\n\nOpen on DailyMed\nclarithromycin\n\n…hromycin tablets in combination with amoxicillin and PREVACID (lansoprazole) or PRILOSEC (omeprazole) Delayed-Release Capsules, as triple therapy, are indicated…\n\nOpen on DailyMed\nomeprazole\n\n1 INDICATIONS AND USAGE Omeprazole is a proton pump inhibitor (PPI) indicated for the: • Treatment of ac…\n\nOpen on DailyMed\nOmeprazole/Bicarbonate\nomeprazole and sodium bicarbonate\n\n1 INDICATIONS AND USAGE Omeprazole and sodium bicarbonate is a proton pump inhibitor (PPI) indicated for…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zofran (ondansetron) 8 mg twice daily = 16 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zofran (ondansetron) 8 mg twice daily = 16 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nondansetron 16 mg [zofran]\n\nWhat the labels say about “Zofran (ondansetron) 8 mg twice daily = 16 mg/day”\n\nondansetron\n\n1 INDICATIONS AND USAGE Ondansetron orally disintegrating tablets are indicated for the prevention of na…\n\nOpen on DailyMed\nondansetron hydrochloride\n\n1 INDICATIONS AND USAGE Ondansetron tablets are indicated for the prevention of nausea and vomiting asso…\n\nOpen on DailyMed\nondansetron\n\n1 INDICATIONS AND USAGE Ondansetron is indicated for the prevention of nausea and vomiting associated wi…\n\nOpen on DailyMed\naprepitant\n\n…ension. To report SUSPECTED ADVERSE REACTIONS, contact Torrent Pharma Inc. at 1-800-912-9561 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch 6.1 Clinical Trial…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6b89e8a4-9f11-42e3-8e79-fe617e7c461f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8a26673-261c-4e8e-b1e1-9e23aaf7f285",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c94fc2c5-e840-4f18-b7d8-d5eacb26d3a0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c916d32-f9e9-1d15-e054-00144ff88e88",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32001417-130d-4c08-8e63-94ba3627ce5f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=37241e87-4af4-4dc3-a1aa-ea6f20d8dc40",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84c6f6bb-8924-4da5-9629-126197195f83",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc98d9a1-b4e3-4085-a8ba-d3313246658a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=25a60937-cbbe-4a50-994f-2ce15203f589",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=230fcff4-ad4b-ea25-e063-6394a90a1fab",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8eff9205-84ac-e69d-e053-2995a90aad4b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13ca3456-e5bf-4bb1-af95-b1378658a358",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=52a46269-2262-4052-a3ff-5455523f591f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6761f84-53ac-4745-a8c8-1e5427d7e179",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d5848f0-e9f0-4112-a7ca-bcc8ea2e69c6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63b3982a-b541-4b0d-99d4-93a673e57d46",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4d642036-7175-4f29-9f07-dbd282231d4a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=269c920c-643a-4eea-9bf9-b1f008915db9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=960e2104-18c3-4cfa-abf6-f1b30c452918",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee5217a-eba8-463a-812d-bf3c66f0934f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=af9b6086-4bf2-472c-8740-4134eaaebace",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nPrograf (tacrolimus) 3 mg twice daily = 6 mg/day: not found. Edit it in the list, or remove it.\nCellCept (mycophenolate mofetil) 1000 mg twice daily = 2000 mg/day: not found. Edit it in the list, or remove it.\nDiflucan (fluconazole) 400 mg once daily = 400 mg/day: not found. Edit it in the list, or remove it.\nZocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day: not found. Edit it in the list, or remove it.\nPrilosec (omeprazole) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nZofran (ondansetron) 8 mg twice daily = 16 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nPrograf (tacrolimus) 3 mg twice daily = 6 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntacrolimus injection [prograf]\n\nWhat the labels say about “Prograf (tacrolimus) 3 mg twice daily = 6 mg/day”\n\ntacrolimus\n\n1 INDICATIONS AND USAGE Tacrolimus capsules are a calcineurin-inhibitor immunosuppressant indicated for…\n\nOpen on DailyMed\nposaconazole\n\n…ing exclusivity rights, this drug product is not labeled with that information. 6 ADVERSE REACTIONS The following serious and otherwise important adverse reacti…\n\nOpen on DailyMed\nLivtencity\nmaribavir\n\n…adults and pediatric patients (12 years of age and older and weighing at least 35 kg) with post-transplant cytomegalovirus (CMV) infection/disease that is refr…\n\nOpen on DailyMed\nesomeprazole strontium\n\n…ion and healing of erosive esophagitis. Controlled studies do not extend beyond 6 months. Symptomatic Gastroesophageal Reflux Disease Esomeprazole strontium is…\n\nOpen on DailyMed\nShow 8 more\nCellCept (mycophenolate mofetil) 1000 mg twice daily = 2000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nmycophenolate mofetil injection [cellcept]\n\nWhat the labels say about “CellCept (mycophenolate mofetil) 1000 mg twice daily = 2000 mg/day”\n\nMycophenolate Mofetil\nmycophenolate mofetil hydrochloride\n\n1 INDICATIONS AND USAGE Mycophenolate Mofetil [mycophenolate mofetil (MMF)] is indicated for the prophyl…\n\nOpen on DailyMed\nCellCept\nmycophenolate mofetil\n\n1 INDICATIONS AND USAGE CELLCEPT [mycophenolate mofetil (MMF)] is indicated for the prophylaxis of organ…\n\nOpen on DailyMed\nmycophenolate mofetil\n\n1 INDICATIONS AND USAGE Mycophenolate mofetil (MMF) is indicated for the prophylaxis of organ rejection,…\n\nOpen on DailyMed\nmycophenolic acid\n\n…ds. ( 1.1 ) Limitations of Use: • Mycophenolic acid delayed-release tablets and mycophenolate mofetil tablets and capsules should not be used interchangeably. (…\n\nOpen on DailyMed\nShow 8 more\nDiflucan (fluconazole) 400 mg once daily = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluconazole 50 mg [diflucan]\nfluconazole 150 mg [diflucan]\nfluconazole 200 mg [diflucan]\nfluconazole 100 mg [diflucan]\n\nWhat the labels say about “Diflucan (fluconazole) 400 mg once daily = 400 mg/day”\n\nglipizide\n\n…ated for 5 to 8 years with diet plus a fixed dose of tolbutamide (1.5 grams per day) had a rate of cardiovascular mortality approximately 2½ times that of patie…\n\nOpen on DailyMed\nfluconazole\n\nINDICATIONS AND USAGE Fluconazole tablets are indicated for the treatment of: Vaginal candidiasis (vag…\n\nOpen on DailyMed\nrifabutin\n\n…hanges on electrocardiogram. When rifabutin was administered at doses from 1050 mg/day to 2400 mg/day, generalized arthralgia and uveitis were reported. These a…\n\nOpen on DailyMed\nmicafungin\n\n…commended doses [see Dosage and Administration (2.1, 2.2)] and ranged from 0.75 mg/kg to 15 mg/kg in pediatric patients and 12.5 mg to 150 mg/day or greater in…\n\nOpen on DailyMed\nShow 8 more\nZocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsimvastatin 40 mg [zocor]\n\nWhat the labels say about “Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day”\n\nniacin\n\n1 INDICATIONS AND USAGE Therapy with lipid-altering agents should be only one component…\n\nOpen on DailyMed\nefavirenz\n\n1 INDICATIONS & USAGE Efavirenz in combination with other antiretroviral agents is indi…\n\nOpen on DailyMed\nsimvastatin\n\n1 INDICATIONS AND USAGE Simvastatin tablets USP are indicated: • To reduce the risk of…\n\nOpen on DailyMed\nezetimibe and simvastatin\n\n1 INDICATIONS AND USAGE Ezetimibe and Simvastatin Tablets Ezetimibe and Simvastatin Tab…\n\nOpen on DailyMed\nShow 8 more\nPrilosec (omeprazole) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nomeprazole 20 mg [prilosec]\n\nWhat the labels say about “Prilosec (omeprazole) 20 mg once daily = 20 mg/day”\n\nPrilosec\nomeprazole magnesium\n\n1 INDICATIONS AND USAGE PRILOSEC is a proton pump inhibitor (PPI) indicated for the: • Treatment of acti…\n\nOpen on DailyMed\nclarithromycin\n\n…hromycin tablets in combination with amoxicillin and PREVACID (lansoprazole) or PRILOSEC (omeprazole) Delayed-Release Capsules, as triple therapy, are indicated…\n\nOpen on DailyMed\nomeprazole\n\n1 INDICATIONS AND USAGE Omeprazole is a proton pump inhibitor (PPI) indicated for the: • Treatment of ac…\n\nOpen on DailyMed\nOmeprazole/Bicarbonate\nomeprazole and sodium bicarbonate\n\n1 INDICATIONS AND USAGE Omeprazole and sodium bicarbonate is a proton pump inhibitor (PPI) indicated for…\n\nOpen on DailyMed\nShow 8 more\nZofran (ondansetron) 8 mg twice daily = 16 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nondansetron 16 mg [zofran]\n\nWhat the labels say about “Zofran (ondansetron) 8 mg twice daily = 16 mg/day”\n\nondansetron\n\n1 INDICATIONS AND USAGE Ondansetron orally disintegrating tablets are indicated for the prevention of na…\n\nOpen on DailyMed\nondansetron hydrochloride\n\n1 INDICATIONS AND USAGE Ondansetron tablets are indicated for the prevention of nausea and vomiting asso…\n\nOpen on DailyMed\nondansetron\n\n1 INDICATIONS AND USAGE Ondansetron is indicated for the prevention of nausea and vomiting associated wi…\n\nOpen on DailyMed\naprepitant\n\n…ension. To report SUSPECTED ADVERSE REACTIONS, contact Torrent Pharma Inc. at 1-800-912-9561 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch 6.1 Clinical Trial…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:54:58.745Z"
+}

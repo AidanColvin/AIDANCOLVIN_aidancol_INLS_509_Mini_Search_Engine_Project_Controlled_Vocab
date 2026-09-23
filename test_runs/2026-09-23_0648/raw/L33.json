@@ -1,0 +1,223 @@
+{
+ "id": "L33",
+ "input": "Dilantin (phenytoin ER) 300 mg once daily at bedtime = 300 mg/day, Coumadin (warfarin) 5 mg once daily = 5 mg/day, Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day, Prozac (fluoxetine) 20 mg once daily = 20 mg/day, Diflucan (fluconazole) 100 mg once daily = 100 mg/day, Lipitor (atorvastatin) 20 mg once daily = 20 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 1.003,
+ "secondsToResults": 2.833,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Dilantin (phenytoin ER) 300 mg once daily at bedtime = 300 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Dilantin (phenytoin ER) 300 mg once daily at bedtime = 300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nphenytoin extended release oral capsule [dilantin]\n\nWhat the labels say about “Dilantin (phenytoin ER) 300 mg once daily at bedtime = 300 mg/day”\n\nPhenytoin Infatabs\nphenytoin\n\n1 INDICATIONS AND USAGE Phenytoin Infatabs are indicated for the treatment of generaliz…\n\nOpen on DailyMed\ncimetidine\n\nINDICATIONS AND USAGE Cimetidine tablets are indicated in: 1. Short-term treatment of…\n\nOpen on DailyMed\nAspirin and Extended - Release Dipyridamole Capsules, 25 mg / 200 mg\naspirin and extended - release dipyridamole\n\n1 INDICATIONS AND USAGE Aspirin and Extended-Release Dipyridamole Capsule is indicated…\n\nOpen on DailyMed\ncimetidine hydrochloride\n\nINDICATIONS AND USAGE Cimetidine Hydrochloride Oral Solution is indicated in: (1) Sho…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Coumadin (warfarin) 5 mg once daily = 5 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Coumadin (warfarin) 5 mg once daily = 5 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nwarfarin sodium 5 mg [coumadin]\n\nWhat the labels say about “Coumadin (warfarin) 5 mg once daily = 5 mg/day”\n\ncarbidopa, levodopa and entacapone\n\n…nd symptoms of end-of-dose “wearing-off” and when they have been taking a total daily dose of levodopa of 600 mg or less and have not been experiencing dyskines…\n\nOpen on DailyMed\nClinolipid\nolive oil and soybean oil\n\n…travenous Lipid Emulsion in Neonates and Infants [see Warnings and Precautions (5.1) ] • Parenteral Nutrition-Associated Liver Disease and Other Hepatobiliary D…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n…Adolescents, and Young Adults [see Boxed Warning and Warnings and Precautions (5.1) ] • Serotonin Syndrome [see Warnings and Precautions (5.2) ] • Allergic Rea…\n\nOpen on DailyMed\nfluoxetine hcl\n\n…isorder (MDD). The efficacy of fluoxetine tablets in MDD was established in one 5-week trial, three 6-week trials, and one maintenance study in adults. The effi…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day",
+   "generic": "Not a medication name we know.",
+   "dose": null,
+   "facts": null,
+   "text": "Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day”\n\nAngeliq\ndrospirenone and estradiol\n\n…1.1 Treatment of Moderate to Severe Vasomotor Symptoms due to Menopause Angeliq 0.25 mg drospirenone (DRSP)/0.5 mg estradiol (E2) is indicated for the treatment…\n\nOpen on DailyMed\netonogestrel and ethinyl estradiol vaginal\n\n1 INDICATIONS AND USAGE FOR VAGINAL USE ONLY Etonogestrel and ethinyl estradiol vaginal ring is indicated for use by females of reproductive a…\n\nOpen on DailyMed\nTrilitas\ntazarotene\n\n…dosing frequency or in the case of psoriasis, consider switching to the lower concentration. Trilitas™ gel should not be used on eczematous skin, as it may cau…\n\nOpen on DailyMed\nnevirapine\n\n…an immunodeficiency virus (HIV-1) infection in adults and pediatric patients 15 days and older [see Clinical Studies (14.1 , 14.2) ]. Limitations of Use: Based…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Prozac (fluoxetine) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Prozac (fluoxetine) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluoxetine 20 mg [prozac]\n\nWhat the labels say about “Prozac (fluoxetine) 20 mg once daily = 20 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute depressive episode…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Fluoxetine capsules are indicated for the treatment of: • Acute and maintenance…\n\nOpen on DailyMed\nolanzapine\n\n…. Maintenance efficacy has not been systematically evaluated. As Olanzapine and Fluoxetine in Combination for the: Treatment of depressive episodes associated w…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Diflucan (fluconazole) 100 mg once daily = 100 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Diflucan (fluconazole) 100 mg once daily = 100 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluconazole 100 mg [diflucan]\n\nWhat the labels say about “Diflucan (fluconazole) 100 mg once daily = 100 mg/day”\n\nglipizide\n\n…ated for 5 to 8 years with diet plus a fixed dose of tolbutamide (1.5 grams per day) had a rate of cardiovascular mortality approximately 2½ times that of patie…\n\nOpen on DailyMed\nfluconazole\n\nINDICATIONS AND USAGE Fluconazole tablets are indicated for the treatment of: Vaginal candidiasis (vag…\n\nOpen on DailyMed\nmicafungin\n\n…commended doses [see Dosage and Administration (2.1, 2.2)] and ranged from 0.75 mg/kg to 15 mg/kg in pediatric patients and 12.5 mg to 150 mg/day or greater in…\n\nOpen on DailyMed\nERAXIS\nanidulafungin\n\n…re the results of the cultures and other laboratory studies are known. However, once these results become available, antifungal therapy should be adjusted accor…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lipitor (atorvastatin) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lipitor (atorvastatin) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 20 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 20 mg once daily = 20 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3580e6a8-f7c3-44a0-a1eb-2a84ae589d21",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06c0a509-026f-44e0-9975-a94a8de51d43",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a6e652e1-b2e4-47ba-bed2-c5e902f8b8f1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d1d73350-4e7e-428a-90a5-6000fd373a4f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f8e82d7-6baf-456a-b8c3-4fda6e317902",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ae98eb03-c0e7-49d1-b024-77968e3d9d6e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76b264ce-2a13-4511-8e21-4ffad0a327f9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=761834c2-6b61-4583-84c2-f1ca4a97c4f2",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05e172aa-e18a-427b-e063-6294a90ae22f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1cf1faef-73b8-4ab2-a4c8-521f0bd3fc10",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6e93829-7024-48f6-8023-da6ff27dfc0a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76b264ce-2a13-4511-8e21-4ffad0a327f9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaf9e5f8-048e-407c-bc11-ad4edff85c05",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=230fcff4-ad4b-ea25-e063-6394a90a1fab",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a88d9010-55fb-4a02-baff-042cd27688ea",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9adb9e4-c495-9530-e5e3-7e3b01d53e4c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57f9b462-f08e-483c-9b64-b7e4c8d46927",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c7b1b11-90a3-bc1c-0e45-9e2a14ef0b03",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nDilantin (phenytoin ER) 300 mg once daily at bedtime = 300 mg/day: not found. Edit it in the list, or remove it.\nCoumadin (warfarin) 5 mg once daily = 5 mg/day: not found. Edit it in the list, or remove it.\nSprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day: not a medication name, so it was looked up in the labels instead.\nProzac (fluoxetine) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nDiflucan (fluconazole) 100 mg once daily = 100 mg/day: not found. Edit it in the list, or remove it.\nLipitor (atorvastatin) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nDilantin (phenytoin ER) 300 mg once daily at bedtime = 300 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nphenytoin extended release oral capsule [dilantin]\n\nWhat the labels say about “Dilantin (phenytoin ER) 300 mg once daily at bedtime = 300 mg/day”\n\nPhenytoin Infatabs\nphenytoin\n\n1 INDICATIONS AND USAGE Phenytoin Infatabs are indicated for the treatment of generaliz…\n\nOpen on DailyMed\ncimetidine\n\nINDICATIONS AND USAGE Cimetidine tablets are indicated in: 1. Short-term treatment of…\n\nOpen on DailyMed\nAspirin and Extended - Release Dipyridamole Capsules, 25 mg / 200 mg\naspirin and extended - release dipyridamole\n\n1 INDICATIONS AND USAGE Aspirin and Extended-Release Dipyridamole Capsule is indicated…\n\nOpen on DailyMed\ncimetidine hydrochloride\n\nINDICATIONS AND USAGE Cimetidine Hydrochloride Oral Solution is indicated in: (1) Sho…\n\nOpen on DailyMed\nShow 8 more\nCoumadin (warfarin) 5 mg once daily = 5 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nwarfarin sodium 5 mg [coumadin]\n\nWhat the labels say about “Coumadin (warfarin) 5 mg once daily = 5 mg/day”\n\ncarbidopa, levodopa and entacapone\n\n…nd symptoms of end-of-dose “wearing-off” and when they have been taking a total daily dose of levodopa of 600 mg or less and have not been experiencing dyskines…\n\nOpen on DailyMed\nClinolipid\nolive oil and soybean oil\n\n…travenous Lipid Emulsion in Neonates and Infants [see Warnings and Precautions (5.1) ] • Parenteral Nutrition-Associated Liver Disease and Other Hepatobiliary D…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n…Adolescents, and Young Adults [see Boxed Warning and Warnings and Precautions (5.1) ] • Serotonin Syndrome [see Warnings and Precautions (5.2) ] • Allergic Rea…\n\nOpen on DailyMed\nfluoxetine hcl\n\n…isorder (MDD). The efficacy of fluoxetine tablets in MDD was established in one 5-week trial, three 6-week trials, and one maintenance study in adults. The effi…\n\nOpen on DailyMed\nShow 8 more\nSprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Sprintec (norgestimate/ethinyl estradiol) 0.25 mg/35 mcg once daily = 0.25 mg/35 mcg/day”\n\nAngeliq\ndrospirenone and estradiol\n\n…1.1 Treatment of Moderate to Severe Vasomotor Symptoms due to Menopause Angeliq 0.25 mg drospirenone (DRSP)/0.5 mg estradiol (E2) is indicated for the treatment…\n\nOpen on DailyMed\netonogestrel and ethinyl estradiol vaginal\n\n1 INDICATIONS AND USAGE FOR VAGINAL USE ONLY Etonogestrel and ethinyl estradiol vaginal ring is indicated for use by females of reproductive a…\n\nOpen on DailyMed\nTrilitas\ntazarotene\n\n…dosing frequency or in the case of psoriasis, consider switching to the lower concentration. Trilitas™ gel should not be used on eczematous skin, as it may cau…\n\nOpen on DailyMed\nnevirapine\n\n…an immunodeficiency virus (HIV-1) infection in adults and pediatric patients 15 days and older [see Clinical Studies (14.1 , 14.2) ]. Limitations of Use: Based…\n\nOpen on DailyMed\nShow 8 more\nProzac (fluoxetine) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluoxetine 20 mg [prozac]\n\nWhat the labels say about “Prozac (fluoxetine) 20 mg once daily = 20 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute depressive episode…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Fluoxetine capsules are indicated for the treatment of: • Acute and maintenance…\n\nOpen on DailyMed\nolanzapine\n\n…. Maintenance efficacy has not been systematically evaluated. As Olanzapine and Fluoxetine in Combination for the: Treatment of depressive episodes associated w…\n\nOpen on DailyMed\nShow 8 more\nDiflucan (fluconazole) 100 mg once daily = 100 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluconazole 100 mg [diflucan]\n\nWhat the labels say about “Diflucan (fluconazole) 100 mg once daily = 100 mg/day”\n\nglipizide\n\n…ated for 5 to 8 years with diet plus a fixed dose of tolbutamide (1.5 grams per day) had a rate of cardiovascular mortality approximately 2½ times that of patie…\n\nOpen on DailyMed\nfluconazole\n\nINDICATIONS AND USAGE Fluconazole tablets are indicated for the treatment of: Vaginal candidiasis (vag…\n\nOpen on DailyMed\nmicafungin\n\n…commended doses [see Dosage and Administration (2.1, 2.2)] and ranged from 0.75 mg/kg to 15 mg/kg in pediatric patients and 12.5 mg to 150 mg/day or greater in…\n\nOpen on DailyMed\nERAXIS\nanidulafungin\n\n…re the results of the cultures and other laboratory studies are known. However, once these results become available, antifungal therapy should be adjusted accor…\n\nOpen on DailyMed\nShow 8 more\nLipitor (atorvastatin) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 20 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 20 mg once daily = 20 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:56:27.022Z"
+}

@@ -1,0 +1,196 @@
+{
+ "id": "L01",
+ "input": "Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day, Xanax (alprazolam) 1 mg three times daily = 3 mg/day, Adderall (amphetamine/dextroamphetamine) 20 mg three times daily = 60 mg/day, Zyprexa (olanzapine) 10 mg once daily = 10 mg/day, Zyprexa (olanzapine) 2.5 mg once daily = 2.5 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.936,
+ "secondsToResults": 4.05,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nzolpidem tartrate 10 mg [ambien]\n\nWhat the labels say about “Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day”\n\nzolpidem tartrate\n\n1 INDICATIONS AND USAGE Zolpidem tartrate tablets, USP a gamma-amino butyric acid (GABA…\n\nOpen on DailyMed\nGOCOVRI\namantadine\n\n1 INDICATIONS AND USAGE GOCOVRI ® is indicated: For the treatment of dyskinesia in pati…\n\nOpen on DailyMed\nADDYI\nflibanserin\n\n1 INDICATIONS AND USAGE ADDYI is indicated for the treatment of women less than 65 year…\n\nOpen on DailyMed\ncimetidine\n\nINDICATIONS AND USAGE Cimetidine tablets are indicated in: 1. Short-term treatment of…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Xanax (alprazolam) 1 mg three times daily = 3 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Xanax (alprazolam) 1 mg three times daily = 3 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nalprazolam 3 mg [xanax]\n\nWhat the labels say about “Xanax (alprazolam) 1 mg three times daily = 3 mg/day”\n\nnefazodone hydrochloride\n\n…relatively persistent depressed or dysphoric mood that usually interferes with daily functioning (nearly every day for at least 2 weeks). It must include eithe…\n\nOpen on DailyMed\nalprazolam\n\n1 INDICATIONS AND USAGE Alprazolam tablets are indicated for the: acute treatmen…\n\nOpen on DailyMed\nE.E.S 400\nerythromycin ethylsuccinate\n\n…cin as treatment of gonorrhea and a follow-up serologic test for syphilis after 3 months. Syphilis caused by Treponema pallidum : Erythromycin is an alternate c…\n\nOpen on DailyMed\nfluoxetine hcl\n\n1 INDICATIONS AND USAGE Fluoxetine tablets are indicated for the treatment of: M…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Adderall (amphetamine/dextroamphetamine) 20 mg three times daily = 60 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Adderall (amphetamine/dextroamphetamine) 20 mg three times daily = 60 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namphetamine / dextroamphetamine oral tablet [adderall]\n\nWhat the labels say about “Adderall (amphetamine/dextroamphetamine) 20 mg three times daily = 60 mg/day”\n\nAdzenys XR-ODT\namphetamine\n\n…autions (5.1) , and Drug Abuse and Dependence (9.2 , 9.3) ] Hypersensitivity to amphetamine, or other components of ADZENYS XR-ODT [see Contraindications (4) ]…\n\nOpen on DailyMed\ndextroamphetamine saccharate, amphetamine aspartate monohydrate, dextroamphetamine sulfate and amphetamine sulfate\n\n1 INDICATIONS AND USAGE Dextroamphetamine saccharate, amphetamine aspartate monohydrate, dextroamphetami…\n\nOpen on DailyMed\ndextroamphetamine saccharate, amphetamine aspartate, dextroamphetamine sulfate, amphetamine sulfate\n\nINDICATIONS AND USAGE Dextroamphetamine saccharate, amphetamine aspartate, dextroamphetamine sulfate a…\n\nOpen on DailyMed\ndextroamphetamine saccharate, amphetamine aspartate, dextroamphetamine sulfate, and amphetamine sulfate\n\nINDICATIONS AND USAGE Dextroamphetamine saccharate, amphetamine aspartate, dextroamphetamine sulfate a…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zyprexa (olanzapine) 10 mg once daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zyprexa (olanzapine) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nolanzapine 10 mg [zyprexa]\n\nWhat the labels say about “Zyprexa (olanzapine) 10 mg once daily = 10 mg/day”\n\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute dep…\n\nOpen on DailyMed\nolanzapine\n\n1 INDICATIONS AND USAGE Olanzapine is an atypical antipsychotic indicated: As oral formulation for the:…\n\nOpen on DailyMed\nLYBALVI\nolanzapine and samidorphan l-malate\n\n…hium or valproate Maintenance monotherapy treatment LYBALVI is a combination of olanzapine, an atypical antipsychotic, and samidorphan, an opioid antagonist, in…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n…or without agoraphobia [see Clinical Studies (14.4) ] . Fluoxetine capsules and Olanzapine in Combination are indicated for the treatment of: • Acute treatment…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Zyprexa (olanzapine) 2.5 mg once daily = 2.5 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zyprexa (olanzapine) 2.5 mg once daily = 2.5 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nolanzapine 2.5 mg [zyprexa]\n\nWhat the labels say about “Zyprexa (olanzapine) 2.5 mg once daily = 2.5 mg/day”\n\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute dep…\n\nOpen on DailyMed\nolanzapine\n\n1 INDICATIONS AND USAGE Olanzapine is an atypical antipsychotic indicated: As oral formulation for the:…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n…or without agoraphobia [see Clinical Studies (14.4) ] . Fluoxetine capsules and Olanzapine in Combination are indicated for the treatment of: • Acute treatment…\n\nOpen on DailyMed\nLYBALVI\nolanzapine and samidorphan l-malate\n\n…hium or valproate Maintenance monotherapy treatment LYBALVI is a combination of olanzapine, an atypical antipsychotic, and samidorphan, an opioid antagonist, in…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82ff865f-78f3-4c94-b6a9-727a54944b28",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3819daf3-e935-2c53-c527-e1d57922f394",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06c0a509-026f-44e0-9975-a94a8de51d43",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0bd4c34a-4f43-4c84-8b98-1d074cba97d5",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49b3ca93-43cc-439c-8f5d-e3ea2e87ad2f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1179269-00b5-48ea-972d-31e614e99b7e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6438480f-1147-42b6-826d-4e1e1f8ff007",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4564e404-8d71-4585-ab78-55857f477143",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9af67219-9b37-45d0-ac52-647cbfacd296",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32ffddd1-4e2b-45d9-9b36-bb730167ec80",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76b264ce-2a13-4511-8e21-4ffad0a327f9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c28cf18-01a3-468a-ab3e-8aa82f918251",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5af81f87-5582-aa23-e063-6294a90a1ee8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=76b264ce-2a13-4511-8e21-4ffad0a327f9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=32ffddd1-4e2b-45d9-9b36-bb730167ec80",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 5 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 5 medications checked\n\nNot checked\n\nAmbien (zolpidem) 10 mg once daily at bedtime = 10 mg/day: not found. Edit it in the list, or remove it.\nXanax (alprazolam) 1 mg three times daily = 3 mg/day: not found. Edit it in the list, or remove it.\nAdderall (amphetamine/dextroamphetamine) 20 mg three times daily = 60 mg/day: not found. Edit it in the list, or remove it.\nZyprexa (olanzapine) 10 mg once daily = 10 mg/day: not found. Edit it in the list, or remove it.\nZyprexa (olanzapine) 2.5 mg once daily = 2.5 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n5 medications\nClear all\nAmbien (zolpidem) 10 mg once daily at bedtime = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nzolpidem tartrate 10 mg [ambien]\n\nWhat the labels say about “Ambien (zolpidem) 10 mg once daily at bedtime = 10 mg/day”\n\nzolpidem tartrate\n\n1 INDICATIONS AND USAGE Zolpidem tartrate tablets, USP a gamma-amino butyric acid (GABA…\n\nOpen on DailyMed\nGOCOVRI\namantadine\n\n1 INDICATIONS AND USAGE GOCOVRI ® is indicated: For the treatment of dyskinesia in pati…\n\nOpen on DailyMed\nADDYI\nflibanserin\n\n1 INDICATIONS AND USAGE ADDYI is indicated for the treatment of women less than 65 year…\n\nOpen on DailyMed\ncimetidine\n\nINDICATIONS AND USAGE Cimetidine tablets are indicated in: 1. Short-term treatment of…\n\nOpen on DailyMed\nShow 8 more\nXanax (alprazolam) 1 mg three times daily = 3 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nalprazolam 3 mg [xanax]\n\nWhat the labels say about “Xanax (alprazolam) 1 mg three times daily = 3 mg/day”\n\nnefazodone hydrochloride\n\n…relatively persistent depressed or dysphoric mood that usually interferes with daily functioning (nearly every day for at least 2 weeks). It must include eithe…\n\nOpen on DailyMed\nalprazolam\n\n1 INDICATIONS AND USAGE Alprazolam tablets are indicated for the: acute treatmen…\n\nOpen on DailyMed\nE.E.S 400\nerythromycin ethylsuccinate\n\n…cin as treatment of gonorrhea and a follow-up serologic test for syphilis after 3 months. Syphilis caused by Treponema pallidum : Erythromycin is an alternate c…\n\nOpen on DailyMed\nfluoxetine hcl\n\n1 INDICATIONS AND USAGE Fluoxetine tablets are indicated for the treatment of: M…\n\nOpen on DailyMed\nShow 8 more\nAdderall (amphetamine/dextroamphetamine) 20 mg three times daily = 60 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namphetamine / dextroamphetamine oral tablet [adderall]\n\nWhat the labels say about “Adderall (amphetamine/dextroamphetamine) 20 mg three times daily = 60 mg/day”\n\nAdzenys XR-ODT\namphetamine\n\n…autions (5.1) , and Drug Abuse and Dependence (9.2 , 9.3) ] Hypersensitivity to amphetamine, or other components of ADZENYS XR-ODT [see Contraindications (4) ]…\n\nOpen on DailyMed\ndextroamphetamine saccharate, amphetamine aspartate monohydrate, dextroamphetamine sulfate and amphetamine sulfate\n\n1 INDICATIONS AND USAGE Dextroamphetamine saccharate, amphetamine aspartate monohydrate, dextroamphetami…\n\nOpen on DailyMed\ndextroamphetamine saccharate, amphetamine aspartate, dextroamphetamine sulfate, amphetamine sulfate\n\nINDICATIONS AND USAGE Dextroamphetamine saccharate, amphetamine aspartate, dextroamphetamine sulfate a…\n\nOpen on DailyMed\ndextroamphetamine saccharate, amphetamine aspartate, dextroamphetamine sulfate, and amphetamine sulfate\n\nINDICATIONS AND USAGE Dextroamphetamine saccharate, amphetamine aspartate, dextroamphetamine sulfate a…\n\nOpen on DailyMed\nShow 8 more\nZyprexa (olanzapine) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nolanzapine 10 mg [zyprexa]\n\nWhat the labels say about “Zyprexa (olanzapine) 10 mg once daily = 10 mg/day”\n\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute dep…\n\nOpen on DailyMed\nolanzapine\n\n1 INDICATIONS AND USAGE Olanzapine is an atypical antipsychotic indicated: As oral formulation for the:…\n\nOpen on DailyMed\nLYBALVI\nolanzapine and samidorphan l-malate\n\n…hium or valproate Maintenance monotherapy treatment LYBALVI is a combination of olanzapine, an atypical antipsychotic, and samidorphan, an opioid antagonist, in…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n…or without agoraphobia [see Clinical Studies (14.4) ] . Fluoxetine capsules and Olanzapine in Combination are indicated for the treatment of: • Acute treatment…\n\nOpen on DailyMed\nShow 8 more\nZyprexa (olanzapine) 2.5 mg once daily = 2.5 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nolanzapine 2.5 mg [zyprexa]\n\nWhat the labels say about “Zyprexa (olanzapine) 2.5 mg once daily = 2.5 mg/day”\n\nolanzapine and fluoxetine\n\n1 INDICATIONS AND USAGE Olanzapine and fluoxetine capsules are indicated for the treatment of: Acute dep…\n\nOpen on DailyMed\nolanzapine\n\n1 INDICATIONS AND USAGE Olanzapine is an atypical antipsychotic indicated: As oral formulation for the:…\n\nOpen on DailyMed\nFluoxetine\nfluoxetine hydrochloride\n\n…or without agoraphobia [see Clinical Studies (14.4) ] . Fluoxetine capsules and Olanzapine in Combination are indicated for the treatment of: • Acute treatment…\n\nOpen on DailyMed\nLYBALVI\nolanzapine and samidorphan l-malate\n\n…hium or valproate Maintenance monotherapy treatment LYBALVI is a combination of olanzapine, an atypical antipsychotic, and samidorphan, an opioid antagonist, in…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:52:10.382Z"
+}

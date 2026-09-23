@@ -1,0 +1,223 @@
+{
+ "id": "L34",
+ "input": "Vyvanse (lisdexamfetamine) 70 mg once daily in the morning = 70 mg/day, Strattera (atomoxetine) 80 mg once daily = 80 mg/day, Intuniv (guanfacine ER) 3 mg once daily at bedtime = 3 mg/day, Kapvay (clonidine ER) 0.1 mg twice daily = 0.2 mg/day, Paxil (paroxetine) 20 mg once daily = 20 mg/day, Seroquel (quetiapine) 100 mg once daily at bedtime = 100 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.833,
+ "secondsToResults": 4.045,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Vyvanse (lisdexamfetamine) 70 mg once daily in the morning = 70 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Vyvanse (lisdexamfetamine) 70 mg once daily in the morning = 70 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlisdexamfetamine dimesylate 70 mg [vyvanse]\n\nWhat the labels say about “Vyvanse (lisdexamfetamine) 70 mg once daily in the morning = 70 mg/day”\n\nLisdexamfetamine Dimesylate\nlisdexamfetamine\n\n1 INDICATIONS AND USAGE Lisdexamfetamine dimesylate capsules are indicated for the…\n\nOpen on DailyMed\nXELSTRYM\ndextroamphetamine\n\n1 INDICATIONS AND USAGE XELSTRYM ® is indicated for the treatment of Attention Def…\n\nOpen on DailyMed\nADDYI\nflibanserin\n\n1 INDICATIONS AND USAGE ADDYI is indicated for the treatment of women less than 65…\n\nOpen on DailyMed\ndeferiprone\n\n1 INDICATIONS AND USAGE Deferiprone tablets are indicated for the treatment of tra…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Strattera (atomoxetine) 80 mg once daily = 80 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Strattera (atomoxetine) 80 mg once daily = 80 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natomoxetine 80 mg [strattera]\n\nWhat the labels say about “Strattera (atomoxetine) 80 mg once daily = 80 mg/day”\n\natomoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Atomoxetine capsules are a selective norepinephrine reuptake inhibitor (SNRI) in…\n\nOpen on DailyMed\nphenylephrine hydrochloride injection, solution\n\n…REACTIONS, contact Dr. Reddy’s Laboratories Inc., at 1-888-375-3784 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 5 WARNINGS AND PRECAUTIONS Severe bradycar…\n\nOpen on DailyMed\nparoxetine\n\n…D ADVERSE REACTIONS, contact Solco Healthcare LLC at 1-866-257-2597 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because cli…\n\nOpen on DailyMed\nsertraline hydrochloride\n\n…t SUSPECTED ADVERSE REACTIONS, contact Cipla Ltd. at 1-866-604-3268 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch . 6.1 Clinical Trials Experience Because cl…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Intuniv (guanfacine ER) 3 mg once daily at bedtime = 3 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Intuniv (guanfacine ER) 3 mg once daily at bedtime = 3 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nguanfacine 3 mg extended release oral tablet [intuniv]\n\nWhat the labels say about “Intuniv (guanfacine ER) 3 mg once daily at bedtime = 3 mg/day”\n\nguanfacine\n\nINDICATIONS AND USAGE Guanfacine tablets, USP are indicated in the management of hype…\n\nOpen on DailyMed\nGuanfacine Extended-Release\nguanfacine\n\n1 INDICATIONS AND USAGE Guanfacine extended-release tablets are indicated for the treat…\n\nOpen on DailyMed\nAspirin and Extended - Release Dipyridamole Capsules, 25 mg / 200 mg\naspirin and extended - release dipyridamole\n\n1 INDICATIONS AND USAGE Aspirin and Extended-Release Dipyridamole Capsule is indicated…\n\nOpen on DailyMed\nzaleplon\n\nINDICATIONS AND USAGE Zaleplon is indicated for the short-term treatment of insomnia.…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Kapvay (clonidine ER) 0.1 mg twice daily = 0.2 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Kapvay (clonidine ER) 0.1 mg twice daily = 0.2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclonidine extended release oral tablet [kapvay]\n\nWhat the labels say about “Kapvay (clonidine ER) 0.1 mg twice daily = 0.2 mg/day”\n\nclonidine hydrochloride\n\nINDICATIONS AND USAGE Clonidine hydrochloride tablets, USP are indicated in the treatment of hypertens…\n\nOpen on DailyMed\nAdzenys XR-ODT\namphetamine\n\n1. INDICATIONS AND USAGE ADZENYS XR-ODT is a central nervous system (CNS) stimulant indicated for the treatment of Attention Deficit H…\n\nOpen on DailyMed\ncarvedilol\n\n1. INDICATIONS AND USAGE . Carvedilol tablets are an alpha/beta-adrenergic blocking agent indicated for the treatment of: mild to severe chronic hear…\n\nOpen on DailyMed\nbrimonidine tartrate and timolol maleate\n\n…INDICATIONS AND USAGE Brimonidine tartrate/timolol maleate ophthalmic solution 0.2%/0.5% is an alpha-adrenergic receptor agonist with a beta-adrenergic recepto…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Paxil (paroxetine) 20 mg once daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Paxil (paroxetine) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nparoxetine hydrochloride 20 mg [paxil]\n\nWhat the labels say about “Paxil (paroxetine) 20 mg once daily = 20 mg/day”\n\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: • Major depress…\n\nOpen on DailyMed\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nPAROXETINE\nparoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Seroquel (quetiapine) 100 mg once daily at bedtime = 100 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Seroquel (quetiapine) 100 mg once daily at bedtime = 100 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nquetiapine 100 mg [seroquel]\n\nWhat the labels say about “Seroquel (quetiapine) 100 mg once daily at bedtime = 100 mg/day”\n\nquetiapine fumarate\n\n1 INDICATIONS AND USAGE Quetiapine tablet is an atypical antipsychotic indicated for th…\n\nOpen on DailyMed\nAtazanavir Sulfate\natazanavir\n\n1 INDICATIONS AND USAGE Atazanavir capsule is indicated in combination with other antir…\n\nOpen on DailyMed\nTybost\ncobicistat\n\n1 INDICATIONS AND USAGE TYBOST is a CYP3A inhibitor indicated to increase systemic expo…\n\nOpen on DailyMed\nquetiapine\n\n1 INDICATIONS AND USAGE Quetiapine extended-release tablets are an atypical antipsychot…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0862f02a-72a8-41cc-8845-57cf4974bb6f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3819daf3-e935-2c53-c527-e1d57922f394",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58dd1370-5042-833f-e063-6394a90a0777",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d7ea8f7-981c-4acc-aeaf-7516325bfc0c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=71b8fb8a-e13a-246f-f7b4-aa912b9ccd54",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2c5836c3-2099-452e-b6af-d2d50dc359fd",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=04a3bd2d-9a9c-43e8-a0e2-280e02265f16",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec4fed6-cafc-49a0-9540-8d70ac435769",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a6e652e1-b2e4-47ba-bed2-c5e902f8b8f1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a1277ef5-6072-43ff-a6ce-0a7cea58b7cb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d7cfb02-e580-4658-a2fe-2149b515d434",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c1179269-00b5-48ea-972d-31e614e99b7e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d7d6bfff-fbb6-4a1f-aa13-babbb9a1e878",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b54e5bee-2329-4cc2-bed1-8eef11ee488c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=598efb76-93ef-f7de-e063-6394a90a632e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8e176ff2-ed3a-4909-94e1-6b9a3581a621",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=711f42c5-0719-46de-81fb-3d03801b9ed9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7fbea274-d6b5-4faa-bbf0-05fefab42114",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3784c35c-e87f-410c-900b-8fd6313c6010",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nVyvanse (lisdexamfetamine) 70 mg once daily in the morning = 70 mg/day: not found. Edit it in the list, or remove it.\nStrattera (atomoxetine) 80 mg once daily = 80 mg/day: not found. Edit it in the list, or remove it.\nIntuniv (guanfacine ER) 3 mg once daily at bedtime = 3 mg/day: not found. Edit it in the list, or remove it.\nKapvay (clonidine ER) 0.1 mg twice daily = 0.2 mg/day: not found. Edit it in the list, or remove it.\nPaxil (paroxetine) 20 mg once daily = 20 mg/day: not found. Edit it in the list, or remove it.\nSeroquel (quetiapine) 100 mg once daily at bedtime = 100 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nVyvanse (lisdexamfetamine) 70 mg once daily in the morning = 70 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlisdexamfetamine dimesylate 70 mg [vyvanse]\n\nWhat the labels say about “Vyvanse (lisdexamfetamine) 70 mg once daily in the morning = 70 mg/day”\n\nLisdexamfetamine Dimesylate\nlisdexamfetamine\n\n1 INDICATIONS AND USAGE Lisdexamfetamine dimesylate capsules are indicated for the…\n\nOpen on DailyMed\nXELSTRYM\ndextroamphetamine\n\n1 INDICATIONS AND USAGE XELSTRYM ® is indicated for the treatment of Attention Def…\n\nOpen on DailyMed\nADDYI\nflibanserin\n\n1 INDICATIONS AND USAGE ADDYI is indicated for the treatment of women less than 65…\n\nOpen on DailyMed\ndeferiprone\n\n1 INDICATIONS AND USAGE Deferiprone tablets are indicated for the treatment of tra…\n\nOpen on DailyMed\nShow 8 more\nStrattera (atomoxetine) 80 mg once daily = 80 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natomoxetine 80 mg [strattera]\n\nWhat the labels say about “Strattera (atomoxetine) 80 mg once daily = 80 mg/day”\n\natomoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Atomoxetine capsules are a selective norepinephrine reuptake inhibitor (SNRI) in…\n\nOpen on DailyMed\nphenylephrine hydrochloride injection, solution\n\n…REACTIONS, contact Dr. Reddy’s Laboratories Inc., at 1-888-375-3784 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 5 WARNINGS AND PRECAUTIONS Severe bradycar…\n\nOpen on DailyMed\nparoxetine\n\n…D ADVERSE REACTIONS, contact Solco Healthcare LLC at 1-866-257-2597 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because cli…\n\nOpen on DailyMed\nsertraline hydrochloride\n\n…t SUSPECTED ADVERSE REACTIONS, contact Cipla Ltd. at 1-866-604-3268 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch . 6.1 Clinical Trials Experience Because cl…\n\nOpen on DailyMed\nShow 8 more\nIntuniv (guanfacine ER) 3 mg once daily at bedtime = 3 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nguanfacine 3 mg extended release oral tablet [intuniv]\n\nWhat the labels say about “Intuniv (guanfacine ER) 3 mg once daily at bedtime = 3 mg/day”\n\nguanfacine\n\nINDICATIONS AND USAGE Guanfacine tablets, USP are indicated in the management of hype…\n\nOpen on DailyMed\nGuanfacine Extended-Release\nguanfacine\n\n1 INDICATIONS AND USAGE Guanfacine extended-release tablets are indicated for the treat…\n\nOpen on DailyMed\nAspirin and Extended - Release Dipyridamole Capsules, 25 mg / 200 mg\naspirin and extended - release dipyridamole\n\n1 INDICATIONS AND USAGE Aspirin and Extended-Release Dipyridamole Capsule is indicated…\n\nOpen on DailyMed\nzaleplon\n\nINDICATIONS AND USAGE Zaleplon is indicated for the short-term treatment of insomnia.…\n\nOpen on DailyMed\nShow 8 more\nKapvay (clonidine ER) 0.1 mg twice daily = 0.2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclonidine extended release oral tablet [kapvay]\n\nWhat the labels say about “Kapvay (clonidine ER) 0.1 mg twice daily = 0.2 mg/day”\n\nclonidine hydrochloride\n\nINDICATIONS AND USAGE Clonidine hydrochloride tablets, USP are indicated in the treatment of hypertens…\n\nOpen on DailyMed\nAdzenys XR-ODT\namphetamine\n\n1. INDICATIONS AND USAGE ADZENYS XR-ODT is a central nervous system (CNS) stimulant indicated for the treatment of Attention Deficit H…\n\nOpen on DailyMed\ncarvedilol\n\n1. INDICATIONS AND USAGE . Carvedilol tablets are an alpha/beta-adrenergic blocking agent indicated for the treatment of: mild to severe chronic hear…\n\nOpen on DailyMed\nbrimonidine tartrate and timolol maleate\n\n…INDICATIONS AND USAGE Brimonidine tartrate/timolol maleate ophthalmic solution 0.2%/0.5% is an alpha-adrenergic receptor agonist with a beta-adrenergic recepto…\n\nOpen on DailyMed\nShow 8 more\nPaxil (paroxetine) 20 mg once daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nparoxetine hydrochloride 20 mg [paxil]\n\nWhat the labels say about “Paxil (paroxetine) 20 mg once daily = 20 mg/day”\n\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: • Major depress…\n\nOpen on DailyMed\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nPAROXETINE\nparoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nShow 8 more\nSeroquel (quetiapine) 100 mg once daily at bedtime = 100 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nquetiapine 100 mg [seroquel]\n\nWhat the labels say about “Seroquel (quetiapine) 100 mg once daily at bedtime = 100 mg/day”\n\nquetiapine fumarate\n\n1 INDICATIONS AND USAGE Quetiapine tablet is an atypical antipsychotic indicated for th…\n\nOpen on DailyMed\nAtazanavir Sulfate\natazanavir\n\n1 INDICATIONS AND USAGE Atazanavir capsule is indicated in combination with other antir…\n\nOpen on DailyMed\nTybost\ncobicistat\n\n1 INDICATIONS AND USAGE TYBOST is a CYP3A inhibitor indicated to increase systemic expo…\n\nOpen on DailyMed\nquetiapine\n\n1 INDICATIONS AND USAGE Quetiapine extended-release tablets are an atypical antipsychot…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:56:35.633Z"
+}

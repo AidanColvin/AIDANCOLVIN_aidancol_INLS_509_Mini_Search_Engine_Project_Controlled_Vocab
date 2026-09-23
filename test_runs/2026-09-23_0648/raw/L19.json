@@ -1,0 +1,223 @@
+{
+ "id": "L19",
+ "input": "Wellbutrin XL (bupropion XL) 450 mg once daily = 450 mg/day, Ultram (tramadol) 100 mg four times daily = 400 mg/day, Theo-24 (theophylline ER) 400 mg once daily = 400 mg/day, Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day, Seroquel (quetiapine) 400 mg once daily at bedtime = 400 mg/day, Lipitor (atorvastatin) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.839,
+ "secondsToResults": 2.83,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Wellbutrin XL (bupropion XL) 450 mg once daily = 450 mg/day",
+   "generic": "Not a medication name we know.",
+   "dose": null,
+   "facts": null,
+   "text": "Wellbutrin XL (bupropion XL) 450 mg once daily = 450 mg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Wellbutrin XL (bupropion XL) 450 mg once daily = 450 mg/day”\n\nContrave Extended-Release\nnaltrexone hydrochloride and bupropion hydrochloride\n\n…d condition. CONTRAVE is a combination of naltrexone, an opioid antagonist, and bupropion, an aminoketone antidepressant, indicated in combination with a reduce…\n\nOpen on DailyMed\nAMELUZ\naminolevulinic acid hydrochloride\n\n…n combination with photodynamic therapy (PDT) using BF-RhodoLED ® or RhodoLED ® XL lamp, a narrowband, red light illumination source, is indicated for lesion-di…\n\nOpen on DailyMed\nbupropion hydrochloride\n\n1 INDICATIONS AND USAGE Bupropion hydrochloride tablets are indicated for the treatment of major depress…\n\nOpen on DailyMed\nbupropion hydrobromide\n\n1 INDICATIONS AND USAGE Bupropion Hydrobromide Extended-Release Tablets are an aminoketone antidepressan…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Ultram (tramadol) 100 mg four times daily = 400 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Ultram (tramadol) 100 mg four times daily = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntramadol oral tablet [ultram]\n\nWhat the labels say about “Ultram (tramadol) 100 mg four times daily = 400 mg/day”\n\nprotriptyline hydrochloride\n\n…rs including a total of 24 short-term trials of 9 antidepressant drugs in over 4400 patients. The pooled analyses of placebo-controlled trials in adults with MD…\n\nOpen on DailyMed\ntramadol hydrochloride\n\n1 INDICATIONS AND USAGE Tramadol hydrochloride tablets are indicated in adults for the management of pai…\n\nOpen on DailyMed\ntrazodone hydrochloride\n\n…torsade de pointes, and ventricular tachycardia have been reported at doses of 100 mg per day or less [see Warnings and Precautions (5.3) ]. Endocrine disorder…\n\nOpen on DailyMed\nmetaxalone\n\n…diarrhea). The onset of symptoms generally occurs within several hours to a few days after initiation of a serotonergic drug, but may occur later than that. If…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Theo-24 (theophylline ER) 400 mg once daily = 400 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Theo-24 (theophylline ER) 400 mg once daily = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntheophylline 400 mg [theo-24]\n\nWhat the labels say about “Theo-24 (theophylline ER) 400 mg once daily = 400 mg/day”\n\nInluriyo\nimlunestrant\n\n…USAGE INLURIYO is indicated for the treatment of adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative, estrogen…\n\nOpen on DailyMed\ntheophylline\n\nINDICATIONS AND USAGE: Theophylline extended-release tablets are indicated for the treatment of the sym…\n\nOpen on DailyMed\npentoxifylline\n\n…ne extended-release tablets are indicated for the treatment of patients with intermittent claudication on the basis of chronic occlusive arterial disease of the…\n\nOpen on DailyMed\ncimetidine\n\nINDICATIONS AND USAGE Cimetidine tablets are indicated in: 1. Short-term treatment of active duodenal ulcer. Most patients heal within 4 weeks and th…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nciprofloxacin 1000 mg [cipro]\n\nWhat the labels say about “Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day”\n\npirfenidone\n\n…led trials (Studies 1, 2, and 3) in which a total of 623 patients received 2403 mg/day of pirfenidone and 624 patients received placebo. Subjects ages ranged fr…\n\nOpen on DailyMed\nORLYNVAH\nsulopenem etzadroxil and probenecid\n\n…en with uUTI. Therapy with oral ORLYNVAH tablets was administered as one tablet twice daily for 5 days [see Clinical Studies ( 14 )]. The trials included 1932 p…\n\nOpen on DailyMed\nciprofloxacin hydrochloride and hydrocortisone\n\nINDICATIONS AND USAGE Ciprofloxacin hydrochloride and hydrocortisone otic suspension is indicated for…\n\nOpen on DailyMed\nVERSACLOZ\nclozapine\n\n…ons of muscle groups, may occur in susceptible individuals during the first few days of treatment. Dystonic symptoms include: spasm of the neck muscles, sometim…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Seroquel (quetiapine) 400 mg once daily at bedtime = 400 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Seroquel (quetiapine) 400 mg once daily at bedtime = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nquetiapine 400 mg [seroquel]\n\nWhat the labels say about “Seroquel (quetiapine) 400 mg once daily at bedtime = 400 mg/day”\n\nquetiapine fumarate\n\n1 INDICATIONS AND USAGE Quetiapine tablet is an atypical antipsychotic indicated for th…\n\nOpen on DailyMed\nAtazanavir Sulfate\natazanavir\n\n1 INDICATIONS AND USAGE Atazanavir capsule is indicated in combination with other antir…\n\nOpen on DailyMed\nquetiapine\n\n1 INDICATIONS AND USAGE Quetiapine extended-release tablets are an atypical antipsychot…\n\nOpen on DailyMed\nfosamprenavir calcium\n\n1 INDICATIONS AND USAGE Fosamprenavir calcium tablets are indicated in combination with…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lipitor (atorvastatin) 10 mg once daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lipitor (atorvastatin) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 10 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 10 mg once daily = 10 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=485ff360-32c8-11df-928b-0002a5d5c51b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=650daa9f-aeec-49ce-95b9-5fa20b988afd",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86530199-999b-9f92-b1bc-b8515ec829f3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3ec04240-baef-44d7-8d73-a181171eec43",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6c7c39e-e510-4f4a-bf7a-926f0e075d3a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa7afa93-b98c-4dc7-bbb8-ab6a058427b9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=98713a2b-6666-44ea-9966-54e78041d27a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5bc172e4-e8a2-441a-be52-279a7f890196",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5e64036a-ee3e-42e7-9e59-881f88a4e298",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cd840a2c-2a0e-4b2b-84ff-a0406bb6fa37",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=06c0a509-026f-44e0-9975-a94a8de51d43",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3115f15f-171c-4266-8dc8-5655f56e6acc",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=24c451c0-4cfb-37f3-e063-6394a90a895e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0881bbe-cc95-45d4-9878-3bc8946eff26",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=711f42c5-0719-46de-81fb-3d03801b9ed9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7fbea274-d6b5-4faa-bbf0-05fefab42114",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b0cce89c-0e84-4f60-8e50-0e26c41c2613",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5cd1eead-9fc1-426c-bee8-214ffa7d9dc1",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9adb9e4-c495-9530-e5e3-7e3b01d53e4c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57f9b462-f08e-483c-9b64-b7e4c8d46927",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c7b1b11-90a3-bc1c-0e45-9e2a14ef0b03",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nWellbutrin XL (bupropion XL) 450 mg once daily = 450 mg/day: not a medication name, so it was looked up in the labels instead.\nUltram (tramadol) 100 mg four times daily = 400 mg/day: not found. Edit it in the list, or remove it.\nTheo-24 (theophylline ER) 400 mg once daily = 400 mg/day: not found. Edit it in the list, or remove it.\nCipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day: not found. Edit it in the list, or remove it.\nSeroquel (quetiapine) 400 mg once daily at bedtime = 400 mg/day: not found. Edit it in the list, or remove it.\nLipitor (atorvastatin) 10 mg once daily = 10 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nWellbutrin XL (bupropion XL) 450 mg once daily = 450 mg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “Wellbutrin XL (bupropion XL) 450 mg once daily = 450 mg/day”\n\nContrave Extended-Release\nnaltrexone hydrochloride and bupropion hydrochloride\n\n…d condition. CONTRAVE is a combination of naltrexone, an opioid antagonist, and bupropion, an aminoketone antidepressant, indicated in combination with a reduce…\n\nOpen on DailyMed\nAMELUZ\naminolevulinic acid hydrochloride\n\n…n combination with photodynamic therapy (PDT) using BF-RhodoLED ® or RhodoLED ® XL lamp, a narrowband, red light illumination source, is indicated for lesion-di…\n\nOpen on DailyMed\nbupropion hydrochloride\n\n1 INDICATIONS AND USAGE Bupropion hydrochloride tablets are indicated for the treatment of major depress…\n\nOpen on DailyMed\nbupropion hydrobromide\n\n1 INDICATIONS AND USAGE Bupropion Hydrobromide Extended-Release Tablets are an aminoketone antidepressan…\n\nOpen on DailyMed\nShow 8 more\nUltram (tramadol) 100 mg four times daily = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntramadol oral tablet [ultram]\n\nWhat the labels say about “Ultram (tramadol) 100 mg four times daily = 400 mg/day”\n\nprotriptyline hydrochloride\n\n…rs including a total of 24 short-term trials of 9 antidepressant drugs in over 4400 patients. The pooled analyses of placebo-controlled trials in adults with MD…\n\nOpen on DailyMed\ntramadol hydrochloride\n\n1 INDICATIONS AND USAGE Tramadol hydrochloride tablets are indicated in adults for the management of pai…\n\nOpen on DailyMed\ntrazodone hydrochloride\n\n…torsade de pointes, and ventricular tachycardia have been reported at doses of 100 mg per day or less [see Warnings and Precautions (5.3) ]. Endocrine disorder…\n\nOpen on DailyMed\nmetaxalone\n\n…diarrhea). The onset of symptoms generally occurs within several hours to a few days after initiation of a serotonergic drug, but may occur later than that. If…\n\nOpen on DailyMed\nShow 8 more\nTheo-24 (theophylline ER) 400 mg once daily = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntheophylline 400 mg [theo-24]\n\nWhat the labels say about “Theo-24 (theophylline ER) 400 mg once daily = 400 mg/day”\n\nInluriyo\nimlunestrant\n\n…USAGE INLURIYO is indicated for the treatment of adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative, estrogen…\n\nOpen on DailyMed\ntheophylline\n\nINDICATIONS AND USAGE: Theophylline extended-release tablets are indicated for the treatment of the sym…\n\nOpen on DailyMed\npentoxifylline\n\n…ne extended-release tablets are indicated for the treatment of patients with intermittent claudication on the basis of chronic occlusive arterial disease of the…\n\nOpen on DailyMed\ncimetidine\n\nINDICATIONS AND USAGE Cimetidine tablets are indicated in: 1. Short-term treatment of active duodenal ulcer. Most patients heal within 4 weeks and th…\n\nOpen on DailyMed\nShow 8 more\nCipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nciprofloxacin 1000 mg [cipro]\n\nWhat the labels say about “Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day”\n\npirfenidone\n\n…led trials (Studies 1, 2, and 3) in which a total of 623 patients received 2403 mg/day of pirfenidone and 624 patients received placebo. Subjects ages ranged fr…\n\nOpen on DailyMed\nORLYNVAH\nsulopenem etzadroxil and probenecid\n\n…en with uUTI. Therapy with oral ORLYNVAH tablets was administered as one tablet twice daily for 5 days [see Clinical Studies ( 14 )]. The trials included 1932 p…\n\nOpen on DailyMed\nciprofloxacin hydrochloride and hydrocortisone\n\nINDICATIONS AND USAGE Ciprofloxacin hydrochloride and hydrocortisone otic suspension is indicated for…\n\nOpen on DailyMed\nVERSACLOZ\nclozapine\n\n…ons of muscle groups, may occur in susceptible individuals during the first few days of treatment. Dystonic symptoms include: spasm of the neck muscles, sometim…\n\nOpen on DailyMed\nShow 8 more\nSeroquel (quetiapine) 400 mg once daily at bedtime = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nquetiapine 400 mg [seroquel]\n\nWhat the labels say about “Seroquel (quetiapine) 400 mg once daily at bedtime = 400 mg/day”\n\nquetiapine fumarate\n\n1 INDICATIONS AND USAGE Quetiapine tablet is an atypical antipsychotic indicated for th…\n\nOpen on DailyMed\nAtazanavir Sulfate\natazanavir\n\n1 INDICATIONS AND USAGE Atazanavir capsule is indicated in combination with other antir…\n\nOpen on DailyMed\nquetiapine\n\n1 INDICATIONS AND USAGE Quetiapine extended-release tablets are an atypical antipsychot…\n\nOpen on DailyMed\nfosamprenavir calcium\n\n1 INDICATIONS AND USAGE Fosamprenavir calcium tablets are indicated in combination with…\n\nOpen on DailyMed\nShow 8 more\nLipitor (atorvastatin) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 10 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 10 mg once daily = 10 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:54:34.684Z"
+}

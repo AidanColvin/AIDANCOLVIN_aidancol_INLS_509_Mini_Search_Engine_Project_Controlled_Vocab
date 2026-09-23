@@ -1,0 +1,223 @@
+{
+ "id": "L23",
+ "input": "Glucotrol (glipizide) 10 mg twice daily = 20 mg/day, Lantus (insulin glargine) 40 units subcutaneous once daily at bedtime = 40 units/day, Inderal (propranolol) 40 mg twice daily = 80 mg/day, Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day, Levaquin (levofloxacin) 750 mg once daily = 750 mg/day, Ozempic (semaglutide) 1 mg subcutaneous once weekly = 1 mg/week",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.845,
+ "secondsToResults": 2.832,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Glucotrol (glipizide) 10 mg twice daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Glucotrol (glipizide) 10 mg twice daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nglipizide 5 mg [glucotrol]\nglipizide 10 mg [glucotrol]\n\nWhat the labels say about “Glucotrol (glipizide) 10 mg twice daily = 20 mg/day”\n\nglipizide and metformin hydrochloride\n\nINDICATIONS AND USAGE Glipizide and metformin hydrochloride tablets, USP are indicated as an adjunct t…\n\nOpen on DailyMed\nranitidine\n\n…lief commonly occurs within 24 hours after starting therapy with ranitidine 150 mg twice daily. Treatment of endoscopically diagnosed erosive esophagitis. Sympt…\n\nOpen on DailyMed\nranitidine\n\n…occurs within 24 hours after starting therapy with Ranitidine Tablets, USP 150 mg b.i.d. Treatment of endoscopically diagnosed erosive esophagitis. Symptomatic…\n\nOpen on DailyMed\nglipizide\n\nINDICATIONS AND USAGE Glipizide Tablets USP are indicated as an adjunct to diet and exercise to improv…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lantus (insulin glargine) 40 units subcutaneous once daily at bedtime = 40 units/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lantus (insulin glargine) 40 units subcutaneous once daily at bedtime = 40 units/day\nNot found in the FDA labels. Did you mean:\nEdit\ninsulin glargine 100 unt/ml [lantus]\n\nWhat the labels say about “Lantus (insulin glargine) 40 units subcutaneous once daily at bedtime = 40 units/day”\n\nSoliqua 100/33\ninsulin glargine and lixisenatide\n\n1 INDICATIONS AND USAGE SOLIQUA 100/33 is a combination of insulin glargine and lixisen…\n\nOpen on DailyMed\nBASAGLAR KwikPen\ninsulin glargine\n\n1 INDICATIONS AND USAGE BASAGLAR ® is indicated to improve glycemic control in adults a…\n\nOpen on DailyMed\nLevemir\ninsulin detemir\n\n1 INDICATIONS AND USAGE LEVEMIR is indicated to improve glycemic control in adult and p…\n\nOpen on DailyMed\nApidra\ninsulin glulisine\n\n1 INDICATIONS AND USAGE APIDRA is indicated to improve glycemic control in adult and pe…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Inderal (propranolol) 40 mg twice daily = 80 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Inderal (propranolol) 40 mg twice daily = 80 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\npropranolol hydrochloride 80 mg [inderal]\n\nWhat the labels say about “Inderal (propranolol) 40 mg twice daily = 80 mg/day”\n\nErgomar Sublingual\nergotamine tartrate\n\n…trate and caffeine. Ergomar ® Sublingual Tablets should not be used for chronic daily administration (See DOSAGE AND ADMINISTRATION ). WARNING Serious and/or li…\n\nOpen on DailyMed\nCafergot\nergotamine tartrate and caffeine\n\n…ERSE REACTIONS, contact Trifluent Pharma at 1-888-927-5191, or contact FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. WARNINGS - CYP 3A4 Inhibitors (e.g. Macrol…\n\nOpen on DailyMed\npropranolol hydrochloride\n\nINDICATIONS AND USAGE Hypertension Propranolol Hydrochloride Extended-Release Capsules, USP, are indicated in the m…\n\nOpen on DailyMed\nlovastatin\n\n…te trial of diet therapy the following findings are present: LDL-C remains >189 mg/dL or LDL-C remains >160 mg/dL and: there is a positive family history of pre…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsulfamethoxazole 800 mg / trimethoprim 160 mg oral tablet [bactrim ds]\n\nWhat the labels say about “Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day”\n\nsulfamethoxazole and trimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of sulfamethoxazole and trimethoprim tablets and other antibacterial drugs, sulfame…\n\nOpen on DailyMed\ntrimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of trimethoprim tablets, USP and other antibacterial drugs, trimethoprim tablets, U…\n\nOpen on DailyMed\ndofetilide\n\n…RSE EVENTS, contact Dr.Reddy’s Laboratories Inc., at 1-888-375-3784 or FDA at 1-800-FDA-1088 or http://www.fda.gov/medwatch for voluntary reporting of adverse r…\n\nOpen on DailyMed\nLEVOLEUCOVORIN CALCIUM\nlevoleucovorin injection\n\n…) To report SUSPECTED ADVERSE REACTIONS, contact Slate Run Pharmaceuticals at 1-800-341-9214 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Tria…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Levaquin (levofloxacin) 750 mg once daily = 750 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Levaquin (levofloxacin) 750 mg once daily = 750 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlevofloxacin 750 mg [levaquin]\n\nWhat the labels say about “Levaquin (levofloxacin) 750 mg once daily = 750 mg/day”\n\nlevofloxacin\n\n1 INDICATIONS AND USAGE Levofloxacin tablets are a fluoroquinolone antibacterial indicated in adults (18…\n\nOpen on DailyMed\nZERBAXA\nceftolozane and tazobactam\n\n…on renal function where appropriate) and 1032 patients treated with comparator (levofloxacin 750 mg daily in cUTI or meropenem 1 g every 8 hours in cIAI) for up…\n\nOpen on DailyMed\nPREVYMIS\nletermovir\n\n…ositive Recipients [R+] of an Allogeneic HSCT Prophylaxis Through Week 14 (~100 days) Post-HSCT The safety of PREVYMIS was evaluated in a Phase 3 randomized, do…\n\nOpen on DailyMed\nKYGEVVI\ndoxecitine and doxribtimine\n\n…age at enrollment, received KYGEVVI or pyrimidine nucleosides dosages up to 800 mg/kg/day [see Clinical Studies (14) ] . KYGEVVI is not approved for use in pati…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Ozempic (semaglutide) 1 mg subcutaneous once weekly = 1 mg/week",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Ozempic (semaglutide) 1 mg subcutaneous once weekly = 1 mg/week\nNot found in the FDA labels. Did you mean:\nEdit\nsemaglutide 1.5 mg [ozempic]\n\nWhat the labels say about “Ozempic (semaglutide) 1 mg subcutaneous once weekly = 1 mg/week”\n\nOzempic\nsemaglutide\n\n1 INDICATIONS AND USAGE OZEMPIC is indicated: • as an adjunct to diet and exerci…\n\nOpen on DailyMed\nHYMPAVZI\nmarstacimab-hncq\n\n1 INDICATIONS AND USAGE HYMPAVZI is indicated for routine prophylaxis to prevent…\n\nOpen on DailyMed\nBENLYSTA\nbelimumab\n\n1 INDICATIONS AND USAGE BENLYSTA is indicated for the treatment of patients 5 ye…\n\nOpen on DailyMed\nSOGROYA\nsomapacitan-beco\n\n1 INDICATIONS AND USAGE SOGROYA is indicated for the treatment of pediatric pati…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b18b903-eb52-4d08-b4a5-f984957eb116",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d0da9dd6-c691-4614-99c7-531b0bf34837",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b38a3332-5c54-453f-aeb7-070f830955c2",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00729e82-150a-464a-abe7-a3319721fbdb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4bba538b-cf7c-4310-ae8f-cb711ed21bcc",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0ad21db3-2b1c-4ed9-a687-bdd6a74d0aae",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=82192527-99aa-4b53-8ce9-9173668d309c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e7af6a7a-8046-4fb4-9979-4ec4230b23aa",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a9582fdb-7ddd-4f69-aa7a-66247cdb8c92",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4db7eece-2eef-bc1b-e063-6394a90a98cb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5affa0ea-db84-86fd-e063-6294a90a4d16",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9438d8a0-ca5b-4676-aab9-d0241ccff6c9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d60c218c-6529-4944-af0b-a9dc720f32e9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=249e938d-f181-47c4-a082-372d65462f33",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26de5f8c-8cec-46f6-a468-69451758a278",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=124bc214-62f8-40f9-a227-a35e2d1ff2a0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a65b2bc-9edc-f193-e063-6394a90a0104",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=70ac1d90-eff3-4f0b-9f46-5846c571b32f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b49df80-be4f-47e0-a0b7-123f3e69395b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d5ce670-9314-4fd7-8b0a-1447910dcf9e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=42bdd912-2393-44c4-b7e0-47672ca28991",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a2cc631e-13a6-40c2-acf9-065ccedfb90a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2fa3c528-1777-4628-8a55-a69dae2381a3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eadd03b4-adc3-4b88-8a24-9d205c5b85aa",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nGlucotrol (glipizide) 10 mg twice daily = 20 mg/day: not found. Edit it in the list, or remove it.\nLantus (insulin glargine) 40 units subcutaneous once daily at bedtime = 40 units/day: not found. Edit it in the list, or remove it.\nInderal (propranolol) 40 mg twice daily = 80 mg/day: not found. Edit it in the list, or remove it.\nBactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day: not found. Edit it in the list, or remove it.\nLevaquin (levofloxacin) 750 mg once daily = 750 mg/day: not found. Edit it in the list, or remove it.\nOzempic (semaglutide) 1 mg subcutaneous once weekly = 1 mg/week: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nGlucotrol (glipizide) 10 mg twice daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nglipizide 5 mg [glucotrol]\nglipizide 10 mg [glucotrol]\n\nWhat the labels say about “Glucotrol (glipizide) 10 mg twice daily = 20 mg/day”\n\nglipizide and metformin hydrochloride\n\nINDICATIONS AND USAGE Glipizide and metformin hydrochloride tablets, USP are indicated as an adjunct t…\n\nOpen on DailyMed\nranitidine\n\n…lief commonly occurs within 24 hours after starting therapy with ranitidine 150 mg twice daily. Treatment of endoscopically diagnosed erosive esophagitis. Sympt…\n\nOpen on DailyMed\nranitidine\n\n…occurs within 24 hours after starting therapy with Ranitidine Tablets, USP 150 mg b.i.d. Treatment of endoscopically diagnosed erosive esophagitis. Symptomatic…\n\nOpen on DailyMed\nglipizide\n\nINDICATIONS AND USAGE Glipizide Tablets USP are indicated as an adjunct to diet and exercise to improv…\n\nOpen on DailyMed\nShow 8 more\nLantus (insulin glargine) 40 units subcutaneous once daily at bedtime = 40 units/day\nNot found in the FDA labels. Did you mean:\nEdit\ninsulin glargine 100 unt/ml [lantus]\n\nWhat the labels say about “Lantus (insulin glargine) 40 units subcutaneous once daily at bedtime = 40 units/day”\n\nSoliqua 100/33\ninsulin glargine and lixisenatide\n\n1 INDICATIONS AND USAGE SOLIQUA 100/33 is a combination of insulin glargine and lixisen…\n\nOpen on DailyMed\nBASAGLAR KwikPen\ninsulin glargine\n\n1 INDICATIONS AND USAGE BASAGLAR ® is indicated to improve glycemic control in adults a…\n\nOpen on DailyMed\nLevemir\ninsulin detemir\n\n1 INDICATIONS AND USAGE LEVEMIR is indicated to improve glycemic control in adult and p…\n\nOpen on DailyMed\nApidra\ninsulin glulisine\n\n1 INDICATIONS AND USAGE APIDRA is indicated to improve glycemic control in adult and pe…\n\nOpen on DailyMed\nShow 8 more\nInderal (propranolol) 40 mg twice daily = 80 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\npropranolol hydrochloride 80 mg [inderal]\n\nWhat the labels say about “Inderal (propranolol) 40 mg twice daily = 80 mg/day”\n\nErgomar Sublingual\nergotamine tartrate\n\n…trate and caffeine. Ergomar ® Sublingual Tablets should not be used for chronic daily administration (See DOSAGE AND ADMINISTRATION ). WARNING Serious and/or li…\n\nOpen on DailyMed\nCafergot\nergotamine tartrate and caffeine\n\n…ERSE REACTIONS, contact Trifluent Pharma at 1-888-927-5191, or contact FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. WARNINGS - CYP 3A4 Inhibitors (e.g. Macrol…\n\nOpen on DailyMed\npropranolol hydrochloride\n\nINDICATIONS AND USAGE Hypertension Propranolol Hydrochloride Extended-Release Capsules, USP, are indicated in the m…\n\nOpen on DailyMed\nlovastatin\n\n…te trial of diet therapy the following findings are present: LDL-C remains >189 mg/dL or LDL-C remains >160 mg/dL and: there is a positive family history of pre…\n\nOpen on DailyMed\nShow 8 more\nBactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsulfamethoxazole 800 mg / trimethoprim 160 mg oral tablet [bactrim ds]\n\nWhat the labels say about “Bactrim DS (sulfamethoxazole/trimethoprim) 800/160 mg twice daily = 1600/320 mg/day”\n\nsulfamethoxazole and trimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of sulfamethoxazole and trimethoprim tablets and other antibacterial drugs, sulfame…\n\nOpen on DailyMed\ntrimethoprim\n\n…ce the development of drug-resistant bacteria and maintain the effectiveness of trimethoprim tablets, USP and other antibacterial drugs, trimethoprim tablets, U…\n\nOpen on DailyMed\ndofetilide\n\n…RSE EVENTS, contact Dr.Reddy’s Laboratories Inc., at 1-888-375-3784 or FDA at 1-800-FDA-1088 or http://www.fda.gov/medwatch for voluntary reporting of adverse r…\n\nOpen on DailyMed\nLEVOLEUCOVORIN CALCIUM\nlevoleucovorin injection\n\n…) To report SUSPECTED ADVERSE REACTIONS, contact Slate Run Pharmaceuticals at 1-800-341-9214 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Tria…\n\nOpen on DailyMed\nShow 8 more\nLevaquin (levofloxacin) 750 mg once daily = 750 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlevofloxacin 750 mg [levaquin]\n\nWhat the labels say about “Levaquin (levofloxacin) 750 mg once daily = 750 mg/day”\n\nlevofloxacin\n\n1 INDICATIONS AND USAGE Levofloxacin tablets are a fluoroquinolone antibacterial indicated in adults (18…\n\nOpen on DailyMed\nZERBAXA\nceftolozane and tazobactam\n\n…on renal function where appropriate) and 1032 patients treated with comparator (levofloxacin 750 mg daily in cUTI or meropenem 1 g every 8 hours in cIAI) for up…\n\nOpen on DailyMed\nPREVYMIS\nletermovir\n\n…ositive Recipients [R+] of an Allogeneic HSCT Prophylaxis Through Week 14 (~100 days) Post-HSCT The safety of PREVYMIS was evaluated in a Phase 3 randomized, do…\n\nOpen on DailyMed\nKYGEVVI\ndoxecitine and doxribtimine\n\n…age at enrollment, received KYGEVVI or pyrimidine nucleosides dosages up to 800 mg/kg/day [see Clinical Studies (14) ] . KYGEVVI is not approved for use in pati…\n\nOpen on DailyMed\nShow 8 more\nOzempic (semaglutide) 1 mg subcutaneous once weekly = 1 mg/week\nNot found in the FDA labels. Did you mean:\nEdit\nsemaglutide 1.5 mg [ozempic]\n\nWhat the labels say about “Ozempic (semaglutide) 1 mg subcutaneous once weekly = 1 mg/week”\n\nOzempic\nsemaglutide\n\n1 INDICATIONS AND USAGE OZEMPIC is indicated: • as an adjunct to diet and exerci…\n\nOpen on DailyMed\nHYMPAVZI\nmarstacimab-hncq\n\n1 INDICATIONS AND USAGE HYMPAVZI is indicated for routine prophylaxis to prevent…\n\nOpen on DailyMed\nBENLYSTA\nbelimumab\n\n1 INDICATIONS AND USAGE BENLYSTA is indicated for the treatment of patients 5 ye…\n\nOpen on DailyMed\nSOGROYA\nsomapacitan-beco\n\n1 INDICATIONS AND USAGE SOGROYA is indicated for the treatment of pediatric pati…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:55:06.161Z"
+}

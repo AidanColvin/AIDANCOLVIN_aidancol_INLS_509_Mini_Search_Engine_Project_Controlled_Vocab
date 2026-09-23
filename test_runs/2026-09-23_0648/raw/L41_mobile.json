@@ -1,0 +1,223 @@
+{
+ "id": "L41",
+ "input": "Zoloft (sertraline) 50 mg once daily = 50 mg/day, sertraline (generic) 50 mg once daily = 50 mg/day, Synthroid (levothyroxine) 0.1 mg once daily = 0.1 mg/day, levothyroxine (generic) 100 mcg once daily = 100 mcg/day, Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day, Advil (ibuprofen OTC) 200 mg 2 tablets twice daily = 800 mg/day",
+ "viewport": "390x844",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 1.193,
+ "secondsToResults": 4.037,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Zoloft (sertraline) 50 mg once daily = 50 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zoloft (sertraline) 50 mg once daily = 50 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsertraline 50 mg [zoloft]\n\nWhat the labels say about “Zoloft (sertraline) 50 mg once daily = 50 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nsertraline hydrochloride\n\n1 INDICATIONS AND USAGE Sertraline hydrochloride tablets are indicated for the treatment of the followin…\n\nOpen on DailyMed\nefavirenz\n\n…ons ( 5.9 )] Most common adverse reactions (>5%, moderate-severe) are impaired concentration, abnormal dreams, rash, dizziness, nausea, headache, fatigue, insom…\n\nOpen on DailyMed\ndarunavir\n\n…y data from the Phase 3 trial TMC114-C211 comparing darunavir/ritonavir 800/100 mg once daily versus lopinavir/ritonavir 800/200 mg per day in 689 antiretrovira…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "sertraline (generic) 50 mg once daily = 50 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "sertraline (generic) 50 mg once daily = 50 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsertraline 50 mg\n\nWhat the labels say about “sertraline (generic) 50 mg once daily = 50 mg/day”\n\nphenelzine sulfate\n\n…Blurred vision, glaucoma. Although reported less frequently, and sometimes only once, additional severe side effects include: Nervous System —Ataxia, shock-like…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nsertraline hydrochloride\n\n1 INDICATIONS AND USAGE Sertraline hydrochloride tablets are indicated for the treatment of the followin…\n\nOpen on DailyMed\nefavirenz\n\n…ons ( 5.9 )] Most common adverse reactions (>5%, moderate-severe) are impaired concentration, abnormal dreams, rash, dizziness, nausea, headache, fatigue, insom…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Synthroid (levothyroxine) 0.1 mg once daily = 0.1 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Synthroid (levothyroxine) 0.1 mg once daily = 0.1 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlevothyroxine sodium 0.1 mg [synthroid]\n\nWhat the labels say about “Synthroid (levothyroxine) 0.1 mg once daily = 0.1 mg/day”\n\nisoproterenol hydrochloride\n\n…may be potentiated by tricyclic antidepressants, monoamine oxidase inhibitors, levothyroxine sodium, and certain antihistamines, notably chlorpheniramine, trip…\n\nOpen on DailyMed\nlevothyroxine sodium\n\n1 INDICATIONS AND USAGE Hypothyroidism Levothyroxine sodium tablets are indicated in adult and pediatric patients, incl…\n\nOpen on DailyMed\nJAYTHARI Oral Suspension\ndeflazacort\n\n…Table 1 lists the adverse reactions that occurred in ≥5% of patients in the 0.9 mg/kg/day deflazacort-treated group and that occurred more frequently than in pl…\n\nOpen on DailyMed\nimatinib mesylate\n\n…ommon in the blast crisis and accelerated phase studies (where the dose was 600 mg/day), and are more common in the elderly. These reactions were usually manage…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "levothyroxine (generic) 100 mcg once daily = 100 mcg/day",
+   "generic": "Not a medication name we know.",
+   "dose": null,
+   "facts": null,
+   "text": "levothyroxine (generic) 100 mcg once daily = 100 mcg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “levothyroxine (generic) 100 mcg once daily = 100 mcg/day”\n\nLevothyroxine Sodium\nlevothyroxine sodium anhydrous\n\n1 INDICATIONS AND USAGE Levothyroxine Sodium for Injection is indicated for the treatment of myxedema co…\n\nOpen on DailyMed\nNP Thyroid 15\nlevothyroxine, liothyronine\n\n…for the treatment of obesity. In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. Larger doses m…\n\nOpen on DailyMed\nlevothyroxine sodium\n\n1 INDICATIONS AND USAGE Hypothyroidism Levothyroxine sodium tablets are indicated in adult and pediatric patients, incl…\n\nOpen on DailyMed\nArmour Thyroid\nthyroid, porcine\n\n…for the treatment of obesity. In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. Larger doses m…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nibuprofen 400 mg [motrin]\nibuprofen 200 mg [motrin]\nibuprofen 600 mg [motrin]\nibuprofen 800 mg [motrin]\nibuprofen 100 mg [motrin]\nibuprofen 300 mg [motrin]\nibuprofen 50 mg [motrin]\n\nWhat the labels say about “Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day”\n\nibuprofen\n\nINDICATIONS AND USAGE Carefully consider the potential benefits and risks of ibuprofen tablets and other treatment options before deciding to use ibuprofen.…\n\nOpen on DailyMed\nibuprofen and famotidine\n\n1 INDICATIONS AND USAGE Ibuprofen and famotidine tablet, a combination of the NSAID ibuprofen and the hi…\n\nOpen on DailyMed\nfelbamate\n\n…report SUSPECTED ADVERSE REACTIONS, contact Taro at 1-866-923-4914 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. The most common adverse reactions seen in…\n\nOpen on DailyMed\nCombogesic\nacetaminophen and ibuprofen\n\n…f mild to moderate acute pain. COMBOGESIC is a combination of acetaminophen and ibuprofen, a non-steroidal anti-inflammatory drug (NSAID), and is indicated in a…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Advil (ibuprofen OTC) 200 mg 2 tablets twice daily = 800 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Advil (ibuprofen OTC) 200 mg 2 tablets twice daily = 800 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nibuprofen 200 mg [advil]\nibuprofen 50 mg [advil]\nibuprofen 100 mg [advil]\n\nWhat the labels say about “Advil (ibuprofen OTC) 200 mg 2 tablets twice daily = 800 mg/day”\n\nibuprofen and famotidine\n\n1 INDICATIONS AND USAGE Ibuprofen and famotidine tablet, a combination of the NSAID ibuprofen and the hi…\n\nOpen on DailyMed\nsodium phenylacetate and sodium benzoate\n\n…SUSPECTED ADVERSE REACTIONS, contact Navinta LLC at 1-609-883-1135 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because cli…\n\nOpen on DailyMed\ncelecoxib\n\n…ug indicated for: • Osteoarthritis (OA) ( 1.1 ) • Rheumatoid Arthritis (RA) ( 1.2 ) • Juvenile Rheumatoid Arthritis (JRA) in patients 2 years and older ( 1.3 )…\n\nOpen on DailyMed\nEMSAM\nselegiline\n\n…• Serotonin Syndrome [see Contraindications (4) and Warnings and Precautions (5.2) ] . • Blood Pressure Elevation [see Warnings and Precautions (5.3) ] . • Acti…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13ca3456-e5bf-4bb1-af95-b1378658a358",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=56daf67e-7501-4cd5-be22-566d7997d42e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13ca3456-e5bf-4bb1-af95-b1378658a358",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=051acbc2-7bf8-4059-e063-6394a90a115b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=43f3890e-0b1d-9bb5-e063-6294a90aa622",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0291eca5-7a1d-4a79-30be-252224d96509",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ae9954a5-e196-449c-abea-ebe4afbee517",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a3ff93ad-86ed-4324-ae86-7e7ed3a49db8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6108759a-783e-42ca-b078-6a3cd84ce901",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7a44b924-7545-4809-98ac-da207e0881ae",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86577bf3-51c6-88e2-e053-2991aa0ac741",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f5de6af-e555-4efd-a3ed-b72c34c051b6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0afffb17-e6ac-4bea-a90e-7ef3c8150290",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f3cee991-19ef-4a1c-bb14-cbc8b6f32776",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f5de6af-e555-4efd-a3ed-b72c34c051b6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d20768fe-4516-483a-a082-ff1df9ad1d99",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a1eadd5-c0a7-473e-bde0-6b9450d11c95",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b891bd9f-fdb8-4862-89c5-ecdd700398a3",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nZoloft (sertraline) 50 mg once daily = 50 mg/day: not found. Edit it in the list, or remove it.\nsertraline (generic) 50 mg once daily = 50 mg/day: not found. Edit it in the list, or remove it.\nSynthroid (levothyroxine) 0.1 mg once daily = 0.1 mg/day: not found. Edit it in the list, or remove it.\nlevothyroxine (generic) 100 mcg once daily = 100 mcg/day: not a medication name, so it was looked up in the labels instead.\nMotrin (ibuprofen) 800 mg three times daily = 2400 mg/day: not found. Edit it in the list, or remove it.\nAdvil (ibuprofen OTC) 200 mg 2 tablets twice daily = 800 mg/day: not found. Edit it in the list, or remove it.\nE\n–\nD\n–\nC\n–\nB\n–\nA\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nZoloft (sertraline) 50 mg once daily = 50 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsertraline 50 mg [zoloft]\n\nWhat the labels say about “Zoloft (sertraline) 50 mg once daily = 50 mg/day”\n\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nsertraline hydrochloride\n\n1 INDICATIONS AND USAGE Sertraline hydrochloride tablets are indicated for the treatment of the followin…\n\nOpen on DailyMed\nefavirenz\n\n…ons ( 5.9 )] Most common adverse reactions (>5%, moderate-severe) are impaired concentration, abnormal dreams, rash, dizziness, nausea, headache, fatigue, insom…\n\nOpen on DailyMed\ndarunavir\n\n…y data from the Phase 3 trial TMC114-C211 comparing darunavir/ritonavir 800/100 mg once daily versus lopinavir/ritonavir 800/200 mg per day in 689 antiretrovira…\n\nOpen on DailyMed\nShow 8 more\nsertraline (generic) 50 mg once daily = 50 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsertraline 50 mg\n\nWhat the labels say about “sertraline (generic) 50 mg once daily = 50 mg/day”\n\nphenelzine sulfate\n\n…Blurred vision, glaucoma. Although reported less frequently, and sometimes only once, additional severe side effects include: Nervous System —Ataxia, shock-like…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nsertraline hydrochloride\n\n1 INDICATIONS AND USAGE Sertraline hydrochloride tablets are indicated for the treatment of the followin…\n\nOpen on DailyMed\nefavirenz\n\n…ons ( 5.9 )] Most common adverse reactions (>5%, moderate-severe) are impaired concentration, abnormal dreams, rash, dizziness, nausea, headache, fatigue, insom…\n\nOpen on DailyMed\nShow 8 more\nSynthroid (levothyroxine) 0.1 mg once daily = 0.1 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlevothyroxine sodium 0.1 mg [synthroid]\n\nWhat the labels say about “Synthroid (levothyroxine) 0.1 mg once daily = 0.1 mg/day”\n\nisoproterenol hydrochloride\n\n…may be potentiated by tricyclic antidepressants, monoamine oxidase inhibitors, levothyroxine sodium, and certain antihistamines, notably chlorpheniramine, trip…\n\nOpen on DailyMed\nlevothyroxine sodium\n\n1 INDICATIONS AND USAGE Hypothyroidism Levothyroxine sodium tablets are indicated in adult and pediatric patients, incl…\n\nOpen on DailyMed\nJAYTHARI Oral Suspension\ndeflazacort\n\n…Table 1 lists the adverse reactions that occurred in ≥5% of patients in the 0.9 mg/kg/day deflazacort-treated group and that occurred more frequently than in pl…\n\nOpen on DailyMed\nimatinib mesylate\n\n…ommon in the blast crisis and accelerated phase studies (where the dose was 600 mg/day), and are more common in the elderly. These reactions were usually manage…\n\nOpen on DailyMed\nShow 8 more\nlevothyroxine (generic) 100 mcg once daily = 100 mcg/day\nNot a medication name we know.\nEdit\n\nWhat the labels say about “levothyroxine (generic) 100 mcg once daily = 100 mcg/day”\n\nLevothyroxine Sodium\nlevothyroxine sodium anhydrous\n\n1 INDICATIONS AND USAGE Levothyroxine Sodium for Injection is indicated for the treatment of myxedema co…\n\nOpen on DailyMed\nNP Thyroid 15\nlevothyroxine, liothyronine\n\n…for the treatment of obesity. In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. Larger doses m…\n\nOpen on DailyMed\nlevothyroxine sodium\n\n1 INDICATIONS AND USAGE Hypothyroidism Levothyroxine sodium tablets are indicated in adult and pediatric patients, incl…\n\nOpen on DailyMed\nArmour Thyroid\nthyroid, porcine\n\n…for the treatment of obesity. In euthyroid patients, doses within the range of daily hormonal requirements are ineffective for weight reduction. Larger doses m…\n\nOpen on DailyMed\nShow 8 more\nMotrin (ibuprofen) 800 mg three times daily = 2400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nibuprofen 400 mg [motrin]\nibuprofen 200 mg [motrin]\nibuprofen 600 mg [motrin]\nibuprofen 800 mg [motrin]\nibuprofen 100 mg [motrin]\nibuprofen 300 mg [motrin]\nibuprofen 50 mg [motrin]\n\nWhat the labels say about “Motrin (ibuprofen) 800 mg three times daily = 2400 mg/day”\n\nibuprofen\n\nINDICATIONS AND USAGE Carefully consider the potential benefits and risks of ibuprofen tablets and other treatment options before deciding to use ibuprofen.…\n\nOpen on DailyMed\nibuprofen and famotidine\n\n1 INDICATIONS AND USAGE Ibuprofen and famotidine tablet, a combination of the NSAID ibuprofen and the hi…\n\nOpen on DailyMed\nfelbamate\n\n…report SUSPECTED ADVERSE REACTIONS, contact Taro at 1-866-923-4914 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. The most common adverse reactions seen in…\n\nOpen on DailyMed\nCombogesic\nacetaminophen and ibuprofen\n\n…f mild to moderate acute pain. COMBOGESIC is a combination of acetaminophen and ibuprofen, a non-steroidal anti-inflammatory drug (NSAID), and is indicated in a…\n\nOpen on DailyMed\nShow 8 more\nAdvil (ibuprofen OTC) 200 mg 2 tablets twice daily = 800 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nibuprofen 200 mg [advil]\nibuprofen 50 mg [advil]\nibuprofen 100 mg [advil]\n\nWhat the labels say about “Advil (ibuprofen OTC) 200 mg 2 tablets twice daily = 800 mg/day”\n\nibuprofen and famotidine\n\n1 INDICATIONS AND USAGE Ibuprofen and famotidine tablet, a combination of the NSAID ibuprofen and the hi…\n\nOpen on DailyMed\nsodium phenylacetate and sodium benzoate\n\n…SUSPECTED ADVERSE REACTIONS, contact Navinta LLC at 1-609-883-1135 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because cli…\n\nOpen on DailyMed\ncelecoxib\n\n…ug indicated for: • Osteoarthritis (OA) ( 1.1 ) • Rheumatoid Arthritis (RA) ( 1.2 ) • Juvenile Rheumatoid Arthritis (JRA) in patients 2 years and older ( 1.3 )…\n\nOpen on DailyMed\nEMSAM\nselegiline\n\n…• Serotonin Syndrome [see Contraindications (4) and Warnings and Precautions (5.2) ] . • Blood Pressure Elevation [see Warnings and Precautions (5.3) ] . • Acti…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3",
+ "runAt": "2026-09-23T10:58:05.150Z"
+}

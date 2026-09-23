@@ -1,0 +1,223 @@
+{
+ "id": "L10",
+ "input": "Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day, Biaxin (clarithromycin) 500 mg twice daily = 1000 mg/day, Aldactone (spironolactone) 25 mg once daily = 25 mg/day, Vasotec (enalapril) 10 mg twice daily = 20 mg/day, Klor-Con (potassium chloride ER) 20 mEq once daily = 20 mEq/day, Trexall (methotrexate) 15 mg once weekly = 15 mg/week",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 1.017,
+ "secondsToResults": 2.833,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsimvastatin 40 mg [zocor]\n\nWhat the labels say about “Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day”\n\nniacin\n\n1 INDICATIONS AND USAGE Therapy with lipid-altering agents should be only one component…\n\nOpen on DailyMed\nefavirenz\n\n1 INDICATIONS & USAGE Efavirenz in combination with other antiretroviral agents is indi…\n\nOpen on DailyMed\nsimvastatin\n\n1 INDICATIONS AND USAGE Simvastatin tablets USP are indicated: • To reduce the risk of…\n\nOpen on DailyMed\nezetimibe and simvastatin\n\n1 INDICATIONS AND USAGE Ezetimibe and Simvastatin Tablets Ezetimibe and Simvastatin Tab…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Biaxin (clarithromycin) 500 mg twice daily = 1000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Biaxin (clarithromycin) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclarithromycin 500 mg [biaxin]\nclarithromycin 250 mg [biaxin]\n\nWhat the labels say about “Biaxin (clarithromycin) 500 mg twice daily = 1000 mg/day”\n\nclarithromycin\n\n1 INDICATIONS AND USAGE Clarithromycin tablets are a macrolide antimicrobial indicated for mild to moder…\n\nOpen on DailyMed\nrifabutin\n\n…hanges on electrocardiogram. When rifabutin was administered at doses from 1050 mg/day to 2400 mg/day, generalized arthralgia and uveitis were reported. These a…\n\nOpen on DailyMed\nranolazine\n\n…, asthenia, constipation, and headache (each about 0.5% versus 0%). Doses above 1000 mg twice daily are poorly tolerated. In controlled clinical trials of angin…\n\nOpen on DailyMed\nesomeprazole\n\n…educe the risk of duodenal ulcer recurrence in combination with amoxicillin and clarithromycin. ( 1.5 ) • Long-term treatment of pathological hypersecretory con…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Aldactone (spironolactone) 25 mg once daily = 25 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Aldactone (spironolactone) 25 mg once daily = 25 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nspironolactone 25 mg [aldactone]\n\nWhat the labels say about “Aldactone (spironolactone) 25 mg once daily = 25 mg/day”\n\nspironolactone\n\n1 INDICATIONS AND USAGE Spironolactone is an aldosterone antagonist indicated for: The treatment of NYHA…\n\nOpen on DailyMed\nspironolactone and hydrochlorothiazide\n\nINDICATIONS AND USAGE Spironolactone, an ingredient of spironolactone and hydrochlorothiazide tablets,…\n\nOpen on DailyMed\nbicalutamide\n\n1. INDICATIONS AND USAGE Bicalutamide tablets 50 mg daily is indicated for use in combination therapy with a luteinizing hormone-…\n\nOpen on DailyMed\ndigoxin\n\n…within the recommended dose range, is maintained within the therapeutic serum concentration range, and when there is careful attention to concurrent medication…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Vasotec (enalapril) 10 mg twice daily = 20 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Vasotec (enalapril) 10 mg twice daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nenalapril maleate 20 mg [vasotec]\n\nWhat the labels say about “Vasotec (enalapril) 10 mg twice daily = 20 mg/day”\n\nenalaprilat\n\nINDICATIONS AND USAGE Enalaprilat injection, USP is indicated for the treatment of hypertension when o…\n\nOpen on DailyMed\nsacubitril and valsartan\n\n…NS, contact Umedica Laboratories USA Inc. at 1-855-288-5777 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\nenalapril maleate\n\nINDICATIONS AND USAGE Hypertension Enalapril maleate is indicated for the treatment of hypertension. Enalapril male…\n\nOpen on DailyMed\nXPHOZAH 10 mg\ntenapanor\n\n…PECTED ADVERSE REACTIONS, contact Ardelyx at 1-844-974-6924 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trial Experience Because clinical tri…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Klor-Con (potassium chloride ER) 20 mEq once daily = 20 mEq/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Klor-Con (potassium chloride ER) 20 mEq once daily = 20 mEq/day\nNot found in the FDA labels. Did you mean:\nEdit\npotassium chloride 20 meq [klor-con]\n\nWhat the labels say about “Klor-Con (potassium chloride ER) 20 mEq once daily = 20 mEq/day”\n\nKLOR-Con/EF\npotassium bicarbonate\n\n…lkalosis; in digitalis intoxication; and in patients with hypokalemic familial periodic paralysis. If hypokalemia is the result of diuretic therapy, considerati…\n\nOpen on DailyMed\npotassium chloride extended-release\n\nINDICATIONS AND USAGE BECAUSE OF REPORTS OF INTESTINAL AND GASTRIC ULCERATION AND BLEEDING WITH CONTROLLED-RELEASE POTASSIUM CHLORIDE PREPARATIONS, TH…\n\nOpen on DailyMed\nTPN Electrolytes\nsodium chloride, calcium chloride, potassium chloride, magnesium chloride, and sodium acetate anhydrous\n\n…trolyte additive) is indicated for use as a supplement to nutritional solutions containing concentrated dextrose and amino acids delivered by central venous inf…\n\nOpen on DailyMed\npotassium citrate\n\n1 INDICATIONS & USAGE Potassium citrate is a citrate salt of potassium indicated for the management of…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Trexall (methotrexate) 15 mg once weekly = 15 mg/week",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Trexall (methotrexate) 15 mg once weekly = 15 mg/week\nNot found in the FDA labels. Did you mean:\nEdit\nmethotrexate 15 mg [trexall]\n\nWhat the labels say about “Trexall (methotrexate) 15 mg once weekly = 15 mg/week”\n\nmethotrexate\n\n1 INDICATIONS AND USAGE Methotrexate tablets are a dihydrofolate reductase inhibitor indicated for the:…\n\nOpen on DailyMed\nmethotrexate\n\n1 INDICATIONS AND USAGE Methotrexate Injection is a folate analog metabolic inhibitor indicated for The…\n\nOpen on DailyMed\nKrystexxa\npegloticase\n\n…tive Heart Failure [see Warnings and Precautions (5.5) ] Co-administration with methotrexate: The most common adverse reactions (≥ 5% of patients) are gout flar…\n\nOpen on DailyMed\nENBREL\netanercept\n\n…y active rheumatoid arthritis (RA). Enbrel can be initiated in combination with methotrexate (MTX) or used alone. 1.2 Polyarticular Juvenile Idiopathic Arthriti…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8eff9205-84ac-e69d-e053-2995a90aad4b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13ca3456-e5bf-4bb1-af95-b1378658a358",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e73ec981-e477-4412-befd-7b807aceb32e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=52a46269-2262-4052-a3ff-5455523f591f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d5848f0-e9f0-4112-a7ca-bcc8ea2e69c6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=25a60937-cbbe-4a50-994f-2ce15203f589",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90c5a0c2-542c-467e-9c0c-ef320534c560",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d68c9247-91c7-4e0f-adc4-2cfa7446580f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b76a904-6c99-485a-a05f-13a36c5f720c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6fa96947-f4d8-4ca4-98fd-a2c123310d83",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26e30155-a50b-df14-e063-6394a90a9be4",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e61d2108-d871-44c0-b12a-2e61fbb56967",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eabae489-e254-4987-ab90-7cda20a6f856",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3173e592-6f28-4864-9bf0-0ef0452da3de",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3fbc6cce-7ad5-49d5-9705-5f66ef92d544",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c57e279c-0f1b-4238-81b7-4e0dc0cc60c5",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f9d85c4f-aa46-40b2-ad76-89dbf6ec8e4d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ace1eb11-b925-405a-b772-58c60b3ca7d4",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c00817bc-7b62-4abe-0280-e7930eda3f94",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=164d9d05-fbb1-4d99-8ba3-ff9c172aa8ca",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22e10810-16fb-4c84-bccf-972405b77ef8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd035a9f-cd40-4314-b9d8-2294b8a924e2",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6e566303-d93a-4130-b764-25749829aa95",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a002b40c-097d-47a5-957f-7a7b1807af7f",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nZocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day: not found. Edit it in the list, or remove it.\nBiaxin (clarithromycin) 500 mg twice daily = 1000 mg/day: not found. Edit it in the list, or remove it.\nAldactone (spironolactone) 25 mg once daily = 25 mg/day: not found. Edit it in the list, or remove it.\nVasotec (enalapril) 10 mg twice daily = 20 mg/day: not found. Edit it in the list, or remove it.\nKlor-Con (potassium chloride ER) 20 mEq once daily = 20 mEq/day: not found. Edit it in the list, or remove it.\nTrexall (methotrexate) 15 mg once weekly = 15 mg/week: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nZocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nsimvastatin 40 mg [zocor]\n\nWhat the labels say about “Zocor (simvastatin) 40 mg once daily at bedtime = 40 mg/day”\n\nniacin\n\n1 INDICATIONS AND USAGE Therapy with lipid-altering agents should be only one component…\n\nOpen on DailyMed\nefavirenz\n\n1 INDICATIONS & USAGE Efavirenz in combination with other antiretroviral agents is indi…\n\nOpen on DailyMed\nsimvastatin\n\n1 INDICATIONS AND USAGE Simvastatin tablets USP are indicated: • To reduce the risk of…\n\nOpen on DailyMed\nezetimibe and simvastatin\n\n1 INDICATIONS AND USAGE Ezetimibe and Simvastatin Tablets Ezetimibe and Simvastatin Tab…\n\nOpen on DailyMed\nShow 8 more\nBiaxin (clarithromycin) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclarithromycin 500 mg [biaxin]\nclarithromycin 250 mg [biaxin]\n\nWhat the labels say about “Biaxin (clarithromycin) 500 mg twice daily = 1000 mg/day”\n\nclarithromycin\n\n1 INDICATIONS AND USAGE Clarithromycin tablets are a macrolide antimicrobial indicated for mild to moder…\n\nOpen on DailyMed\nrifabutin\n\n…hanges on electrocardiogram. When rifabutin was administered at doses from 1050 mg/day to 2400 mg/day, generalized arthralgia and uveitis were reported. These a…\n\nOpen on DailyMed\nranolazine\n\n…, asthenia, constipation, and headache (each about 0.5% versus 0%). Doses above 1000 mg twice daily are poorly tolerated. In controlled clinical trials of angin…\n\nOpen on DailyMed\nesomeprazole\n\n…educe the risk of duodenal ulcer recurrence in combination with amoxicillin and clarithromycin. ( 1.5 ) • Long-term treatment of pathological hypersecretory con…\n\nOpen on DailyMed\nShow 8 more\nAldactone (spironolactone) 25 mg once daily = 25 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nspironolactone 25 mg [aldactone]\n\nWhat the labels say about “Aldactone (spironolactone) 25 mg once daily = 25 mg/day”\n\nspironolactone\n\n1 INDICATIONS AND USAGE Spironolactone is an aldosterone antagonist indicated for: The treatment of NYHA…\n\nOpen on DailyMed\nspironolactone and hydrochlorothiazide\n\nINDICATIONS AND USAGE Spironolactone, an ingredient of spironolactone and hydrochlorothiazide tablets,…\n\nOpen on DailyMed\nbicalutamide\n\n1. INDICATIONS AND USAGE Bicalutamide tablets 50 mg daily is indicated for use in combination therapy with a luteinizing hormone-…\n\nOpen on DailyMed\ndigoxin\n\n…within the recommended dose range, is maintained within the therapeutic serum concentration range, and when there is careful attention to concurrent medication…\n\nOpen on DailyMed\nShow 8 more\nVasotec (enalapril) 10 mg twice daily = 20 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nenalapril maleate 20 mg [vasotec]\n\nWhat the labels say about “Vasotec (enalapril) 10 mg twice daily = 20 mg/day”\n\nenalaprilat\n\nINDICATIONS AND USAGE Enalaprilat injection, USP is indicated for the treatment of hypertension when o…\n\nOpen on DailyMed\nsacubitril and valsartan\n\n…NS, contact Umedica Laboratories USA Inc. at 1-855-288-5777 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical tr…\n\nOpen on DailyMed\nenalapril maleate\n\nINDICATIONS AND USAGE Hypertension Enalapril maleate is indicated for the treatment of hypertension. Enalapril male…\n\nOpen on DailyMed\nXPHOZAH 10 mg\ntenapanor\n\n…PECTED ADVERSE REACTIONS, contact Ardelyx at 1-844-974-6924 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trial Experience Because clinical tri…\n\nOpen on DailyMed\nShow 8 more\nKlor-Con (potassium chloride ER) 20 mEq once daily = 20 mEq/day\nNot found in the FDA labels. Did you mean:\nEdit\npotassium chloride 20 meq [klor-con]\n\nWhat the labels say about “Klor-Con (potassium chloride ER) 20 mEq once daily = 20 mEq/day”\n\nKLOR-Con/EF\npotassium bicarbonate\n\n…lkalosis; in digitalis intoxication; and in patients with hypokalemic familial periodic paralysis. If hypokalemia is the result of diuretic therapy, considerati…\n\nOpen on DailyMed\npotassium chloride extended-release\n\nINDICATIONS AND USAGE BECAUSE OF REPORTS OF INTESTINAL AND GASTRIC ULCERATION AND BLEEDING WITH CONTROLLED-RELEASE POTASSIUM CHLORIDE PREPARATIONS, TH…\n\nOpen on DailyMed\nTPN Electrolytes\nsodium chloride, calcium chloride, potassium chloride, magnesium chloride, and sodium acetate anhydrous\n\n…trolyte additive) is indicated for use as a supplement to nutritional solutions containing concentrated dextrose and amino acids delivered by central venous inf…\n\nOpen on DailyMed\npotassium citrate\n\n1 INDICATIONS & USAGE Potassium citrate is a citrate salt of potassium indicated for the management of…\n\nOpen on DailyMed\nShow 8 more\nTrexall (methotrexate) 15 mg once weekly = 15 mg/week\nNot found in the FDA labels. Did you mean:\nEdit\nmethotrexate 15 mg [trexall]\n\nWhat the labels say about “Trexall (methotrexate) 15 mg once weekly = 15 mg/week”\n\nmethotrexate\n\n1 INDICATIONS AND USAGE Methotrexate tablets are a dihydrofolate reductase inhibitor indicated for the:…\n\nOpen on DailyMed\nmethotrexate\n\n1 INDICATIONS AND USAGE Methotrexate Injection is a folate analog metabolic inhibitor indicated for The…\n\nOpen on DailyMed\nKrystexxa\npegloticase\n\n…tive Heart Failure [see Warnings and Precautions (5.5) ] Co-administration with methotrexate: The most common adverse reactions (≥ 5% of patients) are gout flar…\n\nOpen on DailyMed\nENBREL\netanercept\n\n…y active rheumatoid arthritis (RA). Enbrel can be initiated in combination with methotrexate (MTX) or used alone. 1.2 Polyarticular Juvenile Idiopathic Arthriti…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:53:22.292Z"
+}

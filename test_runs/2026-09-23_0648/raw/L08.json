@@ -1,0 +1,223 @@
+{
+ "id": "L08",
+ "input": "Clozaril (clozapine) 200 mg twice daily = 400 mg/day, Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day, Luvox (fluvoxamine) 100 mg twice daily = 200 mg/day, Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day, Ativan (lorazepam) 1 mg twice daily = 2 mg/day, Depakote (divalproex sodium) 500 mg twice daily = 1000 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.969,
+ "secondsToResults": 4.047,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Clozaril (clozapine) 200 mg twice daily = 400 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Clozaril (clozapine) 200 mg twice daily = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclozapine (clozaril)\n\nWhat the labels say about “Clozaril (clozapine) 200 mg twice daily = 400 mg/day”\n\nVERSACLOZ\nclozapine\n\n…ic treatment [see Warnings and Precautions (5.1 , 5.4) ] . The effectiveness of clozapine in treatment-resistant schizophrenia was demonstrated in a 6-week, ran…\n\nOpen on DailyMed\nciprofloxacin\n\n…posure prophylaxis was obtained during the anthrax bioterror attacks of October 2001 [see Clinical Studies ( 14.3 )]. 1.7 Plague Ciprofloxacin Injection is indi…\n\nOpen on DailyMed\ncarbamazepine\n\n…ats receiving carbamazepine orally from 4 to 52 weeks at dosage levels of 50 to 400 mg/kg/day. Additionally, rats receiving carbamazepine in the diet for 2 year…\n\nOpen on DailyMed\nciprofloxacin hydrochloride\n\n…xposure prophylaxis was obtained during the anthrax bioerror attacks of October 2001 [see Clinical Studies (14.2) ]. 1.8 Plague Ciprofloxacin tablets are indica…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncarbamazepine 400 mg [tegretol]\ncarbamazepine 125 mg [tegretol]\ncarbamazepine 250 mg [tegretol]\ncarbamazepine 200 mg [tegretol]\ncarbamazepine 100 mg [tegretol]\n\nWhat the labels say about “Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day”\n\nLivtencity\nmaribavir\n\n…da Pharmaceuticals America, Inc. at 1-877-TAKEDA-7 (1-877-825-3327) or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because cli…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\ncarbamazepine\n\nINDICATIONS AND USAGE Epilepsy Carbamazepine extended-release capsules are indicated for use as an anticonvulsa…\n\nOpen on DailyMed\nlopinavir and ritonavir\n\n…agents for the treatment of HIV1 infection in adults and pediatric patients 14 days and older. Limitations of Use: Genotypic or phenotypic testing and/or treat…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Luvox (fluvoxamine) 100 mg twice daily = 200 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Luvox (fluvoxamine) 100 mg twice daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluvoxamine oral tablet [luvox]\n\nWhat the labels say about “Luvox (fluvoxamine) 100 mg twice daily = 200 mg/day”\n\nLOTRONEX\nalosetron hydrochloride\n\n…ort, frequent bowel urgency or fecal incontinence, disability or restriction of daily activities due to IBS. Because of infrequent but serious gastrointestinal…\n\nOpen on DailyMed\nasenapine\n\n…s and Precautions ( 5.15 )] The most common adverse reactions (≥5% and at least twice the rate of placebo) reported during the adjunctive therapy trial in bipol…\n\nOpen on DailyMed\ntasimelteon\n\n…ADVERSE REACTIONS The most common adverse reactions (incidence >5% and at least twice as high on tasimelteon than on placebo) were headache, increased alanine a…\n\nOpen on DailyMed\nSAPHRIS\nasenapine maleate\n\n…s and Precautions ( 5.15 )] The most common adverse reactions (≥5% and at least twice the rate of placebo) reported with acute treatment in adults with schizoph…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nciprofloxacin 1000 mg [cipro]\n\nWhat the labels say about “Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day”\n\npirfenidone\n\n…led trials (Studies 1, 2, and 3) in which a total of 623 patients received 2403 mg/day of pirfenidone and 624 patients received placebo. Subjects ages ranged fr…\n\nOpen on DailyMed\nORLYNVAH\nsulopenem etzadroxil and probenecid\n\n…en with uUTI. Therapy with oral ORLYNVAH tablets was administered as one tablet twice daily for 5 days [see Clinical Studies ( 14 )]. The trials included 1932 p…\n\nOpen on DailyMed\nciprofloxacin hydrochloride and hydrocortisone\n\nINDICATIONS AND USAGE Ciprofloxacin hydrochloride and hydrocortisone otic suspension is indicated for…\n\nOpen on DailyMed\nVERSACLOZ\nclozapine\n\n…ons of muscle groups, may occur in susceptible individuals during the first few days of treatment. Dystonic symptoms include: spasm of the neck muscles, sometim…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Ativan (lorazepam) 1 mg twice daily = 2 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Ativan (lorazepam) 1 mg twice daily = 2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlorazepam 2 mg [ativan]\n\nWhat the labels say about “Ativan (lorazepam) 1 mg twice daily = 2 mg/day”\n\nlorazepam\n\nINDICATIONS AND USAGE Lorazepam tablets are indicated for the management of anxiety disorders or for t…\n\nOpen on DailyMed\nnizatidine\n\n…ated for maintenance therapy for duodenal ulcer patients at a reduced dosage of 150 mg h.s. after healing of an active duodenal ulcer. The consequences of conti…\n\nOpen on DailyMed\nORLYNVAH\nsulopenem etzadroxil and probenecid\n\n1 INDICATIONS AND USAGE ORLYNVAH, a combination of sulopenem etzadroxil, a penem…\n\nOpen on DailyMed\nprobenecid\n\n…To report SUSPECTED ADVERSE REACTIONS, contact Rising Pharma Holdings, Inc. at 1-844-874-7464 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch . WARNINGS Exace…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Depakote (divalproex sodium) 500 mg twice daily = 1000 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Depakote (divalproex sodium) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndivalproex sodium 125 mg [depakote]\ndivalproex sodium 500 mg [depakote]\ndivalproex sodium 250 mg [depakote]\n\nWhat the labels say about “Depakote (divalproex sodium) 500 mg twice daily = 1000 mg/day”\n\nPRIMAXIN IV\nimipenem and cilastatin sodium\n\n…time, increased lymphocytes, increased basophils Electrolytes: Decreased serum sodium, increased potassium, increased chloride Renal: Increased BUN, creatinine…\n\nOpen on DailyMed\nimipenem and cilastatin\n\n…time, increased lymphocytes, increased basophils Electrolytes: Decreased serum sodium, increased potassium, increased chloride Renal: Increased BUN, creatinine…\n\nOpen on DailyMed\ndivalproex sodium\n\n1 INDICATIONS AND USAGE Divalproex sodium extended-release tablets are indicated for: Acute treatment of…\n\nOpen on DailyMed\nVABOMERE\nmeropenem-vaborbactam\n\n…mum of 15 doses of IV therapy, patients could be switched to oral levofloxacin (500 mg daily every 24 hours) to complete the treatment course. Mean duration of…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f406e796-17d9-4465-b8a7-00d966a4ba74",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c47250c2-bece-46b5-8b3b-b7c97d9005d8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c94fc2c5-e840-4f18-b7d8-d5eacb26d3a0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e91f9de3-3fdd-0a6b-71ce-53a2cc142816",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=115178c8-5ee2-4d96-820e-ea8264c1ac10",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=35cbb9d5-639b-207a-e054-00144ff88e88",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3512687b-d1c7-45c4-8822-3a2ad53575a5",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ce5a2fa3-ed54-422d-96c2-1821496eb32f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5429f134-839f-4ffc-9944-55f51238def8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3115f15f-171c-4266-8dc8-5655f56e6acc",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=24c451c0-4cfb-37f3-e063-6394a90a895e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0881bbe-cc95-45d4-9878-3bc8946eff26",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2592c9a8-fd74-4e0d-a895-b07b014cf355",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c0810422-b732-4c04-97d8-c1521c401ef4",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9957997-8b85-48a0-9bb3-b878cb223236",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=24c451c0-4cfb-37f3-e063-6394a90a895e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=65b4888c-d49a-433f-9bfd-17880ae40069",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f41d8abd-7792-4918-1b93-bd83ea01955e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=46f54df9-5afe-430c-aa19-0d84c2044b0b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e96b724-5f5f-43cb-8d8b-adff3e1fc779",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e237fd0f-3050-42a3-b43e-b6fb4824e93d",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nClozaril (clozapine) 200 mg twice daily = 400 mg/day: not found. Edit it in the list, or remove it.\nTegretol (carbamazepine) 400 mg twice daily = 800 mg/day: not found. Edit it in the list, or remove it.\nLuvox (fluvoxamine) 100 mg twice daily = 200 mg/day: not found. Edit it in the list, or remove it.\nCipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day: not found. Edit it in the list, or remove it.\nAtivan (lorazepam) 1 mg twice daily = 2 mg/day: not found. Edit it in the list, or remove it.\nDepakote (divalproex sodium) 500 mg twice daily = 1000 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nClozaril (clozapine) 200 mg twice daily = 400 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nclozapine (clozaril)\n\nWhat the labels say about “Clozaril (clozapine) 200 mg twice daily = 400 mg/day”\n\nVERSACLOZ\nclozapine\n\n…ic treatment [see Warnings and Precautions (5.1 , 5.4) ] . The effectiveness of clozapine in treatment-resistant schizophrenia was demonstrated in a 6-week, ran…\n\nOpen on DailyMed\nciprofloxacin\n\n…posure prophylaxis was obtained during the anthrax bioterror attacks of October 2001 [see Clinical Studies ( 14.3 )]. 1.7 Plague Ciprofloxacin Injection is indi…\n\nOpen on DailyMed\ncarbamazepine\n\n…ats receiving carbamazepine orally from 4 to 52 weeks at dosage levels of 50 to 400 mg/kg/day. Additionally, rats receiving carbamazepine in the diet for 2 year…\n\nOpen on DailyMed\nciprofloxacin hydrochloride\n\n…xposure prophylaxis was obtained during the anthrax bioerror attacks of October 2001 [see Clinical Studies (14.2) ]. 1.8 Plague Ciprofloxacin tablets are indica…\n\nOpen on DailyMed\nShow 8 more\nTegretol (carbamazepine) 400 mg twice daily = 800 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ncarbamazepine 400 mg [tegretol]\ncarbamazepine 125 mg [tegretol]\ncarbamazepine 250 mg [tegretol]\ncarbamazepine 200 mg [tegretol]\ncarbamazepine 100 mg [tegretol]\n\nWhat the labels say about “Tegretol (carbamazepine) 400 mg twice daily = 800 mg/day”\n\nLivtencity\nmaribavir\n\n…da Pharmaceuticals America, Inc. at 1-877-TAKEDA-7 (1-877-825-3327) or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because cli…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\ncarbamazepine\n\nINDICATIONS AND USAGE Epilepsy Carbamazepine extended-release capsules are indicated for use as an anticonvulsa…\n\nOpen on DailyMed\nlopinavir and ritonavir\n\n…agents for the treatment of HIV1 infection in adults and pediatric patients 14 days and older. Limitations of Use: Genotypic or phenotypic testing and/or treat…\n\nOpen on DailyMed\nShow 8 more\nLuvox (fluvoxamine) 100 mg twice daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nfluvoxamine oral tablet [luvox]\n\nWhat the labels say about “Luvox (fluvoxamine) 100 mg twice daily = 200 mg/day”\n\nLOTRONEX\nalosetron hydrochloride\n\n…ort, frequent bowel urgency or fecal incontinence, disability or restriction of daily activities due to IBS. Because of infrequent but serious gastrointestinal…\n\nOpen on DailyMed\nasenapine\n\n…s and Precautions ( 5.15 )] The most common adverse reactions (≥5% and at least twice the rate of placebo) reported during the adjunctive therapy trial in bipol…\n\nOpen on DailyMed\ntasimelteon\n\n…ADVERSE REACTIONS The most common adverse reactions (incidence >5% and at least twice as high on tasimelteon than on placebo) were headache, increased alanine a…\n\nOpen on DailyMed\nSAPHRIS\nasenapine maleate\n\n…s and Precautions ( 5.15 )] The most common adverse reactions (≥5% and at least twice the rate of placebo) reported with acute treatment in adults with schizoph…\n\nOpen on DailyMed\nShow 8 more\nCipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nciprofloxacin 1000 mg [cipro]\n\nWhat the labels say about “Cipro (ciprofloxacin) 500 mg twice daily = 1000 mg/day”\n\npirfenidone\n\n…led trials (Studies 1, 2, and 3) in which a total of 623 patients received 2403 mg/day of pirfenidone and 624 patients received placebo. Subjects ages ranged fr…\n\nOpen on DailyMed\nORLYNVAH\nsulopenem etzadroxil and probenecid\n\n…en with uUTI. Therapy with oral ORLYNVAH tablets was administered as one tablet twice daily for 5 days [see Clinical Studies ( 14 )]. The trials included 1932 p…\n\nOpen on DailyMed\nciprofloxacin hydrochloride and hydrocortisone\n\nINDICATIONS AND USAGE Ciprofloxacin hydrochloride and hydrocortisone otic suspension is indicated for…\n\nOpen on DailyMed\nVERSACLOZ\nclozapine\n\n…ons of muscle groups, may occur in susceptible individuals during the first few days of treatment. Dystonic symptoms include: spasm of the neck muscles, sometim…\n\nOpen on DailyMed\nShow 8 more\nAtivan (lorazepam) 1 mg twice daily = 2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nlorazepam 2 mg [ativan]\n\nWhat the labels say about “Ativan (lorazepam) 1 mg twice daily = 2 mg/day”\n\nlorazepam\n\nINDICATIONS AND USAGE Lorazepam tablets are indicated for the management of anxiety disorders or for t…\n\nOpen on DailyMed\nnizatidine\n\n…ated for maintenance therapy for duodenal ulcer patients at a reduced dosage of 150 mg h.s. after healing of an active duodenal ulcer. The consequences of conti…\n\nOpen on DailyMed\nORLYNVAH\nsulopenem etzadroxil and probenecid\n\n1 INDICATIONS AND USAGE ORLYNVAH, a combination of sulopenem etzadroxil, a penem…\n\nOpen on DailyMed\nprobenecid\n\n…To report SUSPECTED ADVERSE REACTIONS, contact Rising Pharma Holdings, Inc. at 1-844-874-7464 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch . WARNINGS Exace…\n\nOpen on DailyMed\nShow 8 more\nDepakote (divalproex sodium) 500 mg twice daily = 1000 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndivalproex sodium 125 mg [depakote]\ndivalproex sodium 500 mg [depakote]\ndivalproex sodium 250 mg [depakote]\n\nWhat the labels say about “Depakote (divalproex sodium) 500 mg twice daily = 1000 mg/day”\n\nPRIMAXIN IV\nimipenem and cilastatin sodium\n\n…time, increased lymphocytes, increased basophils Electrolytes: Decreased serum sodium, increased potassium, increased chloride Renal: Increased BUN, creatinine…\n\nOpen on DailyMed\nimipenem and cilastatin\n\n…time, increased lymphocytes, increased basophils Electrolytes: Decreased serum sodium, increased potassium, increased chloride Renal: Increased BUN, creatinine…\n\nOpen on DailyMed\ndivalproex sodium\n\n1 INDICATIONS AND USAGE Divalproex sodium extended-release tablets are indicated for: Acute treatment of…\n\nOpen on DailyMed\nVABOMERE\nmeropenem-vaborbactam\n\n…mum of 15 doses of IV therapy, patients could be switched to oral levofloxacin (500 mg daily every 24 hours) to complete the treatment course. Mean duration of…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:53:05.975Z"
+}

@@ -1,0 +1,45 @@
+L01  alerts 0 secs 4.05 
+L02  alerts 0 secs 2.841 
+L03  alerts 0 secs 2.839 
+L04  alerts 0 secs 2.845 
+L05  alerts 0 secs 3.243 
+L06  alerts 0 secs 2.835 
+L07  alerts 0 secs 4.053 
+L08  alerts 0 secs 4.047 
+L09  alerts 0 secs 4.049 
+L10  alerts 0 secs 2.833 
+L11  alerts 0 secs 2.832 
+L12  alerts 0 secs 3.642 
+L13  alerts 0 secs 4.06 
+L14  alerts 0 secs 4.049 
+L15  alerts 0 secs 2.833 
+L16  alerts 0 secs 3.643 
+L17  alerts 0 secs 4.049 
+L18  alerts 0 secs 2.843 
+L19  alerts 0 secs 2.83 
+L20  alerts 0 secs 2.83 
+L21  alerts 0 secs 2.835 
+L22  alerts 0 secs 4.467 
+L23  alerts 0 secs 2.832 
+L24  alerts 0 secs 2.834 
+L25  alerts 0 secs 2.835 
+L26  alerts 0 secs 2.832 
+L27  alerts 0 secs 4.049 
+L28  alerts 0 secs 2.831 
+L29  alerts 0 secs 4.047 
+L30  alerts 0 secs 4.048 
+L31  alerts 0 secs 4.048 
+L32  alerts 0 secs 4.043 
+L33  alerts 0 secs 2.833 
+L34  alerts 0 secs 4.045 
+L35  alerts 0 secs 2.835 
+L36  alerts 0 secs 4.05 
+L37  alerts 0 secs 2.833 
+L38  alerts 0 secs 2.833 
+L39  alerts 0 secs 3.64 
+L40  alerts 0 secs 4.051 
+L41  alerts 0 secs 4.044 
+L01 _mobile alerts 0 secs 2.431 
+L12 _mobile alerts 0 secs 4.043 
+L24 _mobile alerts 0 secs 2.827 
+L41 _mobile alerts 0 secs 4.037 

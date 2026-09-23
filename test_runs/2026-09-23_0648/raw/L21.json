@@ -1,0 +1,223 @@
+{
+ "id": "L21",
+ "input": "Nizoral (ketoconazole) 200 mg once daily = 200 mg/day, Halcion (triazolam) 0.25 mg once daily at bedtime = 0.25 mg/day, Xanax (alprazolam) 1 mg three times daily = 3 mg/day, Eliquis (apixaban) 5 mg twice daily = 10 mg/day, Lipitor (atorvastatin) 80 mg once daily = 80 mg/day, Norvasc (amlodipine) 10 mg once daily = 10 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.99,
+ "secondsToResults": 2.835,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Nizoral (ketoconazole) 200 mg once daily = 200 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Nizoral (ketoconazole) 200 mg once daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nketoconazole 200 mg [nizoral]\n\nWhat the labels say about “Nizoral (ketoconazole) 200 mg once daily = 200 mg/day”\n\nnevirapine\n\n…an immunodeficiency virus (HIV-1) infection in adults and pediatric patients 15 days and older [see Clinical Studies (14.1 , 14.2) ]. Limitations of Use: Based…\n\nOpen on DailyMed\nfluticasone propionate\n\n…34 male adolescents and adults) treated with fluticasone propionate nasal spray 200 mcg once daily over 2 to 4 weeks and 2 placebo-controlled clinical trials wh…\n\nOpen on DailyMed\nvardenafil hydrochloride\n\n…d 9% Other) during controlled and uncontrolled clinical trials worldwide. Over 2200 patients were treated for 6 months or longer and 880 patients were treated f…\n\nOpen on DailyMed\nvardenafil hydrochloride\n\n…d 9% Other) during controlled and uncontrolled clinical trials worldwide. Over 2200 patients were treated for 6 months or longer and 880 patients were treated f…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Halcion (triazolam) 0.25 mg once daily at bedtime = 0.25 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Halcion (triazolam) 0.25 mg once daily at bedtime = 0.25 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntriazolam 0.25 mg [halcion]\n\nWhat the labels say about “Halcion (triazolam) 0.25 mg once daily at bedtime = 0.25 mg/day”\n\ntriazolam\n\n1 INDICATIONS AND USAGE Triazolam is indicated for the short-term treatment of insomnia…\n\nOpen on DailyMed\nropinirole\n\n1 INDICATIONS AND USAGE Ropinirole tablets are a non-ergoline dopamine agonist indicate…\n\nOpen on DailyMed\nnefazodone hydrochloride\n\nINDICATIONS AND USAGE Nefazodone hydrochloride tablets are indicated for the treatmen…\n\nOpen on DailyMed\npramipexole dihydrochloride\n\n1 INDICATIONS AND USAGE Pramipexole dihydrochloride is a non-ergot dopamine agonist ind…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Xanax (alprazolam) 1 mg three times daily = 3 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Xanax (alprazolam) 1 mg three times daily = 3 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nalprazolam 3 mg [xanax]\n\nWhat the labels say about “Xanax (alprazolam) 1 mg three times daily = 3 mg/day”\n\nnefazodone hydrochloride\n\n…relatively persistent depressed or dysphoric mood that usually interferes with daily functioning (nearly every day for at least 2 weeks). It must include eithe…\n\nOpen on DailyMed\nalprazolam\n\n1 INDICATIONS AND USAGE Alprazolam tablets are indicated for the: acute treatmen…\n\nOpen on DailyMed\nE.E.S 400\nerythromycin ethylsuccinate\n\n…cin as treatment of gonorrhea and a follow-up serologic test for syphilis after 3 months. Syphilis caused by Treponema pallidum : Erythromycin is an alternate c…\n\nOpen on DailyMed\nfluoxetine hcl\n\n1 INDICATIONS AND USAGE Fluoxetine tablets are indicated for the treatment of: M…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Eliquis (apixaban) 5 mg twice daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Eliquis (apixaban) 5 mg twice daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\napixaban 5 mg [eliquis]\n\nWhat the labels say about “Eliquis (apixaban) 5 mg twice daily = 10 mg/day”\n\nELIQUIS\napixaban\n\n1 INDICATIONS AND USAGE ELIQUIS is a factor Xa inhibitor indicated: • to reduce the risk of stroke and s…\n\nOpen on DailyMed\ndarunavir\n\n…ed in other sections of labeling: Hepatotoxicity [see Warnings and Precautions (5.2) ] Severe Skin Reactions [see Warnings and Precautions (5.3) ] Diabetes Mell…\n\nOpen on DailyMed\nTybost\ncobicistat\n\n…ibitor indicated to increase systemic exposure of atazanavir or darunavir (once daily dosing regimen) in combination with other antiretroviral agents in the tre…\n\nOpen on DailyMed\ndarunavir\n\n…ed in other sections of labeling: Hepatotoxicity [see Warnings and Precautions (5.2 )] Severe Skin Reactions [see Warnings and Precautions (5.3 )] Diabetes Mell…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Lipitor (atorvastatin) 80 mg once daily = 80 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Lipitor (atorvastatin) 80 mg once daily = 80 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 80 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 80 mg once daily = 80 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Norvasc (amlodipine) 10 mg once daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Norvasc (amlodipine) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namlodipine 10 mg [norvasc]\n\nWhat the labels say about “Norvasc (amlodipine) 10 mg once daily = 10 mg/day”\n\ntelmisartan and amlodipine\n\n1 INDICATIONS AND USAGE Telmisartan and amlodipine tablet is an angiotensin II receptor blocker (ARB) and a dihydropyrid…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment…\n\nOpen on DailyMed\nNORLIQVA\namlodipine\n\n…vascularization procedure. 6 ADVERSE REACTIONS Most common adverse reactions to amlodipine were edema, dizziness, flushing and palpitation which occurred in a d…\n\nOpen on DailyMed\nKaterzia\namlodipine\n\n…f antihypertensive drugs from a wide variety of pharmacologic classes including amlodipine. Control of high blood pressure should be part of comprehensive cardi…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6e93829-7024-48f6-8023-da6ff27dfc0a",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc08915f-fa3a-4509-a01c-42b577f39b99",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a38de6e1-21ca-4ebe-a3c7-6f849cf8b675",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d2859a7-6def-455f-856b-9db86b1fd355",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5add318e-11b9-42f8-b052-0d8cebb32fcf",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cdc63b7a-062a-4519-a63e-e48a356f641c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0bd4c34a-4f43-4c84-8b98-1d074cba97d5",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=29b639e3-25a5-4c2f-b4ea-a119db79fe0c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0bd4c34a-4f43-4c84-8b98-1d074cba97d5",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=49b3ca93-43cc-439c-8f5d-e3ea2e87ad2f",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d09a5026-b3eb-403f-bf31-d5991a81a8ce",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a454cd24-0c6d-46e8-b1e4-197388606175",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=56daf67e-7501-4cd5-be22-566d7997d42e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3784c35c-e87f-410c-900b-8fd6313c6010",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e80e44f8-1987-4b78-a63d-a4e4d5122ddb",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57f9b462-f08e-483c-9b64-b7e4c8d46927",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9adb9e4-c495-9530-e5e3-7e3b01d53e4c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=604a011e-6c64-4895-8f6e-d28f119c4c22",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c7b1b11-90a3-bc1c-0e45-9e2a14ef0b03",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a97fefa6-99e6-4eb7-9393-ab2252a2c7d8",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4c7b1b11-90a3-bc1c-0e45-9e2a14ef0b03",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=614d974f-51c7-4b18-8171-39eb6e8d4c03",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=df673a4d-acb8-444c-a472-c87ab8cbd366",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nNizoral (ketoconazole) 200 mg once daily = 200 mg/day: not found. Edit it in the list, or remove it.\nHalcion (triazolam) 0.25 mg once daily at bedtime = 0.25 mg/day: not found. Edit it in the list, or remove it.\nXanax (alprazolam) 1 mg three times daily = 3 mg/day: not found. Edit it in the list, or remove it.\nEliquis (apixaban) 5 mg twice daily = 10 mg/day: not found. Edit it in the list, or remove it.\nLipitor (atorvastatin) 80 mg once daily = 80 mg/day: not found. Edit it in the list, or remove it.\nNorvasc (amlodipine) 10 mg once daily = 10 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nNizoral (ketoconazole) 200 mg once daily = 200 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nketoconazole 200 mg [nizoral]\n\nWhat the labels say about “Nizoral (ketoconazole) 200 mg once daily = 200 mg/day”\n\nnevirapine\n\n…an immunodeficiency virus (HIV-1) infection in adults and pediatric patients 15 days and older [see Clinical Studies (14.1 , 14.2) ]. Limitations of Use: Based…\n\nOpen on DailyMed\nfluticasone propionate\n\n…34 male adolescents and adults) treated with fluticasone propionate nasal spray 200 mcg once daily over 2 to 4 weeks and 2 placebo-controlled clinical trials wh…\n\nOpen on DailyMed\nvardenafil hydrochloride\n\n…d 9% Other) during controlled and uncontrolled clinical trials worldwide. Over 2200 patients were treated for 6 months or longer and 880 patients were treated f…\n\nOpen on DailyMed\nvardenafil hydrochloride\n\n…d 9% Other) during controlled and uncontrolled clinical trials worldwide. Over 2200 patients were treated for 6 months or longer and 880 patients were treated f…\n\nOpen on DailyMed\nShow 8 more\nHalcion (triazolam) 0.25 mg once daily at bedtime = 0.25 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ntriazolam 0.25 mg [halcion]\n\nWhat the labels say about “Halcion (triazolam) 0.25 mg once daily at bedtime = 0.25 mg/day”\n\ntriazolam\n\n1 INDICATIONS AND USAGE Triazolam is indicated for the short-term treatment of insomnia…\n\nOpen on DailyMed\nropinirole\n\n1 INDICATIONS AND USAGE Ropinirole tablets are a non-ergoline dopamine agonist indicate…\n\nOpen on DailyMed\nnefazodone hydrochloride\n\nINDICATIONS AND USAGE Nefazodone hydrochloride tablets are indicated for the treatmen…\n\nOpen on DailyMed\npramipexole dihydrochloride\n\n1 INDICATIONS AND USAGE Pramipexole dihydrochloride is a non-ergot dopamine agonist ind…\n\nOpen on DailyMed\nShow 8 more\nXanax (alprazolam) 1 mg three times daily = 3 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nalprazolam 3 mg [xanax]\n\nWhat the labels say about “Xanax (alprazolam) 1 mg three times daily = 3 mg/day”\n\nnefazodone hydrochloride\n\n…relatively persistent depressed or dysphoric mood that usually interferes with daily functioning (nearly every day for at least 2 weeks). It must include eithe…\n\nOpen on DailyMed\nalprazolam\n\n1 INDICATIONS AND USAGE Alprazolam tablets are indicated for the: acute treatmen…\n\nOpen on DailyMed\nE.E.S 400\nerythromycin ethylsuccinate\n\n…cin as treatment of gonorrhea and a follow-up serologic test for syphilis after 3 months. Syphilis caused by Treponema pallidum : Erythromycin is an alternate c…\n\nOpen on DailyMed\nfluoxetine hcl\n\n1 INDICATIONS AND USAGE Fluoxetine tablets are indicated for the treatment of: M…\n\nOpen on DailyMed\nShow 8 more\nEliquis (apixaban) 5 mg twice daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\napixaban 5 mg [eliquis]\n\nWhat the labels say about “Eliquis (apixaban) 5 mg twice daily = 10 mg/day”\n\nELIQUIS\napixaban\n\n1 INDICATIONS AND USAGE ELIQUIS is a factor Xa inhibitor indicated: • to reduce the risk of stroke and s…\n\nOpen on DailyMed\ndarunavir\n\n…ed in other sections of labeling: Hepatotoxicity [see Warnings and Precautions (5.2) ] Severe Skin Reactions [see Warnings and Precautions (5.3) ] Diabetes Mell…\n\nOpen on DailyMed\nTybost\ncobicistat\n\n…ibitor indicated to increase systemic exposure of atazanavir or darunavir (once daily dosing regimen) in combination with other antiretroviral agents in the tre…\n\nOpen on DailyMed\ndarunavir\n\n…ed in other sections of labeling: Hepatotoxicity [see Warnings and Precautions (5.2 )] Severe Skin Reactions [see Warnings and Precautions (5.3 )] Diabetes Mell…\n\nOpen on DailyMed\nShow 8 more\nLipitor (atorvastatin) 80 mg once daily = 80 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\natorvastatin 80 mg [lipitor]\n\nWhat the labels say about “Lipitor (atorvastatin) 80 mg once daily = 80 mg/day”\n\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium is indicated: To reduce the risk of: Myocardial infarction…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin Calcium Tablets are indicated: To reduce the risk of: Myocardial in…\n\nOpen on DailyMed\natorvastatin calcium\n\n1 INDICATIONS AND USAGE Atorvastatin calcium tablets is indicated: To reduce the risk of: Myocardial inf…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment with both amlo…\n\nOpen on DailyMed\nShow 8 more\nNorvasc (amlodipine) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namlodipine 10 mg [norvasc]\n\nWhat the labels say about “Norvasc (amlodipine) 10 mg once daily = 10 mg/day”\n\ntelmisartan and amlodipine\n\n1 INDICATIONS AND USAGE Telmisartan and amlodipine tablet is an angiotensin II receptor blocker (ARB) and a dihydropyrid…\n\nOpen on DailyMed\namlodipine and atorvastatin\n\n1 INDICATIONS AND USAGE Amlodipine and atorvastatin tablets are indicated in patients for whom treatment…\n\nOpen on DailyMed\nNORLIQVA\namlodipine\n\n…vascularization procedure. 6 ADVERSE REACTIONS Most common adverse reactions to amlodipine were edema, dizziness, flushing and palpitation which occurred in a d…\n\nOpen on DailyMed\nKaterzia\namlodipine\n\n…f antihypertensive drugs from a wide variety of pharmacologic classes including amlodipine. Control of high blood pressure should be part of comprehensive cardi…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:54:49.648Z"
+}

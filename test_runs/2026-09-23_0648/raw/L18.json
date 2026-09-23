@@ -1,0 +1,223 @@
+{
+ "id": "L18",
+ "input": "Elavil (amitriptyline) 75 mg once daily at bedtime = 75 mg/day, Ditropan (oxybutynin) 5 mg three times daily = 15 mg/day, Vistaril (hydroxyzine) 50 mg three times daily = 150 mg/day, Cogentin (benztropine) 1 mg twice daily = 2 mg/day, Aricept (donepezil) 10 mg once daily = 10 mg/day, Paxil (paroxetine) 40 mg once daily = 40 mg/day",
+ "viewport": "1440x900",
+ "focus": {
+  "tag": "INPUT",
+  "id": "add-med",
+  "placeholder": "warfarin 5 mg daily",
+  "label": "Medication, with dose if you know it"
+ },
+ "focusedOnLoad": true,
+ "secondsToInteractive": 0.842,
+ "secondsToResults": 2.843,
+ "hung": false,
+ "defects": [],
+ "consoleErrors": [],
+ "badResponses": [],
+ "alerts": [],
+ "severity": [
+  {
+   "letter": "E",
+   "name": "Avoid combination",
+   "count": "–"
+  },
+  {
+   "letter": "D",
+   "name": "Consider changing therapy",
+   "count": "–"
+  },
+  {
+   "letter": "C",
+   "name": "Monitor closely",
+   "count": "–"
+  },
+  {
+   "letter": "B",
+   "name": "Monitor",
+   "count": "–"
+  },
+  {
+   "letter": "A",
+   "name": "Minor",
+   "count": "–"
+  }
+ ],
+ "meds": [
+  {
+   "brand": "Elavil (amitriptyline) 75 mg once daily at bedtime = 75 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Elavil (amitriptyline) 75 mg once daily at bedtime = 75 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namitriptyline 75 mg [elavil]\n\nWhat the labels say about “Elavil (amitriptyline) 75 mg once daily at bedtime = 75 mg/day”\n\namitriptyline hydrochloride\n\nINDICATIONS AND USAGE For the relief of symptoms of depression. Endogenous depression…\n\nOpen on DailyMed\nperphenazine and amitriptyline hydrochloride\n\nINDICATIONS AND USAGE Perphenazine and amitriptyline hydrochloride tablets are recomm…\n\nOpen on DailyMed\nchlordiazepoxide and amitriptyline hydrochloride\n\nINDICATIONS AND USAGE Chlordiazepoxide and amitriptyline hydrochloride tablets are in…\n\nOpen on DailyMed\nclonidine hydrochloride\n\nINDICATIONS AND USAGE Clonidine hydrochloride tablets, USP are indicated in the treat…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Ditropan (oxybutynin) 5 mg three times daily = 15 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Ditropan (oxybutynin) 5 mg three times daily = 15 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\noxybutynin chloride 15 mg [ditropan]\n\nWhat the labels say about “Ditropan (oxybutynin) 5 mg three times daily = 15 mg/day”\n\noxybutynin chloride\n\nINDICATIONS AND USAGE Oxybutynin chloride is indicated for the relief of symptoms of bladder instabili…\n\nOpen on DailyMed\nOXYTROL\noxybutynin\n\n…uency. ( 1 ) 6 ADVERSE REACTIONS The most common adverse reactions (incidence > 5% and > placebo) are application site reactions and dry mouth. ( 6.1 ) To repor…\n\nOpen on DailyMed\ndesmopressin acetate\n\n…ophilia A- for patients with factor VIII coagulant activity levels greater than 5% to maintain hemostasis during surgical procedures and postoperatively or redu…\n\nOpen on DailyMed\nrivastigmine tartrate\n\n…the labeling: Gastrointestinal Adverse Reactions [see Warnings and Precautions (5.1) ] Allergic Dermatitis [see Warnings and Precautions (5.2) ] Other Adverse R…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Vistaril (hydroxyzine) 50 mg three times daily = 150 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Vistaril (hydroxyzine) 50 mg three times daily = 150 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nhydroxyzine injectable solution [vistaril]\nhydroxyzine oral capsule [vistaril]\nhydroxyzine oral suspension [vistaril]\n\nWhat the labels say about “Vistaril (hydroxyzine) 50 mg three times daily = 150 mg/day”\n\nhydroxyzine pamoate\n\n…tus. As a sedative when used as premedication and following general anesthesia, hydroxyzine may potentiate meperidine (Demerol ® ) and barbiturates, so their us…\n\nOpen on DailyMed\nhydroxyzine hydrochloride\n\n…s. As a sedative when used as a premedication and following general anesthesia, hydrOXYzine may potentiate meperidine and barbiturates , so their use in pre-ane…\n\nOpen on DailyMed\nhydroxyzine hydrochloride\n\n…s. As a sedative when used as a premedication and following general anesthesia, hydroxyzine may potentiate meperidine and barbiturates, so their use in pre-anes…\n\nOpen on DailyMed\nhouse dust mite, dermatophagoides farinae\n\n…. Local reactions consisting of erythema, itching, swelling, tenderness and sometimes pain may occur at the injection site. These reactions may appear within a…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Cogentin (benztropine) 1 mg twice daily = 2 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Cogentin (benztropine) 1 mg twice daily = 2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nbenztropine injection [cogentin]\n\nWhat the labels say about “Cogentin (benztropine) 1 mg twice daily = 2 mg/day”\n\nbenztropine mesylate\n\n…, hyperthermia, fever. WARNINGS Safe use in pregnancy has not been established. Benztropine mesylate may impair mental and/or physical abilities required for pe…\n\nOpen on DailyMed\nDaTscan\nioflupane i-123\n\n1 INDICATIONS AND USAGE DATSCAN is indicated as an adjunct to other diagnostic e…\n\nOpen on DailyMed\nhaloperidol\n\n…ration of haloperidol have been reported frequently, often during the first few days of treatment. EPS can be categorized generally as Parkinson-like symptoms,…\n\nOpen on DailyMed\nperphenazine\n\n…controlled by the concomitant use of effective antiparkinsonian drugs, such as benztropine mesylate, and/or by reduction in dosage. In some instances, however,…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Aricept (donepezil) 10 mg once daily = 10 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Aricept (donepezil) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndonepezil hydrochloride 10 mg [aricept]\n\nWhat the labels say about “Aricept (donepezil) 10 mg once daily = 10 mg/day”\n\nNamzaric\nmemantine hydrochloride and donepezil hydrochloride\n\n…f moderate to severe dementia of the Alzheimer’s type in patients stabilized on 10 mg of donepezil hydrochloride once daily. NAMZARIC is a combination of memant…\n\nOpen on DailyMed\ndonepezil hydrochloride\n\n1 INDICATIONS AND USAGE Donepezil hydrochloride tablets are indicated for the treatment of dementia of t…\n\nOpen on DailyMed\nramelteon\n\n…uration. The final formal assessments of sleep latency were performed after two days of treatment during the crossover study (elderly only), at five weeks in th…\n\nOpen on DailyMed\nJAKAFI\nruxolitinib\n\n…RSE REACTIONS, contact Incyte Corporation at 1-855-463-3463 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch 6.1 Clinical Trials Experience Because clinical tri…\n\nOpen on DailyMed\nShow 8 more"
+  },
+  {
+   "brand": "Paxil (paroxetine) 40 mg once daily = 40 mg/day",
+   "generic": "Not found in the FDA labels. Did you mean:",
+   "dose": null,
+   "facts": null,
+   "text": "Paxil (paroxetine) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nparoxetine hydrochloride 40 mg [paxil]\n\nWhat the labels say about “Paxil (paroxetine) 40 mg once daily = 40 mg/day”\n\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: • Major depress…\n\nOpen on DailyMed\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nPAROXETINE\nparoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nShow 8 more"
+  }
+ ],
+ "links": [
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61b29703-cfc2-45c7-ae24-7bf3b77e8587",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e2937445-c015-c9a5-52f8-a2959da97290",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=66a756f2-ac77-451c-a19a-08896d73b15c",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d7cfb02-e580-4658-a2fe-2149b515d434",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1a08a16a-f16d-4ef1-95bb-6943bcae0737",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20dee37f-1412-44ed-9e8b-f4379ce23eb0",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=52680415-52a0-61c2-e063-6294a90ae27e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=52781229-ee82-43f9-a113-4419a611978d",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c9101ee-0746-4833-83cf-d0d09e52c0a9",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58d99cf6-2319-410b-b8be-de9c304541b6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bb4a7d22-2f42-4e9f-bf98-cee43ed14d50",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3b19e1e4-1a28-4515-ac20-cc4a9b2d45e6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53c02a89-012c-e724-e063-6294a90acc75",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef7804d7-c691-495b-8aaf-5bc54fd5d9f6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0751f2e-05ab-4ba9-9bae-7b791bf1a621",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c4150683-0772-4344-bb1c-f050b84175d6",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90fedc32-19e5-480c-afc6-f35a5cf4b9aa",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=de96349a-5fee-4de9-921c-e453d44b3203",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a3cf917-3569-4fc1-8b81-ffecfd2de005",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f1c82580-87ae-11e0-bc84-0002a5d5c51b",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d558598-6905-46da-8f34-668456c68411",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=598efb76-93ef-f7de-e063-6394a90a632e",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=95fde749-44ad-4668-86c4-0ff17bca0074",
+   "in_alert": false
+  },
+  {
+   "text": "Open on DailyMed",
+   "href": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8e176ff2-ed3a-4909-94e1-6b9a3581a621",
+   "in_alert": false
+  }
+ ],
+ "statusText": "0 of 6 medications checked",
+ "caption": "No graded interaction found in the labels checked.",
+ "text": "Drug Interaction Screen\n\nType the medications, brand or generic. Their FDA labels are checked for interactions.\n\nMedication, with dose if you know it\n\nMisspellings are fine. A word like grapefruit gets looked up in the labels instead.\n\nInteractions\n\n0 of 6 medications checked\n\nNot checked\n\nElavil (amitriptyline) 75 mg once daily at bedtime = 75 mg/day: not found. Edit it in the list, or remove it.\nDitropan (oxybutynin) 5 mg three times daily = 15 mg/day: not found. Edit it in the list, or remove it.\nVistaril (hydroxyzine) 50 mg three times daily = 150 mg/day: not found. Edit it in the list, or remove it.\nCogentin (benztropine) 1 mg twice daily = 2 mg/day: not found. Edit it in the list, or remove it.\nAricept (donepezil) 10 mg once daily = 10 mg/day: not found. Edit it in the list, or remove it.\nPaxil (paroxetine) 40 mg once daily = 40 mg/day: not found. Edit it in the list, or remove it.\nE\nAvoid combination\n–\nD\nConsider changing therapy\n–\nC\nMonitor closely\n–\nB\nMonitor\n–\nA\nMinor\n–\nNo graded interaction found in the labels checked.\n\nNo warning found in the labels checked.\n\nResults reflect FDA label text as of 2026-09-23. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database.\n\n6 medications\nClear all\nElavil (amitriptyline) 75 mg once daily at bedtime = 75 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\namitriptyline 75 mg [elavil]\n\nWhat the labels say about “Elavil (amitriptyline) 75 mg once daily at bedtime = 75 mg/day”\n\namitriptyline hydrochloride\n\nINDICATIONS AND USAGE For the relief of symptoms of depression. Endogenous depression…\n\nOpen on DailyMed\nperphenazine and amitriptyline hydrochloride\n\nINDICATIONS AND USAGE Perphenazine and amitriptyline hydrochloride tablets are recomm…\n\nOpen on DailyMed\nchlordiazepoxide and amitriptyline hydrochloride\n\nINDICATIONS AND USAGE Chlordiazepoxide and amitriptyline hydrochloride tablets are in…\n\nOpen on DailyMed\nclonidine hydrochloride\n\nINDICATIONS AND USAGE Clonidine hydrochloride tablets, USP are indicated in the treat…\n\nOpen on DailyMed\nShow 8 more\nDitropan (oxybutynin) 5 mg three times daily = 15 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\noxybutynin chloride 15 mg [ditropan]\n\nWhat the labels say about “Ditropan (oxybutynin) 5 mg three times daily = 15 mg/day”\n\noxybutynin chloride\n\nINDICATIONS AND USAGE Oxybutynin chloride is indicated for the relief of symptoms of bladder instabili…\n\nOpen on DailyMed\nOXYTROL\noxybutynin\n\n…uency. ( 1 ) 6 ADVERSE REACTIONS The most common adverse reactions (incidence > 5% and > placebo) are application site reactions and dry mouth. ( 6.1 ) To repor…\n\nOpen on DailyMed\ndesmopressin acetate\n\n…ophilia A- for patients with factor VIII coagulant activity levels greater than 5% to maintain hemostasis during surgical procedures and postoperatively or redu…\n\nOpen on DailyMed\nrivastigmine tartrate\n\n…the labeling: Gastrointestinal Adverse Reactions [see Warnings and Precautions (5.1) ] Allergic Dermatitis [see Warnings and Precautions (5.2) ] Other Adverse R…\n\nOpen on DailyMed\nShow 8 more\nVistaril (hydroxyzine) 50 mg three times daily = 150 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nhydroxyzine injectable solution [vistaril]\nhydroxyzine oral capsule [vistaril]\nhydroxyzine oral suspension [vistaril]\n\nWhat the labels say about “Vistaril (hydroxyzine) 50 mg three times daily = 150 mg/day”\n\nhydroxyzine pamoate\n\n…tus. As a sedative when used as premedication and following general anesthesia, hydroxyzine may potentiate meperidine (Demerol ® ) and barbiturates, so their us…\n\nOpen on DailyMed\nhydroxyzine hydrochloride\n\n…s. As a sedative when used as a premedication and following general anesthesia, hydrOXYzine may potentiate meperidine and barbiturates , so their use in pre-ane…\n\nOpen on DailyMed\nhydroxyzine hydrochloride\n\n…s. As a sedative when used as a premedication and following general anesthesia, hydroxyzine may potentiate meperidine and barbiturates, so their use in pre-anes…\n\nOpen on DailyMed\nhouse dust mite, dermatophagoides farinae\n\n…. Local reactions consisting of erythema, itching, swelling, tenderness and sometimes pain may occur at the injection site. These reactions may appear within a…\n\nOpen on DailyMed\nShow 8 more\nCogentin (benztropine) 1 mg twice daily = 2 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nbenztropine injection [cogentin]\n\nWhat the labels say about “Cogentin (benztropine) 1 mg twice daily = 2 mg/day”\n\nbenztropine mesylate\n\n…, hyperthermia, fever. WARNINGS Safe use in pregnancy has not been established. Benztropine mesylate may impair mental and/or physical abilities required for pe…\n\nOpen on DailyMed\nDaTscan\nioflupane i-123\n\n1 INDICATIONS AND USAGE DATSCAN is indicated as an adjunct to other diagnostic e…\n\nOpen on DailyMed\nhaloperidol\n\n…ration of haloperidol have been reported frequently, often during the first few days of treatment. EPS can be categorized generally as Parkinson-like symptoms,…\n\nOpen on DailyMed\nperphenazine\n\n…controlled by the concomitant use of effective antiparkinsonian drugs, such as benztropine mesylate, and/or by reduction in dosage. In some instances, however,…\n\nOpen on DailyMed\nShow 8 more\nAricept (donepezil) 10 mg once daily = 10 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\ndonepezil hydrochloride 10 mg [aricept]\n\nWhat the labels say about “Aricept (donepezil) 10 mg once daily = 10 mg/day”\n\nNamzaric\nmemantine hydrochloride and donepezil hydrochloride\n\n…f moderate to severe dementia of the Alzheimer’s type in patients stabilized on 10 mg of donepezil hydrochloride once daily. NAMZARIC is a combination of memant…\n\nOpen on DailyMed\ndonepezil hydrochloride\n\n1 INDICATIONS AND USAGE Donepezil hydrochloride tablets are indicated for the treatment of dementia of t…\n\nOpen on DailyMed\nramelteon\n\n…uration. The final formal assessments of sleep latency were performed after two days of treatment during the crossover study (elderly only), at five weeks in th…\n\nOpen on DailyMed\nJAKAFI\nruxolitinib\n\n…RSE REACTIONS, contact Incyte Corporation at 1-855-463-3463 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch 6.1 Clinical Trials Experience Because clinical tri…\n\nOpen on DailyMed\nShow 8 more\nPaxil (paroxetine) 40 mg once daily = 40 mg/day\nNot found in the FDA labels. Did you mean:\nEdit\nparoxetine hydrochloride 40 mg [paxil]\n\nWhat the labels say about “Paxil (paroxetine) 40 mg once daily = 40 mg/day”\n\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: • Major depress…\n\nOpen on DailyMed\nparoxetine\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nMARPLAN\nisocarboxazid\n\n…ve episode (DSM-IV) implies a prominent and relatively persistent (nearly every day for at least 2 weeks) depressed or dysphoric mood that usually interferes wi…\n\nOpen on DailyMed\nPAROXETINE\nparoxetine hydrochloride\n\n1 INDICATIONS AND USAGE Paroxetine tablets are indicated in adults for the treatment of: Major depressiv…\n\nOpen on DailyMed\nShow 8 more\n0 alerts",
+ "attempts": [
+  {
+   "attempt": 1,
+   "ok": true
+  }
+ ],
+ "siteVersion": "main HEAD 6d02dc3 (deployed by workflow run 35844387875, 2026-09-23T09:41Z); run started 2026-09-23T06:48-04:00",
+ "runAt": "2026-09-23T10:54:27.275Z"
+}
