@@ -1,0 +1,919 @@
+{
+  "fixture": "Drug Interaction Screen - blind test fixture",
+  "created": "2026-09-22",
+  "how_to_use": "Feed the app only the `lists` array. Each list is a patient medication list as a US prescriber would enter it, with no hint of what is wrong. Compare the app's output to `answer_key`, which is a separate top-level object so it can be stripped before the run.",
+  "scoring": {
+    "hit": "The app flags the same drugs (or a superset) under an equivalent category at the same or higher severity.",
+    "miss": "An `expected` item the app does not flag.",
+    "false_positive": "Anything in `should_not_flag` reported at moderate or higher, or any moderate-or-higher flag on a control list.",
+    "totals": "Where `totals` is present, the app should compute that per-molecule daily amount after merging duplicate lines, brands, and combination-product components."
+  },
+  "schema": {
+    "medication.brand": "Brand name as typed by the prescriber. null means only the generic was entered.",
+    "medication.generic": "Generic name. Combination products list every component separated by '/'.",
+    "medication.strength": "Unit dose as written on the prescription. Units are as written: mg, mcg, mEq, g, units, mcg/h.",
+    "medication.frequency": "As written. PRN entries state the maximum doses per day.",
+    "medication.total_daily": "Amount per day as written for that line only. 'max' for PRN; per-week for weekly drugs; per-episode where a daily number does not exist.",
+    "medication.route": "Present only when not oral.",
+    "medication.otc": "Present and true only for over-the-counter products.",
+    "answer_key.<id>.theme": "What the list was built to test.",
+    "answer_key.<id>.expected[]": "drugs, category, severity, why.",
+    "answer_key.<id>.totals": "Per-molecule daily totals the app should arrive at.",
+    "answer_key.<id>.should_not_flag": "Drugs or pairs with no clinically significant interaction in that list."
+  },
+  "severity_scale": ["contraindicated", "major", "moderate", "minor"],
+  "categories": [
+    "serotonin syndrome", "CNS depression", "respiratory depression", "QT prolongation", "bleeding",
+    "CYP inhibition", "CYP induction", "P-gp", "hyperkalemia", "hypoglycemia", "hypotension",
+    "bradycardia/AV block", "nephrotoxicity", "ototoxicity", "myelosuppression", "myopathy/rhabdomyolysis",
+    "lithium toxicity", "digoxin toxicity", "seizure threshold", "anticholinergic burden", "hyperammonemia",
+    "adrenal suppression", "metabolic acidosis", "therapeutic antagonism", "efficacy loss",
+    "absorption/timing", "duplicate therapy", "duplicate entry", "dose ceiling", "dosing frequency",
+    "unit normalization", "combination parsing", "opposing pharmacology", "electrolyte"
+  ],
+  "lists": [
+    {
+      "id": "L01",
+      "medications": [
+        {"brand": "Ambien", "generic": "zolpidem", "strength": "10 mg", "frequency": "once daily at bedtime", "total_daily": "10 mg"},
+        {"brand": "Xanax", "generic": "alprazolam", "strength": "1 mg", "frequency": "three times daily", "total_daily": "3 mg"},
+        {"brand": "Adderall", "generic": "amphetamine/dextroamphetamine mixed salts", "strength": "20 mg", "frequency": "three times daily", "total_daily": "60 mg"},
+        {"brand": "Zyprexa", "generic": "olanzapine", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"},
+        {"brand": "Zyprexa", "generic": "olanzapine", "strength": "2.5 mg", "frequency": "once daily", "total_daily": "2.5 mg"}
+      ]
+    },
+    {
+      "id": "L02",
+      "medications": [
+        {"brand": "Zoloft", "generic": "sertraline", "strength": "100 mg", "frequency": "once daily", "total_daily": "100 mg"},
+        {"brand": "Ultram", "generic": "tramadol", "strength": "50 mg", "frequency": "four times daily", "total_daily": "200 mg"},
+        {"brand": "Imitrex", "generic": "sumatriptan", "strength": "50 mg", "frequency": "as needed, may repeat once after 2 hours", "total_daily": "100 mg max"},
+        {"brand": "Flexeril", "generic": "cyclobenzaprine", "strength": "10 mg", "frequency": "three times daily", "total_daily": "30 mg"},
+        {"brand": "Zofran", "generic": "ondansetron", "strength": "8 mg", "frequency": "twice daily", "total_daily": "16 mg"},
+        {"brand": "Lipitor", "generic": "atorvastatin", "strength": "40 mg", "frequency": "once daily", "total_daily": "40 mg"}
+      ]
+    },
+    {
+      "id": "L03",
+      "medications": [
+        {"brand": "Celexa", "generic": "citalopram", "strength": "40 mg", "frequency": "once daily", "total_daily": "40 mg"},
+        {"brand": "Haldol", "generic": "haloperidol", "strength": "5 mg", "frequency": "twice daily", "total_daily": "10 mg"},
+        {"brand": "Zithromax", "generic": "azithromycin", "strength": "500 mg", "frequency": "once daily", "total_daily": "500 mg"},
+        {"brand": "Diflucan", "generic": "fluconazole", "strength": "200 mg", "frequency": "once daily", "total_daily": "200 mg"},
+        {"brand": "Lasix", "generic": "furosemide", "strength": "40 mg", "frequency": "once daily", "total_daily": "40 mg"},
+        {"brand": "Protonix", "generic": "pantoprazole", "strength": "40 mg", "frequency": "once daily", "total_daily": "40 mg"}
+      ]
+    },
+    {
+      "id": "L04",
+      "medications": [
+        {"brand": "Lithobid", "generic": "lithium carbonate ER", "strength": "300 mg", "frequency": "three times daily", "total_daily": "900 mg"},
+        {"brand": "Zestril", "generic": "lisinopril", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"},
+        {"brand": "Microzide", "generic": "hydrochlorothiazide", "strength": "25 mg", "frequency": "once daily", "total_daily": "25 mg"},
+        {"brand": "Motrin", "generic": "ibuprofen", "strength": "800 mg", "frequency": "three times daily", "total_daily": "2,400 mg"},
+        {"brand": "Topamax", "generic": "topiramate", "strength": "100 mg", "frequency": "twice daily", "total_daily": "200 mg"},
+        {"brand": "Glucophage", "generic": "metformin", "strength": "1,000 mg", "frequency": "twice daily", "total_daily": "2,000 mg"}
+      ]
+    },
+    {
+      "id": "L05",
+      "medications": [
+        {"brand": "Coumadin", "generic": "warfarin", "strength": "5 mg", "frequency": "once daily on Monday, Wednesday, Friday", "total_daily": "5 mg on those days"},
+        {"brand": "Coumadin", "generic": "warfarin", "strength": "2.5 mg", "frequency": "once daily on Tuesday, Thursday, Saturday, Sunday", "total_daily": "2.5 mg on those days"},
+        {"brand": "Bactrim DS", "generic": "sulfamethoxazole/trimethoprim", "strength": "800/160 mg", "frequency": "twice daily", "total_daily": "1,600/320 mg"},
+        {"brand": "Cordarone", "generic": "amiodarone", "strength": "200 mg", "frequency": "once daily", "total_daily": "200 mg"},
+        {"brand": "Lexapro", "generic": "escitalopram", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"},
+        {"brand": "Bayer", "generic": "aspirin", "strength": "81 mg", "frequency": "once daily", "total_daily": "81 mg", "otc": true},
+        {"brand": "Plavix", "generic": "clopidogrel", "strength": "75 mg", "frequency": "once daily", "total_daily": "75 mg"}
+      ]
+    },
+    {
+      "id": "L06",
+      "medications": [
+        {"brand": "OxyContin", "generic": "oxycodone ER", "strength": "30 mg", "frequency": "twice daily", "total_daily": "60 mg"},
+        {"brand": "Roxicodone", "generic": "oxycodone IR", "strength": "10 mg", "frequency": "every 4 hours as needed, max 6 doses/day", "total_daily": "60 mg max"},
+        {"brand": "Klonopin", "generic": "clonazepam", "strength": "1 mg", "frequency": "twice daily", "total_daily": "2 mg"},
+        {"brand": "Neurontin", "generic": "gabapentin", "strength": "600 mg", "frequency": "three times daily", "total_daily": "1,800 mg"},
+        {"brand": "Soma", "generic": "carisoprodol", "strength": "350 mg", "frequency": "three times daily", "total_daily": "1,050 mg"},
+        {"brand": "Vistaril", "generic": "hydroxyzine", "strength": "25 mg", "frequency": "three times daily", "total_daily": "75 mg"}
+      ]
+    },
+    {
+      "id": "L07",
+      "medications": [
+        {"brand": "Nardil", "generic": "phenelzine", "strength": "15 mg", "frequency": "three times daily", "total_daily": "45 mg"},
+        {"brand": "Wellbutrin SR", "generic": "bupropion SR", "strength": "150 mg", "frequency": "twice daily", "total_daily": "300 mg"},
+        {"brand": "Demerol", "generic": "meperidine", "strength": "50 mg", "frequency": "every 6 hours as needed, max 4 doses/day", "total_daily": "200 mg max"},
+        {"brand": "Ritalin", "generic": "methylphenidate", "strength": "10 mg", "frequency": "twice daily", "total_daily": "20 mg"},
+        {"brand": "Norvasc", "generic": "amlodipine", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"},
+        {"brand": "Synthroid", "generic": "levothyroxine", "strength": "100 mcg", "frequency": "once daily", "total_daily": "100 mcg"}
+      ]
+    },
+    {
+      "id": "L08",
+      "medications": [
+        {"brand": "Clozaril", "generic": "clozapine", "strength": "200 mg", "frequency": "twice daily", "total_daily": "400 mg"},
+        {"brand": "Tegretol", "generic": "carbamazepine", "strength": "400 mg", "frequency": "twice daily", "total_daily": "800 mg"},
+        {"brand": "Luvox", "generic": "fluvoxamine", "strength": "100 mg", "frequency": "twice daily", "total_daily": "200 mg"},
+        {"brand": "Cipro", "generic": "ciprofloxacin", "strength": "500 mg", "frequency": "twice daily", "total_daily": "1,000 mg"},
+        {"brand": "Ativan", "generic": "lorazepam", "strength": "1 mg", "frequency": "twice daily", "total_daily": "2 mg"},
+        {"brand": "Depakote", "generic": "divalproex sodium", "strength": "500 mg", "frequency": "twice daily", "total_daily": "1,000 mg"}
+      ]
+    },
+    {
+      "id": "L09",
+      "medications": [
+        {"brand": "Prozac", "generic": "fluoxetine", "strength": "40 mg", "frequency": "once daily", "total_daily": "40 mg"},
+        {"brand": "Paxil", "generic": "paroxetine", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"},
+        {"brand": "Nolvadex", "generic": "tamoxifen", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"},
+        {"brand": "Toprol-XL", "generic": "metoprolol succinate", "strength": "100 mg", "frequency": "once daily", "total_daily": "100 mg"},
+        {"brand": "Naprosyn", "generic": "naproxen", "strength": "500 mg", "frequency": "twice daily", "total_daily": "1,000 mg"},
+        {"brand": "Nexium", "generic": "esomeprazole", "strength": "40 mg", "frequency": "once daily", "total_daily": "40 mg"}
+      ]
+    },
+    {
+      "id": "L10",
+      "medications": [
+        {"brand": "Zocor", "generic": "simvastatin", "strength": "40 mg", "frequency": "once daily at bedtime", "total_daily": "40 mg"},
+        {"brand": "Biaxin", "generic": "clarithromycin", "strength": "500 mg", "frequency": "twice daily", "total_daily": "1,000 mg"},
+        {"brand": "Aldactone", "generic": "spironolactone", "strength": "25 mg", "frequency": "once daily", "total_daily": "25 mg"},
+        {"brand": "Vasotec", "generic": "enalapril", "strength": "10 mg", "frequency": "twice daily", "total_daily": "20 mg"},
+        {"brand": "Klor-Con", "generic": "potassium chloride ER", "strength": "20 mEq", "frequency": "once daily", "total_daily": "20 mEq"},
+        {"brand": "Trexall", "generic": "methotrexate", "strength": "15 mg", "frequency": "once weekly", "total_daily": "15 mg per week"}
+      ]
+    },
+    {
+      "id": "L11",
+      "medications": [
+        {"brand": "Synthroid", "generic": "levothyroxine", "strength": "75 mcg", "frequency": "once daily", "total_daily": "75 mcg"},
+        {"brand": "Lipitor", "generic": "atorvastatin", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"},
+        {"brand": "Zestril", "generic": "lisinopril", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"},
+        {"brand": "Lexapro", "generic": "escitalopram", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"},
+        {"brand": "Singulair", "generic": "montelukast", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"}
+      ]
+    },
+    {
+      "id": "L12",
+      "medications": [
+        {"brand": "Symbyax", "generic": "olanzapine/fluoxetine", "strength": "6/25 mg", "frequency": "once daily", "total_daily": "6/25 mg"},
+        {"brand": "Prozac", "generic": "fluoxetine", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"},
+        {"brand": "Norco", "generic": "hydrocodone/acetaminophen", "strength": "10/325 mg", "frequency": "four times daily", "total_daily": "40/1,300 mg"},
+        {"brand": "Tylenol", "generic": "acetaminophen", "strength": "500 mg", "frequency": "2 tablets three times daily", "total_daily": "3,000 mg", "otc": true},
+        {"brand": "Xanax", "generic": "alprazolam", "strength": "0.5 mg", "frequency": "three times daily", "total_daily": "1.5 mg"},
+        {"brand": "Xanax XR", "generic": "alprazolam ER", "strength": "1 mg", "frequency": "once daily", "total_daily": "1 mg"}
+      ]
+    },
+    {
+      "id": "L13",
+      "medications": [
+        {"brand": "Zyvox", "generic": "linezolid", "strength": "600 mg", "frequency": "twice daily", "total_daily": "1,200 mg"},
+        {"brand": "Effexor XR", "generic": "venlafaxine ER", "strength": "225 mg", "frequency": "once daily", "total_daily": "225 mg"},
+        {"brand": "Buspar", "generic": "buspirone", "strength": "15 mg", "frequency": "twice daily", "total_daily": "30 mg"},
+        {"brand": "Reglan", "generic": "metoclopramide", "strength": "10 mg", "frequency": "four times daily, before meals and at bedtime", "total_daily": "40 mg"},
+        {"brand": "Duragesic", "generic": "fentanyl", "strength": "25 mcg/h", "frequency": "one patch every 72 hours", "total_daily": "25 mcg/h continuous", "route": "transdermal"},
+        {"brand": "Robaxin", "generic": "methocarbamol", "strength": "750 mg", "frequency": "four times daily", "total_daily": "3,000 mg"}
+      ]
+    },
+    {
+      "id": "L14",
+      "medications": [
+        {"brand": "Duragesic", "generic": "fentanyl", "strength": "50 mcg/h", "frequency": "one patch every 72 hours", "total_daily": "50 mcg/h continuous", "route": "transdermal"},
+        {"brand": "Valium", "generic": "diazepam", "strength": "10 mg", "frequency": "three times daily", "total_daily": "30 mg"},
+        {"brand": "Restoril", "generic": "temazepam", "strength": "30 mg", "frequency": "once daily at bedtime", "total_daily": "30 mg"},
+        {"brand": "Lyrica", "generic": "pregabalin", "strength": "150 mg", "frequency": "twice daily", "total_daily": "300 mg"},
+        {"brand": "Phenergan", "generic": "promethazine", "strength": "25 mg", "frequency": "every 6 hours as needed, max 4 doses/day", "total_daily": "100 mg max"},
+        {"brand": "Zanaflex", "generic": "tizanidine", "strength": "4 mg", "frequency": "three times daily", "total_daily": "12 mg"}
+      ]
+    },
+    {
+      "id": "L15",
+      "medications": [
+        {"brand": "Toprol-XL", "generic": "metoprolol succinate", "strength": "200 mg", "frequency": "once daily", "total_daily": "200 mg"},
+        {"brand": "Cardizem CD", "generic": "diltiazem ER", "strength": "240 mg", "frequency": "once daily", "total_daily": "240 mg"},
+        {"brand": "Lanoxin", "generic": "digoxin", "strength": "0.25 mg", "frequency": "once daily", "total_daily": "0.25 mg"},
+        {"brand": "Cordarone", "generic": "amiodarone", "strength": "200 mg", "frequency": "once daily", "total_daily": "200 mg"},
+        {"brand": "Aricept", "generic": "donepezil", "strength": "10 mg", "frequency": "once daily at bedtime", "total_daily": "10 mg"},
+        {"brand": "Lasix", "generic": "furosemide", "strength": "40 mg", "frequency": "once daily", "total_daily": "40 mg"}
+      ]
+    },
+    {
+      "id": "L16",
+      "medications": [
+        {"brand": "Viagra", "generic": "sildenafil", "strength": "100 mg", "frequency": "as needed, no more than once daily", "total_daily": "100 mg max"},
+        {"brand": "Nitrostat", "generic": "nitroglycerin", "strength": "0.4 mg", "frequency": "as needed for chest pain, up to 3 tablets in 15 minutes", "total_daily": "1.2 mg per episode", "route": "sublingual"},
+        {"brand": "Imdur", "generic": "isosorbide mononitrate ER", "strength": "60 mg", "frequency": "once daily", "total_daily": "60 mg"},
+        {"brand": "Flomax", "generic": "tamsulosin", "strength": "0.4 mg", "frequency": "once daily", "total_daily": "0.4 mg"},
+        {"brand": "Catapres", "generic": "clonidine", "strength": "0.1 mg", "frequency": "twice daily", "total_daily": "0.2 mg"},
+        {"brand": "Coreg", "generic": "carvedilol", "strength": "25 mg", "frequency": "twice daily", "total_daily": "50 mg"}
+      ]
+    },
+    {
+      "id": "L17",
+      "medications": [
+        {"brand": "Bactrim DS", "generic": "sulfamethoxazole/trimethoprim", "strength": "800/160 mg", "frequency": "twice daily", "total_daily": "1,600/320 mg"},
+        {"brand": "Aldactone", "generic": "spironolactone", "strength": "50 mg", "frequency": "once daily", "total_daily": "50 mg"},
+        {"brand": "Cozaar", "generic": "losartan", "strength": "100 mg", "frequency": "once daily", "total_daily": "100 mg"},
+        {"brand": "Klor-Con", "generic": "potassium chloride ER", "strength": "40 mEq", "frequency": "once daily", "total_daily": "40 mEq"},
+        {"brand": "Celebrex", "generic": "celecoxib", "strength": "200 mg", "frequency": "twice daily", "total_daily": "400 mg"},
+        {"brand": "Jardiance", "generic": "empagliflozin", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"}
+      ]
+    },
+    {
+      "id": "L18",
+      "medications": [
+        {"brand": "Elavil", "generic": "amitriptyline", "strength": "75 mg", "frequency": "once daily at bedtime", "total_daily": "75 mg"},
+        {"brand": "Ditropan", "generic": "oxybutynin", "strength": "5 mg", "frequency": "three times daily", "total_daily": "15 mg"},
+        {"brand": "Vistaril", "generic": "hydroxyzine", "strength": "50 mg", "frequency": "three times daily", "total_daily": "150 mg"},
+        {"brand": "Cogentin", "generic": "benztropine", "strength": "1 mg", "frequency": "twice daily", "total_daily": "2 mg"},
+        {"brand": "Aricept", "generic": "donepezil", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"},
+        {"brand": "Paxil", "generic": "paroxetine", "strength": "40 mg", "frequency": "once daily", "total_daily": "40 mg"}
+      ]
+    },
+    {
+      "id": "L19",
+      "medications": [
+        {"brand": "Wellbutrin XL", "generic": "bupropion XL", "strength": "450 mg", "frequency": "once daily", "total_daily": "450 mg"},
+        {"brand": "Ultram", "generic": "tramadol", "strength": "100 mg", "frequency": "four times daily", "total_daily": "400 mg"},
+        {"brand": "Theo-24", "generic": "theophylline ER", "strength": "400 mg", "frequency": "once daily", "total_daily": "400 mg"},
+        {"brand": "Cipro", "generic": "ciprofloxacin", "strength": "500 mg", "frequency": "twice daily", "total_daily": "1,000 mg"},
+        {"brand": "Seroquel", "generic": "quetiapine", "strength": "400 mg", "frequency": "once daily at bedtime", "total_daily": "400 mg"},
+        {"brand": "Lipitor", "generic": "atorvastatin", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"}
+      ]
+    },
+    {
+      "id": "L20",
+      "medications": [
+        {"brand": "Rifadin", "generic": "rifampin", "strength": "600 mg", "frequency": "once daily", "total_daily": "600 mg"},
+        {"brand": "Xarelto", "generic": "rivaroxaban", "strength": "20 mg", "frequency": "once daily with the evening meal", "total_daily": "20 mg"},
+        {"brand": "Sprintec", "generic": "norgestimate/ethinyl estradiol", "strength": "0.25 mg/35 mcg", "frequency": "once daily", "total_daily": "0.25 mg/35 mcg"},
+        {"brand": "Prograf", "generic": "tacrolimus", "strength": "2 mg", "frequency": "twice daily", "total_daily": "4 mg"},
+        {"brand": "Latuda", "generic": "lurasidone", "strength": "80 mg", "frequency": "once daily with food", "total_daily": "80 mg"},
+        {"brand": "Dolophine", "generic": "methadone", "strength": "60 mg", "frequency": "once daily", "total_daily": "60 mg"}
+      ]
+    },
+    {
+      "id": "L21",
+      "medications": [
+        {"brand": "Nizoral", "generic": "ketoconazole", "strength": "200 mg", "frequency": "once daily", "total_daily": "200 mg"},
+        {"brand": "Halcion", "generic": "triazolam", "strength": "0.25 mg", "frequency": "once daily at bedtime", "total_daily": "0.25 mg"},
+        {"brand": "Xanax", "generic": "alprazolam", "strength": "1 mg", "frequency": "three times daily", "total_daily": "3 mg"},
+        {"brand": "Eliquis", "generic": "apixaban", "strength": "5 mg", "frequency": "twice daily", "total_daily": "10 mg"},
+        {"brand": "Lipitor", "generic": "atorvastatin", "strength": "80 mg", "frequency": "once daily", "total_daily": "80 mg"},
+        {"brand": "Norvasc", "generic": "amlodipine", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"}
+      ]
+    },
+    {
+      "id": "L22",
+      "medications": [
+        {"brand": "Prograf", "generic": "tacrolimus", "strength": "3 mg", "frequency": "twice daily", "total_daily": "6 mg"},
+        {"brand": "CellCept", "generic": "mycophenolate mofetil", "strength": "1,000 mg", "frequency": "twice daily", "total_daily": "2,000 mg"},
+        {"brand": "Diflucan", "generic": "fluconazole", "strength": "400 mg", "frequency": "once daily", "total_daily": "400 mg"},
+        {"brand": "Zocor", "generic": "simvastatin", "strength": "40 mg", "frequency": "once daily at bedtime", "total_daily": "40 mg"},
+        {"brand": "Prilosec", "generic": "omeprazole", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"},
+        {"brand": "Zofran", "generic": "ondansetron", "strength": "8 mg", "frequency": "twice daily", "total_daily": "16 mg"}
+      ]
+    },
+    {
+      "id": "L23",
+      "medications": [
+        {"brand": "Glucotrol", "generic": "glipizide", "strength": "10 mg", "frequency": "twice daily", "total_daily": "20 mg"},
+        {"brand": "Lantus", "generic": "insulin glargine", "strength": "40 units", "frequency": "once daily at bedtime", "total_daily": "40 units", "route": "subcutaneous"},
+        {"brand": "Inderal", "generic": "propranolol", "strength": "40 mg", "frequency": "twice daily", "total_daily": "80 mg"},
+        {"brand": "Bactrim DS", "generic": "sulfamethoxazole/trimethoprim", "strength": "800/160 mg", "frequency": "twice daily", "total_daily": "1,600/320 mg"},
+        {"brand": "Levaquin", "generic": "levofloxacin", "strength": "750 mg", "frequency": "once daily", "total_daily": "750 mg"},
+        {"brand": "Ozempic", "generic": "semaglutide", "strength": "1 mg", "frequency": "once weekly", "total_daily": "1 mg per week", "route": "subcutaneous"}
+      ]
+    },
+    {
+      "id": "L24",
+      "medications": [
+        {"brand": "Norco", "generic": "hydrocodone/acetaminophen", "strength": "10/325 mg", "frequency": "every 6 hours", "total_daily": "40/1,300 mg"},
+        {"brand": "Percocet", "generic": "oxycodone/acetaminophen", "strength": "5/325 mg", "frequency": "every 6 hours as needed, max 4 doses/day", "total_daily": "20/1,300 mg max"},
+        {"brand": "Ambien", "generic": "zolpidem", "strength": "10 mg", "frequency": "once daily at bedtime", "total_daily": "10 mg"},
+        {"brand": "Lunesta", "generic": "eszopiclone", "strength": "3 mg", "frequency": "once daily at bedtime", "total_daily": "3 mg"},
+        {"brand": "Mobic", "generic": "meloxicam", "strength": "15 mg", "frequency": "once daily", "total_daily": "15 mg"},
+        {"brand": "Aleve", "generic": "naproxen sodium", "strength": "220 mg", "frequency": "twice daily", "total_daily": "440 mg", "otc": true}
+      ]
+    },
+    {
+      "id": "L25",
+      "medications": [
+        {"brand": "Dolophine", "generic": "methadone", "strength": "40 mg", "frequency": "twice daily", "total_daily": "80 mg"},
+        {"brand": "Seroquel", "generic": "quetiapine", "strength": "300 mg", "frequency": "once daily at bedtime", "total_daily": "300 mg"},
+        {"brand": "Zofran", "generic": "ondansetron", "strength": "8 mg", "frequency": "twice daily", "total_daily": "16 mg"},
+        {"brand": "Levaquin", "generic": "levofloxacin", "strength": "500 mg", "frequency": "once daily", "total_daily": "500 mg"},
+        {"brand": "Effexor XR", "generic": "venlafaxine ER", "strength": "150 mg", "frequency": "once daily", "total_daily": "150 mg"},
+        {"brand": "Diflucan", "generic": "fluconazole", "strength": "200 mg", "frequency": "once daily", "total_daily": "200 mg"}
+      ]
+    },
+    {
+      "id": "L26",
+      "medications": [
+        {"brand": "Depakote", "generic": "divalproex sodium DR", "strength": "750 mg", "frequency": "twice daily", "total_daily": "1,500 mg"},
+        {"brand": "Lamictal", "generic": "lamotrigine", "strength": "200 mg", "frequency": "once daily", "total_daily": "200 mg"},
+        {"brand": "Topamax", "generic": "topiramate", "strength": "100 mg", "frequency": "twice daily", "total_daily": "200 mg"},
+        {"brand": "Bayer", "generic": "aspirin", "strength": "325 mg", "frequency": "once daily", "total_daily": "325 mg", "otc": true},
+        {"brand": "Tegretol", "generic": "carbamazepine", "strength": "400 mg", "frequency": "twice daily", "total_daily": "800 mg"},
+        {"brand": "Klonopin", "generic": "clonazepam", "strength": "0.5 mg", "frequency": "twice daily", "total_daily": "1 mg"}
+      ]
+    },
+    {
+      "id": "L27",
+      "medications": [
+        {"brand": "Sinemet", "generic": "carbidopa/levodopa", "strength": "25/100 mg", "frequency": "three times daily", "total_daily": "75/300 mg"},
+        {"brand": "Azilect", "generic": "rasagiline", "strength": "1 mg", "frequency": "once daily", "total_daily": "1 mg"},
+        {"brand": "Reglan", "generic": "metoclopramide", "strength": "10 mg", "frequency": "four times daily, before meals and at bedtime", "total_daily": "40 mg"},
+        {"brand": "Haldol", "generic": "haloperidol", "strength": "2 mg", "frequency": "once daily at bedtime", "total_daily": "2 mg"},
+        {"brand": "Demerol", "generic": "meperidine", "strength": "50 mg", "frequency": "every 6 hours as needed, max 4 doses/day", "total_daily": "200 mg max"},
+        {"brand": "Lexapro", "generic": "escitalopram", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"}
+      ]
+    },
+    {
+      "id": "L28",
+      "medications": [
+        {"brand": "Prezcobix", "generic": "darunavir/cobicistat", "strength": "800/150 mg", "frequency": "once daily with food", "total_daily": "800/150 mg"},
+        {"brand": "Truvada", "generic": "emtricitabine/tenofovir disoproxil fumarate", "strength": "200/300 mg", "frequency": "once daily", "total_daily": "200/300 mg"},
+        {"brand": "Lipitor", "generic": "atorvastatin", "strength": "80 mg", "frequency": "once daily", "total_daily": "80 mg"},
+        {"brand": "Xanax", "generic": "alprazolam", "strength": "0.5 mg", "frequency": "three times daily", "total_daily": "1.5 mg"},
+        {"brand": "Flonase", "generic": "fluticasone propionate", "strength": "50 mcg per spray", "frequency": "2 sprays each nostril once daily", "total_daily": "200 mcg", "route": "intranasal"},
+        {"brand": "Viagra", "generic": "sildenafil", "strength": "50 mg", "frequency": "as needed, no more than once daily", "total_daily": "50 mg max"}
+      ]
+    },
+    {
+      "id": "L29",
+      "medications": [
+        {"brand": "Amoxil", "generic": "amoxicillin", "strength": "500 mg", "frequency": "three times daily", "total_daily": "1,500 mg"},
+        {"brand": "Claritin", "generic": "loratadine", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg", "otc": true},
+        {"brand": "Singulair", "generic": "montelukast", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"},
+        {"brand": "Norvasc", "generic": "amlodipine", "strength": "5 mg", "frequency": "once daily", "total_daily": "5 mg"},
+        {"brand": "Zoloft", "generic": "sertraline", "strength": "50 mg", "frequency": "once daily", "total_daily": "50 mg"},
+        {"brand": "Glucophage", "generic": "metformin", "strength": "500 mg", "frequency": "twice daily", "total_daily": "1,000 mg"}
+      ]
+    },
+    {
+      "id": "L30",
+      "medications": [
+        {"brand": "Synthroid", "generic": "levothyroxine", "strength": "100 mcg", "frequency": "once daily", "total_daily": "100 mcg"},
+        {"brand": "Tums Ultra", "generic": "calcium carbonate", "strength": "1,000 mg", "frequency": "twice daily", "total_daily": "2,000 mg", "otc": true},
+        {"brand": "Cipro", "generic": "ciprofloxacin", "strength": "500 mg", "frequency": "twice daily", "total_daily": "1,000 mg"},
+        {"brand": "Feosol", "generic": "ferrous sulfate", "strength": "325 mg", "frequency": "twice daily", "total_daily": "650 mg", "otc": true},
+        {"brand": "Prilosec", "generic": "omeprazole", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"},
+        {"brand": "Plavix", "generic": "clopidogrel", "strength": "75 mg", "frequency": "once daily", "total_daily": "75 mg"}
+      ]
+    },
+    {
+      "id": "L31",
+      "medications": [
+        {"brand": "Vancocin", "generic": "vancomycin", "strength": "1,000 mg", "frequency": "every 12 hours", "total_daily": "2,000 mg", "route": "IV"},
+        {"brand": "Garamycin", "generic": "gentamicin", "strength": "80 mg", "frequency": "every 8 hours", "total_daily": "240 mg", "route": "IV"},
+        {"brand": "Lasix", "generic": "furosemide", "strength": "40 mg", "frequency": "twice daily", "total_daily": "80 mg", "route": "IV"},
+        {"brand": "Toradol", "generic": "ketorolac", "strength": "30 mg", "frequency": "every 6 hours, not to exceed 5 days", "total_daily": "120 mg", "route": "IV"},
+        {"brand": "Zestril", "generic": "lisinopril", "strength": "10 mg", "frequency": "once daily", "total_daily": "10 mg"},
+        {"brand": "Zosyn", "generic": "piperacillin/tazobactam", "strength": "3.375 g", "frequency": "every 6 hours", "total_daily": "13.5 g", "route": "IV"}
+      ]
+    },
+    {
+      "id": "L32",
+      "medications": [
+        {"brand": "Trexall", "generic": "methotrexate", "strength": "20 mg", "frequency": "once weekly", "total_daily": "20 mg per week"},
+        {"brand": "Bactrim DS", "generic": "sulfamethoxazole/trimethoprim", "strength": "800/160 mg", "frequency": "twice daily", "total_daily": "1,600/320 mg"},
+        {"brand": "Imuran", "generic": "azathioprine", "strength": "100 mg", "frequency": "once daily", "total_daily": "100 mg"},
+        {"brand": "Zyloprim", "generic": "allopurinol", "strength": "300 mg", "frequency": "once daily", "total_daily": "300 mg"},
+        {"brand": "Motrin", "generic": "ibuprofen", "strength": "600 mg", "frequency": "three times daily", "total_daily": "1,800 mg"},
+        {"brand": null, "generic": "folic acid", "strength": "1 mg", "frequency": "once daily", "total_daily": "1 mg"}
+      ]
+    },
+    {
+      "id": "L33",
+      "medications": [
+        {"brand": "Dilantin", "generic": "phenytoin ER", "strength": "300 mg", "frequency": "once daily at bedtime", "total_daily": "300 mg"},
+        {"brand": "Coumadin", "generic": "warfarin", "strength": "5 mg", "frequency": "once daily", "total_daily": "5 mg"},
+        {"brand": "Sprintec", "generic": "norgestimate/ethinyl estradiol", "strength": "0.25 mg/35 mcg", "frequency": "once daily", "total_daily": "0.25 mg/35 mcg"},
+        {"brand": "Prozac", "generic": "fluoxetine", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"},
+        {"brand": "Diflucan", "generic": "fluconazole", "strength": "100 mg", "frequency": "once daily", "total_daily": "100 mg"},
+        {"brand": "Lipitor", "generic": "atorvastatin", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"}
+      ]
+    },
+    {
+      "id": "L34",
+      "medications": [
+        {"brand": "Vyvanse", "generic": "lisdexamfetamine", "strength": "70 mg", "frequency": "once daily in the morning", "total_daily": "70 mg"},
+        {"brand": "Strattera", "generic": "atomoxetine", "strength": "80 mg", "frequency": "once daily", "total_daily": "80 mg"},
+        {"brand": "Intuniv", "generic": "guanfacine ER", "strength": "3 mg", "frequency": "once daily at bedtime", "total_daily": "3 mg"},
+        {"brand": "Kapvay", "generic": "clonidine ER", "strength": "0.1 mg", "frequency": "twice daily", "total_daily": "0.2 mg"},
+        {"brand": "Paxil", "generic": "paroxetine", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"},
+        {"brand": "Seroquel", "generic": "quetiapine", "strength": "100 mg", "frequency": "once daily at bedtime", "total_daily": "100 mg"}
+      ]
+    },
+    {
+      "id": "L35",
+      "medications": [
+        {"brand": "Imitrex", "generic": "sumatriptan", "strength": "100 mg", "frequency": "as needed, may repeat once after 2 hours, max 200 mg/day", "total_daily": "200 mg max"},
+        {"brand": "Maxalt", "generic": "rizatriptan", "strength": "10 mg", "frequency": "as needed, may repeat after 2 hours, max 30 mg/day", "total_daily": "30 mg max"},
+        {"brand": "Inderal LA", "generic": "propranolol ER", "strength": "80 mg", "frequency": "once daily", "total_daily": "80 mg"},
+        {"brand": "Elavil", "generic": "amitriptyline", "strength": "50 mg", "frequency": "once daily at bedtime", "total_daily": "50 mg"},
+        {"brand": "Topamax", "generic": "topiramate", "strength": "50 mg", "frequency": "twice daily", "total_daily": "100 mg"},
+        {"brand": "Fioricet", "generic": "butalbital/acetaminophen/caffeine", "strength": "50/325/40 mg", "frequency": "2 tablets every 4 hours as needed, max 6 tablets/day", "total_daily": "300/1,950/240 mg max"}
+      ]
+    },
+    {
+      "id": "L36",
+      "medications": [
+        {"brand": "Suboxone", "generic": "buprenorphine/naloxone", "strength": "8/2 mg", "frequency": "twice daily", "total_daily": "16/4 mg", "route": "sublingual"},
+        {"brand": "Revia", "generic": "naltrexone", "strength": "50 mg", "frequency": "once daily", "total_daily": "50 mg"},
+        {"brand": "Campral", "generic": "acamprosate", "strength": "666 mg", "frequency": "three times daily", "total_daily": "1,998 mg"},
+        {"brand": "Klonopin", "generic": "clonazepam", "strength": "0.5 mg", "frequency": "twice daily", "total_daily": "1 mg"},
+        {"brand": "Neurontin", "generic": "gabapentin", "strength": "300 mg", "frequency": "three times daily", "total_daily": "900 mg"},
+        {"brand": "Seroquel", "generic": "quetiapine", "strength": "50 mg", "frequency": "once daily at bedtime", "total_daily": "50 mg"}
+      ]
+    },
+    {
+      "id": "L37",
+      "medications": [
+        {"brand": "Pradaxa", "generic": "dabigatran etexilate", "strength": "150 mg", "frequency": "twice daily", "total_daily": "300 mg"},
+        {"brand": "Multaq", "generic": "dronedarone", "strength": "400 mg", "frequency": "twice daily with meals", "total_daily": "800 mg"},
+        {"brand": "Calan SR", "generic": "verapamil ER", "strength": "240 mg", "frequency": "once daily", "total_daily": "240 mg"},
+        {"brand": "Lanoxin", "generic": "digoxin", "strength": "0.125 mg", "frequency": "once daily", "total_daily": "0.125 mg"},
+        {"brand": "Zocor", "generic": "simvastatin", "strength": "20 mg", "frequency": "once daily at bedtime", "total_daily": "20 mg"},
+        {"brand": "Lasix", "generic": "furosemide", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"}
+      ]
+    },
+    {
+      "id": "L38",
+      "medications": [
+        {"brand": "Risperdal", "generic": "risperidone", "strength": "2 mg", "frequency": "twice daily", "total_daily": "4 mg"},
+        {"brand": "Invega", "generic": "paliperidone ER", "strength": "6 mg", "frequency": "once daily", "total_daily": "6 mg"},
+        {"brand": "Zyprexa", "generic": "olanzapine", "strength": "10 mg", "frequency": "once daily at bedtime", "total_daily": "10 mg"},
+        {"brand": "Cogentin", "generic": "benztropine", "strength": "1 mg", "frequency": "twice daily", "total_daily": "2 mg"},
+        {"brand": "Klonopin", "generic": "clonazepam", "strength": "1 mg", "frequency": "twice daily", "total_daily": "2 mg"},
+        {"brand": "Lipitor", "generic": "atorvastatin", "strength": "20 mg", "frequency": "once daily", "total_daily": "20 mg"}
+      ]
+    },
+    {
+      "id": "L39",
+      "medications": [
+        {"brand": "Colcrys", "generic": "colchicine", "strength": "0.6 mg", "frequency": "twice daily", "total_daily": "1.2 mg"},
+        {"brand": "Ery-Tab", "generic": "erythromycin", "strength": "500 mg", "frequency": "four times daily", "total_daily": "2,000 mg"},
+        {"brand": "Zocor", "generic": "simvastatin", "strength": "40 mg", "frequency": "once daily at bedtime", "total_daily": "40 mg"},
+        {"brand": "Zyloprim", "generic": "allopurinol", "strength": "300 mg", "frequency": "once daily", "total_daily": "300 mg"},
+        {"brand": "Cardizem CD", "generic": "diltiazem ER", "strength": "240 mg", "frequency": "once daily", "total_daily": "240 mg"},
+        {"brand": "Lasix", "generic": "furosemide", "strength": "40 mg", "frequency": "once daily", "total_daily": "40 mg"}
+      ]
+    },
+    {
+      "id": "L40",
+      "medications": [
+        {"brand": "Desyrel", "generic": "trazodone", "strength": "100 mg", "frequency": "once daily at bedtime", "total_daily": "100 mg"},
+        {"brand": "Zoloft", "generic": "sertraline", "strength": "200 mg", "frequency": "once daily", "total_daily": "200 mg"},
+        {"brand": "Belsomra", "generic": "suvorexant", "strength": "20 mg", "frequency": "once daily at bedtime", "total_daily": "20 mg"},
+        {"brand": "Ambien", "generic": "zolpidem", "strength": "10 mg", "frequency": "once daily at bedtime", "total_daily": "10 mg"},
+        {"brand": "Xanax", "generic": "alprazolam", "strength": "0.5 mg", "frequency": "three times daily as needed, max 3 doses/day", "total_daily": "1.5 mg max"}
+      ]
+    },
+    {
+      "id": "L41",
+      "medications": [
+        {"brand": "Zoloft", "generic": "sertraline", "strength": "50 mg", "frequency": "once daily", "total_daily": "50 mg"},
+        {"brand": null, "generic": "sertraline", "strength": "50 mg", "frequency": "once daily", "total_daily": "50 mg"},
+        {"brand": "Synthroid", "generic": "levothyroxine", "strength": "0.1 mg", "frequency": "once daily", "total_daily": "0.1 mg"},
+        {"brand": null, "generic": "levothyroxine", "strength": "100 mcg", "frequency": "once daily", "total_daily": "100 mcg"},
+        {"brand": "Motrin", "generic": "ibuprofen", "strength": "800 mg", "frequency": "three times daily", "total_daily": "2,400 mg"},
+        {"brand": "Advil", "generic": "ibuprofen", "strength": "200 mg", "frequency": "2 tablets twice daily", "total_daily": "800 mg", "otc": true}
+      ]
+    }
+  ],
+  "answer_key": {
+    "L01": {
+      "theme": "Same drug entered twice; sedative stacking; stimulant above labeled maximum",
+      "expected": [
+        {"drugs": ["olanzapine", "olanzapine"], "category": "duplicate entry", "severity": "moderate", "why": "Two Zyprexa lines are one drug. Daily olanzapine is 12.5 mg, not 10 or 2.5."},
+        {"drugs": ["alprazolam", "zolpidem", "olanzapine"], "category": "CNS depression", "severity": "major", "why": "Benzodiazepine + Z-drug + sedating antipsychotic: additive sedation, respiratory depression, falls. Zolpidem + a benzodiazepine is also duplicate sedative-hypnotic therapy."},
+        {"drugs": ["amphetamine/dextroamphetamine"], "category": "dose ceiling", "severity": "moderate", "why": "60 mg/day exceeds the Adderall IR labeled maximum of 40 mg/day."},
+        {"drugs": ["amphetamine/dextroamphetamine", "alprazolam", "olanzapine"], "category": "opposing pharmacology", "severity": "minor", "why": "Stimulant against a benzodiazepine and a D2 antagonist; effects partly cancel."}
+      ],
+      "totals": {"olanzapine": "12.5 mg"}
+    },
+    "L02": {
+      "theme": "Serotonin syndrome cluster; PRN max dosing",
+      "expected": [
+        {"drugs": ["sertraline", "tramadol", "sumatriptan", "cyclobenzaprine", "ondansetron"], "category": "serotonin syndrome", "severity": "major", "why": "Five serotonergic agents: SSRI, tramadol (reuptake inhibitor + opioid), triptan, cyclobenzaprine (tricyclic-like), ondansetron (FDA 2012 label warning). Sertraline + tramadol alone is major."},
+        {"drugs": ["tramadol", "sertraline"], "category": "seizure threshold", "severity": "moderate", "why": "Tramadol lowers seizure threshold; SSRI co-use raises the risk."},
+        {"drugs": ["ondansetron", "tramadol"], "category": "efficacy loss", "severity": "minor", "why": "5-HT3 blockade may reduce tramadol analgesia."}
+      ],
+      "should_not_flag": ["atorvastatin"]
+    },
+    "L03": {
+      "theme": "QT prolongation; CYP2C19 inhibition pushing citalopram past its cap; diuretic electrolyte loss",
+      "expected": [
+        {"drugs": ["citalopram", "haloperidol", "azithromycin", "fluconazole"], "category": "QT prolongation", "severity": "major", "why": "Four QT-prolonging drugs; torsades risk is additive. Citalopram's QT effect is dose-dependent."},
+        {"drugs": ["citalopram", "fluconazole"], "category": "CYP inhibition", "severity": "major", "why": "Fluconazole inhibits CYP2C19. Celexa label caps citalopram at 20 mg/day with CYP2C19 inhibitors; 40 mg here is over the cap."},
+        {"drugs": ["haloperidol", "fluconazole"], "category": "CYP inhibition", "severity": "moderate", "why": "CYP3A4 inhibition raises haloperidol; more QT and EPS risk."},
+        {"drugs": ["furosemide", "citalopram", "haloperidol", "azithromycin", "fluconazole"], "category": "electrolyte", "severity": "moderate", "why": "Loop-diuretic hypokalemia and hypomagnesemia amplify QT risk."}
+      ],
+      "should_not_flag": ["pantoprazole at moderate or above (weak CYP2C19 effect; not the omeprazole-class problem)"]
+    },
+    "L04": {
+      "theme": "Lithium toxicity from three renal-handling interactions; triple whammy; metformin + topiramate",
+      "expected": [
+        {"drugs": ["lithium", "lisinopril"], "category": "lithium toxicity", "severity": "major", "why": "ACE inhibitor reduces lithium clearance; levels can rise several-fold over weeks."},
+        {"drugs": ["lithium", "hydrochlorothiazide"], "category": "lithium toxicity", "severity": "major", "why": "Thiazide sodium loss increases proximal lithium reabsorption; roughly 25-40% level rise."},
+        {"drugs": ["lithium", "ibuprofen"], "category": "lithium toxicity", "severity": "major", "why": "NSAID lowers renal prostaglandins and lithium clearance; 2,400 mg/day is a full anti-inflammatory dose."},
+        {"drugs": ["lisinopril", "hydrochlorothiazide", "ibuprofen"], "category": "nephrotoxicity", "severity": "major", "why": "Triple whammy: ACE inhibitor + diuretic + NSAID -> acute kidney injury."},
+        {"drugs": ["metformin", "topiramate"], "category": "metabolic acidosis", "severity": "moderate", "why": "Topiramate (carbonic anhydrase inhibition) and metformin both predispose to metabolic acidosis; Topamax label warns."},
+        {"drugs": ["topiramate", "hydrochlorothiazide"], "category": "electrolyte", "severity": "minor", "why": "HCTZ raises topiramate exposure ~30%; both cause hypokalemia."}
+      ]
+    },
+    "L05": {
+      "theme": "Warfarin potentiation; multi-agent bleeding; alternating-day dosing; combination product",
+      "expected": [
+        {"drugs": ["warfarin", "sulfamethoxazole/trimethoprim"], "category": "bleeding", "severity": "major", "why": "Sulfamethoxazole inhibits CYP2C9 (S-warfarin) and displaces warfarin from albumin; INR often rises sharply within days."},
+        {"drugs": ["warfarin", "amiodarone"], "category": "bleeding", "severity": "major", "why": "Amiodarone inhibits CYP2C9 and 3A4; warfarin usually needs a 30-50% cut, and the effect persists for weeks after amiodarone stops."},
+        {"drugs": ["warfarin", "aspirin", "clopidogrel"], "category": "bleeding", "severity": "major", "why": "Triple antithrombotic therapy: anticoagulant plus two antiplatelets."},
+        {"drugs": ["escitalopram", "warfarin", "aspirin", "clopidogrel"], "category": "bleeding", "severity": "moderate", "why": "SSRI platelet serotonin depletion adds GI bleeding risk on top of antithrombotics."},
+        {"drugs": ["escitalopram", "amiodarone"], "category": "QT prolongation", "severity": "major", "why": "Both prolong QT; escitalopram's effect is dose-dependent."}
+      ],
+      "totals": {"warfarin": "5 mg Mon/Wed/Fri, 2.5 mg other days = 25 mg/week; there is no single daily number", "sulfamethoxazole/trimethoprim": "1,600 mg / 320 mg"}
+    },
+    "L06": {
+      "theme": "Opioid + benzodiazepine boxed warning; ER and IR of one opioid; MME; sedative burden",
+      "expected": [
+        {"drugs": ["oxycodone ER", "oxycodone IR"], "category": "duplicate entry", "severity": "major", "why": "Two brands, one molecule: 60 mg scheduled + up to 60 mg PRN = 120 mg/day oxycodone = 180 MME (CDC: reassess at 50, avoid 90+)."},
+        {"drugs": ["oxycodone", "clonazepam"], "category": "respiratory depression", "severity": "major", "why": "FDA boxed warning: opioid + benzodiazepine -> profound sedation, respiratory depression, death."},
+        {"drugs": ["oxycodone", "gabapentin"], "category": "respiratory depression", "severity": "major", "why": "FDA 2019 warning: gabapentinoid + opioid respiratory depression."},
+        {"drugs": ["oxycodone", "carisoprodol", "clonazepam"], "category": "CNS depression", "severity": "major", "why": "Carisoprodol (metabolized to meprobamate) + opioid + benzodiazepine is the 'holy trinity' overdose combination."},
+        {"drugs": ["hydroxyzine", "oxycodone", "clonazepam"], "category": "CNS depression", "severity": "moderate", "why": "Sedating antihistamine adds to sedation."}
+      ],
+      "totals": {"oxycodone": "120 mg/day max (60 mg ER + 60 mg IR) = 180 MME"}
+    },
+    "L07": {
+      "theme": "MAOI contraindications; microgram unit; PRN max",
+      "expected": [
+        {"drugs": ["phenelzine", "bupropion"], "category": "hypertensive crisis", "severity": "contraindicated", "why": "Wellbutrin label: contraindicated with MAOIs or within 14 days; hypertensive reactions."},
+        {"drugs": ["phenelzine", "meperidine"], "category": "serotonin syndrome", "severity": "contraindicated", "why": "Meperidine + MAOI causes fatal serotonin syndrome and hyperpyrexia; label contraindication."},
+        {"drugs": ["phenelzine", "methylphenidate"], "category": "hypertensive crisis", "severity": "contraindicated", "why": "Ritalin label: contraindicated during or within 14 days of MAOI treatment."},
+        {"drugs": ["phenelzine", "amlodipine"], "category": "hypotension", "severity": "moderate", "why": "MAOIs cause orthostatic hypotension; additive with antihypertensives."}
+      ],
+      "totals": {"levothyroxine": "100 mcg = 0.1 mg"},
+      "should_not_flag": ["levothyroxine at moderate or above"]
+    },
+    "L08": {
+      "theme": "Clozapine with opposing CYP effects; bone marrow suppression; respiratory arrest",
+      "expected": [
+        {"drugs": ["clozapine", "carbamazepine"], "category": "myelosuppression", "severity": "major", "why": "Both cause agranulocytosis; carbamazepine also induces CYP3A4 and cuts clozapine levels roughly in half. Avoid the combination."},
+        {"drugs": ["clozapine", "fluvoxamine"], "category": "CYP inhibition", "severity": "major", "why": "Fluvoxamine is a potent CYP1A2 inhibitor; clozapine levels rise 3-5x."},
+        {"drugs": ["clozapine", "ciprofloxacin"], "category": "CYP inhibition", "severity": "major", "why": "Ciprofloxacin inhibits CYP1A2; clozapine levels roughly double."},
+        {"drugs": ["clozapine", "lorazepam"], "category": "respiratory depression", "severity": "major", "why": "Clozapine + benzodiazepine: reported respiratory and cardiac arrest, especially early in treatment."},
+        {"drugs": ["carbamazepine", "divalproex"], "category": "CYP induction", "severity": "moderate", "why": "Valproate raises carbamazepine-10,11-epoxide (toxicity); carbamazepine lowers valproate levels."},
+        {"drugs": ["clozapine", "ciprofloxacin"], "category": "QT prolongation", "severity": "moderate", "why": "Additive QT effect."}
+      ],
+      "note": "Net effect on clozapine is unpredictable: one inducer against two inhibitors. The app should surface both directions, not cancel them out."
+    },
+    "L09": {
+      "theme": "Duplicate SSRI; CYP2D6 inhibition of a prodrug and of a substrate; SSRI + NSAID bleeding",
+      "expected": [
+        {"drugs": ["fluoxetine", "paroxetine"], "category": "duplicate therapy", "severity": "major", "why": "Two SSRIs: no added benefit, additive serotonin syndrome risk; fluoxetine's long half-life complicates any switch."},
+        {"drugs": ["fluoxetine", "paroxetine", "tamoxifen"], "category": "efficacy loss", "severity": "major", "why": "Strong CYP2D6 inhibitors block conversion of tamoxifen to endoxifen; associated with higher breast cancer recurrence. Avoid."},
+        {"drugs": ["fluoxetine", "paroxetine", "metoprolol"], "category": "CYP inhibition", "severity": "moderate", "why": "Metoprolol is a CYP2D6 substrate; levels rise 2-5x -> bradycardia, hypotension."},
+        {"drugs": ["fluoxetine", "paroxetine", "naproxen"], "category": "bleeding", "severity": "moderate", "why": "SSRI + NSAID: 3-6x upper GI bleeding vs either alone."}
+      ],
+      "should_not_flag": ["esomeprazole at moderate or above"]
+    },
+    "L10": {
+      "theme": "Contraindicated statin-macrolide pair; hyperkalemia triad; mEq unit; weekly dosing",
+      "expected": [
+        {"drugs": ["simvastatin", "clarithromycin"], "category": "myopathy/rhabdomyolysis", "severity": "contraindicated", "why": "Clarithromycin (strong CYP3A4 inhibitor) raises simvastatin roughly 10x; Zocor label contraindication."},
+        {"drugs": ["spironolactone", "enalapril", "potassium chloride"], "category": "hyperkalemia", "severity": "major", "why": "Aldosterone antagonist + ACE inhibitor + potassium supplement."},
+        {"drugs": ["methotrexate"], "category": "dosing frequency", "severity": "major", "why": "Once weekly. Treating 15 mg as daily (105 mg/week) is a well-documented fatal error; the app must not compute a daily total for it."}
+      ],
+      "totals": {"methotrexate": "15 mg per week (not per day)", "potassium chloride": "20 mEq (about 1.5 g KCl)"}
+    },
+    "L11": {
+      "theme": "Control: no clinically significant interactions",
+      "expected": [],
+      "should_not_flag": ["any pair at moderate or above; escitalopram + lisinopril hyponatremia is at most minor"]
+    },
+    "L12": {
+      "theme": "Hidden duplicates inside combination products; acetaminophen ceiling; IR + ER summing",
+      "expected": [
+        {"drugs": ["olanzapine/fluoxetine", "fluoxetine"], "category": "duplicate therapy", "severity": "major", "why": "Symbyax already contains 25 mg fluoxetine; adding Prozac 20 mg makes 45 mg/day of one drug written twice."},
+        {"drugs": ["hydrocodone/acetaminophen", "acetaminophen"], "category": "dose ceiling", "severity": "major", "why": "Acetaminophen 1,300 mg (Norco) + 3,000 mg (Tylenol) = 4,300 mg/day, above the 4,000 mg/day ceiling; hepatotoxicity."},
+        {"drugs": ["alprazolam", "alprazolam ER"], "category": "duplicate entry", "severity": "moderate", "why": "IR + XR of one benzodiazepine: 2.5 mg/day total."},
+        {"drugs": ["hydrocodone", "alprazolam", "olanzapine"], "category": "respiratory depression", "severity": "major", "why": "Opioid + benzodiazepine boxed warning; olanzapine adds sedation."},
+        {"drugs": ["fluoxetine", "hydrocodone"], "category": "CYP inhibition", "severity": "moderate", "why": "Fluoxetine blocks CYP2D6 conversion of hydrocodone to hydromorphone (less analgesia); hydrocodone is also mildly serotonergic."}
+      ],
+      "totals": {"fluoxetine": "45 mg", "acetaminophen": "4,300 mg", "alprazolam": "2.5 mg", "hydrocodone": "40 mg", "olanzapine": "6 mg"}
+    },
+    "L13": {
+      "theme": "Linezolid acting as an MAOI; serotonergic load; fentanyl patch units",
+      "expected": [
+        {"drugs": ["linezolid", "venlafaxine"], "category": "serotonin syndrome", "severity": "contraindicated", "why": "Linezolid is a reversible non-selective MAOI. Zyvox label: do not combine with SNRIs/SSRIs unless benefit outweighs risk with close monitoring."},
+        {"drugs": ["linezolid", "buspirone", "fentanyl", "metoclopramide"], "category": "serotonin syndrome", "severity": "major", "why": "Each adds serotonergic activity; buspirone is named in the linezolid label."},
+        {"drugs": ["fentanyl", "methocarbamol"], "category": "respiratory depression", "severity": "major", "why": "Opioid + skeletal muscle relaxant: additive CNS and respiratory depression."},
+        {"drugs": ["metoclopramide", "venlafaxine", "buspirone"], "category": "serotonin syndrome", "severity": "moderate", "why": "Metoclopramide is serotonergic (5-HT4 agonist, 5-HT3 antagonist) on top of an SNRI."}
+      ],
+      "totals": {"fentanyl": "25 mcg/h continuous = 600 mcg/day = about 60 MME"}
+    },
+    "L14": {
+      "theme": "Respiratory depression stacking; duplicate benzodiazepines; fentanyl MME",
+      "expected": [
+        {"drugs": ["fentanyl", "diazepam", "temazepam"], "category": "respiratory depression", "severity": "major", "why": "Opioid + benzodiazepine boxed warning, with two benzodiazepines present."},
+        {"drugs": ["diazepam", "temazepam"], "category": "duplicate therapy", "severity": "major", "why": "Two benzodiazepines."},
+        {"drugs": ["fentanyl", "pregabalin"], "category": "respiratory depression", "severity": "major", "why": "FDA 2019: gabapentinoid + opioid."},
+        {"drugs": ["fentanyl", "promethazine"], "category": "respiratory depression", "severity": "major", "why": "Phenothiazine antihistamine potentiates opioid respiratory depression; Phenergan label warns with opioids."},
+        {"drugs": ["tizanidine", "fentanyl", "diazepam", "temazepam", "pregabalin", "promethazine"], "category": "CNS depression", "severity": "moderate", "why": "Alpha-2 agonist: additive sedation and hypotension."}
+      ],
+      "totals": {"fentanyl": "50 mcg/h continuous = 1,200 mcg/day = about 120 MME"}
+    },
+    "L15": {
+      "theme": "Bradycardia and AV block; digoxin level elevation; electrolyte-driven digoxin toxicity",
+      "expected": [
+        {"drugs": ["metoprolol", "diltiazem"], "category": "bradycardia/AV block", "severity": "major", "why": "Beta-blocker + non-dihydropyridine calcium channel blocker: additive negative chronotropy, inotropy, and AV conduction slowing."},
+        {"drugs": ["digoxin", "amiodarone"], "category": "digoxin toxicity", "severity": "major", "why": "Amiodarone inhibits P-gp; digoxin levels rise about 70%. Cut digoxin 30-50%."},
+        {"drugs": ["digoxin", "diltiazem"], "category": "digoxin toxicity", "severity": "moderate", "why": "Diltiazem raises digoxin 20-50%."},
+        {"drugs": ["digoxin", "metoprolol", "diltiazem", "amiodarone"], "category": "bradycardia/AV block", "severity": "major", "why": "Four AV-nodal depressants."},
+        {"drugs": ["donepezil", "metoprolol", "diltiazem", "digoxin"], "category": "bradycardia/AV block", "severity": "moderate", "why": "Cholinesterase inhibitor vagotonic effect: bradycardia, syncope, heart block with other rate-slowing drugs."},
+        {"drugs": ["furosemide", "digoxin", "amiodarone"], "category": "electrolyte", "severity": "moderate", "why": "Hypokalemia and hypomagnesemia increase digoxin toxicity and amiodarone QT risk."},
+        {"drugs": ["amiodarone", "metoprolol"], "category": "CYP inhibition", "severity": "moderate", "why": "Amiodarone inhibits CYP2D6 -> higher metoprolol, plus additive bradycardia."}
+      ],
+      "totals": {"digoxin": "0.25 mg = 250 mcg"}
+    },
+    "L16": {
+      "theme": "Nitrate + PDE5 contraindication; additive hypotension; clonidine with a beta-blocker",
+      "expected": [
+        {"drugs": ["sildenafil", "nitroglycerin"], "category": "hypotension", "severity": "contraindicated", "why": "PDE5 inhibitor + nitrate: cGMP accumulation -> severe, refractory hypotension."},
+        {"drugs": ["sildenafil", "isosorbide mononitrate"], "category": "hypotension", "severity": "contraindicated", "why": "Same mechanism; a long-acting nitrate leaves no safe window."},
+        {"drugs": ["sildenafil", "tamsulosin"], "category": "hypotension", "severity": "moderate", "why": "Alpha-1 blocker + PDE5 inhibitor: symptomatic orthostatic hypotension; Viagra label advises a stable alpha-blocker dose first."},
+        {"drugs": ["clonidine", "carvedilol"], "category": "bradycardia/AV block", "severity": "major", "why": "Additive bradycardia; if clonidine is stopped, unopposed alpha stimulation under beta-blockade causes rebound hypertensive crisis. Taper the beta-blocker first."},
+        {"drugs": ["carvedilol", "tamsulosin", "clonidine", "isosorbide mononitrate"], "category": "hypotension", "severity": "moderate", "why": "Additive vasodilation and orthostasis."}
+      ]
+    },
+    "L17": {
+      "theme": "Hyperkalemia from four directions; triple whammy AKI; SGLT2 volume depletion",
+      "expected": [
+        {"drugs": ["trimethoprim", "spironolactone", "losartan", "potassium chloride"], "category": "hyperkalemia", "severity": "major", "why": "Trimethoprim blocks ENaC like amiloride; with an aldosterone antagonist, an ARB, and 40 mEq KCl, hyperkalemia risk is high."},
+        {"drugs": ["losartan", "spironolactone", "celecoxib"], "category": "nephrotoxicity", "severity": "major", "why": "Triple whammy: RAS blocker + diuretic + NSAID -> AKI; the NSAID also blunts the ARB's BP effect."},
+        {"drugs": ["empagliflozin", "spironolactone", "celecoxib", "losartan"], "category": "nephrotoxicity", "severity": "moderate", "why": "SGLT2 osmotic diuresis plus diuretic and NSAID: volume depletion and AKI."}
+      ],
+      "totals": {"sulfamethoxazole/trimethoprim": "1,600 mg / 320 mg"}
+    },
+    "L18": {
+      "theme": "Anticholinergic burden; cholinesterase inhibitor opposed by anticholinergics; CYP2D6 raising a TCA",
+      "expected": [
+        {"drugs": ["amitriptyline", "oxybutynin", "hydroxyzine", "benztropine", "paroxetine"], "category": "anticholinergic burden", "severity": "major", "why": "Five anticholinergic drugs: delirium, urinary retention, constipation/ileus, blurred vision, falls, hyperthermia."},
+        {"drugs": ["donepezil", "amitriptyline", "oxybutynin", "hydroxyzine", "benztropine"], "category": "therapeutic antagonism", "severity": "major", "why": "Anticholinergics directly oppose a cholinesterase inhibitor and worsen cognition."},
+        {"drugs": ["paroxetine", "amitriptyline"], "category": "CYP inhibition", "severity": "major", "why": "Paroxetine is a strong CYP2D6 inhibitor; amitriptyline and nortriptyline levels rise -> TCA toxicity, QT prolongation, seizures; also serotonin syndrome risk."},
+        {"drugs": ["amitriptyline", "hydroxyzine"], "category": "QT prolongation", "severity": "moderate", "why": "Additive QT effect."}
+      ]
+    },
+    "L19": {
+      "theme": "Seizure threshold at labeled maximums; CYP1A2 inhibition of theophylline; QT",
+      "expected": [
+        {"drugs": ["bupropion", "tramadol", "theophylline", "ciprofloxacin", "quetiapine"], "category": "seizure threshold", "severity": "major", "why": "Bupropion at 450 mg (labeled max; seizure risk is dose-dependent), tramadol at 400 mg (max), theophylline, a fluoroquinolone, and an antipsychotic each lower seizure threshold."},
+        {"drugs": ["theophylline", "ciprofloxacin"], "category": "CYP inhibition", "severity": "major", "why": "Ciprofloxacin inhibits CYP1A2; theophylline levels can rise 20-100%+ -> seizures, arrhythmias. Cipro label: avoid or monitor levels."},
+        {"drugs": ["ciprofloxacin", "quetiapine"], "category": "QT prolongation", "severity": "moderate", "why": "Additive QT effect."},
+        {"drugs": ["bupropion", "tramadol"], "category": "CYP inhibition", "severity": "moderate", "why": "Bupropion (strong CYP2D6 inhibitor) blocks tramadol activation to O-desmethyltramadol: less analgesia, more parent-drug seizure and serotonin risk."}
+      ],
+      "should_not_flag": ["atorvastatin"]
+    },
+    "L20": {
+      "theme": "Strong CYP3A4/P-gp inducer undermining five drugs",
+      "expected": [
+        {"drugs": ["rifampin", "rivaroxaban"], "category": "efficacy loss", "severity": "major", "why": "Rivaroxaban exposure falls about 50%; Xarelto label: avoid with combined P-gp and strong CYP3A4 inducers. Thrombosis risk."},
+        {"drugs": ["rifampin", "norgestimate/ethinyl estradiol"], "category": "efficacy loss", "severity": "major", "why": "Contraceptive failure; non-hormonal backup during and for 28 days after rifampin."},
+        {"drugs": ["rifampin", "tacrolimus"], "category": "efficacy loss", "severity": "major", "why": "Tacrolimus levels fall sharply -> graft rejection; needs dose increase and level monitoring."},
+        {"drugs": ["rifampin", "lurasidone"], "category": "CYP induction", "severity": "contraindicated", "why": "Latuda label: contraindicated with strong CYP3A4 inducers."},
+        {"drugs": ["rifampin", "methadone"], "category": "efficacy loss", "severity": "major", "why": "Methadone levels drop -> opioid withdrawal within days; dose increase required."}
+      ]
+    },
+    "L21": {
+      "theme": "Strong CYP3A4 inhibitor against benzodiazepines, a DOAC, and a statin",
+      "expected": [
+        {"drugs": ["ketoconazole", "triazolam"], "category": "CYP inhibition", "severity": "contraindicated", "why": "Triazolam AUC rises more than 20x; profound, prolonged sedation. Both labels contraindicate."},
+        {"drugs": ["ketoconazole", "alprazolam"], "category": "CYP inhibition", "severity": "contraindicated", "why": "Alprazolam AUC about 4x; Xanax label contraindicates ketoconazole and itraconazole."},
+        {"drugs": ["ketoconazole", "apixaban"], "category": "bleeding", "severity": "major", "why": "Combined strong CYP3A4 + P-gp inhibitor: Eliquis label -> reduce to 2.5 mg twice daily."},
+        {"drugs": ["ketoconazole", "atorvastatin"], "category": "myopathy/rhabdomyolysis", "severity": "major", "why": "Atorvastatin exposure at least doubles; 80 mg is the maximum dose -> myopathy risk."},
+        {"drugs": ["ketoconazole", "amlodipine"], "category": "CYP inhibition", "severity": "minor", "why": "Amlodipine exposure rises modestly; hypotension, edema."}
+      ]
+    },
+    "L22": {
+      "theme": "Transplant regimen: azole raising tacrolimus; QT; PPI reducing mycophenolate",
+      "expected": [
+        {"drugs": ["tacrolimus", "fluconazole"], "category": "CYP inhibition", "severity": "major", "why": "Fluconazole 400 mg inhibits CYP3A4; tacrolimus rises -> nephrotoxicity, neurotoxicity, hyperkalemia. Preemptive dose reduction and levels."},
+        {"drugs": ["tacrolimus", "fluconazole", "ondansetron"], "category": "QT prolongation", "severity": "major", "why": "Three QT-prolonging drugs."},
+        {"drugs": ["mycophenolate mofetil", "omeprazole"], "category": "absorption/timing", "severity": "moderate", "why": "Higher gastric pH reduces mycophenolate mofetil dissolution; MPA exposure falls 25-35%. Less of an issue with enteric-coated mycophenolate sodium."},
+        {"drugs": ["simvastatin", "fluconazole"], "category": "myopathy/rhabdomyolysis", "severity": "moderate", "why": "Moderate CYP3A4 inhibition; simvastatin 40 mg is at the upper end."},
+        {"drugs": ["tacrolimus", "omeprazole"], "category": "CYP inhibition", "severity": "minor", "why": "Omeprazole (CYP2C19/3A4) can modestly raise tacrolimus."}
+      ]
+    },
+    "L23": {
+      "theme": "Hypoglycemia; CYP2C9 on a sulfonylurea; beta-blocker masking; weekly injectable and unit-based dosing",
+      "expected": [
+        {"drugs": ["glipizide", "insulin glargine", "semaglutide"], "category": "hypoglycemia", "severity": "major", "why": "Three glucose-lowering agents; adding a GLP-1 agonist to insulin + sulfonylurea calls for dose cuts in the latter two."},
+        {"drugs": ["glipizide", "sulfamethoxazole/trimethoprim"], "category": "hypoglycemia", "severity": "major", "why": "Sulfamethoxazole inhibits CYP2C9 -> glipizide accumulates; severe hypoglycemia reported."},
+        {"drugs": ["levofloxacin", "glipizide", "insulin glargine"], "category": "hypoglycemia", "severity": "major", "why": "Fluoroquinolone boxed warning: dysglycemia, worst with sulfonylureas and insulin."},
+        {"drugs": ["propranolol", "glipizide", "insulin glargine"], "category": "hypoglycemia", "severity": "moderate", "why": "Non-selective beta-blockade masks tachycardia and tremor and delays glucose recovery."},
+        {"drugs": ["semaglutide", "glipizide"], "category": "absorption/timing", "severity": "minor", "why": "Delayed gastric emptying alters oral drug absorption."}
+      ],
+      "totals": {"insulin glargine": "40 units (units, not mg)", "semaglutide": "1 mg per week (not per day)"}
+    },
+    "L24": {
+      "theme": "Duplicate therapy across three classes; hidden acetaminophen total; MME",
+      "expected": [
+        {"drugs": ["hydrocodone/acetaminophen", "oxycodone/acetaminophen"], "category": "duplicate therapy", "severity": "major", "why": "Two full-agonist opioids; hydrocodone 40 mg + oxycodone 20 mg is about 70 MME."},
+        {"drugs": ["acetaminophen", "acetaminophen"], "category": "duplicate entry", "severity": "moderate", "why": "1,300 + 1,300 = 2,600 mg/day. Under the 4,000 mg ceiling: the app should compute it and not flag a ceiling breach."},
+        {"drugs": ["zolpidem", "eszopiclone"], "category": "duplicate therapy", "severity": "major", "why": "Two Z-drugs at bedtime; both labels warn against other sedative-hypnotics; complex sleep behavior boxed warning."},
+        {"drugs": ["meloxicam", "naproxen sodium"], "category": "duplicate therapy", "severity": "major", "why": "Two NSAIDs: additive GI bleeding, renal, and cardiovascular risk with no added benefit."},
+        {"drugs": ["hydrocodone", "oxycodone", "zolpidem", "eszopiclone"], "category": "CNS depression", "severity": "major", "why": "Opioids + sedative-hypnotics: respiratory depression."}
+      ],
+      "totals": {"acetaminophen": "2,600 mg", "hydrocodone": "40 mg", "oxycodone": "20 mg max", "combined opioid": "about 70 MME"}
+    },
+    "L25": {
+      "theme": "Methadone QT stacking; azole raising methadone; serotonin",
+      "expected": [
+        {"drugs": ["methadone", "quetiapine", "ondansetron", "levofloxacin", "fluconazole"], "category": "QT prolongation", "severity": "major", "why": "Five QT-prolonging drugs; methadone at 80 mg/day carries independent torsades risk."},
+        {"drugs": ["methadone", "fluconazole"], "category": "CYP inhibition", "severity": "major", "why": "Fluconazole inhibits CYP3A4, 2C9, 2C19; methadone exposure rises about 35% -> respiratory depression and more QT."},
+        {"drugs": ["methadone", "venlafaxine"], "category": "serotonin syndrome", "severity": "moderate", "why": "Methadone is serotonergic; SNRI co-use."},
+        {"drugs": ["methadone", "quetiapine"], "category": "respiratory depression", "severity": "major", "why": "Opioid + sedating antipsychotic."},
+        {"drugs": ["quetiapine", "fluconazole"], "category": "CYP inhibition", "severity": "moderate", "why": "CYP3A4 inhibition raises quetiapine."}
+      ]
+    },
+    "L26": {
+      "theme": "Valproate-lamotrigine; enzyme induction; hyperammonemia; salicylate displacement",
+      "expected": [
+        {"drugs": ["divalproex", "lamotrigine"], "category": "CYP inhibition", "severity": "major", "why": "Valproate inhibits lamotrigine glucuronidation and about doubles its half-life -> SJS/TEN risk. Lamictal label: with valproate, bipolar maintenance dose is 100 mg/day; 200 mg here needs review."},
+        {"drugs": ["carbamazepine", "lamotrigine"], "category": "CYP induction", "severity": "moderate", "why": "Carbamazepine lowers lamotrigine about 40%; with valproate also present, net level is unpredictable."},
+        {"drugs": ["carbamazepine", "divalproex"], "category": "CYP induction", "severity": "moderate", "why": "Valproate raises carbamazepine-10,11-epoxide; carbamazepine lowers valproate."},
+        {"drugs": ["divalproex", "topiramate"], "category": "hyperammonemia", "severity": "major", "why": "Hyperammonemic encephalopathy and hypothermia; both labels warn."},
+        {"drugs": ["divalproex", "aspirin"], "category": "bleeding", "severity": "moderate", "why": "Salicylate displaces valproate from albumin and inhibits its metabolism -> higher free levels; valproate thrombocytopenia plus aspirin platelet inhibition."},
+        {"drugs": ["carbamazepine", "clonazepam"], "category": "CYP induction", "severity": "minor", "why": "Carbamazepine lowers clonazepam 20-30%."},
+        {"drugs": ["divalproex", "lamotrigine", "topiramate", "carbamazepine", "clonazepam"], "category": "CNS depression", "severity": "moderate", "why": "Five CNS-active agents: sedation, cognitive slowing, ataxia."}
+      ]
+    },
+    "L27": {
+      "theme": "Dopamine antagonists opposing levodopa; MAO-B inhibitor with meperidine; serotonergic caution",
+      "expected": [
+        {"drugs": ["carbidopa/levodopa", "metoclopramide"], "category": "therapeutic antagonism", "severity": "major", "why": "Metoclopramide blocks D2 receptors: worsens parkinsonism and negates levodopa. Avoid in Parkinson's disease."},
+        {"drugs": ["carbidopa/levodopa", "haloperidol"], "category": "therapeutic antagonism", "severity": "major", "why": "Potent D2 antagonist; same problem. If an antipsychotic is needed, quetiapine or clozapine."},
+        {"drugs": ["rasagiline", "meperidine"], "category": "serotonin syndrome", "severity": "contraindicated", "why": "Azilect label: contraindicated with meperidine (also tramadol, methadone, dextromethorphan)."},
+        {"drugs": ["rasagiline", "escitalopram"], "category": "serotonin syndrome", "severity": "moderate", "why": "Cases reported with MAO-B inhibitors + SSRIs; use the lowest SSRI dose and monitor."},
+        {"drugs": ["metoclopramide", "haloperidol"], "category": "duplicate therapy", "severity": "major", "why": "Two D2 antagonists: additive extrapyramidal symptoms, tardive dyskinesia, NMS risk."},
+        {"drugs": ["haloperidol", "escitalopram"], "category": "QT prolongation", "severity": "moderate", "why": "Additive QT effect."}
+      ]
+    },
+    "L28": {
+      "theme": "Cobicistat boosting: statin, benzodiazepine, inhaled steroid, PDE5 inhibitor, tenofovir",
+      "expected": [
+        {"drugs": ["darunavir/cobicistat", "atorvastatin"], "category": "myopathy/rhabdomyolysis", "severity": "major", "why": "Cobicistat (strong CYP3A4 inhibitor) raises atorvastatin several-fold; Prezcobix label: start at the lowest dose and titrate. 80 mg is unsafe."},
+        {"drugs": ["darunavir/cobicistat", "alprazolam"], "category": "CYP inhibition", "severity": "major", "why": "Alprazolam exposure rises; prolonged sedation and respiratory depression. Monitor or switch to lorazepam."},
+        {"drugs": ["darunavir/cobicistat", "fluticasone propionate"], "category": "adrenal suppression", "severity": "major", "why": "Cobicistat blocks CYP3A4 clearance of fluticasone -> systemic corticosteroid exposure, Cushing's syndrome, adrenal suppression. Label: avoid; use beclomethasone."},
+        {"drugs": ["darunavir/cobicistat", "sildenafil"], "category": "hypotension", "severity": "major", "why": "Sildenafil exposure rises up to 10x; label: 25 mg no more than once per 48 hours."},
+        {"drugs": ["darunavir/cobicistat", "tenofovir disoproxil fumarate"], "category": "nephrotoxicity", "severity": "moderate", "why": "Cobicistat raises tenofovir exposure and blocks tubular creatinine secretion (MATE1); serum creatinine rises without true GFR loss. Monitor renal function."}
+      ],
+      "should_not_flag": ["emtricitabine"]
+    },
+    "L29": {
+      "theme": "Control: no clinically significant interactions",
+      "expected": [],
+      "should_not_flag": ["any pair at moderate or above"]
+    },
+    "L30": {
+      "theme": "Absorption and timing interactions versus one true CYP problem",
+      "expected": [
+        {"drugs": ["levothyroxine", "calcium carbonate"], "category": "absorption/timing", "severity": "moderate", "why": "Calcium binds levothyroxine in the gut; separate by 4 hours."},
+        {"drugs": ["levothyroxine", "ferrous sulfate"], "category": "absorption/timing", "severity": "moderate", "why": "Iron binds levothyroxine; separate by 4 hours."},
+        {"drugs": ["ciprofloxacin", "calcium carbonate"], "category": "absorption/timing", "severity": "major", "why": "Divalent cations chelate fluoroquinolones; cipro AUC falls up to about 40%. Take cipro 2 hours before or 6 hours after."},
+        {"drugs": ["ciprofloxacin", "ferrous sulfate"], "category": "absorption/timing", "severity": "major", "why": "Iron chelation cuts cipro absorption about 50%; same spacing rule."},
+        {"drugs": ["clopidogrel", "omeprazole"], "category": "efficacy loss", "severity": "major", "why": "Omeprazole inhibits CYP2C19 activation of clopidogrel; FDA: avoid omeprazole and esomeprazole, use pantoprazole."},
+        {"drugs": ["ferrous sulfate", "omeprazole"], "category": "absorption/timing", "severity": "minor", "why": "Acid suppression reduces non-heme iron absorption."},
+        {"drugs": ["levothyroxine", "omeprazole"], "category": "absorption/timing", "severity": "minor", "why": "Acid suppression modestly reduces levothyroxine absorption."}
+      ],
+      "note": "Correct output distinguishes spacing advice from a contraindication; nothing in this list is contraindicated."
+    },
+    "L31": {
+      "theme": "Additive nephrotoxicity and ototoxicity; IV routes; gram unit",
+      "expected": [
+        {"drugs": ["vancomycin", "gentamicin"], "category": "nephrotoxicity", "severity": "major", "why": "Glycopeptide + aminoglycoside: synergistic nephrotoxicity."},
+        {"drugs": ["vancomycin", "piperacillin/tazobactam"], "category": "nephrotoxicity", "severity": "moderate", "why": "Observational data show higher AKI rates than vancomycin + cefepime or meropenem; part may be a creatinine-secretion artifact. Contested."},
+        {"drugs": ["gentamicin", "furosemide"], "category": "ototoxicity", "severity": "major", "why": "Loop diuretic + aminoglycoside: additive, sometimes permanent hearing loss."},
+        {"drugs": ["ketorolac", "lisinopril", "furosemide"], "category": "nephrotoxicity", "severity": "major", "why": "Triple whammy with a parenteral NSAID; Toradol label warns in volume depletion and renal impairment; 5-day limit."},
+        {"drugs": ["ketorolac", "gentamicin", "vancomycin"], "category": "nephrotoxicity", "severity": "major", "why": "NSAID removes renal prostaglandin protection during nephrotoxin exposure."},
+        {"drugs": ["ketorolac", "lisinopril"], "category": "hyperkalemia", "severity": "moderate", "why": "NSAID + ACE inhibitor."}
+      ],
+      "totals": {"piperacillin/tazobactam": "13.5 g per day (3.375 g x 4)", "vancomycin": "2 g per day"}
+    },
+    "L32": {
+      "theme": "Antifolate stacking; xanthine oxidase inhibition on azathioprine; NSAID on methotrexate; weekly dosing",
+      "expected": [
+        {"drugs": ["methotrexate", "sulfamethoxazole/trimethoprim"], "category": "myelosuppression", "severity": "major", "why": "Additive dihydrofolate reductase inhibition plus reduced renal MTX clearance; fatal pancytopenia reported even at low weekly doses."},
+        {"drugs": ["azathioprine", "allopurinol"], "category": "myelosuppression", "severity": "major", "why": "Allopurinol blocks xanthine oxidase, a main 6-mercaptopurine elimination route. Reduce azathioprine to 25-33% of dose or avoid."},
+        {"drugs": ["methotrexate", "ibuprofen"], "category": "nephrotoxicity", "severity": "moderate", "why": "NSAIDs reduce MTX renal clearance; risk is mainly at high MTX doses, but 1,800 mg/day ibuprofen with 20 mg/week warrants caution."},
+        {"drugs": ["methotrexate", "azathioprine"], "category": "myelosuppression", "severity": "moderate", "why": "Additive marrow suppression."},
+        {"drugs": ["methotrexate"], "category": "dosing frequency", "severity": "major", "why": "Once weekly; 20 mg/day would be lethal. The app must not compute a daily total."}
+      ],
+      "should_not_flag": ["folic acid (it reduces methotrexate toxicity)"]
+    },
+    "L33": {
+      "theme": "Phenytoin: induction of contraceptive and statin; CYP2C9 inhibitors raising phenytoin; warfarin",
+      "expected": [
+        {"drugs": ["phenytoin", "norgestimate/ethinyl estradiol"], "category": "efficacy loss", "severity": "major", "why": "Contraceptive failure; non-hormonal backup needed."},
+        {"drugs": ["phenytoin", "fluoxetine"], "category": "CYP inhibition", "severity": "major", "why": "Fluoxetine inhibits CYP2C9; phenytoin's saturable kinetics mean a small clearance change causes a large level rise -> ataxia, nystagmus."},
+        {"drugs": ["phenytoin", "fluconazole"], "category": "CYP inhibition", "severity": "major", "why": "Fluconazole inhibits CYP2C9 -> phenytoin toxicity; Diflucan label."},
+        {"drugs": ["phenytoin", "warfarin"], "category": "bleeding", "severity": "major", "why": "Bidirectional: early protein displacement raises INR, later induction lowers it, and phenytoin levels may rise. Monitor INR and phenytoin levels."},
+        {"drugs": ["warfarin", "fluconazole"], "category": "bleeding", "severity": "major", "why": "Fluconazole inhibits CYP2C9 -> INR rises sharply."},
+        {"drugs": ["warfarin", "fluoxetine"], "category": "bleeding", "severity": "moderate", "why": "SSRI antiplatelet effect plus mild CYP2C9 inhibition."},
+        {"drugs": ["phenytoin", "atorvastatin"], "category": "efficacy loss", "severity": "moderate", "why": "CYP3A4 induction lowers atorvastatin exposure."}
+      ]
+    },
+    "L34": {
+      "theme": "Duplicate alpha-2 agonists; CYP2D6 inhibition of atomoxetine; stimulant + SSRI; sedation and hypotension",
+      "expected": [
+        {"drugs": ["guanfacine", "clonidine"], "category": "duplicate therapy", "severity": "major", "why": "Two central alpha-2 agonists: hypotension, bradycardia, sedation; abrupt stop -> rebound hypertension."},
+        {"drugs": ["paroxetine", "atomoxetine"], "category": "CYP inhibition", "severity": "major", "why": "Strong CYP2D6 inhibitor raises atomoxetine exposure 6-8x (poor-metabolizer phenotype). Strattera label: start 40 mg, go to 80 mg only after 4 weeks if needed."},
+        {"drugs": ["lisdexamfetamine", "atomoxetine"], "category": "duplicate therapy", "severity": "moderate", "why": "Two ADHD agents raising heart rate and BP; the combination is off-label."},
+        {"drugs": ["lisdexamfetamine", "paroxetine"], "category": "serotonin syndrome", "severity": "moderate", "why": "Vyvanse label: serotonin syndrome reported with SSRIs; amphetamine is also a CYP2D6 substrate."},
+        {"drugs": ["quetiapine", "guanfacine", "clonidine"], "category": "hypotension", "severity": "moderate", "why": "Additive hypotension and sedation."},
+        {"drugs": ["lisdexamfetamine", "quetiapine"], "category": "opposing pharmacology", "severity": "minor", "why": "Stimulant against a sedating antipsychotic."}
+      ]
+    },
+    "L35": {
+      "theme": "Two triptans; propranolol on rizatriptan; TCA + triptan; three-component barbiturate product; overuse",
+      "expected": [
+        {"drugs": ["sumatriptan", "rizatriptan"], "category": "duplicate therapy", "severity": "major", "why": "Do not use two triptans within 24 hours; additive vasoconstriction, coronary spasm."},
+        {"drugs": ["rizatriptan", "propranolol"], "category": "CYP inhibition", "severity": "moderate", "why": "Propranolol raises rizatriptan plasma concentration about 70%; Maxalt label: use the 5 mg dose, max 15 mg/day."},
+        {"drugs": ["sumatriptan", "rizatriptan", "amitriptyline"], "category": "serotonin syndrome", "severity": "moderate", "why": "Triptan + tricyclic; FDA 2006 alert."},
+        {"drugs": ["butalbital", "amitriptyline", "topiramate"], "category": "CNS depression", "severity": "moderate", "why": "Barbiturate + tricyclic + topiramate: sedation, cognitive slowing."},
+        {"drugs": ["butalbital/acetaminophen/caffeine"], "category": "combination parsing", "severity": "moderate", "why": "Three components. Acetaminophen 1,950 mg/day max is under the ceiling; butalbital 300 mg/day used daily -> dependence and medication-overuse headache."}
+      ],
+      "totals": {"acetaminophen": "1,950 mg max", "butalbital": "300 mg max", "caffeine": "240 mg max"}
+    },
+    "L36": {
+      "theme": "Opioid antagonist against a partial agonist; buprenorphine + benzodiazepine; a drug that should not flag",
+      "expected": [
+        {"drugs": ["buprenorphine/naloxone", "naltrexone"], "category": "therapeutic antagonism", "severity": "contraindicated", "why": "Naltrexone blocks buprenorphine and precipitates withdrawal; Suboxone label names naltrexone. One of these prescriptions is an error."},
+        {"drugs": ["buprenorphine", "clonazepam"], "category": "respiratory depression", "severity": "major", "why": "Boxed warning. FDA also says MAT should not be withheld over it: flag and manage, do not stop buprenorphine."},
+        {"drugs": ["buprenorphine", "gabapentin"], "category": "respiratory depression", "severity": "major", "why": "Gabapentinoid + opioid; gabapentin misuse is common alongside buprenorphine."},
+        {"drugs": ["buprenorphine", "quetiapine", "clonazepam", "gabapentin"], "category": "CNS depression", "severity": "moderate", "why": "Additive sedation."}
+      ],
+      "should_not_flag": ["acamprosate (renally cleared; no pharmacokinetic or pharmacodynamic interaction here)"]
+    },
+    "L37": {
+      "theme": "P-gp inhibitors on dabigatran; dronedarone on digoxin, verapamil, simvastatin; rate-control stacking",
+      "expected": [
+        {"drugs": ["dabigatran", "dronedarone"], "category": "P-gp", "severity": "major", "why": "Dronedarone raises dabigatran exposure about 1.7-2x -> bleeding. Pradaxa label: reduce to 75 mg twice daily when CrCl is 30-50 mL/min; avoid below that."},
+        {"drugs": ["dabigatran", "verapamil"], "category": "P-gp", "severity": "moderate", "why": "Verapamil raises dabigatran 50-180% depending on timing; take dabigatran at least 2 hours before verapamil."},
+        {"drugs": ["digoxin", "dronedarone"], "category": "digoxin toxicity", "severity": "major", "why": "Dronedarone raises digoxin about 2.5x; Multaq label: halve digoxin and monitor levels."},
+        {"drugs": ["digoxin", "verapamil"], "category": "digoxin toxicity", "severity": "moderate", "why": "Verapamil raises digoxin 50-75%."},
+        {"drugs": ["dronedarone", "verapamil"], "category": "bradycardia/AV block", "severity": "major", "why": "Verapamil (CYP3A4 inhibitor) raises dronedarone about 1.4x; additive AV block. Multaq label: start non-DHP calcium channel blockers low."},
+        {"drugs": ["simvastatin", "dronedarone"], "category": "myopathy/rhabdomyolysis", "severity": "moderate", "why": "Multaq label: simvastatin max 10 mg."},
+        {"drugs": ["simvastatin", "verapamil"], "category": "myopathy/rhabdomyolysis", "severity": "moderate", "why": "Zocor label: max 10 mg with verapamil."},
+        {"drugs": ["furosemide", "digoxin", "dronedarone"], "category": "electrolyte", "severity": "moderate", "why": "Hypokalemia potentiates digoxin toxicity and dronedarone QT/torsades."}
+      ],
+      "totals": {"digoxin": "0.125 mg = 125 mcg"}
+    },
+    "L38": {
+      "theme": "Hidden duplicate: active metabolite prescribed alongside its parent; three antipsychotics",
+      "expected": [
+        {"drugs": ["risperidone", "paliperidone"], "category": "duplicate therapy", "severity": "major", "why": "Paliperidone is 9-hydroxyrisperidone, risperidone's active metabolite. Prescribing both is one drug twice: 4 mg risperidone plus 6 mg paliperidone."},
+        {"drugs": ["risperidone", "paliperidone", "olanzapine"], "category": "duplicate therapy", "severity": "major", "why": "Three antipsychotics: additive EPS, QT, hyperprolactinemia, metabolic effects, NMS risk, no evidence of benefit."},
+        {"drugs": ["benztropine", "olanzapine"], "category": "anticholinergic burden", "severity": "moderate", "why": "Additive anticholinergic effects; benztropine can also mask tardive dyskinesia."},
+        {"drugs": ["clonazepam", "olanzapine"], "category": "CNS depression", "severity": "moderate", "why": "Additive sedation (the major warning is for IM olanzapine with a parenteral benzodiazepine)."}
+      ],
+      "totals": {"risperidone moiety": "4 mg risperidone + 6 mg paliperidone"},
+      "should_not_flag": ["atorvastatin"]
+    },
+    "L39": {
+      "theme": "Macrolide on colchicine and simvastatin; diltiazem as a second CYP3A4/P-gp inhibitor; QT",
+      "expected": [
+        {"drugs": ["colchicine", "erythromycin"], "category": "P-gp", "severity": "major", "why": "Erythromycin (CYP3A4 + P-gp inhibitor) raises colchicine to toxic levels; fatal cases reported. Colcrys label: cut the dose (prophylaxis 0.3 mg/day) and never combine with renal or hepatic impairment."},
+        {"drugs": ["simvastatin", "erythromycin"], "category": "myopathy/rhabdomyolysis", "severity": "contraindicated", "why": "Zocor label contraindicates erythromycin."},
+        {"drugs": ["simvastatin", "diltiazem"], "category": "myopathy/rhabdomyolysis", "severity": "major", "why": "Zocor label: max 10 mg simvastatin with diltiazem; 40 mg here."},
+        {"drugs": ["colchicine", "diltiazem"], "category": "P-gp", "severity": "moderate", "why": "Moderate CYP3A4/P-gp inhibitor; Colcrys label: dose reduction."},
+        {"drugs": ["colchicine", "simvastatin"], "category": "myopathy/rhabdomyolysis", "severity": "moderate", "why": "Additive myotoxicity, worse with both boosted by erythromycin."},
+        {"drugs": ["erythromycin", "diltiazem"], "category": "QT prolongation", "severity": "major", "why": "Diltiazem blocks erythromycin clearance; erythromycin + a CYP3A4 inhibitor carried about 5x the sudden cardiac death rate (Ray et al., NEJM 2004)."},
+        {"drugs": ["furosemide", "erythromycin"], "category": "electrolyte", "severity": "moderate", "why": "Hypokalemia amplifies QT risk."}
+      ],
+      "should_not_flag": ["allopurinol"]
+    },
+    "L40": {
+      "theme": "Three bedtime hypnotics plus a benzodiazepine; SSRI at its maximum with trazodone",
+      "expected": [
+        {"drugs": ["trazodone", "suvorexant", "zolpidem", "alprazolam"], "category": "duplicate therapy", "severity": "major", "why": "Three sedative-hypnotics at bedtime plus a benzodiazepine: next-day impairment, complex sleep behaviors (zolpidem boxed warning), respiratory depression. Belsomra label: reduce dose with other CNS depressants."},
+        {"drugs": ["trazodone", "sertraline"], "category": "serotonin syndrome", "severity": "moderate", "why": "Both serotonergic; sertraline at its 200 mg labeled maximum."},
+        {"drugs": ["trazodone"], "category": "QT prolongation", "severity": "minor", "why": "Dose-related; 100 mg alone is low risk. Flag only if the app tracks QT burden."},
+        {"drugs": ["sertraline"], "category": "dose ceiling", "severity": "minor", "why": "200 mg is the labeled maximum, not over it; a ceiling check should pass."}
+      ],
+      "totals": {"alprazolam": "1.5 mg max"}
+    },
+    "L41": {
+      "theme": "Data-entry traps: brand and generic of one drug; same dose in different units; one ingredient under two brands",
+      "expected": [
+        {"drugs": ["sertraline", "sertraline"], "category": "duplicate entry", "severity": "major", "why": "Same drug entered twice, once as Zoloft and once as generic. Either a data-entry duplicate or a real 100 mg/day. The app should ask, not silently sum or silently drop."},
+        {"drugs": ["levothyroxine", "levothyroxine"], "category": "unit normalization", "severity": "major", "why": "0.1 mg = 100 mcg. Same drug, same dose, twice. Units must be normalized before deduplication."},
+        {"drugs": ["ibuprofen", "ibuprofen"], "category": "dose ceiling", "severity": "major", "why": "One molecule under two brands: 2,400 + 800 = 3,200 mg/day, exactly the prescription ceiling."},
+        {"drugs": ["sertraline", "ibuprofen"], "category": "bleeding", "severity": "moderate", "why": "SSRI + NSAID GI bleeding."}
+      ],
+      "totals": {"sertraline": "100 mg if both lines are real", "levothyroxine": "200 mcg if both lines are real (0.1 mg + 100 mcg)", "ibuprofen": "3,200 mg"},
+      "should_not_flag": ["levothyroxine with ibuprofen", "levothyroxine with sertraline at moderate or above"]
+    }
+  }
+}
