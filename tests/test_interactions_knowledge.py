@@ -198,3 +198,21 @@ def test_uncovered_label_group_becomes_a_grade_a_note() -> None:
     label = Alert(kind="group", risk="T16", title="QT Prolongation Risk shared by 2 drugs", tier=3, tier_name="", members=tuple(AlertEvidence(item["display_name"], "", "", "warnings", "QT.", "https://dailymed.nlm.nih.gov/x") for item in drugs), note="")
     merged = merge_label_alerts([], [label], drugs)
     assert [alert.grade for alert in merged] == ["A"]
+
+
+def test_metformin_is_named_in_a_kidney_injury_alert_and_statin_alerts_name_myopathy() -> None:
+    """
+    Takes no arguments.
+    Runs lisinopril, hydrochlorothiazide, ibuprofen, and metformin, then atorvastatin 80 mg with ketoconazole; rulebook rows 19 and 27, lists L04 and L21.
+    Gives nothing; asserts metformin is listed in the grade-D kidney alert and the statin alert names myopathy.
+    """
+    kidney = run(
+        drug("Zestril (lisinopril) 20 mg once daily", ("lisinopril",)),
+        drug("Microzide (hydrochlorothiazide) 25 mg once daily", ("hydrochlorothiazide",)),
+        drug("Motrin (ibuprofen) 800 mg three times daily", ("ibuprofen",)),
+        drug("Glucophage (metformin) 1000 mg twice daily", ("metformin",)),
+    )
+    group = next(alert for alert in kidney if alert.rule_id == "kidney")
+    assert group.grade == "D" and "Glucophage" in {member.drug_name for member in group.members} and "lactic acidosis" in group.mechanism
+    statin = run(drug("Lipitor (atorvastatin) 80 mg once daily", ("atorvastatin",)), drug("Nizoral (ketoconazole) 200 mg once daily", ("ketoconazole",)))
+    assert any("myopathy" in alert.title for alert in statin if alert.rule_id == "atorvastatin_strong_cyp3a4")

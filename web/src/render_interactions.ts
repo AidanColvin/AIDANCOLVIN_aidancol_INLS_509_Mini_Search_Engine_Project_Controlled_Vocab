@@ -26,7 +26,7 @@ import {
   statusForLine,
   usefulChoices,
 } from "./meds.js";
-import { alertIcon, chevronDownIcon, chevronIcon, externalLinkIcon, plusIcon, removeIcon } from "./render_icons.js";
+import { alertIcon, chevronIcon, externalLinkIcon, plusIcon, removeIcon } from "./render_icons.js";
 import { buildLookupBlock } from "./render_lookup.js";
 import type { AlertMember, AlertRecord, AppState, LabelLookup, LabelNote, MedicationRow, PdlaTag, UnresolvedEntry } from "./records.js";
 
@@ -776,8 +776,8 @@ function buildUncheckedList(entries: readonly UnresolvedEntry[]): HTMLElement {
 }
 
 /**
- * Takes one alert, its index in the API's own order, whether its extra evidence is expanded, and the Interactions callbacks.
- * Builds the alert card: the grade, the drugs, the rule, the label sentence with its source, what the risk means with a public source, and the "Show N more" expansion.
+ * Takes one alert, its index in the API's own order, whether its "Why" section is open, and the Interactions callbacks.
+ * Builds the alert card: the grade, the drugs, the count and risk, why this grade, what to do, and the label and study links up front; the label sentence, why it happens, and further label sentences behind a "Why" toggle so a phone page stays short.
  * Gives the list item element.
  */
 function buildAlertCard(alert: AlertRecord, alertIndex: number, expanded: boolean, callbacks: InteractionsCallbacks): HTMLElement {
@@ -820,21 +820,29 @@ function buildAlertCard(alert: AlertRecord, alertIndex: number, expanded: boolea
     card.append(basis);
   }
 
+  if (alert.action.length > 0) {
+    card.append(buildInfoBlock("What to do", alert.action, "alert__action"));
+  }
+  card.append(buildSourcesLine(alert));
+
+  const details = document.createElement("details");
+  details.className = "alert__details";
+  const summary = document.createElement("summary");
+  summary.className = "alert__details-summary";
+  summary.textContent = "Why, and the label sentence";
+  details.append(summary);
+
   const primary = primaryEvidenceMember(alert.members);
   if (primary !== undefined) {
-    card.append(...buildEvidenceBlock(primary));
+    details.append(...buildEvidenceBlock(primary));
   }
-
   if (alert.mechanism.length > 0) {
-    card.append(buildInfoBlock("Why it happens", alert.mechanism, "alert__why"));
+    details.append(buildInfoBlock("Why it happens", alert.mechanism, "alert__why"));
   } else {
     const explanation = alertExplanation(alert);
     if (explanation !== null) {
-      card.append(buildExplanation(explanation.title, explanation.text, explanation.sourceName, explanation.sourceUrl));
+      details.append(buildExplanation(explanation.title, explanation.text, explanation.sourceName, explanation.sourceUrl));
     }
-  }
-  if (alert.action.length > 0) {
-    card.append(buildInfoBlock("What to do", alert.action, "alert__action"));
   }
   if (alert.includes.length > 0) {
     const includes = document.createElement("ul");
@@ -844,35 +852,25 @@ function buildAlertCard(alert: AlertRecord, alertIndex: number, expanded: boolea
       item.textContent = line;
       includes.append(item);
     }
-    card.append(includes);
+    details.append(includes);
   }
-  card.append(buildSourcesLine(alert));
-
-  if (primary === undefined) {
-    return card;
-  }
-  const more = additionalEvidenceMembers(alert.members, primary);
+  const more = primary === undefined ? [] : additionalEvidenceMembers(alert.members, primary);
   if (more.length > 0) {
-    const toggle = document.createElement("button");
-    toggle.type = "button";
-    toggle.className = "btn btn--small alert__more";
-    toggle.setAttribute("aria-expanded", String(expanded));
-    toggle.append(
-      document.createTextNode(expanded ? "Show fewer label sentences" : `Show ${pluralizeCount(more.length, "more label sentence")}`),
-      chevronDownIcon(14),
-    );
-    toggle.addEventListener("click", () => {
-      callbacks.onToggleAlertExpanded(alertIndex);
-    });
-    card.append(toggle);
-    if (expanded) {
-      const extra = document.createElement("div");
-      extra.className = "alert__additional";
-      for (const member of more) {
-        extra.append(...buildEvidenceBlock(member));
-      }
-      card.append(extra);
+    const extra = document.createElement("div");
+    extra.className = "alert__additional";
+    for (const member of more) {
+      extra.append(...buildEvidenceBlock(member));
     }
+    details.append(extra);
+  }
+  details.open = expanded;
+  details.addEventListener("toggle", () => {
+    if (details.open !== expanded) {
+      callbacks.onToggleAlertExpanded(alertIndex);
+    }
+  });
+  if (details.children.length > 1) {
+    card.append(details);
   }
   return card;
 }

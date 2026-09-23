@@ -98,7 +98,7 @@ needed the compiler's scanner rather than the classic parser API.
 
 ### Serving it as a website
 
-`api/search.py` and `api/check.py` are stateless Vercel Python functions (no framework, file-based routing) that call the same package the CLI does. `public/index.html`, `public/styles.css`, and the compiled `public/js/` (built from `web/src/`, gitignored) are the front end: one page and one field, already focused, with inline spelling correction and candidate choice, the label's safety terms on every resolved row, a label-text lookup under any entry that is not a medication name, and alert cards sorted by heuristic tier under the list. There is no separate search page; the label search index serves those lookups. Deploys happen only through `.github/workflows/rebuild.yml`, never by hand; see `reports/phase7_serve.md` for the original Vercel project setup and `reports/redesign_phase4_toolchain.md` for the CI step that builds the front end before each deploy.
+`api/search.py` and `api/check.py` are stateless Vercel Python functions (no framework, file-based routing) that call the same package the CLI does. `public/index.html`, `public/styles.css`, and the compiled `public/js/` (built from `web/src/`, gitignored) are the front end: one page and one field, already focused, with inline spelling correction and candidate choice, the label's safety terms on every resolved row, a label-text lookup under any entry that is not a medication name, and alert cards graded A to E, worst first, with totals by ingredient above the medication cards. There is no separate search page; the label search index serves those lookups. Deploys happen only through `.github/workflows/rebuild.yml`, never by hand; see `reports/phase7_serve.md` for the original Vercel project setup and `reports/redesign_phase4_toolchain.md` for the CI step that builds the front end before each deploy.
 
 ### Validating the interaction checker against a key
 
@@ -114,7 +114,13 @@ PYTHONPATH=src .venv/bin/python scripts/validate_interactions.py \
   --out-json docs/interaction-validation.json
 ```
 
-The latest result is in [`docs/interaction-validation.md`](docs/interaction-validation.md): most of what the fixture tests, the interaction checker's 17 PDLA terms were never built to cover (CYP interactions, nephrotoxicity, hypoglycemia, and other categories outside `src/rx_label_search/interactions/` and `vocabulary/`'s current rules); the checker's own scope, not a bug, and left alone by this run.
+That harness calls the API and predates the class rules; its last result is in [`docs/interaction-validation.md`](docs/interaction-validation.md).
+
+### The black-box test pack
+
+`TEST_PACK.md` holds 41 blind patient lists, a 36-row clinical rulebook, and the answer key. A Playwright runner (`test_runs/<run>/tools/run_pack.js`) pastes each list into the public site in a fresh browser and captures what the page shows. `scripts/grade_test_pack.py` scores only those captures. `scripts/report_test_pack.py` writes the per-list results, the evaluation report, and the rulebook coverage. `scripts/diff_test_runs.py` compares two runs. Every run is committed under `test_runs/`, with `LESSONS_LEARNED.md`, the generalization lists G01–G06, and `FINAL_SUMMARY.md`.
+
+The class rules behind the checker live in `data/reference/interaction_knowledge.json`: 90 rules (shared-effect groups, perpetrator-victim pairs with label dose caps, therapeutic duplication, and dose ceilings). Each rule has a grade, a mechanism, an action, its rulebook row, and its sources. `build-checker-data` also writes `data/build/rule_evidence.json`, which holds the FDA label sentence found for each rule and label.
 
 ### Design choices worth knowing
 
@@ -133,6 +139,8 @@ The latest result is in [`docs/interaction-validation.md`](docs/interaction-vali
 | `design/2026-09-22-redesign/` | the approved design boards and reference images the front-end redesign was built from |
 | `data/reference/` | committed, cited reference files (FDA enzyme table, ONC pair list, active-metabolite pairs, the interaction-checker blind-test fixture) |
 | `scripts/dev_server.py`, `scripts/validate_interactions.py` | a local server for `public/` and `/api/*`, and the harness that scores the checker against the fixture; see `docs/interaction-validation.md` |
+| `TEST_PACK.md`, `test_runs/`, `scripts/grade_test_pack.py`, `scripts/report_test_pack.py`, `scripts/diff_test_runs.py` | the black-box test pack, every committed run, and the grader, report, and diff scripts |
+| `data/reference/interaction_knowledge.json` | the 90 class-level interaction rules with grades, mechanisms, actions, rulebook rows, and sources |
 | `docs/interaction-validation.md`, `.json` | the harness's latest result and its raw sidecar |
 | `docs/screenshots/` | first-screen, results, and edge-state screenshots at 375px and 1440px, light and dark |
 | `data/gold/gold_sample_PLACEHOLDER.json` | the demonstration gold file |

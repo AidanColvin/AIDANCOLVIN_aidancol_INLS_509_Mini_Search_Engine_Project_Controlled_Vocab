@@ -219,3 +219,15 @@ Read before every Phase 3 cycle. Pattern classes are the pack's list.
 | L41 | sertraline, ibuprofen (bleeding, moderate) | Entries "not found"; nothing flagged | Parser kept "Brand (generic) … = total" as the name (med_line_parser.parse_entry); no class-level rule for this combination | parser split on the wrong token; missing class rule / missing pair | 13 | bleeding → grade C: 2 drugs: risk of serious bleeding, especially stomach and gut bleeding | tests/test_normalize_brand_generic_lines.py; tests/test_interactions_written_generic.py; tests/test_interactions_knowledge.py (rule table exercised end to end; merge, dose-cap, group-count tests) |
 
 No baseline FALSE POSITIVE existed. The site flagged nothing on any list.
+
+## Cycle 2: run 2026-09-23_0804, then fixes in the next commit
+
+I re-read cycle 1 before starting. Run 0804 hit all 196 items with no false positives. It left no MISS or PARTIAL. Three findings remained:
+
+| Finding | Lists | Root cause | Pattern class | Rulebook row | General fix | Regression test |
+|---|---|---|---|---|---|---|
+| Metformin was never named next to a kidney-injury combination | L04 | The kidney group listed only nephrotoxins and RAAS/diuretic drugs | missing class rule | 19 | Metformin joins the kidney-injury group when the group fires, with its lactic-acidosis note | tests/test_interactions_knowledge.py::test_metformin_is_named_in_a_kidney_injury_alert_and_statin_alerts_name_myopathy |
+| Statin alerts said "muscle injury" but never "myopathy" | L21, L28, L37 | Risk text chose a lay term over the syndrome name | copy unreadable (for a clinician) | 27 | Name myopathy and rhabdomyolysis in every statin rule's risk | same test |
+| On a phone, L24's page was about 9,600 px tall | L24, L41 mobile | Every card showed the quote, the mechanism, the included pairs, and the sources in full | copy unreadable | — | Cards show the grade, drugs, count statement, why this grade, what to do, and the label links. The label sentence, "why it happens", and the included pairs sit behind a "Why, and the label sentence" toggle whose open state is kept across renders | the web suite; page height is checked in the next run's mobile screenshots |
+
+Lesson: when the key's items all pass, look at what a clinician would still stumble on: syndrome names, and length on a phone.

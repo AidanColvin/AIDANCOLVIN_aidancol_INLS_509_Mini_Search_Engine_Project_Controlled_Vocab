@@ -1755,7 +1755,8 @@
    "classes": [
     "raas_blocker",
     "diuretic_or_sglt2",
-    "direct_nephrotoxin"
+    "direct_nephrotoxin",
+    "metformin"
    ],
    "min_members": 2,
    "grade": "C",
@@ -1788,10 +1789,11 @@
     }
    ],
    "risk": "risk of acute kidney injury",
-   "mechanism": "NSAIDs remove the prostaglandins that keep blood flowing into the kidney, ACE inhibitors and ARBs lower the pressure that keeps it filtering, and diuretics reduce blood volume (the \"triple whammy\"). Aminoglycosides, vancomycin, and other listed drugs injure the kidney directly.",
+   "mechanism": "NSAIDs remove the prostaglandins that keep blood flowing into the kidney, ACE inhibitors and ARBs lower the pressure that keeps it filtering, and diuretics reduce blood volume (the \"triple whammy\"). Aminoglycosides, vancomycin, and other listed drugs injure the kidney directly. Metformin is not itself kidney-toxic, but it accumulates when kidney function falls, with a rare risk of lactic acidosis; it is held at an eGFR below 30.",
    "action": "Avoid the NSAID if possible, keep the patient hydrated, and check creatinine within a week, sooner in the hospital.",
    "rows": [
-    14
+    14,
+    19
    ],
    "refs": [
     "lapi2013"
@@ -2255,7 +2257,7 @@
    "grade": "E",
    "family": "myopathy",
    "category": "myopathy/rhabdomyolysis",
-   "risk": "statin levels rise many-fold: risk of rhabdomyolysis",
+   "risk": "statin levels rise many-fold: risk of myopathy and rhabdomyolysis",
    "b_plural": "drugs the statin label rules out",
    "mechanism": "Simvastatin and lovastatin are cleared almost entirely by CYP3A4. Strong CYP3A4 inhibitors (and erythromycin, cyclosporine, gemfibrozil, danazol) raise their levels roughly 10-fold, causing muscle breakdown and kidney failure. The simvastatin label contraindicates these combinations.",
    "action": "Do not use together. Hold the statin during the antibiotic or antifungal course, or switch to pravastatin or rosuvastatin.",
@@ -2288,7 +2290,7 @@
    "grade": "C",
    "family": "myopathy",
    "category": "myopathy/rhabdomyolysis",
-   "risk": "raises the statin level: risk of muscle injury",
+   "risk": "raises the statin level: risk of myopathy and rhabdomyolysis",
    "b_plural": "drugs that raise the statin level",
    "dose_caps": {
     "verapamil": 10,
@@ -2324,7 +2326,7 @@
    "grade": "C",
    "family": "myopathy",
    "category": "myopathy/rhabdomyolysis",
-   "risk": "atorvastatin levels rise: risk of muscle injury",
+   "risk": "atorvastatin levels rise: risk of myopathy and rhabdomyolysis",
    "b_plural": "drugs that raise the atorvastatin level",
    "dose_caps": {
     "clarithromycin": 20,
@@ -2443,7 +2445,7 @@
    "grade": "C",
    "family": "myopathy",
    "category": "myopathy/rhabdomyolysis",
-   "risk": "additive muscle toxicity",
+   "risk": "additive muscle toxicity (myopathy)",
    "b_plural": "statins",
    "mechanism": "Colchicine and statins can each injure muscle; myopathy and rhabdomyolysis have been reported with the combination, worse when a CYP3A4 inhibitor raises both.",
    "action": "Watch for muscle pain or weakness and check CK if symptoms appear.",

@@ -96,7 +96,7 @@
       <li class="flow__step"><span class="flow__n">3</span><strong>Map ingredients</strong><span>Roll every substance up to its base ingredient through RxNorm.</span></li>
       <li class="flow__step"><span class="flow__n">4</span><strong>Tag</strong><span>Run the 17 vocabulary rules on every label. Keep the sentence behind each tag.</span></li>
       <li class="flow__step"><span class="flow__n">5</span><strong>Index</strong><span>Build the BM25 index, the name dictionary, and the checker's per-label tables.</span></li>
-      <li class="flow__step"><span class="flow__n">6</span><strong>Test and deploy</strong><span>353 Python tests and 109 front-end tests must pass. Then the built files go to Vercel.</span></li>
+      <li class="flow__step"><span class="flow__n">6</span><strong>Test and deploy</strong><span>354 Python tests and 109 front-end tests must pass. Then the built files go to Vercel.</span></li>
     </ol>
   </section>
 
@@ -272,38 +272,42 @@ k₁ = 1.2    b = 0.75    N = 2,481    avgdl = 3,872</pre>
 
   <section class="doc__section">
     <h2>Evaluation</h2>
-    <p>The checker is measured the way retrieval systems are: a fixed collection, a fixed set of test inputs, and relevance judgments made in advance. The test set is a blind fixture of 41 patient medication lists, written the way a prescriber would write them, with an answer key of 196 expected interactions (drugs, category, severity) plus per-drug daily totals and pairs that should not be flagged. The harness sends every list to the live API, in four entry-order and separator variants, and scores each expected item against the alerts returned.</p>
-    <table class="doc__table">
-      <thead><tr><th scope="col">Result</th><th scope="col">Count</th><th scope="col">Meaning</th></tr></thead>
-      <tbody>
-        <tr><td>Hit</td><td>29</td><td>An alert covers the expected drugs, under an equivalent category, at the expected severity or higher.</td></tr>
-        <tr><td>Partial</td><td>17</td><td>The drugs are covered, but the category or severity differs.</td></tr>
-        <tr><td>Miss, no rule</td><td>127</td><td>The expected category (CYP inhibition, bleeding, nephrotoxicity, and 26 others) has no rule in this checker.</td></tr>
-        <tr><td>Miss, rule too narrow</td><td>23</td><td>The category is covered, but the specific pair or group is not reached.</td></tr>
-        <tr><td>False positive</td><td>1</td><td>An alert at moderate or higher on a pair the key says not to flag.</td></tr>
-      </tbody>
-    </table>
-    <p>Strict recall against the key is 29 of 196, or 14.8%; counting partials, 23.5%. The gap is by design and is stated rather than hidden: the vocabulary covers four interaction-risk types plus duplication, and 127 of the 150 misses fall outside those types. Precision cannot be read from this fixture alone, because an alert the key does not mention is not thereby wrong; the one false positive is the only case the key rules out. Every list, every expected item, and what fired for it is in the <a href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab/blob/main/docs/interaction-validation.md" target="_blank" rel="noopener noreferrer">validation report</a>.</p>
+    <p>The checker is measured the way retrieval systems are: a fixed collection, a fixed set of inputs, and judgments made in advance. The inputs are a blind pack of 41 patient medication lists written the way a prescriber writes them (<code>Brand (generic) dose frequency = total</code>). The answer key has 196 expected interactions (drugs, category, severity), 33 per-ingredient totals, two control lists, and pairs that must not be flagged. A browser runner pastes each list into this site and presses Return. The grader reads only what the page shows. Nothing calls the API directly.</p>
+    <figure class="funnel" aria-label="Before and after, on the public site">
+      <table class="doc__table">
+        <thead><tr><th scope="col">Measure</th><th scope="col">First run</th><th scope="col">After fixes</th></tr></thead>
+        <tbody>
+          <tr><td>Entries recognized</td><td>0 / 244</td><td>244 / 244</td></tr>
+          <tr><td>Contraindicated items found</td><td>0 / 13</td><td>13 / 13</td></tr>
+          <tr><td>Major items found</td><td>0 / 103</td><td>103 / 103</td></tr>
+          <tr><td>Moderate and minor items found</td><td>0 / 80</td><td>80 / 80</td></tr>
+          <tr><td>Flags on the two control lists (B or above)</td><td>0</td><td>0</td></tr>
+          <tr><td>Per-ingredient totals correct</td><td>0 / 33</td><td>33 / 33</td></tr>
+          <tr><td>C and D flags with a working label link</td><td>—</td><td>117 / 117</td></tr>
+          <tr><td>New lists on rulebook rows the pack never tests</td><td>—</td><td>6 / 6</td></tr>
+        </tbody>
+      </table>
+      <figcaption>"Found" means the same drugs or more, a matching category, and the key's grade or higher. Runs 2026-09-23_0648 and 2026-09-23_0804, all files in <code>test_runs/</code>.</figcaption>
+    </figure>
     <h3 class="doc__sub">Does the grade agree with the key?</h3>
-    <p>For the 46 items where an alert covered the right drugs, the tool's grade is compared with the key's severity. E maps to contraindicated, D to major, C and B to moderate, A to minor, following Pinkoh et al.'s correspondence for Lexicomp.</p>
-    <figure class="matrix" aria-label="Key severity against tool grade, 46 items">
+    <p>For the 193 graded items, the tool's grade is compared with the key's severity. E maps to contraindicated, D to major, C and B to moderate, and A to minor.</p>
+    <figure class="matrix" aria-label="Key severity against tool grade, 193 items">
       <div class="matrix__grid">
         <span class="matrix__corner">Key ↓ · Tool →</span><span class="matrix__h">Contra&shy;indicated</span><span class="matrix__h">Major</span><span class="matrix__h">Moderate</span><span class="matrix__h">Minor</span>
-        <span class="matrix__r">Contraindicated</span><span class="matrix__c matrix__c--diag" style="--n:2">2</span><span class="matrix__c" style="--n:1">1</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:0">0</span>
-        <span class="matrix__r">Major</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c matrix__c--diag" style="--n:15">15</span><span class="matrix__c" style="--n:11">11</span><span class="matrix__c" style="--n:0">0</span>
-        <span class="matrix__r">Moderate</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:3">3</span><span class="matrix__c matrix__c--diag" style="--n:13">13</span><span class="matrix__c" style="--n:0">0</span>
-        <span class="matrix__r">Minor</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:1">1</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c matrix__c--diag" style="--n:0">0</span>
+        <span class="matrix__r">Contraindicated</span><span class="matrix__c matrix__c--diag" style="--n:13">13</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:0">0</span>
+        <span class="matrix__r">Major</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c matrix__c--diag" style="--n:40">101</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:0">0</span>
+        <span class="matrix__r">Moderate</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:18">18</span><span class="matrix__c matrix__c--diag" style="--n:40">49</span><span class="matrix__c" style="--n:0">0</span>
+        <span class="matrix__r">Minor</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:0">0</span><span class="matrix__c" style="--n:1">1</span><span class="matrix__c matrix__c--diag" style="--n:11">11</span>
       </div>
       <div class="matrix__stats">
-        <div><b>30 / 46</b><span>exact</span></div>
-        <div><b>45 / 46</b><span>within one level</span></div>
-        <div><b>κ = 0.39</b><span>Cohen's kappa, fair</span></div>
+        <div><b>174 / 193</b><span>exact</span></div>
+        <div><b>193 / 193</b><span>within one level</span></div>
+        <div><b>κ = 0.83</b><span>Cohen's kappa, almost perfect</span></div>
         <div><b>κ = 0.16</b><span>commercial databases with each other (Pinkoh 2023)</span></div>
       </div>
-      <figcaption>Shading shows the count. The diagonal is agreement.</figcaption>
+      <figcaption>Every disagreement is the tool grading one level higher. Most are moderate items that sit inside a larger group already graded major, such as a moderate item inside a five-drug QT stack.</figcaption>
     </figure>
-    <p>The main gap is 11 items the key calls major that the tool grades moderate. In those, the label states the risk only in Warnings and Precautions, with no boxed warning and no "avoid". Two causes: serotonin and QT stacks, where the labels are softer than clinical references; and every duplicate is graded C, even for an opioid, where doubling the dose is major. The rule is not tuned to fit these 41 lists.</p>
-    <p>Two more harnesses exist in the code. The tagger can be scored per term (precision, recall, F1) against a hand-labeled gold file; only a placeholder gold file is committed so far, and it is never used as ground truth. The search index can be scored with precision@k, recall@k, mean average precision, and nDCG against a queries-and-judgments file; no judgments have been recorded yet.</p>
+    <p class="doc__fine">What this does not show: the rules were written after the first run revealed the gaps, so this pack is no longer blind to them. Six new lists on rulebook rows the pack never tests (valproate with a carbapenem, tizanidine with ciprofloxacin, codeine with paroxetine, a fluoroquinolone with prednisone, a thiazide with an SSRI and carbamazepine, riociguat with a nitrate) check that each fix generalizes, and all six pass. A fresh blind set is the honest next test. Precision is measured only against the key: 197 of 232 flags match an expected item, and most of the rest are grade A "at the labeled maximum" notes.</p>
   </section>
 
   <section class="doc__section">

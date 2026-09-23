@@ -721,6 +721,18 @@ button:disabled {
 .totals {
   overflow-wrap: anywhere;
 }
+.alert__details {
+  margin-top: var(--space-1);
+}
+.alert__details-summary {
+  cursor: pointer;
+  font-size: var(--size-caption);
+  font-weight: 600;
+  color: var(--accent);
+  min-height: var(--hit);
+  display: flex;
+  align-items: center;
+}
 .alert__includes {
   margin: var(--space-1) 0 0;
   padding-left: 1.2em;
