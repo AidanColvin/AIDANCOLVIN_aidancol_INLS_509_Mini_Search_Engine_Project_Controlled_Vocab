@@ -27,6 +27,8 @@ This repo also holds **Drug Interaction Screen**, live at https://rx-label-searc
 
 **Notice shown on every result:** "Results reflect FDA label text as of {build date}. \"No warning found\" does not mean a combination is safe. This tool is not validated for clinical use and does not replace clinical judgment or a licensed drug interaction database." The only negative wording it ever uses is "No warning found in the labels checked."
 
+**How to use it:** it's one page. The cursor starts in the medication field; type a drug and press Return, or paste a whole list separated by commas, semicolons, or new lines. Each entry becomes a row: a name the checker matched, the dose it read, and a chevron for its detail. An entry the checker can't place shows what happened and what to do ("More than one label matches. Choose one:" or "Not found in the FDA labels. Did you mean:"). Results appear under the list as soon as they're ready: alert cards with the drug names, a tier, the label sentence, and a DailyMed link; or "No warning found in the labels checked." Further down, "Have a question?" is free-text search over the FDA label text, filterable by the PDLA vocabulary above.
+
 ### Setup
 
 ```bash
@@ -96,7 +98,23 @@ needed the compiler's scanner rather than the classic parser API.
 
 ### Serving it as a website
 
-`api/search.py` and `api/check.py` are stateless Vercel Python functions (no framework, file-based routing) that call the same package the CLI does. `public/index.html`, `public/styles.css`, and the compiled `public/js/` (built from `web/src/`, gitignored) are the front end: an auto-focused medication field with inline spelling correction and candidate choice, alert cards sorted by heuristic tier, and a label-search view with grouped vocabulary filters. Deploys happen only through `.github/workflows/rebuild.yml`, never by hand; see `reports/phase7_serve.md` for the original Vercel project setup and `reports/redesign_phase4_toolchain.md` for the CI step that builds the front end before each deploy.
+`api/search.py` and `api/check.py` are stateless Vercel Python functions (no framework, file-based routing) that call the same package the CLI does. `public/index.html`, `public/styles.css`, and the compiled `public/js/` (built from `web/src/`, gitignored) are the front end: one page, cursor already in an auto-focused medication field with inline spelling correction and candidate choice, alert cards sorted by heuristic tier under the medication list, and a "Have a question?" section further down the same page with grouped vocabulary filters. Deploys happen only through `.github/workflows/rebuild.yml`, never by hand; see `reports/phase7_serve.md` for the original Vercel project setup and `reports/redesign_phase4_toolchain.md` for the CI step that builds the front end before each deploy.
+
+### Validating the interaction checker against a key
+
+`scripts/validate_interactions.py` scores the checker's `/api/check` output against a blind-test fixture of patient medication lists and their expected interactions (`data/reference/drug_interaction_screen_fixture.json`). It runs every list in four entry-order and separator variants, scores each expected item as a hit, partial, or miss against a documented category and severity map, and writes a report.
+
+```bash
+# start a local server that serves public/ and the same /api/check and /api/search code Vercel runs
+PYTHONPATH=src .venv/bin/python scripts/dev_server.py --port 8000 &
+
+PYTHONPATH=src .venv/bin/python scripts/validate_interactions.py \
+  --base-url http://127.0.0.1:8000 \
+  --out-md docs/interaction-validation.md \
+  --out-json docs/interaction-validation.json
+```
+
+The latest result is in [`docs/interaction-validation.md`](docs/interaction-validation.md): most of what the fixture tests, the interaction checker's 17 PDLA terms were never built to cover (CYP interactions, nephrotoxicity, hypoglycemia, and other categories outside `src/rx_label_search/interactions/` and `vocabulary/`'s current rules); the checker's own scope, not a bug, and left alone by this run.
 
 ### Design choices worth knowing
 
@@ -113,7 +131,10 @@ needed the compiler's scanner rather than the classic parser API.
 | `public/index.html`, `public/styles.css`, `public/js/` (gitignored, built) | the redesigned front end |
 | `web/` | the front end's TypeScript source, tests, and toolchain (`npm run build` produces `public/js/`) |
 | `design/2026-09-22-redesign/` | the approved design boards and reference images the front-end redesign was built from |
-| `data/reference/` | committed, cited reference files (FDA enzyme table, ONC pair list, active-metabolite pairs) |
+| `data/reference/` | committed, cited reference files (FDA enzyme table, ONC pair list, active-metabolite pairs, the interaction-checker blind-test fixture) |
+| `scripts/dev_server.py`, `scripts/validate_interactions.py` | a local server for `public/` and `/api/*`, and the harness that scores the checker against the fixture; see `docs/interaction-validation.md` |
+| `docs/interaction-validation.md`, `.json` | the harness's latest result and its raw sidecar |
+| `docs/screenshots/` | first-screen, results, and edge-state screenshots at 375px and 1440px, light and dark |
 | `data/gold/gold_sample_PLACEHOLDER.json` | the demonstration gold file |
 | `tests/fixtures/` | committed real openFDA label and RxNorm fixtures, with fetch dates, documented in `tests/fixtures/FIXTURES.md` |
 | `reports/` | the phase-by-phase build record; start at `reports/FINAL_REPORT.md` |

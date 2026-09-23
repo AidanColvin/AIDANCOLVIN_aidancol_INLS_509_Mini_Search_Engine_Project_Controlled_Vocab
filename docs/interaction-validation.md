@@ -1,9 +1,9 @@
 # Interaction checker validation
 
-- Run label: local final, before push
-- Base URL: http://127.0.0.1:58211
-- Build date reported: 2026-09-21
-- Timestamp: 2026-09-23T03:39:29+00:00
+- Run label: production, after deploy
+- Base URL: https://rx-label-search-aidancolvins-projects.vercel.app
+- Build date reported: 2026-09-23
+- Timestamp: 2026-09-23T03:55:37+00:00
 - Key: /Users/aidancolvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab/data/reference/drug_interaction_screen_fixture.json (Drug Interaction Screen - blind test fixture)
 
 ## Rules
@@ -650,8 +650,8 @@ Aleve 220 mg twice daily
 
 | Drugs | Category | Severity | Result | Alert fired | Label sentence | Source drug / section |
 | --- | --- | --- | --- | --- | --- | --- |
-| hydrocodone/acetaminophen, oxycodone/acetaminophen | duplicate therapy | major | PARTIAL (got shared_ingredient at minor) | Norco and PERCOCET share acetaminophen | base ingredients: acetaminophen, hydrocodone | Norco / |
-| acetaminophen, acetaminophen | duplicate entry | moderate | PARTIAL (got shared_ingredient at minor) | Norco and PERCOCET share acetaminophen | base ingredients: acetaminophen, hydrocodone | Norco / |
+| hydrocodone/acetaminophen, oxycodone/acetaminophen | duplicate therapy | major | PARTIAL (got shared_ingredient at minor) | Norco and Percocet share acetaminophen | base ingredients: acetaminophen, hydrocodone | Norco / |
+| acetaminophen, acetaminophen | duplicate entry | moderate | PARTIAL (got shared_ingredient at minor) | Norco and Percocet share acetaminophen | base ingredients: acetaminophen, hydrocodone | Norco / |
 | zolpidem, eszopiclone | duplicate therapy | major | PARTIAL (got T15 at major) | CNS Depression Risk shared by 4 drugs | Risks from Concomitant Use with Benzodiazepines or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, includi… | Norco / boxed_warning |
 | meloxicam, naproxen sodium | duplicate therapy | major | MISS (drugs resolved but no alert) |  |  |  |
 | hydrocodone, oxycodone, zolpidem, eszopiclone | CNS depression | major | HIT | CNS Depression Risk shared by 4 drugs | Risks from Concomitant Use with Benzodiazepines or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, includi… | Norco / boxed_warning |
