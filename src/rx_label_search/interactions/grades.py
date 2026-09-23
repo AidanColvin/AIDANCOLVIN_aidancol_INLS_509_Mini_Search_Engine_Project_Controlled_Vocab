@@ -21,11 +21,11 @@ class GradeInfo:
 
 
 GRADES: dict[str, GradeInfo] = {
-    "E": GradeInfo("E", "Avoid combination", "The label says these drugs must not be used together.", "X"),
-    "D": GradeInfo("D", "Consider changing therapy", "A boxed warning, or the label says to avoid using them together.", "D"),
-    "C": GradeInfo("C", "Monitor closely", "A clinically significant warning in the label.", "C"),
-    "B": GradeInfo("B", "Monitor", "The label describes the interaction and says to monitor or adjust.", "C"),
-    "A": GradeInfo("A", "Minor", "The label notes the interaction and states no action.", "B"),
+    "E": GradeInfo("E", "Avoid combination", "Do not use these drugs together.", "X"),
+    "D": GradeInfo("D", "Consider changing therapy", "Dangerous: avoid, or use only with a specific reason and close monitoring.", "D"),
+    "C": GradeInfo("C", "Monitor closely", "Clinically significant: adjust the dose or timing, or monitor a named measure.", "C"),
+    "B": GradeInfo("B", "Monitor", "Real but manageable: monitor.", "C"),
+    "A": GradeInfo("A", "Minor", "Minor: usually no action needed.", "B"),
 }
 
 _WARNING_SECTIONS: frozenset[str] = frozenset({"warnings_and_cautions", "warnings", "precautions"})
@@ -126,6 +126,8 @@ def grade_alert(alert: Alert) -> MemberGrade:
     Grades every member's sentence and keeps the most severe, so an alert is as serious as its strongest label statement.
     Gives the MemberGrade, grade A with a stated basis when no member's sentence can be graded.
     """
+    if alert.grade in GRADES:
+        return MemberGrade(alert.grade, alert.basis or GRADES[alert.grade].meaning)
     if alert.kind == "duplication":
         return duplication_grade(alert)
     graded = [grade for grade in (grade_member(member, alert.kind) for member in alert.members) if grade is not None]

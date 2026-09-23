@@ -51,6 +51,7 @@ export interface InteractionsViewRefs {
   readonly listCountLabel: HTMLElement;
   readonly clearAllButton: HTMLButtonElement;
   readonly listSection: HTMLElement;
+  readonly totalsSection: HTMLElement;
   readonly resultsSection: HTMLElement;
   readonly liveRegion: HTMLElement;
 }
@@ -141,7 +142,10 @@ export function mountInteractionsView(callbacks: InteractionsCallbacks): Interac
   const listSection = document.createElement("ul");
   listSection.className = "med-list";
   listSection.setAttribute("aria-label", "Medications to check");
-  medsColumn.append(listHeader, listSection);
+  const totalsSection = document.createElement("div");
+  totalsSection.className = "totals";
+  totalsSection.hidden = true;
+  medsColumn.append(listHeader, totalsSection, listSection);
 
   report.append(resultsSection, medsColumn);
 
@@ -174,7 +178,7 @@ export function mountInteractionsView(callbacks: InteractionsCallbacks): Interac
     callbacks.onClearAll();
   });
 
-  return { root, medicationInput, addButton, checkStatus, report, listHeader, listCountLabel, clearAllButton, listSection, resultsSection, liveRegion };
+  return { root, medicationInput, addButton, checkStatus, report, listHeader, listCountLabel, clearAllButton, listSection, totalsSection, resultsSection, liveRegion };
 }
 
 /**
@@ -205,6 +209,9 @@ export function updateInteractionsView(refs: InteractionsViewRefs, state: AppSta
   refs.listCountLabel.textContent = pluralizeCount(state.medicationLines.length, "medication");
 
   refs.listSection.replaceChildren(...buildMedicationCards(state, callbacks));
+  const totals = buildTotals(state);
+  refs.totalsSection.hidden = totals.length === 0;
+  refs.totalsSection.replaceChildren(...totals);
   refs.resultsSection.replaceChildren(...buildAlertsColumn(state, callbacks));
 
   const alertCount = state.checkResponse === null ? null : state.checkResponse.alerts.length;
@@ -288,18 +295,70 @@ function cardBrandLine(row: MedicationRow): { readonly text: string; readonly is
  */
 function doseLine(row: MedicationRow): string {
   const parts: string[] = [];
-  if (row.strength !== null) {
+  if (row.components.length > 1) {
+    parts.push(row.components.map((component) => `${component.name} ${component.strength} ${component.unit}`).join(" / "));
+  } else if (row.strength !== null) {
     parts.push(row.daily_total_unit === null ? `${row.strength}` : `${row.strength} ${row.daily_total_unit}`);
   }
-  const frequency = formatFrequency(row.times_per_day);
-  if (frequency.length > 0) {
-    parts.push(frequency);
+  if (row.dose_count !== null && row.dose_count !== 1) {
+    parts.push(`${row.dose_count} per dose`);
+  }
+  if (row.schedule_text !== null) {
+    parts.push(row.schedule_text);
+  } else {
+    const frequency = formatFrequency(row.times_per_day);
+    if (frequency.length > 0) {
+      parts.push(row.as_needed ? `as needed, up to ${frequency}` : frequency);
+    }
+  }
+  if (row.days_per_week !== null && row.days_per_week < 7 && row.strength !== null && row.daily_total_unit !== null) {
+    const perDay = row.times_per_day === null ? row.strength * (row.dose_count ?? 1) : (row.daily_total ?? row.strength);
+    parts.push(`${formatDailyTotal(perDay * row.days_per_week, row.daily_total_unit).replace("/day", "")}/week`);
+    return parts.join(" · ");
   }
   const total = formatDailyTotal(row.daily_total, row.daily_total_unit);
-  if (total.length > 0) {
-    parts.push(`${total} total`);
+  if (total.length > 0 && row.components.length <= 1) {
+    parts.push(row.as_needed ? `${total} max` : `${total} total`);
   }
   return parts.join(" · ");
+}
+
+/**
+ * Takes the current AppState.
+ * Builds the "Totals by ingredient" block: each ingredient added up across every entry and combination product, with units normalized, weekly doses kept weekly, and opioids in morphine milligram equivalents.
+ * Gives the heading and list, or nothing before a check result.
+ */
+function buildTotals(state: AppState): readonly HTMLElement[] {
+  const response = state.checkResponse;
+  if (response === null || response.molecule_totals.length === 0) {
+    return [];
+  }
+  const heading = document.createElement("h3");
+  heading.className = "totals__heading";
+  heading.textContent = "Totals by ingredient";
+  const list = document.createElement("ul");
+  list.className = "totals__list";
+  for (const row of response.molecule_totals) {
+    const item = document.createElement("li");
+    item.className = row.entry_count > 1 ? "totals__row totals__row--merged" : "totals__row";
+    const name = document.createElement("span");
+    name.className = "totals__name";
+    name.textContent = row.ingredient;
+    const amount = document.createElement("span");
+    amount.className = "totals__amount";
+    const extra = [row.entry_count > 1 ? `from ${row.entry_count} entries` : "", row.mme !== null ? `${row.mme} MME` : ""].filter((part) => part.length > 0).join(" · ");
+    amount.textContent = extra.length > 0 ? `${row.text} · ${extra}` : row.text;
+    item.append(name, amount);
+    list.append(item);
+  }
+  const parts: HTMLElement[] = [heading, list];
+  if (response.total_mme !== null) {
+    const mme = document.createElement("p");
+    mme.className = "totals__mme";
+    mme.textContent = `Total opioid dose: ${response.total_mme} MME/day (CDC 2022 conversion factors).`;
+    parts.push(mme);
+  }
+  return parts;
 }
 
 /**
@@ -605,12 +664,13 @@ function buildAlertsColumn(state: AppState, callbacks: InteractionsCallbacks): r
     wrap.append(buildUncheckedList(state.checkResponse.unresolved_entries));
   }
 
-  wrap.append(buildSeverityStrip(state.checkResponse.alerts));
+  wrap.append(buildSeverityStrip(state.checkResponse.alerts, countResolvedRows(state.checkResponse.medication_table) > 0));
 
+  const checked = countResolvedRows(state.checkResponse.medication_table);
   if (state.checkResponse.alerts.length === 0) {
     const none = document.createElement("p");
     none.className = "results__none";
-    none.textContent = state.checkResponse.no_warning_text;
+    none.textContent = checked === 0 ? "Nothing was checked: none of these entries matched a drug." : state.checkResponse.no_warning_text;
     wrap.append(none);
   } else {
     const list = document.createElement("ol");
@@ -630,11 +690,11 @@ function buildAlertsColumn(state: AppState, callbacks: InteractionsCallbacks): r
 }
 
 /**
- * Takes the alerts from a check response.
+ * Takes the alerts from a check response and whether any entry was matched to a drug.
  * Builds the A-to-E severity strip, worst grade first, marking each grade that has alerts with its count and the most severe one as the headline.
- * Gives the strip element, with every cell empty when there are no alerts.
+ * Gives the strip element, with every cell empty when there are no alerts and reading "not checked" when no entry matched a drug.
  */
-function buildSeverityStrip(alerts: readonly AlertRecord[]): HTMLElement {
+function buildSeverityStrip(alerts: readonly AlertRecord[], anyChecked: boolean): HTMLElement {
   const counts = gradeCounts(alerts);
   const worst = GRADES.find((grade) => counts[grade.letter] > 0);
   const figure = document.createElement("figure");
@@ -661,13 +721,15 @@ function buildSeverityStrip(alerts: readonly AlertRecord[]): HTMLElement {
     name.textContent = grade.name;
     const tally = document.createElement("span");
     tally.className = "severity__count";
-    tally.textContent = count === 0 ? "–" : String(count);
+    tally.textContent = !anyChecked ? "not checked" : count === 0 ? "–" : String(count);
     cell.append(letter, name, tally);
     scale.append(cell);
   }
   const caption = document.createElement("figcaption");
   caption.className = "severity__caption";
-  caption.textContent = worst === undefined
+  caption.textContent = !anyChecked
+    ? "Not checked: no entry matched a drug."
+    : worst === undefined
     ? "No graded interaction found in the labels checked."
     : `Most severe: ${worst.letter}, ${worst.name}. ${worst.meaning}`;
   figure.append(scale, caption);
@@ -760,10 +822,28 @@ function buildAlertCard(alert: AlertRecord, alertIndex: number, expanded: boolea
     card.append(...buildEvidenceBlock(primary));
   }
 
-  const explanation = alertExplanation(alert);
-  if (explanation !== null) {
-    card.append(buildExplanation(explanation.title, explanation.text, explanation.sourceName, explanation.sourceUrl));
+  if (alert.mechanism.length > 0) {
+    card.append(buildInfoBlock("Why it happens", alert.mechanism, "alert__why"));
+  } else {
+    const explanation = alertExplanation(alert);
+    if (explanation !== null) {
+      card.append(buildExplanation(explanation.title, explanation.text, explanation.sourceName, explanation.sourceUrl));
+    }
   }
+  if (alert.action.length > 0) {
+    card.append(buildInfoBlock("What to do", alert.action, "alert__action"));
+  }
+  if (alert.includes.length > 0) {
+    const includes = document.createElement("ul");
+    includes.className = "alert__includes";
+    for (const line of alert.includes) {
+      const item = document.createElement("li");
+      item.textContent = line;
+      includes.append(item);
+    }
+    card.append(includes);
+  }
+  card.append(buildSourcesLine(alert));
 
   if (primary === undefined) {
     return card;
@@ -792,6 +872,75 @@ function buildAlertCard(alert: AlertRecord, alertIndex: number, expanded: boolea
     }
   }
   return card;
+}
+
+/**
+ * Takes a heading, its text, and the block's class.
+ * Builds one titled paragraph block, such as "Why it happens" or "What to do".
+ * Gives the block element.
+ */
+function buildInfoBlock(title: string, text: string, className: string): HTMLElement {
+  const block = document.createElement("div");
+  block.className = className;
+  const heading = document.createElement("p");
+  heading.className = `${className}-title`;
+  heading.textContent = title;
+  const body = document.createElement("p");
+  body.className = `${className}-text`;
+  body.textContent = text;
+  block.append(heading, body);
+  return block;
+}
+
+/**
+ * Takes one alert.
+ * Builds the sources line: a DailyMed link to each drug's own FDA label, then the published studies and FDA pages behind the rule.
+ * Gives the paragraph element.
+ */
+function buildSourcesLine(alert: AlertRecord): HTMLElement {
+  const line = document.createElement("p");
+  line.className = "alert__sources";
+  line.append(document.createTextNode("FDA labels: "));
+  const seen = new Set<string>();
+  for (const member of alert.members) {
+    if (seen.has(member.drug_name)) {
+      continue;
+    }
+    seen.add(member.drug_name);
+    if (seen.size > 1) {
+      line.append(document.createTextNode(" · "));
+    }
+    line.append(buildExternalLink(member.drug_name, safeDailymedUrl(member.dailymed_url), "alert__label-link"));
+  }
+  for (const reference of alert.references) {
+    line.append(document.createTextNode(" · "), buildExternalLink(reference.label, safeReferenceUrl(reference.url), "alert__ref-link"));
+  }
+  return line;
+}
+
+/**
+ * Takes link text, a URL, and a class name.
+ * Builds a link that opens in a new tab, with the external-link icon.
+ * Gives the anchor element.
+ */
+function buildExternalLink(text: string, url: string, className: string): HTMLAnchorElement {
+  const link = document.createElement("a");
+  link.href = url;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.className = className;
+  link.append(document.createTextNode(text), externalLinkIcon(11));
+  return link;
+}
+
+/**
+ * Takes a reference URL from the API.
+ * Allows only the public sources the rules cite: PubMed, PubMed Central, and FDA pages.
+ * Gives the URL unchanged when allowed, or "#" otherwise.
+ */
+function safeReferenceUrl(url: string): string {
+  const allowed = ["https://pubmed.ncbi.nlm.nih.gov/", "https://pmc.ncbi.nlm.nih.gov/", "https://www.fda.gov/"];
+  return allowed.some((prefix) => url.startsWith(prefix)) ? url : "#";
 }
 
 /**

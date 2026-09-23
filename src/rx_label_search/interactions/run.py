@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import Any
 
 from rx_label_search.interactions.checker import run_interaction_check
+from rx_label_search.interactions.knowledge import Knowledge
+from rx_label_search.interactions.knowledge_evidence import build_rule_evidence
 from rx_label_search.interactions.lookup import build_ingredient_set_index
 from rx_label_search.interactions.report import build_check_report
 from rx_label_search.normalize.run import default_fetcher
@@ -18,6 +20,8 @@ from rx_label_search.vocabulary.dea import SCHEDULE_PATTERNS
 from rx_label_search.vocabulary.terms import TERMS_BY_ID
 
 CHECKER_RECORDS_FILE = "checker_records.json"
+RULE_EVIDENCE_FILE = "rule_evidence.json"
+KNOWLEDGE_FILE = Path(__file__).resolve().parents[3] / "data" / "reference" / "interaction_knowledge.json"
 INGREDIENT_SET_INDEX_FILE = "ingredient_set_index.json"
 
 
@@ -68,7 +72,10 @@ def build_checker_data(build_dir: Path) -> dict[str, int]:
     write_json(build_dir / CHECKER_RECORDS_FILE, records)
     summaries = read_json(build_dir / "collection_summaries.json")
     write_json(build_dir / INGREDIENT_SET_INDEX_FILE, build_ingredient_set_index(summaries))
-    return {"records": len(records)}
+    salt_to_base = read_json(build_dir / "base_ingredients.json") if (build_dir / "base_ingredients.json").is_file() else {}
+    evidence = build_rule_evidence(iter_jsonl(build_dir / "collection.jsonl"), Knowledge(read_json(KNOWLEDGE_FILE)), salt_to_base)
+    write_json(build_dir / RULE_EVIDENCE_FILE, evidence)
+    return {"records": len(records), "rules_with_label_evidence": len(evidence["by_base"])}
 
 
 def run_check(build_dir: Path, medication_text: str, build_date: str, use_rxnorm: bool) -> dict[str, Any]:
@@ -84,5 +91,7 @@ def run_check(build_dir: Path, medication_text: str, build_date: str, use_rxnorm
     checker_records = read_json(build_dir / CHECKER_RECORDS_FILE)
     metabolite_reference = read_json(Path("data/reference/active_metabolites.json"))["pairs"]
     fetch = default_fetcher() if use_rxnorm else None
-    result = run_interaction_check(medication_text, dictionary, fetch, summaries, salt_to_base, ingredient_index, checker_records, metabolite_reference)
+    knowledge = Knowledge(read_json(KNOWLEDGE_FILE))
+    rule_evidence = read_json(build_dir / RULE_EVIDENCE_FILE) if (build_dir / RULE_EVIDENCE_FILE).is_file() else {}
+    result = run_interaction_check(medication_text, dictionary, fetch, summaries, salt_to_base, ingredient_index, checker_records, metabolite_reference, knowledge, rule_evidence)
     return build_check_report(result, build_date)

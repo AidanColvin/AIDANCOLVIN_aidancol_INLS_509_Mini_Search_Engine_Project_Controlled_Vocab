@@ -124,11 +124,11 @@ async function runCheck(joined: string, render: () => void): Promise<void> {
 
 /**
  * Takes a check response.
- * Finds every entry the checker could not place as one medication, whether it offered candidates or not.
+ * Finds every entry the checker could not place as one medication, leaving out lines with a dose, which are medication lines rather than words to search the label text for.
  * Gives their lines, the words worth looking up in the label text as well.
  */
 function linesNeedingLookup(response: CheckResponse): readonly string[] {
-  return response.unresolved_entries.map((entry) => entry.raw_text);
+  return response.unresolved_entries.map((entry) => entry.raw_text).filter((line) => !/\d/.test(line));
 }
 
 /**

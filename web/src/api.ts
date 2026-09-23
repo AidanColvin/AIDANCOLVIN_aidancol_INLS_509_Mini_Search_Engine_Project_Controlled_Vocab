@@ -7,9 +7,12 @@
 import type {
   AlertMember,
   AlertRecord,
+  AlertReference,
   CheckResponse,
+  ComponentStrength,
   LabelNote,
   MedicationRow,
+  MoleculeTotal,
   PdlaTag,
   SearchHit,
   SearchResponse,
@@ -166,7 +169,75 @@ function toMedicationRow(value: unknown): MedicationRow {
     daily_total_unit: asNullableString(record["daily_total_unit"], "medication_table[].daily_total_unit"),
     pdla_tags: asArray(record["pdla_tags"], "medication_table[].pdla_tags", toPdlaTag),
     label_notes: record["label_notes"] === undefined ? [] : asArray(record["label_notes"], "medication_table[].label_notes", toLabelNote),
+    brand_typed: optionalString(record["brand_typed"], "medication_table[].brand_typed"),
+    components: record["components"] === undefined ? [] : asArray(record["components"], "medication_table[].components", toComponentStrength),
+    dose_count: optionalNumber(record["dose_count"], "medication_table[].dose_count"),
+    days_per_week: optionalNumber(record["days_per_week"], "medication_table[].days_per_week"),
+    schedule_text: optionalString(record["schedule_text"], "medication_table[].schedule_text"),
+    as_needed: record["as_needed"] === true,
+    release_form: optionalString(record["release_form"], "medication_table[].release_form"),
+    no_label: record["no_label"] === true,
   };
+}
+
+/**
+ * Takes an unknown value and a label for error messages.
+ * Reads an optional string field, treating a missing field as null.
+ * Gives the string or null, or throws ApiShapeError for any other type.
+ */
+function optionalString(value: unknown, label: string): string | null {
+  return value === undefined ? null : asNullableString(value, label);
+}
+
+/**
+ * Takes an unknown value and a label for error messages.
+ * Reads an optional number field, treating a missing field as null.
+ * Gives the number or null, or throws ApiShapeError for any other type.
+ */
+function optionalNumber(value: unknown, label: string): number | null {
+  return value === undefined ? null : asNullableNumber(value, label);
+}
+
+/**
+ * Takes an unknown value.
+ * Validates it as one component strength of a combination product.
+ * Gives the ComponentStrength, or throws ApiShapeError.
+ */
+function toComponentStrength(value: unknown): ComponentStrength {
+  const record = asRecord(value, "components[]");
+  return {
+    name: asString(record["name"], "components[].name"),
+    strength: asNumber(record["strength"], "components[].strength"),
+    unit: asString(record["unit"], "components[].unit"),
+  };
+}
+
+/**
+ * Takes an unknown value.
+ * Validates it as one per-ingredient total.
+ * Gives the MoleculeTotal, or throws ApiShapeError.
+ */
+function toMoleculeTotal(value: unknown): MoleculeTotal {
+  const record = asRecord(value, "molecule_totals[]");
+  return {
+    ingredient: asString(record["ingredient"], "molecule_totals[].ingredient"),
+    text: asString(record["text"], "molecule_totals[].text"),
+    period: asString(record["period"], "molecule_totals[].period"),
+    entries: asArray(record["entries"], "molecule_totals[].entries", (item) => asString(item, "entries[]")),
+    entry_count: asNumber(record["entry_count"], "molecule_totals[].entry_count"),
+    as_needed: record["as_needed"] === true,
+    mme: optionalNumber(record["mme"], "molecule_totals[].mme"),
+  };
+}
+
+/**
+ * Takes an unknown value.
+ * Validates it as one alert reference.
+ * Gives the AlertReference, or throws ApiShapeError.
+ */
+function toAlertReference(value: unknown): AlertReference {
+  const record = asRecord(value, "references[]");
+  return { label: asString(record["label"], "references[].label"), url: asString(record["url"], "references[].url") };
 }
 
 /**
@@ -192,10 +263,10 @@ function toAlertMember(value: unknown): AlertMember {
  * Gives the narrowed kind, or throws ApiShapeError.
  */
 function toAlertKind(value: unknown): AlertRecord["kind"] {
-  if (value === "group" || value === "pair" || value === "duplication") {
+  if (value === "group" || value === "pair" || value === "duplication" || value === "ceiling") {
     return value;
   }
-  throw new ApiShapeError(`alerts[].kind must be "group", "pair", or "duplication"`);
+  throw new ApiShapeError(`alerts[].kind must be "group", "pair", "duplication", or "ceiling"`);
 }
 
 /**
@@ -215,6 +286,12 @@ function toAlertRecord(value: unknown): AlertRecord {
     note: asString(record["note"], "alerts[].note"),
     grade: record["grade"] === undefined ? null : asNullableString(record["grade"], "alerts[].grade"),
     grade_basis: record["grade_basis"] === undefined ? null : asNullableString(record["grade_basis"], "alerts[].grade_basis"),
+    category: optionalString(record["category"], "alerts[].category") ?? "",
+    mechanism: optionalString(record["mechanism"], "alerts[].mechanism") ?? "",
+    action: optionalString(record["action"], "alerts[].action") ?? "",
+    includes: record["includes"] === undefined ? [] : asArray(record["includes"], "alerts[].includes", (item) => asString(item, "includes[]")),
+    references: record["references"] === undefined ? [] : asArray(record["references"], "alerts[].references", toAlertReference),
+    rulebook_rows: record["rulebook_rows"] === undefined ? [] : asArray(record["rulebook_rows"], "alerts[].rulebook_rows", (item) => asNumber(item, "rulebook_rows[]")),
   };
 }
 
@@ -256,6 +333,8 @@ export function parseCheckResponse(value: unknown): CheckResponse {
     build_date: asString(record["build_date"], "build_date"),
     medication_table: asArray(record["medication_table"], "medication_table", toMedicationRow),
     alerts: asArray(record["alerts"], "alerts", toAlertRecord),
+    molecule_totals: record["molecule_totals"] === undefined ? [] : asArray(record["molecule_totals"], "molecule_totals", toMoleculeTotal),
+    total_mme: optionalNumber(record["total_mme"], "total_mme"),
     unresolved_entries: asArray(record["unresolved_entries"], "unresolved_entries", toUnresolvedEntry),
     no_warning_text: asString(record["no_warning_text"], "no_warning_text"),
     notice: asString(record["notice"], "notice"),

@@ -695,6 +695,91 @@ button:disabled {
   gap: 4px;
 }
 
+.alert__action {
+  margin-top: var(--space-1);
+  padding: var(--space-2);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--accent);
+  background: var(--soft);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.alert__action-title,
+.alert__why-title {
+  margin: 0;
+  font-size: var(--size-caption);
+  font-weight: 700;
+}
+.alert__action-text {
+  margin: 0;
+  font-size: var(--size-caption);
+  line-height: 1.5;
+}
+.alert__includes {
+  margin: var(--space-1) 0 0;
+  padding-left: 1.2em;
+  font-size: var(--size-caption);
+  line-height: 1.5;
+  color: var(--text-2);
+}
+.alert__sources {
+  margin: var(--space-1) 0 0;
+  font-size: var(--size-caption);
+  line-height: 1.7;
+  color: var(--text-2);
+  overflow-wrap: anywhere;
+}
+.alert__sources a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* Totals by ingredient */
+
+.totals {
+  margin: 0 0 var(--space-2);
+  padding: var(--space-2);
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+}
+.totals__heading {
+  margin: 0 0 var(--space-1);
+  font-size: var(--size-caption);
+  font-weight: 700;
+}
+.totals__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--size-caption);
+}
+.totals__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+.totals__row--merged .totals__amount {
+  font-weight: 700;
+}
+.totals__name {
+  color: var(--text);
+}
+.totals__amount {
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+.totals__mme {
+  margin: var(--space-1) 0 0;
+  font-size: var(--size-caption);
+  font-weight: 700;
+}
+
 /* Results */
 
 .results__body {

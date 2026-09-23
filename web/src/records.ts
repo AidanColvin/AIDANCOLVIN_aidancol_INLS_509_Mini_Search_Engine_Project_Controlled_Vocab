@@ -31,6 +31,35 @@ export interface MedicationRow {
   readonly daily_total_unit: string | null;
   readonly pdla_tags: readonly PdlaTag[];
   readonly label_notes: readonly LabelNote[];
+  readonly brand_typed: string | null;
+  readonly components: readonly ComponentStrength[];
+  readonly dose_count: number | null;
+  readonly days_per_week: number | null;
+  readonly schedule_text: string | null;
+  readonly as_needed: boolean;
+  readonly release_form: string | null;
+  readonly no_label: boolean;
+}
+
+export interface ComponentStrength {
+  readonly name: string;
+  readonly strength: number;
+  readonly unit: string;
+}
+
+export interface MoleculeTotal {
+  readonly ingredient: string;
+  readonly text: string;
+  readonly period: string;
+  readonly entries: readonly string[];
+  readonly entry_count: number;
+  readonly as_needed: boolean;
+  readonly mme: number | null;
+}
+
+export interface AlertReference {
+  readonly label: string;
+  readonly url: string;
 }
 
 export interface AlertMember {
@@ -43,7 +72,7 @@ export interface AlertMember {
 }
 
 export interface AlertRecord {
-  readonly kind: "group" | "pair" | "duplication";
+  readonly kind: "group" | "pair" | "duplication" | "ceiling";
   readonly risk: string;
   readonly title: string;
   readonly tier: number | null;
@@ -52,6 +81,12 @@ export interface AlertRecord {
   readonly note: string;
   readonly grade: string | null;
   readonly grade_basis: string | null;
+  readonly category: string;
+  readonly mechanism: string;
+  readonly action: string;
+  readonly includes: readonly string[];
+  readonly references: readonly AlertReference[];
+  readonly rulebook_rows: readonly number[];
 }
 
 export interface UnresolvedEntry {
@@ -65,6 +100,8 @@ export interface CheckResponse {
   readonly build_date: string;
   readonly medication_table: readonly MedicationRow[];
   readonly alerts: readonly AlertRecord[];
+  readonly molecule_totals: readonly MoleculeTotal[];
+  readonly total_mme: number | null;
   readonly unresolved_entries: readonly UnresolvedEntry[];
   readonly no_warning_text: string;
   readonly notice: string;

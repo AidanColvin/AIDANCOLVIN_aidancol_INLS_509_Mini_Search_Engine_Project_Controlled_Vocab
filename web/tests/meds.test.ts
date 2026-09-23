@@ -45,6 +45,14 @@ function row(overrides: Partial<MedicationRow>): MedicationRow {
     daily_total_unit: null,
     pdla_tags: [],
     label_notes: [],
+    brand_typed: null,
+    components: [],
+    dose_count: null,
+    days_per_week: null,
+    schedule_text: null,
+    as_needed: false,
+    release_form: null,
+    no_label: false,
     ...overrides,
   };
 }
@@ -235,6 +243,8 @@ function checkResponse(overrides: Partial<CheckResponse>): CheckResponse {
     unresolved_entries: [],
     no_warning_text: "No warning found in the labels checked.",
     notice: "",
+    molecule_totals: [],
+    total_mme: null,
     ...overrides,
   };
 }

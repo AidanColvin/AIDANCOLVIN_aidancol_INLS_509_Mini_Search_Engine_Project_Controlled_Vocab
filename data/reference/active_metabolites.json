@@ -1,16 +1,46 @@
 {
-  "description": "Cited active-metabolite pairs used only for duplication flags. Each pair quotes the FDA label sentence that states the relationship, with the label's set_id and effective_time. Base ingredient names are lowercase RxNorm ingredient (IN) names.",
-  "source": "FDA drug labels through the openFDA Drug Label API (https://open.fda.gov/apis/drug/label/)",
-  "pairs": [
-    {
-      "parent": "venlafaxine",
-      "metabolite": "desvenlafaxine",
-      "sentence": "Desvenlafaxine (O-desmethylvenlafaxine) is the major active metabolite of the antidepressant venlafaxine, a medication used to treat major depressive disorder.",
-      "field": "description",
-      "set_id": "ff837eb1-24c3-4c63-9b4b-c6b5935a9b47",
-      "effective_time": "20260821",
-      "source_url": "https://api.fda.gov/drug/label.json?search=set_id%3A%22ff837eb1-24c3-4c63-9b4b-c6b5935a9b47%22&limit=1",
-      "access_date": "2026-09-21"
-    }
-  ]
+ "description": "Cited active-metabolite pairs used only for duplication flags. Each pair quotes the FDA label sentence that states the relationship, with the label's set_id and effective_time. Base ingredient names are lowercase RxNorm ingredient (IN) names.",
+ "source": "FDA drug labels through the openFDA Drug Label API (https://open.fda.gov/apis/drug/label/)",
+ "pairs": [
+  {
+   "parent": "venlafaxine",
+   "metabolite": "desvenlafaxine",
+   "sentence": "Desvenlafaxine (O-desmethylvenlafaxine) is the major active metabolite of the antidepressant venlafaxine, a medication used to treat major depressive disorder.",
+   "field": "description",
+   "set_id": "ff837eb1-24c3-4c63-9b4b-c6b5935a9b47",
+   "effective_time": "20260821",
+   "source_url": "https://api.fda.gov/drug/label.json?search=set_id%3A%22ff837eb1-24c3-4c63-9b4b-c6b5935a9b47%22&limit=1",
+   "access_date": "2026-09-21"
+  },
+  {
+   "parent": "risperidone",
+   "metabolite": "paliperidone",
+   "sentence": "Paliperidone is the major active metabolite of risperidone.",
+   "field": "clinical_pharmacology",
+   "set_id": "492bf9dd-868e-421a-92db-8cca8973aac1",
+   "effective_time": "20260309",
+   "source_url": "https://api.fda.gov/drug/label.json?search=set_id%3A%22492bf9dd-868e-421a-92db-8cca8973aac1%22&limit=1",
+   "access_date": "2026-09-23"
+  },
+  {
+   "parent": "diazepam",
+   "metabolite": "temazepam",
+   "sentence": "Metabolism Diazepam is N-demethylated by CYP3A4 and 2C19 to the active metabolite N-desmethyldiazepam, and is hydroxylated by CYP3A4 to the active metabolite temazepam.",
+   "field": "clinical_pharmacology",
+   "set_id": "ba953b22-f0cd-4be5-9e0e-178bded88727",
+   "effective_time": "20260827",
+   "source_url": "https://api.fda.gov/drug/label.json?search=set_id%3A%22ba953b22-f0cd-4be5-9e0e-178bded88727%22&limit=1",
+   "access_date": "2026-09-23"
+  },
+  {
+   "parent": "fenofibrate",
+   "metabolite": "fenofibric acid",
+   "sentence": "2 Pharmacodynamics Fenofibric acid, the active metabolite of fenofibrate, produces reductions in total cholesterol (Total-C), total triglycerides, and triglyceride rich lipoprotein (VLDL) in treated patients with severe hypertriglyceridemia.",
+   "field": "clinical_pharmacology",
+   "set_id": "daa488be-f580-430c-a72c-80ac31bb3e40",
+   "effective_time": "20250822",
+   "source_url": "https://api.fda.gov/drug/label.json?search=set_id%3A%22daa488be-f580-430c-a72c-80ac31bb3e40%22&limit=1",
+   "access_date": "2026-09-23"
+  }
+ ]
 }

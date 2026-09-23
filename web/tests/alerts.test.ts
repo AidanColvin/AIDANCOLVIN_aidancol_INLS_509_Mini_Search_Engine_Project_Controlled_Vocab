@@ -53,6 +53,12 @@ function alert(overrides: Partial<AlertRecord>): AlertRecord {
     note: "",
     grade: null,
     grade_basis: null,
+    category: "",
+    mechanism: "",
+    action: "",
+    includes: [],
+    references: [],
+    rulebook_rows: [],
     ...overrides,
   };
 }
@@ -105,6 +111,24 @@ test("alertDisplayTierName overrides only duplication alerts", () => {
 test("alertDrugNames joins member drug names with a comma", () => {
   assert.equal(alertDrugNames([member({ drug_name: "A" }), member({ drug_name: "B" })]), "A, B");
   assert.equal(alertDrugNames([]), "");
+});
+
+/**
+ * Takes no arguments.
+ * Checks that a drug on two lines appears once in the alert heading.
+ * Gives nothing; asserts on the joined names.
+ */
+test("alertDrugNames names a drug entered on two lines once (L05's two Coumadin lines)", () => {
+  assert.equal(alertDrugNames([member({ drug_name: "Coumadin" }), member({ drug_name: "Coumadin" }), member({ drug_name: "Bactrim DS" })]), "Coumadin, Bactrim DS");
+});
+
+/**
+ * Takes no arguments.
+ * Checks that a dose-ceiling alert keeps the grade the server gave it.
+ * Gives nothing; asserts grade D.
+ */
+test("alertGrade uses a class-rule grade from the server for a dose-ceiling alert", () => {
+  assert.equal(alertGrade(alert({ kind: "ceiling", grade: "D", tier: null })).letter, "D");
 });
 
 /**

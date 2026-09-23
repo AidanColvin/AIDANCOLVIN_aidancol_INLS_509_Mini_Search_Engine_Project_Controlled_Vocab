@@ -34,11 +34,11 @@ export interface AlertGrade {
 // section the evidence sentence sits in, and what the label says to do about
 // using the drugs together. Each lines up with a published Lexicomp level.
 export const GRADES: readonly AlertGrade[] = [
-  { letter: "E", name: "Avoid combination", meaning: "The label says these drugs must not be used together.", lexicomp: "X", rank: 0 },
-  { letter: "D", name: "Consider changing therapy", meaning: "A boxed warning, or the label says to avoid using them together.", lexicomp: "D", rank: 1 },
-  { letter: "C", name: "Monitor closely", meaning: "A clinically significant warning in the label.", lexicomp: "C", rank: 2 },
-  { letter: "B", name: "Monitor", meaning: "The label describes the interaction and says to monitor or adjust.", lexicomp: "C", rank: 3 },
-  { letter: "A", name: "Minor", meaning: "The label notes the interaction and states no action.", lexicomp: "B", rank: 4 },
+  { letter: "E", name: "Avoid combination", meaning: "Do not use these drugs together.", lexicomp: "X", rank: 0 },
+  { letter: "D", name: "Consider changing therapy", meaning: "Dangerous: avoid, or use only with a specific reason and close monitoring.", lexicomp: "D", rank: 1 },
+  { letter: "C", name: "Monitor closely", meaning: "Clinically significant: adjust the dose or timing, or monitor a named measure.", lexicomp: "C", rank: 2 },
+  { letter: "B", name: "Monitor", meaning: "Real but manageable: monitor.", lexicomp: "C", rank: 3 },
+  { letter: "A", name: "Minor", meaning: "Minor: usually no action needed.", lexicomp: "B", rank: 4 },
 ];
 
 /**
@@ -166,7 +166,7 @@ export function alertDisplayTierName(alert: AlertRecord): string {
  * Gives the joined string, empty when there are no members.
  */
 export function alertDrugNames(members: readonly AlertMember[]): string {
-  return members.map((member) => member.drug_name).join(", ");
+  return [...new Set(members.map((member) => member.drug_name))].join(", ");
 }
 
 /**

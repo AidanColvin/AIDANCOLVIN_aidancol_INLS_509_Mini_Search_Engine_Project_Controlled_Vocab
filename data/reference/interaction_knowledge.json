@@ -1,0 +1,4802 @@
+{
+ "description": "Class-level drug interaction rules. Each rule names drug classes (or single ingredients), a grade on the site's A-E scale, the syndrome, a plain-language mechanism and action, the TEST_PACK.md rulebook row it implements, and its sources. Members are lowercase RxNorm base ingredient names; a member also matches a longer base name that starts with it and a space (lithium matches lithium carbonate). Grades: E do not use together; D avoid or change therapy; C monitor closely or adjust; B monitor; A minor.",
+ "version": "2026-09-23",
+ "references": {
+  "fda_ddi_table": {
+   "label": "FDA: Drug Development and Drug Interactions, Table of Substrates, Inhibitors and Inducers",
+   "url": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+  },
+  "phansalkar2012": {
+   "label": "Phansalkar et al., JAMIA 2012: high-priority drug-drug interactions (ONC expert panel)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22539083/"
+  },
+  "dechanont2014": {
+   "label": "Dechanont et al., Pharmacoepidemiol Drug Saf 2014: drug interactions in hospital admissions",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24616171/"
+  },
+  "juurlink2004": {
+   "label": "Juurlink et al., NEJM 2004: hyperkalemia after spironolactone use rose after RALES",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15295047/"
+  },
+  "antoniou2015": {
+   "label": "Antoniou et al., CMAJ 2015: trimethoprim-sulfamethoxazole with spironolactone and sudden death",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25646289/"
+  },
+  "lapi2013": {
+   "label": "Lapi et al., BMJ 2013: diuretic + ACE inhibitor/ARB + NSAID and acute kidney injury",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23299844/"
+  },
+  "ray2004": {
+   "label": "Ray et al., NEJM 2004: oral erythromycin with CYP3A inhibitors and sudden cardiac death",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15356306/"
+  },
+  "budnitz2011": {
+   "label": "Budnitz et al., NEJM 2011: emergency hospitalizations for adverse drug events in older adults",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22111719/"
+  },
+  "cogent2010": {
+   "label": "Bhatt et al., NEJM 2010 (COGENT): clopidogrel with or without omeprazole",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20925534/"
+  },
+  "dunkley2003": {
+   "label": "Dunkley et al., QJM 2003: the Hunter serotonin toxicity criteria",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12925718/"
+  },
+  "woest2013": {
+   "label": "Dewilde et al., Lancet 2013 (WOEST): dropping aspirin from triple therapy",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23415013/"
+  },
+  "augustus2019": {
+   "label": "Lopes et al., NEJM 2019 (AUGUSTUS): antithrombotic therapy after ACS or PCI in atrial fibrillation",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30883055/"
+  },
+  "cdc2022": {
+   "label": "Dowell et al., CDC Clinical Practice Guideline for Prescribing Opioids for Pain, 2022 (MME conversion factors)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36327391/"
+  }
+ },
+ "classes": {
+  "opioid": {
+   "name": "opioid",
+   "plural": "opioids",
+   "members": [
+    "morphine",
+    "hydromorphone",
+    "oxycodone",
+    "oxymorphone",
+    "hydrocodone",
+    "benzhydrocodone",
+    "codeine",
+    "dihydrocodeine",
+    "fentanyl",
+    "sufentanil",
+    "alfentanil",
+    "remifentanil",
+    "methadone",
+    "meperidine",
+    "tramadol",
+    "tapentadol",
+    "levorphanol",
+    "buprenorphine",
+    "butorphanol",
+    "nalbuphine",
+    "pentazocine",
+    "opium"
+   ]
+  },
+  "full_opioid_agonist": {
+   "name": "full opioid agonist",
+   "plural": "full opioid agonists",
+   "members": [
+    "morphine",
+    "hydromorphone",
+    "oxycodone",
+    "oxymorphone",
+    "hydrocodone",
+    "benzhydrocodone",
+    "codeine",
+    "dihydrocodeine",
+    "fentanyl",
+    "methadone",
+    "meperidine",
+    "tramadol",
+    "tapentadol",
+    "levorphanol"
+   ]
+  },
+  "opioid_3a4_substrate": {
+   "name": "opioid cleared by CYP3A4",
+   "plural": "opioids cleared by CYP3A4",
+   "members": [
+    "fentanyl",
+    "oxycodone",
+    "hydrocodone",
+    "benzhydrocodone",
+    "methadone",
+    "codeine",
+    "tramadol",
+    "sufentanil",
+    "alfentanil"
+   ]
+  },
+  "opioid_antagonist": {
+   "name": "opioid antagonist",
+   "plural": "opioid antagonists",
+   "members": [
+    "naltrexone",
+    "samidorphan"
+   ]
+  },
+  "benzodiazepine": {
+   "name": "benzodiazepine",
+   "plural": "benzodiazepines",
+   "members": [
+    "alprazolam",
+    "clonazepam",
+    "lorazepam",
+    "diazepam",
+    "temazepam",
+    "triazolam",
+    "midazolam",
+    "chlordiazepoxide",
+    "clorazepate",
+    "oxazepam",
+    "estazolam",
+    "flurazepam",
+    "quazepam",
+    "clobazam",
+    "remimazolam"
+   ]
+  },
+  "z_drug": {
+   "name": "Z-drug hypnotic",
+   "plural": "Z-drug hypnotics",
+   "members": [
+    "zolpidem",
+    "eszopiclone",
+    "zaleplon"
+   ]
+  },
+  "orexin_antagonist": {
+   "name": "orexin receptor antagonist",
+   "plural": "orexin receptor antagonists",
+   "members": [
+    "suvorexant",
+    "lemborexant",
+    "daridorexant"
+   ]
+  },
+  "barbiturate": {
+   "name": "barbiturate",
+   "plural": "barbiturates",
+   "members": [
+    "butalbital",
+    "phenobarbital",
+    "primidone",
+    "secobarbital",
+    "pentobarbital"
+   ]
+  },
+  "sedative_hypnotic": {
+   "name": "sedative-hypnotic",
+   "plural": "sedative-hypnotics",
+   "members": [
+    "@benzodiazepine",
+    "@z_drug",
+    "@orexin_antagonist",
+    "trazodone",
+    "ramelteon",
+    "secobarbital",
+    "pentobarbital"
+   ]
+  },
+  "gabapentinoid": {
+   "name": "gabapentinoid",
+   "plural": "gabapentinoids",
+   "members": [
+    "gabapentin",
+    "pregabalin",
+    "mirogabalin"
+   ]
+  },
+  "muscle_relaxant": {
+   "name": "skeletal muscle relaxant",
+   "plural": "skeletal muscle relaxants",
+   "members": [
+    "carisoprodol",
+    "cyclobenzaprine",
+    "methocarbamol",
+    "metaxalone",
+    "tizanidine",
+    "baclofen",
+    "orphenadrine",
+    "chlorzoxazone"
+   ]
+  },
+  "sedating_antihistamine": {
+   "name": "sedating antihistamine",
+   "plural": "sedating antihistamines",
+   "members": [
+    "hydroxyzine",
+    "promethazine",
+    "diphenhydramine",
+    "doxylamine",
+    "meclizine",
+    "cyproheptadine",
+    "chlorpheniramine",
+    "brompheniramine",
+    "dimenhydrinate",
+    "carbinoxamine"
+   ]
+  },
+  "antipsychotic": {
+   "name": "antipsychotic",
+   "plural": "antipsychotics",
+   "members": [
+    "olanzapine",
+    "quetiapine",
+    "clozapine",
+    "risperidone",
+    "paliperidone",
+    "haloperidol",
+    "chlorpromazine",
+    "fluphenazine",
+    "perphenazine",
+    "thioridazine",
+    "thiothixene",
+    "loxapine",
+    "ziprasidone",
+    "aripiprazole",
+    "brexpiprazole",
+    "cariprazine",
+    "lurasidone",
+    "iloperidone",
+    "asenapine",
+    "lumateperone",
+    "pimozide",
+    "pimavanserin",
+    "molindone",
+    "trifluoperazine"
+   ]
+  },
+  "sedating_antipsychotic": {
+   "name": "sedating antipsychotic",
+   "plural": "sedating antipsychotics",
+   "members": [
+    "olanzapine",
+    "quetiapine",
+    "clozapine",
+    "risperidone",
+    "paliperidone",
+    "haloperidol",
+    "chlorpromazine",
+    "fluphenazine",
+    "perphenazine",
+    "thioridazine",
+    "loxapine",
+    "ziprasidone",
+    "lurasidone",
+    "iloperidone",
+    "asenapine",
+    "lumateperone"
+   ]
+  },
+  "tca": {
+   "name": "tricyclic antidepressant",
+   "plural": "tricyclic antidepressants",
+   "members": [
+    "amitriptyline",
+    "nortriptyline",
+    "imipramine",
+    "desipramine",
+    "doxepin",
+    "clomipramine",
+    "protriptyline",
+    "trimipramine",
+    "amoxapine"
+   ]
+  },
+  "sedating_antidepressant": {
+   "name": "sedating antidepressant",
+   "plural": "sedating antidepressants",
+   "members": [
+    "trazodone",
+    "mirtazapine",
+    "nefazodone",
+    "@tca"
+   ]
+  },
+  "cns_antiepileptic": {
+   "name": "antiseizure drug",
+   "plural": "antiseizure drugs",
+   "members": [
+    "valproate",
+    "carbamazepine",
+    "oxcarbazepine",
+    "eslicarbazepine",
+    "topiramate",
+    "lamotrigine",
+    "levetiracetam",
+    "brivaracetam",
+    "phenytoin",
+    "fosphenytoin",
+    "lacosamide",
+    "zonisamide",
+    "perampanel",
+    "felbamate",
+    "tiagabine",
+    "vigabatrin",
+    "cenobamate",
+    "primidone",
+    "phenobarbital"
+   ]
+  },
+  "cns_depressant": {
+   "name": "CNS depressant",
+   "plural": "CNS depressants",
+   "members": [
+    "@opioid",
+    "@benzodiazepine",
+    "@z_drug",
+    "@orexin_antagonist",
+    "@barbiturate",
+    "@gabapentinoid",
+    "@muscle_relaxant",
+    "@sedating_antihistamine",
+    "@sedating_antipsychotic",
+    "@sedating_antidepressant",
+    "@cns_antiepileptic"
+   ]
+  },
+  "ssri": {
+   "name": "SSRI",
+   "plural": "SSRIs",
+   "members": [
+    "citalopram",
+    "escitalopram",
+    "fluoxetine",
+    "fluvoxamine",
+    "paroxetine",
+    "sertraline",
+    "vilazodone",
+    "vortioxetine"
+   ]
+  },
+  "snri": {
+   "name": "SNRI",
+   "plural": "SNRIs",
+   "members": [
+    "venlafaxine",
+    "desvenlafaxine",
+    "duloxetine",
+    "levomilnacipran",
+    "milnacipran"
+   ]
+  },
+  "reuptake_inhibitor": {
+   "name": "serotonin reuptake inhibitor",
+   "plural": "serotonin reuptake inhibitors",
+   "members": [
+    "@ssri",
+    "@snri"
+   ]
+  },
+  "maoi_nonselective": {
+   "name": "MAO inhibitor",
+   "plural": "MAO inhibitors",
+   "members": [
+    "phenelzine",
+    "tranylcypromine",
+    "isocarboxazid",
+    "linezolid",
+    "methylene blue"
+   ]
+  },
+  "mao_b_inhibitor": {
+   "name": "MAO-B inhibitor",
+   "plural": "MAO-B inhibitors",
+   "members": [
+    "rasagiline",
+    "selegiline",
+    "safinamide"
+   ]
+  },
+  "triptan": {
+   "name": "triptan",
+   "plural": "triptans",
+   "members": [
+    "sumatriptan",
+    "rizatriptan",
+    "zolmitriptan",
+    "naratriptan",
+    "almotriptan",
+    "frovatriptan",
+    "eletriptan"
+   ]
+  },
+  "serotonergic": {
+   "name": "serotonergic drug",
+   "plural": "serotonergic drugs",
+   "members": [
+    "@ssri",
+    "@snri",
+    "@tca",
+    "@maoi_nonselective",
+    "@mao_b_inhibitor",
+    "@triptan",
+    "tramadol",
+    "tapentadol",
+    "meperidine",
+    "methadone",
+    "fentanyl",
+    "dextromethorphan",
+    "lithium",
+    "buspirone",
+    "trazodone",
+    "nefazodone",
+    "mirtazapine",
+    "cyclobenzaprine",
+    "st. john's wort",
+    "tryptophan",
+    "ondansetron",
+    "granisetron",
+    "dolasetron",
+    "palonosetron",
+    "metoclopramide",
+    "amphetamine",
+    "dextroamphetamine",
+    "lisdexamfetamine",
+    "methamphetamine",
+    "lasmiditan"
+   ]
+  },
+  "serotonin_escalator": {
+   "name": "high-risk serotonergic drug",
+   "plural": "high-risk serotonergic drugs",
+   "members": [
+    "@maoi_nonselective",
+    "tramadol",
+    "meperidine"
+   ]
+  },
+  "qt_drug": {
+   "name": "QT-prolonging drug",
+   "plural": "QT-prolonging drugs",
+   "members": [
+    "methadone",
+    "ondansetron",
+    "granisetron",
+    "dolasetron",
+    "haloperidol",
+    "droperidol",
+    "chlorpromazine",
+    "thioridazine",
+    "pimozide",
+    "quetiapine",
+    "ziprasidone",
+    "iloperidone",
+    "paliperidone",
+    "risperidone",
+    "clozapine",
+    "citalopram",
+    "escitalopram",
+    "amitriptyline",
+    "nortriptyline",
+    "imipramine",
+    "desipramine",
+    "doxepin",
+    "clomipramine",
+    "trazodone",
+    "azithromycin",
+    "clarithromycin",
+    "erythromycin",
+    "levofloxacin",
+    "ciprofloxacin",
+    "moxifloxacin",
+    "ofloxacin",
+    "fluconazole",
+    "ketoconazole",
+    "itraconazole",
+    "voriconazole",
+    "posaconazole",
+    "hydroxychloroquine",
+    "chloroquine",
+    "amiodarone",
+    "dronedarone",
+    "sotalol",
+    "dofetilide",
+    "ibutilide",
+    "quinidine",
+    "procainamide",
+    "disopyramide",
+    "flecainide",
+    "hydroxyzine",
+    "promethazine",
+    "tacrolimus",
+    "pentamidine",
+    "arsenic trioxide",
+    "vandetanib",
+    "tamoxifen"
+   ]
+  },
+  "qt_high_risk": {
+   "name": "high-risk QT-prolonging drug",
+   "plural": "high-risk QT-prolonging drugs",
+   "members": [
+    "amiodarone",
+    "dronedarone",
+    "sotalol",
+    "dofetilide",
+    "ibutilide",
+    "quinidine",
+    "procainamide",
+    "disopyramide",
+    "methadone",
+    "pimozide",
+    "thioridazine",
+    "arsenic trioxide",
+    "vandetanib"
+   ]
+  },
+  "k_wasting_diuretic": {
+   "name": "potassium-wasting diuretic",
+   "plural": "potassium-wasting diuretics",
+   "members": [
+    "furosemide",
+    "bumetanide",
+    "torsemide",
+    "ethacrynic acid",
+    "hydrochlorothiazide",
+    "chlorthalidone",
+    "indapamide",
+    "metolazone",
+    "chlorothiazide"
+   ]
+  },
+  "loop_diuretic": {
+   "name": "loop diuretic",
+   "plural": "loop diuretics",
+   "members": [
+    "furosemide",
+    "bumetanide",
+    "torsemide",
+    "ethacrynic acid"
+   ]
+  },
+  "thiazide": {
+   "name": "thiazide diuretic",
+   "plural": "thiazide diuretics",
+   "members": [
+    "hydrochlorothiazide",
+    "chlorthalidone",
+    "indapamide",
+    "metolazone",
+    "chlorothiazide"
+   ]
+  },
+  "anticoagulant": {
+   "name": "anticoagulant",
+   "plural": "anticoagulants",
+   "members": [
+    "warfarin",
+    "apixaban",
+    "rivaroxaban",
+    "dabigatran",
+    "edoxaban",
+    "enoxaparin",
+    "heparin",
+    "dalteparin",
+    "fondaparinux",
+    "argatroban",
+    "bivalirudin"
+   ]
+  },
+  "antiplatelet": {
+   "name": "antiplatelet drug",
+   "plural": "antiplatelet drugs",
+   "members": [
+    "aspirin",
+    "clopidogrel",
+    "prasugrel",
+    "ticagrelor",
+    "dipyridamole",
+    "cilostazol",
+    "vorapaxar",
+    "ticlopidine"
+   ]
+  },
+  "nsaid": {
+   "name": "NSAID",
+   "plural": "NSAIDs",
+   "members": [
+    "ibuprofen",
+    "naproxen",
+    "meloxicam",
+    "celecoxib",
+    "ketorolac",
+    "diclofenac",
+    "indomethacin",
+    "etodolac",
+    "nabumetone",
+    "piroxicam",
+    "sulindac",
+    "ketoprofen",
+    "flurbiprofen",
+    "oxaprozin",
+    "mefenamic acid",
+    "fenoprofen",
+    "tolmetin",
+    "diflunisal"
+   ]
+  },
+  "acei": {
+   "name": "ACE inhibitor",
+   "plural": "ACE inhibitors",
+   "members": [
+    "lisinopril",
+    "enalapril",
+    "ramipril",
+    "benazepril",
+    "captopril",
+    "quinapril",
+    "fosinopril",
+    "perindopril",
+    "trandolapril",
+    "moexipril"
+   ]
+  },
+  "arb": {
+   "name": "angiotensin receptor blocker",
+   "plural": "angiotensin receptor blockers",
+   "members": [
+    "losartan",
+    "valsartan",
+    "irbesartan",
+    "olmesartan",
+    "candesartan",
+    "telmisartan",
+    "azilsartan",
+    "eprosartan"
+   ]
+  },
+  "raas_blocker": {
+   "name": "ACE inhibitor or ARB",
+   "plural": "ACE inhibitors or ARBs",
+   "members": [
+    "@acei",
+    "@arb",
+    "aliskiren",
+    "sacubitril"
+   ]
+  },
+  "mra": {
+   "name": "mineralocorticoid-receptor antagonist",
+   "plural": "mineralocorticoid-receptor antagonists",
+   "members": [
+    "spironolactone",
+    "eplerenone",
+    "finerenone"
+   ]
+  },
+  "k_sparing": {
+   "name": "potassium-sparing diuretic",
+   "plural": "potassium-sparing diuretics",
+   "members": [
+    "amiloride",
+    "triamterene"
+   ]
+  },
+  "potassium_supplement": {
+   "name": "potassium supplement",
+   "plural": "potassium supplements",
+   "members": [
+    "potassium chloride",
+    "potassium citrate",
+    "potassium bicarbonate",
+    "potassium phosphate"
+   ]
+  },
+  "sglt2_inhibitor": {
+   "name": "SGLT2 inhibitor",
+   "plural": "SGLT2 inhibitors",
+   "members": [
+    "empagliflozin",
+    "dapagliflozin",
+    "canagliflozin",
+    "ertugliflozin",
+    "sotagliflozin",
+    "bexagliflozin"
+   ]
+  },
+  "diuretic_or_sglt2": {
+   "name": "diuretic",
+   "plural": "diuretics",
+   "members": [
+    "@k_wasting_diuretic",
+    "@mra",
+    "@k_sparing",
+    "@sglt2_inhibitor"
+   ]
+  },
+  "calcineurin_inhibitor": {
+   "name": "calcineurin or mTOR inhibitor",
+   "plural": "calcineurin or mTOR inhibitors",
+   "members": [
+    "tacrolimus",
+    "cyclosporine",
+    "sirolimus",
+    "everolimus"
+   ]
+  },
+  "aminoglycoside": {
+   "name": "aminoglycoside",
+   "plural": "aminoglycosides",
+   "members": [
+    "gentamicin",
+    "tobramycin",
+    "amikacin",
+    "streptomycin",
+    "neomycin",
+    "plazomicin"
+   ]
+  },
+  "direct_nephrotoxin": {
+   "name": "kidney-toxic drug",
+   "plural": "kidney-toxic drugs",
+   "members": [
+    "@nsaid",
+    "@aminoglycoside",
+    "vancomycin",
+    "amphotericin b",
+    "cisplatin",
+    "polymyxin b",
+    "colistimethate",
+    "piperacillin",
+    "foscarnet",
+    "cidofovir",
+    "tenofovir disoproxil",
+    "zoledronic acid",
+    "methotrexate",
+    "tacrolimus",
+    "cyclosporine"
+   ]
+  },
+  "beta_blocker": {
+   "name": "beta-blocker",
+   "plural": "beta-blockers",
+   "members": [
+    "metoprolol",
+    "carvedilol",
+    "propranolol",
+    "atenolol",
+    "bisoprolol",
+    "nadolol",
+    "labetalol",
+    "nebivolol",
+    "sotalol",
+    "timolol",
+    "pindolol",
+    "acebutolol",
+    "esmolol"
+   ]
+  },
+  "nondhp_ccb": {
+   "name": "non-dihydropyridine calcium channel blocker",
+   "plural": "non-dihydropyridine calcium channel blockers",
+   "members": [
+    "diltiazem",
+    "verapamil"
+   ]
+  },
+  "dhp_ccb": {
+   "name": "dihydropyridine calcium channel blocker",
+   "plural": "dihydropyridine calcium channel blockers",
+   "members": [
+    "amlodipine",
+    "nifedipine",
+    "felodipine",
+    "isradipine",
+    "nicardipine",
+    "nisoldipine",
+    "levamlodipine"
+   ]
+  },
+  "cholinesterase_inhibitor": {
+   "name": "cholinesterase inhibitor",
+   "plural": "cholinesterase inhibitors",
+   "members": [
+    "donepezil",
+    "rivastigmine",
+    "galantamine",
+    "pyridostigmine"
+   ]
+  },
+  "central_alpha2": {
+   "name": "central alpha-2 agonist",
+   "plural": "central alpha-2 agonists",
+   "members": [
+    "clonidine",
+    "guanfacine",
+    "methyldopa",
+    "lofexidine",
+    "dexmedetomidine"
+   ]
+  },
+  "rate_slowing": {
+   "name": "heart-rate-slowing drug",
+   "plural": "heart-rate-slowing drugs",
+   "members": [
+    "@beta_blocker",
+    "@nondhp_ccb",
+    "digoxin",
+    "amiodarone",
+    "dronedarone",
+    "ivabradine",
+    "@central_alpha2",
+    "@cholinesterase_inhibitor",
+    "fingolimod",
+    "siponimod"
+   ]
+  },
+  "alpha1_blocker": {
+   "name": "alpha-1 blocker",
+   "plural": "alpha-1 blockers",
+   "members": [
+    "tamsulosin",
+    "doxazosin",
+    "prazosin",
+    "terazosin",
+    "alfuzosin",
+    "silodosin"
+   ]
+  },
+  "nitrate": {
+   "name": "nitrate",
+   "plural": "nitrates",
+   "members": [
+    "nitroglycerin",
+    "isosorbide",
+    "isosorbide mononitrate",
+    "isosorbide dinitrate",
+    "amyl nitrite"
+   ]
+  },
+  "pde5_inhibitor": {
+   "name": "PDE5 inhibitor",
+   "plural": "PDE5 inhibitors",
+   "members": [
+    "sildenafil",
+    "tadalafil",
+    "vardenafil",
+    "avanafil"
+   ]
+  },
+  "antihypertensive": {
+   "name": "blood-pressure-lowering drug",
+   "plural": "blood-pressure-lowering drugs",
+   "members": [
+    "@raas_blocker",
+    "@k_wasting_diuretic",
+    "@mra",
+    "@beta_blocker",
+    "@nondhp_ccb",
+    "@dhp_ccb",
+    "@alpha1_blocker",
+    "@central_alpha2",
+    "@nitrate",
+    "@pde5_inhibitor",
+    "hydralazine",
+    "minoxidil",
+    "riociguat"
+   ]
+  },
+  "orthostatic_agent": {
+   "name": "drug that causes orthostatic hypotension",
+   "plural": "drugs that cause orthostatic hypotension",
+   "members": [
+    "@alpha1_blocker",
+    "@central_alpha2",
+    "@nitrate",
+    "@pde5_inhibitor",
+    "@maoi_nonselective",
+    "quetiapine",
+    "clozapine",
+    "olanzapine",
+    "risperidone",
+    "paliperidone",
+    "chlorpromazine",
+    "iloperidone",
+    "@tca",
+    "trazodone",
+    "tizanidine",
+    "riociguat"
+   ]
+  },
+  "insulin": {
+   "name": "insulin",
+   "plural": "insulins",
+   "members": [
+    "insulin glargine",
+    "insulin detemir",
+    "insulin degludec",
+    "insulin aspart",
+    "insulin lispro",
+    "insulin glulisine",
+    "insulin regular",
+    "insulin human",
+    "insulin isophane",
+    "insulin"
+   ]
+  },
+  "sulfonylurea": {
+   "name": "sulfonylurea",
+   "plural": "sulfonylureas",
+   "members": [
+    "glipizide",
+    "glyburide",
+    "glimepiride",
+    "chlorpropamide",
+    "tolbutamide",
+    "tolazamide"
+   ]
+  },
+  "glucose_lowering": {
+   "name": "glucose-lowering drug",
+   "plural": "glucose-lowering drugs",
+   "members": [
+    "@insulin",
+    "@sulfonylurea",
+    "repaglinide",
+    "nateglinide",
+    "semaglutide",
+    "liraglutide",
+    "dulaglutide",
+    "exenatide",
+    "tirzepatide",
+    "lixisenatide",
+    "sitagliptin",
+    "saxagliptin",
+    "linagliptin",
+    "alogliptin",
+    "@sglt2_inhibitor",
+    "metformin",
+    "pioglitazone",
+    "pramlintide"
+   ]
+  },
+  "hypoglycemia_driver": {
+   "name": "insulin or insulin secretagogue",
+   "plural": "insulins or insulin secretagogues",
+   "members": [
+    "@insulin",
+    "@sulfonylurea",
+    "repaglinide",
+    "nateglinide"
+   ]
+  },
+  "fluoroquinolone": {
+   "name": "fluoroquinolone",
+   "plural": "fluoroquinolones",
+   "members": [
+    "ciprofloxacin",
+    "levofloxacin",
+    "moxifloxacin",
+    "ofloxacin",
+    "delafloxacin",
+    "gemifloxacin"
+   ]
+  },
+  "anticholinergic": {
+   "name": "anticholinergic drug",
+   "plural": "anticholinergic drugs",
+   "members": [
+    "amitriptyline",
+    "imipramine",
+    "doxepin",
+    "nortriptyline",
+    "clomipramine",
+    "desipramine",
+    "protriptyline",
+    "trimipramine",
+    "paroxetine",
+    "oxybutynin",
+    "tolterodine",
+    "solifenacin",
+    "darifenacin",
+    "trospium",
+    "fesoterodine",
+    "benztropine",
+    "trihexyphenidyl",
+    "diphenhydramine",
+    "hydroxyzine",
+    "promethazine",
+    "meclizine",
+    "chlorpheniramine",
+    "cyproheptadine",
+    "cyclobenzaprine",
+    "olanzapine",
+    "quetiapine",
+    "clozapine",
+    "chlorpromazine",
+    "thioridazine",
+    "dicyclomine",
+    "hyoscyamine",
+    "scopolamine",
+    "atropine",
+    "orphenadrine"
+   ]
+  },
+  "seizure_lowering": {
+   "name": "drug that lowers the seizure threshold",
+   "plural": "drugs that lower the seizure threshold",
+   "members": [
+    "bupropion",
+    "tramadol",
+    "tapentadol",
+    "meperidine",
+    "theophylline",
+    "aminophylline",
+    "@fluoroquinolone",
+    "imipenem",
+    "clozapine",
+    "chlorpromazine",
+    "olanzapine",
+    "quetiapine",
+    "amitriptyline",
+    "clomipramine",
+    "imipramine",
+    "maprotiline"
+   ]
+  },
+  "tramadol_or_bupropion": {
+   "name": "tramadol or bupropion",
+   "plural": "tramadol or bupropion",
+   "members": [
+    "tramadol",
+    "bupropion"
+   ]
+  },
+  "hyponatremia_driver": {
+   "name": "thiazide or carbamazepine-type drug",
+   "plural": "thiazides or carbamazepine-type drugs",
+   "members": [
+    "@thiazide",
+    "carbamazepine",
+    "oxcarbazepine",
+    "eslicarbazepine",
+    "desmopressin",
+    "chlorpropamide"
+   ]
+  },
+  "hyponatremia_drug": {
+   "name": "drug that lowers sodium",
+   "plural": "drugs that lower sodium",
+   "members": [
+    "@hyponatremia_driver",
+    "@ssri",
+    "@snri"
+   ]
+  },
+  "strong_cyp3a4_inhibitor": {
+   "name": "strong CYP3A4 inhibitor",
+   "plural": "strong CYP3A4 inhibitors",
+   "members": [
+    "clarithromycin",
+    "telithromycin",
+    "itraconazole",
+    "ketoconazole",
+    "posaconazole",
+    "voriconazole",
+    "ritonavir",
+    "cobicistat",
+    "nefazodone",
+    "indinavir",
+    "nelfinavir",
+    "saquinavir",
+    "lopinavir",
+    "boceprevir",
+    "telaprevir",
+    "idelalisib",
+    "tucatinib",
+    "ceritinib",
+    "conivaptan",
+    "troleandomycin"
+   ]
+  },
+  "moderate_cyp3a4_inhibitor": {
+   "name": "moderate CYP3A4 inhibitor",
+   "plural": "moderate CYP3A4 inhibitors",
+   "members": [
+    "aprepitant",
+    "cimetidine",
+    "ciprofloxacin",
+    "clotrimazole",
+    "crizotinib",
+    "cyclosporine",
+    "diltiazem",
+    "dronedarone",
+    "erythromycin",
+    "fluconazole",
+    "fluvoxamine",
+    "imatinib",
+    "verapamil",
+    "isavuconazonium",
+    "letermovir",
+    "netupitant",
+    "atazanavir",
+    "darunavir",
+    "fosamprenavir"
+   ]
+  },
+  "cyp3a4_inhibitor": {
+   "name": "CYP3A4 inhibitor",
+   "plural": "drugs that block CYP3A4",
+   "members": [
+    "@strong_cyp3a4_inhibitor",
+    "@moderate_cyp3a4_inhibitor"
+   ]
+  },
+  "strong_cyp3a4_inducer": {
+   "name": "strong CYP3A4 inducer",
+   "plural": "strong CYP3A4 inducers",
+   "members": [
+    "rifampin",
+    "rifapentine",
+    "carbamazepine",
+    "phenytoin",
+    "fosphenytoin",
+    "phenobarbital",
+    "primidone",
+    "st. john's wort",
+    "enzalutamide",
+    "apalutamide",
+    "mitotane",
+    "lumacaftor"
+   ]
+  },
+  "cyp3a4_inducer": {
+   "name": "CYP3A4 inducer",
+   "plural": "drugs that speed CYP3A4 clearance",
+   "members": [
+    "@strong_cyp3a4_inducer",
+    "rifabutin",
+    "efavirenz",
+    "bosentan",
+    "modafinil",
+    "etravirine",
+    "nafcillin",
+    "oxcarbazepine"
+   ]
+  },
+  "strong_cyp2d6_inhibitor": {
+   "name": "strong CYP2D6 inhibitor",
+   "plural": "drugs that block CYP2D6",
+   "members": [
+    "fluoxetine",
+    "paroxetine",
+    "bupropion",
+    "quinidine",
+    "terbinafine",
+    "cinacalcet"
+   ]
+  },
+  "cyp2d6_inhibitor": {
+   "name": "CYP2D6 inhibitor",
+   "plural": "drugs that block CYP2D6",
+   "members": [
+    "@strong_cyp2d6_inhibitor",
+    "duloxetine",
+    "sertraline",
+    "mirabegron",
+    "amiodarone",
+    "diphenhydramine",
+    "abiraterone",
+    "clobazam"
+   ]
+  },
+  "cyp1a2_strong_inhibitor": {
+   "name": "strong CYP1A2 inhibitor",
+   "plural": "drugs that block CYP1A2",
+   "members": [
+    "fluvoxamine",
+    "ciprofloxacin",
+    "enoxacin"
+   ]
+  },
+  "pgp_inhibitor": {
+   "name": "P-glycoprotein inhibitor",
+   "plural": "P-glycoprotein inhibitors",
+   "members": [
+    "amiodarone",
+    "dronedarone",
+    "verapamil",
+    "quinidine",
+    "clarithromycin",
+    "erythromycin",
+    "ketoconazole",
+    "itraconazole",
+    "ritonavir",
+    "cobicistat",
+    "cyclosporine",
+    "ranolazine",
+    "carvedilol",
+    "lapatinib",
+    "propafenone"
+   ]
+  },
+  "stimulant": {
+   "name": "stimulant",
+   "plural": "stimulants",
+   "members": [
+    "amphetamine",
+    "dextroamphetamine",
+    "lisdexamfetamine",
+    "methamphetamine",
+    "methylphenidate",
+    "dexmethylphenidate",
+    "modafinil",
+    "armodafinil"
+   ]
+  },
+  "sympathomimetic": {
+   "name": "sympathomimetic",
+   "plural": "sympathomimetics",
+   "members": [
+    "amphetamine",
+    "dextroamphetamine",
+    "lisdexamfetamine",
+    "methamphetamine",
+    "methylphenidate",
+    "dexmethylphenidate",
+    "pseudoephedrine",
+    "phenylephrine",
+    "ephedrine",
+    "phentermine",
+    "atomoxetine",
+    "levodopa"
+   ]
+  },
+  "adhd_medication": {
+   "name": "ADHD medication",
+   "plural": "ADHD medications",
+   "members": [
+    "amphetamine",
+    "dextroamphetamine",
+    "lisdexamfetamine",
+    "methamphetamine",
+    "methylphenidate",
+    "dexmethylphenidate",
+    "atomoxetine",
+    "viloxazine"
+   ]
+  },
+  "d2_blocker_nonantipsychotic": {
+   "name": "dopamine-blocking antiemetic",
+   "plural": "dopamine-blocking antiemetics",
+   "members": [
+    "metoclopramide",
+    "prochlorperazine",
+    "droperidol",
+    "trimethobenzamide",
+    "promethazine"
+   ]
+  },
+  "d2_blocker": {
+   "name": "dopamine-blocking drug",
+   "plural": "dopamine-blocking drugs",
+   "members": [
+    "@d2_blocker_nonantipsychotic",
+    "haloperidol",
+    "chlorpromazine",
+    "fluphenazine",
+    "perphenazine",
+    "thioridazine",
+    "thiothixene",
+    "loxapine",
+    "trifluoperazine",
+    "pimozide",
+    "risperidone",
+    "paliperidone",
+    "olanzapine",
+    "ziprasidone",
+    "lurasidone",
+    "iloperidone",
+    "asenapine",
+    "aripiprazole",
+    "brexpiprazole",
+    "cariprazine"
+   ]
+  },
+  "hormonal_contraceptive": {
+   "name": "hormonal contraceptive",
+   "plural": "hormonal contraceptives",
+   "members": [
+    "ethinyl estradiol",
+    "norgestimate",
+    "norethindrone",
+    "levonorgestrel",
+    "desogestrel",
+    "drospirenone",
+    "etonogestrel",
+    "norelgestromin",
+    "norgestrel",
+    "dienogest",
+    "segesterone"
+   ]
+  },
+  "doac": {
+   "name": "direct oral anticoagulant",
+   "plural": "direct oral anticoagulants",
+   "members": [
+    "apixaban",
+    "rivaroxaban",
+    "edoxaban",
+    "dabigatran"
+   ]
+  },
+  "protease_inhibitor": {
+   "name": "HIV protease inhibitor",
+   "plural": "HIV protease inhibitors",
+   "members": [
+    "darunavir",
+    "atazanavir",
+    "lopinavir",
+    "ritonavir",
+    "saquinavir",
+    "fosamprenavir",
+    "tipranavir",
+    "indinavir",
+    "nelfinavir"
+   ]
+  },
+  "ppi": {
+   "name": "proton pump inhibitor",
+   "plural": "proton pump inhibitors",
+   "members": [
+    "omeprazole",
+    "esomeprazole",
+    "pantoprazole",
+    "lansoprazole",
+    "rabeprazole",
+    "dexlansoprazole"
+   ]
+  },
+  "polyvalent_cation": {
+   "name": "calcium, iron, magnesium, aluminum, or zinc product",
+   "plural": "calcium, iron, magnesium, aluminum, or zinc products",
+   "members": [
+    "calcium carbonate",
+    "calcium citrate",
+    "calcium acetate",
+    "ferrous sulfate",
+    "ferrous fumarate",
+    "ferrous gluconate",
+    "iron",
+    "polysaccharide iron complex",
+    "magnesium oxide",
+    "magnesium hydroxide",
+    "magnesium citrate",
+    "aluminum hydroxide",
+    "zinc",
+    "zinc sulfate",
+    "sucralfate",
+    "sevelamer",
+    "lanthanum carbonate"
+   ]
+  },
+  "levothyroxine_binder": {
+   "name": "drug that binds levothyroxine in the gut",
+   "plural": "drugs that bind levothyroxine in the gut",
+   "members": [
+    "calcium carbonate",
+    "calcium citrate",
+    "calcium acetate",
+    "ferrous sulfate",
+    "ferrous fumarate",
+    "ferrous gluconate",
+    "iron",
+    "polysaccharide iron complex",
+    "aluminum hydroxide",
+    "magnesium hydroxide",
+    "sucralfate",
+    "cholestyramine",
+    "colestipol",
+    "colesevelam",
+    "sevelamer",
+    "lanthanum carbonate",
+    "orlistat"
+   ]
+  },
+  "iron_salt": {
+   "name": "iron product",
+   "plural": "iron products",
+   "members": [
+    "ferrous sulfate",
+    "ferrous fumarate",
+    "ferrous gluconate",
+    "iron",
+    "polysaccharide iron complex"
+   ]
+  },
+  "inhaled_nasal_corticosteroid": {
+   "name": "inhaled or nasal corticosteroid",
+   "plural": "inhaled or nasal corticosteroids",
+   "members": [
+    "fluticasone",
+    "budesonide",
+    "mometasone",
+    "ciclesonide",
+    "beclomethasone"
+   ]
+  },
+  "systemic_corticosteroid": {
+   "name": "systemic corticosteroid",
+   "plural": "systemic corticosteroids",
+   "members": [
+    "prednisone",
+    "prednisolone",
+    "methylprednisolone",
+    "dexamethasone",
+    "hydrocortisone",
+    "cortisone",
+    "betamethasone",
+    "deflazacort"
+   ]
+  },
+  "carbapenem": {
+   "name": "carbapenem",
+   "plural": "carbapenems",
+   "members": [
+    "meropenem",
+    "ertapenem",
+    "imipenem",
+    "doripenem"
+   ]
+  },
+  "penicillin": {
+   "name": "penicillin",
+   "plural": "penicillins",
+   "members": [
+    "amoxicillin",
+    "ampicillin",
+    "penicillin",
+    "piperacillin",
+    "dicloxacillin",
+    "nafcillin"
+   ]
+  },
+  "carbonic_anhydrase_inhibitor": {
+   "name": "carbonic anhydrase inhibitor",
+   "plural": "carbonic anhydrase inhibitors",
+   "members": [
+    "topiramate",
+    "zonisamide",
+    "acetazolamide",
+    "methazolamide"
+   ]
+  },
+  "glp1_agonist": {
+   "name": "GLP-1 agonist",
+   "plural": "GLP-1 agonists",
+   "members": [
+    "semaglutide",
+    "liraglutide",
+    "dulaglutide",
+    "exenatide",
+    "tirzepatide",
+    "lixisenatide"
+   ]
+  },
+  "statin": {
+   "name": "statin",
+   "plural": "statins",
+   "members": [
+    "simvastatin",
+    "lovastatin",
+    "atorvastatin",
+    "rosuvastatin",
+    "pravastatin",
+    "pitavastatin",
+    "fluvastatin"
+   ]
+  }
+ },
+ "groups": [
+  {
+   "id": "cns_depression",
+   "family": "cns",
+   "category": "CNS depression",
+   "classes": [
+    "cns_depressant"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "escalate": [
+    {
+     "has": [
+      "opioid"
+     ],
+     "min_members": 2,
+     "grade": "D"
+    },
+    {
+     "has": [
+      "sedative_hypnotic"
+     ],
+     "min_members": 3,
+     "grade": "D"
+    },
+    {
+     "has": [
+      "opioid",
+      "benzodiazepine"
+     ],
+     "grade": "D"
+    }
+   ],
+   "risk": "risk of oversedation, slowed breathing (respiratory depression), falls, and overdose",
+   "mechanism": "Each drug depresses the brain on its own; together the effects add up. Opioids with benzodiazepines, gabapentinoids, or other sedatives can stop breathing: both opioid and benzodiazepine labels carry a boxed warning on this combination.",
+   "action": "Use the lowest doses for the shortest time, avoid adding more sedatives, and watch for sleepiness and slow or shallow breathing. With an opioid, co-prescribe naloxone.",
+   "rows": [
+    1,
+    2
+   ],
+   "refs": [
+    "phansalkar2012"
+   ],
+   "label_side": "opioid"
+  },
+  {
+   "id": "serotonin",
+   "family": "serotonin",
+   "category": "serotonin syndrome",
+   "classes": [
+    "serotonergic"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "escalate": [
+    {
+     "min_members": 3,
+     "grade": "D"
+    },
+    {
+     "has": [
+      "serotonin_escalator"
+     ],
+     "min_members": 2,
+     "grade": "D"
+    }
+   ],
+   "risk": "risk of serotonin syndrome",
+   "mechanism": "Each drug raises serotonin activity. Together they can cause serotonin syndrome: agitation, tremor, clonus and overactive reflexes, sweating, fever, fast heart rate.",
+   "action": "Avoid stacking serotonergic drugs where possible; if needed, use low doses and watch for clonus, tremor, fever, and agitation, especially in the first days after a start or dose increase.",
+   "rows": [
+    7
+   ],
+   "refs": [
+    "dunkley2003"
+   ],
+   "label_side": "reuptake_inhibitor"
+  },
+  {
+   "id": "qt",
+   "family": "qt",
+   "category": "QT prolongation",
+   "classes": [
+    "qt_drug"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "escalate": [
+    {
+     "min_members": 3,
+     "grade": "D"
+    },
+    {
+     "has": [
+      "qt_high_risk"
+     ],
+     "min_members": 2,
+     "grade": "D"
+    }
+   ],
+   "risk": "risk of QT prolongation and torsades de pointes",
+   "mechanism": "Each drug slows the heart's electrical recovery (the QT interval). Together the effect adds up and can trigger torsades de pointes, a dangerous heart rhythm.",
+   "action": "Get a baseline ECG and keep potassium and magnesium normal. Stop or switch a drug if the QTc passes 500 ms.",
+   "rows": [
+    23
+   ],
+   "refs": [
+    "dechanont2014"
+   ],
+   "label_side": "qt_drug"
+  },
+  {
+   "id": "low_potassium_rhythm",
+   "family": "electrolyte",
+   "category": "electrolyte",
+   "classes": [
+    "k_wasting_diuretic",
+    "qt_drug",
+    "digoxin"
+   ],
+   "anchor": "k_wasting_diuretic",
+   "min_members": 2,
+   "grade": "C",
+   "require_any": [
+    "qt_drug",
+    "digoxin"
+   ],
+   "risk": "low potassium and magnesium from the diuretic raise the rhythm risk",
+   "mechanism": "Loop and thiazide diuretics lower potassium and magnesium. Low levels make QT-prolonging drugs more likely to cause torsades and make digoxin more toxic.",
+   "action": "Check potassium and magnesium at the start and after dose changes; replace them to keep potassium above 4.0 mmol/L.",
+   "rows": [
+    18,
+    23
+   ],
+   "refs": [],
+   "label_side": "k_wasting_diuretic"
+  },
+  {
+   "id": "bleeding",
+   "family": "bleeding",
+   "category": "bleeding",
+   "classes": [
+    "anticoagulant",
+    "antiplatelet",
+    "nsaid",
+    "reuptake_inhibitor"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "require_any": [
+    "anticoagulant",
+    "antiplatelet",
+    "nsaid"
+   ],
+   "escalate": [
+    {
+     "has": [
+      "anticoagulant",
+      "antiplatelet"
+     ],
+     "grade": "D"
+    },
+    {
+     "has": [
+      "anticoagulant",
+      "nsaid"
+     ],
+     "grade": "D"
+    }
+   ],
+   "risk": "risk of serious bleeding, especially stomach and gut bleeding",
+   "mechanism": "Anticoagulants slow clotting, aspirin and other antiplatelets stop platelets from sticking, NSAIDs block platelets and injure the stomach lining, and SSRIs and SNRIs drain the serotonin platelets need. Each added drug raises the bleeding risk.",
+   "action": "Drop any drug that is not essential (WOEST and AUGUSTUS support dropping aspirin from triple therapy), add a proton pump inhibitor for stomach protection, and watch for black stools, vomiting blood, or anemia.",
+   "rows": [
+    9,
+    12,
+    13
+   ],
+   "refs": [
+    "dechanont2014",
+    "woest2013",
+    "augustus2019"
+   ],
+   "label_side": "anticoagulant"
+  },
+  {
+   "id": "hyperkalemia",
+   "family": "hyperkalemia",
+   "category": "hyperkalemia",
+   "classes": [
+    "raas_blocker",
+    "mra",
+    "k_sparing",
+    "potassium_supplement",
+    "trimethoprim",
+    "nsaid",
+    "calcineurin_inhibitor",
+    "heparin",
+    "drospirenone"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "require_any": [
+    "raas_blocker",
+    "mra",
+    "k_sparing",
+    "potassium_supplement"
+   ],
+   "escalate": [
+    {
+     "min_members": 3,
+     "grade": "D"
+    },
+    {
+     "has": [
+      "mra",
+      "raas_blocker"
+     ],
+     "grade": "D"
+    },
+    {
+     "has": [
+      "mra",
+      "potassium_supplement"
+     ],
+     "grade": "D"
+    },
+    {
+     "has": [
+      "mra",
+      "trimethoprim"
+     ],
+     "grade": "D"
+    }
+   ],
+   "risk": "risk of high potassium (hyperkalemia)",
+   "mechanism": "ACE inhibitors and ARBs lower aldosterone, spironolactone and eplerenone block it, trimethoprim blocks the kidney's potassium channel (like amiloride), and supplements add potassium. Together potassium can rise to levels that stop the heart.",
+   "action": "Check potassium and kidney function within 3 days and again at 1 week; stop the potassium supplement or change the antibiotic when possible.",
+   "rows": [
+    15
+   ],
+   "refs": [
+    "juurlink2004",
+    "antoniou2015"
+   ],
+   "label_side": "mra"
+  },
+  {
+   "id": "kidney",
+   "family": "kidney",
+   "category": "nephrotoxicity",
+   "classes": [
+    "raas_blocker",
+    "diuretic_or_sglt2",
+    "direct_nephrotoxin"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "conditions": [
+    {
+     "has": [
+      "raas_blocker",
+      "diuretic_or_sglt2",
+      "nsaid"
+     ],
+     "grade": "D"
+    },
+    {
+     "count_of": "direct_nephrotoxin",
+     "min": 3,
+     "grade": "D"
+    },
+    {
+     "has": [
+      "aminoglycoside"
+     ],
+     "count_of": "direct_nephrotoxin",
+     "min": 2,
+     "grade": "D"
+    },
+    {
+     "count_of": "direct_nephrotoxin",
+     "min": 2,
+     "grade": "C"
+    }
+   ],
+   "risk": "risk of acute kidney injury",
+   "mechanism": "NSAIDs remove the prostaglandins that keep blood flowing into the kidney, ACE inhibitors and ARBs lower the pressure that keeps it filtering, and diuretics reduce blood volume (the \"triple whammy\"). Aminoglycosides, vancomycin, and other listed drugs injure the kidney directly.",
+   "action": "Avoid the NSAID if possible, keep the patient hydrated, and check creatinine within a week, sooner in the hospital.",
+   "rows": [
+    14
+   ],
+   "refs": [
+    "lapi2013"
+   ],
+   "label_side": "nsaid"
+  },
+  {
+   "id": "hypotension",
+   "family": "hypotension",
+   "category": "hypotension",
+   "classes": [
+    "antihypertensive",
+    "orthostatic_agent"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "require_all_distinct": [
+    "antihypertensive",
+    "orthostatic_agent"
+   ],
+   "risk": "risk of low blood pressure on standing, fainting, and falls",
+   "mechanism": "Each drug lowers blood pressure or blocks the reflex that holds it up when standing. Together they can cause orthostatic hypotension, fainting, and falls.",
+   "action": "Start low, raise one drug at a time, check standing blood pressure, and tell the patient to stand up slowly.",
+   "rows": [
+    22
+   ],
+   "refs": [],
+   "label_side": "orthostatic_agent"
+  },
+  {
+   "id": "bradycardia",
+   "family": "bradycardia",
+   "category": "bradycardia/AV block",
+   "classes": [
+    "rate_slowing"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "escalate": [
+    {
+     "min_members": 3,
+     "grade": "D"
+    },
+    {
+     "has": [
+      "beta_blocker",
+      "nondhp_ccb"
+     ],
+     "grade": "D"
+    }
+   ],
+   "risk": "risk of slow heart rate (bradycardia) and heart block",
+   "mechanism": "Each drug slows the heart rate or conduction through the AV node. Together they can cause severe bradycardia, AV block, or heart failure.",
+   "action": "Check pulse and an ECG after starting or raising any of them; lower doses or stop one if the heart rate drops below 50 or new AV block appears.",
+   "rows": [
+    20
+   ],
+   "refs": [],
+   "label_side": "rate_slowing"
+  },
+  {
+   "id": "hypoglycemia",
+   "family": "hypoglycemia",
+   "category": "hypoglycemia",
+   "classes": [
+    "glucose_lowering",
+    "fluoroquinolone",
+    "beta_blocker"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "require_any": [
+    "hypoglycemia_driver"
+   ],
+   "escalate": [
+    {
+     "count_of": "glucose_lowering",
+     "min": 3,
+     "grade": "D"
+    },
+    {
+     "has": [
+      "hypoglycemia_driver",
+      "fluoroquinolone"
+     ],
+     "grade": "D"
+    }
+   ],
+   "risk": "risk of low blood sugar (hypoglycemia)",
+   "mechanism": "Insulin and sulfonylureas lower glucose regardless of the level; adding more glucose-lowering drugs stacks the effect. Fluoroquinolones carry a label warning for severe blood-sugar swings, and beta-blockers hide the shaking and fast heartbeat that warn of a low.",
+   "action": "Lower the insulin or sulfonylurea dose when adding another agent, check glucose more often, and teach the patient to recognize lows without the usual warning signs.",
+   "rows": [
+    26
+   ],
+   "refs": [
+    "budnitz2011"
+   ],
+   "label_side": "hypoglycemia_driver"
+  },
+  {
+   "id": "anticholinergic",
+   "family": "anticholinergic",
+   "category": "anticholinergic burden",
+   "classes": [
+    "anticholinergic"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "escalate": [
+    {
+     "min_members": 3,
+     "grade": "D"
+    }
+   ],
+   "risk": "anticholinergic burden: confusion, urinary retention, constipation, falls",
+   "mechanism": "Each drug blocks acetylcholine. Together they cause confusion or delirium, dry mouth, blurred vision, urinary retention, constipation or ileus, overheating, and falls, worst in older adults (Beers criteria).",
+   "action": "Replace the strongest anticholinergic with an alternative and avoid the combination in older adults.",
+   "rows": [
+    6
+   ],
+   "refs": [],
+   "label_side": "anticholinergic"
+  },
+  {
+   "id": "cholinesterase_antagonism",
+   "family": "antagonism",
+   "category": "therapeutic antagonism",
+   "classes": [
+    "cholinesterase_inhibitor",
+    "anticholinergic"
+   ],
+   "anchor": "cholinesterase_inhibitor",
+   "min_members": 2,
+   "grade": "C",
+   "require_any": [
+    "anticholinergic"
+   ],
+   "escalate": [
+    {
+     "count_of": "anticholinergic",
+     "min": 2,
+     "grade": "D"
+    }
+   ],
+   "risk": "the anticholinergics work against the dementia drug",
+   "mechanism": "Cholinesterase inhibitors raise acetylcholine to help memory; anticholinergic drugs block acetylcholine. The two work in opposite directions (therapeutic antagonism), so the dementia drug does less and confusion gets worse.",
+   "action": "Stop or replace the anticholinergic drugs, or reconsider the cholinesterase inhibitor.",
+   "rows": [
+    6
+   ],
+   "refs": [],
+   "label_side": "cholinesterase_inhibitor"
+  },
+  {
+   "id": "seizure",
+   "family": "seizure",
+   "category": "seizure threshold",
+   "classes": [
+    "seizure_lowering",
+    "reuptake_inhibitor"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "require_any": [
+    "tramadol_or_bupropion"
+   ],
+   "escalate": [
+    {
+     "count_of": "seizure_lowering",
+     "min": 3,
+     "grade": "D"
+    }
+   ],
+   "risk": "risk of seizures",
+   "mechanism": "Tramadol and bupropion lower the seizure threshold in a dose-related way. The other drugs listed lower it too, so the risk adds up.",
+   "action": "Keep tramadol and bupropion at or below labeled doses, avoid them in patients with seizure risk factors, and prefer alternatives when several threshold-lowering drugs are needed.",
+   "rows": [
+    8
+   ],
+   "refs": [],
+   "label_side": "tramadol_or_bupropion"
+  },
+  {
+   "id": "hyponatremia",
+   "family": "sodium",
+   "category": "electrolyte",
+   "classes": [
+    "hyponatremia_drug"
+   ],
+   "min_members": 2,
+   "grade": "C",
+   "require_any": [
+    "hyponatremia_driver"
+   ],
+   "escalate": [
+    {
+     "min_members": 3,
+     "grade": "D"
+    }
+   ],
+   "risk": "risk of low sodium (hyponatremia)",
+   "mechanism": "Thiazides make the kidney lose sodium; SSRIs, SNRIs, carbamazepine, and oxcarbazepine cause the body to hold water (an SIADH-like effect). Together sodium can fall enough to cause confusion, falls, or seizures, most often in older women.",
+   "action": "Check sodium at baseline and within 2 weeks; choose a non-thiazide diuretic if sodium falls.",
+   "rows": [
+    17
+   ],
+   "refs": [],
+   "label_side": "hyponatremia_driver"
+  }
+ ],
+ "pairs": [
+  {
+   "id": "maoi_serotonergic",
+   "a": [
+    "maoi_nonselective"
+   ],
+   "b": [
+    "reuptake_inhibitor",
+    "tca",
+    "meperidine",
+    "tramadol",
+    "tapentadol",
+    "methadone",
+    "dextromethorphan",
+    "cyclobenzaprine",
+    "st. john's wort",
+    "mirtazapine",
+    "triptan"
+   ],
+   "grade": "E",
+   "family": "serotonin",
+   "category": "serotonin syndrome",
+   "risk": "can cause fatal serotonin syndrome",
+   "b_plural": "serotonergic drugs",
+   "mechanism": "An MAO inhibitor stops the breakdown of serotonin; these drugs release it or block its reuptake. Together serotonin can rise to toxic levels: high fever, rigidity, seizures, death.",
+   "action": "Do not use together. Allow the washout the labels require (usually 14 days after stopping an MAO inhibitor, 5 weeks after fluoxetine).",
+   "rows": [
+    7
+   ],
+   "refs": [
+    "dunkley2003",
+    "phansalkar2012"
+   ],
+   "label_side": "b"
+  },
+  {
+   "id": "maoi_serotonergic_avoid",
+   "a": [
+    "maoi_nonselective"
+   ],
+   "b": [
+    "buspirone",
+    "fentanyl",
+    "trazodone",
+    "lithium"
+   ],
+   "grade": "D",
+   "family": "serotonin",
+   "category": "serotonin syndrome",
+   "risk": "risk of serotonin syndrome",
+   "b_plural": "serotonergic drugs",
+   "mechanism": "An MAO inhibitor stops the breakdown of serotonin, and these drugs add serotonin activity. The labels advise against the combination.",
+   "action": "Avoid; if unavoidable, start low and monitor closely for agitation, clonus, and fever.",
+   "rows": [
+    7
+   ],
+   "refs": [
+    "dunkley2003"
+   ],
+   "label_side": "b"
+  },
+  {
+   "id": "maoi_bupropion",
+   "a": [
+    "maoi_nonselective"
+   ],
+   "b": [
+    "bupropion"
+   ],
+   "grade": "E",
+   "family": "hypertensive",
+   "category": "hypertensive crisis",
+   "risk": "risk of a hypertensive crisis",
+   "b_plural": "drugs",
+   "mechanism": "Bupropion raises norepinephrine and dopamine; with an MAO inhibitor these build up and can cause a sudden, severe rise in blood pressure. The bupropion label contraindicates the combination and requires 14 days between them.",
+   "action": "Do not use together. Wait at least 14 days after stopping the MAO inhibitor.",
+   "rows": [
+    24
+   ],
+   "refs": [],
+   "label_side": "b"
+  },
+  {
+   "id": "maoi_sympathomimetic",
+   "a": [
+    "maoi_nonselective"
+   ],
+   "b": [
+    "sympathomimetic"
+   ],
+   "grade": "E",
+   "family": "hypertensive",
+   "category": "hypertensive crisis",
+   "risk": "risk of a hypertensive crisis",
+   "b_plural": "sympathomimetic drugs",
+   "mechanism": "MAO inhibitors stop the breakdown of norepinephrine; stimulants and decongestants release it. Together blood pressure can spike to a hypertensive crisis with stroke or heart damage.",
+   "action": "Do not use together, or within 14 days of stopping the MAO inhibitor.",
+   "rows": [
+    24
+   ],
+   "refs": [],
+   "label_side": "b"
+  },
+  {
+   "id": "mao_b_opioid",
+   "a": [
+    "mao_b_inhibitor"
+   ],
+   "b": [
+    "meperidine",
+    "tramadol",
+    "methadone",
+    "tapentadol",
+    "dextromethorphan",
+    "cyclobenzaprine",
+    "st. john's wort"
+   ],
+   "grade": "E",
+   "family": "serotonin",
+   "category": "serotonin syndrome",
+   "risk": "can cause serotonin syndrome",
+   "b_plural": "drugs the label rules out",
+   "mechanism": "The rasagiline and selegiline labels contraindicate meperidine, tramadol, methadone, dextromethorphan, and similar drugs because serious, sometimes fatal serotonin syndrome has occurred.",
+   "action": "Do not use together; wait at least 14 days after stopping the MAO-B inhibitor.",
+   "rows": [
+    7
+   ],
+   "refs": [
+    "dunkley2003"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "opioid_benzodiazepine",
+   "a": [
+    "opioid"
+   ],
+   "b": [
+    "benzodiazepine"
+   ],
+   "grade": "D",
+   "family": "cns",
+   "category": "respiratory depression",
+   "risk": "boxed warning: profound sedation, respiratory depression, coma, death",
+   "b_plural": "benzodiazepines",
+   "mechanism": "Opioids and benzodiazepines both suppress the brainstem's drive to breathe. Both drug classes carry an FDA boxed warning against this combination.",
+   "action": "Avoid when possible. If both are needed, use the lowest doses, limit the duration, co-prescribe naloxone, and monitor breathing and sedation.",
+   "rows": [
+    1
+   ],
+   "refs": [
+    "phansalkar2012"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "opioid_gabapentinoid",
+   "a": [
+    "opioid"
+   ],
+   "b": [
+    "gabapentinoid"
+   ],
+   "grade": "D",
+   "family": "cns",
+   "category": "respiratory depression",
+   "risk": "risk of respiratory depression",
+   "b_plural": "gabapentinoids",
+   "mechanism": "Gabapentin and pregabalin add to opioid respiratory depression; the FDA added this warning to both in 2019. Both are cleared by the kidney, so kidney injury raises exposure.",
+   "action": "Start the gabapentinoid low, adjust for kidney function, and monitor for sedation and slow breathing.",
+   "rows": [
+    2
+   ],
+   "refs": [],
+   "label_side": "b"
+  },
+  {
+   "id": "clozapine_benzodiazepine",
+   "a": [
+    "clozapine"
+   ],
+   "b": [
+    "benzodiazepine"
+   ],
+   "grade": "D",
+   "family": "cns",
+   "category": "respiratory depression",
+   "risk": "collapse, respiratory arrest, and cardiac arrest have been reported",
+   "b_plural": "benzodiazepines",
+   "mechanism": "The clozapine label warns of collapse, respiratory arrest, and cardiac arrest with benzodiazepines and other psychotropic drugs, especially early in treatment.",
+   "action": "Use caution, especially when starting clozapine; monitor breathing and blood pressure.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "opioid_antagonist",
+   "a": [
+    "opioid"
+   ],
+   "b": [
+    "opioid_antagonist"
+   ],
+   "grade": "E",
+   "family": "antagonism",
+   "category": "therapeutic antagonism",
+   "risk": "the antagonist blocks the opioid and can bring on withdrawal",
+   "b_plural": "opioid antagonists",
+   "mechanism": "Naltrexone occupies opioid receptors: it blocks the opioid's effect and precipitates acute withdrawal in a patient who depends on the opioid. The naltrexone label contraindicates use in patients taking opioids. One of these prescriptions is likely an error.",
+   "action": "Do not use together. Decide which treatment is intended; naltrexone needs 7 to 10 opioid-free days first.",
+   "rows": [],
+   "refs": [],
+   "label_side": "b"
+  },
+  {
+   "id": "opioid_cyp3a4_inhibitor",
+   "a": [
+    "opioid_3a4_substrate"
+   ],
+   "b": [
+    "cyp3a4_inhibitor"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "opioid levels rise: risk of fatal respiratory depression",
+   "b_plural": "drugs that block CYP3A4",
+   "mechanism": "These opioids are cleared by CYP3A4. A CYP3A4 inhibitor raises opioid levels (fentanyl and oxycodone roughly 2 to 3 times), and the effect can build over days. The opioid labels carry a boxed warning on CYP3A4 inhibitors.",
+   "action": "Avoid if possible; otherwise lower the opioid dose, monitor closely for sedation and slow breathing, and re-adjust when the inhibitor stops.",
+   "rows": [
+    3
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "statin_strong_cyp3a4",
+   "a": [
+    "simvastatin",
+    "lovastatin"
+   ],
+   "b": [
+    "strong_cyp3a4_inhibitor",
+    "erythromycin",
+    "cyclosporine",
+    "gemfibrozil",
+    "danazol"
+   ],
+   "grade": "E",
+   "family": "myopathy",
+   "category": "myopathy/rhabdomyolysis",
+   "risk": "statin levels rise many-fold: risk of rhabdomyolysis",
+   "b_plural": "drugs the statin label rules out",
+   "mechanism": "Simvastatin and lovastatin are cleared almost entirely by CYP3A4. Strong CYP3A4 inhibitors (and erythromycin, cyclosporine, gemfibrozil, danazol) raise their levels roughly 10-fold, causing muscle breakdown and kidney failure. The simvastatin label contraindicates these combinations.",
+   "action": "Do not use together. Hold the statin during the antibiotic or antifungal course, or switch to pravastatin or rosuvastatin.",
+   "rows": [
+    27
+   ],
+   "refs": [
+    "fda_ddi_table",
+    "phansalkar2012"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "simvastatin_dose_cap",
+   "a": [
+    "simvastatin",
+    "lovastatin"
+   ],
+   "b": [
+    "verapamil",
+    "diltiazem",
+    "dronedarone",
+    "amiodarone",
+    "amlodipine",
+    "ranolazine",
+    "lomitapide",
+    "fluconazole",
+    "ticagrelor"
+   ],
+   "grade": "C",
+   "family": "myopathy",
+   "category": "myopathy/rhabdomyolysis",
+   "risk": "raises the statin level: risk of muscle injury",
+   "b_plural": "drugs that raise the statin level",
+   "dose_caps": {
+    "verapamil": 10,
+    "diltiazem": 10,
+    "dronedarone": 10,
+    "amiodarone": 20,
+    "amlodipine": 20,
+    "ranolazine": 20,
+    "lomitapide": 20
+   },
+   "over_cap_grade": "D",
+   "mechanism": "These drugs slow simvastatin's clearance. The simvastatin label caps the dose at 10 mg a day with verapamil, diltiazem, or dronedarone, and 20 mg with amiodarone, amlodipine, or ranolazine.",
+   "action": "Keep simvastatin at or below the label's cap, or switch to a statin not cleared by CYP3A4 (pravastatin, rosuvastatin).",
+   "rows": [
+    27
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "atorvastatin_strong_cyp3a4",
+   "a": [
+    "atorvastatin"
+   ],
+   "b": [
+    "strong_cyp3a4_inhibitor",
+    "cyclosporine",
+    "gemfibrozil",
+    "tipranavir"
+   ],
+   "grade": "C",
+   "family": "myopathy",
+   "category": "myopathy/rhabdomyolysis",
+   "risk": "atorvastatin levels rise: risk of muscle injury",
+   "b_plural": "drugs that raise the atorvastatin level",
+   "dose_caps": {
+    "clarithromycin": 20,
+    "itraconazole": 20,
+    "ketoconazole": 20,
+    "posaconazole": 20,
+    "voriconazole": 20,
+    "ritonavir": 20,
+    "cobicistat": 20,
+    "saquinavir": 20,
+    "lopinavir": 20,
+    "nelfinavir": 40,
+    "cyclosporine": 0,
+    "gemfibrozil": 0,
+    "tipranavir": 0
+   },
+   "over_cap_grade": "D",
+   "mechanism": "Strong CYP3A4 inhibitors raise atorvastatin exposure several-fold. The atorvastatin label limits the dose (20 mg with clarithromycin, itraconazole, or boosted protease inhibitors) and advises avoiding cyclosporine, gemfibrozil, and tipranavir.",
+   "action": "Use the lowest atorvastatin dose (at most 20 mg with these), or switch to pravastatin or rosuvastatin; watch for muscle pain and dark urine.",
+   "rows": [
+    27
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "statin_gemfibrozil",
+   "a": [
+    "rosuvastatin",
+    "pravastatin",
+    "pitavastatin",
+    "fluvastatin"
+   ],
+   "b": [
+    "gemfibrozil"
+   ],
+   "grade": "D",
+   "family": "myopathy",
+   "category": "myopathy/rhabdomyolysis",
+   "risk": "risk of rhabdomyolysis",
+   "b_plural": "fibrates",
+   "mechanism": "Gemfibrozil blocks statin uptake into the liver (OATP1B1) and its glucuronidation, raising statin levels, and adds its own muscle toxicity.",
+   "action": "Avoid; use fenofibrate if a fibrate is needed.",
+   "rows": [
+    27
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "colchicine_strong",
+   "a": [
+    "colchicine"
+   ],
+   "b": [
+    "strong_cyp3a4_inhibitor",
+    "pgp_inhibitor"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "P-gp",
+   "risk": "colchicine levels rise: risk of fatal colchicine toxicity",
+   "b_plural": "drugs that block CYP3A4 or P-glycoprotein",
+   "exclude_b": [
+    "carvedilol"
+   ],
+   "mechanism": "Colchicine is cleared by CYP3A4 and pumped out by P-glycoprotein (P-gp). Blocking these raises colchicine to toxic levels (diarrhea, muscle damage, bone-marrow failure); fatal cases are reported. The colchicine label contraindicates these inhibitors in patients with kidney or liver impairment and requires a lower dose otherwise.",
+   "action": "Reduce the colchicine dose as the label directs (for gout prophylaxis, 0.3 mg a day or less) or avoid; do not combine at all with kidney or liver impairment.",
+   "rows": [
+    28
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "colchicine_moderate",
+   "a": [
+    "colchicine"
+   ],
+   "b": [
+    "moderate_cyp3a4_inhibitor"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "P-gp",
+   "exclude_b": [
+    "erythromycin",
+    "verapamil",
+    "dronedarone",
+    "cyclosporine"
+   ],
+   "risk": "colchicine levels rise",
+   "b_plural": "moderate CYP3A4 inhibitors",
+   "mechanism": "Moderate CYP3A4 inhibitors (and the weak P-glycoprotein effect of diltiazem) raise colchicine levels. The colchicine label calls for a dose reduction.",
+   "action": "Lower the colchicine dose as the label directs and watch for diarrhea, muscle pain, and low blood counts.",
+   "rows": [
+    28
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "colchicine_statin",
+   "a": [
+    "colchicine"
+   ],
+   "b": [
+    "statin"
+   ],
+   "grade": "C",
+   "family": "myopathy",
+   "category": "myopathy/rhabdomyolysis",
+   "risk": "additive muscle toxicity",
+   "b_plural": "statins",
+   "mechanism": "Colchicine and statins can each injure muscle; myopathy and rhabdomyolysis have been reported with the combination, worse when a CYP3A4 inhibitor raises both.",
+   "action": "Watch for muscle pain or weakness and check CK if symptoms appear.",
+   "rows": [
+    27,
+    28
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "benzo_contraindicated_3a4",
+   "a": [
+    "triazolam",
+    "midazolam"
+   ],
+   "b": [
+    "strong_cyp3a4_inhibitor"
+   ],
+   "grade": "E",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "sedative levels rise many-fold: prolonged, deep sedation",
+   "b_plural": "strong CYP3A4 inhibitors",
+   "mechanism": "Triazolam and oral midazolam depend on CYP3A4; ketoconazole raises triazolam exposure more than 20-fold. The labels contraindicate strong CYP3A4 inhibitors.",
+   "action": "Do not use together; choose a benzodiazepine not cleared by CYP3A4 (lorazepam, temazepam) if one is needed.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "alprazolam_azole",
+   "a": [
+    "alprazolam"
+   ],
+   "b": [
+    "ketoconazole",
+    "itraconazole"
+   ],
+   "grade": "E",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "alprazolam levels rise: prolonged sedation",
+   "b_plural": "azole antifungals",
+   "mechanism": "Ketoconazole raises alprazolam exposure about 4-fold. The alprazolam label contraindicates ketoconazole and itraconazole.",
+   "action": "Do not use together; use lorazepam or another benzodiazepine not cleared by CYP3A4.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "alprazolam_strong_3a4",
+   "a": [
+    "alprazolam"
+   ],
+   "b": [
+    "strong_cyp3a4_inhibitor"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "exclude_b": [
+    "ketoconazole",
+    "itraconazole"
+   ],
+   "risk": "alprazolam levels rise: prolonged sedation and slowed breathing",
+   "b_plural": "strong CYP3A4 inhibitors",
+   "mechanism": "Strong CYP3A4 inhibitors such as ritonavir, cobicistat, and clarithromycin raise alprazolam exposure; the label advises avoiding them or cutting the dose.",
+   "action": "Avoid, or reduce the alprazolam dose and monitor sedation; lorazepam is an alternative.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "benzo_moderate_3a4",
+   "a": [
+    "alprazolam",
+    "triazolam",
+    "midazolam"
+   ],
+   "b": [
+    "moderate_cyp3a4_inhibitor"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "sedative levels rise",
+   "b_plural": "moderate CYP3A4 inhibitors",
+   "mechanism": "Moderate CYP3A4 inhibitors raise the levels of benzodiazepines cleared by CYP3A4.",
+   "action": "Use a lower benzodiazepine dose and watch for excess sedation.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "lurasidone_strong_inhibitor",
+   "a": [
+    "lurasidone"
+   ],
+   "b": [
+    "strong_cyp3a4_inhibitor"
+   ],
+   "grade": "E",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "lurasidone levels rise many-fold",
+   "b_plural": "strong CYP3A4 inhibitors",
+   "mechanism": "Ketoconazole raised lurasidone exposure about 9-fold; the lurasidone label contraindicates strong CYP3A4 inhibitors.",
+   "action": "Do not use together.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "lurasidone_strong_inducer",
+   "a": [
+    "lurasidone"
+   ],
+   "b": [
+    "strong_cyp3a4_inducer"
+   ],
+   "grade": "E",
+   "family": "pk",
+   "category": "CYP induction",
+   "risk": "lurasidone levels fall about 80%: it stops working",
+   "b_plural": "strong CYP3A4 inducers",
+   "mechanism": "Rifampin cut lurasidone exposure by about 80%; the lurasidone label contraindicates strong CYP3A4 inducers because the drug loses its effect (efficacy loss).",
+   "action": "Do not use together; choose an antipsychotic less dependent on CYP3A4.",
+   "rows": [
+    33
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "quetiapine_strong_inhibitor",
+   "a": [
+    "quetiapine"
+   ],
+   "b": [
+    "strong_cyp3a4_inhibitor"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "quetiapine levels rise about 6-fold",
+   "b_plural": "strong CYP3A4 inhibitors",
+   "mechanism": "Ketoconazole raised quetiapine exposure about 6-fold; the quetiapine label says to cut the dose to one-sixth with strong CYP3A4 inhibitors.",
+   "action": "Reduce quetiapine to one-sixth of the dose, or avoid.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "quetiapine_moderate_inhibitor",
+   "a": [
+    "quetiapine"
+   ],
+   "b": [
+    "moderate_cyp3a4_inhibitor"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "quetiapine levels rise",
+   "b_plural": "moderate CYP3A4 inhibitors",
+   "mechanism": "Quetiapine is cleared by CYP3A4; moderate inhibitors raise its level, adding sedation, low blood pressure, and QT effect.",
+   "action": "Watch for sedation and dizziness; lower the quetiapine dose if they appear.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "haloperidol_cyp3a4",
+   "a": [
+    "haloperidol"
+   ],
+   "b": [
+    "cyp3a4_inhibitor"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "haloperidol levels rise: more QT and movement side effects",
+   "b_plural": "drugs that block CYP3A4",
+   "mechanism": "Haloperidol is partly cleared by CYP3A4; inhibitors raise its level, adding QT prolongation and extrapyramidal side effects.",
+   "action": "Monitor for stiffness, restlessness, and QT changes; lower the dose if needed.",
+   "rows": [
+    23
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "calcineurin_cyp3a4_inhibitor",
+   "a": [
+    "calcineurin_inhibitor"
+   ],
+   "b": [
+    "cyp3a4_inhibitor"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "exclude_b": [
+    "cyclosporine"
+   ],
+   "risk": "immunosuppressant levels rise: kidney and nerve toxicity",
+   "b_plural": "drugs that block CYP3A4",
+   "mechanism": "Tacrolimus and cyclosporine are narrow-margin drugs cleared by CYP3A4 and P-glycoprotein. Azoles, macrolides, diltiazem, and verapamil raise their levels, causing kidney injury, tremor and seizures, high potassium, and high blood pressure.",
+   "action": "Reduce the immunosuppressant dose pre-emptively and check trough levels within a few days of starting or stopping the inhibitor.",
+   "rows": [
+    34
+   ],
+   "refs": [
+    "fda_ddi_table",
+    "phansalkar2012"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "calcineurin_inducer",
+   "a": [
+    "calcineurin_inhibitor"
+   ],
+   "b": [
+    "cyp3a4_inducer"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "efficacy loss",
+   "risk": "immunosuppressant levels fall: risk of rejection",
+   "b_plural": "drugs that speed CYP3A4 clearance",
+   "mechanism": "Enzyme inducers speed tacrolimus and cyclosporine clearance, so levels fall sharply within 1 to 2 weeks (efficacy loss) and graft rejection can follow.",
+   "action": "Avoid if possible; otherwise raise the dose and follow trough levels closely, including after the inducer stops.",
+   "rows": [
+    33
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "tacrolimus_ppi",
+   "a": [
+    "tacrolimus"
+   ],
+   "b": [
+    "omeprazole",
+    "lansoprazole"
+   ],
+   "grade": "A",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "tacrolimus levels may rise slightly",
+   "b_plural": "proton pump inhibitors",
+   "mechanism": "Omeprazole and lansoprazole weakly inhibit CYP2C19 and CYP3A4 and can modestly raise tacrolimus levels, mainly in CYP2C19 poor metabolizers.",
+   "action": "Usually no change; check a tacrolimus level if one is due.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "doac_combined_inhibitor",
+   "a": [
+    "apixaban",
+    "rivaroxaban",
+    "edoxaban"
+   ],
+   "b": [
+    "ketoconazole",
+    "itraconazole",
+    "posaconazole",
+    "voriconazole",
+    "ritonavir",
+    "cobicistat",
+    "clarithromycin",
+    "dronedarone"
+   ],
+   "grade": "D",
+   "family": "bleeding",
+   "category": "bleeding",
+   "risk": "anticoagulant levels rise: risk of major bleeding",
+   "b_plural": "drugs that block CYP3A4 and P-glycoprotein",
+   "mechanism": "These drugs block both CYP3A4 and P-glycoprotein, the two routes that clear apixaban and rivaroxaban, roughly doubling their levels.",
+   "action": "Avoid, or use the reduced dose the label specifies (apixaban 2.5 mg twice daily), and watch closely for bleeding.",
+   "rows": [
+    11
+   ],
+   "refs": [
+    "phansalkar2012"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "dabigatran_strong_pgp",
+   "a": [
+    "dabigatran",
+    "edoxaban"
+   ],
+   "b": [
+    "dronedarone",
+    "ketoconazole"
+   ],
+   "grade": "D",
+   "family": "bleeding",
+   "category": "P-gp",
+   "risk": "dabigatran levels rise: risk of major bleeding",
+   "b_plural": "strong P-glycoprotein inhibitors",
+   "mechanism": "Dabigatran is moved out of the gut by P-glycoprotein (P-gp) and cleared about 80% by the kidney. Dronedarone and ketoconazole block P-gp and roughly double dabigatran exposure.",
+   "action": "Avoid when kidney function is reduced (CrCl below 50 mL/min); otherwise follow the label's dose reduction and watch for bleeding.",
+   "rows": [
+    11
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "dabigatran_moderate_pgp",
+   "a": [
+    "dabigatran"
+   ],
+   "b": [
+    "verapamil",
+    "amiodarone",
+    "quinidine",
+    "clarithromycin",
+    "ticagrelor"
+   ],
+   "grade": "C",
+   "family": "bleeding",
+   "category": "P-gp",
+   "risk": "dabigatran levels rise",
+   "b_plural": "P-glycoprotein inhibitors",
+   "mechanism": "These drugs block P-glycoprotein (P-gp) and raise dabigatran levels; verapamil raises them 50 to 180% depending on timing.",
+   "action": "Give dabigatran at least 2 hours before verapamil, check kidney function, and watch for bleeding.",
+   "rows": [
+    11
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "doac_inducer",
+   "a": [
+    "doac"
+   ],
+   "b": [
+    "strong_cyp3a4_inducer"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "efficacy loss",
+   "risk": "anticoagulant levels fall: risk of stroke or clot",
+   "b_plural": "strong enzyme inducers",
+   "mechanism": "Rifampin, carbamazepine, phenytoin, and St. John's wort induce CYP3A4 and P-glycoprotein and roughly halve DOAC exposure, so the anticoagulant can fail (efficacy loss).",
+   "action": "Avoid; use another anticoagulant (such as warfarin with INR monitoring) while the inducer is needed.",
+   "rows": [
+    33
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "warfarin_potentiator",
+   "a": [
+    "warfarin"
+   ],
+   "b": [
+    "sulfamethoxazole",
+    "fluconazole",
+    "voriconazole",
+    "miconazole",
+    "metronidazole",
+    "tinidazole",
+    "amiodarone",
+    "capecitabine",
+    "fluorouracil"
+   ],
+   "grade": "D",
+   "family": "bleeding",
+   "category": "bleeding",
+   "risk": "INR rises: risk of serious bleeding",
+   "b_plural": "drugs that raise the INR",
+   "mechanism": "These drugs block CYP2C9, which clears S-warfarin (the more potent half of warfarin). The INR can double within days; amiodarone's effect lasts for weeks after it stops.",
+   "action": "Choose another drug if possible; otherwise lower the warfarin dose (often 25 to 50%) and check the INR within 3 to 5 days.",
+   "rows": [
+    10
+   ],
+   "refs": [
+    "phansalkar2012"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "warfarin_phenytoin",
+   "a": [
+    "warfarin"
+   ],
+   "b": [
+    "phenytoin",
+    "fosphenytoin"
+   ],
+   "grade": "D",
+   "family": "bleeding",
+   "category": "bleeding",
+   "risk": "INR swings both ways: bleeding risk first, then clotting risk; phenytoin levels may rise",
+   "b_plural": "drugs",
+   "mechanism": "Phenytoin first displaces warfarin from albumin and raises the INR (bleeding risk), then induces its metabolism and lowers the INR (clot risk); warfarin can also raise phenytoin levels.",
+   "action": "Check the INR and phenytoin levels often when either drug is started, stopped, or changed.",
+   "rows": [
+    10,
+    33
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "warfarin_inducer",
+   "a": [
+    "warfarin"
+   ],
+   "b": [
+    "rifampin",
+    "rifapentine",
+    "carbamazepine",
+    "phenobarbital",
+    "primidone",
+    "st. john's wort"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "efficacy loss",
+   "risk": "INR falls: risk of clots",
+   "b_plural": "enzyme inducers",
+   "mechanism": "These drugs induce CYP2C9 and CYP3A4 and speed warfarin clearance, so the INR falls over 1 to 2 weeks.",
+   "action": "Check the INR weekly and raise the warfarin dose as needed; lower it again after the inducer stops.",
+   "rows": [
+    10,
+    33
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "phenytoin_raiser",
+   "a": [
+    "phenytoin",
+    "fosphenytoin"
+   ],
+   "b": [
+    "fluconazole",
+    "fluoxetine",
+    "fluvoxamine",
+    "amiodarone",
+    "sulfamethoxazole",
+    "isoniazid",
+    "voriconazole",
+    "disulfiram",
+    "chloramphenicol"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "phenytoin levels rise: toxicity (unsteadiness, confusion)",
+   "b_plural": "drugs that raise phenytoin levels",
+   "mechanism": "Phenytoin is cleared by CYP2C9 and CYP2C19 with saturable kinetics, so a small drop in clearance causes a large rise in level. These drugs inhibit those enzymes.",
+   "action": "Check a phenytoin level within 1 to 2 weeks and watch for nystagmus, unsteadiness, and confusion.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "sulfonylurea_raiser",
+   "a": [
+    "sulfonylurea"
+   ],
+   "b": [
+    "sulfamethoxazole",
+    "fluconazole",
+    "clarithromycin",
+    "voriconazole",
+    "miconazole"
+   ],
+   "grade": "D",
+   "family": "hypoglycemia",
+   "category": "hypoglycemia",
+   "risk": "sulfonylurea levels rise: severe, prolonged low blood sugar",
+   "b_plural": "drugs that raise sulfonylurea levels",
+   "mechanism": "These drugs block CYP2C9 (or CYP3A4), which clears sulfonylureas, so the sulfonylurea accumulates. Severe hypoglycemia lasting more than a day is reported, especially in older adults.",
+   "action": "Choose another antibiotic if possible, or lower the sulfonylurea dose and check glucose often during the course.",
+   "rows": [
+    26
+   ],
+   "refs": [
+    "budnitz2011"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "clonidine_beta_blocker",
+   "a": [
+    "clonidine"
+   ],
+   "b": [
+    "beta_blocker"
+   ],
+   "grade": "D",
+   "family": "bradycardia",
+   "category": "bradycardia/AV block",
+   "risk": "slow heart rate, and a rebound hypertensive crisis if clonidine stops suddenly",
+   "b_plural": "beta-blockers",
+   "mechanism": "Both slow the heart. If clonidine is stopped abruptly, norepinephrine surges; with alpha receptors unopposed under beta-blockade, blood pressure can rebound to a crisis.",
+   "action": "Monitor heart rate. To stop, taper the beta-blocker first and then clonidine over several days.",
+   "rows": [
+    25
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "beta_blocker_nondhp",
+   "a": [
+    "beta_blocker"
+   ],
+   "b": [
+    "nondhp_ccb"
+   ],
+   "grade": "D",
+   "family": "bradycardia",
+   "category": "bradycardia/AV block",
+   "risk": "severe bradycardia, heart block, heart failure",
+   "b_plural": "non-dihydropyridine calcium channel blockers",
+   "mechanism": "Beta-blockers and verapamil or diltiazem both slow the AV node and weaken heart contraction. Together they can cause profound bradycardia, AV block, or cardiogenic shock.",
+   "action": "Avoid unless monitored; check pulse and ECG, and avoid in heart failure or conduction disease.",
+   "rows": [
+    20
+   ],
+   "refs": [],
+   "label_side": "b"
+  },
+  {
+   "id": "digoxin_strong_raiser",
+   "a": [
+    "digoxin"
+   ],
+   "b": [
+    "amiodarone",
+    "dronedarone",
+    "quinidine",
+    "clarithromycin",
+    "erythromycin",
+    "itraconazole",
+    "propafenone",
+    "ritonavir",
+    "cyclosporine",
+    "lapatinib"
+   ],
+   "grade": "D",
+   "family": "digoxin",
+   "category": "digoxin toxicity",
+   "risk": "digoxin levels rise: toxicity",
+   "b_plural": "drugs that raise digoxin levels",
+   "mechanism": "These drugs block P-glycoprotein, the pump that clears digoxin, and raise digoxin levels by 50 to 150% (amiodarone about 70%, dronedarone about 2.5-fold). Digoxin has a narrow margin.",
+   "action": "Halve the digoxin dose when starting amiodarone or dronedarone, and check a digoxin level within 1 to 2 weeks (target 0.5 to 0.9 ng/mL in heart failure).",
+   "rows": [
+    18
+   ],
+   "refs": [
+    "phansalkar2012"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "digoxin_moderate_raiser",
+   "a": [
+    "digoxin"
+   ],
+   "b": [
+    "verapamil",
+    "diltiazem",
+    "carvedilol",
+    "spironolactone",
+    "ranolazine"
+   ],
+   "grade": "C",
+   "family": "digoxin",
+   "category": "digoxin toxicity",
+   "risk": "digoxin levels rise",
+   "b_plural": "drugs that raise digoxin levels",
+   "mechanism": "Verapamil raises digoxin 50 to 75% and diltiazem 20 to 50% by blocking P-glycoprotein, and both add to digoxin's slowing of the heart.",
+   "action": "Check a digoxin level and heart rate after starting; lower the digoxin dose if needed.",
+   "rows": [
+    18
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "lithium_raiser",
+   "a": [
+    "lithium"
+   ],
+   "b": [
+    "nsaid",
+    "raas_blocker",
+    "thiazide"
+   ],
+   "grade": "D",
+   "family": "lithium",
+   "category": "lithium toxicity",
+   "risk": "lithium levels rise: lithium toxicity",
+   "b_plural": "drugs that raise lithium levels",
+   "mechanism": "The kidney handles lithium like sodium. Thiazides (levels up 25 to 40%), ACE inhibitors and ARBs, and NSAIDs all make the kidney hold on to lithium. Toxicity brings coarse tremor, unsteadiness, confusion, and arrhythmia.",
+   "action": "Avoid if possible; otherwise lower the lithium dose and check a lithium level within 5 to 7 days (therapeutic range 0.6 to 1.2 mEq/L), plus kidney function and sodium.",
+   "rows": [
+    16
+   ],
+   "refs": [
+    "phansalkar2012"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "lithium_loop",
+   "a": [
+    "lithium"
+   ],
+   "b": [
+    "loop_diuretic",
+    "metronidazole"
+   ],
+   "grade": "C",
+   "family": "lithium",
+   "category": "lithium toxicity",
+   "risk": "lithium levels may rise",
+   "b_plural": "drugs that can raise lithium levels",
+   "mechanism": "Volume loss and reduced kidney clearance can raise lithium levels.",
+   "action": "Check a lithium level after starting and watch for tremor or confusion.",
+   "rows": [
+    16
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "methotrexate_tmp",
+   "a": [
+    "methotrexate"
+   ],
+   "b": [
+    "sulfamethoxazole",
+    "trimethoprim"
+   ],
+   "grade": "D",
+   "family": "marrow",
+   "category": "myelosuppression",
+   "risk": "bone-marrow suppression, even at low weekly doses",
+   "b_plural": "antifolate antibiotics",
+   "mechanism": "Trimethoprim blocks the same folate enzyme (DHFR) as methotrexate, and sulfamethoxazole reduces methotrexate's kidney clearance. Fatal pancytopenia is reported even with low weekly methotrexate.",
+   "action": "Avoid; choose another antibiotic. If unavoidable, check blood counts and consider leucovorin.",
+   "rows": [
+    30
+   ],
+   "refs": [
+    "phansalkar2012"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "methotrexate_nsaid",
+   "a": [
+    "methotrexate"
+   ],
+   "b": [
+    "nsaid",
+    "aspirin"
+   ],
+   "grade": "C",
+   "family": "marrow",
+   "category": "nephrotoxicity",
+   "risk": "methotrexate clearance falls: kidney and marrow toxicity",
+   "b_plural": "NSAIDs",
+   "mechanism": "NSAIDs reduce the kidney's secretion of methotrexate (OAT1 and OAT3) and can lower kidney function, raising methotrexate levels. The risk is highest with high methotrexate doses.",
+   "action": "Monitor blood counts, kidney function, and liver tests; avoid NSAIDs around high-dose methotrexate.",
+   "rows": [
+    30
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "methotrexate_penicillin",
+   "a": [
+    "methotrexate"
+   ],
+   "b": [
+    "penicillin"
+   ],
+   "grade": "C",
+   "family": "marrow",
+   "category": "myelosuppression",
+   "risk": "methotrexate clearance falls",
+   "b_plural": "penicillins",
+   "mechanism": "Penicillins compete with methotrexate for kidney secretion and can raise its levels.",
+   "action": "Monitor blood counts and watch for mouth sores.",
+   "rows": [
+    30
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "methotrexate_ppi",
+   "a": [
+    "methotrexate"
+   ],
+   "b": [
+    "ppi"
+   ],
+   "grade": "B",
+   "family": "marrow",
+   "category": "myelosuppression",
+   "risk": "methotrexate clearance may fall",
+   "b_plural": "proton pump inhibitors",
+   "mechanism": "Proton pump inhibitors can slow methotrexate elimination, mainly with high-dose methotrexate.",
+   "action": "Consider holding the proton pump inhibitor around high-dose methotrexate.",
+   "rows": [
+    30
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "methotrexate_marrow",
+   "a": [
+    "methotrexate"
+   ],
+   "b": [
+    "azathioprine",
+    "mercaptopurine",
+    "leflunomide"
+   ],
+   "grade": "C",
+   "family": "marrow",
+   "category": "myelosuppression",
+   "risk": "additive bone-marrow suppression",
+   "b_plural": "immunosuppressants",
+   "mechanism": "Both drugs suppress the bone marrow; the effects add.",
+   "action": "Check blood counts regularly.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "thiopurine_allopurinol",
+   "a": [
+    "azathioprine",
+    "mercaptopurine"
+   ],
+   "b": [
+    "allopurinol"
+   ],
+   "grade": "D",
+   "family": "marrow",
+   "category": "myelosuppression",
+   "risk": "thiopurine levels rise: severe bone marrow suppression (myelosuppression)",
+   "b_plural": "xanthine oxidase inhibitors",
+   "mechanism": "Allopurinol blocks xanthine oxidase, a main route for clearing 6-mercaptopurine (azathioprine's active form), shunting it to toxic thioguanine nucleotides.",
+   "action": "Reduce azathioprine or mercaptopurine to one-third to one-quarter of the dose, or avoid; check blood counts often.",
+   "rows": [
+    29
+   ],
+   "refs": [
+    "phansalkar2012"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "thiopurine_febuxostat",
+   "a": [
+    "azathioprine",
+    "mercaptopurine"
+   ],
+   "b": [
+    "febuxostat"
+   ],
+   "grade": "E",
+   "family": "marrow",
+   "category": "myelosuppression",
+   "risk": "severe bone-marrow suppression",
+   "b_plural": "xanthine oxidase inhibitors",
+   "mechanism": "Febuxostat blocks xanthine oxidase; its label contraindicates azathioprine and mercaptopurine.",
+   "action": "Do not use together.",
+   "rows": [
+    29
+   ],
+   "refs": [],
+   "label_side": "b"
+  },
+  {
+   "id": "clozapine_carbamazepine",
+   "a": [
+    "clozapine"
+   ],
+   "b": [
+    "carbamazepine"
+   ],
+   "grade": "D",
+   "family": "marrow",
+   "category": "myelosuppression",
+   "risk": "agranulocytosis risk adds up, and clozapine levels fall",
+   "b_plural": "drugs",
+   "mechanism": "Both drugs can cause agranulocytosis, and carbamazepine induces CYP3A4 and roughly halves clozapine levels.",
+   "action": "Avoid; choose another mood stabilizer.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "tamoxifen_2d6",
+   "a": [
+    "tamoxifen"
+   ],
+   "b": [
+    "strong_cyp2d6_inhibitor"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "efficacy loss",
+   "risk": "tamoxifen may not work",
+   "b_plural": "drugs that block CYP2D6",
+   "mechanism": "Tamoxifen works through its active metabolite endoxifen, made by CYP2D6. Strong CYP2D6 inhibitors cut endoxifen levels, which has been associated with more breast cancer recurrence (efficacy loss).",
+   "action": "Avoid; for depression choose an antidepressant with little CYP2D6 effect (venlafaxine, escitalopram, citalopram).",
+   "rows": [
+    35
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "b"
+  },
+  {
+   "id": "tca_2d6",
+   "a": [
+    "tca"
+   ],
+   "b": [
+    "strong_cyp2d6_inhibitor"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "tricyclic levels rise: toxicity, QT prolongation, seizures",
+   "b_plural": "drugs that block CYP2D6",
+   "mechanism": "Tricyclics are cleared by CYP2D6. Strong inhibitors can raise tricyclic levels several-fold, causing anticholinergic toxicity, QT prolongation, and seizures.",
+   "action": "Use a low tricyclic dose and check a level, or choose another drug.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "atomoxetine_2d6",
+   "a": [
+    "atomoxetine"
+   ],
+   "b": [
+    "strong_cyp2d6_inhibitor"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "atomoxetine levels rise 6- to 8-fold",
+   "b_plural": "drugs that block CYP2D6",
+   "mechanism": "Atomoxetine is cleared by CYP2D6. Strong inhibitors raise exposure 6- to 8-fold, like a poor metabolizer: faster heart rate, higher blood pressure, side effects.",
+   "action": "Start atomoxetine at 40 mg a day and raise to 80 mg only after 4 weeks if needed, as the label directs.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "prodrug_opioid_2d6",
+   "a": [
+    "codeine",
+    "tramadol"
+   ],
+   "b": [
+    "cyp2d6_inhibitor"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "less pain relief; more parent-drug side effects",
+   "b_plural": "drugs that block CYP2D6",
+   "mechanism": "CYP2D6 turns codeine into morphine and tramadol into its active opioid metabolite. Blocking it reduces pain relief, and for tramadol leaves more parent drug with its seizure and serotonin effects.",
+   "action": "Expect weaker analgesia; watch for serotonin effects with tramadol, and consider a different analgesic.",
+   "rows": [
+    8,
+    35
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "hydrocodone_2d6",
+   "a": [
+    "hydrocodone",
+    "oxycodone"
+   ],
+   "b": [
+    "strong_cyp2d6_inhibitor"
+   ],
+   "grade": "B",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "may change the opioid's effect",
+   "b_plural": "drugs that block CYP2D6",
+   "mechanism": "CYP2D6 makes a minor active metabolite (hydromorphone from hydrocodone). Blocking it can reduce analgesia somewhat.",
+   "action": "Monitor pain control.",
+   "rows": [
+    35
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "beta_blocker_2d6",
+   "a": [
+    "metoprolol"
+   ],
+   "b": [
+    "cyp2d6_inhibitor"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "metoprolol levels rise: slower heart rate, lower blood pressure",
+   "b_plural": "drugs that block CYP2D6",
+   "mechanism": "Metoprolol is cleared by CYP2D6; inhibitors raise its level 2- to 5-fold.",
+   "action": "Check heart rate and blood pressure; lower the metoprolol dose or switch to a beta-blocker not cleared by CYP2D6 (atenolol, bisoprolol).",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "antipsychotic_2d6_contraindicated",
+   "a": [
+    "pimozide",
+    "thioridazine"
+   ],
+   "b": [
+    "fluoxetine",
+    "paroxetine",
+    "fluvoxamine",
+    "bupropion",
+    "quinidine"
+   ],
+   "grade": "E",
+   "family": "qt",
+   "category": "QT prolongation",
+   "risk": "levels rise: risk of fatal arrhythmia",
+   "b_plural": "drugs that block their clearance",
+   "mechanism": "Pimozide and thioridazine prolong QT in a dose-related way; blocking their clearance raises the risk of fatal arrhythmia. The labels contraindicate these combinations.",
+   "action": "Do not use together.",
+   "rows": [
+    23
+   ],
+   "refs": [],
+   "label_side": "b"
+  },
+  {
+   "id": "vmat2_2d6",
+   "a": [
+    "tetrabenazine",
+    "deutetrabenazine"
+   ],
+   "b": [
+    "strong_cyp2d6_inhibitor"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "levels rise: sedation, parkinsonism, QT prolongation",
+   "b_plural": "drugs that block CYP2D6",
+   "mechanism": "These drugs are cleared by CYP2D6; the labels cap the dose with strong inhibitors.",
+   "action": "Use the label's reduced maximum dose.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "antipsychotic_2d6_dose",
+   "a": [
+    "aripiprazole",
+    "brexpiprazole",
+    "iloperidone",
+    "vortioxetine"
+   ],
+   "b": [
+    "strong_cyp2d6_inhibitor"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "levels rise",
+   "b_plural": "drugs that block CYP2D6",
+   "mechanism": "These drugs are cleared by CYP2D6; their labels halve the dose with strong CYP2D6 inhibitors.",
+   "action": "Use half the usual dose.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "tizanidine_1a2",
+   "a": [
+    "tizanidine"
+   ],
+   "b": [
+    "fluvoxamine",
+    "ciprofloxacin"
+   ],
+   "grade": "E",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "tizanidine levels rise 10- to 33-fold: severe low blood pressure and sedation",
+   "b_plural": "strong CYP1A2 inhibitors",
+   "mechanism": "Tizanidine is cleared by CYP1A2. Ciprofloxacin raises its exposure about 10-fold and fluvoxamine about 33-fold. The tizanidine label contraindicates both.",
+   "action": "Do not use together.",
+   "rows": [
+    4
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "clozapine_1a2",
+   "a": [
+    "clozapine"
+   ],
+   "b": [
+    "cyp1a2_strong_inhibitor"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "clozapine levels rise 2- to 5-fold: seizures, sedation, low blood pressure",
+   "b_plural": "strong CYP1A2 inhibitors",
+   "mechanism": "Clozapine is cleared mainly by CYP1A2. Fluvoxamine raises clozapine levels 3- to 5-fold and ciprofloxacin about 2-fold. The label advises a one-third dose with strong CYP1A2 inhibitors.",
+   "action": "Reduce clozapine to one-third of the dose, check a clozapine level, and watch for sedation, seizures, and ileus.",
+   "rows": [
+    5
+   ],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "theophylline_1a2",
+   "a": [
+    "theophylline",
+    "aminophylline"
+   ],
+   "b": [
+    "cyp1a2_strong_inhibitor",
+    "zileuton"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "theophylline levels rise: seizures and arrhythmias",
+   "b_plural": "strong CYP1A2 inhibitors",
+   "mechanism": "Theophylline is cleared by CYP1A2 and has a narrow margin. Ciprofloxacin raises levels 20 to 100% or more, and fluvoxamine even more; toxicity causes seizures and arrhythmias.",
+   "action": "Avoid, or cut the theophylline dose and check a level within 2 to 3 days.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "olanzapine_1a2",
+   "a": [
+    "olanzapine",
+    "duloxetine",
+    "ramelteon"
+   ],
+   "b": [
+    "fluvoxamine",
+    "ciprofloxacin"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "levels rise",
+   "b_plural": "strong CYP1A2 inhibitors",
+   "mechanism": "These drugs are cleared by CYP1A2; strong inhibitors raise their levels.",
+   "action": "Use a lower dose and watch for side effects.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "citalopram_2c19",
+   "a": [
+    "citalopram"
+   ],
+   "b": [
+    "fluconazole",
+    "omeprazole",
+    "esomeprazole",
+    "cimetidine",
+    "fluvoxamine",
+    "ticlopidine",
+    "voriconazole"
+   ],
+   "grade": "C",
+   "family": "qt",
+   "category": "CYP inhibition",
+   "dose_caps_a": 20,
+   "over_cap_grade": "D",
+   "risk": "citalopram levels rise: dose-related QT prolongation",
+   "b_plural": "CYP2C19 inhibitors",
+   "mechanism": "Citalopram is cleared by CYP2C19 and prolongs QT in a dose-related way. The citalopram label caps the dose at 20 mg a day with CYP2C19 inhibitors.",
+   "action": "Keep citalopram at 20 mg a day or less, or switch to an antidepressant that does not prolong QT.",
+   "rows": [
+    23
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "clopidogrel_ppi",
+   "a": [
+    "clopidogrel"
+   ],
+   "b": [
+    "omeprazole",
+    "esomeprazole"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "efficacy loss",
+   "risk": "clopidogrel may not work as well",
+   "b_plural": "CYP2C19-inhibiting PPIs",
+   "mechanism": "Clopidogrel is a prodrug activated by CYP2C19. Omeprazole and esomeprazole inhibit CYP2C19 and cut the active metabolite (efficacy loss); the clopidogrel label says to avoid them. The clinical harm is contested: the COGENT trial found no increase in cardiac events.",
+   "action": "Use pantoprazole or famotidine if stomach protection is needed.",
+   "rows": [
+    31
+   ],
+   "refs": [
+    "cogent2010"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "contraceptive_inducer",
+   "a": [
+    "hormonal_contraceptive"
+   ],
+   "b": [
+    "rifampin",
+    "rifabutin",
+    "rifapentine",
+    "carbamazepine",
+    "oxcarbazepine",
+    "eslicarbazepine",
+    "phenytoin",
+    "fosphenytoin",
+    "phenobarbital",
+    "primidone",
+    "topiramate",
+    "st. john's wort",
+    "bosentan",
+    "efavirenz",
+    "felbamate"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "efficacy loss",
+   "risk": "contraceptive failure: unintended pregnancy",
+   "b_plural": "enzyme inducers",
+   "mechanism": "These drugs induce CYP3A4 and speed the clearance of ethinyl estradiol and progestins, so hormonal contraception can fail (efficacy loss).",
+   "action": "Use a non-hormonal or IUD method during the course and for 28 days after the inducer stops.",
+   "rows": [
+    33
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "pi_inducer",
+   "a": [
+    "protease_inhibitor",
+    "cobicistat"
+   ],
+   "b": [
+    "strong_cyp3a4_inducer"
+   ],
+   "grade": "E",
+   "family": "pk",
+   "category": "efficacy loss",
+   "risk": "HIV drug levels fall: treatment failure and resistance",
+   "b_plural": "strong enzyme inducers",
+   "mechanism": "Strong inducers drop protease inhibitor and cobicistat levels, leading to virologic failure and resistance (efficacy loss). The labels contraindicate these combinations.",
+   "action": "Do not use together.",
+   "rows": [
+    33
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "methadone_inducer",
+   "a": [
+    "methadone",
+    "buprenorphine",
+    "oxycodone",
+    "fentanyl",
+    "hydrocodone"
+   ],
+   "b": [
+    "strong_cyp3a4_inducer"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "efficacy loss",
+   "risk": "opioid levels fall: withdrawal or loss of pain control",
+   "b_plural": "strong enzyme inducers",
+   "mechanism": "Rifampin, carbamazepine, and phenytoin induce CYP3A4 and cut opioid levels within days (efficacy loss), causing withdrawal; stopping the inducer later can cause overdose.",
+   "action": "Raise the opioid dose under close monitoring, and lower it again when the inducer stops.",
+   "rows": [
+    33
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "statin_inducer",
+   "a": [
+    "atorvastatin",
+    "simvastatin",
+    "lovastatin"
+   ],
+   "b": [
+    "strong_cyp3a4_inducer"
+   ],
+   "grade": "B",
+   "family": "pk",
+   "category": "efficacy loss",
+   "risk": "statin levels fall",
+   "b_plural": "strong enzyme inducers",
+   "mechanism": "CYP3A4 induction lowers statin exposure, so cholesterol lowering weakens (efficacy loss).",
+   "action": "Check the lipid panel; use a higher dose or a statin not cleared by CYP3A4.",
+   "rows": [
+    33
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "quetiapine_inducer",
+   "a": [
+    "quetiapine"
+   ],
+   "b": [
+    "strong_cyp3a4_inducer"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "efficacy loss",
+   "risk": "quetiapine levels fall",
+   "b_plural": "strong enzyme inducers",
+   "mechanism": "Phenytoin raised quetiapine clearance about 5-fold (efficacy loss); the label says the dose may need to rise up to 5 times.",
+   "action": "Raise the quetiapine dose as needed, and lower it within 1 to 2 weeks after the inducer stops.",
+   "rows": [
+    33
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "lamotrigine_inducer",
+   "a": [
+    "lamotrigine"
+   ],
+   "b": [
+    "carbamazepine",
+    "phenytoin",
+    "fosphenytoin",
+    "phenobarbital",
+    "primidone",
+    "rifampin"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "CYP induction",
+   "risk": "lamotrigine levels fall about 40%",
+   "b_plural": "enzyme inducers",
+   "mechanism": "These drugs induce lamotrigine's glucuronidation and cut its levels by about 40 to 50%.",
+   "action": "Use the label's higher lamotrigine dosing with inducers, and re-adjust if the inducer stops.",
+   "rows": [
+    33
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "benzo_inducer",
+   "a": [
+    "clonazepam",
+    "alprazolam",
+    "midazolam",
+    "triazolam"
+   ],
+   "b": [
+    "carbamazepine",
+    "phenytoin",
+    "phenobarbital",
+    "rifampin"
+   ],
+   "grade": "A",
+   "family": "pk",
+   "category": "CYP induction",
+   "risk": "benzodiazepine levels fall",
+   "b_plural": "enzyme inducers",
+   "mechanism": "Enzyme inducers speed benzodiazepine clearance; carbamazepine lowers clonazepam about 20 to 30%.",
+   "action": "Usually minor; adjust if symptoms return.",
+   "rows": [
+    33
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "valproate_lamotrigine",
+   "a": [
+    "lamotrigine"
+   ],
+   "b": [
+    "valproate"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "lamotrigine levels double: risk of serious rash (Stevens-Johnson)",
+   "b_plural": "drugs",
+   "mechanism": "Valproate inhibits lamotrigine's glucuronidation and roughly doubles its half-life, raising the risk of serious rash including Stevens-Johnson syndrome.",
+   "action": "Use the lamotrigine label's valproate dosing (about half the usual dose, slower titration) and teach the patient to report any rash.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "valproate_topiramate",
+   "a": [
+    "valproate"
+   ],
+   "b": [
+    "topiramate"
+   ],
+   "grade": "D",
+   "family": "metabolic",
+   "category": "hyperammonemia",
+   "risk": "high ammonia with confusion (hyperammonemic encephalopathy) and low body temperature",
+   "b_plural": "drugs",
+   "mechanism": "Both labels warn that the combination can raise ammonia and cause encephalopathy and hypothermia, even when valproate levels are normal.",
+   "action": "Check ammonia if the patient becomes lethargic, confused, or vomits; stop one drug if it is high.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "valproate_carbapenem",
+   "a": [
+    "valproate"
+   ],
+   "b": [
+    "carbapenem"
+   ],
+   "grade": "D",
+   "family": "pk",
+   "category": "efficacy loss",
+   "risk": "valproate levels drop 60 to 100% within a day: breakthrough seizures",
+   "b_plural": "carbapenems",
+   "mechanism": "Carbapenems block the enzyme that recycles valproate glucuronide, so valproate levels crash within 24 hours (efficacy loss), and extra valproate does not restore them.",
+   "action": "Avoid; choose a non-carbapenem antibiotic or add another antiseizure drug for the course.",
+   "rows": [
+    32
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "valproate_aspirin",
+   "a": [
+    "valproate"
+   ],
+   "b": [
+    "aspirin"
+   ],
+   "grade": "C",
+   "family": "bleeding",
+   "category": "bleeding",
+   "risk": "free valproate rises and bleeding risk adds up",
+   "b_plural": "salicylates",
+   "mechanism": "Aspirin displaces valproate from albumin and slows its metabolism, raising free valproate; valproate can lower platelets, and aspirin blocks them.",
+   "action": "Watch for bruising and valproate side effects; check platelets.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "valproate_inducer",
+   "a": [
+    "valproate"
+   ],
+   "b": [
+    "carbamazepine",
+    "phenytoin",
+    "fosphenytoin",
+    "phenobarbital",
+    "primidone"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "CYP induction",
+   "risk": "valproate levels fall; carbamazepine epoxide rises",
+   "b_plural": "enzyme inducers",
+   "mechanism": "These drugs induce valproate metabolism and lower its levels, and valproate raises carbamazepine's toxic 10,11-epoxide metabolite.",
+   "action": "Check drug levels when either is started or changed, and watch for dizziness, double vision, and unsteadiness.",
+   "rows": [
+    33
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "levodopa_d2",
+   "a": [
+    "levodopa"
+   ],
+   "b": [
+    "d2_blocker"
+   ],
+   "grade": "D",
+   "family": "antagonism",
+   "category": "therapeutic antagonism",
+   "exclude_b": [
+    "aripiprazole",
+    "brexpiprazole",
+    "cariprazine"
+   ],
+   "risk": "blocks levodopa and worsens parkinsonism",
+   "b_plural": "drugs that block dopamine",
+   "mechanism": "These drugs block dopamine D2 receptors, directly opposing levodopa and worsening Parkinson's symptoms. Metoclopramide's label warns against use in Parkinson's disease.",
+   "action": "Avoid; for nausea use domperidone where available or ondansetron, and if an antipsychotic is needed use quetiapine, clozapine, or pimavanserin.",
+   "rows": [],
+   "refs": [],
+   "label_side": "b"
+  },
+  {
+   "id": "fluoroquinolone_cation",
+   "a": [
+    "fluoroquinolone",
+    "doxycycline",
+    "minocycline",
+    "tetracycline"
+   ],
+   "b": [
+    "polyvalent_cation"
+   ],
+   "grade": "D",
+   "family": "absorption",
+   "category": "absorption/timing",
+   "risk": "the antibiotic is not absorbed and may fail",
+   "b_plural": "mineral products that bind it",
+   "mechanism": "Calcium, iron, magnesium, aluminum, and zinc bind (chelate) the antibiotic in the gut; ciprofloxacin absorption falls by about 40 to 50%.",
+   "action": "Separate the doses: give the antibiotic at least 2 hours before or 6 hours after the mineral product, or pause the supplement during the course.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "levothyroxine_binder",
+   "a": [
+    "levothyroxine"
+   ],
+   "b": [
+    "levothyroxine_binder"
+   ],
+   "grade": "C",
+   "family": "absorption",
+   "category": "absorption/timing",
+   "risk": "less levothyroxine is absorbed",
+   "b_plural": "drugs that bind levothyroxine",
+   "mechanism": "Calcium, iron, and binders hold levothyroxine in the gut and reduce its absorption.",
+   "action": "Separate the doses by at least 4 hours and recheck TSH in 6 to 8 weeks.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "levothyroxine_ppi",
+   "a": [
+    "levothyroxine",
+    "iron_salt"
+   ],
+   "b": [
+    "ppi"
+   ],
+   "grade": "A",
+   "family": "absorption",
+   "category": "absorption/timing",
+   "risk": "absorption may fall slightly",
+   "b_plural": "acid-reducing drugs",
+   "mechanism": "Stomach acid helps levothyroxine and non-heme iron dissolve; acid suppression modestly reduces absorption.",
+   "action": "Usually minor; recheck TSH or iron studies if control changes.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "mycophenolate_ppi",
+   "a": [
+    "mycophenolate mofetil"
+   ],
+   "b": [
+    "ppi"
+   ],
+   "grade": "C",
+   "family": "absorption",
+   "category": "absorption/timing",
+   "risk": "less mycophenolate is absorbed (exposure falls 25 to 35%)",
+   "b_plural": "proton pump inhibitors",
+   "mechanism": "Mycophenolate mofetil needs stomach acid to dissolve; with acid suppression less is absorbed, and exposure to the active drug (mycophenolic acid) falls 25 to 35%.",
+   "action": "Monitor for rejection or consider enteric-coated mycophenolate sodium.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "glp1_oral_absorption",
+   "a": [
+    "glp1_agonist"
+   ],
+   "b": [
+    "sulfonylurea",
+    "levothyroxine",
+    "warfarin"
+   ],
+   "grade": "A",
+   "family": "absorption",
+   "category": "absorption/timing",
+   "risk": "slower stomach emptying changes oral drug absorption",
+   "b_plural": "oral drugs with narrow margins",
+   "mechanism": "GLP-1 agonists slow stomach emptying and can change the timing and amount of oral drug absorption.",
+   "action": "Usually minor; monitor glucose, INR, or TSH after starting.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "corticosteroid_strong_3a4",
+   "a": [
+    "inhaled_nasal_corticosteroid"
+   ],
+   "b": [
+    "ritonavir",
+    "cobicistat",
+    "ketoconazole",
+    "itraconazole"
+   ],
+   "grade": "D",
+   "family": "metabolic",
+   "category": "adrenal suppression",
+   "risk": "steroid builds up: Cushing's syndrome and adrenal suppression",
+   "b_plural": "strong CYP3A4 inhibitors",
+   "mechanism": "Ritonavir and cobicistat block CYP3A4 clearance of fluticasone and budesonide, so even nasal or inhaled doses reach systemic levels and cause Cushing's syndrome and adrenal suppression. The fluticasone label advises against the combination.",
+   "action": "Switch to beclomethasone, or stop the nasal or inhaled steroid.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "pde5_strong_3a4",
+   "a": [
+    "pde5_inhibitor"
+   ],
+   "b": [
+    "ritonavir",
+    "cobicistat",
+    "ketoconazole",
+    "itraconazole",
+    "clarithromycin"
+   ],
+   "grade": "D",
+   "family": "hypotension",
+   "category": "hypotension",
+   "risk": "PDE5 inhibitor levels rise up to 10-fold: low blood pressure",
+   "b_plural": "strong CYP3A4 inhibitors",
+   "mechanism": "Ritonavir raises sildenafil exposure about 11-fold; the sildenafil label limits the dose to 25 mg in 48 hours with ritonavir-class inhibitors.",
+   "action": "Use sildenafil 25 mg no more than once in 48 hours (tadalafil 10 mg in 72 hours).",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "nitrate_pde5",
+   "a": [
+    "nitrate"
+   ],
+   "b": [
+    "pde5_inhibitor",
+    "riociguat"
+   ],
+   "grade": "E",
+   "family": "hypotension",
+   "category": "hypotension",
+   "risk": "severe, refractory low blood pressure",
+   "b_plural": "drugs that raise cGMP",
+   "mechanism": "Nitrates release nitric oxide, which raises cGMP; PDE5 inhibitors block cGMP breakdown (riociguat stimulates its production). Together blood pressure can fall sharply and not respond to treatment. The labels contraindicate these combinations.",
+   "action": "Do not use together. Allow 24 hours after sildenafil or vardenafil and 48 hours after tadalafil before any nitrate.",
+   "rows": [
+    21
+   ],
+   "refs": [
+    "phansalkar2012"
+   ],
+   "label_side": "b"
+  },
+  {
+   "id": "riociguat_pde5",
+   "a": [
+    "riociguat"
+   ],
+   "b": [
+    "pde5_inhibitor"
+   ],
+   "grade": "E",
+   "family": "hypotension",
+   "category": "hypotension",
+   "risk": "severe low blood pressure",
+   "b_plural": "PDE5 inhibitors",
+   "mechanism": "Riociguat raises cGMP and PDE5 inhibitors stop its breakdown; the riociguat label contraindicates PDE5 inhibitors.",
+   "action": "Do not use together.",
+   "rows": [
+    21
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "alpha_blocker_pde5",
+   "a": [
+    "alpha1_blocker"
+   ],
+   "b": [
+    "pde5_inhibitor"
+   ],
+   "grade": "C",
+   "family": "hypotension",
+   "category": "hypotension",
+   "risk": "symptomatic low blood pressure on standing",
+   "b_plural": "PDE5 inhibitors",
+   "mechanism": "Alpha-1 blockers and PDE5 inhibitors both widen blood vessels. The sildenafil label advises being on a stable alpha-blocker dose first and starting at the lowest PDE5 dose.",
+   "action": "Start the PDE5 inhibitor at the lowest dose and separate the doses in time.",
+   "rows": [
+    22
+   ],
+   "refs": [],
+   "label_side": "b"
+  },
+  {
+   "id": "rizatriptan_propranolol",
+   "a": [
+    "rizatriptan"
+   ],
+   "b": [
+    "propranolol"
+   ],
+   "grade": "C",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "rizatriptan levels rise about 70%",
+   "b_plural": "drugs",
+   "mechanism": "Propranolol inhibits the MAO-A metabolism of rizatriptan and raises its levels about 70%.",
+   "action": "Use rizatriptan 5 mg per dose, at most 15 mg a day, as the label directs.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "triptan_ergot",
+   "a": [
+    "triptan"
+   ],
+   "b": [
+    "ergotamine",
+    "dihydroergotamine",
+    "methylergonovine"
+   ],
+   "grade": "E",
+   "family": "vascular",
+   "category": "hypertensive crisis",
+   "risk": "additive blood vessel constriction",
+   "b_plural": "ergot drugs",
+   "mechanism": "Triptans and ergots both constrict blood vessels; the labels contraindicate use within 24 hours of each other.",
+   "action": "Do not use within 24 hours of each other.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "tramadol_5ht3",
+   "a": [
+    "tramadol"
+   ],
+   "b": [
+    "ondansetron",
+    "granisetron"
+   ],
+   "grade": "A",
+   "family": "antagonism",
+   "category": "efficacy loss",
+   "risk": "may reduce tramadol's pain relief",
+   "b_plural": "5-HT3 antagonists",
+   "mechanism": "Part of tramadol's analgesia runs through serotonin; blocking 5-HT3 receptors may reduce it (loss of effect).",
+   "action": "Usually minor; assess pain control.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "metformin_acidosis",
+   "a": [
+    "metformin"
+   ],
+   "b": [
+    "carbonic_anhydrase_inhibitor",
+    "iodinated contrast"
+   ],
+   "grade": "C",
+   "family": "metabolic",
+   "category": "metabolic acidosis",
+   "risk": "risk of metabolic or lactic acidosis",
+   "b_plural": "drugs",
+   "mechanism": "Topiramate and other carbonic anhydrase inhibitors cause a metabolic acidosis that adds to metformin's rare lactic acidosis risk; the topiramate label warns about this.",
+   "action": "Check a bicarbonate level; stop metformin if acidosis develops or kidney function falls.",
+   "rows": [
+    19
+   ],
+   "refs": [],
+   "label_side": "b"
+  },
+  {
+   "id": "topiramate_thiazide",
+   "a": [
+    "topiramate"
+   ],
+   "b": [
+    "thiazide"
+   ],
+   "grade": "A",
+   "family": "sodium",
+   "category": "electrolyte",
+   "risk": "topiramate exposure rises; potassium may fall",
+   "b_plural": "thiazides",
+   "mechanism": "Hydrochlorothiazide raised topiramate exposure about 30%, and both can lower potassium.",
+   "action": "Check potassium if symptoms suggest it.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "ketoconazole_dhp",
+   "a": [
+    "dhp_ccb"
+   ],
+   "b": [
+    "strong_cyp3a4_inhibitor"
+   ],
+   "grade": "B",
+   "family": "pk",
+   "category": "CYP inhibition",
+   "risk": "calcium channel blocker levels rise: low blood pressure, swelling",
+   "b_plural": "strong CYP3A4 inhibitors",
+   "mechanism": "Dihydropyridine calcium channel blockers are cleared by CYP3A4; strong inhibitors raise their levels modestly.",
+   "action": "Monitor blood pressure and ankle swelling.",
+   "rows": [],
+   "refs": [
+    "fda_ddi_table"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "cobicistat_tenofovir",
+   "a": [
+    "tenofovir disoproxil"
+   ],
+   "b": [
+    "cobicistat",
+    "ritonavir"
+   ],
+   "grade": "C",
+   "family": "kidney",
+   "category": "nephrotoxicity",
+   "risk": "tenofovir exposure rises; creatinine rises",
+   "b_plural": "boosters",
+   "mechanism": "Boosters raise tenofovir disoproxil exposure, adding kidney risk, and cobicistat blocks tubular creatinine secretion (MATE1), raising creatinine without a true loss of filtration.",
+   "action": "Monitor creatinine, urine protein, and phosphate; consider tenofovir alafenamide.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "aminoglycoside_loop",
+   "a": [
+    "aminoglycoside"
+   ],
+   "b": [
+    "loop_diuretic"
+   ],
+   "grade": "D",
+   "family": "ototoxicity",
+   "category": "ototoxicity",
+   "risk": "additive, sometimes permanent hearing loss",
+   "b_plural": "loop diuretics",
+   "mechanism": "Aminoglycosides and loop diuretics both damage the inner ear; together hearing loss can be permanent. Aminoglycoside labels carry a boxed warning against potent diuretics.",
+   "action": "Avoid if possible; monitor aminoglycoside levels, kidney function, and hearing.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "erythromycin_3a4",
+   "a": [
+    "erythromycin",
+    "clarithromycin"
+   ],
+   "b": [
+    "diltiazem",
+    "verapamil",
+    "fluconazole",
+    "ketoconazole",
+    "itraconazole",
+    "voriconazole",
+    "ritonavir",
+    "cobicistat"
+   ],
+   "grade": "D",
+   "family": "qt",
+   "category": "QT prolongation",
+   "risk": "macrolide levels rise: about 5 times the rate of sudden cardiac death",
+   "b_plural": "drugs that block macrolide clearance",
+   "mechanism": "Erythromycin prolongs QT and is cleared by CYP3A4. With a CYP3A4 inhibitor its level rises; users of both had about 5 times the rate of sudden cardiac death (Ray et al., NEJM 2004).",
+   "action": "Avoid; choose azithromycin or a non-macrolide antibiotic.",
+   "rows": [
+    23
+   ],
+   "refs": [
+    "ray2004"
+   ],
+   "label_side": "a"
+  },
+  {
+   "id": "fluoroquinolone_steroid",
+   "a": [
+    "fluoroquinolone"
+   ],
+   "b": [
+    "systemic_corticosteroid"
+   ],
+   "grade": "D",
+   "family": "tendon",
+   "category": "tendon rupture",
+   "risk": "tendinitis and tendon rupture",
+   "b_plural": "systemic corticosteroids",
+   "mechanism": "Fluoroquinolones injure tendon tissue; the risk is highest with corticosteroids and after age 60. Fluoroquinolone labels carry a boxed warning.",
+   "action": "Choose another antibiotic if possible; tell the patient to stop and call at the first sign of tendon pain.",
+   "rows": [
+    36
+   ],
+   "refs": [],
+   "label_side": "a"
+  },
+  {
+   "id": "stimulant_opposing",
+   "a": [
+    "stimulant"
+   ],
+   "b": [
+    "benzodiazepine",
+    "sedating_antipsychotic"
+   ],
+   "grade": "A",
+   "family": "antagonism",
+   "category": "opposing pharmacology",
+   "risk": "opposing effects partly cancel",
+   "b_plural": "sedating drugs",
+   "mechanism": "A stimulant works against sedating drugs and dopamine blockers; each may blunt the other.",
+   "action": "Review whether both are needed.",
+   "rows": [],
+   "refs": [],
+   "label_side": "a"
+  }
+ ],
+ "duplicate_classes": [
+  {
+   "id": "dup_reuptake",
+   "class": "reuptake_inhibitor",
+   "grade": "D",
+   "family": "duplicate",
+   "risk": "duplicate therapy, no added benefit, more serotonin syndrome and bleeding risk",
+   "action": "Keep one antidepressant; cross-taper if switching (fluoxetine's long half-life needs a washout)."
+  },
+  {
+   "id": "dup_sedative",
+   "class": "sedative_hypnotic",
+   "grade": "D",
+   "family": "duplicate",
+   "risk": "duplicate therapy: next-day impairment, complex sleep behaviors, falls, slowed breathing",
+   "action": "Keep one sleep medicine at the lowest dose."
+  },
+  {
+   "id": "dup_opioid",
+   "class": "full_opioid_agonist",
+   "grade": "D",
+   "family": "duplicate",
+   "risk": "duplicate therapy: the total opioid dose (MME) adds up",
+   "action": "Use one opioid, and count the total MME across all of them."
+  },
+  {
+   "id": "dup_nsaid",
+   "class": "nsaid",
+   "grade": "D",
+   "family": "duplicate",
+   "risk": "duplicate therapy: more stomach bleeding, kidney, and heart risk with no added benefit",
+   "action": "Keep one NSAID."
+  },
+  {
+   "id": "dup_antipsychotic",
+   "class": "antipsychotic",
+   "grade": "D",
+   "family": "duplicate",
+   "risk": "duplicate therapy: more movement side effects, QT, prolactin, and metabolic effects",
+   "action": "Use one antipsychotic unless a psychiatrist is deliberately combining them."
+  },
+  {
+   "id": "dup_d2",
+   "class": "d2_blocker",
+   "require_any": [
+    "d2_blocker_nonantipsychotic"
+   ],
+   "grade": "D",
+   "family": "duplicate",
+   "risk": "duplicate therapy: two dopamine blockers add movement side effects, tardive dyskinesia, and NMS risk",
+   "action": "Avoid combining metoclopramide with an antipsychotic."
+  },
+  {
+   "id": "dup_triptan",
+   "class": "triptan",
+   "grade": "D",
+   "family": "duplicate",
+   "risk": "duplicate therapy: two triptans must not be used within 24 hours of each other",
+   "action": "Prescribe one triptan."
+  },
+  {
+   "id": "dup_alpha2",
+   "class": "central_alpha2",
+   "grade": "D",
+   "family": "duplicate",
+   "risk": "duplicate therapy: low blood pressure, slow heart rate, sedation, and rebound hypertension if stopped",
+   "action": "Use one central alpha-2 agonist."
+  },
+  {
+   "id": "dup_adhd",
+   "class": "adhd_medication",
+   "grade": "C",
+   "family": "duplicate",
+   "risk": "duplicate therapy: two ADHD medicines raise heart rate and blood pressure",
+   "action": "Confirm the combination is intended and monitor heart rate and blood pressure."
+  },
+  {
+   "id": "dup_raas",
+   "class": "raas_blocker",
+   "grade": "D",
+   "family": "duplicate",
+   "risk": "dual RAAS blockade: high potassium, low blood pressure, kidney injury",
+   "action": "Use one ACE inhibitor or ARB."
+  },
+  {
+   "id": "dup_anticoagulant",
+   "class": "anticoagulant",
+   "grade": "D",
+   "family": "duplicate",
+   "risk": "two anticoagulants: major bleeding",
+   "action": "Confirm this is a deliberate bridge; otherwise stop one."
+  },
+  {
+   "id": "dup_gabapentinoid",
+   "class": "gabapentinoid",
+   "grade": "D",
+   "family": "duplicate",
+   "risk": "duplicate therapy: sedation and slowed breathing",
+   "action": "Use one gabapentinoid."
+  },
+  {
+   "id": "dup_statin",
+   "class": "statin",
+   "grade": "C",
+   "family": "duplicate",
+   "risk": "duplicate therapy: more muscle toxicity",
+   "action": "Use one statin."
+  },
+  {
+   "id": "dup_ppi",
+   "class": "ppi",
+   "grade": "B",
+   "family": "duplicate",
+   "risk": "duplicate therapy",
+   "action": "Use one acid-reducing drug."
+  },
+  {
+   "id": "dup_tca",
+   "class": "tca",
+   "grade": "C",
+   "family": "duplicate",
+   "risk": "duplicate therapy: more anticholinergic, QT, and overdose risk",
+   "action": "Use one tricyclic."
+  }
+ ],
+ "dose_ceilings": {
+  "acetaminophen": {
+   "max_mg_per_day": 4000,
+   "grade": "D",
+   "risk": "liver injury",
+   "note": "FDA labeling: no more than 4,000 mg a day from all sources"
+  },
+  "ibuprofen": {
+   "max_mg_per_day": 3200,
+   "grade": "C",
+   "risk": "stomach bleeding and kidney injury",
+   "note": "prescription maximum"
+  },
+  "naproxen": {
+   "max_mg_per_day": 1500,
+   "grade": "C",
+   "risk": "stomach bleeding and kidney injury",
+   "note": "prescription maximum as naproxen base"
+  },
+  "meloxicam": {
+   "max_mg_per_day": 15,
+   "grade": "C",
+   "risk": "stomach bleeding and kidney injury",
+   "note": ""
+  },
+  "celecoxib": {
+   "max_mg_per_day": 400,
+   "grade": "C",
+   "risk": "stomach bleeding, kidney, and heart risk",
+   "note": ""
+  },
+  "ketorolac": {
+   "max_mg_per_day": 120,
+   "grade": "C",
+   "risk": "bleeding and kidney injury; limit to 5 days",
+   "note": "parenteral maximum"
+  },
+  "diclofenac": {
+   "max_mg_per_day": 150,
+   "grade": "C",
+   "risk": "stomach bleeding and kidney injury",
+   "note": ""
+  },
+  "amphetamine": {
+   "max_mg_per_day": 40,
+   "grade": "C",
+   "risk": "raised heart rate and blood pressure, insomnia, misuse",
+   "note": "mixed amphetamine salts for ADHD (up to 60 mg for narcolepsy)",
+   "combination_of": [
+    "amphetamine",
+    "dextroamphetamine"
+   ]
+  },
+  "lisdexamfetamine": {
+   "max_mg_per_day": 70,
+   "grade": "C",
+   "risk": "raised heart rate and blood pressure",
+   "note": ""
+  },
+  "methylphenidate": {
+   "max_mg_per_day": 60,
+   "grade": "C",
+   "risk": "raised heart rate and blood pressure",
+   "note": ""
+  },
+  "sertraline": {
+   "max_mg_per_day": 200,
+   "grade": "C",
+   "risk": "serotonergic side effects",
+   "note": ""
+  },
+  "fluoxetine": {
+   "max_mg_per_day": 80,
+   "grade": "C",
+   "risk": "serotonergic side effects",
+   "note": ""
+  },
+  "paroxetine": {
+   "max_mg_per_day": 60,
+   "grade": "C",
+   "risk": "serotonergic side effects",
+   "note": "60 mg for OCD and panic; 50 mg for depression"
+  },
+  "citalopram": {
+   "max_mg_per_day": 40,
+   "grade": "D",
+   "risk": "dose-related QT prolongation",
+   "note": "20 mg over age 60"
+  },
+  "escitalopram": {
+   "max_mg_per_day": 20,
+   "grade": "C",
+   "risk": "QT prolongation",
+   "note": ""
+  },
+  "venlafaxine": {
+   "max_mg_per_day": 375,
+   "grade": "C",
+   "risk": "raised blood pressure, serotonergic effects",
+   "note": ""
+  },
+  "duloxetine": {
+   "max_mg_per_day": 120,
+   "grade": "C",
+   "risk": "liver and serotonergic effects",
+   "note": ""
+  },
+  "bupropion": {
+   "max_mg_per_day": 450,
+   "grade": "D",
+   "risk": "dose-related seizures",
+   "note": ""
+  },
+  "trazodone": {
+   "max_mg_per_day": 400,
+   "grade": "C",
+   "risk": "sedation, low blood pressure, QT",
+   "note": "outpatient maximum"
+  },
+  "tramadol": {
+   "max_mg_per_day": 400,
+   "grade": "D",
+   "risk": "seizures and serotonin syndrome",
+   "note": ""
+  },
+  "tapentadol": {
+   "max_mg_per_day": 600,
+   "grade": "D",
+   "risk": "respiratory depression",
+   "note": ""
+  },
+  "quetiapine": {
+   "max_mg_per_day": 800,
+   "grade": "C",
+   "risk": "sedation, low blood pressure, QT",
+   "note": ""
+  },
+  "olanzapine": {
+   "max_mg_per_day": 20,
+   "grade": "C",
+   "risk": "sedation and metabolic effects",
+   "note": ""
+  },
+  "risperidone": {
+   "max_mg_per_day": 16,
+   "grade": "C",
+   "risk": "movement side effects",
+   "note": ""
+  },
+  "alprazolam": {
+   "max_mg_per_day": 10,
+   "grade": "C",
+   "risk": "sedation and dependence",
+   "note": "panic disorder maximum; 4 mg for anxiety"
+  },
+  "zolpidem": {
+   "max_mg_per_day": 10,
+   "grade": "C",
+   "risk": "next-day impairment and complex sleep behaviors",
+   "note": "5 mg for women and older adults"
+  },
+  "eszopiclone": {
+   "max_mg_per_day": 3,
+   "grade": "C",
+   "risk": "next-day impairment",
+   "note": ""
+  },
+  "gabapentin": {
+   "max_mg_per_day": 3600,
+   "grade": "C",
+   "risk": "sedation and slowed breathing",
+   "note": ""
+  },
+  "pregabalin": {
+   "max_mg_per_day": 600,
+   "grade": "C",
+   "risk": "sedation and slowed breathing",
+   "note": ""
+  },
+  "cyclobenzaprine": {
+   "max_mg_per_day": 30,
+   "grade": "C",
+   "risk": "sedation and anticholinergic effects",
+   "note": ""
+  },
+  "carisoprodol": {
+   "max_mg_per_day": 1400,
+   "grade": "C",
+   "risk": "sedation and dependence",
+   "note": ""
+  },
+  "tizanidine": {
+   "max_mg_per_day": 36,
+   "grade": "C",
+   "risk": "low blood pressure and liver injury",
+   "note": ""
+  },
+  "topiramate": {
+   "max_mg_per_day": 400,
+   "grade": "C",
+   "risk": "cognitive slowing and acidosis",
+   "note": ""
+  },
+  "metformin": {
+   "max_mg_per_day": 2550,
+   "grade": "C",
+   "risk": "GI effects and lactic acidosis",
+   "note": ""
+  },
+  "glipizide": {
+   "max_mg_per_day": 40,
+   "grade": "C",
+   "risk": "hypoglycemia",
+   "note": ""
+  },
+  "simvastatin": {
+   "max_mg_per_day": 40,
+   "grade": "C",
+   "risk": "muscle injury",
+   "note": "80 mg only for patients already on it for 12 months"
+  },
+  "atorvastatin": {
+   "max_mg_per_day": 80,
+   "grade": "C",
+   "risk": "muscle injury",
+   "note": ""
+  },
+  "sumatriptan": {
+   "max_mg_per_day": 200,
+   "grade": "C",
+   "risk": "vasoconstriction",
+   "note": ""
+  },
+  "rizatriptan": {
+   "max_mg_per_day": 30,
+   "grade": "C",
+   "risk": "vasoconstriction",
+   "note": "15 mg with propranolol"
+  },
+  "colchicine": {
+   "max_mg_per_day": 1.2,
+   "grade": "D",
+   "risk": "colchicine toxicity",
+   "note": "prophylaxis maximum"
+  },
+  "diphenhydramine": {
+   "max_mg_per_day": 300,
+   "grade": "C",
+   "risk": "anticholinergic toxicity",
+   "note": ""
+  },
+  "lisinopril": {
+   "max_mg_per_day": 80,
+   "grade": "C",
+   "risk": "low blood pressure and kidney injury",
+   "note": ""
+  },
+  "amlodipine": {
+   "max_mg_per_day": 10,
+   "grade": "C",
+   "risk": "low blood pressure and swelling",
+   "note": ""
+  },
+  "butalbital": {
+   "max_mg_per_day": 300,
+   "grade": "C",
+   "risk": "dependence and medication-overuse headache",
+   "note": "six tablets a day"
+  }
+ },
+ "mme_factors": {
+  "codeine": 0.15,
+  "dihydrocodeine": 0.25,
+  "hydrocodone": 1.0,
+  "hydromorphone": 5.0,
+  "levorphanol": 11.0,
+  "meperidine": 0.1,
+  "methadone": 4.7,
+  "morphine": 1.0,
+  "oxycodone": 1.5,
+  "oxymorphone": 3.0,
+  "pentazocine": 0.37,
+  "tapentadol": 0.4,
+  "tramadol": 0.2,
+  "fentanyl_transdermal_per_mcg_h": 2.4
+ }
+}
