@@ -90,15 +90,12 @@ export interface TermsOnlyResponse {
   readonly available_terms: readonly TermInfo[];
 }
 
-export type ViewName = "interactions" | "search";
-
 export interface CheckErrorState {
   readonly message: string;
   readonly detail: string;
 }
 
 export interface AppState {
-  readonly view: ViewName;
   readonly medicationLines: readonly string[];
   readonly checkResponse: CheckResponse | null;
   readonly checkLoading: boolean;
@@ -122,7 +119,6 @@ export interface AppState {
  */
 export function createInitialState(): AppState {
   return {
-    view: "interactions",
     medicationLines: [],
     checkResponse: null,
     checkLoading: false,

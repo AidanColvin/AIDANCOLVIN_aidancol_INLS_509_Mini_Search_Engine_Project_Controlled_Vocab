@@ -1,6 +1,6 @@
 /**
  * Takes no arguments.
- * Builds the Label search view: the search field, the vocabulary filters, and the results list, from state and callbacks only.
+ * Builds the "Have a question?" section: the search field, suggestions, vocabulary filter chips, and the results list, from state and callbacks only.
  * Gives nothing; the exported mount and update functions are called for the DOM nodes and side effects they produce.
  */
 
@@ -10,7 +10,6 @@ import {
   resolveTagNames,
   splitSnippetIntoSegments,
   splitTagsByActiveFilters,
-  termIndentLevel,
   termsById,
 } from "./search.js";
 import { checkmarkIcon, externalLinkIcon, searchIcon } from "./render_icons.js";
@@ -31,24 +30,32 @@ export interface SearchViewRefs {
   readonly root: HTMLElement;
   readonly queryInput: HTMLInputElement;
   readonly clearButton: HTMLButtonElement;
-  readonly filtersMobileButton: HTMLButtonElement;
-  readonly filtersDialog: HTMLDialogElement;
-  readonly filtersSidebar: HTMLElement;
+  readonly filtersRow: HTMLElement;
   readonly resultsSection: HTMLElement;
 }
 
+// One-tap starting points, so nobody has to invent a query from nothing.
+const SUGGESTED_QUERIES: readonly string[] = ["grapefruit", "drowsiness", "pregnancy", "alcohol", "kidney"];
+
 /**
  * Takes the Label search view's callbacks.
- * Builds the view's static shell once: title, search field, filters containers, and an empty results section.
+ * Builds the section's static shell once: heading, lede, search field, suggestions, a filters row, and an empty results section.
  * Gives the SearchViewRefs, so the caller can update the dynamic parts and keep the search field's identity stable across renders.
  */
 export function mountSearchView(callbacks: SearchCallbacks): SearchViewRefs {
-  const root = document.createElement("main");
+  const root = document.createElement("section");
   root.className = "search-view";
+  root.id = "look-up";
+  root.setAttribute("aria-labelledby", "look-up-title");
 
-  const title = document.createElement("h1");
-  title.className = "page-title";
-  title.textContent = "Search labels";
+  const title = document.createElement("h2");
+  title.className = "section-title";
+  title.id = "look-up-title";
+  title.textContent = "Have a question?";
+
+  const lede = document.createElement("p");
+  lede.className = "section-lede";
+  lede.textContent = "Search what the FDA prescribing information says about side effects, food, pregnancy, and more.";
 
   const fieldWrap = document.createElement("div");
   fieldWrap.setAttribute("role", "search");
@@ -56,7 +63,7 @@ export function mountSearchView(callbacks: SearchCallbacks): SearchViewRefs {
   const label = document.createElement("label");
   label.className = "visually-hidden";
   label.htmlFor = "search-q";
-  label.textContent = "Search label text";
+  label.textContent = "Search prescribing information";
   const iconSpan = document.createElement("span");
   iconSpan.className = "search-field__icon";
   iconSpan.append(searchIcon(20));
@@ -64,36 +71,45 @@ export function mountSearchView(callbacks: SearchCallbacks): SearchViewRefs {
   queryInput.type = "search";
   queryInput.id = "search-q";
   queryInput.className = "search-field__input";
-  queryInput.placeholder = "Search label text";
+  queryInput.placeholder = "Search anything";
+  queryInput.enterKeyHint = "search";
   const clearButton = document.createElement("button");
   clearButton.type = "button";
   clearButton.className = "search-field__clear";
   clearButton.setAttribute("aria-label", "Clear search");
   clearButton.textContent = "×";
+  clearButton.hidden = true;
   fieldWrap.append(label, iconSpan, queryInput, clearButton);
 
-  const filtersMobileButton = document.createElement("button");
-  filtersMobileButton.type = "button";
-  filtersMobileButton.className = "filters-mobile-button";
-  filtersMobileButton.textContent = "Filters";
+  const suggestions = document.createElement("div");
+  suggestions.className = "suggestions";
+  const suggestionsLabel = document.createElement("span");
+  suggestionsLabel.className = "suggestions__label";
+  suggestionsLabel.textContent = "Try";
+  suggestions.append(suggestionsLabel);
+  for (const suggestion of SUGGESTED_QUERIES) {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "suggestion";
+    chip.textContent = suggestion;
+    chip.addEventListener("click", () => {
+      queryInput.value = suggestion;
+      clearButton.hidden = false;
+      callbacks.onQueryChange(suggestion);
+    });
+    suggestions.append(chip);
+  }
 
-  const filtersDialog = document.createElement("dialog");
-  filtersDialog.className = "filters-dialog";
+  const filtersRow = document.createElement("div");
+  filtersRow.className = "filters-row";
+  filtersRow.setAttribute("role", "group");
+  filtersRow.setAttribute("aria-label", "Narrow results");
 
-  const filtersSidebar = document.createElement("aside");
-  filtersSidebar.className = "filters-sidebar";
-  filtersSidebar.setAttribute("aria-label", "Filters");
-
-  const body = document.createElement("div");
-  body.className = "search-view__body";
-  body.append(filtersSidebar);
-
-  const resultsSection = document.createElement("section");
+  const resultsSection = document.createElement("div");
   resultsSection.className = "search-results";
   resultsSection.setAttribute("aria-live", "polite");
-  body.append(resultsSection);
 
-  root.append(title, fieldWrap, filtersMobileButton, filtersDialog, body);
+  root.append(title, lede, fieldWrap, suggestions, filtersRow, resultsSection);
 
   let debounceHandle: ReturnType<typeof setTimeout> | undefined;
   queryInput.addEventListener("input", () => {
@@ -101,85 +117,63 @@ export function mountSearchView(callbacks: SearchCallbacks): SearchViewRefs {
       clearTimeout(debounceHandle);
     }
     const value = queryInput.value;
+    clearButton.hidden = value.length === 0;
     debounceHandle = setTimeout(() => {
       callbacks.onQueryChange(value);
     }, 250);
   });
   clearButton.addEventListener("click", () => {
     queryInput.value = "";
+    clearButton.hidden = true;
     callbacks.onClearQuery();
   });
-  filtersMobileButton.addEventListener("click", () => {
-    filtersDialog.showModal();
-  });
 
-  return { root, queryInput, clearButton, filtersMobileButton, filtersDialog, filtersSidebar, resultsSection };
+  return { root, queryInput, clearButton, filtersRow, resultsSection };
 }
 
 /**
  * Takes the view's refs, the current AppState, and the Label search callbacks.
- * Rebuilds the filters sidebar, the filters dialog's content, and the results section from the current state.
+ * Rebuilds the filter chips, shown only once a search has run, and the results section from the current state.
  * Gives nothing; the search field element itself is never replaced.
  */
 export function updateSearchView(refs: SearchViewRefs, state: AppState, callbacks: SearchCallbacks): void {
   const groups = groupTermsByPropertyGroup(state.availableTerms);
-  refs.filtersSidebar.replaceChildren(buildFilterPanel(groups, state, callbacks, false));
-  refs.filtersDialog.replaceChildren(buildFilterPanel(groups, state, callbacks, true));
+  refs.filtersRow.replaceChildren(...buildFilterChips(groups, state, callbacks));
+  const hasSearched = state.searchResponse !== null || state.searchFilters.length > 0;
+  refs.filtersRow.hidden = groups.length === 0 || !hasSearched;
   refs.resultsSection.replaceChildren(...buildResultsBody(state, callbacks));
 }
 
 /**
- * Takes the grouped terms, the current AppState, the Label search callbacks, and whether this panel is the mobile dialog copy.
- * Builds the filters heading, the Match all/any toggle, and one row group per property group.
- * Gives the panel's root HTMLElement.
+ * Takes the grouped terms, the current AppState, and the Label search callbacks.
+ * Builds one toggle chip per vocabulary term in group order, then the Match all/any toggle and a Clear link when filters are on.
+ * Gives the tuple of elements for the filters row.
  */
-function buildFilterPanel(
+function buildFilterChips(
   groups: ReturnType<typeof groupTermsByPropertyGroup>,
   state: AppState,
   callbacks: SearchCallbacks,
-  isDialogCopy: boolean,
-): HTMLElement {
-  const panel = document.createElement("div");
-  panel.className = "filters-panel";
-
-  const headingRow = document.createElement("div");
-  headingRow.className = "filters-panel__heading-row";
-  const heading = document.createElement("h2");
-  heading.className = "filters-panel__heading";
-  heading.textContent = "Filters";
-  headingRow.append(heading);
+): readonly HTMLElement[] {
+  const elements: HTMLElement[] = [];
+  for (const group of groups) {
+    for (const term of group.terms) {
+      elements.push(buildFilterChip(term, group.propertyGroup, state.searchFilters.includes(term.term_id), callbacks));
+    }
+  }
+  if (state.searchFilters.length >= 2) {
+    elements.push(buildOperatorToggle(state.searchOperator, callbacks));
+  }
   if (state.searchFilters.length > 0) {
     const clear = document.createElement("button");
     clear.type = "button";
-    clear.className = "filters-panel__clear";
+    clear.className = "filters-row__clear";
     clear.textContent = "Clear";
     clear.addEventListener("click", () => {
       callbacks.onClearFilters();
     });
-    headingRow.append(clear);
+    elements.push(clear);
   }
-  panel.append(headingRow);
-
-  if (isDialogCopy) {
-    const closeButton = document.createElement("button");
-    closeButton.type = "button";
-    closeButton.className = "filters-panel__close";
-    closeButton.textContent = "Done";
-    closeButton.addEventListener("click", () => {
-      closeButton.closest("dialog")?.close();
-    });
-    panel.append(closeButton);
-  }
-
-  if (state.searchFilters.length >= 2) {
-    panel.append(buildOperatorToggle(state.searchOperator, callbacks));
-  }
-
-  for (const group of groups) {
-    panel.append(buildFilterGroup(group.propertyGroup, group.terms, state.searchFilters, callbacks));
-  }
-
-  return panel;
+  return elements;
 }
 
 /**
@@ -209,52 +203,27 @@ function buildOperatorToggle(operator: "AND" | "OR", callbacks: SearchCallbacks)
 }
 
 /**
- * Takes one property group's name and terms, the currently selected filter ids, and the Label search callbacks.
- * Builds the group's heading and its list of filter row buttons.
- * Gives the group wrapper HTMLElement.
+ * Takes one term, the name of its property group, whether it is currently selected, and the Label search callbacks.
+ * Builds the term's toggle chip, showing only its plain name, with its group and id kept for the tooltip.
+ * Gives the chip button HTMLElement.
  */
-function buildFilterGroup(propertyGroup: string, terms: readonly TermInfo[], selected: readonly string[], callbacks: SearchCallbacks): HTMLElement {
-  const wrap = document.createElement("div");
-  wrap.className = "filter-group";
-  const heading = document.createElement("h3");
-  heading.className = "filter-group__heading";
-  heading.textContent = propertyGroup;
-  const list = document.createElement("div");
-  list.className = "filter-group__list";
-  for (const term of terms) {
-    list.append(buildFilterRow(term, selected.includes(term.term_id), callbacks));
-  }
-  wrap.append(heading, list);
-  return wrap;
-}
-
-/**
- * Takes one term, whether it is currently selected, and the Label search callbacks.
- * Builds the term's filter row button, indented when it narrows a broader term.
- * Gives the row button HTMLElement.
- */
-function buildFilterRow(term: TermInfo, selected: boolean, callbacks: SearchCallbacks): HTMLButtonElement {
-  const row = document.createElement("button");
-  row.type = "button";
-  const indentClass = termIndentLevel(term.term_id) === 1 ? " filter-row--indented" : "";
-  row.className = selected ? `filter-row filter-row--selected${indentClass}` : `filter-row${indentClass}`;
-  row.setAttribute("aria-pressed", String(selected));
-  const name = document.createElement("span");
-  name.textContent = term.name;
-  const id = document.createElement("span");
-  id.className = "filter-row__id";
-  id.textContent = term.term_id;
-  row.append(name, id);
+function buildFilterChip(term: TermInfo, propertyGroup: string, selected: boolean, callbacks: SearchCallbacks): HTMLButtonElement {
+  const chip = document.createElement("button");
+  chip.type = "button";
+  chip.className = selected ? "filter-chip filter-chip--selected" : "filter-chip";
+  chip.setAttribute("aria-pressed", String(selected));
+  chip.title = `${propertyGroup} · ${term.term_id}`;
   if (selected) {
     const check = document.createElement("span");
-    check.className = "filter-row__check";
-    check.append(checkmarkIcon(16));
-    row.append(check);
+    check.className = "filter-chip__check";
+    check.append(checkmarkIcon(14));
+    chip.append(check);
   }
-  row.addEventListener("click", () => {
+  chip.append(document.createTextNode(term.name));
+  chip.addEventListener("click", () => {
     callbacks.onToggleFilter(term.term_id);
   });
-  return row;
+  return chip;
 }
 
 /**
@@ -272,10 +241,10 @@ function buildResultsBody(state: AppState, callbacks: SearchCallbacks): readonly
   if (state.searchResponse.hits.length === 0) {
     const empty = document.createElement("p");
     empty.className = "search-results__empty";
-    empty.textContent = "No labels match. Try fewer filters or Match any.";
+    empty.textContent = "Nothing matched. Try a different word, or fewer filters.";
     return [empty];
   }
-  const heading = document.createElement("h2");
+  const heading = document.createElement("h3");
   heading.className = "search-results__heading";
   heading.textContent = `${state.searchResponse.hits.length} results`;
 
@@ -310,7 +279,7 @@ function buildHitRow(hit: SearchHit, query: string, activeFilters: readonly stri
   const title = hitTitle(hit);
   const titleGroup = document.createElement("div");
   titleGroup.className = "hit-row__title-group";
-  const titleEl = document.createElement("h3");
+  const titleEl = document.createElement("h4");
   titleEl.className = "hit-row__title";
   titleEl.textContent = title.primary;
   titleGroup.append(titleEl);

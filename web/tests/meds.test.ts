@@ -8,6 +8,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
+  candidateChoices,
   candidateLabel,
   countResolvedRows,
   findRowForLine,
@@ -145,6 +146,26 @@ test("rowHeadlineName prefers the generic name, then matched_name, then as_enter
 test("candidateLabel takes the part before the arrow and lowercases it", () => {
   assert.equal(candidateLabel("DEXTROAMPHETAMINE SACCHARATE → AMPHETAMINE ASPARTATE MONOHYDRATE, ..."), "dextroamphetamine saccharate");
   assert.equal(candidateLabel("Plain Name"), "plain name");
+});
+
+/**
+ * Takes no arguments.
+ * Checks same-named candidates fall back to their ingredient sets, and distinct names or truncated sets keep the name.
+ * Gives nothing; asserts each choice's label and re-check text.
+ */
+test("candidateChoices tells same-named candidates apart by ingredient set", () => {
+  assert.deepEqual(candidateChoices(["ASPIRIN → ASPIRIN, DIPYRIDAMOLE", "ASPIRIN → ASPIRIN, OXYCODONE HYDROCHLORIDE"]), [
+    { label: "aspirin + dipyridamole", entryText: "aspirin / dipyridamole" },
+    { label: "aspirin + oxycodone hydrochloride", entryText: "aspirin / oxycodone hydrochloride" },
+  ]);
+  assert.deepEqual(candidateChoices(["ADDERALL → AMPHETAMINE ASPARTATE", "ADZENYS → AMPHETAMINE"]), [
+    { label: "adderall", entryText: "adderall" },
+    { label: "adzenys", entryText: "adzenys" },
+  ]);
+  assert.deepEqual(candidateChoices(["X → A, ...", "X → B"]), [
+    { label: "x", entryText: "x" },
+    { label: "b", entryText: "b" },
+  ]);
 });
 
 /**

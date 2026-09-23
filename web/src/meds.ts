@@ -115,6 +115,46 @@ export function candidateLabel(candidate: string): string {
   return namePart.trim().toLowerCase();
 }
 
+export interface CandidateChoice {
+  readonly label: string;
+  readonly entryText: string;
+}
+
+/**
+ * Takes one candidate string shaped "NAME → INGREDIENT SET".
+ * Pulls out the ingredient set after the arrow, lowercased, unless it is missing or was truncated with "...".
+ * Gives the ingredient names as a tuple, or an empty tuple when there is no usable set.
+ */
+function candidateIngredients(candidate: string): readonly string[] {
+  const arrowIndex = candidate.indexOf("→");
+  if (arrowIndex === -1) {
+    return [];
+  }
+  const setPart = candidate.slice(arrowIndex + 1).trim();
+  if (setPart.length === 0 || setPart.endsWith("...")) {
+    return [];
+  }
+  return setPart.split(",").map((part) => part.trim().toLowerCase()).filter((part) => part.length > 0);
+}
+
+/**
+ * Takes every candidate string for one unresolved entry.
+ * Picks a visible label and the text to re-check for each: the name when the names already differ, otherwise the ingredient set, which is what actually tells same-named products apart.
+ * Gives one CandidateChoice per candidate, in order.
+ */
+export function candidateChoices(candidates: readonly string[]): readonly CandidateChoice[] {
+  const names = candidates.map(candidateLabel);
+  const namesAreDistinct = new Set(names).size === names.length;
+  return candidates.map((candidate, index) => {
+    const name = names[index] ?? candidateLabel(candidate);
+    const ingredients = candidateIngredients(candidate);
+    if (namesAreDistinct || ingredients.length === 0) {
+      return { label: name, entryText: name };
+    }
+    return { label: ingredients.join(" + "), entryText: ingredients.join(" / ") };
+  });
+}
+
 /**
  * Takes the medication table rows and one medication line as the user typed it.
  * Finds the row whose as_entered text matches that line.
