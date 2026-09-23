@@ -41,7 +41,7 @@ CATEGORY_WORDS: dict[str, str] = {
     "bradycardia/AV block": r"bradycard|AV block|atrioventricular|heart block|conduction|heart rate",
     "nephrotoxicity": r"renal|kidney|nephro",
     "ototoxicity": r"ototox|hearing|oto",
-    "myelosuppression": r"myelosupp|pancytop|bone marrow|neutropen|agranulocyt|leukopen|thrombocytopen|hematolog",
+    "myelosuppression": r"myelosupp|pancytop|bone.marrow|neutropen|agranulocyt|leukopen|thrombocytopen|hematolog",
     "myopathy/rhabdomyolysis": r"myopath|rhabdomyol|muscle",
     "lithium toxicity": r"lithium",
     "digoxin toxicity": r"digoxin|digitalis",
@@ -238,7 +238,7 @@ def load_pack(path: Path) -> tuple[dict[str, str], dict[str, dict]]:
     lines = section5.splitlines()
     lists: dict[str, str] = {}
     for index, line in enumerate(lines):
-        if re.fullmatch(r"L\d\d", line.strip()):
+        if re.fullmatch(r"[LG]\d\d", line.strip()):
             cursor = index + 1
             while not lines[cursor].strip():
                 cursor += 1
@@ -295,8 +295,17 @@ def alert_text(alert: dict) -> str:
     Joins every visible text field of the alert.
     Gives the joined text.
     """
-    keys = ("category", "grade_text", "basis", "quote", "why_title", "why_text", "source")
+    keys = ("category", "grade_text", "basis", "quote", "why_title", "why_text", "source", "action", "includes")
     return " ".join(str(alert.get(key) or "") for key in keys)
+
+
+def category_pattern(category: str) -> str:
+    """
+    Takes an answer-key category such as "efficacy loss".
+    Joins the category's own words with its keyword family, so a site that names the category outright is credited.
+    Gives the regular expression.
+    """
+    return "|".join(filter(None, (re.escape(category), CATEGORY_WORDS.get(category, ""))))
 
 
 def is_duplication(alert: dict) -> bool:
@@ -330,7 +339,7 @@ def score_item(item: dict, alerts: list[dict], alert_sets: list[set[str]], site:
             continue
         got = site_pack_grade(alert.get("grade"))
         got_rank = PACK_GRADE_RANK.get(got or "", 0)
-        category_ok = bool(re.search(CATEGORY_WORDS.get(category, re.escape(category)), alert_text(alert), re.I))
+        category_ok = bool(re.search(category_pattern(category), alert_text(alert), re.I))
         grade_ok = got_rank >= PACK_GRADE_RANK[want]
         grade_one = got_rank == PACK_GRADE_RANK[want] - 1
         if category_ok and grade_ok:
@@ -399,11 +408,15 @@ def score_totals(totals: dict[str, str], site: dict) -> list[dict]:
     resolved = [med for med in site.get("meds") or [] if not UNRESOLVED.search(med.get("text") or "")]
     blocks = [(med.get("text") or "").replace(med.get("brand") or "", "", 1) + " " + (med.get("generic") or "") for med in resolved]
     blocks += [alert_text(alert) + " " + (alert.get("drugs") or "") for alert in site.get("alerts") or []]
+    blocks += list(site.get("totals") or []) + ([site["totalMme"]] if site.get("totalMme") else [])
     for molecule, expected_text in totals.items():
         names = [name for name in re.split(r"\s*/\s*|\s+moiety", molecule.lower()) if name and name != "combined opioid"]
         want = amounts_in(expected_text.split("=")[-1] if "MME" in expected_text and molecule == "combined opioid" else expected_text)
-        if "per week" in expected_text or "/week" in expected_text:
-            want = [(value, unit + "/week") if not unit.endswith("/week") else (value, unit) for value, unit in want[:1]]
+        weekly = [(value, unit) for value, unit in want if unit.endswith("/week")]
+        if weekly:
+            want = weekly[:1]
+        elif "per week" in expected_text:
+            want = [(value, unit + "/week") for value, unit in want[:1]]
         elif "/" in molecule and len(want) >= 2:
             want = want[:2]
         else:
@@ -416,6 +429,15 @@ def score_totals(totals: dict[str, str], site: dict) -> list[dict]:
             ok = bool(want) and all(any(abs(value - got) < 1e-6 and unit == got_unit for got, got_unit in shown) for value, unit in want)
         rows.append({"molecule": molecule, "expected": expected_text, "correct": ok, "site_shows": ", ".join(sorted({f"{v:g} {u}" for v, u in shown})) or "nothing for this molecule"})
     return rows
+
+
+def covers_expected(found: set[str], key: dict) -> bool:
+    """
+    Takes an alert's ingredients and a list's answer-key entry.
+    Checks whether the alert names every drug of some expected item, which makes it an expected flag even when one product on it also holds a should-not-flag ingredient (Truvada's emtricitabine next to its tenofovir).
+    Gives True when some expected item is covered.
+    """
+    return any({i for drug in item["drugs"] for i in ingredients_of(drug)} <= found for item in key.get("expected") or [])
 
 
 def false_positive_checks(list_id: str, key: dict, alerts: list[dict], alert_sets: list[set[str]]) -> list[dict]:
@@ -434,7 +456,7 @@ def false_positive_checks(list_id: str, key: dict, alerts: list[dict], alert_set
             continue
         for rule in key.get("should_not_flag") or []:
             drugs = set(ingredients_of(re.split(r" at | \(|;", rule)[0].replace(" with ", "/")))
-            if drugs and drugs <= found and not (len(drugs) == 1 and is_duplication(alert)):
+            if drugs and drugs <= found and not (len(drugs) == 1 and is_duplication(alert)) and not (len(drugs) == 1 and covers_expected(found, key)):
                 rows.append({"rule": rule, "drugs": alert.get("drugs"), "site_grade": alert.get("grade"), "category": alert.get("category")})
     return rows
 
@@ -534,10 +556,10 @@ def grade_run(pack_path: Path, run_dir: Path) -> dict:
         grouping = []
         for item in items:
             expected = {i for drug in item["drugs"] for i in ingredients_of(drug)}
-            if len(expected) >= 3 and item["category"] not in DUPLICATE_CATEGORIES | HANDLING_CATEGORIES | {"dose ceiling"}:
+            if len(set(item["drugs"])) >= 3 and item["category"] not in DUPLICATE_CATEGORIES | HANDLING_CATEGORIES | {"dose ceiling"}:
                 present = any(
-                    expected <= found and re.search(CATEGORY_WORDS.get(item["category"], "x^"), alert_text(alert), re.I)
-                    and re.search(r"\b(\d+|two|three|four|five|six)\b\s+(?:drugs|medications|medicines|\w+ants|\w+s)\b", alert.get("category") or "", re.I)
+                    expected <= found and re.search(category_pattern(item["category"]), alert_text(alert), re.I)
+                    and re.search(r"\b(\d+|two|three|four|five|six)\b\s+(?:[\w-]+\s+){0,3}?(?:drugs|medications|medicines|\w+ants|\w+s)\b", alert.get("category") or "", re.I)
                     for alert, found in zip(alerts, alert_sets)
                 )
                 grouping.append({"drugs": item["drugs"], "category": item["category"], "present": present})
@@ -547,8 +569,8 @@ def grade_run(pack_path: Path, run_dir: Path) -> dict:
             primary = [link["href"] for link in alert.get("links") or [] if PRIMARY_SOURCE.search(link["href"])]
             links_by_alert.append({
                 "drugs": alert.get("drugs"), "grade": alert.get("grade"),
-                "specific_working": any(status_by_url.get(url) == 200 for url in specific),
-                "primary_working": any(status_by_url.get(url) == 200 for url in primary),
+                "specific_working": any(200 <= status_by_url.get(url, 0) < 300 for url in specific),
+                "primary_working": any(200 <= status_by_url.get(url, 0) < 300 for url in primary),
             })
         by_entry = [set(entry.ingredients) for entry in entries]
         rulebook = []
@@ -609,7 +631,7 @@ def summarize(per_list: dict[str, dict], lists: dict[str, str], key: dict) -> di
             cell["named"] += entry["named"]
             cell["lists"].append(f"{list_id}{'' if entry['named'] else ('~' if entry['flagged'] else '✗')}")
     seconds = [scores["seconds"] for scores in per_list.values() if isinstance(scores["seconds"], (int, float))]
-    control_fp = sum(len(per_list[list_id]["false_positives"]) for list_id in CONTROL_LISTS)
+    control_fp = sum(len(per_list[list_id]["false_positives"]) for list_id in CONTROL_LISTS if list_id in per_list)
     return {
         "recall": recall, "precision": precision,
         "false_positives_total": sum(len(scores["false_positives"]) for scores in per_list.values()), "false_positives_controls": control_fp,

@@ -82,7 +82,7 @@ def write_results(pack: Path, run_dir: Path) -> None:
         combined += [f"## {list_id} — Results from current website", "", f"Input submitted: {capture['input']}", "", fence(capture.get("text") or ""), ""]
     text = "\n".join(combined)
     (run_dir / "RESULTS_FROM_WEBSITE.md").write_text(text)
-    headers = re.findall(r"^## (L\d\d) — Results from current website$", text, re.M)
+    headers = re.findall(r"^## ([LG]\d\d) — Results from current website$", text, re.M)
     assert headers == list(lists), f"section IDs wrong: {headers}"
     inputs = re.findall(r"^Input submitted: (.*)$", text, re.M)
     assert inputs == list(lists.values()), "an input line differs from Section 5"
