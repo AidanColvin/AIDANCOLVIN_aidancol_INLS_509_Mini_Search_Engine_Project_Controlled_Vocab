@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "functions": {
     "api/*.py": {
       "excludeFiles": "{data/raw/**,data/build/collection.jsonl,.venv/**,tests/**,notes/**,rubrics/**,document_collection_part_1/**,.github/**,reports/**}"

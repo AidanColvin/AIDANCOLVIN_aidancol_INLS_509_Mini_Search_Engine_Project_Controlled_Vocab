@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Architecture — Drug Interaction Screen</title>
+<meta name="description" content="How Drug Interaction Screen is built: a weekly pipeline from openFDA bulk files to a search index and checker tables, two stateless Python functions, and a static front end.">
+<link rel="icon" href="/brand/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/brand/logo.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..700,50&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar__inner" aria-label="Site">
+    <a class="topbar__home" href="/" aria-label="Drug Interaction Screen, home"><img src="/brand/logo.svg" alt="" width="22" height="22"></a>
+    <a class="topbar__link" href="/how-it-works">How it works</a>
+    <a class="topbar__link" href="/architecture" aria-current="page">Architecture</a>
+    <a class="topbar__link" href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+</header>
+
+<main class="doc">
+  <h1 class="doc__title">Architecture</h1>
+  <p class="doc__lede">Three layers. A weekly build turns FDA label files into a search index and lookup tables. Two small Python functions answer requests. A static page talks to them.</p>
+
+  <figure class="stack" aria-label="The three layers">
+    <div class="stack__layer"><strong>Front end</strong><span>One static page, one stylesheet, plain TypeScript compiled to browser modules. No framework.</span></div>
+    <div class="stack__layer"><strong>API</strong><span>Two stateless functions on Vercel: <code>/api/check</code> and <code>/api/search</code>. Nothing you type is stored.</span></div>
+    <div class="stack__layer"><strong>Data</strong><span>Files built once a week: the label collection, the search index, and the checker's lookup tables.</span></div>
+  </figure>
+
+  <section class="doc__section">
+    <h2>The weekly build</h2>
+    <p>Every Monday, and on every change to the code, a GitHub Actions job rebuilds everything from scratch and deploys. openFDA publishes its label data weekly; this runs the day after.</p>
+    <ol class="flow flow--vertical" aria-label="Build steps">
+      <li class="flow__step"><span class="flow__n">1</span><strong>Download</strong><span>The openFDA drug-label bulk files. 262,883 label records.</span></li>
+      <li class="flow__step"><span class="flow__n">2</span><strong>Collect</strong><span>Keep human prescription labels with named ingredients; keep the newest label per ingredient set. 2,481 labels.</span></li>
+      <li class="flow__step"><span class="flow__n">3</span><strong>Map ingredients</strong><span>Each substance is rolled up to its base ingredient through RxNorm, so a salt and its parent count as the same drug.</span></li>
+      <li class="flow__step"><span class="flow__n">4</span><strong>Tag</strong><span>Every label is tagged with the 17 vocabulary terms below by fixed rules over named label fields. Each tag keeps the sentence that earned it.</span></li>
+      <li class="flow__step"><span class="flow__n">5</span><strong>Index</strong><span>A BM25 search index over each label's main text, plus the checker's per-label tables.</span></li>
+      <li class="flow__step"><span class="flow__n">6</span><strong>Test and deploy</strong><span>322 Python tests and 109 front-end tests must pass. Then the built files go to Vercel.</span></li>
+    </ol>
+  </section>
+
+  <section class="doc__section">
+    <h2>At request time</h2>
+    <ol class="flow" aria-label="A check request">
+      <li class="flow__step"><span class="flow__n">1</span><strong>Browser</strong><span>Sends the list to <code>/api/check</code>.</span></li>
+      <li class="flow__step"><span class="flow__n">2</span><strong>Resolve</strong><span>Local dictionary first; RxNorm for typos.</span></li>
+      <li class="flow__step"><span class="flow__n">3</span><strong>Rules</strong><span>Shared risks, named contraindications, duplicates.</span></li>
+      <li class="flow__step"><span class="flow__n">4</span><strong>Reply</strong><span>Alerts with sentence, section, and DailyMed link.</span></li>
+    </ol>
+    <p>A word that isn't a medication goes to <code>/api/search</code> instead, which ranks label text with BM25 and returns the matching sentence from each label.</p>
+  </section>
+
+  <section class="doc__section">
+    <h2>The vocabulary</h2>
+    <p>Seventeen terms, each assigned by one fixed rule over named openFDA fields, so the same label always gets the same tags. The four interaction-risk terms drive the checker.</p>
+    <table class="doc__table">
+      <thead><tr><th scope="col">Group</th><th scope="col">Terms</th></tr></thead>
+      <tbody>
+        <tr><td>Safety signal</td><td>Boxed Warning · High-Frequency Adverse Effect</td></tr>
+        <tr><td>Interaction risk</td><td>Serotonin Syndrome Risk · CNS Depression Risk · QT Prolongation Risk · Contraindicated Combination</td></tr>
+        <tr><td>Dosing</td><td>Renal Dose Adjustment · Hepatic Dose Adjustment · Organ Impairment Dose Adjustment</td></tr>
+        <tr><td>DEA control</td><td>Controlled Substance · Schedule II Controlled Substance</td></tr>
+        <tr><td>Patient group</td><td>Pediatric Indication</td></tr>
+        <tr><td>Patient information</td><td>Medication Guide</td></tr>
+        <tr><td>Route and form</td><td>Oral Route · Single Active Ingredient · Brand Name Product</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="doc__section">
+    <h2>Sources</h2>
+    <ul class="doc__list">
+      <li><strong>openFDA drug label endpoint.</strong> The whole collection, every tag, every search result, every alert sentence.</li>
+      <li><strong>NLM RxNorm (RxNav).</strong> Typo-tolerant name matching and base-ingredient rollup. This product uses publicly available data from the U.S. National Library of Medicine, National Institutes of Health, Department of Health and Human Services; NLM is not responsible for the product and does not endorse or recommend this or any other product.</li>
+      <li><strong>DailyMed.</strong> The link on every alert to the full label.</li>
+      <li><strong>FDA drug-interaction tables.</strong> The class names the contraindication rule recognizes.</li>
+    </ul>
+    <p>Nothing outside this list is used. The full record, with access dates and licenses, is in <a href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab/blob/main/DATA_SOURCES.md" target="_blank" rel="noopener noreferrer">DATA_SOURCES.md</a>.</p>
+  </section>
+
+  <section class="doc__section">
+    <h2>How it is kept honest</h2>
+    <ul class="doc__list">
+      <li>Every function, in Python and TypeScript, has a three-line comment saying what it takes, does, and gives. A test fails the build if one is missing.</li>
+      <li>A tag with no evidence sentence is never assigned; an alert with no evidence is never raised.</li>
+      <li>A harness runs 41 blind-test medication lists through the live API and publishes the score, misses included: <a href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab/blob/main/docs/interaction-validation.md" target="_blank" rel="noopener noreferrer">validation report</a>.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="app-footer">
+  <span>Label data from openFDA. Name matching uses NLM RxNorm.</span>
+  <a href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab" target="_blank" rel="noopener noreferrer">Source on GitHub</a>
+</footer>
+</body>
+</html>

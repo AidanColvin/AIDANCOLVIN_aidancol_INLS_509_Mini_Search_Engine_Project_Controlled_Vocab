@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>How it works — Drug Interaction Screen</title>
+<meta name="description" content="What happens between typing a medication list and seeing an alert: names are resolved, FDA labels are read, and every alert carries the label sentence it came from.">
+<link rel="icon" href="/brand/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/brand/logo.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..700,50&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <nav class="topbar__inner" aria-label="Site">
+    <a class="topbar__home" href="/" aria-label="Drug Interaction Screen, home"><img src="/brand/logo.svg" alt="" width="22" height="22"></a>
+    <a class="topbar__link" href="/how-it-works" aria-current="page">How it works</a>
+    <a class="topbar__link" href="/architecture">Architecture</a>
+    <a class="topbar__link" href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </nav>
+</header>
+
+<main class="doc">
+  <h1 class="doc__title">How it works</h1>
+  <p class="doc__lede">You type a medication list. The tool finds each drug's FDA label, reads what the labels say about taking them together, and shows you the exact sentence behind every alert.</p>
+
+  <ol class="flow" aria-label="The four steps">
+    <li class="flow__step"><span class="flow__n">1</span><strong>Type</strong><span>Brand or generic, with or without a dose. Misspellings are fine.</span></li>
+    <li class="flow__step"><span class="flow__n">2</span><strong>Resolve</strong><span>Each entry is matched to one FDA label.</span></li>
+    <li class="flow__step"><span class="flow__n">3</span><strong>Check</strong><span>The labels are read for shared risks and named combinations.</span></li>
+    <li class="flow__step"><span class="flow__n">4</span><strong>Show</strong><span>Every alert carries the label sentence and a link to the full label.</span></li>
+  </ol>
+
+  <section class="doc__section">
+    <h2>1. Type</h2>
+    <p>The box is already focused when the page opens. Type one medication and press Return, or paste a whole list separated by commas, semicolons, or new lines. A dose and frequency are optional; when you include them, the tool reads them and shows a daily total.</p>
+  </section>
+
+  <section class="doc__section">
+    <h2>2. Resolve</h2>
+    <p>Each entry is matched to one label in two passes. First, a dictionary built from the labels themselves: every brand name, generic name, and ingredient in the collection. If that finds nothing close, the National Library of Medicine's RxNorm service is asked, which handles typos and unusual spellings.</p>
+    <p>When a name could mean more than one product, the tool asks instead of guessing. When a name isn't a medication at all, the word is looked up in the label text instead, and the labels for drugs already on your list are shown first.</p>
+  </section>
+
+  <section class="doc__section">
+    <h2>3. Check</h2>
+    <p>The tool raises an alert in three situations. All three come from label text; nothing else is consulted.</p>
+    <ul class="doc__list">
+      <li><strong>A shared risk.</strong> Two or more of your medications carry the same interaction warning in their labels: serotonin syndrome, CNS depression, or QT prolongation.</li>
+      <li><strong>A named combination.</strong> One medication's label lists another of your medications, or its drug class, as contraindicated.</li>
+      <li><strong>The same drug twice.</strong> Two entries share an active ingredient, or one is the other's active metabolite.</li>
+    </ul>
+    <p>Each alert gets a tier from the label section its evidence came from. The section is the label's own signal of how serious the warning is.</p>
+    <table class="doc__table">
+      <thead><tr><th scope="col">Tier</th><th scope="col">Label section the sentence came from</th></tr></thead>
+      <tbody>
+        <tr><td>Contraindicated</td><td>Contraindications</td></tr>
+        <tr><td>Boxed warning</td><td>Boxed warning</td></tr>
+        <tr><td>Warning</td><td>Warnings and precautions</td></tr>
+        <tr><td>Interaction note</td><td>Drug interactions</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="doc__section">
+    <h2>4. Show</h2>
+    <p>An alert names the drugs, the tier, the sentence from the label, which drug's label it came from and which section, and a link to that label on DailyMed. Nothing is paraphrased.</p>
+    <figure class="anatomy" aria-label="What an alert looks like">
+      <div class="anatomy__card">
+        <p class="anatomy__drugs">Escitalopram, Amiodarone</p>
+        <p class="anatomy__tier">Warning · QT Prolongation Risk shared by 2 drugs</p>
+        <blockquote class="anatomy__quote">Amiodarone hydrochloride can exacerbate the presenting arrhythmia … associated with QTc prolongation.</blockquote>
+        <p class="anatomy__source">From the Amiodarone label, Warnings and Precautions section. Open on DailyMed ↗</p>
+      </div>
+      <figcaption>The drugs, the tier, the label's own words, and where they came from.</figcaption>
+    </figure>
+  </section>
+
+  <section class="doc__section">
+    <h2>What it doesn't do</h2>
+    <p>It reports what the FDA labels state and nothing more. "No warning found in the labels checked" means the labels didn't say it, not that a combination is safe. It is not a licensed drug interaction database and does not replace clinical judgment.</p>
+    <p>How well it does against a blind test of 41 patient medication lists is measured and published, misses included: <a href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab/blob/main/docs/interaction-validation.md" target="_blank" rel="noopener noreferrer">validation report</a>.</p>
+  </section>
+</main>
+
+<footer class="app-footer">
+  <span>Label data from openFDA. Name matching uses NLM RxNorm.</span>
+  <a href="https://github.com/AidanColvin/AIDANCOLVIN_aidancol_INLS_509_Mini_Search_Engine_Project_Controlled_Vocab" target="_blank" rel="noopener noreferrer">Source on GitHub</a>
+</footer>
+</body>
+</html>

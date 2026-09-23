@@ -7,7 +7,6 @@
 import { ApiHttpError, ApiShapeError, fetchCheck, fetchSearch, fetchTermsOnly, maxMedicationTextChars } from "./api.js";
 import { formatBuildDate } from "./format.js";
 import { isWithinLengthLimit, joinMedicationLines, replaceNameKeepingDose, resolvedNames, splitEnteredText } from "./meds.js";
-import { renderHeader } from "./render_header.js";
 import {
   mountInteractionsView,
   updateInteractionsView,
@@ -384,7 +383,7 @@ function main(): void {
 
   const interactionsRefs = mountInteractionsView(interactionsCallbacks);
   page.append(interactionsRefs.root);
-  appRoot.append(renderHeader(), page, footer.root);
+  appRoot.append(page, footer.root);
 
   render();
   keepMedicationFieldReady(interactionsRefs.medicationInput);
