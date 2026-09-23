@@ -12,6 +12,12 @@ const SECTION_DISPLAY_NAMES: Readonly<Record<string, string>> = {
   precautions: "Precautions",
   drug_interactions: "Drug Interactions",
   description: "Description",
+  adverse_reactions: "Adverse Reactions",
+  adverse_reactions_table: "Adverse Reactions table",
+  dosage_and_administration: "Dosage and Administration",
+  use_in_specific_populations: "Use in Specific Populations",
+  pediatric_use: "Pediatric Use",
+  indications_and_usage: "Indications and Usage",
 };
 
 /**

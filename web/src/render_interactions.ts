@@ -467,7 +467,7 @@ function buildLabelNote(note: LabelNote): HTMLElement {
 
 /**
  * Takes one label note.
- * Names it for a reader: "Boxed warning", "Most frequent side effect", or the term's own name.
+ * Names it for a reader: "Boxed warning", the 10%-or-more adverse reaction, or the term's own name.
  * Gives the heading text.
  */
 function noteHeading(note: LabelNote): string {
@@ -475,7 +475,7 @@ function noteHeading(note: LabelNote): string {
     return "Boxed warning";
   }
   if (note.term_id === "T04") {
-    return "Most frequent side effect on the label";
+    return "Adverse reaction reported in 10% or more of patients";
   }
   return note.name;
 }
