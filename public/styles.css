@@ -175,10 +175,9 @@ button:disabled {
 }
 
 .topbar__inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 var(--space-3);
-  height: 48px;
+  width: 100%;
+  padding: 0 var(--space-2);
+  height: 52px;
   display: flex;
   align-items: center;
   gap: var(--space-1);
@@ -190,7 +189,7 @@ button:disabled {
   justify-content: center;
   width: var(--hit);
   height: var(--hit);
-  margin-left: calc(-1 * (var(--hit) - 26px) / 2);
+  margin-left: calc(-1 * (var(--hit) - 32px) / 2);
   margin-right: auto;
   border-radius: var(--radius);
 }
@@ -240,8 +239,8 @@ button:disabled {
 }
 
 .interactions-view {
-  min-height: calc(100vh - 48px);
-  min-height: calc(100svh - 48px);
+  min-height: calc(100vh - 52px);
+  min-height: calc(100svh - 52px);
   padding-top: clamp(var(--space-5), 10vh, var(--space-12));
 }
 
@@ -982,6 +981,191 @@ button:disabled {
   white-space: nowrap;
 }
 
+.doc__sub {
+  margin: var(--space-4) 0 var(--space-1);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.doc__fine {
+  font-size: var(--size-caption);
+  color: var(--text-2);
+}
+
+.doc__table--terms td:first-child {
+  width: 3em;
+  font-weight: 600;
+}
+.doc__table--terms td:nth-child(2) {
+  font-weight: 600;
+}
+.doc__table--terms td:nth-child(3) {
+  color: var(--text-2);
+  font-size: var(--size-caption);
+  white-space: nowrap;
+}
+.doc__table--terms td:last-child {
+  font-size: var(--size-caption);
+}
+
+/* Funnel: how the export narrows to the collection. */
+
+.funnel {
+  margin: var(--space-3) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.funnel__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.funnel__bar {
+  width: var(--w);
+  min-width: 5.5em;
+  height: 36px;
+  padding: 0 var(--space-1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: var(--text);
+  color: var(--bg);
+  border-radius: 4px;
+  font-size: var(--size-caption);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.funnel__label {
+  font-size: var(--size-caption);
+  color: var(--text-2);
+}
+
+.funnel figcaption,
+.graph figcaption,
+.tree figcaption {
+  margin-top: var(--space-1);
+  font-size: var(--size-caption);
+  color: var(--text-2);
+}
+
+/* Graph: three columns of nodes joined by arrows. */
+
+.graph {
+  margin: var(--space-3) 0 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1.2fr auto 1fr;
+  gap: var(--space-2);
+  align-items: start;
+}
+
+.graph__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.graph__head {
+  margin: 0 0 4px;
+  font-size: var(--size-caption);
+  font-weight: 600;
+  color: var(--text-2);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.graph__arrow {
+  align-self: center;
+  padding-top: var(--space-4);
+  font-size: 24px;
+  color: var(--text-2);
+}
+
+.node {
+  padding: 10px 12px;
+  border: 1px solid var(--text);
+  border-radius: var(--radius);
+  font-size: var(--size-caption);
+  font-weight: 600;
+  line-height: 1.35;
+}
+.node span {
+  display: block;
+  font-weight: 400;
+  color: var(--text-2);
+}
+.node code {
+  font-weight: 600;
+}
+
+/* Tree: one parent over a row of children, joined by lines. */
+
+.tree {
+  margin: var(--space-3) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.tree__branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.node--parent {
+  text-align: center;
+  background: var(--text);
+  color: var(--bg);
+}
+.node--parent span {
+  color: inherit;
+  opacity: 0.75;
+}
+.node--parent::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: var(--space-2);
+  margin: 10px auto -10px;
+  background: var(--text);
+}
+
+.tree__children {
+  position: relative;
+  width: 100%;
+  margin-top: var(--space-2);
+  padding-top: var(--space-2);
+  display: grid;
+  grid-template-columns: repeat(var(--n), 1fr);
+  gap: var(--space-1);
+}
+.tree__children::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% / var(--n));
+  right: calc(50% / var(--n));
+  border-top: 1px solid var(--text);
+}
+.tree__children .node {
+  position: relative;
+  text-align: center;
+}
+.tree__children .node::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(-1 * var(--space-2));
+  height: var(--space-2);
+  border-left: 1px solid var(--text);
+}
+
 /* Stack figure: the three layers. */
 
 .stack {
@@ -1110,6 +1294,72 @@ button:disabled {
   .outcomes,
   .rules {
     grid-template-columns: 1fr;
+  }
+  .graph {
+    grid-template-columns: 1fr;
+  }
+  .graph__arrow {
+    padding: 0;
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+  .tree__children {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+    padding-left: var(--space-3);
+  }
+  .tree__children::before {
+    top: 0;
+    bottom: 50%;
+    left: var(--space-2);
+    right: auto;
+    border-top: none;
+    border-left: 1px solid var(--text);
+  }
+  .tree__children .node::before {
+    left: calc(-1 * var(--space-1));
+    top: 50%;
+    height: 0;
+    width: var(--space-1);
+    border-left: none;
+    border-top: 1px solid var(--text);
+  }
+  .node--parent::after {
+    display: none;
+  }
+  .funnel__row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .doc__table--terms thead {
+    display: none;
+  }
+  .doc__table--terms tr {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .doc__table--terms td {
+    display: block;
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+  .doc__table--terms td:first-child,
+  .doc__table--terms td:nth-child(2) {
+    display: inline;
+    padding-right: 6px;
+  }
+  .doc__table--terms td:nth-child(3) {
+    white-space: normal;
+    margin-top: 2px;
+  }
+  .doc__table--terms td:last-child {
+    margin-top: 2px;
+    overflow-wrap: anywhere;
+  }
+  .doc__table td {
+    overflow-wrap: anywhere;
   }
   .doc__table--sources td:last-child {
     width: auto;
