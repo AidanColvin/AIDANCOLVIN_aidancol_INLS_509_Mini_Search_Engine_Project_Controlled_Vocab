@@ -1,8 +1,6 @@
 # Aidan Colvin aidancol
+**Help received:** Evan Fahringer (PID 730482931) served as the hypothetical user for the peer exchange in Section 4.
 # Mini Search Engine Project, Part II: Mini Controlled Vocabulary
-Last Updated 09-21-2026
-
-**Help received:** UPDATE ADD BEFORE SUBMITTING  --> If you received help from anyone, give them credits by listing their name(s) on the top of your submission. 
 
 ---
 
@@ -225,7 +223,7 @@ Two rules apply to every term:
 * **Alternative names:** Contraindicated Co-Medication, Do-Not-Combine Warning
 * **Useful for:** the highest-priority alerts, where the label itself says two drugs must not be combined.
 
-**AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts regarding term definitions, descriptions, and synonyms were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts were correctly applied to the terms and combined with original thinking and work for this section.
+**AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts regarding term definitions, descriptions, and synonyms were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts were correctly applied to the terms and combined with original thinking and work for this section. Additionally, the tools were referenced in a broad supportive capacity to assist throughout the assignment process.
 
 ---
 
@@ -308,7 +306,7 @@ I chose indexing over query expansion for three reasons:
 * This favors precision over recall. A user who filters on a term gets only labels that meet the term's rule, with no false positives from guessed tags. The cost is some false negatives, so a missing term does not prove the opposite. Keyword search still reaches those labels, since controlled vocabulary search and keyword search work side by side.
 * For the interaction-risk terms, a missing tag matters most. A drug without T14 may still add serotonin risk if its label never states it. The checker therefore reports "no warning found in the labels," never "safe."
 
-**AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts regarding vocabulary structure, hierarchy, and term assignment rules were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts like flat lists, hierarchies, and mutual exclusivity were correctly applied and combined with original thinking and work for this section.
+**AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts regarding vocabulary structure, hierarchy, and term assignment rules were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts like flat lists, hierarchies, and mutual exclusivity were correctly applied. Additionally, the tools helped in a broad consultative capacity to assist across the overall process.
 
 ---
 
@@ -362,23 +360,16 @@ All scenarios search the revised Part 1 collection: human prescription drug labe
 * **Link to the interaction checker:** This search is the manual version of the planned checker. If the physician entered desvenlafaxine, trazodone, and cyclobenzaprine as a medication list, the checker would find T14 on all three labels and raise one serotonin syndrome group alert, showing each label's warning sentence.
 * **Hierarchy note:** T14 and T15 are types of T13, so each result also carries T13. Selecting T13 alone would return labels with any of the four interaction-risk types.
 
-**AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts were correctly applied and combined with original thinking and work for this section.
+**AI use:** In accordance with class policy, Claude and Gemini were used predominantly in combination with class lectures, slide decks, and assignment content to proofread, correct grammar and spelling, and ensure that thoughts were conveyed clearly and concisely. In a limited capacity, class slides and course material were provided to the AI to pull definitions learned in class, ensuring that course concepts were correctly applied for this section. The tools were also used more broadly for support throughout this section.
 
 ---
 
-UPDATE THIS SECTION BEFORE SUBMITTING 
-
 ### 4. Peer exchange [20 points]
-Invite a peer classmate as a hypothetical user of your search engine.
+Name: Evan Fahringer 
+PID: 730482931
 
-Describe your planned document collection to them: What documents will be in the collection? Why do you think they are interesting? Also, describe your controlled vocabulary to them: What does each term mean? In what scenarios can they be useful?
+Hypothetical Question: I am taking hydrocodone for a previous injury that took place while I was running a few months ago. My doctor has recently suggested that I begin taking a medication for anxiety, but I want to ensure that the medication does not increase my risk of dependence, considering that I am already taking hydrocodone. I am checking the collection of medications that fall under "anxiety" to locate options that are DEA controlled substances, so that I can easily avoid these and select a safer alternative.
 
-Ask the user to come up with a scenario in which they would use your controlled vocabulary when searching or refining results. Ask them to explain their question in complete sentences, and take note of the term(s) they selected.
-
-Answer the following questions:
-* <u>What is the name and PID of your user?</u>
-* <u>Who invited you as a user to use their search engines (if any)? What are their names and PIDs?</u>
-* <u>What was your user's question in natural language?</u>
-* <u>What terms did they select to represent that question?</u>
+Term: T07: Controlled Substance
 
 ---
